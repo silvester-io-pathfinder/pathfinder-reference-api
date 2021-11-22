@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("391592b2-7abc-4a3f-a1db-de38ab3b29f3"), Type = TextBlockType.Text, Text = "The spells of those you have (action: Demoralized | Demoralize) are less effective on you. If you succeed in (action: Demoralizing | Demoralize) a creature, for the next 24 hours you gain a +1 circumstance bonus to saving throws against that creature’s spells." };
+            yield return new TextBlock { Id = Guid.Parse("391592b2-7abc-4a3f-a1db-de38ab3b29f3"), Type = TextBlockType.Text, Text = "The spells of those you have (action: Demoralized | Demoralize) are less effective on you. If you succeed in (action: Demoralizing | Demoralize) a creature, for the next 24 hours you gain a +1 circumstance bonus to saving throws against that creature's spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

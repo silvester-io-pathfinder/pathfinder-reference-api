@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6fbb8eb8-dbf6-4dcd-8d1a-290c902d73f0"), Type = TextBlockType.Text, Text = "Hidden darkness whispers to you, teaching you secrets of shadow beyond other spellcasters of your tradition. Add (spell: shadow blast), (spell: shadow siphon), and (spell: shadow walk) your spell list, as well as (spell: replicate), (spell: shadow army), (spell: shadow projectile), and (spell: shadow raid). You can thus potentially learn these spells even if they aren’t normally on your tradition’s spell list." };
+            yield return new TextBlock { Id = Guid.Parse("6fbb8eb8-dbf6-4dcd-8d1a-290c902d73f0"), Type = TextBlockType.Text, Text = "Hidden darkness whispers to you, teaching you secrets of shadow beyond other spellcasters of your tradition. Add (spell: shadow blast), (spell: shadow siphon), and (spell: shadow walk) your spell list, as well as (spell: replicate), (spell: shadow army), (spell: shadow projectile), and (spell: shadow raid). You can thus potentially learn these spells even if they aren't normally on your tradition's spell list." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

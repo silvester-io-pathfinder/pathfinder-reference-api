@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("19124f9f-d206-4cca-8611-671f798a3c02"), Type = TextBlockType.Text, Text = "You are incredibly skilled at reverse engineering items to learn their formulas, or disassembling them just to disable them. You gain a +2 circumstance bonus to Crafting checks to reverse engineer a formula from an item. If you get a critical success on your Crafting check, you can opt to both create the formula and reassemble the original item at the same time, leaving you with the formula and the item instead of the formula and raw materials equal to half the item’s value. Furthermore, you can use Crafting instead of Thievery to (action: Disable a Device) or (action: Pick a Lock)." };
+            yield return new TextBlock { Id = Guid.Parse("19124f9f-d206-4cca-8611-671f798a3c02"), Type = TextBlockType.Text, Text = "You are incredibly skilled at reverse engineering items to learn their formulas, or disassembling them just to disable them. You gain a +2 circumstance bonus to Crafting checks to reverse engineer a formula from an item. If you get a critical success on your Crafting check, you can opt to both create the formula and reassemble the original item at the same time, leaving you with the formula and the item instead of the formula and raw materials equal to half the item's value. Furthermore, you can use Crafting instead of Thievery to (action: Disable a Device) or (action: Pick a Lock)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

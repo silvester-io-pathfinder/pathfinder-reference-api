@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 PotencyId = Potencies.Instances.Greater.ID,
                 Benefits = new[]
                 {
-                    new TextBlock {Id = Guid.Parse("1d296e50-3de8-49d9-9338-172e371c75bb"), Type = TextBlockType.Text, Text = "Electricity damage dealt by this weapon ignores the target’s electricity resistance (and the other creatures’ on a critical hit)."},
+                    new TextBlock {Id = Guid.Parse("1d296e50-3de8-49d9-9338-172e371c75bb"), Type = TextBlockType.Text, Text = "Electricity damage dealt by this weapon ignores the target's electricity resistance (and the other creatures' on a critical hit)."},
                 },
             };
         }

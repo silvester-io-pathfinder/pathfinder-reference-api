@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d4fe012-3bba-41f6-a6df-fe8c01ce4385"), Type = TextBlockType.Text, Text = "You use the crowd to your advantage, diverting your foes’ attention to potential hidden dangers in the crowd. When determining if your foe is flanked, treat all squares occupied by a crowd as if they were occupied by an ally with a melee reach of 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("4d4fe012-3bba-41f6-a6df-fe8c01ce4385"), Type = TextBlockType.Text, Text = "You use the crowd to your advantage, diverting your foes' attention to potential hidden dangers in the crowd. When determining if your foe is flanked, treat all squares occupied by a crowd as if they were occupied by an ally with a melee reach of 5 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

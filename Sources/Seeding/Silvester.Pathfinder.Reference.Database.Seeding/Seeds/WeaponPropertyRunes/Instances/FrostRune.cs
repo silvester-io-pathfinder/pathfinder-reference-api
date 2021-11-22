@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 PotencyId = Potencies.Instances.Greater.ID,
                 Benefits = new[]
                 {
-                    new TextBlock {Id = Guid.Parse("741897ff-c80f-4e5d-ac1e-72c809c9fef5"), Type = TextBlockType.Text, Text = "The save DC is 34. Cold damage dealt by this weapon ignores the target’s cold resistance."},
+                    new TextBlock {Id = Guid.Parse("741897ff-c80f-4e5d-ac1e-72c809c9fef5"), Type = TextBlockType.Text, Text = "The save DC is 34. Cold damage dealt by this weapon ignores the target's cold resistance."},
                 },
             };
         }

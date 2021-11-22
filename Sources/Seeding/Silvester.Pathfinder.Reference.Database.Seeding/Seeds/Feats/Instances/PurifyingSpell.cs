@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c98e5928-0414-40be-9dda-8474714f838e"), Type = TextBlockType.Text, Text = "You purify the water within a creature’s body to cleanse them of illness. If the next action you use is to cast (spell: heal) targeting a single living creature, you can attempt to counteract a disease or poison affecting the target, in addition to the other benefits of (spell: heal). If you do, (spell: heal) gains the (trait: water) trait." };
+            yield return new TextBlock { Id = Guid.Parse("c98e5928-0414-40be-9dda-8474714f838e"), Type = TextBlockType.Text, Text = "You purify the water within a creature's body to cleanse them of illness. If the next action you use is to cast (spell: heal) targeting a single living creature, you can attempt to counteract a disease or poison affecting the target, in addition to the other benefits of (spell: heal). If you do, (spell: heal) gains the (trait: water) trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

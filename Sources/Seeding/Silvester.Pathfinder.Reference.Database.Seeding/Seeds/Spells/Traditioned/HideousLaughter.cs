@@ -39,9 +39,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("12dbb027-58d4-4b3f-84aa-b1bd660434e9"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target is plagued with uncontrollable laugher. It can’t use reactions.",
-                Failure = "The target is slowed 1 and can’t use reactions.",
-                CriticalFailure = "The target falls prone and can’t use actions or reactions for 1 round.It then suffers the failure effects."
+                Success = "The target is plagued with uncontrollable laugher. It can't use reactions.",
+                Failure = "The target is slowed 1 and can't use reactions.",
+                CriticalFailure = "The target falls prone and can't use actions or reactions for 1 round.It then suffers the failure effects."
             };
         }
 

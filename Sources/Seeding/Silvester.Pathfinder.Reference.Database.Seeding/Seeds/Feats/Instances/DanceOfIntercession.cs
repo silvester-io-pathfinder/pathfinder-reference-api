@@ -48,10 +48,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("555e24b4-ee28-4b18-a369-68ee9ca66eac"),
-                CriticalSuccess = "You perform the movements of the Dance of Intercession so gracefully that you evoke a glimmer of the memory of the Celestial Dragon&#39;s awesome power. You cast the 3-action version of either 9th-level (spell: harm) or (spell: heal) at any point during your (action: Stride). This does not use any spell slots.",
+                CriticalSuccess = "You perform the movements of the Dance of Intercession so gracefully that you evoke a glimmer of the memory of the Celestial Dragon's awesome power. You cast the 3-action version of either 9th-level (spell: harm) or (spell: heal) at any point during your (action: Stride). This does not use any spell slots.",
                 Success = "As critical success, but the spell is 7th level instead of 9th as you stumble through the movements.",
                 Failure = "As critical success, but the spell is 5th level instead of 9th as you stumble through the movements.",
-                CriticalFailure = "You fail to remember the steps of the dance. You gain no additional effect beyond (action: Striding | Stride) half your Speed, and you can&#39;t attempt the Dance of Intercession again until your next daily preparations.", 
+                CriticalFailure = "You fail to remember the steps of the dance. You gain no additional effect beyond (action: Striding | Stride) half your Speed, and you can't attempt the Dance of Intercession again until your next daily preparations.", 
             };
         }
             

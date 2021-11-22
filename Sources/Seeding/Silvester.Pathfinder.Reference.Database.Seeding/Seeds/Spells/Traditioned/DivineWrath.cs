@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-             yield return new TextBlock { Id = Guid.Parse("226067e2-ba86-46de-a932-e1f1087b94fa"), Type = TextBlockType.Text, Text = "You can channel the fury of your deity against foes of opposed alignment. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can’t cast this spell if you don’t have a deity or your deity is true neutral. This spell gains the trait of the alignment you chose. You deal 4d10 damage of the alignment you chose; each creature in the area must attempt a Fortitude save. Creatures that match the alignment you chose are unaffected. Those that neither match nor oppose it treat the result of their saving throw as one degree better." };
+             yield return new TextBlock { Id = Guid.Parse("226067e2-ba86-46de-a932-e1f1087b94fa"), Type = TextBlockType.Text, Text = "You can channel the fury of your deity against foes of opposed alignment. Choose an alignment your deity has (chaotic, evil, good, or lawful). You can't cast this spell if you don't have a deity or your deity is true neutral. This spell gains the trait of the alignment you chose. You deal 4d10 damage of the alignment you chose; each creature in the area must attempt a Fortitude save. Creatures that match the alignment you chose are unaffected. Those that neither match nor oppose it treat the result of their saving throw as one degree better." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

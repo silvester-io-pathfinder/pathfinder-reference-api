@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("467c2a82-6726-4bfb-b031-90c80e4a88a7"), Type = TextBlockType.Text, Text = "You’ve learned the cantrips sprites have used since time immemorial. You gain (spell: dancing lights) and (spell: ghost sound) as primal innate cantrips. If you have the grig heritage, you also gain (spell: detect magic), and if you have the draxie heritage, you gain (spell: prestidigitation)." };
+            yield return new TextBlock { Id = Guid.Parse("467c2a82-6726-4bfb-b031-90c80e4a88a7"), Type = TextBlockType.Text, Text = "You've learned the cantrips sprites have used since time immemorial. You gain (spell: dancing lights) and (spell: ghost sound) as primal innate cantrips. If you have the grig heritage, you also gain (spell: detect magic), and if you have the draxie heritage, you gain (spell: prestidigitation)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fda3026f-8dcc-4c4b-a332-0b3e055902cb"), Type = TextBlockType.Text, Text = "You zealously monitor a patient’s progress to administer treatment faster. When you (Action: Treat Wounds), your patient becomes immune for only 10 minutes instead of 1 hour. This applies only to your (Action: Treat Wounds) activities, not any other the patient receives." };
+            yield return new TextBlock { Id = Guid.Parse("fda3026f-8dcc-4c4b-a332-0b3e055902cb"), Type = TextBlockType.Text, Text = "You zealously monitor a patient's progress to administer treatment faster. When you (Action: Treat Wounds), your patient becomes immune for only 10 minutes instead of 1 hour. This applies only to your (Action: Treat Wounds) activities, not any other the patient receives." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

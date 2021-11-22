@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aab214db-2ad8-4681-86fd-8858708c63cf"), Type = TextBlockType.Text, Text = "You capture transformative fragments of magic and slam them into the ground, creating a shock wave that alters your surroundings. If your next action is to Cast a non-cantrip (trait: transmutation) Spell, either each space adjacent to you becomes difficult terrain, or each space adjacent to you is no longer difficult terrain. This doesn’t have any effect on greater difficult terrain and doesn’t remove the damaging effects of hazardous terrain." };
+            yield return new TextBlock { Id = Guid.Parse("aab214db-2ad8-4681-86fd-8858708c63cf"), Type = TextBlockType.Text, Text = "You capture transformative fragments of magic and slam them into the ground, creating a shock wave that alters your surroundings. If your next action is to Cast a non-cantrip (trait: transmutation) Spell, either each space adjacent to you becomes difficult terrain, or each space adjacent to you is no longer difficult terrain. This doesn't have any effect on greater difficult terrain and doesn't remove the damaging effects of hazardous terrain." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

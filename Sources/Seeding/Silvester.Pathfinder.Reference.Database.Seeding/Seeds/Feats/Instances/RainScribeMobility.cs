@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("25f70b63-c7bf-4f44-a017-8fb79764ab9c"), Type = TextBlockType.Text, Text = "You surround yourself in a mantle of Rain-Scribe magic and (action: Stride) twice; difficult terrain does not reduce your Speed, even if the difficult terrain has been manipulated by magic. Your magic clears the difficult terrain in each square you entered; until your next turn, those squares aren’t difficult terrain for any creature walking through them (or are normal difficult terrain if they were previously greater difficult terrain)." };
+            yield return new TextBlock { Id = Guid.Parse("25f70b63-c7bf-4f44-a017-8fb79764ab9c"), Type = TextBlockType.Text, Text = "You surround yourself in a mantle of Rain-Scribe magic and (action: Stride) twice; difficult terrain does not reduce your Speed, even if the difficult terrain has been manipulated by magic. Your magic clears the difficult terrain in each square you entered; until your next turn, those squares aren't difficult terrain for any creature walking through them (or are normal difficult terrain if they were previously greater difficult terrain)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

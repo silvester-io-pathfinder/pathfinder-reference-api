@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6c8530af-9bb1-4dc9-8e8e-7a9a7a405970"), Type = TextBlockType.Text, Text = "You have a deep understanding of the crossbow. When you’re wielding a crossbow and use (feat: Hunt Prey) or use (action: Interact) to reload your crossbow, you gain a +2 circumstance bonus to the damage roll on your next (action: Strike) with that crossbow. If the crossbow is a simple crossbow, also increase the damage die size for that attack by one step (page 279). You must make the attack before the end of your next turn or these benefits are lost." };
+            yield return new TextBlock { Id = Guid.Parse("6c8530af-9bb1-4dc9-8e8e-7a9a7a405970"), Type = TextBlockType.Text, Text = "You have a deep understanding of the crossbow. When you're wielding a crossbow and use (feat: Hunt Prey) or use (action: Interact) to reload your crossbow, you gain a +2 circumstance bonus to the damage roll on your next (action: Strike) with that crossbow. If the crossbow is a simple crossbow, also increase the damage die size for that attack by one step (page 279). You must make the attack before the end of your next turn or these benefits are lost." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

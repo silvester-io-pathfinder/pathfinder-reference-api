@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c16c083-35c6-4869-9990-0c433276720b"), Type = TextBlockType.Text, Text = "Your plans account for your foes&#39; resistances, enabling you to strike a telling blow. When you hit with a (action: Strike) on which you substituted your attack roll due to (feat: Devising a Stratagem | Devise a Stratagem), you ignore an amount of resistance equal to your Intelligence modifier for each resistance that applies against your attack." };
+            yield return new TextBlock { Id = Guid.Parse("2c16c083-35c6-4869-9990-0c433276720b"), Type = TextBlockType.Text, Text = "Your plans account for your foes' resistances, enabling you to strike a telling blow. When you hit with a (action: Strike) on which you substituted your attack roll due to (feat: Devising a Stratagem | Devise a Stratagem), you ignore an amount of resistance equal to your Intelligence modifier for each resistance that applies against your attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b42bb34-8c44-4fe1-a9fc-1127d7bf383f"), Type = TextBlockType.Text, Text = "Informing your ally of an opening created by your shot, you coordinate to set them up to hit the target at the same time. Your ally can make a melee (action: Strike) against the triggering foe as a reaction. This (action: Strike) doesn’t count toward that ally’s multiple attack penalty, and their multiple attack penalty doesn’t apply to this (action: Strike). If your ally’s (action: Strike) is successful, combine the damage from your successful ranged attack with the damage from your ally’s melee attack for the purpose of determining resistances and weaknesses." };
+            yield return new TextBlock { Id = Guid.Parse("0b42bb34-8c44-4fe1-a9fc-1127d7bf383f"), Type = TextBlockType.Text, Text = "Informing your ally of an opening created by your shot, you coordinate to set them up to hit the target at the same time. Your ally can make a melee (action: Strike) against the triggering foe as a reaction. This (action: Strike) doesn't count toward that ally's multiple attack penalty, and their multiple attack penalty doesn't apply to this (action: Strike). If your ally's (action: Strike) is successful, combine the damage from your successful ranged attack with the damage from your ally's melee attack for the purpose of determining resistances and weaknesses." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

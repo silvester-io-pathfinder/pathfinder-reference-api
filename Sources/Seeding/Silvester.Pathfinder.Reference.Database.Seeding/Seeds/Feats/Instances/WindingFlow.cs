@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("72e2e033-3564-4675-805c-91a6f62a500f"), Type = TextBlockType.Text, Text = "Any journey consists of more than simply reaching your destination. You use two of the following actions in any order: (action: Stand | Stand / Drop Prone), (action: Step), and (action: Stride). You can’t use the same action twice." };
+            yield return new TextBlock { Id = Guid.Parse("72e2e033-3564-4675-805c-91a6f62a500f"), Type = TextBlockType.Text, Text = "Any journey consists of more than simply reaching your destination. You use two of the following actions in any order: (action: Stand | Stand / Drop Prone), (action: Step), and (action: Stride). You can't use the same action twice." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

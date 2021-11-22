@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("874d86c0-723b-4d02-bfb4-d4e038c8713a"), Type = TextBlockType.Text, Text = "You’ve picked up skills and tales from your goblin community. You gain the trained proficiency rank in Nature and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Goblin Lore." };
+            yield return new TextBlock { Id = Guid.Parse("874d86c0-723b-4d02-bfb4-d4e038c8713a"), Type = TextBlockType.Text, Text = "You've picked up skills and tales from your goblin community. You gain the trained proficiency rank in Nature and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Goblin Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

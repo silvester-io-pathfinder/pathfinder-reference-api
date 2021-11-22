@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5c48ffc3-9804-4a66-95e9-426850277e53"), Type = TextBlockType.Text, Text = "You’ve improved upon your initial modification’s ability to resist damage. The resistance from your initial armor modification adds your full level, instead of half your level (for instance, phlogistonic regulator’s resistance would increase to your level). If you have more than one initial modification that gives resistance, choose which one this applies to." };
+            yield return new TextBlock { Id = Guid.Parse("5c48ffc3-9804-4a66-95e9-426850277e53"), Type = TextBlockType.Text, Text = "You've improved upon your initial modification's ability to resist damage. The resistance from your initial armor modification adds your full level, instead of half your level (for instance, phlogistonic regulator's resistance would increase to your level). If you have more than one initial modification that gives resistance, choose which one this applies to." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

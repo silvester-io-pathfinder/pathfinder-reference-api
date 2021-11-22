@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("03774035-81d2-45dc-b0dd-f2bc494e063a"), Type = TextBlockType.Text, Text = "You are too brilliant to be caught off guard, and you always have just the right gadget for the situation. When you prepare your gadgets during your daily preparations, you can choose to leave one of them as a contingency gadget that you keep ready for just this situation, rather than declaring which gadget you’re making. You can pull the contingency gadget out using an (action: Interact) action, at which point you must choose which gadget you had prepared as a contingency." };
-            yield return new TextBlock { Id = Guid.Parse("bb5f55c7-b2da-43d2-bdfb-28e67a9b9adc"), Type = TextBlockType.Text, Text = "If you’re legendary in Crafting, you can leave two contingency gadgets during your daily preparations, instead of just one." };
+            yield return new TextBlock { Id = Guid.Parse("03774035-81d2-45dc-b0dd-f2bc494e063a"), Type = TextBlockType.Text, Text = "You are too brilliant to be caught off guard, and you always have just the right gadget for the situation. When you prepare your gadgets during your daily preparations, you can choose to leave one of them as a contingency gadget that you keep ready for just this situation, rather than declaring which gadget you're making. You can pull the contingency gadget out using an (action: Interact) action, at which point you must choose which gadget you had prepared as a contingency." };
+            yield return new TextBlock { Id = Guid.Parse("bb5f55c7-b2da-43d2-bdfb-28e67a9b9adc"), Type = TextBlockType.Text, Text = "If you're legendary in Crafting, you can leave two contingency gadgets during your daily preparations, instead of just one." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

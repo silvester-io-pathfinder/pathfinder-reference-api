@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f7b99322-e632-4958-9e77-595836ad013c"), Type = TextBlockType.Text, Text = "You throw yourself at an enemy, bracing your weapon against it and pulling it close before releasing a destructive shot. Attempt to (action: Grapple); if you’re wielding your weapon in both hands, you (action: Release) one hand to do so. If your (action: Grapple) succeeds, you can immediately (action: Strike) the target of the (action: Grapple) with the required weapon, even if it’s a two-handed weapon you’re holding in one hand. This (action: Strike) deals an additional 3d6 precision damage." };
+            yield return new TextBlock { Id = Guid.Parse("f7b99322-e632-4958-9e77-595836ad013c"), Type = TextBlockType.Text, Text = "You throw yourself at an enemy, bracing your weapon against it and pulling it close before releasing a destructive shot. Attempt to (action: Grapple); if you're wielding your weapon in both hands, you (action: Release) one hand to do so. If your (action: Grapple) succeeds, you can immediately (action: Strike) the target of the (action: Grapple) with the required weapon, even if it's a two-handed weapon you're holding in one hand. This (action: Strike) deals an additional 3d6 precision damage." };
             yield return new TextBlock { Id = Guid.Parse("3deed722-6708-4670-aea0-e37b03571cbd"), Type = TextBlockType.Text, Text = "As long the creature remains grabbed or restrained, you can use just one hand to reload the weapon and (action: Strike) that creature with it." };
         }
 

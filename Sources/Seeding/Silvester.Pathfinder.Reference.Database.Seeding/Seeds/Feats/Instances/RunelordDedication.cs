@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b549bebf-476b-49ea-a720-b1ae434bb66e"), Type = TextBlockType.Text, Text = "Your rune magic increases, and you practice with your school’s associated weapon. You gain an additional cantrip of your chosen arcane school, and each time you gain a level (including this level), you add an additional spell from your chosen arcane school to your spellbook, with the same restrictions as the two spells you normally add." };
+            yield return new TextBlock { Id = Guid.Parse("b549bebf-476b-49ea-a720-b1ae434bb66e"), Type = TextBlockType.Text, Text = "Your rune magic increases, and you practice with your school's associated weapon. You gain an additional cantrip of your chosen arcane school, and each time you gain a level (including this level), you add an additional spell from your chosen arcane school to your spellbook, with the same restrictions as the two spells you normally add." };
             yield return new TextBlock { Id = Guid.Parse("bb3ac94f-ab63-4a5f-a9b3-5bf82da8aebf"), Type = TextBlockType.Text, Text = "__Add these additional spells to your spellbook manually.__" };
         }
 

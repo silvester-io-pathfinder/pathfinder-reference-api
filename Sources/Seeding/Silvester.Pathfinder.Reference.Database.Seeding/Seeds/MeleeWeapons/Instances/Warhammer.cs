@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Warhammer",
-                Description = "This weapon has a wooden shaft ending in a large, heavy metal head. The head of the hammer might be single-sided or double-sided, but it’s always capable of delivering powerful bludgeoning blows.",
+                Description = "This weapon has a wooden shaft ending in a large, heavy metal head. The head of the hammer might be single-sided or double-sided, but it's always capable of delivering powerful bludgeoning blows.",
                 Price = 100,
                 Damage = "1d8",
                 Hands = "1",

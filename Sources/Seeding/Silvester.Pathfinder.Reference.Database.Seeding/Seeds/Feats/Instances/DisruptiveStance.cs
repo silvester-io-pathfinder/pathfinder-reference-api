@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b38785a4-c791-4a1c-8577-7963f2be0606"), Type = TextBlockType.Text, Text = "The slightest distraction can provoke your wrath, and you’re prepared to foil enemies’ actions. As long as you are in this stance, you can use (feat: Attack of Opportunity) when a creature within your reach uses a (trait: concentrate) action, in addition to (trait: manipulate) and (trait: move) actions. Furthermore, you disrupt a triggering (trait: concentrate) or (trait: manipulate) action if your (action: Strike) hits (not only if it’s a critical hit)." };
+            yield return new TextBlock { Id = Guid.Parse("b38785a4-c791-4a1c-8577-7963f2be0606"), Type = TextBlockType.Text, Text = "The slightest distraction can provoke your wrath, and you're prepared to foil enemies' actions. As long as you are in this stance, you can use (feat: Attack of Opportunity) when a creature within your reach uses a (trait: concentrate) action, in addition to (trait: manipulate) and (trait: move) actions. Furthermore, you disrupt a triggering (trait: concentrate) or (trait: manipulate) action if your (action: Strike) hits (not only if it's a critical hit)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

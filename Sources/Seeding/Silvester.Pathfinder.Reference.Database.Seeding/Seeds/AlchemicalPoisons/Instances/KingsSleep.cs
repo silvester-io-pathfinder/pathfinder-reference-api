@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalPoison
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("620d976a-9aa5-421e-a5a0-124b60cdc8db"), Text = "King’s sleep is an insidious long-term poison that can seem like a disease or even death from natural causes on a venerable target. The drained condition from king’s sleep is cumulative with each failed save and can’t be removed while the poison lasts." };
+            yield return new TextBlock { Id = Guid.Parse("620d976a-9aa5-421e-a5a0-124b60cdc8db"), Text = "King's sleep is an insidious long-term poison that can seem like a disease or even death from natural causes on a venerable target. The drained condition from king's sleep is cumulative with each failed save and can't be removed while the poison lasts." };
         }
 
         protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages()

@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c317289-c1c5-4ddb-939c-d9c0613b3941"), Type = TextBlockType.Text, Text = "Your mother was a hag. Your heterochromatic eyes are the most obvious signifier of this parentage, but you likely also have a slighter build, paler skin, and darker hair than most members of your other parent’s ancestry. You gain the changeling trait. You also gain low-light vision, or you gain darkvision if your ancestry already has low-light vision. You can select from changeling feats and feats from your other parent’s ancestry whenever you gain an ancestry feat." };
+            yield return new TextBlock { Id = Guid.Parse("7c317289-c1c5-4ddb-939c-d9c0613b3941"), Type = TextBlockType.Text, Text = "Your mother was a hag. Your heterochromatic eyes are the most obvious signifier of this parentage, but you likely also have a slighter build, paler skin, and darker hair than most members of your other parent's ancestry. You gain the changeling trait. You also gain low-light vision, or you gain darkvision if your ancestry already has low-light vision. You can select from changeling feats and feats from your other parent's ancestry whenever you gain an ancestry feat." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bd018b03-581e-4f86-a7c6-3170cb9ee1b6"), Type = TextBlockType.Text, Text = "You draw upon your patron’s power to momentarily shift your familiar from its solid, physical form into an ephemeral version of itself shaped of mist. Your familiar gains resistance 5 to all damage and is immune to precision damage. These apply only against the triggering damage." };
+            yield return new TextBlock { Id = Guid.Parse("bd018b03-581e-4f86-a7c6-3170cb9ee1b6"), Type = TextBlockType.Text, Text = "You draw upon your patron's power to momentarily shift your familiar from its solid, physical form into an ephemeral version of itself shaped of mist. Your familiar gains resistance 5 to all damage and is immune to precision damage. These apply only against the triggering damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

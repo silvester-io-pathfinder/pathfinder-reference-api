@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8556b39a-ad74-4a50-959f-9fe670ae810d"), Type = TextBlockType.Text, Text = "You can share your power with others, but they can’t escape the werecreature’s curse as easily as you can. You can cast a 5th-level (spell: moon frenzy) as a primal innate spell once per day. At 15th level, you cast a 6th-level (spell: moon frenzy) instead. At 17th level, your 6th-level (spell: moon frenzy) grants its standard effects, except the temporary Hit Points increase to 15 and the silver weakness increases to 15. At 20th level, you cast a 10th-level (spell: moon frenzy) instead. The spell uses your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("8556b39a-ad74-4a50-959f-9fe670ae810d"), Type = TextBlockType.Text, Text = "You can share your power with others, but they can't escape the werecreature's curse as easily as you can. You can cast a 5th-level (spell: moon frenzy) as a primal innate spell once per day. At 15th level, you cast a 6th-level (spell: moon frenzy) instead. At 17th level, your 6th-level (spell: moon frenzy) grants its standard effects, except the temporary Hit Points increase to 15 and the silver weakness increases to 15. At 20th level, you cast a 10th-level (spell: moon frenzy) instead. The spell uses your class DC or spell DC, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

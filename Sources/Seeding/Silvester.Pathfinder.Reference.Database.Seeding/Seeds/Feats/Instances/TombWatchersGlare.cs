@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9bab986f-0591-4549-b721-ff51f8556e34"), Type = TextBlockType.Text, Text = "When you critically hit an undead creature, or an undead creature critically fails a saving throw against one of your abilities, you drive your divine wrath home in your enemy’s heart. The undead is enfeebled 1 for 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("9bab986f-0591-4549-b721-ff51f8556e34"), Type = TextBlockType.Text, Text = "When you critically hit an undead creature, or an undead creature critically fails a saving throw against one of your abilities, you drive your divine wrath home in your enemy's heart. The undead is enfeebled 1 for 1 round." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

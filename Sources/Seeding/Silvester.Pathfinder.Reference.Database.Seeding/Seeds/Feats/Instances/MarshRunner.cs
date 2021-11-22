@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("48f30b1d-9da6-4079-9ef6-d696937f3736"), Type = TextBlockType.Text, Text = "You are adept at moving through marshy terrain. When you use the (Action: Step) action, you can ignore difficult terrain caused by flooding, swamps, or quicksand. In addition, when you use the Acrobatics skill to (Action: Balance) on narrow surfaces or uneven marshy ground, you aren’t flat-footed, and if you roll a success on the Acrobatics check, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("48f30b1d-9da6-4079-9ef6-d696937f3736"), Type = TextBlockType.Text, Text = "You are adept at moving through marshy terrain. When you use the (Action: Step) action, you can ignore difficult terrain caused by flooding, swamps, or quicksand. In addition, when you use the Acrobatics skill to (Action: Balance) on narrow surfaces or uneven marshy ground, you aren't flat-footed, and if you roll a success on the Acrobatics check, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

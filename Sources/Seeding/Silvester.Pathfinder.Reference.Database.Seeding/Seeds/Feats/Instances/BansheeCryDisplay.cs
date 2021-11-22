@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5d5ebb2-62ce-4892-9cbe-690452319af1"), Type = TextBlockType.Text, Text = "You’ve learned how to pull off a sudden noisemaker at just the right moment in your display, a technique that can disrupt precise wording. You gain the Banshee Cry fireworks display." };
+            yield return new TextBlock { Id = Guid.Parse("d5d5ebb2-62ce-4892-9cbe-690452319af1"), Type = TextBlockType.Text, Text = "You've learned how to pull off a sudden noisemaker at just the right moment in your display, a technique that can disrupt precise wording. You gain the Banshee Cry fireworks display." };
             yield return new TextBlock { Id = Guid.Parse("0be9c7ea-9403-45e2-b1fd-6931652334f4"), Type = TextBlockType.Text, Text = "~ Banshee Cry: REACTION **Trigger** A creature within 30 feet Casts a Spell that has a verbal component or Activates an Item using a command Activation; **Effect** You set off a firework to explode with a loud screech near the creature. The creature must attempt a Will save." };
         }
 
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
                 Id = Guid.Parse("8907c390-31c9-4a8d-a4b4-7d021d792b77"),
                 
                 Success = "The creature is unaffected.",
-                Failure = "The creature must use an additional action on the triggering action or activity, or it’s disrupted.",
+                Failure = "The creature must use an additional action on the triggering action or activity, or it's disrupted.",
                 CriticalFailure = "The triggering action is disrupted.", 
             };
         }

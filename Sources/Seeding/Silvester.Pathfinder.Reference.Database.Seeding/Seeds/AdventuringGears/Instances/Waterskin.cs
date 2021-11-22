@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AdventuringGears
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("6bb4e722-12ee-4eb4-a867-b9f1861876db"), Type = TextBlockType.Text, Text = "When it’s full, a waterskin contains roughly 1 day’s worth of water for a Small or Medium creature." };
+            yield return new TextBlock { Id = Guid.Parse("6bb4e722-12ee-4eb4-a867-b9f1861876db"), Type = TextBlockType.Text, Text = "When it's full, a waterskin contains roughly 1 day's worth of water for a Small or Medium creature." };
         }
 
         protected override SourcePage GetSourcePage()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6e595c80-84e5-454d-ab15-67bcbe96a10b"), Type = TextBlockType.Text, Text = "You&#39;ve devoted extra time in the lab to improve your knowledge of alchemy. You learn the formulas for two alchemical items each time you level up instead of one; these must still be elixirs or tools. The number of versatile vials you can create each day increases by 1 if you&#39;re an expert in Crafting, 2 if you&#39;re a master, or 3 if you&#39;re legendary." };
+            yield return new TextBlock { Id = Guid.Parse("6e595c80-84e5-454d-ab15-67bcbe96a10b"), Type = TextBlockType.Text, Text = "You've devoted extra time in the lab to improve your knowledge of alchemy. You learn the formulas for two alchemical items each time you level up instead of one; these must still be elixirs or tools. The number of versatile vials you can create each day increases by 1 if you're an expert in Crafting, 2 if you're a master, or 3 if you're legendary." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c46d7be9-f538-4d3b-9743-4e6f302b37f0"), Type = TextBlockType.Text, Text = "You can lob bombs with great force and a precise trajectory to angle the splash in a cone spraying in a single direction. When throwing an alchemical bomb with the (trait: splash) trait, instead of splashing all squares adjacent to the target, you can treat the target’s space as the first affected square of a 15-foot cone directed away from you, potentially allowing you to avoid allies and splash deeper into enemy lines. If the target takes up more than a single square, the target’s square closest to you is the first affected square of the cone." };
+            yield return new TextBlock { Id = Guid.Parse("c46d7be9-f538-4d3b-9743-4e6f302b37f0"), Type = TextBlockType.Text, Text = "You can lob bombs with great force and a precise trajectory to angle the splash in a cone spraying in a single direction. When throwing an alchemical bomb with the (trait: splash) trait, instead of splashing all squares adjacent to the target, you can treat the target's space as the first affected square of a 15-foot cone directed away from you, potentially allowing you to avoid allies and splash deeper into enemy lines. If the target takes up more than a single square, the target's square closest to you is the first affected square of the cone." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

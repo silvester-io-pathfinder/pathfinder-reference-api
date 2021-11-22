@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4795b050-ba91-4877-97a6-2361822cc061"), Type = TextBlockType.Text, Text = "You rarely misidentify an item. When using Arcana, Nature, Occultism, or Religion checks to (action: Identify Magic), if you roll a critical failure, you get a failure instead. If you would misidentify a (trait: cursed) item because you roll a success but not a critical success, you simply can’t identify it instead." };
+            yield return new TextBlock { Id = Guid.Parse("4795b050-ba91-4877-97a6-2361822cc061"), Type = TextBlockType.Text, Text = "You rarely misidentify an item. When using Arcana, Nature, Occultism, or Religion checks to (action: Identify Magic), if you roll a critical failure, you get a failure instead. If you would misidentify a (trait: cursed) item because you roll a success but not a critical success, you simply can't identify it instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

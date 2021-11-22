@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PreciousMaterial
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("861a437f-5dda-4173-8143-0986ab0ef867"), Type = TextBlockType.Text, Text = "Cold iron shields don’t typically have an additional effect, though when used for a shield bash, they are cold iron weapons." };
+            yield return new TextBlock { Id = Guid.Parse("861a437f-5dda-4173-8143-0986ab0ef867"), Type = TextBlockType.Text, Text = "Cold iron shields don't typically have an additional effect, though when used for a shield bash, they are cold iron weapons." };
         }
 
         protected override IEnumerable<PreciousMaterialShieldVariant> GetVariants()

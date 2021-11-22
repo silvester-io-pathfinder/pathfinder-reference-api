@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("7e74161d-9220-468e-82bc-c57ea0f8147c"), Type = TextBlockType.Text, Text = "The spell lasts 1 minute, but it doesn’t end if the target uses a hostile action." }
+                    new TextBlock { Id = Guid.Parse("7e74161d-9220-468e-82bc-c57ea0f8147c"), Type = TextBlockType.Text, Text = "The spell lasts 1 minute, but it doesn't end if the target uses a hostile action." }
                 }
             };
         }

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d1861d8d-f488-4d53-b7b3-1b2bec0fdb8c"), Type = TextBlockType.Text, Text = "You transform the target to make it match your artisanal and artistic vision. If you have expert proficiency in Crafting, the item grants a +1 item bonus to attack rolls if it’s a weapon or skill checks if it’s a skill tool. The target is a beautiful and impressive piece for its new quality, but the effect is obviously temporary, so its monetary value doesn’t change." };
+            yield return new TextBlock { Id = Guid.Parse("d1861d8d-f488-4d53-b7b3-1b2bec0fdb8c"), Type = TextBlockType.Text, Text = "You transform the target to make it match your artisanal and artistic vision. If you have expert proficiency in Crafting, the item grants a +1 item bonus to attack rolls if it's a weapon or skill checks if it's a skill tool. The target is a beautiful and impressive piece for its new quality, but the effect is obviously temporary, so its monetary value doesn't change." };
             yield return new TextBlock { Id = Guid.Parse("d25e4d33-ec61-418f-bb45-ef9d8848e598"), Type = TextBlockType.Text, Text = "When you cast this spell, any previous artistic flourish you had cast ends." };
         }
 

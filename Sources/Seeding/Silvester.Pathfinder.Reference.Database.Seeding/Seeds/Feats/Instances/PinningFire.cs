@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d625c897-75c5-4dad-92c3-354f8b90cd91"), Type = TextBlockType.Text, Text = "You target your opponent’s clothing, equipment, or loose flesh with piercing projectiles to pin them to the ground or a nearby surface. If both your attacks hit, the target must succeed at a Reflex save against your class DC or become immobilized until it or an adjacent creature succeeds at a DC 10 Athletics check to remove the pinning projectiles. The creature doesn’t become stuck if it is incorporeal, is liquid (like a water elemental or some oozes), or could otherwise escape without effort." };
+            yield return new TextBlock { Id = Guid.Parse("d625c897-75c5-4dad-92c3-354f8b90cd91"), Type = TextBlockType.Text, Text = "You target your opponent's clothing, equipment, or loose flesh with piercing projectiles to pin them to the ground or a nearby surface. If both your attacks hit, the target must succeed at a Reflex save against your class DC or become immobilized until it or an adjacent creature succeeds at a DC 10 Athletics check to remove the pinning projectiles. The creature doesn't become stuck if it is incorporeal, is liquid (like a water elemental or some oozes), or could otherwise escape without effort." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

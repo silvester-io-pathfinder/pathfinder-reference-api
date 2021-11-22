@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4b14dc11-2777-47b1-a4f1-2feedb272a49"), Type = TextBlockType.Text, Text = "You can use your webbed feet to guide your fall. You glide slowly toward the ground, 5 feet down (10 feet if you don’t have both hands free) and up to 25 feet forward through the air. As long as you spend at least 1 action gliding each round and have not yet reached the ground, you remain in the air at the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("4b14dc11-2777-47b1-a4f1-2feedb272a49"), Type = TextBlockType.Text, Text = "You can use your webbed feet to guide your fall. You glide slowly toward the ground, 5 feet down (10 feet if you don't have both hands free) and up to 25 feet forward through the air. As long as you spend at least 1 action gliding each round and have not yet reached the ground, you remain in the air at the end of your turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

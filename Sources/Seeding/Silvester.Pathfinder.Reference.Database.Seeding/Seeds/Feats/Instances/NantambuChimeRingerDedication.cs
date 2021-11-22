@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("86191140-20c5-41f9-a35a-ff2267161058"), Type = TextBlockType.Text, Text = "You&#39;ve studied the basics of harmony and resonance in magic, exemplified by the ringing of chimes. You gain a single tradition arcane or occult cantrip of your choice, heightened to a spell level equal to half your level, rounded up. If you weren&#39;t already, you become trained in that tradition&#39;s spell DCs and spell attack rolls, with Intelligence as your spellcasting ability if you choose arcane or Charisma as your spellcasting ability if you choose occult. Regardless of your choice, you also either become trained in Arcana or Occultism, or an expert in one of these skills if you are already trained in both." };
+            yield return new TextBlock { Id = Guid.Parse("86191140-20c5-41f9-a35a-ff2267161058"), Type = TextBlockType.Text, Text = "You've studied the basics of harmony and resonance in magic, exemplified by the ringing of chimes. You gain a single tradition arcane or occult cantrip of your choice, heightened to a spell level equal to half your level, rounded up. If you weren't already, you become trained in that tradition's spell DCs and spell attack rolls, with Intelligence as your spellcasting ability if you choose arcane or Charisma as your spellcasting ability if you choose occult. Regardless of your choice, you also either become trained in Arcana or Occultism, or an expert in one of these skills if you are already trained in both." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

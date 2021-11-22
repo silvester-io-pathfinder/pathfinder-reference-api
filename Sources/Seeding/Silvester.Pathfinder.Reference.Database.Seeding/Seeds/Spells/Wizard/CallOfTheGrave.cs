@@ -35,7 +35,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new RollableEffect
             {
                 Id = Guid.Parse("1e1da503-72b1-4262-bd9f-5e0875a6180e"),
-                CriticalSuccess = "The target becomes sickened 2 and slowed 1 as long as it’s sickened.",
+                CriticalSuccess = "The target becomes sickened 2 and slowed 1 as long as it's sickened.",
                 Success = "The target becomes sickened 1.",
                 Failure = "The target is unaffected.",
             };

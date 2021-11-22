@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4362987b-16a2-4322-955a-df8747a323e5"), Type = TextBlockType.Text, Text = "Your aura protects against the twisting powers of aberrations. You and all allies within 15 feet gain a +1 status bonus to Fortitude and Will saves against effects from aberrations. You also gain a +1 status bonus to Fortitude saves against morph or polymorph effects and Will saves against mental effects; this bonus increases to +2 against aberrations’ morph, polymorph, or mental effects." };
+            yield return new TextBlock { Id = Guid.Parse("4362987b-16a2-4322-955a-df8747a323e5"), Type = TextBlockType.Text, Text = "Your aura protects against the twisting powers of aberrations. You and all allies within 15 feet gain a +1 status bonus to Fortitude and Will saves against effects from aberrations. You also gain a +1 status bonus to Fortitude saves against morph or polymorph effects and Will saves against mental effects; this bonus increases to +2 against aberrations' morph, polymorph, or mental effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

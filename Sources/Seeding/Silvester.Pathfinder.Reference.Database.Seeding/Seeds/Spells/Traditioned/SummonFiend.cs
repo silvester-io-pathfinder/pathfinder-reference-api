@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7890ba15-a712-4518-961c-f241c14adc47"), Type = TextBlockType.Text, Text = "You conjure a fiend to fight for you. You summon a common creature that has the fiend trait and whose level is 5 or lower, such as those found in Pathfinder Bestiary volumes. Heightening the spell increases the maximum level of creature you can summon. You can’t summon a creature unless its alignment is one of your deity’s preferred alignments (or, if you don’t have a deity, is within one step of your alignment). At the GM’s discretion, some deities might restrict specific types of fiends, even if their alignments match." };
+            yield return new TextBlock { Id = Guid.Parse("7890ba15-a712-4518-961c-f241c14adc47"), Type = TextBlockType.Text, Text = "You conjure a fiend to fight for you. You summon a common creature that has the fiend trait and whose level is 5 or lower, such as those found in Pathfinder Bestiary volumes. Heightening the spell increases the maximum level of creature you can summon. You can't summon a creature unless its alignment is one of your deity's preferred alignments (or, if you don't have a deity, is within one step of your alignment). At the GM's discretion, some deities might restrict specific types of fiends, even if their alignments match." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

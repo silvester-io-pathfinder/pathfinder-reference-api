@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f48a0955-d19d-4a37-a185-00f1788fbb2f"), Type = TextBlockType.Text, Text = "You’ve learned to forestall the effects of your curse somewhat. If the next action you use is to cast a (trait: revelation) spell, the severity of your curse doesn’t increase." };
+            yield return new TextBlock { Id = Guid.Parse("f48a0955-d19d-4a37-a185-00f1788fbb2f"), Type = TextBlockType.Text, Text = "You've learned to forestall the effects of your curse somewhat. If the next action you use is to cast a (trait: revelation) spell, the severity of your curse doesn't increase." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

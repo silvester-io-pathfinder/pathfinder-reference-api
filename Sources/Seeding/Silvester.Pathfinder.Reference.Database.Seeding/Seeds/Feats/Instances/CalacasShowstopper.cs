@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f0b815a-4855-4599-8894-6ba786d15d3b"), Type = TextBlockType.Text, Text = "You’ve spent many an evening learning songs and tales featuring calacas, death’s wandering minstrels. You dramatically unleash a stunning blast of sound by smashing an instrument you hold or belting out a discordant note. This has the effects of (spell: synaptic pulse), but the effect is (trait: auditory) rather than (trait: mental). The DC is either your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("5f0b815a-4855-4599-8894-6ba786d15d3b"), Type = TextBlockType.Text, Text = "You've spent many an evening learning songs and tales featuring calacas, death's wandering minstrels. You dramatically unleash a stunning blast of sound by smashing an instrument you hold or belting out a discordant note. This has the effects of (spell: synaptic pulse), but the effect is (trait: auditory) rather than (trait: mental). The DC is either your class DC or spell DC, whichever is higher." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

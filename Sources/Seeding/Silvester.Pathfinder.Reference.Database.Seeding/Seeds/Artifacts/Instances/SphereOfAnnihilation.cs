@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Artifacts.Instan
             {
                 Id = ID,
                 Name = "Sphere of Annihilation",
-                Destruction = "When a gate spell is cast such that its rift overlaps a sphere of annihilation, roll d%. On a result of 1–50, the sphere is destroyed; on a 51–85, the spell is disrupted; and on a 86–100, everything within an 180-foot emanation of the sphere is pulled to another plane through a tear in the spatial fabric. If a rod of cancellation (Pathfinder Advanced Player’s Guide) touches the sphere, both items explode, dealing 14d6 bludgeoning damage (DC 35 basic Reflex save) to everything in a 60-foot burst from the point of their destruction.",
+                Destruction = "When a gate spell is cast such that its rift overlaps a sphere of annihilation, roll d%. On a result of 1–50, the sphere is destroyed; on a 51–85, the spell is disrupted; and on a 86–100, everything within an 180-foot emanation of the sphere is pulled to another plane through a tear in the spatial fabric. If a rod of cancellation (Pathfinder Advanced Player's Guide) touches the sphere, both items explode, dealing 14d6 bludgeoning damage (DC 35 basic Reflex save) to everything in a 60-foot burst from the point of their destruction.",
                 ItemLevel = 27,
                 BulkId = Bulks.Instances.TwoBulk.ID
             };
@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Artifacts.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("d8d3fb9a-9cae-4afc-8c95-576384d00feb"), Type = TextBlockType.Text, Text = "A sphere of annihilation is a floating black sphere that pulls any matter that comes into contact with it into a void, destroying it utterly. Anything or anyone destroyed by the sphere can be brought back only by a deity’s direct intervention. The sphere can’t be counteracted by dispel magic or similar effects." };
+            yield return new TextBlock { Id = Guid.Parse("d8d3fb9a-9cae-4afc-8c95-576384d00feb"), Type = TextBlockType.Text, Text = "A sphere of annihilation is a floating black sphere that pulls any matter that comes into contact with it into a void, destroying it utterly. Anything or anyone destroyed by the sphere can be brought back only by a deity's direct intervention. The sphere can't be counteracted by dispel magic or similar effects." };
             yield return new TextBlock { Id = Guid.Parse("476e6b56-f4f4-49b1-ab4c-8cca9971ce19"), Type = TextBlockType.Text, Text = "The sphere stays entirely still until caused to move by a creature controlling it. Taking control of the sphere requires succeeding at an attempt to activate it. A talisman of the sphere makes it easier to control the sphere." };
         }
 

@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             yield return new SkillActionExample { Id = Guid.Parse("9bd403d4-01c8-4000-8713-0964a6509d8a"), ProficiencyId = Proficiencies.Instances.Trained.ID, Description = "Bartend, do legal research." };
             yield return new SkillActionExample { Id = Guid.Parse("d0c5ced7-76f7-4612-bea9-824c6e0a53ff"), ProficiencyId = Proficiencies.Instances.Expert.ID, Description = "Curate drink selection, present minor court cases." };
             yield return new SkillActionExample { Id = Guid.Parse("f1927f44-1071-4d02-90c3-5fda01d5cff2"), ProficiencyId = Proficiencies.Instances.Master.ID, Description = "Run a large brewery, present important court cases." };
-            yield return new SkillActionExample { Id = Guid.Parse("13e3564b-3c2f-4248-b5ee-92ba8a96bc57"), ProficiencyId = Proficiencies.Instances.Legendary.ID, Description = "Run an international brewing franchise, present a case in Hell’s courts." };
+            yield return new SkillActionExample { Id = Guid.Parse("13e3564b-3c2f-4248-b5ee-92ba8a96bc57"), ProficiencyId = Proficiencies.Instances.Legendary.ID, Description = "Run an international brewing franchise, present a case in Hell's courts." };
         }
 
         protected override Table? GetTable()

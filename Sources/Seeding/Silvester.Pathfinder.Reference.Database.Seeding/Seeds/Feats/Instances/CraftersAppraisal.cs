@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f6600d6d-2cd6-4400-a439-54afc4609afd"), Type = TextBlockType.Text, Text = "Your knowledge of items’ construction allows you to discern their magical effects as well. You can use Crafting instead of a skill associated with a magic tradition to (action: Identify Magic) on magic items, though not on any other sorts of magic." };
+            yield return new TextBlock { Id = Guid.Parse("f6600d6d-2cd6-4400-a439-54afc4609afd"), Type = TextBlockType.Text, Text = "Your knowledge of items' construction allows you to discern their magical effects as well. You can use Crafting instead of a skill associated with a magic tradition to (action: Identify Magic) on magic items, though not on any other sorts of magic." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

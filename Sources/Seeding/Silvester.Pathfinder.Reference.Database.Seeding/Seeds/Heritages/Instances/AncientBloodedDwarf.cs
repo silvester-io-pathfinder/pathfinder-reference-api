@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("9b0ae32c-3d52-491a-af08-89d6517318b6"), Type = TextBlockType.Text, Text = "Dwarven heroes of old could shrug off their enemies’ magic, and some of that resistance manifests in you. You gain the Call on Ancient Blood reaction." };
+            yield return new TextBlock { Id = Guid.Parse("9b0ae32c-3d52-491a-af08-89d6517318b6"), Type = TextBlockType.Text, Text = "Dwarven heroes of old could shrug off their enemies' magic, and some of that resistance manifests in you. You gain the Call on Ancient Blood reaction." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

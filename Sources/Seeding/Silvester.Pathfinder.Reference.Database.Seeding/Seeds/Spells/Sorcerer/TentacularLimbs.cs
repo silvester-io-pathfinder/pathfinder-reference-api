@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f054a874-b24c-466a-8036-20c14ee267fe"), Type = TextBlockType.Text, Text = "Your arms turn into long, pliable tentacles, increasing your reach when you’re delivering touch range spells and making unarmed Strikes with your arms (such as fist and claw Strikes) to 10 feet. This doesn’t change the reach of your melee weapon attacks. During the duration, whenever you Cast a Spell, you can add an additional action to that spell’s casting to temporarily extend your reach to 20 feet to deliver that spell." };
+            yield return new TextBlock { Id = Guid.Parse("f054a874-b24c-466a-8036-20c14ee267fe"), Type = TextBlockType.Text, Text = "Your arms turn into long, pliable tentacles, increasing your reach when you're delivering touch range spells and making unarmed Strikes with your arms (such as fist and claw Strikes) to 10 feet. This doesn't change the reach of your melee weapon attacks. During the duration, whenever you Cast a Spell, you can add an additional action to that spell's casting to temporarily extend your reach to 20 feet to deliver that spell." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

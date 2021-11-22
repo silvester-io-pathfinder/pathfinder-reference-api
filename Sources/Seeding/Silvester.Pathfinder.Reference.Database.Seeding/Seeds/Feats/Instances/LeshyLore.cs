@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0877eca8-dcf8-44c6-bbac-790e27331251"), Type = TextBlockType.Text, Text = "You deeply understand your people’s cultural traditions and innate strengths. You gain the trained proficiency rank in Nature and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Leshy Lore." };
+            yield return new TextBlock { Id = Guid.Parse("0877eca8-dcf8-44c6-bbac-790e27331251"), Type = TextBlockType.Text, Text = "You deeply understand your people's cultural traditions and innate strengths. You gain the trained proficiency rank in Nature and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Leshy Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

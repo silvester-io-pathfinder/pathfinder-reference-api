@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd57b92e-5f79-484d-aa03-69a6db14628c"), Type = TextBlockType.Text, Text = "You&#39;ve learned a variety of methods for helping allies who are bleeding, burning, or otherwise suffering persistent damage, from brushing off acid to patting down fires. Your ally immediately attempts a flat check to remove all types of persistent damage, and your use of this feat automatically counts as especially effective aid, reducing the DC from 15 to 10 for all future flat checks to remove the persistent damage." };
+            yield return new TextBlock { Id = Guid.Parse("cd57b92e-5f79-484d-aa03-69a6db14628c"), Type = TextBlockType.Text, Text = "You've learned a variety of methods for helping allies who are bleeding, burning, or otherwise suffering persistent damage, from brushing off acid to patting down fires. Your ally immediately attempts a flat check to remove all types of persistent damage, and your use of this feat automatically counts as especially effective aid, reducing the DC from 15 to 10 for all future flat checks to remove the persistent damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

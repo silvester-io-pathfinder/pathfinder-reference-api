@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dd1251a8-30e1-416e-8359-fa118ae2301d"), Type = TextBlockType.Text, Text = "The divine might provided by your bloodline flows through you. You gain an additional spell slot of your highest level, which you can use only to cast your choice of (spell: heal) or (spell: harm). You can cast either of these spells using that spell slot, even if they aren’t in your spell repertoire." };
+            yield return new TextBlock { Id = Guid.Parse("dd1251a8-30e1-416e-8359-fa118ae2301d"), Type = TextBlockType.Text, Text = "The divine might provided by your bloodline flows through you. You gain an additional spell slot of your highest level, which you can use only to cast your choice of (spell: heal) or (spell: harm). You can cast either of these spells using that spell slot, even if they aren't in your spell repertoire." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

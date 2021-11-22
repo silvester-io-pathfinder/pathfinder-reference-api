@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AdventuringGears
             {
                 Id = Guid.Parse("5ae2a0fc-0840-44a9-a9af-044ab1412416"),
                 NameAddendum = "Bull's Eye",
-                DescriptionAddendum = "A bull’s-eye lantern emits its light in a 60-foot cone (and dim light in the next 60 feet).",
+                DescriptionAddendum = "A bull's-eye lantern emits its light in a 60-foot cone (and dim light in the next 60 feet).",
                 ItemLevel = 0,
                 Price = 100,
                 Hands = 1,

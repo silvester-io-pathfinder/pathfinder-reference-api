@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dc27bee1-87ff-4805-b385-79e6bed6a1f3"), Type = TextBlockType.Text, Text = "As you perfect your innovation’s cortex, it becomes much more intelligent. Its Intelligence modifier increases by 2, and it learns a language of your choice from among the languages you know. Your construct gains the ability to use actions that require greater Intelligence, like (action: Coerce) and (action: Decipher Writing). Finally, your construct becomes legendary in two Intelligence- or Charisma-based skills of your choice. You must have the (feat: marvelous gears | Modification - Marvelous Gears) modification to select this modification." };
+            yield return new TextBlock { Id = Guid.Parse("dc27bee1-87ff-4805-b385-79e6bed6a1f3"), Type = TextBlockType.Text, Text = "As you perfect your innovation's cortex, it becomes much more intelligent. Its Intelligence modifier increases by 2, and it learns a language of your choice from among the languages you know. Your construct gains the ability to use actions that require greater Intelligence, like (action: Coerce) and (action: Decipher Writing). Finally, your construct becomes legendary in two Intelligence- or Charisma-based skills of your choice. You must have the (feat: marvelous gears | Modification - Marvelous Gears) modification to select this modification." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

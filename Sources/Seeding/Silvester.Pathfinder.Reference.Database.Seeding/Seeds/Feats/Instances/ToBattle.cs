@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9f9145be-7d92-455e-a793-34c1a6479237"), Type = TextBlockType.Text, Text = "With a resounding cry, you rally your ally to the offensive. Choose one ally within your marshal’s aura who has a reaction available. If you spend 1 action, that ally can use their reaction to immediately (action: Stride). If you spend 2 actions, that ally can use their reaction to immediately (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("9f9145be-7d92-455e-a793-34c1a6479237"), Type = TextBlockType.Text, Text = "With a resounding cry, you rally your ally to the offensive. Choose one ally within your marshal's aura who has a reaction available. If you spend 1 action, that ally can use their reaction to immediately (action: Stride). If you spend 2 actions, that ally can use their reaction to immediately (action: Strike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

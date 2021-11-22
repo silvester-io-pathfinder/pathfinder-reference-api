@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e23b600-2f70-4950-a46a-68dfc418c0c1"), Type = TextBlockType.Text, Text = "Foes within the area are frightened 1. They can’t reduce their frightened value below 1 while they remain in the area." };
+            yield return new TextBlock { Id = Guid.Parse("1e23b600-2f70-4950-a46a-68dfc418c0c1"), Type = TextBlockType.Text, Text = "Foes within the area are frightened 1. They can't reduce their frightened value below 1 while they remain in the area." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eefb0e35-2249-4641-8331-2b6408685056"), Type = TextBlockType.Text, Text = "Long ago, qlippoth marked someone in your lineage, most likely through their ancient runestones that dot Golarion’s surface. Yours is an old lineage, primordial and twisted, and you have a sense for similarly twisted things. You’re trained in Occultism. If you’re already trained in Occultism (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the (feat: Oddity Identification) skill feat." };
+            yield return new TextBlock { Id = Guid.Parse("eefb0e35-2249-4641-8331-2b6408685056"), Type = TextBlockType.Text, Text = "Long ago, qlippoth marked someone in your lineage, most likely through their ancient runestones that dot Golarion's surface. Yours is an old lineage, primordial and twisted, and you have a sense for similarly twisted things. You're trained in Occultism. If you're already trained in Occultism (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the (feat: Oddity Identification) skill feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

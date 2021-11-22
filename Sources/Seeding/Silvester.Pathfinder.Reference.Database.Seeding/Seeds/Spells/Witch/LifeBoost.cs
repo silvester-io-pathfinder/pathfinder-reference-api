@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f36dd9cb-ba2d-4e09-bab2-04b07d96ccef"), Type = TextBlockType.Text, Text = "You temporarily bolster the target’s vitality. The target gains fast healing equal to double the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("f36dd9cb-ba2d-4e09-bab2-04b07d96ccef"), Type = TextBlockType.Text, Text = "You temporarily bolster the target's vitality. The target gains fast healing equal to double the spell's level." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

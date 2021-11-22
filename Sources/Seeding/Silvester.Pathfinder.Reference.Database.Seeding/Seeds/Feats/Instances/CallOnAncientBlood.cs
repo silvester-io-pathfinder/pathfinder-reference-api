@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("88851356-4347-44ca-8d70-ede0fa678ad7"), Type = TextBlockType.Text, Text = "Your ancestors’ innate resistance to magic surges, before slowly ebbing down. You gain a +1 circumstance bonus to the triggering saving throw and until the end of this turn." };
+            yield return new TextBlock { Id = Guid.Parse("88851356-4347-44ca-8d70-ede0fa678ad7"), Type = TextBlockType.Text, Text = "Your ancestors' innate resistance to magic surges, before slowly ebbing down. You gain a +1 circumstance bonus to the triggering saving throw and until the end of this turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

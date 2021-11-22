@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("15c15918-675a-401b-a53a-0c568fa818ab"), Type = TextBlockType.Text, Text = "You block the target’s motor impulses before they can leave its mind, threatening to freeze the target in place. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("15c15918-675a-401b-a53a-0c568fa818ab"), Type = TextBlockType.Text, Text = "You block the target's motor impulses before they can leave its mind, threatening to freeze the target in place. The target must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f2c7628d-2b2d-4250-aee8-25d6ead5a5f6"), Type = TextBlockType.Text, Text = "Your fix your eye on the target, imposing a malevolent hex. The target becomes frightened based on the results of its Will save. This condition value can’t be reduced below 1 while the spell is active and you can see the target. Regardless of the outcome, the target is then temporarily immune for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("f2c7628d-2b2d-4250-aee8-25d6ead5a5f6"), Type = TextBlockType.Text, Text = "Your fix your eye on the target, imposing a malevolent hex. The target becomes frightened based on the results of its Will save. This condition value can't be reduced below 1 while the spell is active and you can see the target. Regardless of the outcome, the target is then temporarily immune for 1 minute." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

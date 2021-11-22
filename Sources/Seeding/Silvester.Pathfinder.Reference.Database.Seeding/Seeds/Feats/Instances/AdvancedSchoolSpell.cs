@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("182e5808-5566-43f1-b5df-986acd9730ed"), Type = TextBlockType.Text, Text = "You gain access to a powerful new school spell depending on your arcane school. If you’re an abjurer, you gain (Spell: energy absorption); if you’re a conjurer, you gain (Spell: dimensional steps); if you’re a diviner, you gain (Spell: vigilant eye); if you’re an enchanter, you gain (Spell: dread aura); if you’re an evoker, you gain (Spell: elemental tempest); if you’re an illusionist, you gain (Spell: invisibility cloak); if you’re a necromancer, you gain (Spell: life siphon); and if you’re a transmuter, you gain (Spell: shifting form). Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("182e5808-5566-43f1-b5df-986acd9730ed"), Type = TextBlockType.Text, Text = "You gain access to a powerful new school spell depending on your arcane school. If you're an abjurer, you gain (Spell: energy absorption); if you're a conjurer, you gain (Spell: dimensional steps); if you're a diviner, you gain (Spell: vigilant eye); if you're an enchanter, you gain (Spell: dread aura); if you're an evoker, you gain (Spell: elemental tempest); if you're an illusionist, you gain (Spell: invisibility cloak); if you're a necromancer, you gain (Spell: life siphon); and if you're a transmuter, you gain (Spell: shifting form). Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f9a867c4-8201-483e-8c81-14d14234a2b3"), Type = TextBlockType.Text, Text = "When you call upon your deity’s power to fulfill the promise of their domain, you gain divine protection. After you cast a domain spell, you gain resistance to all damage until the start of your next turn. The amount of resistance is equal to the level of the domain spell you cast." };
+            yield return new TextBlock { Id = Guid.Parse("f9a867c4-8201-483e-8c81-14d14234a2b3"), Type = TextBlockType.Text, Text = "When you call upon your deity's power to fulfill the promise of their domain, you gain divine protection. After you cast a domain spell, you gain resistance to all damage until the start of your next turn. The amount of resistance is equal to the level of the domain spell you cast." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

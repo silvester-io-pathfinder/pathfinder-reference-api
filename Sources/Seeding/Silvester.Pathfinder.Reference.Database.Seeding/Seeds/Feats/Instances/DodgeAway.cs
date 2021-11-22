@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1da4f1e9-bba5-422f-bc81-aaa17fb34387"), Type = TextBlockType.Text, Text = "You use your acrobatic prowess to evade an attack, using momentum to keep yourself moving, if you choose. You gain a +1 circumstance bonus to AC against the triggering attack. If the attack misses you, you can (action: Step) after the (action: Strike). If you’re a master in Acrobatics, you can move 10 feet on this (action: Step) instead of 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("1da4f1e9-bba5-422f-bc81-aaa17fb34387"), Type = TextBlockType.Text, Text = "You use your acrobatic prowess to evade an attack, using momentum to keep yourself moving, if you choose. You gain a +1 circumstance bonus to AC against the triggering attack. If the attack misses you, you can (action: Step) after the (action: Strike). If you're a master in Acrobatics, you can move 10 feet on this (action: Step) instead of 5 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

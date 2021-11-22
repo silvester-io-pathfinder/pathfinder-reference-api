@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a759a41f-d356-4134-afcc-1d1a43510139"), Type = TextBlockType.Text, Text = "You can elude supernatural disaster. When you would gain the doomed condition, you can attempt a DC 17 flat check. On a success, you don’t gain the doomed condition." };
+            yield return new TextBlock { Id = Guid.Parse("a759a41f-d356-4134-afcc-1d1a43510139"), Type = TextBlockType.Text, Text = "You can elude supernatural disaster. When you would gain the doomed condition, you can attempt a DC 17 flat check. On a success, you don't gain the doomed condition." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

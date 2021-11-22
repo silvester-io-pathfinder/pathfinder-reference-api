@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("afd13f69-1a3d-4491-9a1d-8571e69866a2"), Type = TextBlockType.Text, Text = "You make the object invisible. This makes it undetected to all creatures, though the creatures can attempt to find the target, making it hidden to them instead if they succeed. If the item is used as part of a hostile action, the spell ends after that hostile action is completed. Making a weapon invisible typically doesn’t give any advantage to the attack, except that an invisible thrown weapon or piece of ammunition can be used for an attack without necessarily giving information about the attacker’s hiding place unless the weapon returns to the attacker." };
+            yield return new TextBlock { Id = Guid.Parse("afd13f69-1a3d-4491-9a1d-8571e69866a2"), Type = TextBlockType.Text, Text = "You make the object invisible. This makes it undetected to all creatures, though the creatures can attempt to find the target, making it hidden to them instead if they succeed. If the item is used as part of a hostile action, the spell ends after that hostile action is completed. Making a weapon invisible typically doesn't give any advantage to the attack, except that an invisible thrown weapon or piece of ammunition can be used for an attack without necessarily giving information about the attacker's hiding place unless the weapon returns to the attacker." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PreciousMaterial
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("2caacf7f-f509-44ff-be28-b7a8c10d5d87"), Type = TextBlockType.Text, Text = "Darkwood weapons are as dark as ebony, with a slight purple tint. A darkwood weapon’s Bulk is reduced by 1 (or to light Bulk if its normal Bulk is 1, with no effect on a weapon that normally has light Bulk)." };
+            yield return new TextBlock { Id = Guid.Parse("2caacf7f-f509-44ff-be28-b7a8c10d5d87"), Type = TextBlockType.Text, Text = "Darkwood weapons are as dark as ebony, with a slight purple tint. A darkwood weapon's Bulk is reduced by 1 (or to light Bulk if its normal Bulk is 1, with no effect on a weapon that normally has light Bulk)." };
         }
 
         protected override IEnumerable<PreciousMaterialWeaponVariant> GetVariants()

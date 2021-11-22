@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2ef98ebf-93ce-43fb-9797-25ac118f9dff"), Type = TextBlockType.Text, Text = "Your presence alone is enough to provide your allies with emotional support. You can use the (Action: Aid) reaction to grant a bonus to another creature’s Will saving throw even when you haven’t prepared to help." };
+            yield return new TextBlock { Id = Guid.Parse("2ef98ebf-93ce-43fb-9797-25ac118f9dff"), Type = TextBlockType.Text, Text = "Your presence alone is enough to provide your allies with emotional support. You can use the (Action: Aid) reaction to grant a bonus to another creature's Will saving throw even when you haven't prepared to help." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

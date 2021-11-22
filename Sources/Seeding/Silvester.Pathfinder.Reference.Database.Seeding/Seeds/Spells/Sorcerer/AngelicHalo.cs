@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81ff5de4-fb8d-4da8-8ca5-247d18a1d951"), Type = TextBlockType.Text, Text = "You gain an angelic halo with an aura that increases allies’ healing from the heal spell. Allies in your halo’s emanation who are healed by a heal spell gain a status bonus to Hit Points regained equal to double the heal spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("81ff5de4-fb8d-4da8-8ca5-247d18a1d951"), Type = TextBlockType.Text, Text = "You gain an angelic halo with an aura that increases allies' healing from the heal spell. Allies in your halo's emanation who are healed by a heal spell gain a status bonus to Hit Points regained equal to double the heal spell's level." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

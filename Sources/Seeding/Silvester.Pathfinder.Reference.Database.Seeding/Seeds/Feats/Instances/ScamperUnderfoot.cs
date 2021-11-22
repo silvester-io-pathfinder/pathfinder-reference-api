@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("66aff5a0-5459-4546-a212-f2cfdf9f4cea"), Type = TextBlockType.Text, Text = "You are used to ducking under foes and can scurry around the battlefield with ease. You gain a +1 circumstance bonus to Acrobatics checks to (action: Tumble Through) the spaces of Medium or larger enemies, and the presence of an enemy doesn’t make the squares difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("66aff5a0-5459-4546-a212-f2cfdf9f4cea"), Type = TextBlockType.Text, Text = "You are used to ducking under foes and can scurry around the battlefield with ease. You gain a +1 circumstance bonus to Acrobatics checks to (action: Tumble Through) the spaces of Medium or larger enemies, and the presence of an enemy doesn't make the squares difficult terrain." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

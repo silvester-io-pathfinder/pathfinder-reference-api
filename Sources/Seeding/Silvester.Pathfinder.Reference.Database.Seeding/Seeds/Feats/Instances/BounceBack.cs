@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("36e261c9-e49d-499f-b051-fd35bce1900d"), Type = TextBlockType.Text, Text = "You recover from near-death experiences with astounding resilience. Don’t increase the value of your wounded condition due to losing the dying condition." };
+            yield return new TextBlock { Id = Guid.Parse("36e261c9-e49d-499f-b051-fd35bce1900d"), Type = TextBlockType.Text, Text = "You recover from near-death experiences with astounding resilience. Don't increase the value of your wounded condition due to losing the dying condition." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

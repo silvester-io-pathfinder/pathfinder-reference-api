@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
             {
                 Id = ID,
                 Name = "Scarlet Fever",
-                Description = "he relatively simple sore throat caused by this disease leads many victims to initially dismiss it as a mild illness, but scarlet fever can be deadly if left untreated. You can’t reduce your sickened condition while affected with scarlet fever.",
+                Description = "he relatively simple sore throat caused by this disease leads many victims to initially dismiss it as a mild illness, but scarlet fever can be deadly if left untreated. You can't reduce your sickened condition while affected with scarlet fever.",
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = 13,
                 Onset = "2 Days"

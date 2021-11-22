@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bc157c9b-8627-4e9a-b872-f4576b7f78a8"), Type = TextBlockType.Text, Text = "You’ve learned how to trigger snares from afar, creating ranged hazards to assail your opponents and allowing you to disarm enemies’ snares harmlessly. You can (action: Strike) a snare to trigger it prematurely. If you crafted the snare, you automatically hit. If someone else crafted it, attempt a ranged (action: Strike) against the Crafting DC, triggering the snare only if you hit." };
+            yield return new TextBlock { Id = Guid.Parse("bc157c9b-8627-4e9a-b872-f4576b7f78a8"), Type = TextBlockType.Text, Text = "You've learned how to trigger snares from afar, creating ranged hazards to assail your opponents and allowing you to disarm enemies' snares harmlessly. You can (action: Strike) a snare to trigger it prematurely. If you crafted the snare, you automatically hit. If someone else crafted it, attempt a ranged (action: Strike) against the Crafting DC, triggering the snare only if you hit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b439fe1a-b8f6-4e45-83ee-369c0c6f6349"), Type = TextBlockType.Text, Text = "You’ve learned to maintain your balance even when swinging furiously. When you make a (Feat: Power Attack) with a melee weapon you’re wielding in two hands, it counts as one attack toward your multiple attack penalty instead of two." };
+            yield return new TextBlock { Id = Guid.Parse("b439fe1a-b8f6-4e45-83ee-369c0c6f6349"), Type = TextBlockType.Text, Text = "You've learned to maintain your balance even when swinging furiously. When you make a (Feat: Power Attack) with a melee weapon you're wielding in two hands, it counts as one attack toward your multiple attack penalty instead of two." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

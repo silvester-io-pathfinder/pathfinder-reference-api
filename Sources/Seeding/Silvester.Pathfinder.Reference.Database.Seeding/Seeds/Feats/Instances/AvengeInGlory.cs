@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("b8db7068-b7c1-45de-942d-7b87ed01cf09"), Type = TextBlockType.Text, Text = "~ Access: mountain dwarf ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("2cc747d2-d9fc-48d6-895b-d44bf1c9e664"), Type = TextBlockType.Text, Text = "You honor your ally’s life, gaining temporary Hit Points equal to your level for 1 minute. As long as you have these temporary Hit Points, you gain a +1 circumstance bonus to attack and damage rolls." };
+            yield return new TextBlock { Id = Guid.Parse("2cc747d2-d9fc-48d6-895b-d44bf1c9e664"), Type = TextBlockType.Text, Text = "You honor your ally's life, gaining temporary Hit Points equal to your level for 1 minute. As long as you have these temporary Hit Points, you gain a +1 circumstance bonus to attack and damage rolls." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

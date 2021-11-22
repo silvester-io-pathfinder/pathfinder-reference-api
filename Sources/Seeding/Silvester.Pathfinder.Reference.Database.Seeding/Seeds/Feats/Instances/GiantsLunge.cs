@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("03e25f0b-3388-4acf-971d-a14221f599b0"), Type = TextBlockType.Text, Text = "You extend your body and prepare to attack foes outside your normal reach. Until your rage ends, all your melee weapons and unarmed attacks gain (trait: reach 10). This doesn’t increase the reach of any weapon or unarmed attack that already has the (trait: reach) trait, but it does combine with abilities that increase your reach due to increased size, such as (feat: Giant&#39;s Stature)." };
+            yield return new TextBlock { Id = Guid.Parse("03e25f0b-3388-4acf-971d-a14221f599b0"), Type = TextBlockType.Text, Text = "You extend your body and prepare to attack foes outside your normal reach. Until your rage ends, all your melee weapons and unarmed attacks gain (trait: reach 10). This doesn't increase the reach of any weapon or unarmed attack that already has the (trait: reach) trait, but it does combine with abilities that increase your reach due to increased size, such as (feat: Giant's Stature)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

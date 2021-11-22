@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0190624e-95a4-4cbe-b160-37b8fed87654"), Type = TextBlockType.Text, Text = "Gain the conflux spell from a hybrid study of your choice. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by studying your spellbook and performing a physical regimen. You don’t gain any of the hybrid study’s other benefits." };
+            yield return new TextBlock { Id = Guid.Parse("0190624e-95a4-4cbe-b160-37b8fed87654"), Type = TextBlockType.Text, Text = "Gain the conflux spell from a hybrid study of your choice. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by studying your spellbook and performing a physical regimen. You don't gain any of the hybrid study's other benefits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

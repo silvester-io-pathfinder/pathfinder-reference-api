@@ -29,12 +29,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("623189ba-1b54-4c2b-9f13-86565fec83c1"), Type = TextBlockType.Text, Text = "You’ve sworn an oath to put the undead to rest. Add the following tenet to your champion’s code after the other tenets:" };
+            yield return new TextBlock { Id = Guid.Parse("623189ba-1b54-4c2b-9f13-86565fec83c1"), Type = TextBlockType.Text, Text = "You've sworn an oath to put the undead to rest. Add the following tenet to your champion's code after the other tenets:" };
             yield return new TextBlock { Id = Guid.Parse("4e0a31fd-dafa-4351-a930-76e9f70ee9bf"), Type = TextBlockType.Enumeration, Text = " : You must end the existence of undead you encounter as long as you have a reasonable chance of success; in the unlikely event you find a good undead, you can try to work out a more peaceful way to help it recover from its undead state rather than destroying it in combat, such as helping it complete its unfinished business and find peace." };
             yield return new TextBlock { Id = Guid.Parse("13581526-c94d-423a-b2ec-03367718d8e8"), Type = TextBlockType.Text, Text = "Your (feat: Retributive Strike) gains a +4 circumstance bonus to damage against an undead, or +6 if you have master proficiency with the weapon you used." };
-            yield return new TextBlock { Id = Guid.Parse("49cd1a73-0c87-4bac-8cbe-78fc98067bc8"), Type = TextBlockType.Text, Text = "Your (feat: Glimpse of Redemption)’s resistance against damage from an undead is 7 + your level." };
+            yield return new TextBlock { Id = Guid.Parse("49cd1a73-0c87-4bac-8cbe-78fc98067bc8"), Type = TextBlockType.Text, Text = "Your (feat: Glimpse of Redemption)'s resistance against damage from an undead is 7 + your level." };
             yield return new TextBlock { Id = Guid.Parse("72170d5d-50e9-49d1-8483-f1ee52814201"), Type = TextBlockType.Text, Text = "If you use (feat: Liberating Step) triggered by an undead, your ally gains a +4 circumstance bonus to checks granted by your (feat: Liberating Step), and the ally can (action: Step) twice afterward." };
-            yield return new TextBlock { Id = Guid.Parse("f4728111-2630-4baf-a4a7-5547a2e3dab8"), Type = TextBlockType.Text, Text = "You don’t consider undead to be legitimate authorities, even in nations ruled by undead." };
+            yield return new TextBlock { Id = Guid.Parse("f4728111-2630-4baf-a4a7-5547a2e3dab8"), Type = TextBlockType.Text, Text = "You don't consider undead to be legitimate authorities, even in nations ruled by undead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

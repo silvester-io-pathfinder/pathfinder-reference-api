@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f1e1b69-a648-4ba6-b584-f9ba5b18bb08"), Type = TextBlockType.Text, Text = "When an enemy’s movement is compromised, you deliver a more deadly blow. Make a (Action: Strike) against a creature that is grabbed, prone, or restrained. You gain a circumstance bonus to damage on this (Action: Strike) equal to the number of weapon damage dice, or that number + 2 if you’re wielding the weapon in two hands. The (Action: Strike) gains the following failure effect." };
+            yield return new TextBlock { Id = Guid.Parse("5f1e1b69-a648-4ba6-b584-f9ba5b18bb08"), Type = TextBlockType.Text, Text = "When an enemy's movement is compromised, you deliver a more deadly blow. Make a (Action: Strike) against a creature that is grabbed, prone, or restrained. You gain a circumstance bonus to damage on this (Action: Strike) equal to the number of weapon damage dice, or that number + 2 if you're wielding the weapon in two hands. The (Action: Strike) gains the following failure effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
                 Id = Guid.Parse("0405a386-72ce-460c-aba2-76c4ea712740"),
                 
                 
-                Failure = "You deal damage to the target equal to the number of weapon damage dice, or that number + 2 if you’re wielding the weapon in two hands. This damage has the same damage type as the weapon.",
+                Failure = "You deal damage to the target equal to the number of weapon damage dice, or that number + 2 if you're wielding the weapon in two hands. This damage has the same damage type as the weapon.",
                  
             };
         }

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("2a578ca7-b5ed-4903-a225-c9c839a8a2c5"), Type = TextBlockType.Text, Text = "Your ordered physiology rejects unwelcome elements. Choose one." };
-            yield return new TextBlock { Id = Guid.Parse("bea09e02-136f-4651-a8c9-e2a19c5b1579"), Type = TextBlockType.Enumeration, Text = " Disease or Poison: Attempt a saving throw against the affliction at its current stage. On a failure, the affliction’s stage doesn’t increase, but you suffer the effects of the stage you were already on. On a critical failure, the stage only increases by 1." };
+            yield return new TextBlock { Id = Guid.Parse("bea09e02-136f-4651-a8c9-e2a19c5b1579"), Type = TextBlockType.Enumeration, Text = " Disease or Poison: Attempt a saving throw against the affliction at its current stage. On a failure, the affliction's stage doesn't increase, but you suffer the effects of the stage you were already on. On a critical failure, the stage only increases by 1." };
             yield return new TextBlock { Id = Guid.Parse("a6662084-fa24-4a79-96b6-1adaaf5be5b4"), Type = TextBlockType.Enumeration, Text = " Persistent Damage: Attempt a DC 10 flat check to recover from the persistent damage." };
         }
 

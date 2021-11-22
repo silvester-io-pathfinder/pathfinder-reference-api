@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a3cd5495-7d48-49c2-8f10-1247469886d5"), Type = TextBlockType.Text, Text = "You curse the target, sapping its spirit and leaving a contagious trap in its essence. The target must attempt a Will save. Any creature that casts a divine or occult spell on the target while it’s affected is targeted by spiritual epidemic and must also attempt a Will save. The curse continues to spread in this way." };
+            yield return new TextBlock { Id = Guid.Parse("a3cd5495-7d48-49c2-8f10-1247469886d5"), Type = TextBlockType.Text, Text = "You curse the target, sapping its spirit and leaving a contagious trap in its essence. The target must attempt a Will save. Any creature that casts a divine or occult spell on the target while it's affected is targeted by spiritual epidemic and must also attempt a Will save. The curse continues to spread in this way." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

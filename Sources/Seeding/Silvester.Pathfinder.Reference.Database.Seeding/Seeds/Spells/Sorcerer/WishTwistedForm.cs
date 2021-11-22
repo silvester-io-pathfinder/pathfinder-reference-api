@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new TextBlock { Id = Guid.Parse("0a0a168d-340d-4b53-8866-fe2a98c129b2"), Type = TextBlockType.Text, Text = "You focus your magic upon an enemy, wishing for their defenses to fail and turning their strengths into weaknesses. The target must attempt one Will saving throw for all of the following effects." };
             yield return new TextBlock { Id = Guid.Parse("c16db883-a368-457e-9a5d-f70fb4067dc0"), Type = TextBlockType.Enumeration, Text = "The target gains weakness 5 to one energy type of your choice." };
-            yield return new TextBlock { Id = Guid.Parse("5dad7b84-b24e-4643-9a40-ce363fb85665"), Type = TextBlockType.Enumeration, Text = "The target’s resistances are reduced by 5." };
+            yield return new TextBlock { Id = Guid.Parse("5dad7b84-b24e-4643-9a40-ce363fb85665"), Type = TextBlockType.Enumeration, Text = "The target's resistances are reduced by 5." };
             yield return new TextBlock { Id = Guid.Parse("f30038b8-e268-4879-ae15-57a09a3968dd"), Type = TextBlockType.Enumeration, Text = "The target takes a –10-foot status penalty to all its Speeds." };
             yield return new TextBlock { Id = Guid.Parse("168f9784-bdee-49c2-8215-a8b8b58965ed"), Type = TextBlockType.Enumeration, Text = "The target takes a –1 status penalty to its saving throws." };
         }

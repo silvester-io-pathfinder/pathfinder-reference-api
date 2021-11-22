@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f19054de-a69b-4208-8701-926a924b151c"), Type = TextBlockType.Text, Text = "You can move freely through terrain you’re attuned to. When you gain a terrain attunement benefit, you ignore difficult terrain in the corresponding type of terrain until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("f19054de-a69b-4208-8701-926a924b151c"), Type = TextBlockType.Text, Text = "You can move freely through terrain you're attuned to. When you gain a terrain attunement benefit, you ignore difficult terrain in the corresponding type of terrain until the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

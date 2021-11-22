@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e83e542e-53f4-4d76-ad96-f0ef92a36b26"), Type = TextBlockType.Text, Text = "You have calculated all the angles to maximize a bomb’s splash. When you throw an alchemical bomb with the (trait: splash) trait, you can cause the bomb to deal splash damage equal to your Intelligence modifier (minimum 0) instead of the normal amount." };
+            yield return new TextBlock { Id = Guid.Parse("e83e542e-53f4-4d76-ad96-f0ef92a36b26"), Type = TextBlockType.Text, Text = "You have calculated all the angles to maximize a bomb's splash. When you throw an alchemical bomb with the (trait: splash) trait, you can cause the bomb to deal splash damage equal to your Intelligence modifier (minimum 0) instead of the normal amount." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

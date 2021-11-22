@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("da68ac82-1cc8-4bfe-b06f-83443fe0d775"), Type = TextBlockType.Text, Text = "You’ve been approached with suspicion and distrust throughout your life and return these sentiments back to the strangers you encounter. As a result, you are difficult to deceive. You gain a +1 circumstance bonus to your Perception DC against (action: Lies | Lie) and (action: Impersonations | Impersonate)." };
+            yield return new TextBlock { Id = Guid.Parse("da68ac82-1cc8-4bfe-b06f-83443fe0d775"), Type = TextBlockType.Text, Text = "You've been approached with suspicion and distrust throughout your life and return these sentiments back to the strangers you encounter. As a result, you are difficult to deceive. You gain a +1 circumstance bonus to your Perception DC against (action: Lies | Lie) and (action: Impersonations | Impersonate)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

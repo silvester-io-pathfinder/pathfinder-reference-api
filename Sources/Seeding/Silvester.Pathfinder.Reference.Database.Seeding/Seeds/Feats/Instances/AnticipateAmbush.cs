@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c58d71e8-2ab4-40e4-9198-116646234222"), Type = TextBlockType.Text, Text = "Using your extensive knowledge of ambush tactics, you keep watch for any hidden creatures or dangerous sites, moving at half your travel speed. If you’re Anticipating an Ambush at the start of an encounter, you roll a Perception check for initiative, and all enemies rolling Stealth for initiative take a –2 circumstance penalty to their Stealth checks." };
+            yield return new TextBlock { Id = Guid.Parse("c58d71e8-2ab4-40e4-9198-116646234222"), Type = TextBlockType.Text, Text = "Using your extensive knowledge of ambush tactics, you keep watch for any hidden creatures or dangerous sites, moving at half your travel speed. If you're Anticipating an Ambush at the start of an encounter, you roll a Perception check for initiative, and all enemies rolling Stealth for initiative take a –2 circumstance penalty to their Stealth checks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

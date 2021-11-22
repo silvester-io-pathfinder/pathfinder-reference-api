@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c53cdad4-b895-4ba0-a380-d637fb6dbc88"), Type = TextBlockType.Text, Text = "You are skilled at noticing the telltale signs of ghosts and hauntings. Even when you aren&#39;t (action: Investigating | Investigate) in exploration mode, you get a check to (action: Recall Knowledge) about incorporeal undead and haunts active in the area. You also gain a +2 circumstance bonus to skill checks to disable haunts." };
+            yield return new TextBlock { Id = Guid.Parse("c53cdad4-b895-4ba0-a380-d637fb6dbc88"), Type = TextBlockType.Text, Text = "You are skilled at noticing the telltale signs of ghosts and hauntings. Even when you aren't (action: Investigating | Investigate) in exploration mode, you get a check to (action: Recall Knowledge) about incorporeal undead and haunts active in the area. You also gain a +2 circumstance bonus to skill checks to disable haunts." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

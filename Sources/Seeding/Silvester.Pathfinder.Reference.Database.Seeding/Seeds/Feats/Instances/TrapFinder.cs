@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("17ddfa95-3458-4fd4-bb92-a482c46610a3"), Type = TextBlockType.Text, Text = "You have an intuitive sense that alerts you to the dangers and presence of traps. You gain a +1 circumstance bonus to Perception checks to find traps, to AC against attacks made by traps, and to saves against traps. Even if you aren’t (action: Searching | Search), you get a check to find traps that normally require you to be (action: Searching | Search). You still need to meet any other requirements to find the trap." };
+            yield return new TextBlock { Id = Guid.Parse("17ddfa95-3458-4fd4-bb92-a482c46610a3"), Type = TextBlockType.Text, Text = "You have an intuitive sense that alerts you to the dangers and presence of traps. You gain a +1 circumstance bonus to Perception checks to find traps, to AC against attacks made by traps, and to saves against traps. Even if you aren't (action: Searching | Search), you get a check to find traps that normally require you to be (action: Searching | Search). You still need to meet any other requirements to find the trap." };
             yield return new TextBlock { Id = Guid.Parse("3aa1adf0-e8d7-43c1-bce1-64048bc01636"), Type = TextBlockType.Text, Text = "You can disable traps that require a proficiency rank of master in Thievery. If you have master proficiency in Thievery, you can disable traps that require a proficiency rank of legendary instead, and your circumstance bonuses against traps increase to +2." };
         }
 

@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 Name = "Command",
                 Frequency = "One per day.",
                 Trigger = "You critically succeed at an attack roll against an evil creature with the weapon.",
-                Effect = "You regain HP equal to double the evil creature’s level. This is a good, positive, healing effect."
+                Effect = "You regain HP equal to double the evil creature's level. This is a good, positive, healing effect."
             };
         }
 

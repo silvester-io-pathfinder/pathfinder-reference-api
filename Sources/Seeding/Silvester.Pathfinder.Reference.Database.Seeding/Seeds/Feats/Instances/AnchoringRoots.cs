@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("57507b14-3293-424f-99bf-f86750287743"), Type = TextBlockType.Text, Text = "Small roots sprout from your feet, steadying you as you move. You gain the (feat: Steady Balance) skill feat, even if you aren’t trained in Acrobatics, and you can use the (feat: Anchor) action." };
+            yield return new TextBlock { Id = Guid.Parse("57507b14-3293-424f-99bf-f86750287743"), Type = TextBlockType.Text, Text = "Small roots sprout from your feet, steadying you as you move. You gain the (feat: Steady Balance) skill feat, even if you aren't trained in Acrobatics, and you can use the (feat: Anchor) action." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

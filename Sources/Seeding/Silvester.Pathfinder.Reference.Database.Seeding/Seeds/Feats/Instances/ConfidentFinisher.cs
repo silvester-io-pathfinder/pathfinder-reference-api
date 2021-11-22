@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7150d28e-4188-4142-8cc3-a36b4e2b8bdd"), Type = TextBlockType.Text, Text = "You make an incredibly graceful attack, piercing your foe’s defenses. Make a (action: Strike) with a weapon or unarmed attack that would apply your precise strike damage, with the following failure effect." };
+            yield return new TextBlock { Id = Guid.Parse("7150d28e-4188-4142-8cc3-a36b4e2b8bdd"), Type = TextBlockType.Text, Text = "You make an incredibly graceful attack, piercing your foe's defenses. Make a (action: Strike) with a weapon or unarmed attack that would apply your precise strike damage, with the following failure effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

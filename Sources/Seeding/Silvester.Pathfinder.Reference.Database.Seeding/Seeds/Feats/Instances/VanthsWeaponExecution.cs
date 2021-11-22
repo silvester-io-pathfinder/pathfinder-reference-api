@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2b707dc8-b792-4925-821e-038bba02b26a"), Type = TextBlockType.Text, Text = "You’ve trained in the finer points of dealing death. Whenever you critically hit using a (item: bo staff), (item: longbow), (item: composite longbow), (item: scythe), or (item: staff), you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("2b707dc8-b792-4925-821e-038bba02b26a"), Type = TextBlockType.Text, Text = "You've trained in the finer points of dealing death. Whenever you critically hit using a (item: bo staff), (item: longbow), (item: composite longbow), (item: scythe), or (item: staff), you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

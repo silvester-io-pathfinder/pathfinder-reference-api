@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd40a469-0edb-4b76-9ce7-e6d4efd83513"), Type = TextBlockType.Text, Text = "Your tail can bedevil your foes. You can (action: Disarm) and (action: Trip) creatures with your tail, even if you don’t have a free hand. All restrictions of (feat: Skillful Tail) otherwise continue to apply. If you have (feat: Smashing Tail), your tail unarmed attack gains the (trait: disarm) and (trait: trip) traits." };
+            yield return new TextBlock { Id = Guid.Parse("cd40a469-0edb-4b76-9ce7-e6d4efd83513"), Type = TextBlockType.Text, Text = "Your tail can bedevil your foes. You can (action: Disarm) and (action: Trip) creatures with your tail, even if you don't have a free hand. All restrictions of (feat: Skillful Tail) otherwise continue to apply. If you have (feat: Smashing Tail), your tail unarmed attack gains the (trait: disarm) and (trait: trip) traits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

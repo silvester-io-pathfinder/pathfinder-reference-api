@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("adcc8330-81f9-4552-bc3b-34a39040109f"), Type = TextBlockType.Text, Text = "All your (action: Strikes | Strike) against a creature you have (feat: Marked for Death | Mark for Death) have the (trait: death) trait, causing the mark to be instantly killed when reduced to 0 Hit Points. When killed in this way, attempts to communicate with it, return it to life, turn it into an undead, or otherwise disturb its afterlife fail unless the effect’s counteract level is higher than half your level when you killed the creature (rounded up), or originates from an artifact or a deity." };
+            yield return new TextBlock { Id = Guid.Parse("adcc8330-81f9-4552-bc3b-34a39040109f"), Type = TextBlockType.Text, Text = "All your (action: Strikes | Strike) against a creature you have (feat: Marked for Death | Mark for Death) have the (trait: death) trait, causing the mark to be instantly killed when reduced to 0 Hit Points. When killed in this way, attempts to communicate with it, return it to life, turn it into an undead, or otherwise disturb its afterlife fail unless the effect's counteract level is higher than half your level when you killed the creature (rounded up), or originates from an artifact or a deity." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

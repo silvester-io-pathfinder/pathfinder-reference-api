@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5bbdbace-de72-4cfe-8512-185541e45a36"), Type = TextBlockType.Text, Text = "You draw the target into a lucid dream where it can explore the endless possibilities of its own potential within the everchanging backdrop of its dreamscape. If it sleeps the full 8 hours uninterrupted, when it wakes, it counts as having spent a day of downtime retraining, though it can’t use dreaming potential for any retraining that would require either an instructor or specialized knowledge it can’t access within the dream." };
+            yield return new TextBlock { Id = Guid.Parse("5bbdbace-de72-4cfe-8512-185541e45a36"), Type = TextBlockType.Text, Text = "You draw the target into a lucid dream where it can explore the endless possibilities of its own potential within the everchanging backdrop of its dreamscape. If it sleeps the full 8 hours uninterrupted, when it wakes, it counts as having spent a day of downtime retraining, though it can't use dreaming potential for any retraining that would require either an instructor or specialized knowledge it can't access within the dream." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

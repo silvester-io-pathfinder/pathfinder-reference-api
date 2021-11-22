@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ItemCategories.I
                 Id = ID, 
                 PageNumber = 597, 
                 Name = "Wands", 
-                Description = "Hold a spell of the crafter’s choice, and can be used to repeatedly cast that spell." 
+                Description = "Hold a spell of the crafter's choice, and can be used to repeatedly cast that spell." 
             };
         }
     }

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("890aac43-8799-4e9c-b8f4-b933eef1b0df"), Type = TextBlockType.Text, Text = "__Your eidolon’s tradition is divine.__" };
+            yield return new TextBlock { Id = Guid.Parse("890aac43-8799-4e9c-b8f4-b933eef1b0df"), Type = TextBlockType.Text, Text = "__Your eidolon's tradition is divine.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

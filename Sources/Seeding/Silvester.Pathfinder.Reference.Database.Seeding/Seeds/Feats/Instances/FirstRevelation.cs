@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("96a362eb-b54f-4a1c-9131-b877ac5f00e9"), Type = TextBlockType.Text, Text = "You gain your mystery’s initial revelation spell. Casting this spell progresses your curse (APG pg. 70). Use the minor curse from your mystery, but when you progress it again, instead of your mystery’s moderate curse effect, you become flat-footed in addition to the effects of the minor curse." };
-            yield return new TextBlock { Id = Guid.Parse("3c9a93a1-daad-45e8-8e1f-459990118dd2"), Type = TextBlockType.Text, Text = "If you don’t have one, you gain a focus pool of 1 Focus Point. You can (action: Refocus) by reconciling the conflicting nature of your mystery, which also reduces your curse to minor." };
+            yield return new TextBlock { Id = Guid.Parse("96a362eb-b54f-4a1c-9131-b877ac5f00e9"), Type = TextBlockType.Text, Text = "You gain your mystery's initial revelation spell. Casting this spell progresses your curse (APG pg. 70). Use the minor curse from your mystery, but when you progress it again, instead of your mystery's moderate curse effect, you become flat-footed in addition to the effects of the minor curse." };
+            yield return new TextBlock { Id = Guid.Parse("3c9a93a1-daad-45e8-8e1f-459990118dd2"), Type = TextBlockType.Text, Text = "If you don't have one, you gain a focus pool of 1 Focus Point. You can (action: Refocus) by reconciling the conflicting nature of your mystery, which also reduces your curse to minor." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

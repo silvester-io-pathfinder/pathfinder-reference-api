@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c9facd51-cbe5-4bfd-88eb-0acbb2a12b45"), Type = TextBlockType.Text, Text = "You hurl a held melee weapon with which you are trained at the target, making a spell attack roll. On a success, you deal the weapon’s damage as if you had hit with a melee Strike, but adding your spellcasting ability modifier to damage, rather than your Strength modifier. On a critical success, you deal double damage, and you add the weapon’s critical specialization effect. Regardless of the outcome, the weapon flies back to you and returns to your hand." };
+            yield return new TextBlock { Id = Guid.Parse("c9facd51-cbe5-4bfd-88eb-0acbb2a12b45"), Type = TextBlockType.Text, Text = "You hurl a held melee weapon with which you are trained at the target, making a spell attack roll. On a success, you deal the weapon's damage as if you had hit with a melee Strike, but adding your spellcasting ability modifier to damage, rather than your Strength modifier. On a critical success, you deal double damage, and you add the weapon's critical specialization effect. Regardless of the outcome, the weapon flies back to you and returns to your hand." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

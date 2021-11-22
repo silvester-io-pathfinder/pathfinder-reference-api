@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3f46839f-d617-44cb-9d2a-8aaa706bfe0c"), Type = TextBlockType.Text, Text = "You can use your knowledge of engineering and metalwork to temporarily strengthen thick objects and structures. By spending 1 hour working on an item, you can give it a +1 circumstance bonus to its Hardness for 24 hours. If you’re a master in Crafting, the bonus is +2, and if you’re legendary, the bonus is +3. You can reinforce a portion of a structure, though 1 hour usually reinforces only a door, a few windows, or another section that fits within a 10-foot cube." };
+            yield return new TextBlock { Id = Guid.Parse("3f46839f-d617-44cb-9d2a-8aaa706bfe0c"), Type = TextBlockType.Text, Text = "You can use your knowledge of engineering and metalwork to temporarily strengthen thick objects and structures. By spending 1 hour working on an item, you can give it a +1 circumstance bonus to its Hardness for 24 hours. If you're a master in Crafting, the bonus is +2, and if you're legendary, the bonus is +3. You can reinforce a portion of a structure, though 1 hour usually reinforces only a door, a few windows, or another section that fits within a 10-foot cube." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

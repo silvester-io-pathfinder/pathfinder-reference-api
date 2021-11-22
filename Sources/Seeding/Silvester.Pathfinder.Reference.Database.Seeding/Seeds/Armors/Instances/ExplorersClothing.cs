@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Armors.Instances
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("915c591a-6d4e-4a6c-9ad1-8ee619a7ffd8"), Type = TextBlockType.Text, Text = "Adventurers who don’t wear armor travel in durable clothing. Though it’s not armor and uses your unarmored defense proficiency, it still has a Dex Cap and can grant an item bonus to AC if etched with potency runes." };
+            yield return new TextBlock { Id = Guid.Parse("915c591a-6d4e-4a6c-9ad1-8ee619a7ffd8"), Type = TextBlockType.Text, Text = "Adventurers who don't wear armor travel in durable clothing. Though it's not armor and uses your unarmored defense proficiency, it still has a Dex Cap and can grant an item bonus to AC if etched with potency runes." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

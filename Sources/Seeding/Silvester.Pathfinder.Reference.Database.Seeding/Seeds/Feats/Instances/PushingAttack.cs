@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c40107f-d31a-4f4d-a54e-6b20c704288d"), Type = TextBlockType.Text, Text = "Your eidolon has an attack that pushes away enemies. Choose one of the eidolon’s unarmed attacks with the (trait: shove) trait. It gains the Push action (Bestiary pg. 343) for that attack." };
+            yield return new TextBlock { Id = Guid.Parse("2c40107f-d31a-4f4d-a54e-6b20c704288d"), Type = TextBlockType.Text, Text = "Your eidolon has an attack that pushes away enemies. Choose one of the eidolon's unarmed attacks with the (trait: shove) trait. It gains the Push action (Bestiary pg. 343) for that attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d92a278-4924-47b1-9c79-f531c557a48f"), Type = TextBlockType.Text, Text = "During your adventures, you’ve honed your ability to adapt to the culture of the predominant ancestry around you. You gain the (Feat: Adopted Ancestry) general feat, and you also gain one 1st-level ancestry feat from the ancestry you chose for the (Feat: Adopted Ancestry) feat." };
+            yield return new TextBlock { Id = Guid.Parse("1d92a278-4924-47b1-9c79-f531c557a48f"), Type = TextBlockType.Text, Text = "During your adventures, you've honed your ability to adapt to the culture of the predominant ancestry around you. You gain the (Feat: Adopted Ancestry) general feat, and you also gain one 1st-level ancestry feat from the ancestry you chose for the (Feat: Adopted Ancestry) feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

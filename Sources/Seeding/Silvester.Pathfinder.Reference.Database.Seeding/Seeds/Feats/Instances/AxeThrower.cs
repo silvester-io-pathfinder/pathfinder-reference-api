@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e194a5b-646e-470f-a76f-351cb7b91c35"), Type = TextBlockType.Text, Text = "You have mastered the weight and balance of a variety of axes and can lob them with ease. Any one-handed axe weapon you wield has the (trait: thrown | thrown 10 ft) trait with a range of 10 feet. For axes that already have the (trait: thrown) trait, the range increases by 10 feet. When you critically succeed at an attack roll with a thrown axe weapon, you apply the axe’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("3e194a5b-646e-470f-a76f-351cb7b91c35"), Type = TextBlockType.Text, Text = "You have mastered the weight and balance of a variety of axes and can lob them with ease. Any one-handed axe weapon you wield has the (trait: thrown | thrown 10 ft) trait with a range of 10 feet. For axes that already have the (trait: thrown) trait, the range increases by 10 feet. When you critically succeed at an attack roll with a thrown axe weapon, you apply the axe's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

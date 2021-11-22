@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cfb924de-ffd6-4655-a15a-c9b12e7fce35"), Type = Utilities.Text.TextBlockType.Text, Text = "The target can understand the meaning of a single language it is hearing or reading when you cast the spell. This doesn’t let it understand codes, language couched in metaphor, and the like (subject to GM discretion). If the target can hear multiple languages and knows that, it can choose which language to understand; otherwise, choose one of the languages randomly." };
+            yield return new TextBlock { Id = Guid.Parse("cfb924de-ffd6-4655-a15a-c9b12e7fce35"), Type = Utilities.Text.TextBlockType.Text, Text = "The target can understand the meaning of a single language it is hearing or reading when you cast the spell. This doesn't let it understand codes, language couched in metaphor, and the like (subject to GM discretion). If the target can hear multiple languages and knows that, it can choose which language to understand; otherwise, choose one of the languages randomly." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

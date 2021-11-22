@@ -28,8 +28,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a4ef6d5e-6e25-4611-9cc3-10681463f4bb"), Type = TextBlockType.Text, Text = "You undermine the target spell, making it easier to defend against. You reduce the spell’s level by 1, and targets of the spell gain a +2 status bonus to any saving throws, skill checks, AC, or DC against it." };
-            yield return new TextBlock { Id = Guid.Parse("bb4070a4-d683-4a04-852b-c4e435447513"), Type = TextBlockType.Text, Text = "You can’t reduce the spell’s level below its minimum. For example, a 5th-level cone of cold would remain 5th-level, but a 5th-level fireball would become 4th-level. Targets still gain all the other benefits, even if you don’t reduce the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("a4ef6d5e-6e25-4611-9cc3-10681463f4bb"), Type = TextBlockType.Text, Text = "You undermine the target spell, making it easier to defend against. You reduce the spell's level by 1, and targets of the spell gain a +2 status bonus to any saving throws, skill checks, AC, or DC against it." };
+            yield return new TextBlock { Id = Guid.Parse("bb4070a4-d683-4a04-852b-c4e435447513"), Type = TextBlockType.Text, Text = "You can't reduce the spell's level below its minimum. For example, a 5th-level cone of cold would remain 5th-level, but a 5th-level fireball would become 4th-level. Targets still gain all the other benefits, even if you don't reduce the spell's level." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

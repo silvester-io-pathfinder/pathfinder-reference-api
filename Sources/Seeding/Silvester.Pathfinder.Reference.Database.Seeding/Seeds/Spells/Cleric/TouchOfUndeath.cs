@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0440bd0b-82e8-4929-8665-4ebb7199cbf7"), Type = TextBlockType.Text, Text = "You attack the target’s life force with undeath, dealing 1d6 negative damage. The target must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("0440bd0b-82e8-4929-8665-4ebb7199cbf7"), Type = TextBlockType.Text, Text = "You attack the target's life force with undeath, dealing 1d6 negative damage. The target must attempt a Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

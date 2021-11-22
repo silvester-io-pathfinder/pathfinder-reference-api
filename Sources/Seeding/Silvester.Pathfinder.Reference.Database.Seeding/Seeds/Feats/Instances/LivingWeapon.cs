@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92e595de-f030-407e-8b20-2ffb1ffd1dd3"), Type = TextBlockType.Text, Text = "You’ve learned to use part of your form as a weapon. When you select this feat, you gain a claws unarmed attack that deals 1d4 slashing damage and has the (trait: agile) and (trait: finesse) traits; a horn, jaws, or tusk unarmed attack that deals 1d6 piercing damage and has the (trait: versatile S) trait; or a tail unarmed attack that deals 1d6 bludgeoning damage and has the (trait: backswing) trait. Each of these unarmed attacks is in the brawling weapon group." };
+            yield return new TextBlock { Id = Guid.Parse("92e595de-f030-407e-8b20-2ffb1ffd1dd3"), Type = TextBlockType.Text, Text = "You've learned to use part of your form as a weapon. When you select this feat, you gain a claws unarmed attack that deals 1d4 slashing damage and has the (trait: agile) and (trait: finesse) traits; a horn, jaws, or tusk unarmed attack that deals 1d6 piercing damage and has the (trait: versatile S) trait; or a tail unarmed attack that deals 1d6 bludgeoning damage and has the (trait: backswing) trait. Each of these unarmed attacks is in the brawling weapon group." };
             yield return new TextBlock { Id = Guid.Parse("f77f16b5-2aad-4ae9-94ff-b8078742ac85"), Type = TextBlockType.Text, Text = "Your features are mutable; you can select this feat at any level, and you can retrain into or out of this feat or change the type of attack you gain." };
         }
 

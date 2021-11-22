@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("11d02568-6243-4b28-bdd5-0fdcf845b6f2"), Type = TextBlockType.Text, Text = "You project an illusory image of yourself. You must stay within range of the image, and if at any point you can’t see the image, the spell ends. Whenever you Cast a Spell other than one whose area is an emanation, you can cause the spell effect to originate from either yourself or the image. Because the image is an illusion, it can’t benefit from spells, though visual manifestations of the spell appear. The image has the same AC and saves as you. If it is hit by an attack or fails a save, the spell ends." };
+            yield return new TextBlock { Id = Guid.Parse("11d02568-6243-4b28-bdd5-0fdcf845b6f2"), Type = TextBlockType.Text, Text = "You project an illusory image of yourself. You must stay within range of the image, and if at any point you can't see the image, the spell ends. Whenever you Cast a Spell other than one whose area is an emanation, you can cause the spell effect to originate from either yourself or the image. Because the image is an illusion, it can't benefit from spells, though visual manifestations of the spell appear. The image has the same AC and saves as you. If it is hit by an attack or fails a save, the spell ends." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f98cf2cf-9e19-43cb-8d54-f7286efe6a40"), Type = TextBlockType.Text, Text = "You combine a series of attacks with a powerful finishing blow. Your (trait: finishers’ | finisher) (action: Strikes | Strike) have a lower multiple attack penalty: -4 (or -3 with an (trait: agile) weapon) if it’s the second attack on your turn, or -8 (or -6 with an (trait: agile) weapon) if it’s the third or subsequent attack on your turn, instead of -5 and -10, respectively." };
+            yield return new TextBlock { Id = Guid.Parse("f98cf2cf-9e19-43cb-8d54-f7286efe6a40"), Type = TextBlockType.Text, Text = "You combine a series of attacks with a powerful finishing blow. Your (trait: finishers' | finisher) (action: Strikes | Strike) have a lower multiple attack penalty: -4 (or -3 with an (trait: agile) weapon) if it's the second attack on your turn, or -8 (or -6 with an (trait: agile) weapon) if it's the third or subsequent attack on your turn, instead of -5 and -10, respectively." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

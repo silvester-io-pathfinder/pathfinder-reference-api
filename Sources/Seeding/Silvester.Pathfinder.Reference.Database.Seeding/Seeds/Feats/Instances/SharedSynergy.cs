@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad2b0f73-c80a-4963-bbb9-ac6d9b7b730e"), Type = TextBlockType.Text, Text = "You can grant the benefit from (feat: Dualistic Synergy) to an ally within 30 feet instead of yourself, either allowing that ally to (action: Recall Knowledge), granting that ally temporary Hit Points, or both, depending on the spell’s tradition." };
+            yield return new TextBlock { Id = Guid.Parse("ad2b0f73-c80a-4963-bbb9-ac6d9b7b730e"), Type = TextBlockType.Text, Text = "You can grant the benefit from (feat: Dualistic Synergy) to an ally within 30 feet instead of yourself, either allowing that ally to (action: Recall Knowledge), granting that ally temporary Hit Points, or both, depending on the spell's tradition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

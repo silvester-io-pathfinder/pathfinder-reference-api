@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5495721d-a633-468d-ae69-e11a0e1f61d9"), Type = TextBlockType.Text, Text = "You gain a 1st-level spell slot. At 6th level, you gain a 2nd-level spell slot. At 8th level, you gain a 3rd-level spell slot. You can prepare your deity’s spells in your spell slots of the appropriate level from the cleric archetype." };
+            yield return new TextBlock { Id = Guid.Parse("5495721d-a633-468d-ae69-e11a0e1f61d9"), Type = TextBlockType.Text, Text = "You gain a 1st-level spell slot. At 6th level, you gain a 2nd-level spell slot. At 8th level, you gain a 3rd-level spell slot. You can prepare your deity's spells in your spell slots of the appropriate level from the cleric archetype." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

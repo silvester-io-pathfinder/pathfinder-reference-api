@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("554f89f8-b44a-44f0-951f-159321e3c8be"), Type = TextBlockType.Text, Text = "You can invoke nature’s fury upon your foes. You gain the (Spell: storm lord) order spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("554f89f8-b44a-44f0-951f-159321e3c8be"), Type = TextBlockType.Text, Text = "You can invoke nature's fury upon your foes. You gain the (Spell: storm lord) order spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

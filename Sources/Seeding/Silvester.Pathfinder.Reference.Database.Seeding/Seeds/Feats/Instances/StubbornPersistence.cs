@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f4a8c077-12bd-45a2-9d33-8a79706d283c"), Type = TextBlockType.Text, Text = "Humans are renowned for their ability to persist through the most grueling of trials. When you would become fatigued, attempt a DC 17 flat check. On a success, you aren’t fatigued. If the fatigued condition has an underlying cause that you don’t address, such as lack of rest, you must attempt the check again at an interval determined by the GM until you fail the flat check or address the underlying cause." };
+            yield return new TextBlock { Id = Guid.Parse("f4a8c077-12bd-45a2-9d33-8a79706d283c"), Type = TextBlockType.Text, Text = "Humans are renowned for their ability to persist through the most grueling of trials. When you would become fatigued, attempt a DC 17 flat check. On a success, you aren't fatigued. If the fatigued condition has an underlying cause that you don't address, such as lack of rest, you must attempt the check again at an interval determined by the GM until you fail the flat check or address the underlying cause." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("859f1ea6-bde2-4cf3-9ed0-266a89597ef3"), Type = TextBlockType.Enumeration, Text = "*Subterfuge Suit Only**" };
-            yield return new TextBlock { Id = Guid.Parse("9d346758-d75e-4c56-acc1-d8080ef07f17"), Type = TextBlockType.Text, Text = "You’ve modified your armor’s exterior to let you blend into your surroundings with ease, as long as you stay still. While wearing your armor, you can (action: Hide) even without cover or concealment, as the pigmentation shifts to match your surroundings." };
+            yield return new TextBlock { Id = Guid.Parse("9d346758-d75e-4c56-acc1-d8080ef07f17"), Type = TextBlockType.Text, Text = "You've modified your armor's exterior to let you blend into your surroundings with ease, as long as you stay still. While wearing your armor, you can (action: Hide) even without cover or concealment, as the pigmentation shifts to match your surroundings." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

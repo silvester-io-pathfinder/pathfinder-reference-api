@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13dd4961-7691-4abc-b2bd-b3e1ebc540a9"), Type = TextBlockType.Text, Text = "Your Swords training taught you to never lose hold of your weapon. You gain a +2 circumstance bonus to your Reflex DC when foes attempt to (action: Disarm) you. If you have the (feat: Deft Cooperation) feat and critically succeed on a check to (action: Aid) an ally’s attack roll or skill check, you gain a +2 circumstance bonus from (feat: Deft Cooperation) (instead of a +1 bonus) the first time you attempt an attack roll or attempt a skill check where the bonus would apply." };
+            yield return new TextBlock { Id = Guid.Parse("13dd4961-7691-4abc-b2bd-b3e1ebc540a9"), Type = TextBlockType.Text, Text = "Your Swords training taught you to never lose hold of your weapon. You gain a +2 circumstance bonus to your Reflex DC when foes attempt to (action: Disarm) you. If you have the (feat: Deft Cooperation) feat and critically succeed on a check to (action: Aid) an ally's attack roll or skill check, you gain a +2 circumstance bonus from (feat: Deft Cooperation) (instead of a +1 bonus) the first time you attempt an attack roll or attempt a skill check where the bonus would apply." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

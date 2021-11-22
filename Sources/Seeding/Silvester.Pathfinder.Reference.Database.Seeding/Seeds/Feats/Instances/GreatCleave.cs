@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("01f6b518-03c7-42b6-9f06-7a6fff1cc6bb"), Type = TextBlockType.Text, Text = "Your fury carries your weapon through multiple foes. When you (feat: Cleave), if your (action: Strike) also kills or knocks the target unconscious, you can continue to make melee (action: Strikes | Strike) until you make a (action: Strike) that doesn’t kill or knock a creature unconscious, or until there are no creatures adjacent to the most recent creature you attacked while (feat: Cleaving | Cleave), whichever comes first." };
+            yield return new TextBlock { Id = Guid.Parse("01f6b518-03c7-42b6-9f06-7a6fff1cc6bb"), Type = TextBlockType.Text, Text = "Your fury carries your weapon through multiple foes. When you (feat: Cleave), if your (action: Strike) also kills or knocks the target unconscious, you can continue to make melee (action: Strikes | Strike) until you make a (action: Strike) that doesn't kill or knock a creature unconscious, or until there are no creatures adjacent to the most recent creature you attacked while (feat: Cleaving | Cleave), whichever comes first." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

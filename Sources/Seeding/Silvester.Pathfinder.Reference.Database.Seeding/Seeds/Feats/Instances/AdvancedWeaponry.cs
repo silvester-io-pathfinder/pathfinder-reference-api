@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5bcc2c1-cbba-48bf-9476-14ba958202c1"), Type = TextBlockType.Text, Text = "Your eidolon’s attack evolves. Choose one of your eidolon’s starting melee unarmed attacks. It gains one of the following traits, chosen when you gain the feat: (trait: disarm), (trait: grapple), (trait: nonlethal), (trait: shove), (trait: trip), or (trait: versatile bludgeoning | versatile b), (trait: piercing | versatile p), or (trait: slashing | versatile s)." };
+            yield return new TextBlock { Id = Guid.Parse("d5bcc2c1-cbba-48bf-9476-14ba958202c1"), Type = TextBlockType.Text, Text = "Your eidolon's attack evolves. Choose one of your eidolon's starting melee unarmed attacks. It gains one of the following traits, chosen when you gain the feat: (trait: disarm), (trait: grapple), (trait: nonlethal), (trait: shove), (trait: trip), or (trait: versatile bludgeoning | versatile b), (trait: piercing | versatile p), or (trait: slashing | versatile s)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

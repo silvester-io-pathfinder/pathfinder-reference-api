@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("805e3d0a-e488-4b19-bfd0-5820058ba005"), Type = TextBlockType.Text, Text = "The supernatural charm of your vampiric progenitor hangs about you, and you’ve learned to use it on mortals. Against humanoids (or other creatures of your type, if you’re not a humanoid), you gain a +1 circumstance bonus to Deception checks to (action: Lie), and to Diplomacy checks to (action: Gather Information) and (action: Make an Impression)." };
+            yield return new TextBlock { Id = Guid.Parse("805e3d0a-e488-4b19-bfd0-5820058ba005"), Type = TextBlockType.Text, Text = "The supernatural charm of your vampiric progenitor hangs about you, and you've learned to use it on mortals. Against humanoids (or other creatures of your type, if you're not a humanoid), you gain a +1 circumstance bonus to Deception checks to (action: Lie), and to Diplomacy checks to (action: Gather Information) and (action: Make an Impression)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

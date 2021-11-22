@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("86578aa5-a11c-4d68-8930-9aa017421510"), Type = TextBlockType.Text, Text = "You’ve learned to react with ranged weapons when a creature is in close quarters. You can use a reaction that normally allows you to make a melee weapon (action: Strike) to instead make a ranged weapon (action: Strike). You must be (action: Striking | Strike) an adjacent target." };
-            yield return new TextBlock { Id = Guid.Parse("608a7a4d-31cd-40fc-a57c-401c14d299a9"), Type = TextBlockType.Text, Text = "If necessary for the reaction’s trigger, you treat your ranged weapon as if it had a (trait: reach) of 5 feet. If the reaction has other requirements, such as wielding a specific kind of weapon, Snap Shot doesn’t allow you to ignore them; it allows you only to replace a melee weapon (action: Strike) with a ranged weapon (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("86578aa5-a11c-4d68-8930-9aa017421510"), Type = TextBlockType.Text, Text = "You've learned to react with ranged weapons when a creature is in close quarters. You can use a reaction that normally allows you to make a melee weapon (action: Strike) to instead make a ranged weapon (action: Strike). You must be (action: Striking | Strike) an adjacent target." };
+            yield return new TextBlock { Id = Guid.Parse("608a7a4d-31cd-40fc-a57c-401c14d299a9"), Type = TextBlockType.Text, Text = "If necessary for the reaction's trigger, you treat your ranged weapon as if it had a (trait: reach) of 5 feet. If the reaction has other requirements, such as wielding a specific kind of weapon, Snap Shot doesn't allow you to ignore them; it allows you only to replace a melee weapon (action: Strike) with a ranged weapon (action: Strike)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9dfbf869-981b-4d72-9239-08cb42b2a8bb"), Type = TextBlockType.Text, Text = "With a minor adjustment of ratios in the formula for your serene mutagen, you gain mental protections. When you’re affected by a serene mutagen, detection, revelation, and scrying effects of 9th level or lower detect nothing from you or your possessions and auras. For instance, (spell: detect magic) would still detect other magic in the area, but not any magic on you." };
+            yield return new TextBlock { Id = Guid.Parse("9dfbf869-981b-4d72-9239-08cb42b2a8bb"), Type = TextBlockType.Text, Text = "With a minor adjustment of ratios in the formula for your serene mutagen, you gain mental protections. When you're affected by a serene mutagen, detection, revelation, and scrying effects of 9th level or lower detect nothing from you or your possessions and auras. For instance, (spell: detect magic) would still detect other magic in the area, but not any magic on you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

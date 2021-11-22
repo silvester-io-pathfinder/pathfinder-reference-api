@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("53da7904-2dfe-4953-9c87-d7c962f99482"), Type = TextBlockType.Text, Text = "By observing an opponent, you can get a sense of their next move and prepare to counter or resist it. Choose one target and attempt a Perception check to (action: Sense Motive) against the foe’s Deception DC or a hard DC of the foe’s level, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("53da7904-2dfe-4953-9c87-d7c962f99482"), Type = TextBlockType.Text, Text = "By observing an opponent, you can get a sense of their next move and prepare to counter or resist it. Choose one target and attempt a Perception check to (action: Sense Motive) against the foe's Deception DC or a hard DC of the foe's level, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,10 +42,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("35c179ff-e902-4072-9656-59530de0ca4a"),
-                CriticalSuccess = "You precisely discern the target’s strategy, gaining a +2 circumstance bonus to AC against the creature until the start of your next turn and a +2 circumstance bonus to your next saving throw against the creature before the start of your next turn.",
-                Success = "You deduce the gist of the target’s strategy; as critical success, except the circumstance bonus is only +1.",
-                Failure = "You fail to discern the target’s strategy and gain no benefit.",
-                CriticalFailure = "You misinterpret the target’s strategy and take a –1 circumstance penalty to AC against the creature until the start of your next turn, and a –1 circumstance penalty to your next saving throw against the creature before the start of your next turn.", 
+                CriticalSuccess = "You precisely discern the target's strategy, gaining a +2 circumstance bonus to AC against the creature until the start of your next turn and a +2 circumstance bonus to your next saving throw against the creature before the start of your next turn.",
+                Success = "You deduce the gist of the target's strategy; as critical success, except the circumstance bonus is only +1.",
+                Failure = "You fail to discern the target's strategy and gain no benefit.",
+                CriticalFailure = "You misinterpret the target's strategy and take a –1 circumstance penalty to AC against the creature until the start of your next turn, and a –1 circumstance penalty to your next saving throw against the creature before the start of your next turn.", 
             };
         }
             

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3930fa58-4262-4e63-ba9b-e7d2a02ac05b"), Type = TextBlockType.Text, Text = "You’ve studied the art of wielding an advanced weapon. Choose a weapon group. You gain proficiency with all advanced weapons in that group as if they were martial weapons of their weapon group." };
+            yield return new TextBlock { Id = Guid.Parse("3930fa58-4262-4e63-ba9b-e7d2a02ac05b"), Type = TextBlockType.Text, Text = "You've studied the art of wielding an advanced weapon. Choose a weapon group. You gain proficiency with all advanced weapons in that group as if they were martial weapons of their weapon group." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

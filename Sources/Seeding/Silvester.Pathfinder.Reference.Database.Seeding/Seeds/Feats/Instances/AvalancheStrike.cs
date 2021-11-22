@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("173d42f9-04a0-4c55-a57d-d86bd2ab743c"), Type = TextBlockType.Text, Text = "You attack all nearby adversaries. Make a melee (action: Strike) with the required weapon against each enemy within your melee reach. Each attack counts toward your multiple attack penalty, but don’t increase your penalty until you have made all your attacks." };
+            yield return new TextBlock { Id = Guid.Parse("173d42f9-04a0-4c55-a57d-d86bd2ab743c"), Type = TextBlockType.Text, Text = "You attack all nearby adversaries. Make a melee (action: Strike) with the required weapon against each enemy within your melee reach. Each attack counts toward your multiple attack penalty, but don't increase your penalty until you have made all your attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("133c0c49-e815-4ef2-8d04-74fdbb2c63bd"), Type = TextBlockType.Text, Text = "Your ape makes a loud and frightening display, throwing a foe off balance. The ape attempts to (action: Demoralize) the target creature; this display gains the (trait: visual) trait and doesn’t require language. While frightened by this ability, the target is flat-footed to your ape." };
+            yield return new TextBlock { Id = Guid.Parse("133c0c49-e815-4ef2-8d04-74fdbb2c63bd"), Type = TextBlockType.Text, Text = "Your ape makes a loud and frightening display, throwing a foe off balance. The ape attempts to (action: Demoralize) the target creature; this display gains the (trait: visual) trait and doesn't require language. While frightened by this ability, the target is flat-footed to your ape." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

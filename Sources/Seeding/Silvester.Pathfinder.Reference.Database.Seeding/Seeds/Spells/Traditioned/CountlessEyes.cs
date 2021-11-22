@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fa2e65b7-f7aa-44c8-8b79-a411a1d8f2a0"), Type = TextBlockType.Text, Text = "Eyes form across the touched creature’s body, allowing it to see in all directions at once. The subject can’t be flanked for the spell’s duration. In addition, when the subject Seeks, it can Seek in a 30-foot burst centered on itself or up to four 15-foot bursts within line of sight." };
+            yield return new TextBlock { Id = Guid.Parse("fa2e65b7-f7aa-44c8-8b79-a411a1d8f2a0"), Type = TextBlockType.Text, Text = "Eyes form across the touched creature's body, allowing it to see in all directions at once. The subject can't be flanked for the spell's duration. In addition, when the subject Seeks, it can Seek in a 30-foot burst centered on itself or up to four 15-foot bursts within line of sight." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

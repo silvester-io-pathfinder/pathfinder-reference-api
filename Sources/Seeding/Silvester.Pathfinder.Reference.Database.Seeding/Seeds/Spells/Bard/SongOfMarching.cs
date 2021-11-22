@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("166f8df4-8f51-435a-ae56-ad90536b8fd9"), Type = TextBlockType.Text, Text = "You maintain a brisk performance that keeps allies on the move. You and your allies in the area can Hustle for the spell’s duration, even though you are also Sustaining the Spell. You and your allies then become temporarily immune for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("166f8df4-8f51-435a-ae56-ad90536b8fd9"), Type = TextBlockType.Text, Text = "You maintain a brisk performance that keeps allies on the move. You and your allies in the area can Hustle for the spell's duration, even though you are also Sustaining the Spell. You and your allies then become temporarily immune for 1 day." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

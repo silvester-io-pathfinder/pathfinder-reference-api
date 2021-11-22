@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cf288f19-cef8-4d03-a7b6-de497a2e31d6"), Type = TextBlockType.Text, Text = "You put your body behind your massive weapon and swing, shoving enemies to clear a wide path. You attempt to (action: Shove) up to five creatures adjacent to you, rolling a separate Athletics check for each target. Then (action: Stride) up to half your Speed. This movement doesn’t trigger reactions from any of the creatures you successfully (action: Shoved | Shove)." };
+            yield return new TextBlock { Id = Guid.Parse("cf288f19-cef8-4d03-a7b6-de497a2e31d6"), Type = TextBlockType.Text, Text = "You put your body behind your massive weapon and swing, shoving enemies to clear a wide path. You attempt to (action: Shove) up to five creatures adjacent to you, rolling a separate Athletics check for each target. Then (action: Stride) up to half your Speed. This movement doesn't trigger reactions from any of the creatures you successfully (action: Shoved | Shove)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ef9a162d-8e7d-410d-9a56-3e6630ea4a8c"), Type = TextBlockType.Text, Text = "You can swing your beak to slash your foes when piercing attacks won’t do. Your beak unarmed attack gains the (trait: versatile S) weapon trait." };
+            yield return new TextBlock { Id = Guid.Parse("ef9a162d-8e7d-410d-9a56-3e6630ea4a8c"), Type = TextBlockType.Text, Text = "You can swing your beak to slash your foes when piercing attacks won't do. Your beak unarmed attack gains the (trait: versatile S) weapon trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

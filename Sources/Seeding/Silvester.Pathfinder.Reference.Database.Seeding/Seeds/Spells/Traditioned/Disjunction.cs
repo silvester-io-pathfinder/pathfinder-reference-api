@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5e2bbdd-edd9-4905-8c2c-1f8f08305001"), Type = Utilities.Text.TextBlockType.Text, Text = "Crackling energy disjoins the target. You attempt to counteract it (page 458). If you succeed, it’s deactivated for 1 week. On a critical success, it’s destroyed. If it’s an artifact or similar item, you automatically fail." };
+            yield return new TextBlock { Id = Guid.Parse("d5e2bbdd-edd9-4905-8c2c-1f8f08305001"), Type = Utilities.Text.TextBlockType.Text, Text = "Crackling energy disjoins the target. You attempt to counteract it (page 458). If you succeed, it's deactivated for 1 week. On a critical success, it's destroyed. If it's an artifact or similar item, you automatically fail." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

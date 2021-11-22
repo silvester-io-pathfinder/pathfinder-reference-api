@@ -57,7 +57,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
             {
                 Id = Guid.Parse("dd06ccd9-ca0a-4797-b135-590a5509eb32"),
                 Name = "Spore Exploison",
-                Trigger = "A creature moves into the mold’s space or damages the mold. The mold can’t use this reaction if it’s in direct sunlight or if the damage was fire damage",
+                Trigger = "A creature moves into the mold's space or damages the mold. The mold can't use this reaction if it's in direct sunlight or if the damage was fire damage",
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = new List<TextBlock>
                 {

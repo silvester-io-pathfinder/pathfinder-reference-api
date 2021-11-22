@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ccc09e3b-c6f2-4fde-a925-186ed1f57dd5"), Type = TextBlockType.Text, Text = "You take the form of your ancestral spirits, becoming invisible and quasi-corporeal. You gain resistance 10 to all damage (except force and damage from Strikes with the ghost touch property rune), and this resistance is doubled against non-magical and precision damage. You gain a fly Speed equal to your land Speed; when Flying, moving upward isn’t difficult terrain for you. You can’t move through solid objects, but you can float through tiny gaps. You can’t Cast Spells (but you can Sustain a Spell), activate items, or use actions that have the attack or manipulate trait." };
+            yield return new TextBlock { Id = Guid.Parse("ccc09e3b-c6f2-4fde-a925-186ed1f57dd5"), Type = TextBlockType.Text, Text = "You take the form of your ancestral spirits, becoming invisible and quasi-corporeal. You gain resistance 10 to all damage (except force and damage from Strikes with the ghost touch property rune), and this resistance is doubled against non-magical and precision damage. You gain a fly Speed equal to your land Speed; when Flying, moving upward isn't difficult terrain for you. You can't move through solid objects, but you can float through tiny gaps. You can't Cast Spells (but you can Sustain a Spell), activate items, or use actions that have the attack or manipulate trait." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

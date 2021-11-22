@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("87b9e6de-948f-43be-bf02-71ee04099668"), Type = TextBlockType.Text, Text = "The most important thing you’ve learned living with fear is how to overcome it. When you roll a success on a saving throw against a (trait: fear) effect, you get a critical success instead. In addition, you gain a +1 circumstance bonus to Will saves against (trait: fear) effects and a +2 circumstance bonus to your Will DC against attempts to (action: Demoralize) you." };
+            yield return new TextBlock { Id = Guid.Parse("87b9e6de-948f-43be-bf02-71ee04099668"), Type = TextBlockType.Text, Text = "The most important thing you've learned living with fear is how to overcome it. When you roll a success on a saving throw against a (trait: fear) effect, you get a critical success instead. In addition, you gain a +1 circumstance bonus to Will saves against (trait: fear) effects and a +2 circumstance bonus to your Will DC against attempts to (action: Demoralize) you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

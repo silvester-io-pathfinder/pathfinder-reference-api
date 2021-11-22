@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("917c35b2-4ca3-477a-b8be-d6e6bb1d8cbc"), Type = TextBlockType.Text, Text = "You pack your weapon with additional shot and powder, creating a risky but devastating wave of destruction. Make a ranged (action: Strike) with the firearm. The firearm’s range increment increases by 20 feet and the radius of its (trait: scatter) increases by 20 feet. The (action: Strike) gains the following failure conditions." };
+            yield return new TextBlock { Id = Guid.Parse("917c35b2-4ca3-477a-b8be-d6e6bb1d8cbc"), Type = TextBlockType.Text, Text = "You pack your weapon with additional shot and powder, creating a risky but devastating wave of destruction. Make a ranged (action: Strike) with the firearm. The firearm's range increment increases by 20 feet and the radius of its (trait: scatter) increases by 20 feet. The (action: Strike) gains the following failure conditions." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -44,8 +44,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
                 Id = Guid.Parse("04c86fc0-0166-4029-82dc-16e0b2ed2843"),
                 
                 
-                Failure = "The firearm (trait: misfires|misfire), but it doesn’t cause the other critical failure effects listed below.",
-                CriticalFailure = "The firearm (trait: misfires|misfire) and also explodes. It becomes broken, and it deals its normal weapon damage to all creatures in a 20-foot burst centered on the firearm, with a basic Reflex save against your class DC. This damage includes any from the weapon’s fundamental and property runes.", 
+                Failure = "The firearm (trait: misfires|misfire), but it doesn't cause the other critical failure effects listed below.",
+                CriticalFailure = "The firearm (trait: misfires|misfire) and also explodes. It becomes broken, and it deals its normal weapon damage to all creatures in a 20-foot burst centered on the firearm, with a basic Reflex save against your class DC. This damage includes any from the weapon's fundamental and property runes.", 
             };
         }
             

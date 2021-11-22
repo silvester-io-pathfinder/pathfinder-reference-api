@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("242e5677-faef-498a-81d6-dd72e9b949d6"), Type = TextBlockType.Text, Text = "Your inborn magical nature lets you redirect ambient energies to fuel your spells. If your next action is to (activity: Cast a Spell) of 5th level or lower that has no duration, you don’t expend the spell’s slot when you cast it." };
+            yield return new TextBlock { Id = Guid.Parse("242e5677-faef-498a-81d6-dd72e9b949d6"), Type = TextBlockType.Text, Text = "Your inborn magical nature lets you redirect ambient energies to fuel your spells. If your next action is to (activity: Cast a Spell) of 5th level or lower that has no duration, you don't expend the spell's slot when you cast it." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

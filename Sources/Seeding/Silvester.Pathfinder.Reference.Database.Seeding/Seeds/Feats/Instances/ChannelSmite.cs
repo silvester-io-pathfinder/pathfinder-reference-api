@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bff34980-cb09-46b8-87ac-fa949c9ed336"), Type = TextBlockType.Text, Text = "You siphon the destructive energies of positive or negative energy through a melee attack and into your foe. Make a melee (action: Strike) and add the spell’s damage to the Strike’s damage. This is negative damage if you expended a (spell: harm) spell or positive damage if you expended a (spell: heal) spell." };
-            yield return new TextBlock { Id = Guid.Parse("167a8c1b-a1e1-42b5-8b5d-cf6e3302b805"), Type = TextBlockType.Text, Text = "The spell is expended with no effect if your (action: Strike) fails or hits a creature that isn’t damaged by that energy type (such as if you hit a non-undead creature with a heal spell)." };
+            yield return new TextBlock { Id = Guid.Parse("bff34980-cb09-46b8-87ac-fa949c9ed336"), Type = TextBlockType.Text, Text = "You siphon the destructive energies of positive or negative energy through a melee attack and into your foe. Make a melee (action: Strike) and add the spell's damage to the Strike's damage. This is negative damage if you expended a (spell: harm) spell or positive damage if you expended a (spell: heal) spell." };
+            yield return new TextBlock { Id = Guid.Parse("167a8c1b-a1e1-42b5-8b5d-cf6e3302b805"), Type = TextBlockType.Text, Text = "The spell is expended with no effect if your (action: Strike) fails or hits a creature that isn't damaged by that energy type (such as if you hit a non-undead creature with a heal spell)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("07339e45-5280-4aad-b960-d15d5d01ac75"), Type = TextBlockType.Text, Text = "You create a pattern of shifting colors that hovers in the air in a geometric cloud. Creatures are dazzled while inside the pattern. In addition, a creature must attempt a Will saving throw if it is inside the pattern when you cast it, when it enters the pattern, when it ends its turn within the pattern, or if it uses a Seek or Interact action on the pattern. A creature currently fascinated by the pattern doesn’t attempt new saves." };
+            yield return new TextBlock { Id = Guid.Parse("07339e45-5280-4aad-b960-d15d5d01ac75"), Type = TextBlockType.Text, Text = "You create a pattern of shifting colors that hovers in the air in a geometric cloud. Creatures are dazzled while inside the pattern. In addition, a creature must attempt a Will saving throw if it is inside the pattern when you cast it, when it enters the pattern, when it ends its turn within the pattern, or if it uses a Seek or Interact action on the pattern. A creature currently fascinated by the pattern doesn't attempt new saves." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("2890e308-e217-42f9-8bdc-f4d51602e67a"),
                 Success = "The target is unaffected.",
                 Failure = "The target is fascinated by the pattern.",
-                CriticalFailure = "The target is fascinated by the pattern. While it remains fascinated, it can’t use reactions."
+                CriticalFailure = "The target is fascinated by the pattern. While it remains fascinated, it can't use reactions."
             };
         }
 

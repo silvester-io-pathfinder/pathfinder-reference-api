@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-             yield return new TextBlock { Id = Guid.Parse("7d2779d2-610e-4afc-888a-14d72eb1bbcb"), Type = TextBlockType.Text, Text = "As long as you and the target are on the same plane ofexistence and both alive, you remain aware of its present state. You know the target’s direction from you, distance from you, and any conditions affecting it." };
+             yield return new TextBlock { Id = Guid.Parse("7d2779d2-610e-4afc-888a-14d72eb1bbcb"), Type = TextBlockType.Text, Text = "As long as you and the target are on the same plane ofexistence and both alive, you remain aware of its present state. You know the target's direction from you, distance from you, and any conditions affecting it." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("6d0b88df-9b5d-4d5e-a9ab-999f66afc708"), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, and you can target up to 10 creatures." }
+                    new TextBlock { Id = Guid.Parse("6d0b88df-9b5d-4d5e-a9ab-999f66afc708"), Type = TextBlockType.Text, Text = "The spell's range increases to 30 feet, and you can target up to 10 creatures." }
                 }
             };
         }

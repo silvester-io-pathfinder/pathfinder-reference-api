@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f06ee6a2-88dc-4e60-a66d-e6749958feac"), Type = TextBlockType.Text, Text = "Your animal companion shares your incredible hunting skills, allowing it to take down your shared prey with ease. When you (feat: Hunt Prey), your animal companion gains the masterful hunter benefit associated with your hunter’s edge, rather than just your original hunter’s edge benefit." };
+            yield return new TextBlock { Id = Guid.Parse("f06ee6a2-88dc-4e60-a66d-e6749958feac"), Type = TextBlockType.Text, Text = "Your animal companion shares your incredible hunting skills, allowing it to take down your shared prey with ease. When you (feat: Hunt Prey), your animal companion gains the masterful hunter benefit associated with your hunter's edge, rather than just your original hunter's edge benefit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

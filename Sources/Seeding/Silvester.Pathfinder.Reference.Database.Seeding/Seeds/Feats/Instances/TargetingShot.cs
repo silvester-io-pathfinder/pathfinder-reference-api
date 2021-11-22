@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d81785d1-678e-435b-8ef5-c71dbe468a14"), Type = TextBlockType.Text, Text = "You carefully track your prey’s position and defenses, allowing you to follow up around obstacles that block your shot. Make a ranged weapon (action: Strike) against your hunted prey. You ignore the target’s concealed condition and all cover." };
+            yield return new TextBlock { Id = Guid.Parse("d81785d1-678e-435b-8ef5-c71dbe468a14"), Type = TextBlockType.Text, Text = "You carefully track your prey's position and defenses, allowing you to follow up around obstacles that block your shot. Make a ranged weapon (action: Strike) against your hunted prey. You ignore the target's concealed condition and all cover." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

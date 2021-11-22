@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             yield return new TextBlock { Id = Guid.Parse("4d2a8668-bc54-4818-9d1a-63c5874fb39d"), Type = TextBlockType.Text, Text = "You become trained in Athletics; if you were already trained in Athletics, you instead become trained in a skill of your choice. You become trained in barbarian class DC." };
             yield return new TextBlock { Id = Guid.Parse("bb6168aa-a2bb-403a-b004-847a878aba81"), Type = TextBlockType.Text, Text = "You can use the (feat: Rage) action." };
-            yield return new TextBlock { Id = Guid.Parse("0a92a1b4-f824-4be0-95e7-815b12a0f30e"), Type = TextBlockType.Text, Text = "Choose an instinct as you would if you were a barbarian. You have that instinct for all purposes and become bound by its anathema, but you don’t gain any of the other abilities it grants." };
+            yield return new TextBlock { Id = Guid.Parse("0a92a1b4-f824-4be0-95e7-815b12a0f30e"), Type = TextBlockType.Text, Text = "Choose an instinct as you would if you were a barbarian. You have that instinct for all purposes and become bound by its anathema, but you don't gain any of the other abilities it grants." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d0421327-083c-484b-baca-93c5d19c2efc"), Type = TextBlockType.Text, Text = "You perceive every possible way your foe&#39;s attack could land and attempt to avoid them all. The triggering attack roll targets your Perception DC instead of your AC. Though this allows you to avoid taking penalties to your AC, it doesn&#39;t remove any conditions or other effects causing such penalties. For example, an enemy with sneak attack would still deal extra damage to you for being flat-footed, even though you wouldn&#39;t take the -2 circumstance penalty when defending against the attack." };
+            yield return new TextBlock { Id = Guid.Parse("d0421327-083c-484b-baca-93c5d19c2efc"), Type = TextBlockType.Text, Text = "You perceive every possible way your foe's attack could land and attempt to avoid them all. The triggering attack roll targets your Perception DC instead of your AC. Though this allows you to avoid taking penalties to your AC, it doesn't remove any conditions or other effects causing such penalties. For example, an enemy with sneak attack would still deal extra damage to you for being flat-footed, even though you wouldn't take the -2 circumstance penalty when defending against the attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04939ccb-5c4e-4379-9ec0-699fcd1cf490"), Type = TextBlockType.Text, Text = "You string three arrows to your bow and fire them all at once. Make three ranged (action: Strikes | Strike) against a single target with the required weapon, each using your current multiple attack penalty, and you take an additional –2 penalty. This counts as two attacks when calculating your multiple attack penalty, and you combine the attacks’ damage for the purpose of resistances and weaknesses. Your (feat: Stunning Fist) benefit applies to Triangle Shot, even though it isn’t a (feat: Flurry of Blows). If all three (action: Strikes | Strike) hit, the target takes 3d6 persistent bleed damage." };
+            yield return new TextBlock { Id = Guid.Parse("04939ccb-5c4e-4379-9ec0-699fcd1cf490"), Type = TextBlockType.Text, Text = "You string three arrows to your bow and fire them all at once. Make three ranged (action: Strikes | Strike) against a single target with the required weapon, each using your current multiple attack penalty, and you take an additional –2 penalty. This counts as two attacks when calculating your multiple attack penalty, and you combine the attacks' damage for the purpose of resistances and weaknesses. Your (feat: Stunning Fist) benefit applies to Triangle Shot, even though it isn't a (feat: Flurry of Blows). If all three (action: Strikes | Strike) hit, the target takes 3d6 persistent bleed damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

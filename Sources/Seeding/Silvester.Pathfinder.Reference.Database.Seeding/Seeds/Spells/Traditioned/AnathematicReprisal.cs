@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a2732bb4-f4c8-4186-b3a5-cda174bebd7c"), Type = Utilities.Text.TextBlockType.Text, Text = "You punish a creature that transgresses against your deity, drawing upon the anguish you feel upon seeing one of your deity’s anathema committed." };
+            yield return new TextBlock { Id = Guid.Parse("a2732bb4-f4c8-4186-b3a5-cda174bebd7c"), Type = Utilities.Text.TextBlockType.Text, Text = "You punish a creature that transgresses against your deity, drawing upon the anguish you feel upon seeing one of your deity's anathema committed." };
             yield return new TextBlock { Id = Guid.Parse("d4987992-bbdd-4122-8baa-db244671e460"), Type = Utilities.Text.TextBlockType.Text, Text = "You can cast this spell only when a creature actively commits a unique act of anathema. For example, if creating undead were anathema to your deity, you could use anathematic reprisal on a necromancer who had just created undead in front of you, but not on an undead creature just for existing." };
             yield return new TextBlock { Id = Guid.Parse("c4da2067-3e39-45c0-afa3-0300488a2ad4"), Type = Utilities.Text.TextBlockType.Text, Text = "You deal 4d6 mental damage to the target, but a basic Will save can reduce this damage. If it fails, it is also stupefied 1 for 1 round. The creature is then temporarily immune for 1 minute." };
         }

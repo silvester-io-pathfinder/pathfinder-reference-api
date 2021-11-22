@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("42a31437-3f5c-4634-a6ac-6ac49f38fbeb"), Type = TextBlockType.Text, Text = "Your sacred etchings imbue objects with power. It takes you only 1 minute to emblazon a symbol using (action: Emblazon Armament), and you can have up to four symbols emblazoned at a time. Each item can still have only one symbol emblazoned upon it, and if you exceed the limit of four, the oldest symbol disappears. These symbols can benefit even those who don’t follow the deity, provided they aren’t directly opposed (as determined by the GM)." };
+            yield return new TextBlock { Id = Guid.Parse("42a31437-3f5c-4634-a6ac-6ac49f38fbeb"), Type = TextBlockType.Text, Text = "Your sacred etchings imbue objects with power. It takes you only 1 minute to emblazon a symbol using (action: Emblazon Armament), and you can have up to four symbols emblazoned at a time. Each item can still have only one symbol emblazoned upon it, and if you exceed the limit of four, the oldest symbol disappears. These symbols can benefit even those who don't follow the deity, provided they aren't directly opposed (as determined by the GM)." };
             yield return new TextBlock { Id = Guid.Parse("a5543d16-1d4c-4e08-b0e1-375105c024a0"), Type = TextBlockType.Text, Text = "You can select a different benefit for each emblazoned symbol, chosen from any you have from (feat: Emblazon Armament) or other feats such as (feat: Emblazon Energy) or (feat: Emblazon Antimagic)." };
         }
 

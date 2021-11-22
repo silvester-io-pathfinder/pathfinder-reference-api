@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f90f4b3-ccea-4af9-97cf-33244ee1d294"), Type = TextBlockType.Text, Text = "You learn a monstrous ki technique that infuses your blows with the petrifying power of a medusa’s gaze. You gain the (spell: medusa’s wrath) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("5f90f4b3-ccea-4af9-97cf-33244ee1d294"), Type = TextBlockType.Text, Text = "You learn a monstrous ki technique that infuses your blows with the petrifying power of a medusa's gaze. You gain the (spell: medusa's wrath) ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

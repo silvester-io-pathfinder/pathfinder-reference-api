@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("ecfdb38b-83db-4a76-abaf-223a38c2c202"),
                 CriticalSuccess = "The creature is unaffected.",
-                Success = "The creature takes 1 damage of the type of weakness you chose (thus triggering the creature’s weakness), or loses its resistance until the end of your next turn if you chose a resistance.",
+                Success = "The creature takes 1 damage of the type of weakness you chose (thus triggering the creature's weakness), or loses its resistance until the end of your next turn if you chose a resistance.",
                 Failure = "As success, and the creature becomes frightened 1 from the revelation of its dread secret.",
                 CriticalFailure = "As failure, except the creature is frightened 3."
             };

@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d4546a99-7d71-4645-8017-3eb897864d9a"), Type = TextBlockType.Text, Text = "You’re a wanderer traveling from land to land with your gun and a melee weapon as company. Maybe you learned to fight with blade and pistol as a Shackles pirate, mastered the hand cannon and katana in Minkai, or practiced with a hatchet and clan pistol in Dongun Hold. You win battles by relying on mobility and flexible use of your weapons." };
-            yield return new TextBlock { Id = Guid.Parse("1b453487-09fd-43ba-9487-58664276d40b"), Type = TextBlockType.Text, Text = "~ Slinger&#39;s Reload: (feat: Reloading Strike)" };
-            yield return new TextBlock { Id = Guid.Parse("63057192-5322-40df-84e8-ed030bfb2141"), Type = TextBlockType.Text, Text = "~ Deeds: __Initial__ (feat: Into the Fray); __Advanced__ (feat: Finish the Job); __Greater__ (feat: Drifter’s Wake)" };
+            yield return new TextBlock { Id = Guid.Parse("d4546a99-7d71-4645-8017-3eb897864d9a"), Type = TextBlockType.Text, Text = "You're a wanderer traveling from land to land with your gun and a melee weapon as company. Maybe you learned to fight with blade and pistol as a Shackles pirate, mastered the hand cannon and katana in Minkai, or practiced with a hatchet and clan pistol in Dongun Hold. You win battles by relying on mobility and flexible use of your weapons." };
+            yield return new TextBlock { Id = Guid.Parse("1b453487-09fd-43ba-9487-58664276d40b"), Type = TextBlockType.Text, Text = "~ Slinger's Reload: (feat: Reloading Strike)" };
+            yield return new TextBlock { Id = Guid.Parse("63057192-5322-40df-84e8-ed030bfb2141"), Type = TextBlockType.Text, Text = "~ Deeds: __Initial__ (feat: Into the Fray); __Advanced__ (feat: Finish the Job); __Greater__ (feat: Drifter's Wake)" };
             yield return new TextBlock { Id = Guid.Parse("6e772dfd-e474-43dc-a753-14f03c5a04ff"), Type = TextBlockType.Text, Text = "~ Way Skill: Acrobatics" };
         }
 

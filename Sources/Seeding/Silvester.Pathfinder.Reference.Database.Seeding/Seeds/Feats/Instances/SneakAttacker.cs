@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0405b115-b332-4fc4-acbe-e3e62f12c8cf"), Type = TextBlockType.Text, Text = "You gain the sneak attack class feature (page 181), except you deal 1d6 precision damage regardless of your level. Sneak attack from multiple sources isn’t cumulative. If you have sneak attack from more than one source, use only the highest number of dice when you sneak attack rather than adding the amounts together." };
+            yield return new TextBlock { Id = Guid.Parse("0405b115-b332-4fc4-acbe-e3e62f12c8cf"), Type = TextBlockType.Text, Text = "You gain the sneak attack class feature (page 181), except you deal 1d6 precision damage regardless of your level. Sneak attack from multiple sources isn't cumulative. If you have sneak attack from more than one source, use only the highest number of dice when you sneak attack rather than adding the amounts together." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

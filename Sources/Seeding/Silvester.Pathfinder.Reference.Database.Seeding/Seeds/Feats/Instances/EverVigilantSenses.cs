@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a3cc297b-0f94-4e77-9248-59d7472ebdd5"), Type = TextBlockType.Text, Text = "Your eidolon has enhanced senses. It gains a +2 circumstance bonus to Perception, and can’t be flanked except by creatures that are higher level than it. It can see invisible creatures and objects; they appear translucent and are concealed. When your eidolon moves within 30 feet of an illusion that can be disbelieved, the GM rolls a secret check to disbelieve it, even if your eidolon didn’t spend an action to (action: Interact)." };
+            yield return new TextBlock { Id = Guid.Parse("a3cc297b-0f94-4e77-9248-59d7472ebdd5"), Type = TextBlockType.Text, Text = "Your eidolon has enhanced senses. It gains a +2 circumstance bonus to Perception, and can't be flanked except by creatures that are higher level than it. It can see invisible creatures and objects; they appear translucent and are concealed. When your eidolon moves within 30 feet of an illusion that can be disbelieved, the GM rolls a secret check to disbelieve it, even if your eidolon didn't spend an action to (action: Interact)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

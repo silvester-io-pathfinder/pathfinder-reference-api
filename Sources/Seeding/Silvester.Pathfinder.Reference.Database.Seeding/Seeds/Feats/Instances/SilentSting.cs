@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("936ed2fa-cdbc-4551-b796-b103889fd299"), Type = TextBlockType.Text, Text = "You quickly hide your weapon to make it difficult to pin the attack on you. You attempt to (action: Conceal an Object) to hide the triggering weapon. Your Stealth check is compared to the Perception DC of all creatures within 30 feet that can see you. You automatically succeed against creatures farther than 30 feet. The target of your (action: Strike) gains a +4 circumstance bonus to their Perception DC for this check. If your Stealth check is a success, you hide your weapon so well that the creature can&#39;t clearly determine where the attack originated." };
+            yield return new TextBlock { Id = Guid.Parse("936ed2fa-cdbc-4551-b796-b103889fd299"), Type = TextBlockType.Text, Text = "You quickly hide your weapon to make it difficult to pin the attack on you. You attempt to (action: Conceal an Object) to hide the triggering weapon. Your Stealth check is compared to the Perception DC of all creatures within 30 feet that can see you. You automatically succeed against creatures farther than 30 feet. The target of your (action: Strike) gains a +4 circumstance bonus to their Perception DC for this check. If your Stealth check is a success, you hide your weapon so well that the creature can't clearly determine where the attack originated." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

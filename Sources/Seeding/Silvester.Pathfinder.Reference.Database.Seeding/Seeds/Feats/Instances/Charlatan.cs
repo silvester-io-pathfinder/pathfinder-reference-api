@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bbc59668-dfa8-4d2d-8804-0b84f671c4f2"), Type = TextBlockType.Text, Text = "You’ve learned to mimic the abilities of spellcasters by studying their flourishes and words. When you activate a magic item to generate a spell effect, attempt a Deception check. If you succeed against an onlooker’s Perception DC, to that onlooker, you appear to (activity: Cast that Spell | Cast a Spell) instead. Onlookers who successfully (feat: Recognize the Spell | Recognize Spell) realize you used a magic item, though those who later successfully (action: Identify the Magic | Identify Magic) still can’t determine that the source of the effect was a magic item." };
+            yield return new TextBlock { Id = Guid.Parse("bbc59668-dfa8-4d2d-8804-0b84f671c4f2"), Type = TextBlockType.Text, Text = "You've learned to mimic the abilities of spellcasters by studying their flourishes and words. When you activate a magic item to generate a spell effect, attempt a Deception check. If you succeed against an onlooker's Perception DC, to that onlooker, you appear to (activity: Cast that Spell | Cast a Spell) instead. Onlookers who successfully (feat: Recognize the Spell | Recognize Spell) realize you used a magic item, though those who later successfully (action: Identify the Magic | Identify Magic) still can't determine that the source of the effect was a magic item." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

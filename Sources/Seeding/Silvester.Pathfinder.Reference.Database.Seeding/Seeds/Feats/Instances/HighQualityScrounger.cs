@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("92bc6cba-d0a3-40e6-8c73-938e46d99fad"), Type = TextBlockType.Text, Text = "When you (action: Craft) a temporary item using (feat: Scrounger Dedication), it can be an item of up to 3rd level (though the item must still be a weapon, armor, or a nonconsumable piece of adventuring gear)." };
-            yield return new TextBlock { Id = Guid.Parse("a1d06b01-bab6-4a89-a09b-349b64541f3c"), Type = TextBlockType.Text, Text = "You can instead (action: Craft) it for someone else’s use, allowing them to avoid taking the penalty for using a shoddy item when using it, but causing you to take the penalty if you use it." };
+            yield return new TextBlock { Id = Guid.Parse("a1d06b01-bab6-4a89-a09b-349b64541f3c"), Type = TextBlockType.Text, Text = "You can instead (action: Craft) it for someone else's use, allowing them to avoid taking the penalty for using a shoddy item when using it, but causing you to take the penalty if you use it." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -74,7 +74,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new RollableEffect
             {
                 Id = Guid.Parse("8c7748ec-96f1-4ab0-b4a9-efb4a39e8e90"),
-                CriticalSuccess = "The target is unaffected, can’t be affected on subsequent rounds, and is temporarily immune for 1 minute.",
+                CriticalSuccess = "The target is unaffected, can't be affected on subsequent rounds, and is temporarily immune for 1 minute.",
                 Success = "The target is unaffected this round, but it can be affected on subsequent rounds.",
                 Failure = "Roll 1d4 on the table above.",
                 CriticalFailure = "Roll 1d4+1 on the table above."

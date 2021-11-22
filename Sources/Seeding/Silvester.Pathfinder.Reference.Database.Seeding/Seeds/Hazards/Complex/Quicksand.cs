@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
                 Name = "Quicksand",
                 Description = "A 15-foot-wide patch of water and sand attempts to submerge creatures that step onto it.",
                 Level = 3,
-                Reset = "The hazard still submerges anyone who walks in, but the surface doesn’t become hidden again until it settles over the course of 24 hours",
+                Reset = "The hazard still submerges anyone who walks in, but the surface doesn't become hidden again until it settles over the course of 24 hours",
                 CanBeDetectedMagically = false,
                 TypeId = HazardTypes.Instances.EnvironmentalHazards.ID,
                 ComplexityId = HazardComplexities.Instances.Complex.ID,
@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
         protected override IEnumerable<TextBlock> GetRoutineDetails()
         {
             yield return new TextBlock { Id = Guid.Parse("f5149d1e-92e7-468d-aaf7-c71f195e464a"), Type = TextBlockType.Text, Text = "On its initiative, the quicksand pulls down each creature within it. A creature that was submerged up to its waist becomes submerged up to its neck, and a creature that was submerged up to its neck is pulled under and has to hold its breath to avoid suffocation(page 478)." };
-            yield return new TextBlock { Id = Guid.Parse("4f8f2529-93b8-4bad-8841-59f73d6e119c"), Type = TextBlockType.Text, Text = "A creature in the quicksand can attempt a DC 20 Athletics check to Swim to either raise itself by one step if it’s submerged to its neck or worse, or to move 5 feet if it’s submerged only up to its waist. On a critical failure, the creature is pulled down one step. A creature that Swims out of the quicksand escapes the hazard and is prone in a space adjacent to the quicksand patch. Other creatures can Aid the creature, typically by using a rope or similar aid, or attempt to pull the creature out with their own DC 20 Athletics check, with the same results as if the creature attempted the check." };
+            yield return new TextBlock { Id = Guid.Parse("4f8f2529-93b8-4bad-8841-59f73d6e119c"), Type = TextBlockType.Text, Text = "A creature in the quicksand can attempt a DC 20 Athletics check to Swim to either raise itself by one step if it's submerged to its neck or worse, or to move 5 feet if it's submerged only up to its waist. On a critical failure, the creature is pulled down one step. A creature that Swims out of the quicksand escapes the hazard and is prone in a space adjacent to the quicksand patch. Other creatures can Aid the creature, typically by using a rope or similar aid, or attempt to pull the creature out with their own DC 20 Athletics check, with the same results as if the creature attempted the check." };
         }
 
         protected override IEnumerable<HazardAction> GetActions()
@@ -58,7 +58,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
                 ActionTypeId = ActionTypes.Instances.FreeAction.ID,
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("a9f37fc2-82d6-466c-adc8-552f4b20da56"), Type = Utilities.Text.TextBlockType.Text,  Text = "The triggering creature sinks into the quicksand up to its waist. The quicksand rolls initiative if it hasn’t already." },
+                    new TextBlock { Id = Guid.Parse("a9f37fc2-82d6-466c-adc8-552f4b20da56"), Type = Utilities.Text.TextBlockType.Text,  Text = "The triggering creature sinks into the quicksand up to its waist. The quicksand rolls initiative if it hasn't already." },
                 }
             };
         }

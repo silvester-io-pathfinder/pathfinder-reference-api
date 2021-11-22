@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalElixir
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("99f4909b-5fd9-4602-abb9-84a2309b4879"), Text = "This bitter draft opens your mind to the potential of the written word. For the listed duration after drinking this elixir, you can understand any words you read, so long as they are written in a common language. This elixir doesn’t automatically allow you to understand codes or extremely esoteric passages—you still need to attempt a skill check to Decipher Writing." };
+            yield return new TextBlock { Id = Guid.Parse("99f4909b-5fd9-4602-abb9-84a2309b4879"), Text = "This bitter draft opens your mind to the potential of the written word. For the listed duration after drinking this elixir, you can understand any words you read, so long as they are written in a common language. This elixir doesn't automatically allow you to understand codes or extremely esoteric passages—you still need to attempt a skill check to Decipher Writing." };
         }
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()

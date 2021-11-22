@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("0e2d5fc4-bc4c-4965-861b-afeeb609d66b"), Type = TextBlockType.Text, Text = "At the end of your turn, you can attempt a DC 30 Acrobatics check to find purchase in midair. If you succeed, you don’t fall." }
+                    new TextBlock { Id = Guid.Parse("0e2d5fc4-bc4c-4965-861b-afeeb609d66b"), Type = TextBlockType.Text, Text = "At the end of your turn, you can attempt a DC 30 Acrobatics check to find purchase in midair. If you succeed, you don't fall." }
                 }
             };
         }

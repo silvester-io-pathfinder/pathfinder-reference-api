@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("190d23aa-3701-48e0-b7c6-36ec092164fc"), Type = TextBlockType.Text, Text = "Your attack can ground an airborne foe. Make a (Action: Strike). If it hits and deals damage to a flying target, the target falls up to 120 feet. The fall is gradual enough that if it causes the target to hit the ground, the target takes no damage from the fall. If the attack is a critical hit, the target can’t (Action: Fly), (Action: Leap), levitate, or otherwise leave the ground until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("190d23aa-3701-48e0-b7c6-36ec092164fc"), Type = TextBlockType.Text, Text = "Your attack can ground an airborne foe. Make a (Action: Strike). If it hits and deals damage to a flying target, the target falls up to 120 feet. The fall is gradual enough that if it causes the target to hit the ground, the target takes no damage from the fall. If the attack is a critical hit, the target can't (Action: Fly), (Action: Leap), levitate, or otherwise leave the ground until the end of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("95a281a8-083c-4c49-a20f-cd268aa515ba"), Type = TextBlockType.Text, Text = "Your suli heritage can be traced back to two geniekin ancestors of opposing elements, or to an elemental ancestor that embodied two combined elements. Choose two of the following elements: (trait: air), (trait: earth), (trait: fire), and (trait: water). Once made, this choice can’t be changed. You gain resistance equal to half your level (minimum 1) to all damaging effects with the traits of either of your chosen elements." };
+            yield return new TextBlock { Id = Guid.Parse("95a281a8-083c-4c49-a20f-cd268aa515ba"), Type = TextBlockType.Text, Text = "Your suli heritage can be traced back to two geniekin ancestors of opposing elements, or to an elemental ancestor that embodied two combined elements. Choose two of the following elements: (trait: air), (trait: earth), (trait: fire), and (trait: water). Once made, this choice can't be changed. You gain resistance equal to half your level (minimum 1) to all damaging effects with the traits of either of your chosen elements." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

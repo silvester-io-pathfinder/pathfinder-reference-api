@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Curses.Instances
                 Name = "Slayer's Haunt",
                 DifficultyCheck = 19,
                 SavingThrowStatId = Will.ID,
-                Effect = "You see all creatures around you as those you have slain, still bearing their wounds. You can’t identify, Recall Knowledge about, or otherwise interact with these creatures in any way that involves seeing their true form without first succeeding at a Will save against the curse’s DC to see through the illusion. On a critical failure for such a Will save, you become frightened 1."
+                Effect = "You see all creatures around you as those you have slain, still bearing their wounds. You can't identify, Recall Knowledge about, or otherwise interact with these creatures in any way that involves seeing their true form without first succeeding at a Will save against the curse's DC to see through the illusion. On a critical failure for such a Will save, you become frightened 1."
             };
         }
 

@@ -49,10 +49,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("c796c916-9efa-4b29-8d2f-bf116d309ce0"),
-                CriticalSuccess = "Your marshal’s aura increases to a 20-foot emanation and grants you and allies a +1 status bonus to attack rolls and saves against (trait: mental) effects.",
-                Success = "As critical success, but your aura’s size doesn’t increase.",
+                CriticalSuccess = "Your marshal's aura increases to a 20-foot emanation and grants you and allies a +1 status bonus to attack rolls and saves against (trait: mental) effects.",
+                Success = "As critical success, but your aura's size doesn't increase.",
                 Failure = "You fail to enter the stance.",
-                CriticalFailure = "You fail to enter the stance and can’t take this action again for 1 minute.", 
+                CriticalFailure = "You fail to enter the stance and can't take this action again for 1 minute.", 
             };
         }
             

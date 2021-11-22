@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("40ac775b-5765-40f4-9a93-a3c65c98beb9"), Type = TextBlockType.Text, Text = "You&#39;ve nurtured the supernatural abilities gifted by your hag mother, particularly your sight. You gain darkvision." };
+            yield return new TextBlock { Id = Guid.Parse("40ac775b-5765-40f4-9a93-a3c65c98beb9"), Type = TextBlockType.Text, Text = "You've nurtured the supernatural abilities gifted by your hag mother, particularly your sight. You gain darkvision." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

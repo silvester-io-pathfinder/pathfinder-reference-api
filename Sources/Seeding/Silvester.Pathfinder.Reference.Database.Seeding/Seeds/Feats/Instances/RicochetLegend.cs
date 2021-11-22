@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f0f30b4e-6ed7-4475-8296-1899fb14410b"), Type = TextBlockType.Text, Text = "The more obstacles between you and your target, the deadlier your shots become, as you ricochet off multiple surfaces to hit them. When using (feat: Ricochet Shot), your shot can bounce off of any surface within your weapon’s first three range increments and the target can’t benefit from cover unless they have total cover on all sides." };
-            yield return new TextBlock { Id = Guid.Parse("130ce8ac-3bb6-4e3f-99ed-3cdb9e51cdde"), Type = TextBlockType.Text, Text = "In addition, a creature must attempt a Will save against your class DC the first time in an encounter you attack it with a (feat: Ricochet Shot). If it fails, it’s stunned 2 and is unable to determine where your shot originated." };
+            yield return new TextBlock { Id = Guid.Parse("f0f30b4e-6ed7-4475-8296-1899fb14410b"), Type = TextBlockType.Text, Text = "The more obstacles between you and your target, the deadlier your shots become, as you ricochet off multiple surfaces to hit them. When using (feat: Ricochet Shot), your shot can bounce off of any surface within your weapon's first three range increments and the target can't benefit from cover unless they have total cover on all sides." };
+            yield return new TextBlock { Id = Guid.Parse("130ce8ac-3bb6-4e3f-99ed-3cdb9e51cdde"), Type = TextBlockType.Text, Text = "In addition, a creature must attempt a Will save against your class DC the first time in an encounter you attack it with a (feat: Ricochet Shot). If it fails, it's stunned 2 and is unable to determine where your shot originated." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

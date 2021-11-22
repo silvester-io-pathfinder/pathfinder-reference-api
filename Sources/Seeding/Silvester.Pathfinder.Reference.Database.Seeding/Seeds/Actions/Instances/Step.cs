@@ -23,8 +23,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Actions.Instance
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("1bf68b96-2ca3-4353-ab9a-657394acdadc"), Text = "You carefully move 5 feet. Unlike most types of movement, Stepping doesn’t trigger reactions, such as Attacks of Opportunity, that can be triggered by move actions or upon leaving or entering a square." };
-            yield return new TextBlock { Id = Guid.Parse("9aea3dfc-ee32-48c0-b420-1e9ffbd3d318"), Text = "You can’t Step into difficult terrain (page 475), and you can’t Step using a Speed other than your land Speed." };
+            yield return new TextBlock { Id = Guid.Parse("1bf68b96-2ca3-4353-ab9a-657394acdadc"), Text = "You carefully move 5 feet. Unlike most types of movement, Stepping doesn't trigger reactions, such as Attacks of Opportunity, that can be triggered by move actions or upon leaving or entering a square." };
+            yield return new TextBlock { Id = Guid.Parse("9aea3dfc-ee32-48c0-b420-1e9ffbd3d318"), Text = "You can't Step into difficult terrain (page 475), and you can't Step using a Speed other than your land Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

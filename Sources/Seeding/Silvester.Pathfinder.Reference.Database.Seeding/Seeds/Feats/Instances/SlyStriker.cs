@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c86d0a4f-ef5a-4d7f-aab1-bd25a0da8eb8"), Type = TextBlockType.Text, Text = "Your attacks deal more damage, even against creatures that aren’t flat-footed. When you succeed or critically succeed at a (action: Strike) against a creature that isn’t flat-footed, you also deal 1d6 precision damage. This applies only if you’re using a weapon or unarmed attack you could deal sneak attack damage with. At 14th level, if you would normally deal 3d6 or more sneak attack damage to flat-footed creatures, you deal 2d6 precision damage to creatures that aren’t flat-footed." };
+            yield return new TextBlock { Id = Guid.Parse("c86d0a4f-ef5a-4d7f-aab1-bd25a0da8eb8"), Type = TextBlockType.Text, Text = "Your attacks deal more damage, even against creatures that aren't flat-footed. When you succeed or critically succeed at a (action: Strike) against a creature that isn't flat-footed, you also deal 1d6 precision damage. This applies only if you're using a weapon or unarmed attack you could deal sneak attack damage with. At 14th level, if you would normally deal 3d6 or more sneak attack damage to flat-footed creatures, you deal 2d6 precision damage to creatures that aren't flat-footed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

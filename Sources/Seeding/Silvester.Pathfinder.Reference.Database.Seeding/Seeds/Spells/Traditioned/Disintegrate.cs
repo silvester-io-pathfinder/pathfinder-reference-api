@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("c8d1996c-4bea-42d7-b28a-754df9d5b744"), Type = Utilities.Text.TextBlockType.Text, Text = "You fire a green ray at your target. Make a spell attack. You deal 12d10 damage, and the target must attempt a basic Fortitude save. On a critical hit, treat the save result as one degree worse. A creature reduced to 0 HP is reduced to fine powder; its gear remains." };
-            yield return new TextBlock { Id = Guid.Parse("a36f0b28-ae6d-43ea-8671-40f6db86733c"), Type = Utilities.Text.TextBlockType.Text, Text = "An object you hit is destroyed (no save), regardless of Hardness, unless it’s an artifact or similarly hard to destroy. A single casting can destroy no more than a 10-foot cube of matter. This automatically destroys any force construct, such as a wall of force." };
+            yield return new TextBlock { Id = Guid.Parse("a36f0b28-ae6d-43ea-8671-40f6db86733c"), Type = Utilities.Text.TextBlockType.Text, Text = "An object you hit is destroyed (no save), regardless of Hardness, unless it's an artifact or similarly hard to destroy. A single casting can destroy no more than a 10-foot cube of matter. This automatically destroys any force construct, such as a wall of force." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

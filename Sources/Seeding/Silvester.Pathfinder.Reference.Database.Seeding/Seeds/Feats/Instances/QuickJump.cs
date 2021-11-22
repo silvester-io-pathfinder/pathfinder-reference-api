@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b44ff92-ac43-4da2-b852-ab4f35088d31"), Type = TextBlockType.Text, Text = "You can use (action: High Jump) and (action: Long Jump) as a single action instead of 2 actions. If you do, you don’t perform the initial (action: Stride) (nor do you fail if you don’t (action: Stride) 10 feet)." };
+            yield return new TextBlock { Id = Guid.Parse("0b44ff92-ac43-4da2-b852-ab4f35088d31"), Type = TextBlockType.Text, Text = "You can use (action: High Jump) and (action: Long Jump) as a single action instead of 2 actions. If you do, you don't perform the initial (action: Stride) (nor do you fail if you don't (action: Stride) 10 feet)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e7f1954c-0e4a-43b1-96b4-0e252bb0d12a"), Type = TextBlockType.Text, Text = "Your signature trick can have one additional trait beyond the number provided in __Table 2: Trick Progression on page 63 of Pathfinder #151: The Show Must Go On__. If the trick trait has an associated skill (such as Intimidation with the (trait: fire) trait) and that skill is one of your trick checks, your checks with that skill to Perform a Trick aren’t penalized if you Perform a Trick using a different skill." };
+            yield return new TextBlock { Id = Guid.Parse("e7f1954c-0e4a-43b1-96b4-0e252bb0d12a"), Type = TextBlockType.Text, Text = "Your signature trick can have one additional trait beyond the number provided in __Table 2: Trick Progression on page 63 of Pathfinder #151: The Show Must Go On__. If the trick trait has an associated skill (such as Intimidation with the (trait: fire) trait) and that skill is one of your trick checks, your checks with that skill to Perform a Trick aren't penalized if you Perform a Trick using a different skill." };
             yield return new TextBlock { Id = Guid.Parse("89070cbd-f0b5-48e2-891e-0317791b518b"), Type = TextBlockType.Text, Text = "For example, if your signature trick has Acrobatics and Intimidation as trick checks and you take this feat to add the (trait: fire) trait, you can Perform a Trick using Acrobatics (at no penalty), then Acrobatics again (at a -5 penalty), and then Intimidation (at no penalty)." };
         }
 

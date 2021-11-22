@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("00b0d92c-d8fa-4802-8306-cdcaee660e8f"), Type = TextBlockType.Text, Text = "You’ve taken an interest in anadi arcane traditions. Choose one cantrip from the arcane spell list. You can cast this spell as an arcane innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("00b0d92c-d8fa-4802-8306-cdcaee660e8f"), Type = TextBlockType.Text, Text = "You've taken an interest in anadi arcane traditions. Choose one cantrip from the arcane spell list. You can cast this spell as an arcane innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

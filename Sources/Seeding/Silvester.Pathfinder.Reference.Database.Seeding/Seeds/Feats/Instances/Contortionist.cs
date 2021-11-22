@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("038cea03-8638-40d1-85e4-843030e567b7"), Type = TextBlockType.Text, Text = "You can squeeze out of tight situations surprisingly quickly, gaining an advantage against foes that try to pin you down. You gain the (feat: Quick Squeeze) skill feat, and if you’re a master in Acrobatics, you can (action: Squeeze) at full Speed. Whenever you successfully (action: Escape) using Acrobatics, the creature you (action: Escaped | Escape) from is flat-footed against the next attack you make against it before the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("038cea03-8638-40d1-85e4-843030e567b7"), Type = TextBlockType.Text, Text = "You can squeeze out of tight situations surprisingly quickly, gaining an advantage against foes that try to pin you down. You gain the (feat: Quick Squeeze) skill feat, and if you're a master in Acrobatics, you can (action: Squeeze) at full Speed. Whenever you successfully (action: Escape) using Acrobatics, the creature you (action: Escaped | Escape) from is flat-footed against the next attack you make against it before the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

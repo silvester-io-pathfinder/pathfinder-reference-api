@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a67c5c4b-088b-414d-82e8-a2c93df66691"), Type = TextBlockType.Text, Text = "You determine a creature’s weaknesses, whether a literal weakness or a metaphysical one. (action: Recall Knowledge) about a creature, using your Charisma modifier instead of the usual ability modifier for the skill you’re using to (action: Recall Knowledge). The creature must be either one you can see or one you’re specifically Investigating in advance during exploration. The result depends on your (action: Recall Knowledge) check, which has the following additional effects as well as the usual effects of (action: Recall Knowledge)." };
+            yield return new TextBlock { Id = Guid.Parse("a67c5c4b-088b-414d-82e8-a2c93df66691"), Type = TextBlockType.Text, Text = "You determine a creature's weaknesses, whether a literal weakness or a metaphysical one. (action: Recall Knowledge) about a creature, using your Charisma modifier instead of the usual ability modifier for the skill you're using to (action: Recall Knowledge). The creature must be either one you can see or one you're specifically Investigating in advance during exploration. The result depends on your (action: Recall Knowledge) check, which has the following additional effects as well as the usual effects of (action: Recall Knowledge)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,10 +42,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("8137c832-672c-4767-87f7-b706414f7710"),
-                CriticalSuccess = "You learn all of the creature’s resistances, weaknesses, and immunities. If you would have learned any of them already from (action: Recall Knowledge), you learn different information instead. You can then use (feat: Esoteric Antithesis) without spending an additional action.",
-                Success = "You learn the creature’s highest weakness, if any. If you would have learned it already from (action: Recall Knowledge), you learn different information instead. You can then use (feat: Esoteric Antithesis) without spending an additional action.",
-                Failure = "You couldn’t quite figure it out, so you decide to invoke a wide range of superstitions and narrow it down from there. You can use (feat: Esoteric Antithesis) as your next action.",
-                CriticalFailure = "You came up with the wrong information and nearly made a critical mistake, distracting yourself. You become flat-footed until the beginning of your next turn and can’t use (feat: Esoteric Antithesis) this round.", 
+                CriticalSuccess = "You learn all of the creature's resistances, weaknesses, and immunities. If you would have learned any of them already from (action: Recall Knowledge), you learn different information instead. You can then use (feat: Esoteric Antithesis) without spending an additional action.",
+                Success = "You learn the creature's highest weakness, if any. If you would have learned it already from (action: Recall Knowledge), you learn different information instead. You can then use (feat: Esoteric Antithesis) without spending an additional action.",
+                Failure = "You couldn't quite figure it out, so you decide to invoke a wide range of superstitions and narrow it down from there. You can use (feat: Esoteric Antithesis) as your next action.",
+                CriticalFailure = "You came up with the wrong information and nearly made a critical mistake, distracting yourself. You become flat-footed until the beginning of your next turn and can't use (feat: Esoteric Antithesis) this round.", 
             };
         }
             

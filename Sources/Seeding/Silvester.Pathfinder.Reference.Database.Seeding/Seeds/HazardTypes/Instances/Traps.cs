@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.HazardTypes.Inst
                 Id = ID, 
                 SourcePageId = Guid.Parse("ffe77480-d1b7-4155-9152-4bbb4a651721"), 
                 Name = "Traps", 
-                Description = "Traps are usually built or placed, though they can also form accidentally, such as if a magic portal, through millennia of disuse, malfunctions as its magic warps. Mechanical traps always have some physical component, whereas purely magical traps typically don’t. Magical traps can usually be counteracted by dispel magic, and those without a listed proficiency rank for Stealth can be found using detect magic. Thievery is the most common skill used to disable traps." 
+                Description = "Traps are usually built or placed, though they can also form accidentally, such as if a magic portal, through millennia of disuse, malfunctions as its magic warps. Mechanical traps always have some physical component, whereas purely magical traps typically don't. Magical traps can usually be counteracted by dispel magic, and those without a listed proficiency rank for Stealth can be found using detect magic. Thievery is the most common skill used to disable traps." 
             };
         }
 

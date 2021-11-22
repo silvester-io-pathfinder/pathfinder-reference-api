@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("faaed5f2-d629-4235-b8d5-9309c30d1862"), Type = TextBlockType.Text, Text = "You sense if a creature you have slain in the last year has been restored to life, as long as you and that creature are on the same plane. You also gain the (spell: Achaekek’s clutch) focus spell. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by praying to Achaekek or researching your assigned kill." };
+            yield return new TextBlock { Id = Guid.Parse("faaed5f2-d629-4235-b8d5-9309c30d1862"), Type = TextBlockType.Text, Text = "You sense if a creature you have slain in the last year has been restored to life, as long as you and that creature are on the same plane. You also gain the (spell: Achaekek's clutch) focus spell. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by praying to Achaekek or researching your assigned kill." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

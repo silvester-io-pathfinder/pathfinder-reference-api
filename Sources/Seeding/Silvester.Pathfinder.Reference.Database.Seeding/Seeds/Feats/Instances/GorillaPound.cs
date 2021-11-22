@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("89597a1d-3125-4516-89fd-f8559ce161d5"), Type = TextBlockType.Text, Text = "You pound your chest before slamming into your foes. Attempt an Intimidation check to (action: Demoralize), then make one gorilla slam (action: Strike) against the same target. If your (action: Strike) hits, you gain a circumstance bonus to the damage roll equal to triple the value of the target’s frightened condition." };
+            yield return new TextBlock { Id = Guid.Parse("89597a1d-3125-4516-89fd-f8559ce161d5"), Type = TextBlockType.Text, Text = "You pound your chest before slamming into your foes. Attempt an Intimidation check to (action: Demoralize), then make one gorilla slam (action: Strike) against the same target. If your (action: Strike) hits, you gain a circumstance bonus to the damage roll equal to triple the value of the target's frightened condition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

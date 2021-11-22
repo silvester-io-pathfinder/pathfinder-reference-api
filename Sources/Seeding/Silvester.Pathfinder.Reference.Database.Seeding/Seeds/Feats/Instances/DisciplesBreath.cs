@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f480a0aa-f285-4c0f-a155-9b24f171f91b"), Type = TextBlockType.Text, Text = "You unleash your breath weapon without spending focus. This has the effects of your (spell: dragon breath) sorcerer bloodline spell, though it deals 9d6 damage instead of its usual damage, and you don’t have to cast it or spend a Focus Point. You can’t use Disciple’s Breath again for 1d4 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("f480a0aa-f285-4c0f-a155-9b24f171f91b"), Type = TextBlockType.Text, Text = "You unleash your breath weapon without spending focus. This has the effects of your (spell: dragon breath) sorcerer bloodline spell, though it deals 9d6 damage instead of its usual damage, and you don't have to cast it or spend a Focus Point. You can't use Disciple's Breath again for 1d4 rounds." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

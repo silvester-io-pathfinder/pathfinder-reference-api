@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("85baea75-fc54-4f65-90a0-f51f9cbfd341"), Type = TextBlockType.Text, Text = "Your lineage descends from devils, the conniving schemers of Hell&#39;s malevolent hierarchy. You&#39;re as skilled at noticing lies and twisted wordings as you are at constructing them. You are trained in Deception and Legal Lore. If you were already trained in Deception (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the (feat: Lie to Me) skill feat." };
+            yield return new TextBlock { Id = Guid.Parse("85baea75-fc54-4f65-90a0-f51f9cbfd341"), Type = TextBlockType.Text, Text = "Your lineage descends from devils, the conniving schemers of Hell's malevolent hierarchy. You're as skilled at noticing lies and twisted wordings as you are at constructing them. You are trained in Deception and Legal Lore. If you were already trained in Deception (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the (feat: Lie to Me) skill feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

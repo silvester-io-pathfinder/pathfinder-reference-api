@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Domains.Instance
             {
                 Id = ID, 
                 Name = "Luck", 
-                Description = "You’re unnaturally lucky and keep out of harm’s way." 
+                Description = "You're unnaturally lucky and keep out of harm's way." 
             };
         }
     }

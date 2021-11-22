@@ -42,10 +42,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("b3965420-0e87-4099-a247-acf251785b45"),
-                CriticalSuccess = "This movement doesn’t trigger reactions from the foe, the foe is flat-footed to you until the end of your turn, and you gain panache.",
-                Success = "This movement doesn’t trigger reactions from the foe, and you gain panache.",
+                CriticalSuccess = "This movement doesn't trigger reactions from the foe, the foe is flat-footed to you until the end of your turn, and you gain panache.",
+                Success = "This movement doesn't trigger reactions from the foe, and you gain panache.",
                 
-                CriticalFailure = "Your movement immediately stops when you enter the creature’s reach; if you began in the creature’s reach, you don’t move.", 
+                CriticalFailure = "Your movement immediately stops when you enter the creature's reach; if you began in the creature's reach, you don't move.", 
             };
         }
             

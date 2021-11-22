@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("54488d2e-6ed0-4fb0-8bb3-85dee65a4851"), Type = TextBlockType.Text, Text = "The experiments to your body allowed you to link minds via touch. You gain telepathy with creatures as long as you are in physical contact. This allows you to communicate mentally with any creatures you’re in physical contact with, as long as you both share a language. This doesn’t give any special access to their thoughts, and communicates no more information than normal speech would." };
+            yield return new TextBlock { Id = Guid.Parse("54488d2e-6ed0-4fb0-8bb3-85dee65a4851"), Type = TextBlockType.Text, Text = "The experiments to your body allowed you to link minds via touch. You gain telepathy with creatures as long as you are in physical contact. This allows you to communicate mentally with any creatures you're in physical contact with, as long as you both share a language. This doesn't give any special access to their thoughts, and communicates no more information than normal speech would." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

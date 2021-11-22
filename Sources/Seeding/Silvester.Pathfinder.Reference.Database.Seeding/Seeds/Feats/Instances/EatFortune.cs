@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ed23c4ec-ba99-4c6a-bfb2-64b734ac3bdc"), Type = TextBlockType.Text, Text = "As someone tries to twist fate, you consume the interference. The triggering effect is disrupted. If it&#39;s a (trait: misfortune) effect, Eat Fortune gains the (trait: fortune) trait; if it&#39;s a (trait: fortune) effect, Eat Fortune gains the (trait: misfortune) trait. This fortune or misfortune applies to the same roll the triggering effect would have, so you couldn&#39;t negate a (trait: fortune) effect with Eat Fortune and then apply a (trait: misfortune) effect to the same roll." };
+            yield return new TextBlock { Id = Guid.Parse("ed23c4ec-ba99-4c6a-bfb2-64b734ac3bdc"), Type = TextBlockType.Text, Text = "As someone tries to twist fate, you consume the interference. The triggering effect is disrupted. If it's a (trait: misfortune) effect, Eat Fortune gains the (trait: fortune) trait; if it's a (trait: fortune) effect, Eat Fortune gains the (trait: misfortune) trait. This fortune or misfortune applies to the same roll the triggering effect would have, so you couldn't negate a (trait: fortune) effect with Eat Fortune and then apply a (trait: misfortune) effect to the same roll." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

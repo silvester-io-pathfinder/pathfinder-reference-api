@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84937ca3-5b7a-4529-9930-4145419e858b"), Type = Utilities.Text.TextBlockType.Text, Text = "Blessings from beyond help your companions strike true. You and your allies gain a +1 status bonus to attack rolls while within the emanation. Once per turn, starting the turn after you cast bless, you can use a single action, which has the concentrate trait, to increase the emanation’s radius by 5 feet. Bless can counteract bane." };
+            yield return new TextBlock { Id = Guid.Parse("84937ca3-5b7a-4529-9930-4145419e858b"), Type = Utilities.Text.TextBlockType.Text, Text = "Blessings from beyond help your companions strike true. You and your allies gain a +1 status bonus to attack rolls while within the emanation. Once per turn, starting the turn after you cast bless, you can use a single action, which has the concentrate trait, to increase the emanation's radius by 5 feet. Bless can counteract bane." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

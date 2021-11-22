@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a310572-3a8b-4123-b5cb-8d391af094ee"), Type = TextBlockType.Text, Text = "You protect those near you with a flash of steel. When you’re benefiting from (feat: Dueling Parry), allies adjacent to you gain a +1 circumstance bonus to AC. If you have (feat: Dueling Riposte), you can use it when an enemy within your reach critically fails a (action: Strike) against an ally adjacent to you, not just against yourself." };
+            yield return new TextBlock { Id = Guid.Parse("5a310572-3a8b-4123-b5cb-8d391af094ee"), Type = TextBlockType.Text, Text = "You protect those near you with a flash of steel. When you're benefiting from (feat: Dueling Parry), allies adjacent to you gain a +1 circumstance bonus to AC. If you have (feat: Dueling Riposte), you can use it when an enemy within your reach critically fails a (action: Strike) against an ally adjacent to you, not just against yourself." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

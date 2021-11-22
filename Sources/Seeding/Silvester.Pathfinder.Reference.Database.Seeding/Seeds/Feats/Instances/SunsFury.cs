@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cac7cb0c-1fa7-4e41-b21b-08b2cbf19c32"), Type = TextBlockType.Text, Text = "The Old Sun Gods have granted you a gift in your fight against Walkena. You gain the (spell: sun’s fury) focus spell. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can regain using the (action: Refocus) activity to pray to the Old Sun Gods; if you already have a focus pool, increase the number of Focus Points in your focus pool by 1. Your Bright Lion focus spells are divine spells; when you gain this feat, if you aren’t already, you become trained in divine spell attacks and spell DCs, using Charisma as your spellcasting ability score." };
+            yield return new TextBlock { Id = Guid.Parse("cac7cb0c-1fa7-4e41-b21b-08b2cbf19c32"), Type = TextBlockType.Text, Text = "The Old Sun Gods have granted you a gift in your fight against Walkena. You gain the (spell: sun's fury) focus spell. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can regain using the (action: Refocus) activity to pray to the Old Sun Gods; if you already have a focus pool, increase the number of Focus Points in your focus pool by 1. Your Bright Lion focus spells are divine spells; when you gain this feat, if you aren't already, you become trained in divine spell attacks and spell DCs, using Charisma as your spellcasting ability score." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

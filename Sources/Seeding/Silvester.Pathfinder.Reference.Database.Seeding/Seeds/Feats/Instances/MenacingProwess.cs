@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f44bae4f-b1d9-4dcd-a58c-6c395de15114"), Type = TextBlockType.Text, Text = "Scaring off multiple people at once is your specialty. When you (action: Demoralize), you can target up to 2 creatures within 30 feet of you at once. If you are a master of Intimidation, you can (action: Demoralize) up to 4 creatures at once; if you&#39;re legendary, you can (action: Demoralize) up to 8 creatures at once." };
+            yield return new TextBlock { Id = Guid.Parse("f44bae4f-b1d9-4dcd-a58c-6c395de15114"), Type = TextBlockType.Text, Text = "Scaring off multiple people at once is your specialty. When you (action: Demoralize), you can target up to 2 creatures within 30 feet of you at once. If you are a master of Intimidation, you can (action: Demoralize) up to 4 creatures at once; if you're legendary, you can (action: Demoralize) up to 8 creatures at once." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

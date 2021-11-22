@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eac44740-54b9-42eb-a5eb-013ac936c384"), Type = TextBlockType.Text, Text = "You’re especially talented at striking your enemies in their most vulnerable areas. When you critically hit with a (trait: fatal) firearm, you deal an additional die of the appropriate size and damage type for the (trait: fatal) trait after doubling the weapon’s damage. For example, after getting a critical hit with a (trait: fatal d12) weapon, you add an additional 1d12 damage to the attack after doubling its damage." };
+            yield return new TextBlock { Id = Guid.Parse("eac44740-54b9-42eb-a5eb-013ac936c384"), Type = TextBlockType.Text, Text = "You're especially talented at striking your enemies in their most vulnerable areas. When you critically hit with a (trait: fatal) firearm, you deal an additional die of the appropriate size and damage type for the (trait: fatal) trait after doubling the weapon's damage. For example, after getting a critical hit with a (trait: fatal d12) weapon, you add an additional 1d12 damage to the attack after doubling its damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

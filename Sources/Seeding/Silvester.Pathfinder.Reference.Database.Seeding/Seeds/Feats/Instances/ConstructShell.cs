@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("da38f9ae-b9c6-4d1b-8939-29df044f75c0"), Type = TextBlockType.Text, Text = "You’ve adjusted your construct innovation so that when you ride it, special plates, hollows, or similar form partial barriers around you to add additional protection. You have lesser cover from all attacks when mounted on your construct innovation, not just from attacks where the construct would be in the way. Additionally, if your construct uses an emanation while you’re riding on it, such as (action: Explode), you can choose not to be affected by the emanation." };
+            yield return new TextBlock { Id = Guid.Parse("da38f9ae-b9c6-4d1b-8939-29df044f75c0"), Type = TextBlockType.Text, Text = "You've adjusted your construct innovation so that when you ride it, special plates, hollows, or similar form partial barriers around you to add additional protection. You have lesser cover from all attacks when mounted on your construct innovation, not just from attacks where the construct would be in the way. Additionally, if your construct uses an emanation while you're riding on it, such as (action: Explode), you can choose not to be affected by the emanation." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

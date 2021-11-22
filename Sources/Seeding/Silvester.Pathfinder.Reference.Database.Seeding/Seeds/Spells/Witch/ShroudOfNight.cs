@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d6317af0-9b81-4a27-b565-7f4359d70ab7"), Type = TextBlockType.Text, Text = "Drawing your hand in a sweeping gesture, you shroud the target in a veil of night. The target’s eyes are blanketed in darkness. If you cast this hex on a willing ally (for instance, one with light blindness), the ally can choose which result it gets without rolling. Regardless of the outcome, the target is then temporarily immune for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("d6317af0-9b81-4a27-b565-7f4359d70ab7"), Type = TextBlockType.Text, Text = "Drawing your hand in a sweeping gesture, you shroud the target in a veil of night. The target's eyes are blanketed in darkness. If you cast this hex on a willing ally (for instance, one with light blindness), the ally can choose which result it gets without rolling. Regardless of the outcome, the target is then temporarily immune for 1 minute." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

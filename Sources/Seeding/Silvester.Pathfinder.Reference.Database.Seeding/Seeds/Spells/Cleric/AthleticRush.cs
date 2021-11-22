@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("14df23ce-9c2f-4acd-860e-31c1edf92de8"), Type = TextBlockType.Text, Text = "Your body fills with physical power and skill. You gain a +10- foot status bonus to Speed and a +2 status bonus to Athletics checks. As a part of Casting this Spell, you can use a Stride, Leap, Climb, or Swim action. The spell’s bonuses apply during that action." };
+            yield return new TextBlock { Id = Guid.Parse("14df23ce-9c2f-4acd-860e-31c1edf92de8"), Type = TextBlockType.Text, Text = "Your body fills with physical power and skill. You gain a +10- foot status bonus to Speed and a +2 status bonus to Athletics checks. As a part of Casting this Spell, you can use a Stride, Leap, Climb, or Swim action. The spell's bonuses apply during that action." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

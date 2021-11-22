@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instance
             return new DivineIntercession
             {
                 Id = Guid.Parse("507b9ded-96ae-4296-b5f1-7503a503d438"),
-                Description = "The Strong Man’s gifts reflect his mastery of might.",
+                Description = "The Strong Man's gifts reflect his mastery of might.",
                 MinorBoon = "The Strong Man blesses you with a measure of his strength. Increase your maximum and encumbered Bulk limits by 2.",
                 ModerateBoon = "You fear no exertion. You can employ exploration tactics normally while fatigued.",
                 MajorBoon = "You possess a true champion's might. When you roll a critical failure on an Athletics check, you get a failure instead, and when you roll a success, you instead get a critical success.",

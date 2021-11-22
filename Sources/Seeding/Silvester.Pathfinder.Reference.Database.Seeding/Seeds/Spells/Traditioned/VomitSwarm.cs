@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea50d52f-0149-43b9-a551-d495594b9097"), Type = TextBlockType.Text, Text = "You belch forth a swarm of magical vermin. You evoke and shape the creatures from your own imagination, allowing you to change the appearance of the creatures (typically a mix of centipedes, roaches, wasps, and worms), but this doesn’t change the effect of the spell. The vermin swarm over anyone in the area, their bites and stings dealing 2d8 piercing damage (basic Reflex save). A creature that fails its saving throw also becomes sickened 1. Once the spell ends, the swarm disappears." };
+            yield return new TextBlock { Id = Guid.Parse("ea50d52f-0149-43b9-a551-d495594b9097"), Type = TextBlockType.Text, Text = "You belch forth a swarm of magical vermin. You evoke and shape the creatures from your own imagination, allowing you to change the appearance of the creatures (typically a mix of centipedes, roaches, wasps, and worms), but this doesn't change the effect of the spell. The vermin swarm over anyone in the area, their bites and stings dealing 2d8 piercing damage (basic Reflex save). A creature that fails its saving throw also becomes sickened 1. Once the spell ends, the swarm disappears." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

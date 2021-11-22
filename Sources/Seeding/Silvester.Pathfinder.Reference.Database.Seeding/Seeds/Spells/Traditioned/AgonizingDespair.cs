@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3c6182fb-7575-4228-9ea3-e320836380f4"), Type = TextBlockType.Text, Text = "Your target’s mind tumbles down a deep well of dread, dwelling so intently on deep-seated fears that it’s painful. The target takes 4d6 mental damage with a Will saving throw." };
+            yield return new TextBlock { Id = Guid.Parse("3c6182fb-7575-4228-9ea3-e320836380f4"), Type = TextBlockType.Text, Text = "Your target's mind tumbles down a deep well of dread, dwelling so intently on deep-seated fears that it's painful. The target takes 4d6 mental damage with a Will saving throw." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

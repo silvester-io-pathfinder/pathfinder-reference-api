@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("23ead71d-4f43-4e24-94ff-8aa5b1ebfdcd"), Type = TextBlockType.Text, Text = "Divine insight lets you see things as they truly are. The GM attempts a secret counteract check against each illusion that is at least partially within the area. Instead of counteracting the illusion, you see through it (for instance, if the check succeeds against an illusory disguise spell, you see the creature’s true form but illusory disguise doesn’t end)." };
+            yield return new TextBlock { Id = Guid.Parse("23ead71d-4f43-4e24-94ff-8aa5b1ebfdcd"), Type = TextBlockType.Text, Text = "Divine insight lets you see things as they truly are. The GM attempts a secret counteract check against each illusion that is at least partially within the area. Instead of counteracting the illusion, you see through it (for instance, if the check succeeds against an illusory disguise spell, you see the creature's true form but illusory disguise doesn't end)." };
             yield return new TextBlock { Id = Guid.Parse("30bc0221-72ba-414f-9cc1-2c17459da25a"), Type = TextBlockType.Text, Text = "The area moves with you for the duration of the spell, and the GM attempts a secret counteract check each time a new illusion is within the area." };
         }
 

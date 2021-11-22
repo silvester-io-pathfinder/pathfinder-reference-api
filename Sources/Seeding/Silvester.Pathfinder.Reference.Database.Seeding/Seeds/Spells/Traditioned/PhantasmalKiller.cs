@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("20651acb-48f1-4b99-8c49-1409a71892fb"), Type = TextBlockType.Text, Text = "You create a phantasmal image of the most fearsome creature imaginable to the target. Only the spell’s target can see the killer, though you can see the vague shape of the illusion as it races forth to attack. The effect of the killer is based on the outcome of the target’s Will save." };
+            yield return new TextBlock { Id = Guid.Parse("20651acb-48f1-4b99-8c49-1409a71892fb"), Type = TextBlockType.Text, Text = "You create a phantasmal image of the most fearsome creature imaginable to the target. Only the spell's target can see the killer, though you can see the vague shape of the illusion as it races forth to attack. The effect of the killer is based on the outcome of the target's Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

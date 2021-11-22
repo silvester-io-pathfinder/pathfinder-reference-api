@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("190ae005-1b51-41ba-93a6-054a4e92fd75"), Type = TextBlockType.Text, Text = "You snatch creatures from the jaws of death. You can spend 1 to 3 actions Casting this Spell, and you can target a number of creatures equal to the actions spent. Each target regains 3d6 Hit Points. If the target had the dying condition, coming back from dying due to this healing doesn’t increase its wounded condition." };
+            yield return new TextBlock { Id = Guid.Parse("190ae005-1b51-41ba-93a6-054a4e92fd75"), Type = TextBlockType.Text, Text = "You snatch creatures from the jaws of death. You can spend 1 to 3 actions Casting this Spell, and you can target a number of creatures equal to the actions spent. Each target regains 3d6 Hit Points. If the target had the dying condition, coming back from dying due to this healing doesn't increase its wounded condition." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

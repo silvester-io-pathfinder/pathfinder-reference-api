@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("a65e8c8a-147b-46cc-8e14-482022d000c2"), Type = TextBlockType.Text, Text = "You designate a single creature as your mark. This lasts until the mark dies or you use Mark for Death again." };
-            yield return new TextBlock { Id = Guid.Parse("29550299-62c0-4466-8425-518fc9035e6a"), Type = TextBlockType.Text, Text = "You gain a +2 circumstance bonus to Perception checks to (action: Seek) your mark and on Deception checks to (action: Feint) against your mark. Your (trait: agile) and (trait: finesse) weapons and unarmed attacks gain the (trait: backstabber) and (trait: deadly d6) weapon traits when you’re attacking your mark. If the weapon or unarmed attack already has the (trait: deadly) trait, increase the size of the deadly damage die by one step instead of giving it deadly d6." };
+            yield return new TextBlock { Id = Guid.Parse("29550299-62c0-4466-8425-518fc9035e6a"), Type = TextBlockType.Text, Text = "You gain a +2 circumstance bonus to Perception checks to (action: Seek) your mark and on Deception checks to (action: Feint) against your mark. Your (trait: agile) and (trait: finesse) weapons and unarmed attacks gain the (trait: backstabber) and (trait: deadly d6) weapon traits when you're attacking your mark. If the weapon or unarmed attack already has the (trait: deadly) trait, increase the size of the deadly damage die by one step instead of giving it deadly d6." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

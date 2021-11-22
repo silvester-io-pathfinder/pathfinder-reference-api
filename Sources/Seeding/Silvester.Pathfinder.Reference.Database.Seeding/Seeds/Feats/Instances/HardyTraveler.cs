@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("64cc6a0f-b4db-43a5-8571-5d3517e58326"), Type = TextBlockType.Text, Text = "There’s no journey too far or burden too heavy when your friends are at your side. Increase your maximum and encumbered Bulk limits by 1. In addition, you gain a +10-foot circumstance bonus to your Speed during overland travel." };
+            yield return new TextBlock { Id = Guid.Parse("64cc6a0f-b4db-43a5-8571-5d3517e58326"), Type = TextBlockType.Text, Text = "There's no journey too far or burden too heavy when your friends are at your side. Increase your maximum and encumbered Bulk limits by 1. In addition, you gain a +10-foot circumstance bonus to your Speed during overland travel." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6feb302f-8418-4c13-94c7-8879df7e3867"), Type = TextBlockType.Text, Text = "When you (action: Coerce), you can compare your Intimidation check result to the Will DCs of two targets instead of one. It’s possible to get a different degree of success for each target. The number of targets you can (action: Coerce) in a single action increases to four if you’re an expert, 10 if you’re a master, and 25 if you’re legendary." };
+            yield return new TextBlock { Id = Guid.Parse("6feb302f-8418-4c13-94c7-8879df7e3867"), Type = TextBlockType.Text, Text = "When you (action: Coerce), you can compare your Intimidation check result to the Will DCs of two targets instead of one. It's possible to get a different degree of success for each target. The number of targets you can (action: Coerce) in a single action increases to four if you're an expert, 10 if you're a master, and 25 if you're legendary." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

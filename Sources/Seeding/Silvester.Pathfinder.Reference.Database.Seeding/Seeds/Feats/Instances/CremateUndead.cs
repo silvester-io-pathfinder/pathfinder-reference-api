@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1b7c138f-14fc-45c7-853f-1c8cf55c3d2f"), Type = TextBlockType.Text, Text = "Your positive energy sets undead alight. When you use a (spell: heal) spell to damage undead, each undead that takes damage also takes persistent fire damage equal to the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("1b7c138f-14fc-45c7-853f-1c8cf55c3d2f"), Type = TextBlockType.Text, Text = "Your positive energy sets undead alight. When you use a (spell: heal) spell to damage undead, each undead that takes damage also takes persistent fire damage equal to the spell's level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

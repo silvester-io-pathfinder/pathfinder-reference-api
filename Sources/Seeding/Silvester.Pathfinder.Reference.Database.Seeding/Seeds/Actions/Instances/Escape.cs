@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Actions.Instance
                 Id = Guid.Parse("42f02449-6552-40db-adea-e635cb50c071"),
                 CriticalSuccess = "You get free and remove the grabbed, immobilized, and restrained conditions imposed by your chosen target. You can then Stride up to 5 feet.",
                 Success = "You get free and remove the grabbed, immobilized, and restrained conditions imposed by your chosen target.",
-                CriticalFailure = "You don’t get free, and you can’t attempt to Escape again until your next turn."
+                CriticalFailure = "You don't get free, and you can't attempt to Escape again until your next turn."
             };
         }
     }

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eac83d4a-a46f-436e-a758-5d1a4456e6aa"), Type = TextBlockType.Text, Text = "Your eyes keep a continual watch for dangers from all sides. You can’t be flanked by creatures of your level or lower, even when you haven’t used (feat: Watchful Gaze)." };
+            yield return new TextBlock { Id = Guid.Parse("eac83d4a-a46f-436e-a758-5d1a4456e6aa"), Type = TextBlockType.Text, Text = "Your eyes keep a continual watch for dangers from all sides. You can't be flanked by creatures of your level or lower, even when you haven't used (feat: Watchful Gaze)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

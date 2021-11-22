@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d109f99-1173-4800-bb89-2045c311d0be"), Type = TextBlockType.Text, Text = "No one can react faster than you can pull your trigger. When using your initial deed, instead of (action: Interacting|Interact) to draw a weapon, you can (action: Strike) with a firearm or crossbow you’re already wielding. If this (action: Strike) hits, the target is also flat-footed until the end of your first turn of the encounter." };
+            yield return new TextBlock { Id = Guid.Parse("4d109f99-1173-4800-bb89-2045c311d0be"), Type = TextBlockType.Text, Text = "No one can react faster than you can pull your trigger. When using your initial deed, instead of (action: Interacting|Interact) to draw a weapon, you can (action: Strike) with a firearm or crossbow you're already wielding. If this (action: Strike) hits, the target is also flat-footed until the end of your first turn of the encounter." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

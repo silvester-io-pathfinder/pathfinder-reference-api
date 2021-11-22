@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("40b0aa62-eaab-42f7-8931-6feaa486d522"), Type = TextBlockType.Text, Text = "You call upon your patron’s power to better uncover secrets. When you Cast the Spell, the target can Recall Knowledge, Seek, or Sense Motive. The target gains a +1 status bonus to the skill or Perception used for the roll, and this bonus remains as long as you Sustain the Spell. The target is temporarily immune to discern secrets for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("40b0aa62-eaab-42f7-8931-6feaa486d522"), Type = TextBlockType.Text, Text = "You call upon your patron's power to better uncover secrets. When you Cast the Spell, the target can Recall Knowledge, Seek, or Sense Motive. The target gains a +1 status bonus to the skill or Perception used for the roll, and this bonus remains as long as you Sustain the Spell. The target is temporarily immune to discern secrets for 1 minute." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

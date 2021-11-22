@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92af8be4-c367-4e04-90e0-44f9698dbc4f"), Type = TextBlockType.Text, Text = "You can cover for a secondary caster’s error. If you are the primary caster, after rolling all the secondary checks, choose one check on which the secondary caster rolled a failure or critical failure, and treat the result as one degree of success better." };
+            yield return new TextBlock { Id = Guid.Parse("92af8be4-c367-4e04-90e0-44f9698dbc4f"), Type = TextBlockType.Text, Text = "You can cover for a secondary caster's error. If you are the primary caster, after rolling all the secondary checks, choose one check on which the secondary caster rolled a failure or critical failure, and treat the result as one degree of success better." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

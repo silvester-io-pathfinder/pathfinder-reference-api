@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("183434ec-32dc-4b8b-b3a5-58045aa71e79"), Type = TextBlockType.Text, Text = "You forge strong connections with animals. You can spend 7 days of downtime regularly interacting with a normal animal (not a companion or other special animal) that is friendly or helpful to you. After this duration, attempt a DC 20 Nature check. If successful, you bond with the animal. The animal is permanently helpful to you, unless you do something egregious to break your bond. A helpful animal is easier to direct, as described under (Action: Command an Animal)." };
-            yield return new TextBlock { Id = Guid.Parse("7f87d77e-3379-412c-8760-28bc0a10ffc4"), Type = TextBlockType.Text, Text = "Bonding with a new animal ends any previous bond you had. You can’t have both a bonded animal and an animal companion (though you can have both a bonded animal and a familiar)." };
+            yield return new TextBlock { Id = Guid.Parse("7f87d77e-3379-412c-8760-28bc0a10ffc4"), Type = TextBlockType.Text, Text = "Bonding with a new animal ends any previous bond you had. You can't have both a bonded animal and an animal companion (though you can have both a bonded animal and a familiar)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

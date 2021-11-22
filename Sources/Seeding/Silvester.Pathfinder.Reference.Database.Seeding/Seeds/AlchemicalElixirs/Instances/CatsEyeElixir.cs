@@ -33,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalElixir
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("70db1dfe-abca-4416-b8ba-8825604c77d9"), Text = "After you consume this elixir, your vision sharpens and you become sensitive to even the most minute movements. For the next minute, you reduce the flat check to target hidden creatures to 5, and you don’t need to attempt a flat check to target concealed creatures. These benefits apply only against creatures within 30 feet of you." };
+            yield return new TextBlock { Id = Guid.Parse("70db1dfe-abca-4416-b8ba-8825604c77d9"), Text = "After you consume this elixir, your vision sharpens and you become sensitive to even the most minute movements. For the next minute, you reduce the flat check to target hidden creatures to 5, and you don't need to attempt a flat check to target concealed creatures. These benefits apply only against creatures within 30 feet of you." };
         }
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()

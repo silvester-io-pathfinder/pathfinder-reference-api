@@ -43,9 +43,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("c511408d-8155-40d1-bcad-2eb332861ee3"),
-                CriticalSuccess = "You aren’t otherwise affected.",
-                Success = "You are drained 2 and can’t reduce or remove this condition until your next preparations.",
-                Failure = "You are drained 4 and can’t reduce or remove this condition until your next preparations.",
+                CriticalSuccess = "You aren't otherwise affected.",
+                Success = "You are drained 2 and can't reduce or remove this condition until your next preparations.",
+                Failure = "You are drained 4 and can't reduce or remove this condition until your next preparations.",
                 CriticalFailure = "You die.", 
             };
         }

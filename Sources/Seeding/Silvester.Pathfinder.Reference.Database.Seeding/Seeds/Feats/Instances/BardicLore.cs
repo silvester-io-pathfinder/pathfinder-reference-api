@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("75660539-1749-45db-b134-f0461b948e20"), Type = TextBlockType.Text, Text = "Your studies make you informed on every subject. You are trained in Bardic Lore, a special Lore skill that can be used only to (action: Recall Knowledge), but on any topic. If you have legendary proficiency in Occultism, you gain expert proficiency in Bardic Lore, but you can’t increase your proficiency rank in Bardic Lore by any other means." };
+            yield return new TextBlock { Id = Guid.Parse("75660539-1749-45db-b134-f0461b948e20"), Type = TextBlockType.Text, Text = "Your studies make you informed on every subject. You are trained in Bardic Lore, a special Lore skill that can be used only to (action: Recall Knowledge), but on any topic. If you have legendary proficiency in Occultism, you gain expert proficiency in Bardic Lore, but you can't increase your proficiency rank in Bardic Lore by any other means." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

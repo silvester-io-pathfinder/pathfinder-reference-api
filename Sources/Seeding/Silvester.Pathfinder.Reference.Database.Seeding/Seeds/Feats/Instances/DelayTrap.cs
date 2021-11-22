@@ -49,9 +49,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             {
                 Id = Guid.Parse("6f054247-d487-42e0-b7c6-cc0dfe3571ac"),
                 CriticalSuccess = "You prevent the trap from being triggered, or you delay the activation until the start or end of your next turn (your choice).",
-                Success = "You prevent the trap from being triggered, or you delay the activation until the end of your next turn (whichever is worse for you; GM’s choice).",
+                Success = "You prevent the trap from being triggered, or you delay the activation until the end of your next turn (whichever is worse for you; GM's choice).",
                 Failure = "No effect.",
-                CriticalFailure = "You’re flat-footed until the start of your next turn.", 
+                CriticalFailure = "You're flat-footed until the start of your next turn.", 
             };
         }
             

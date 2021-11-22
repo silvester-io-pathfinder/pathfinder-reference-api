@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4deeb7f6-b515-41cd-9a62-0be1d8d549e8"), Type = TextBlockType.Text, Text = "You bring the magical wavelengths of your spell into sync with the ones produced by your own body. If the next action you take is to (activity: Cast a Spell) with an area, you aren’t affected by the spell even if you are within the area." };
+            yield return new TextBlock { Id = Guid.Parse("4deeb7f6-b515-41cd-9a62-0be1d8d549e8"), Type = TextBlockType.Text, Text = "You bring the magical wavelengths of your spell into sync with the ones produced by your own body. If the next action you take is to (activity: Cast a Spell) with an area, you aren't affected by the spell even if you are within the area." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

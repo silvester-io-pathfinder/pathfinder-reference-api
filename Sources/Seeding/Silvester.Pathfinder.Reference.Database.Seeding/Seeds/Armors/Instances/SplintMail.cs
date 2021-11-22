@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Armors.Instances
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("8d94c1d8-41d5-416d-b928-40bc00950de3"), Type = TextBlockType.Text, Text = "This type of armor is chain mail reinforced with flexible, interlocking metal plates, typically located on the wearer’s torso, upper arms, and legs. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets." };
+            yield return new TextBlock { Id = Guid.Parse("8d94c1d8-41d5-416d-b928-40bc00950de3"), Type = TextBlockType.Text, Text = "This type of armor is chain mail reinforced with flexible, interlocking metal plates, typically located on the wearer's torso, upper arms, and legs. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a36e2689-c202-4f0f-82b9-c3c687410383"), Type = TextBlockType.Text, Text = "Your unparalleled athletic skill allows you to jump impossible distances. Triple the distance you (action: Long Jump) (so you could jump 60 feet on a successful DC 20 check). When you (action: High Jump), use the calculation for a (action: Long Jump) but don’t triple the distance." };
+            yield return new TextBlock { Id = Guid.Parse("a36e2689-c202-4f0f-82b9-c3c687410383"), Type = TextBlockType.Text, Text = "Your unparalleled athletic skill allows you to jump impossible distances. Triple the distance you (action: Long Jump) (so you could jump 60 feet on a successful DC 20 check). When you (action: High Jump), use the calculation for a (action: Long Jump) but don't triple the distance." };
             yield return new TextBlock { Id = Guid.Parse("6e162e1a-7c90-4298-8d30-9bdad6fe47bd"), Type = TextBlockType.Text, Text = "You can jump a distance greater than your Speed by spending additional actions when you (action: Long Jump) or (action: High Jump). For each additional action spent, add your Speed to the limit on how far you can (action: Leap)." };
         }
 

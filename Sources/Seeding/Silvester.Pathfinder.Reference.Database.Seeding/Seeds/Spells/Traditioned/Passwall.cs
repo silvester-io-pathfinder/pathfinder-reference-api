@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2e877aaf-95a1-4bb0-9091-6c0425dfb4d6"), Type = TextBlockType.Text, Text = "You create a visible tunnel through the wall in the chosen area, replacing the area with empty space. If the wall is thicker than 10 feet, the tunnel ends 10 feet in. Even a small layer of metal in the wall prevents this spell from functioning. This spell doesn’t reduce the integrity of the structure. When the spell ends, anyone inside the tunnel is shunted to the nearest exit." };
+            yield return new TextBlock { Id = Guid.Parse("2e877aaf-95a1-4bb0-9091-6c0425dfb4d6"), Type = TextBlockType.Text, Text = "You create a visible tunnel through the wall in the chosen area, replacing the area with empty space. If the wall is thicker than 10 feet, the tunnel ends 10 feet in. Even a small layer of metal in the wall prevents this spell from functioning. This spell doesn't reduce the integrity of the structure. When the spell ends, anyone inside the tunnel is shunted to the nearest exit." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "7th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("63ea6003-fe0b-47ac-8ff8-77e43f430d01"), Type = TextBlockType.Text, Text = "The tunnel can be up to 20 feet deep. The areas of the wall that contain your tunnel’s entrance appear completely normal (unless viewed with true seeing or a similar effect), despite the tunnel’s existence. The tunnel’s entrance functions as a solid wall, but you can specify a password or a trigger (page 305), allowing creatures to enter the tunnel freely." }
+                    new TextBlock { Id = Guid.Parse("63ea6003-fe0b-47ac-8ff8-77e43f430d01"), Type = TextBlockType.Text, Text = "The tunnel can be up to 20 feet deep. The areas of the wall that contain your tunnel's entrance appear completely normal (unless viewed with true seeing or a similar effect), despite the tunnel's existence. The tunnel's entrance functions as a solid wall, but you can specify a password or a trigger (page 305), allowing creatures to enter the tunnel freely." }
                 }
             };
         }

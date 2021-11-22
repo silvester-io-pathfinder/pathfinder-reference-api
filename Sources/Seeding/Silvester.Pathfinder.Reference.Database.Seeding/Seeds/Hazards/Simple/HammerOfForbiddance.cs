@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
             {
                 Id = ID,
                 Name = "Hammer of Forbiddance",
-                Description = "An enormous hammer at an edifice’s entrance swings down in an attempt to damage a creature entering an area, push it back, and prevent it from going any further.",
+                Description = "An enormous hammer at an edifice's entrance swings down in an attempt to damage a creature entering an area, push it back, and prevent it from going any further.",
                 Level = 11,
                 ArmorClass = 32,
                 Fortitude = 24,

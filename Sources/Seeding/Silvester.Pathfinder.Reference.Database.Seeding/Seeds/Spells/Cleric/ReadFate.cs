@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2c25e0c-9793-4fdd-a055-120cbf048ce1"), Type = TextBlockType.Text, Text = "You attempt to learn more about the target’s fate in the short term, usually within the next day for most prosaic creatures, or the next hour or less for someone likely to have multiple rapid experiences, such as someone actively adventuring." };
-            yield return new TextBlock { Id = Guid.Parse("279570b1-5324-4be5-9442-d7bd5dc3ff58"), Type = TextBlockType.Text, Text = "You learn a single enigmatic word connected to the creature’s fate in that time frame. Fate is notoriously inscrutable, and the word isn’t necessarily meant to be taken at face value, so the meaning is often clear only in hindsight. The GM rolls a secret DC 6 flat check. If the creature’s fate is too uncertain, or on a failed flat check, the spell yields the word “inconclusive.” Either way, the creature is then temporarily immune for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("e2c25e0c-9793-4fdd-a055-120cbf048ce1"), Type = TextBlockType.Text, Text = "You attempt to learn more about the target's fate in the short term, usually within the next day for most prosaic creatures, or the next hour or less for someone likely to have multiple rapid experiences, such as someone actively adventuring." };
+            yield return new TextBlock { Id = Guid.Parse("279570b1-5324-4be5-9442-d7bd5dc3ff58"), Type = TextBlockType.Text, Text = "You learn a single enigmatic word connected to the creature's fate in that time frame. Fate is notoriously inscrutable, and the word isn't necessarily meant to be taken at face value, so the meaning is often clear only in hindsight. The GM rolls a secret DC 6 flat check. If the creature's fate is too uncertain, or on a failed flat check, the spell yields the word “inconclusive.” Either way, the creature is then temporarily immune for 24 hours." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

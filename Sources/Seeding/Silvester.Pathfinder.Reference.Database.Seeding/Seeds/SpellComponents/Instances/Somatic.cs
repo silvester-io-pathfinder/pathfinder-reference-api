@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SpellComponents.
             {
                 Id = ID,
                 Name = "Somatic",
-                Description = "A somatic component is a specific hand movement or gesture that generates a magical nexus.The spell gains the manipulate trait and requires you to make gestures.You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely. Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target(even if it’s through a glove or gauntlet)."
+                Description = "A somatic component is a specific hand movement or gesture that generates a magical nexus.The spell gains the manipulate trait and requires you to make gestures.You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely. Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target(even if it's through a glove or gauntlet)."
             };
         }
     }

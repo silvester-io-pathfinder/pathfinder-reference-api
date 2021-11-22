@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c32b4542-9a7e-4858-99c4-e1f84c1d1e50"), Type = TextBlockType.Text, Text = "You are evidence that it’s lucky to travel with a halfling. You can use (feat: Halfling Luck) when an ally within 30 feet fails a skill check or a saving throw to allow the ally to reroll the triggering check instead of you rerolling your own failed check. As usual, your ally must use the new result, even if it’s worse than their first roll. If you have (feat: Guiding Luck), you can’t use (feat: Guiding Luck)’s effect that applies to attack rolls and Perception checks to use Shared Luck to benefit an ally." };
+            yield return new TextBlock { Id = Guid.Parse("c32b4542-9a7e-4858-99c4-e1f84c1d1e50"), Type = TextBlockType.Text, Text = "You are evidence that it's lucky to travel with a halfling. You can use (feat: Halfling Luck) when an ally within 30 feet fails a skill check or a saving throw to allow the ally to reroll the triggering check instead of you rerolling your own failed check. As usual, your ally must use the new result, even if it's worse than their first roll. If you have (feat: Guiding Luck), you can't use (feat: Guiding Luck)'s effect that applies to attack rolls and Perception checks to use Shared Luck to benefit an ally." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

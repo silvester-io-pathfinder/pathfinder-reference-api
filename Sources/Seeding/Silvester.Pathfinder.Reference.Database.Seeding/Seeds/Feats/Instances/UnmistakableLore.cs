@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("dfee3c8c-1b6f-4c15-9487-5dd3e4eb1cef"), Type = TextBlockType.Text, Text = "You never get information about your areas of expertise wrong." };
-            yield return new TextBlock { Id = Guid.Parse("d71e789a-943d-4936-8905-92bb660ec95f"), Type = TextBlockType.Text, Text = "When you (action: Recall Knowledge) using any Lore subcategory in which you’re trained, if you roll a critical failure, you get a failure instead. If you’re a master in a Lore subcategory, on a critical success, you gain even more information or context than usual." };
+            yield return new TextBlock { Id = Guid.Parse("d71e789a-943d-4936-8905-92bb660ec95f"), Type = TextBlockType.Text, Text = "When you (action: Recall Knowledge) using any Lore subcategory in which you're trained, if you roll a critical failure, you get a failure instead. If you're a master in a Lore subcategory, on a critical success, you gain even more information or context than usual." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("372e837e-7254-4072-9808-0f6d26b5e784"), Type = TextBlockType.Text, Text = "You use bulky firearms or crossbows to shield your body from your foes’ attacks. Any two-handed firearms and two-handed crossbows you wield gain the (trait: parry) trait. If an appropriate weapon already has the (trait: parry) trait, increase the circumstance bonus to AC it grants when used to parry from +1 to +2." };
+            yield return new TextBlock { Id = Guid.Parse("372e837e-7254-4072-9808-0f6d26b5e784"), Type = TextBlockType.Text, Text = "You use bulky firearms or crossbows to shield your body from your foes' attacks. Any two-handed firearms and two-handed crossbows you wield gain the (trait: parry) trait. If an appropriate weapon already has the (trait: parry) trait, increase the circumstance bonus to AC it grants when used to parry from +1 to +2." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

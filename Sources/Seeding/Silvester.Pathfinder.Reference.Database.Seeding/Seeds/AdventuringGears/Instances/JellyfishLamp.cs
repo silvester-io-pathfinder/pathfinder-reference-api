@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AdventuringGears
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("f0ddbeaf-7171-4f19-9897-745d636ecd50"), Type = TextBlockType.Text, Text = "These bioluminescent jellyfish are as bright as candles, come in a variety of colors, and can act as living lanterns. They dry up and die if removed from the water for more than 1 hour, but as long as they’re allowed access to seawater, they can usually survive for up to 1 year by feeding on micronutrients. Rarely, a well-treated jellyfish lamp might live longer and potentially develop stronger light or additional abilities." };
+            yield return new TextBlock { Id = Guid.Parse("f0ddbeaf-7171-4f19-9897-745d636ecd50"), Type = TextBlockType.Text, Text = "These bioluminescent jellyfish are as bright as candles, come in a variety of colors, and can act as living lanterns. They dry up and die if removed from the water for more than 1 hour, but as long as they're allowed access to seawater, they can usually survive for up to 1 year by feeding on micronutrients. Rarely, a well-treated jellyfish lamp might live longer and potentially develop stronger light or additional abilities." };
         }
 
         protected override SourcePage GetSourcePage()

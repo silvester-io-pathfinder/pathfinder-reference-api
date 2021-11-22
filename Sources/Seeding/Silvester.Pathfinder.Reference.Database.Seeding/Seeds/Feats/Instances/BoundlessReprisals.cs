@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("97544a3e-5e2b-4e8b-92f9-be42e9dca11d"), Type = TextBlockType.Text, Text = "With a sixth sense for the flow of combat, you can quickly react to any situation as required. At the start of each enemy’s turn, you gain a reaction you can use only during that turn." };
+            yield return new TextBlock { Id = Guid.Parse("97544a3e-5e2b-4e8b-92f9-be42e9dca11d"), Type = TextBlockType.Text, Text = "With a sixth sense for the flow of combat, you can quickly react to any situation as required. At the start of each enemy's turn, you gain a reaction you can use only during that turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

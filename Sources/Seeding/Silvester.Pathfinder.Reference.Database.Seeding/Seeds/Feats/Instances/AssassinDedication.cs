@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("02c071ad-2304-456a-a03c-72350c3602c0"), Type = TextBlockType.Text, Text = "You’ve trained to assassinate your foes, and you do so with tenacity and precision. You gain the (feat: Mark for Death) activity." };
+            yield return new TextBlock { Id = Guid.Parse("02c071ad-2304-456a-a03c-72350c3602c0"), Type = TextBlockType.Text, Text = "You've trained to assassinate your foes, and you do so with tenacity and precision. You gain the (feat: Mark for Death) activity." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

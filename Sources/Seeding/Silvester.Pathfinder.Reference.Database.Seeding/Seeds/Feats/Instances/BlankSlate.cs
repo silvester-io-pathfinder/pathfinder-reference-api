@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("72639bf6-d3aa-4456-9977-46af055bc2b0"), Type = TextBlockType.Text, Text = "Your deceptions confound even the most powerful mortal divinations. (trait: Detection), (trait: revelation), and (trait: scrying) effects pass right over you, your possessions, and your auras, detecting nothing unless the detecting effect has a counteract level of 10 or higher. For example, (spell: detect magic) would still detect other magic in the area but not any magic on you, (spell: true seeing) wouldn’t reveal you, locate or scrying wouldn’t find you, and so on." };
+            yield return new TextBlock { Id = Guid.Parse("72639bf6-d3aa-4456-9977-46af055bc2b0"), Type = TextBlockType.Text, Text = "Your deceptions confound even the most powerful mortal divinations. (trait: Detection), (trait: revelation), and (trait: scrying) effects pass right over you, your possessions, and your auras, detecting nothing unless the detecting effect has a counteract level of 10 or higher. For example, (spell: detect magic) would still detect other magic in the area but not any magic on you, (spell: true seeing) wouldn't reveal you, locate or scrying wouldn't find you, and so on." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

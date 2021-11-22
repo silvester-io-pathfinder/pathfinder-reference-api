@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Ranseur",
-                Description = "This polearm is a long trident with a central prong that’s longer than the other two.",
+                Description = "This polearm is a long trident with a central prong that's longer than the other two.",
                 Price = 200,
                 Damage = "1d10",
                 Hands = "2",

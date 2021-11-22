@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6cc4f6da-77af-4375-b14c-fbf90f2deb88"), Type = TextBlockType.Text, Text = "When you create an herbal elixir, you can prepare it as a poultice instead. A poultice gains the (trait: oil) trait (but remains (trait: alchemical), not (trait: magical)) and loses the (trait: elixir) and (trait: ingested) traits. You can apply a poultice by (action: Interacting | Interact) with one hand. When you apply a poultice, in addition to the item’s normal effects, the recipient can attempt an immediate flat check to recover from a single source of persistent acid, bleed, or fire damage, with the DC reduction from appropriate assistance." };
+            yield return new TextBlock { Id = Guid.Parse("6cc4f6da-77af-4375-b14c-fbf90f2deb88"), Type = TextBlockType.Text, Text = "When you create an herbal elixir, you can prepare it as a poultice instead. A poultice gains the (trait: oil) trait (but remains (trait: alchemical), not (trait: magical)) and loses the (trait: elixir) and (trait: ingested) traits. You can apply a poultice by (action: Interacting | Interact) with one hand. When you apply a poultice, in addition to the item's normal effects, the recipient can attempt an immediate flat check to recover from a single source of persistent acid, bleed, or fire damage, with the DC reduction from appropriate assistance." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

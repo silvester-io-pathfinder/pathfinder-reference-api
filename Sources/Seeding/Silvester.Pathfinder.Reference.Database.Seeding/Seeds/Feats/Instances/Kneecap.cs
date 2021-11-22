@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f402f2a7-52f4-4940-98b3-632a99b5fb17"), Type = TextBlockType.Text, Text = "You deliver a punishing blow to an enemy’s knee, shin, or other vulnerable anatomy within your reach. Make a (action: Strike) with one of your melee weapons or melee unarmed attacks. This attack doesn’t deal damage. On a hit, the target takes a -10-foot status penalty to its Speed or a -15-foot status penalty on a critical hit. This penalty applies only if the target has a land Speed and depends on legs or other targetable appendages to use its land Speed. As with all penalties to Speed, this can’t reduce a creature’s Speed below 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("f402f2a7-52f4-4940-98b3-632a99b5fb17"), Type = TextBlockType.Text, Text = "You deliver a punishing blow to an enemy's knee, shin, or other vulnerable anatomy within your reach. Make a (action: Strike) with one of your melee weapons or melee unarmed attacks. This attack doesn't deal damage. On a hit, the target takes a -10-foot status penalty to its Speed or a -15-foot status penalty on a critical hit. This penalty applies only if the target has a land Speed and depends on legs or other targetable appendages to use its land Speed. As with all penalties to Speed, this can't reduce a creature's Speed below 5 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

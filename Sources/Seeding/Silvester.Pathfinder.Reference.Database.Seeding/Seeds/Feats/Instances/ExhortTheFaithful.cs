@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("39a7bb63-244b-4104-8471-5e7888e1bb07"), Type = TextBlockType.Text, Text = "Your knowledge of the tenets of your faith gives you insight into the best ways to get others of your faith to help you or to follow your directions. When you (action: Request) something of or (action: Coerce) members of your own faith, you can attempt a Religion check instead of Diplomacy or Intimidation, and you gain a +2 circumstance bonus to the check. On a critically failed attempt to make a (action: Request), the target’s attitude toward you doesn’t worsen." };
+            yield return new TextBlock { Id = Guid.Parse("39a7bb63-244b-4104-8471-5e7888e1bb07"), Type = TextBlockType.Text, Text = "Your knowledge of the tenets of your faith gives you insight into the best ways to get others of your faith to help you or to follow your directions. When you (action: Request) something of or (action: Coerce) members of your own faith, you can attempt a Religion check instead of Diplomacy or Intimidation, and you gain a +2 circumstance bonus to the check. On a critically failed attempt to make a (action: Request), the target's attitude toward you doesn't worsen." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

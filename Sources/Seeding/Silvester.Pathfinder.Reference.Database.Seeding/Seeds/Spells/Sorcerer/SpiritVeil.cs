@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ef9423d2-c839-4814-b506-116eb6459bfe"), Type = TextBlockType.Text, Text = "You draw an occluding veil of spirits around yourself, blocking yourself especially well from undead eyes. You become concealed to all creatures, and you are hidden from undead creatures regardless of what precise senses they have; this grants the effects of invisibility, but against all the undead creature’s precise senses. If you physically interact with an undead creature or use a hostile action, the spell ends." };
+            yield return new TextBlock { Id = Guid.Parse("ef9423d2-c839-4814-b506-116eb6459bfe"), Type = TextBlockType.Text, Text = "You draw an occluding veil of spirits around yourself, blocking yourself especially well from undead eyes. You become concealed to all creatures, and you are hidden from undead creatures regardless of what precise senses they have; this grants the effects of invisibility, but against all the undead creature's precise senses. If you physically interact with an undead creature or use a hostile action, the spell ends." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

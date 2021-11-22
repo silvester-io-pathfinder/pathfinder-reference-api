@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Artifacts.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("06dc3b48-0a47-4205-b8cf-ca57d93219d2"), Type = TextBlockType.Text, Text = "This stone tablet is carved with the symbol of a five-branched twig. There are only a limited number of elder signs, and each time one is destroyed, the universe’s doom creeps inexorably closer. Reciting one of three different occult mantras (DC 20 Occultism check to do so correctly) allows three different activations. All three abilities work only on a creature connected to the Elder Mythos or a cosmic horror, such as a wendigo or gug; the activations refer to them as “eldritch creatures.”" };
+            yield return new TextBlock { Id = Guid.Parse("06dc3b48-0a47-4205-b8cf-ca57d93219d2"), Type = TextBlockType.Text, Text = "This stone tablet is carved with the symbol of a five-branched twig. There are only a limited number of elder signs, and each time one is destroyed, the universe's doom creeps inexorably closer. Reciting one of three different occult mantras (DC 20 Occultism check to do so correctly) allows three different activations. All three abilities work only on a creature connected to the Elder Mythos or a cosmic horror, such as a wendigo or gug; the activations refer to them as “eldritch creatures.”" };
         }
 
         protected override IEnumerable<ArtifactAction> GetActions()
@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Artifacts.Instan
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 Effects = new[]
                 {
-                    new TextBlock { Id = Guid.Parse("650c5752-e8e3-4737-a190-1a37baebbfe8"), Type = TextBlockType.Text, Text = "The elder sign casts a 10th-level banishment spell on an eldritch creature. Even if the creature isn’t extraplanar, the elder sign can still banish it, sending it back to the part of the Material Plane from which it originated. If the creature is a Great Old One, the elder sign banishes it automatically (as if it critically failed its save) but is then forever destroyed." }
+                    new TextBlock { Id = Guid.Parse("650c5752-e8e3-4737-a190-1a37baebbfe8"), Type = TextBlockType.Text, Text = "The elder sign casts a 10th-level banishment spell on an eldritch creature. Even if the creature isn't extraplanar, the elder sign can still banish it, sending it back to the part of the Material Plane from which it originated. If the creature is a Great Old One, the elder sign banishes it automatically (as if it critically failed its save) but is then forever destroyed." }
                 }
             };
 

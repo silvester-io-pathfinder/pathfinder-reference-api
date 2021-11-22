@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bf76e2ca-207d-4e78-ad16-d9d453b7e362"), Type = TextBlockType.Text, Text = "You are the child of a night hag, making one of your eyes violet or even black. Your mother&#39;s powers over sleep and dreams have given you a degree of resistance to those effects, granting you a +2 circumstance bonus to all saving throws against (trait: sleep) effects and effects that cause or alter dreams." };
+            yield return new TextBlock { Id = Guid.Parse("bf76e2ca-207d-4e78-ad16-d9d453b7e362"), Type = TextBlockType.Text, Text = "You are the child of a night hag, making one of your eyes violet or even black. Your mother's powers over sleep and dreams have given you a degree of resistance to those effects, granting you a +2 circumstance bonus to all saving throws against (trait: sleep) effects and effects that cause or alter dreams." };
             yield return new TextBlock { Id = Guid.Parse("8f6afd37-d7df-4191-97cd-c583306e4eeb"), Type = TextBlockType.Text, Text = "In addition, sleep is more restorative for you. You regain HP equal to your Constitution modifier times double your level instead of just times your level, and you reduce any drained and doomed conditions you have by 2 instead of by 1." };
         }
 

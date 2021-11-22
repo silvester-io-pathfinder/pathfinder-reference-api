@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("3a263321-e27f-450a-aef3-abaefb818258"), Type = TextBlockType.Text, Text = "~ Access: You are an automaton or are otherwise from the ancient Jistka Imperium." };
-            yield return new TextBlock { Id = Guid.Parse("72a8cb0d-52b4-4d0a-ac1e-ff9e80aff6a5"), Type = TextBlockType.Text, Text = "You’ve learned the secrets of Jistkan golem prostheses, allowing you to incorporate golem components into your dynamo and gain a portion of their magic. You gain a +1 status bonus to saving throws against magic, and your dynamo (action: Strikes | Strike) become (trait: magical)." };
+            yield return new TextBlock { Id = Guid.Parse("72a8cb0d-52b4-4d0a-ac1e-ff9e80aff6a5"), Type = TextBlockType.Text, Text = "You've learned the secrets of Jistkan golem prostheses, allowing you to incorporate golem components into your dynamo and gain a portion of their magic. You gain a +1 status bonus to saving throws against magic, and your dynamo (action: Strikes | Strike) become (trait: magical)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

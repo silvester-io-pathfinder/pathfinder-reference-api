@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d169ac05-8bcb-48b5-992b-0b7a95b8f538"), Type = TextBlockType.Text, Text = "You’re a treasure trove of information, but not all of it comes from reputable sources. When you fail (but not critically fail) a (action: Recall Knowledge) check using any skill, you learn a bit of true knowledge and a bit of erroneous knowledge, but you don’t have any way to differentiate which is which." };
+            yield return new TextBlock { Id = Guid.Parse("d169ac05-8bcb-48b5-992b-0b7a95b8f538"), Type = TextBlockType.Text, Text = "You're a treasure trove of information, but not all of it comes from reputable sources. When you fail (but not critically fail) a (action: Recall Knowledge) check using any skill, you learn a bit of true knowledge and a bit of erroneous knowledge, but you don't have any way to differentiate which is which." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

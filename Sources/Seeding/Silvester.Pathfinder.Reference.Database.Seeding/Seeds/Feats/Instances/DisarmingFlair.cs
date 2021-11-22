@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("46f62602-52a7-485a-9ec4-abdd1545322c"), Type = TextBlockType.Text, Text = "It’s harder for your foes to regain their grip when you knock their weapon partially out of their hands. When you succeed at an Athletics check to (action: Disarm), the circumstance bonus and penalty from (action: Disarm) last until the end of your next turn, instead of until the beginning of the target’s next turn. The target can use an (action: Interact) action to adjust their grip and remove this effect. If your swashbuckler’s style is gymnast and you succeed at your Athletics check to (action: Disarm) a foe, you gain panache." };
+            yield return new TextBlock { Id = Guid.Parse("46f62602-52a7-485a-9ec4-abdd1545322c"), Type = TextBlockType.Text, Text = "It's harder for your foes to regain their grip when you knock their weapon partially out of their hands. When you succeed at an Athletics check to (action: Disarm), the circumstance bonus and penalty from (action: Disarm) last until the end of your next turn, instead of until the beginning of the target's next turn. The target can use an (action: Interact) action to adjust their grip and remove this effect. If your swashbuckler's style is gymnast and you succeed at your Athletics check to (action: Disarm) a foe, you gain panache." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

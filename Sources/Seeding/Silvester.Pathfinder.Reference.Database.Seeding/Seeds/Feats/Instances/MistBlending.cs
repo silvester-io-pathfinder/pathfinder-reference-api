@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("23a9abd3-9f6e-4aaf-926d-1e1df935f866"), Type = TextBlockType.Text, Text = "You shroud yourself in mist, making it harder for your foe to hit you. If you’re concealed, the DC of the flat check increases from 5 to 7; if you’re hidden, it increases from 11 to 13." };
+            yield return new TextBlock { Id = Guid.Parse("23a9abd3-9f6e-4aaf-926d-1e1df935f866"), Type = TextBlockType.Text, Text = "You shroud yourself in mist, making it harder for your foe to hit you. If you're concealed, the DC of the flat check increases from 5 to 7; if you're hidden, it increases from 11 to 13." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

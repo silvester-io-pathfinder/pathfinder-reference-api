@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c9b2cb2-67b0-4a5a-be27-5930358a0de4"), Type = TextBlockType.Text, Text = "Make a (action: Strike) against the creature that triggered your champion’s reaction. If you hit, the target takes double the extra damage from your reaction and must succeed at a Fortitude save against your class DC or be drained 1. Regardless of the result, the creature is temporarily immune to your Gruesome Strike for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("2c9b2cb2-67b0-4a5a-be27-5930358a0de4"), Type = TextBlockType.Text, Text = "Make a (action: Strike) against the creature that triggered your champion's reaction. If you hit, the target takes double the extra damage from your reaction and must succeed at a Fortitude save against your class DC or be drained 1. Regardless of the result, the creature is temporarily immune to your Gruesome Strike for 24 hours." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

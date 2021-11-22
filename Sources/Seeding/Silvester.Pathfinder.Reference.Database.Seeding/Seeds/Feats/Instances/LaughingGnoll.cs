@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9b1f8109-2079-429c-b6e5-b40e2e353506"), Type = TextBlockType.Text, Text = "A gnoll’s sinister giggle is a sound of warning and threat. You gain the (feat: Battle Cry) skill feat. You don’t take a penalty when you attempt to (action: Demoralize) a creature that doesn’t understand your language." };
+            yield return new TextBlock { Id = Guid.Parse("9b1f8109-2079-429c-b6e5-b40e2e353506"), Type = TextBlockType.Text, Text = "A gnoll's sinister giggle is a sound of warning and threat. You gain the (feat: Battle Cry) skill feat. You don't take a penalty when you attempt to (action: Demoralize) a creature that doesn't understand your language." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

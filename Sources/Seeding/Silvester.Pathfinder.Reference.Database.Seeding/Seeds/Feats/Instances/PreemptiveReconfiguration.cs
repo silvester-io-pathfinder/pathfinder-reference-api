@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("7d3e29d7-9093-4c5b-bd1c-0d5aa252d903"), Type = TextBlockType.Text, Text = "Your body anticipates the blow. The impact area briefly reorganizes into a strengthened tissue lattice that blunts the attack. You gain resistance equal to your level to the triggering damage type, which applies against the triggering damage." };
-            yield return new TextBlock { Id = Guid.Parse("fae0fbb6-3461-4727-91af-a6d99279e270"), Type = TextBlockType.Text, Text = "If you have the (feat: Crystalline Dust) feat, you can use Preemptive Reconfiguration without expending a usage of the reaction for the purpose of the feat’s Frequency limit. Instead, the usage counts toward your number of (feat: Crystalline Dust) uses per day, as if you had used that feat instead." };
+            yield return new TextBlock { Id = Guid.Parse("fae0fbb6-3461-4727-91af-a6d99279e270"), Type = TextBlockType.Text, Text = "If you have the (feat: Crystalline Dust) feat, you can use Preemptive Reconfiguration without expending a usage of the reaction for the purpose of the feat's Frequency limit. Instead, the usage counts toward your number of (feat: Crystalline Dust) uses per day, as if you had used that feat instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

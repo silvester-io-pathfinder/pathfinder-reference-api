@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("733eb9b6-2251-4e72-98e7-8512f957c1dd"), Type = TextBlockType.Text, Text = "Whenever you critically hit using (item: flails | Flail), (item: khopeshes | Khopesh), (item: mambeles | Mambele), (item: spears | Spear), and (item: war flails | War Flail), you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("733eb9b6-2251-4e72-98e7-8512f957c1dd"), Type = TextBlockType.Text, Text = "Whenever you critically hit using (item: flails | Flail), (item: khopeshes | Khopesh), (item: mambeles | Mambele), (item: spears | Spear), and (item: war flails | War Flail), you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

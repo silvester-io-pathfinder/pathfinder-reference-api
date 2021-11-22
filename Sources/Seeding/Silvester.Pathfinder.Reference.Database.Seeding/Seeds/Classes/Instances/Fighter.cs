@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
                 DuringCombatEncounters = "You strike with unmatched accuracy and use specialized combat techniques. A melee fighter stands between allies and enemies, attacking foes who try to get past. A ranged fighter delivers precise shots from a distance.",
                 DuringSocialEncounters = "You can be an intimidating presence. This can be useful when negotiating with enemies, but is sometimes a liability in more genteel interactions.",
                 WhileExploring = "You keep up your defenses in preparation for combat, and keep an eye out for hidden threats. You also overcome physical challenges in your way, breaking down doors, lifting obstacles, climbing adeptly, and leaping across pits.",
-                InDowntime = "You might perform manual labor or craft and repair armaments. If you know techniques you no longer favor, you might train yourself in new ones. If you’ve established your reputation, you might build an organization or a stronghold of your own.",
+                InDowntime = "You might perform manual labor or craft and repair armaments. If you know techniques you no longer favor, you might train yourself in new ones. If you've established your reputation, you might build an organization or a stronghold of your own.",
 
                 ClassDcProficiencyId = Proficiencies.Instances.Trained.ID,
                 PerceptionProficiencyId = Proficiencies.Instances.Expert.ID,
@@ -49,14 +49,14 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
         protected override IEnumerable<ClassMannerism> GetMannerisms()
         {
             yield return new ClassMannerism { Id = Guid.Parse("c65bfa42-aaad-401e-a6ad-2fa61272635d"), Text = "Know the purpose and quality of every weapon and piece of armor you own." };
-            yield return new ClassMannerism { Id = Guid.Parse("0ddc24b5-5b32-433f-9468-1e07d0c05483"), Text = "Recognize that the danger of an adventurer’s life must be balanced out with great revelry or ambitious works." };
+            yield return new ClassMannerism { Id = Guid.Parse("0ddc24b5-5b32-433f-9468-1e07d0c05483"), Text = "Recognize that the danger of an adventurer's life must be balanced out with great revelry or ambitious works." };
             yield return new ClassMannerism { Id = Guid.Parse("e0e2f9fc-a9d3-4d41-be08-999ba0878101"), Text = "Have little patience for puzzles or problems that require detailed logic or study." };
         }
 
         protected override IEnumerable<ClassCharacteristic> GetCharacteristics()
         {
             yield return new ClassCharacteristic { Id = Guid.Parse("34c4e6c1-937c-475e-ba53-bdfcdd4d6d0d"), Text = "Find you intimidating until they get to know you, and maybe even after they get to know you." };
-            yield return new ClassCharacteristic { Id = Guid.Parse("fe9a7547-e4df-455a-a33c-00634db55fde"), Text = "Expect you’re all brawn and no brains." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("fe9a7547-e4df-455a-a33c-00634db55fde"), Text = "Expect you're all brawn and no brains." };
             yield return new ClassCharacteristic { Id = Guid.Parse("29d18b56-1b93-456b-9a0e-a0189bd86dbf"), Text = "Respect your expertise in the art of warfare and value your opinion on the quality of armaments." };
         }
 

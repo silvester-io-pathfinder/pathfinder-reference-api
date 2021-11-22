@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6d528992-e963-42bf-bed9-a09903b64d67"), Type = TextBlockType.Text, Text = "You curse the target with your outrage at being attacked. The effect is determined by the target’s Will save." };
+            yield return new TextBlock { Id = Guid.Parse("6d528992-e963-42bf-bed9-a09903b64d67"), Type = TextBlockType.Text, Text = "You curse the target with your outrage at being attacked. The effect is determined by the target's Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -39,9 +39,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("5bacd27a-8198-40b0-bc38-b183a2e7c0f4"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target can’t observe you until the end of its turn, and if you’re currently observed by it, you become hidden to it.",
-                Failure = "As success, and for 1 minute, every time the target damages you, it can’t observe you until the end of its turn.",
-                CriticalFailure = "As success, and for an unlimited duration, the first time each round the target damages a creature, it can’t observe that creature until the end of its turn. If it damages several creatures at once, the creature it can’t perceive is chosen randomly among those creatures."
+                Success = "The target can't observe you until the end of its turn, and if you're currently observed by it, you become hidden to it.",
+                Failure = "As success, and for 1 minute, every time the target damages you, it can't observe you until the end of its turn.",
+                CriticalFailure = "As success, and for an unlimited duration, the first time each round the target damages a creature, it can't observe that creature until the end of its turn. If it damages several creatures at once, the creature it can't perceive is chosen randomly among those creatures."
             };
         }
 

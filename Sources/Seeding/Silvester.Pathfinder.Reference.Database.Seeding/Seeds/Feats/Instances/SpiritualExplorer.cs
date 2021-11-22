@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c1243740-0be6-430f-83d9-9da8b83bd636"), Type = TextBlockType.Text, Text = "You&#39;re familiar with the danger that lingering spirits can pose to an unwary adventurer, and you&#39;re particularly attuned to their presence. Even if you aren&#39;t (action: Searching | Search) in exploration mode, you can attempt a check to find haunts that normally require you to (action: Search) for them. You still need to meet any other requirements to find a particular haunt." };
+            yield return new TextBlock { Id = Guid.Parse("c1243740-0be6-430f-83d9-9da8b83bd636"), Type = TextBlockType.Text, Text = "You're familiar with the danger that lingering spirits can pose to an unwary adventurer, and you're particularly attuned to their presence. Even if you aren't (action: Searching | Search) in exploration mode, you can attempt a check to find haunts that normally require you to (action: Search) for them. You still need to meet any other requirements to find a particular haunt." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

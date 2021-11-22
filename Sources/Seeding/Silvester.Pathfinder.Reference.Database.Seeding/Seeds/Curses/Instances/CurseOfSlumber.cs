@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Curses.Instances
                 Name = "Curse of Slumber",
                 DifficultyCheck = 28,
                 SavingThrowStatId = Fortitude.ID,
-                Effect = "You fall asleep for 1 round (or permanently on a critical failure) and seem to be dead; a creature must succeed at a DC 30 Medicine check to realize you are alive. Noise doesn’t awaken you, but taking damage gives you a new saving throw against the curse."
+                Effect = "You fall asleep for 1 round (or permanently on a critical failure) and seem to be dead; a creature must succeed at a DC 30 Medicine check to realize you are alive. Noise doesn't awaken you, but taking damage gives you a new saving throw against the curse."
             };
         }
 

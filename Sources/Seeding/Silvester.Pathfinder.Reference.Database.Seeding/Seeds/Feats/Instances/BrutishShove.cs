@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c3cf5ae8-8aeb-4265-9c75-4084521954e4"), Type = TextBlockType.Text, Text = "Throwing your weight behind your attack, you hit your opponent hard enough to make it stumble back. Make a (Action: Strike) with a two-handed melee weapon. If you hit a target that is your size or smaller, that creature is flat-footed until the end of your current turn, and you can automatically (Action: Shove) it, with the same benefits as the (Action: Shove) action (including the critical success effect, if your (Action: Strike) was a critical hit). If you move to follow the target, your movement doesn’t trigger reactions." };
+            yield return new TextBlock { Id = Guid.Parse("c3cf5ae8-8aeb-4265-9c75-4084521954e4"), Type = TextBlockType.Text, Text = "Throwing your weight behind your attack, you hit your opponent hard enough to make it stumble back. Make a (Action: Strike) with a two-handed melee weapon. If you hit a target that is your size or smaller, that creature is flat-footed until the end of your current turn, and you can automatically (Action: Shove) it, with the same benefits as the (Action: Shove) action (including the critical success effect, if your (Action: Strike) was a critical hit). If you move to follow the target, your movement doesn't trigger reactions." };
             yield return new TextBlock { Id = Guid.Parse("6ede90ce-f7ac-4b0c-a8b3-98168aa0a3d6"), Type = TextBlockType.Text, Text = "This (Action: Strike) has the following failure effect." };
         }
 

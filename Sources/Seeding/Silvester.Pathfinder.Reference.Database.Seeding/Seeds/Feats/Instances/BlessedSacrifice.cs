@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("73f35379-82e0-499f-b1b3-4f9c61f28c06"), Type = TextBlockType.Text, Text = "You gain the (spell: protector’s sacrifice) domain spell as a devotion spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("73f35379-82e0-499f-b1b3-4f9c61f28c06"), Type = TextBlockType.Text, Text = "You gain the (spell: protector's sacrifice) domain spell as a devotion spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

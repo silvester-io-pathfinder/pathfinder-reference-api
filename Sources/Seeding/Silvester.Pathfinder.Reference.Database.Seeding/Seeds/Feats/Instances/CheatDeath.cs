@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ebfe3ead-534e-4645-8586-c10a9b2147b2"), Type = TextBlockType.Text, Text = "Somehow you always escape the reaper by a hair’s breadth. You avoid being knocked out or killed and remain at 1 Hit Point, but you become doomed 1 (or increase your doomed value by 1 if you were already doomed). You can’t reduce or ignore the doomed condition from Cheating Death. The doomed condition from Cheating Death lasts for 10 minutes, though this doesn’t affect the duration of any other doomed condition you have." };
+            yield return new TextBlock { Id = Guid.Parse("ebfe3ead-534e-4645-8586-c10a9b2147b2"), Type = TextBlockType.Text, Text = "Somehow you always escape the reaper by a hair's breadth. You avoid being knocked out or killed and remain at 1 Hit Point, but you become doomed 1 (or increase your doomed value by 1 if you were already doomed). You can't reduce or ignore the doomed condition from Cheating Death. The doomed condition from Cheating Death lasts for 10 minutes, though this doesn't affect the duration of any other doomed condition you have." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

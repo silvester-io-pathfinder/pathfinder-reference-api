@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e8413cbb-1f3a-4fd9-a4f5-a85904ae0072"), Type = TextBlockType.Text, Text = "When you successfully (Action: Steal) something, observers (creatures other than the creature you stole from) take a -2 circumstance penalty to their Perception DCs to detect your theft. Additionally, if you first (Action: Create a Diversion) using Deception, taking a single (Action: Palm an Object) or (Action: Steal) action doesn’t end your undetected condition." };
+            yield return new TextBlock { Id = Guid.Parse("e8413cbb-1f3a-4fd9-a4f5-a85904ae0072"), Type = TextBlockType.Text, Text = "When you successfully (Action: Steal) something, observers (creatures other than the creature you stole from) take a -2 circumstance penalty to their Perception DCs to detect your theft. Additionally, if you first (Action: Create a Diversion) using Deception, taking a single (Action: Palm an Object) or (Action: Steal) action doesn't end your undetected condition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

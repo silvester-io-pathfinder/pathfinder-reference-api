@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("345724d0-1b40-44c3-82f1-894cfd8f3fbb"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target becomes sickened 1. Reducing its sickened condition to 0 ends the curse.",
-                Failure = "The target becomes sickened 1 and can’t reduce its sickened condition below 1 while the curse remains. The curse can be lifted by remove curse or similar magic. Whenever the target is sickened and on the water at least a mile from shore, it is also slowed 1.",
+                Failure = "The target becomes sickened 1 and can't reduce its sickened condition below 1 while the curse remains. The curse can be lifted by remove curse or similar magic. Whenever the target is sickened and on the water at least a mile from shore, it is also slowed 1.",
                 CriticalFailure = "As failure, but the target becomes sickened 2."
             };
         }

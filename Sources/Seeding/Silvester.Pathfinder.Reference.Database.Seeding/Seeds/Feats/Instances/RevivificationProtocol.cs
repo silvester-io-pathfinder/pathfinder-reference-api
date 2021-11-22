@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("256b2a14-867f-4435-83a1-867f1a029429"), Type = TextBlockType.Text, Text = "Your nanites are programmed to automatically revive you. You’re restored to 1 Hit Point, lose the dying and unconscious conditions, and can act normally on this turn. You gain or increase the wounded condition as normal when losing the dying condition in this way." };
+            yield return new TextBlock { Id = Guid.Parse("256b2a14-867f-4435-83a1-867f1a029429"), Type = TextBlockType.Text, Text = "Your nanites are programmed to automatically revive you. You're restored to 1 Hit Point, lose the dying and unconscious conditions, and can act normally on this turn. You gain or increase the wounded condition as normal when losing the dying condition in this way." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

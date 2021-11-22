@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("774af703-a05f-4922-9bd2-cfa0c7e1b1da"), Type = TextBlockType.Text, Text = "Your feathers are coated in a waxy substance that repels water. You gain a +1 circumstance bonus to saving throws against effects that have the (trait: water) trait. So long as you’re in a dry place, you can spend one action to shake off any water that clings to your clothing and feathers to instantly become dry." };
+            yield return new TextBlock { Id = Guid.Parse("774af703-a05f-4922-9bd2-cfa0c7e1b1da"), Type = TextBlockType.Text, Text = "Your feathers are coated in a waxy substance that repels water. You gain a +1 circumstance bonus to saving throws against effects that have the (trait: water) trait. So long as you're in a dry place, you can spend one action to shake off any water that clings to your clothing and feathers to instantly become dry." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

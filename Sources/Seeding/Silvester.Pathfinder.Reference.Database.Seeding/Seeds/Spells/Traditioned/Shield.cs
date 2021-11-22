@@ -25,9 +25,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d7ae1970-d90f-40bc-b317-91cfa5a47d9b"), Type = TextBlockType.Text, Text = "You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn’t require a hand to use." };
-            yield return new TextBlock { Id = Guid.Parse("84e52283-6dd1-4f39-ac80-e164f482011c"), Type = TextBlockType.Text, Text = "While the spell is in effect, you can use the Shield Block reaction with your magic shield (see the sidebar). The shield has Hardness 5. After you use Shield Block, the spell ends and you can’t cast it again for 10 minutes. Unlike a normal Shield Block, you can use the spell’s reaction against the magic missile spell." };
-            yield return new TextBlock { Id = Guid.Parse("73f02d3b-208c-4a58-857b-d6c2d7392a5a"), Type = TextBlockType.Text, Text = "Heightening the spell increases the shield’s Hardness." };
+            yield return new TextBlock { Id = Guid.Parse("d7ae1970-d90f-40bc-b317-91cfa5a47d9b"), Type = TextBlockType.Text, Text = "You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use." };
+            yield return new TextBlock { Id = Guid.Parse("84e52283-6dd1-4f39-ac80-e164f482011c"), Type = TextBlockType.Text, Text = "While the spell is in effect, you can use the Shield Block reaction with your magic shield (see the sidebar). The shield has Hardness 5. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes. Unlike a normal Shield Block, you can use the spell's reaction against the magic missile spell." };
+            yield return new TextBlock { Id = Guid.Parse("73f02d3b-208c-4a58-857b-d6c2d7392a5a"), Type = TextBlockType.Text, Text = "Heightening the spell increases the shield's Hardness." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -83,7 +83,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Trigger = "While you have your shield raised, you take damage from a physical attack.",
                 Effects = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("df0d18c1-f249-4472-93b2-0f3af69a97a3"), Type = TextBlockType.Text, Text = "You place your shield to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield’s Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield."},
+                    new TextBlock {Id = Guid.Parse("df0d18c1-f249-4472-93b2-0f3af69a97a3"), Type = TextBlockType.Text, Text = "You place your shield to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield."},
                 }
             };
         }

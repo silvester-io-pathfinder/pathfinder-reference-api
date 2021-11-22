@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cb65ae60-fa35-4dde-8c63-e79108cd5d24"), Type = TextBlockType.Text, Text = "Your shots zip around corners and fly at impossible angles to reach your target. Make a bow (action: Strike) against a foe you can see; the ammunition travels to your target, even around corners. You ignore the target’s concealed condition and all cover." };
+            yield return new TextBlock { Id = Guid.Parse("cb65ae60-fa35-4dde-8c63-e79108cd5d24"), Type = TextBlockType.Text, Text = "Your shots zip around corners and fly at impossible angles to reach your target. Make a bow (action: Strike) against a foe you can see; the ammunition travels to your target, even around corners. You ignore the target's concealed condition and all cover." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

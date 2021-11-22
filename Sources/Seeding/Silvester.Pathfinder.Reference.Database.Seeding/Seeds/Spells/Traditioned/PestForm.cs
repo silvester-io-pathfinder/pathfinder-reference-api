@@ -26,9 +26,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b1ded820-723a-4c52-9cc1-0d1848e6b67a"), Type = TextBlockType.Text, Text = "You transform into the battle form of a Tiny animal, such as a cat, insect, lizard, or rat. You can decide the specific type of animal (such as a rat or praying mantis), but this has no effect on the form’s Size or statistics. While in this form, you gain the animal trait. You can Dismiss the spell." };
+            yield return new TextBlock { Id = Guid.Parse("b1ded820-723a-4c52-9cc1-0d1848e6b67a"), Type = TextBlockType.Text, Text = "You transform into the battle form of a Tiny animal, such as a cat, insect, lizard, or rat. You can decide the specific type of animal (such as a rat or praying mantis), but this has no effect on the form's Size or statistics. While in this form, you gain the animal trait. You can Dismiss the spell." };
             yield return new TextBlock { Id = Guid.Parse("3d24d758-0043-4b4d-8106-595d9f5b64d0"), Type = TextBlockType.Text, Text = "You gain the following statistics and abilities:" };
-            yield return new TextBlock { Id = Guid.Parse("057a2488-2f2c-432f-b92d-231980372ac1"), Type = TextBlockType.Enumeration, Text = "AC = 15 + your level. Ignore your armor’s check penalty and Speed reduction." };
+            yield return new TextBlock { Id = Guid.Parse("057a2488-2f2c-432f-b92d-231980372ac1"), Type = TextBlockType.Enumeration, Text = "AC = 15 + your level. Ignore your armor's check penalty and Speed reduction." };
             yield return new TextBlock { Id = Guid.Parse("9775396d-bdd9-48bf-82a9-6a326928347f"), Type = TextBlockType.Enumeration, Text = "Speed 10 feet." };
             yield return new TextBlock { Id = Guid.Parse("8d8337ba-17e7-4a1a-b284-00ee075ee314"), Type = TextBlockType.Enumeration, Text = "Weakness 5 to physical damage. If you take physicaldamage in this form, you take 5 additional damage." };
             yield return new TextBlock { Id = Guid.Parse("0e61a117-937d-4044-a13c-648394a42871"), Type = TextBlockType.Enumeration, Text = "Low-light vision and imprecise scent 30 feet." };

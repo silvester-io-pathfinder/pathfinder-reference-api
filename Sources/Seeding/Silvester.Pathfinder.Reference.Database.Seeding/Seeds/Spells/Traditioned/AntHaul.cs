@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("82850481-04c2-4bbd-9b05-13956acaa0f0"), Type = Utilities.Text.TextBlockType.Text, Text = "You reinforce the target’s musculoskeletal system to bear more weight. The target can carry 3 more Bulk than normal before becoming encumbered and up to a maximum of 6 more Bulk." };
+            yield return new TextBlock { Id = Guid.Parse("82850481-04c2-4bbd-9b05-13956acaa0f0"), Type = Utilities.Text.TextBlockType.Text, Text = "You reinforce the target's musculoskeletal system to bear more weight. The target can carry 3 more Bulk than normal before becoming encumbered and up to a maximum of 6 more Bulk." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

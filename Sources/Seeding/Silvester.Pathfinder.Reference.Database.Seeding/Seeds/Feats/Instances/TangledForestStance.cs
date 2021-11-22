@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("94bb488e-3953-4fcb-8816-ebde11cfa3f7"), Type = TextBlockType.Text, Text = "You extend your arms like gnarled branches to interfere with your foes’ movements. You can make lashing branch unarmed attacks. These deal 1d8 slashing damage; are in the brawling group; and have the (trait: agile), (trait: finesse), (trait: nonlethal), and (trait: unarmed) traits." };
-            yield return new TextBlock { Id = Guid.Parse("e3c82334-cf11-466d-aee2-8ba0c976bd30"), Type = TextBlockType.Text, Text = "While you’re in Tangled Forest Stance and can act, every enemy in your reach that tries to move away from you must succeed at a Reflex save, Acrobatics check, or Athletics check against your class DC or be immobilized for that action. If you prefer, you can allow the enemy to move." };
+            yield return new TextBlock { Id = Guid.Parse("94bb488e-3953-4fcb-8816-ebde11cfa3f7"), Type = TextBlockType.Text, Text = "You extend your arms like gnarled branches to interfere with your foes' movements. You can make lashing branch unarmed attacks. These deal 1d8 slashing damage; are in the brawling group; and have the (trait: agile), (trait: finesse), (trait: nonlethal), and (trait: unarmed) traits." };
+            yield return new TextBlock { Id = Guid.Parse("e3c82334-cf11-466d-aee2-8ba0c976bd30"), Type = TextBlockType.Text, Text = "While you're in Tangled Forest Stance and can act, every enemy in your reach that tries to move away from you must succeed at a Reflex save, Acrobatics check, or Athletics check against your class DC or be immobilized for that action. If you prefer, you can allow the enemy to move." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

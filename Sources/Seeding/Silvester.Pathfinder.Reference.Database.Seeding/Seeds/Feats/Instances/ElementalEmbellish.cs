@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ca0281f2-03e7-4592-935b-203e5932693f"), Type = TextBlockType.Text, Text = "You can summon a harmless but impressive elemental display. You become trained in Intimidation. If you would automatically become trained in Intimidation (from your background or class, for example), you instead become trained in a skill of your choice. When you (action: Demoralize) a foe, if you choose to (action: Demoralize) via an elemental display, (action: Demoralize) loses the (trait: auditory) trait and gains the (trait: visual) trait, and you don’t take a penalty when you attempt to (action: Demoralize) a creature that doesn’t understand your language." };
+            yield return new TextBlock { Id = Guid.Parse("ca0281f2-03e7-4592-935b-203e5932693f"), Type = TextBlockType.Text, Text = "You can summon a harmless but impressive elemental display. You become trained in Intimidation. If you would automatically become trained in Intimidation (from your background or class, for example), you instead become trained in a skill of your choice. When you (action: Demoralize) a foe, if you choose to (action: Demoralize) via an elemental display, (action: Demoralize) loses the (trait: auditory) trait and gains the (trait: visual) trait, and you don't take a penalty when you attempt to (action: Demoralize) a creature that doesn't understand your language." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bf70187b-922a-48b9-8b02-26f10221e118"), Type = TextBlockType.Text, Text = "Making one’s way to safety can be harrowing, but you have extensive practice at helping others along that path. When you roll a success to (action: Aid) a member of your crop, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("bf70187b-922a-48b9-8b02-26f10221e118"), Type = TextBlockType.Text, Text = "Making one's way to safety can be harrowing, but you have extensive practice at helping others along that path. When you roll a success to (action: Aid) a member of your crop, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("03980dd2-8267-4faf-b851-8aa86af1bfbc"), Type = TextBlockType.Text, Text = "You have forged your body to comply with the commands of your mind – orders steeped in the Measure and the Chain. You gain expert proficiency in Intimidation (or in another skill in which you’re trained of your choice, if you were already an expert in Intimidation). You gain the armor specialization effects of Hellknight plate, and your resistance from that armor specialization is 1 higher than normal. In addition, you gain a +1 circumstance bonus to Intimidation checks while wearing your Hellknight plate." };
+            yield return new TextBlock { Id = Guid.Parse("03980dd2-8267-4faf-b851-8aa86af1bfbc"), Type = TextBlockType.Text, Text = "You have forged your body to comply with the commands of your mind – orders steeped in the Measure and the Chain. You gain expert proficiency in Intimidation (or in another skill in which you're trained of your choice, if you were already an expert in Intimidation). You gain the armor specialization effects of Hellknight plate, and your resistance from that armor specialization is 1 higher than normal. In addition, you gain a +1 circumstance bonus to Intimidation checks while wearing your Hellknight plate." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

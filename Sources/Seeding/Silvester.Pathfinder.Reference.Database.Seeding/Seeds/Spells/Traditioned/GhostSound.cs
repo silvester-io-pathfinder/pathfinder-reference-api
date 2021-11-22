@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("476eacdf-a8f5-4fd7-bbfd-e59f0cbafcfd"), Type = TextBlockType.Text, Text = "You create an auditory illusion of simple sounds that has a maximum volume equal to four normal humans shouting. The sounds emanate from a square you designate within range. You can’t create intelligible words or other intricate sounds (such as music)." };
+            yield return new TextBlock { Id = Guid.Parse("476eacdf-a8f5-4fd7-bbfd-e59f0cbafcfd"), Type = TextBlockType.Text, Text = "You create an auditory illusion of simple sounds that has a maximum volume equal to four normal humans shouting. The sounds emanate from a square you designate within range. You can't create intelligible words or other intricate sounds (such as music)." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

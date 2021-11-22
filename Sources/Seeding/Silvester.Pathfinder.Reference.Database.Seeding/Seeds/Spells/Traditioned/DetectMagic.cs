@@ -25,8 +25,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c254ca49-adf5-438e-bf37-13157c04912d"), Type = Utilities.Text.TextBlockType.Text, Text = "You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you’re fully aware of, such as the magic items and ongoing spells of you and your allies." };
-            yield return new TextBlock { Id = Guid.Parse("ba775672-2c5d-43a3-a002-e1214d439f7e"), Type = Utilities.Text.TextBlockType.Text, Text = "You detect illusion magic only if that magic’s effect has a lower level than the level of your detect magic spell. However, items that have an illusion aura but aren’t deceptive in appearance (such as an invisibility potion) typically are detected normally." };
+            yield return new TextBlock { Id = Guid.Parse("c254ca49-adf5-438e-bf37-13157c04912d"), Type = Utilities.Text.TextBlockType.Text, Text = "You send out a pulse that registers the presence of magic. You receive no information beyond the presence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies." };
+            yield return new TextBlock { Id = Guid.Parse("ba775672-2c5d-43a3-a002-e1214d439f7e"), Type = Utilities.Text.TextBlockType.Text, Text = "You detect illusion magic only if that magic's effect has a lower level than the level of your detect magic spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an invisibility potion) typically are detected normally." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("a1ef296a-a8d5-40bd-94cf-6d2ed7f47ebe"), Type = Utilities.Text.TextBlockType.Text, Text = "As 3rd level, but you also pinpoint the source of the highest-level magic. Like for an imprecise sense, you don’t learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that)." }
+                    new TextBlock { Id = Guid.Parse("a1ef296a-a8d5-40bd-94cf-6d2ed7f47ebe"), Type = Utilities.Text.TextBlockType.Text, Text = "As 3rd level, but you also pinpoint the source of the highest-level magic. Like for an imprecise sense, you don't learn the exact location, but can narrow down the source to within a 5-foot cube (or the nearest if larger than that)." }
                 }
             };
         }

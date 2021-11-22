@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("17965ba8-55ed-468e-aaa1-04f793753449"), Type = TextBlockType.Text, Text = "The target can understand all words regardless of language and also speak the languages of other creatures. When in a mixed group of creatures, each time the target speaks, it can choose a creature and speak in a language that creature understands, even if the target doesn’t know what language that is." };
+            yield return new TextBlock { Id = Guid.Parse("17965ba8-55ed-468e-aaa1-04f793753449"), Type = TextBlockType.Text, Text = "The target can understand all words regardless of language and also speak the languages of other creatures. When in a mixed group of creatures, each time the target speaks, it can choose a creature and speak in a language that creature understands, even if the target doesn't know what language that is." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

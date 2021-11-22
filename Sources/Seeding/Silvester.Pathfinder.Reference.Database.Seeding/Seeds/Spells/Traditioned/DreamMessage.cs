@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("14679c7d-85dc-480a-9f9f-c2287ea952e9"), Type = TextBlockType.Text, Text = "You send a message to your target’s dream. The message is one-way, up to 1 minute of speech (roughly 150 words). If the target is asleep, they receive the message instantly. If not, they receive it the next time they sleep. As soon as they receive it, the spell ends, and you know the message was sent." };
+            yield return new TextBlock { Id = Guid.Parse("14679c7d-85dc-480a-9f9f-c2287ea952e9"), Type = TextBlockType.Text, Text = "You send a message to your target's dream. The message is one-way, up to 1 minute of speech (roughly 150 words). If the target is asleep, they receive the message instantly. If not, they receive it the next time they sleep. As soon as they receive it, the spell ends, and you know the message was sent." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

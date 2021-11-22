@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ca0ff2c1-468d-44e9-abb8-643410446353"), Type = TextBlockType.Text, Text = "You change the target’s text to different text entirely. If the text is a spellbook or a scroll, you can change it to show a spell you know of secret page’s level or lower. The replacement spell cannot be cast or used to prepare a spell. You can also transform the text into some other text you have written or have access to. You can specify a password that allows a creature touching the page to change the text back and forth. You must choose the replacement text and the password, if any, when you Cast the Spell." };
+            yield return new TextBlock { Id = Guid.Parse("ca0ff2c1-468d-44e9-abb8-643410446353"), Type = TextBlockType.Text, Text = "You change the target's text to different text entirely. If the text is a spellbook or a scroll, you can change it to show a spell you know of secret page's level or lower. The replacement spell cannot be cast or used to prepare a spell. You can also transform the text into some other text you have written or have access to. You can specify a password that allows a creature touching the page to change the text back and forth. You must choose the replacement text and the password, if any, when you Cast the Spell." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5eaabddb-c8a6-4b24-9e77-cb8f14dfc403"), Type = TextBlockType.Text, Text = "You can negotiate incredibly quickly in adverse situations. You attempt to (action: Make an Impression) and then (action: Request) your opponent cease their current activity and engage in negotiations. You take a -5 penalty to your Diplomacy check. The GM sets the DC of the Request based on the circumstances – it’s generally at least a very hard DC of the creature’s level. Some creatures might simply refuse, and even those who agree to parley might ultimately find your arguments lacking and return to violence." };
+            yield return new TextBlock { Id = Guid.Parse("5eaabddb-c8a6-4b24-9e77-cb8f14dfc403"), Type = TextBlockType.Text, Text = "You can negotiate incredibly quickly in adverse situations. You attempt to (action: Make an Impression) and then (action: Request) your opponent cease their current activity and engage in negotiations. You take a -5 penalty to your Diplomacy check. The GM sets the DC of the Request based on the circumstances – it's generally at least a very hard DC of the creature's level. Some creatures might simply refuse, and even those who agree to parley might ultimately find your arguments lacking and return to violence." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cf0132c4-dc90-453c-a3a1-2a2f8168f1fc"), Type = TextBlockType.Text, Text = "Experience or focused study have granted you mastery of a number of topics. When you know about something, you know about it in great detail. When you succeed at a check to (action: Recall Knowledge), you gain additional information or context. When you critically succeed at a check to (action: Recall Knowledge), at the GM’s discretion, you might gain even more additional information or context than normal." };
+            yield return new TextBlock { Id = Guid.Parse("cf0132c4-dc90-453c-a3a1-2a2f8168f1fc"), Type = TextBlockType.Text, Text = "Experience or focused study have granted you mastery of a number of topics. When you know about something, you know about it in great detail. When you succeed at a check to (action: Recall Knowledge), you gain additional information or context. When you critically succeed at a check to (action: Recall Knowledge), at the GM's discretion, you might gain even more additional information or context than normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

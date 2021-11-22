@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a3654ac-a07f-4533-81d9-0ac312ca22cb"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor’s Pins or an alliance with Mengkare." };
+            yield return new TextBlock { Id = Guid.Parse("6a3654ac-a07f-4533-81d9-0ac312ca22cb"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor's Pins or an alliance with Mengkare." };
             yield return new TextBlock { Id = Guid.Parse("500f24cd-6484-45dc-bfbd-bc36be9612f6"), Type = TextBlockType.Text, Text = "You can call upon the essence of every individual animal of a particular species to temporarily transform your animal into an exemplar of its kind. You learn the (spell: apex companion) order spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 

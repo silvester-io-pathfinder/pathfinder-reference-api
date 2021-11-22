@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c5bcd51-b6aa-4691-a6ce-a44c27360cf0"), Type = TextBlockType.Text, Text = "The way you cringe or use those puppy-dog eyes you’ve been practicing elicits an empathetic response in the attacker. Attempt a Diplomacy check against your attacker’s Will DC." };
+            yield return new TextBlock { Id = Guid.Parse("9c5bcd51-b6aa-4691-a6ce-a44c27360cf0"), Type = TextBlockType.Text, Text = "The way you cringe or use those puppy-dog eyes you've been practicing elicits an empathetic response in the attacker. Attempt a Diplomacy check against your attacker's Will DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -48,9 +48,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("cdb8aaf8-bc6f-4016-bb82-c0ce412d45df"),
-                CriticalSuccess = "The creature pulls its attack, wasting its action, and can’t use hostile actions against you until the beginning of its next turn.",
-                Success = "The creature takes a -2 circumstance penalty to damage on the triggering (action: Strike) and all its (action: Strikes | Strike) against you until the beginning of its next turn. The penalty is -4 if you’re an expert in Diplomacy, -6 if you’re a master, and -8 if you’re legendary.",
-                Failure = "The creature’s attack is unaffected, and the creature is temporarily immune to your Empathic Pleas for 24 hours.",
+                CriticalSuccess = "The creature pulls its attack, wasting its action, and can't use hostile actions against you until the beginning of its next turn.",
+                Success = "The creature takes a -2 circumstance penalty to damage on the triggering (action: Strike) and all its (action: Strikes | Strike) against you until the beginning of its next turn. The penalty is -4 if you're an expert in Diplomacy, -6 if you're a master, and -8 if you're legendary.",
+                Failure = "The creature's attack is unaffected, and the creature is temporarily immune to your Empathic Pleas for 24 hours.",
                  
             };
         }

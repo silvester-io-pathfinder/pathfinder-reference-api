@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2891dbdf-b53a-4385-90df-cef617bbd0ad"), Type = TextBlockType.Text, Text = "You create a tune so catchy, your foes can’t help but dance along. Attempt a Performance check against the Will DCs of all enemies in a 30-foot emanation." };
+            yield return new TextBlock { Id = Guid.Parse("2891dbdf-b53a-4385-90df-cef617bbd0ad"), Type = TextBlockType.Text, Text = "You create a tune so catchy, your foes can't help but dance along. Attempt a Performance check against the Will DCs of all enemies in a 30-foot emanation." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea9ab626-e12b-4189-a847-b4ddebcdc28c"), Type = TextBlockType.Text, Text = "You ward an ally against the attacks and hostile spells from the target enemy. The target ally gains a +1 status bonus to Armor Class and saving throws against the target enemy’s attacks, spells, and other effects." };
+            yield return new TextBlock { Id = Guid.Parse("ea9ab626-e12b-4189-a847-b4ddebcdc28c"), Type = TextBlockType.Text, Text = "You ward an ally against the attacks and hostile spells from the target enemy. The target ally gains a +1 status bonus to Armor Class and saving throws against the target enemy's attacks, spells, and other effects." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

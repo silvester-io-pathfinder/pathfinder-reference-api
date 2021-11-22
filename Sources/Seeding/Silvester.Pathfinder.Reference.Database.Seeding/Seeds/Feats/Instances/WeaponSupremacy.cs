@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("db6d3fed-abb3-47de-944e-139be99c8a1a"), Type = TextBlockType.Text, Text = "Your skill with weapons lets you attack swiftly at all times." };
-            yield return new TextBlock { Id = Guid.Parse("e439c1fc-f61c-416d-992c-1f5d0a7d944e"), Type = TextBlockType.Text, Text = "You’re permanently quickened. You can use your extra action only to (Action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("e439c1fc-f61c-416d-992c-1f5d0a7d944e"), Type = TextBlockType.Text, Text = "You're permanently quickened. You can use your extra action only to (Action: Strike)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d84feac7-780d-41b8-8ec8-9f8880b9c7da"), Type = TextBlockType.Text, Text = "With a burst of divine liberation, your ally’s movement from your (feat: Liberating Step) is unaffected by difficult terrain, greater difficult terrain, narrow surfaces, and uneven ground." };
+            yield return new TextBlock { Id = Guid.Parse("d84feac7-780d-41b8-8ec8-9f8880b9c7da"), Type = TextBlockType.Text, Text = "With a burst of divine liberation, your ally's movement from your (feat: Liberating Step) is unaffected by difficult terrain, greater difficult terrain, narrow surfaces, and uneven ground." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

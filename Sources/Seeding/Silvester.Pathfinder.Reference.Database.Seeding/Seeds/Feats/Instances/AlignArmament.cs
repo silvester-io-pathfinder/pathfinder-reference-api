@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("acca407a-d696-4c49-9705-2f7c319670bc"), Type = TextBlockType.Text, Text = "You bring a weapon into metaphysical concordance with your deity’s beliefs. When you select this feat, choose chaotic, evil, good, or lawful. Your choice must match one of your deity’s alignment components. This action has the trait corresponding to the chosen alignment component." };
+            yield return new TextBlock { Id = Guid.Parse("acca407a-d696-4c49-9705-2f7c319670bc"), Type = TextBlockType.Text, Text = "You bring a weapon into metaphysical concordance with your deity's beliefs. When you select this feat, choose chaotic, evil, good, or lawful. Your choice must match one of your deity's alignment components. This action has the trait corresponding to the chosen alignment component." };
             yield return new TextBlock { Id = Guid.Parse("66ed961a-5827-4ca5-9c6c-2f02a0040989"), Type = TextBlockType.Text, Text = "When you use this action, you touch a weapon. For 1 round, that weapon deals an additional 1d6 damage of the chosen type to creatures of the opposed alignment. For example, if you chose good, the weapon would deal an extra 1d6 good damage to evil creatures. If you Align an Armament again, any previously aligned armament loses its additional damage." };
         }
 

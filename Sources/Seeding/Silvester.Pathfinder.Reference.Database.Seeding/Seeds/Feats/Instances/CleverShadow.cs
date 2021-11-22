@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d01ee4b6-2773-4380-91c0-6ed658bf57b7"), Type = TextBlockType.Text, Text = "You can perform simple (action: Interact) actions with your shadow, such as opening an unlocked door. Anything your shadow (action: Interacts | Interact) with must be within your reach. Your shadow can’t perform actions that require significant manual dexterity, including any action that would require a check to accomplish, and you can’t use it to hold items." };
+            yield return new TextBlock { Id = Guid.Parse("d01ee4b6-2773-4380-91c0-6ed658bf57b7"), Type = TextBlockType.Text, Text = "You can perform simple (action: Interact) actions with your shadow, such as opening an unlocked door. Anything your shadow (action: Interacts | Interact) with must be within your reach. Your shadow can't perform actions that require significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

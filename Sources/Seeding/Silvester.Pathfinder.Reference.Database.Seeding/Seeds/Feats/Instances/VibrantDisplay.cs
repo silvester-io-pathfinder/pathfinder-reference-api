@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cb7a3e20-864e-4222-bb1f-be51f9986940"), Type = TextBlockType.Text, Text = "Whereas most gnomes’ coloration is static or changes slowly, you can cause your hair, eye, and skin color to scintillate in brief and disorienting bursts. Once every 10 minutes, when you use the (action: Feint) action, you can compare your Deception check result to the Perception DCs of all adjacent creatures rather than just one creature within melee reach. It’s possible to get a different degree of success for each target." };
+            yield return new TextBlock { Id = Guid.Parse("cb7a3e20-864e-4222-bb1f-be51f9986940"), Type = TextBlockType.Text, Text = "Whereas most gnomes' coloration is static or changes slowly, you can cause your hair, eye, and skin color to scintillate in brief and disorienting bursts. Once every 10 minutes, when you use the (action: Feint) action, you can compare your Deception check result to the Perception DCs of all adjacent creatures rather than just one creature within melee reach. It's possible to get a different degree of success for each target." };
             yield return new TextBlock { Id = Guid.Parse("7808f93d-8320-4dca-aea4-06e47a8613c2"), Type = TextBlockType.Text, Text = "These changes are imprecise and usually short-lived, so while they allow you to periodically change your appearance in unpredictable ways, they are of little use in providing camouflage or aiding a disguise." };
         }
 

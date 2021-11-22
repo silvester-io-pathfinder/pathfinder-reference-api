@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0d3057c9-fcc9-4949-a17e-9aa46a0dcd6f"), Type = Utilities.Text.TextBlockType.Text, Text = "You create a shimmering barrier that attempts to counteract teleportation effects and planar travel into or out of the area, including items that allow access to extradimensional spaces (such as a bag of holding). Dimensional lock tries to counteract any attempt to summon a creature into the area but doesn’t stop the creature from departing when the summoning ends." };
+            yield return new TextBlock { Id = Guid.Parse("0d3057c9-fcc9-4949-a17e-9aa46a0dcd6f"), Type = Utilities.Text.TextBlockType.Text, Text = "You create a shimmering barrier that attempts to counteract teleportation effects and planar travel into or out of the area, including items that allow access to extradimensional spaces (such as a bag of holding). Dimensional lock tries to counteract any attempt to summon a creature into the area but doesn't stop the creature from departing when the summoning ends." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

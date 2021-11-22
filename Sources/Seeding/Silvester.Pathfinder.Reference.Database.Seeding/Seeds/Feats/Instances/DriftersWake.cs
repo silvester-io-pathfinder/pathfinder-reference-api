@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f5e522f1-9632-4a13-9627-c83b83aeb0e6"), Type = TextBlockType.Text, Text = "You drift across the battlefield, striking down foes as you go. You (action: Stride), and you can (action: Strike) up to three times at any points during your movement. Each attack must target a different enemy and must be made with a one-handed firearm, crossbow, melee weapon, or unarmed attack. Each attack counts toward your multiple attack penalty, but your multiple attack penalty doesn’t increase until you’ve made all your attacks. Your movement doesn’t trigger reactions." };
+            yield return new TextBlock { Id = Guid.Parse("f5e522f1-9632-4a13-9627-c83b83aeb0e6"), Type = TextBlockType.Text, Text = "You drift across the battlefield, striking down foes as you go. You (action: Stride), and you can (action: Strike) up to three times at any points during your movement. Each attack must target a different enemy and must be made with a one-handed firearm, crossbow, melee weapon, or unarmed attack. Each attack counts toward your multiple attack penalty, but your multiple attack penalty doesn't increase until you've made all your attacks. Your movement doesn't trigger reactions." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

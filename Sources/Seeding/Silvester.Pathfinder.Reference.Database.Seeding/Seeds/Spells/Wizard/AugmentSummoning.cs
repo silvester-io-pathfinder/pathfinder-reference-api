@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5c6f929a-4740-4a62-9c54-bf0f9dbcca4b"), Type = TextBlockType.Text, Text = "You augment the abilities of a summoned creature. The target gains a +1 status bonus to all checks (this also applies to the creature’s DCs, including its AC) for the duration of its summoning, up to 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("5c6f929a-4740-4a62-9c54-bf0f9dbcca4b"), Type = TextBlockType.Text, Text = "You augment the abilities of a summoned creature. The target gains a +1 status bonus to all checks (this also applies to the creature's DCs, including its AC) for the duration of its summoning, up to 1 minute." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

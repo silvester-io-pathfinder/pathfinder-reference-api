@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PreciousMaterial
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("e402cfb3-cb73-48ca-8086-f5ca51035314"), Type = TextBlockType.Text, Text = "Orichalcum weapons can have four magic property runes instead of three. Due to orichalcum’s temporal properties, etching the speed weapon property rune onto an orichalcum weapon costs half the normal Price (though transferring the rune to a weapon made of another material requires you to first pay the remaining Price and then pay the cost to transfer)." };
+            yield return new TextBlock { Id = Guid.Parse("e402cfb3-cb73-48ca-8086-f5ca51035314"), Type = TextBlockType.Text, Text = "Orichalcum weapons can have four magic property runes instead of three. Due to orichalcum's temporal properties, etching the speed weapon property rune onto an orichalcum weapon costs half the normal Price (though transferring the rune to a weapon made of another material requires you to first pay the remaining Price and then pay the cost to transfer)." };
         }
 
         protected override IEnumerable<PreciousMaterialWeaponVariant> GetVariants()

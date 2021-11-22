@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a334d445-f064-4012-81da-fb4634d2752e"), Type = TextBlockType.Text, Text = "You transform into your animal. You gain the effects of the 3rd-level (spell: animal form) spell except you use your own statistics, temporary Hit Points, and unarmed attacks instead of those granted by animal form. You also retain the constant abilities of your gear. If your animal is a frog, your tongue’s reach increases to 15 feet. (action: Dismissing | Dismiss) the transformation gains the (trait: rage) trait." };
+            yield return new TextBlock { Id = Guid.Parse("a334d445-f064-4012-81da-fb4634d2752e"), Type = TextBlockType.Text, Text = "You transform into your animal. You gain the effects of the 3rd-level (spell: animal form) spell except you use your own statistics, temporary Hit Points, and unarmed attacks instead of those granted by animal form. You also retain the constant abilities of your gear. If your animal is a frog, your tongue's reach increases to 15 feet. (action: Dismissing | Dismiss) the transformation gains the (trait: rage) trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Actions.Instance
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("36548991-704d-4a82-a2c4-0622eb57f728"), Text = "You attack with a weapon you’re wielding or with an unarmed attack, targeting one creature within your reach (for a melee attack) or within range (for a ranged attack). Roll the attack roll for the weapon or unarmed attack you are using, and compare the result to the target creature’s AC to determine the effect. See Attack Rolls on page 446 and Damage on page 450 for details on calculating your attack and damage rolls." };
+            yield return new TextBlock { Id = Guid.Parse("36548991-704d-4a82-a2c4-0622eb57f728"), Text = "You attack with a weapon you're wielding or with an unarmed attack, targeting one creature within your reach (for a melee attack) or within range (for a ranged attack). Roll the attack roll for the weapon or unarmed attack you are using, and compare the result to the target creature's AC to determine the effect. See Attack Rolls on page 446 and Damage on page 450 for details on calculating your attack and damage rolls." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

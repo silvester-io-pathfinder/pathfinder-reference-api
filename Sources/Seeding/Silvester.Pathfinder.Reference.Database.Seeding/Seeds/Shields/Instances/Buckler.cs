@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Shields.Instance
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("067483c4-7d31-43f1-8faa-d57b1c9d42f9"), Type = TextBlockType.Text, Text = "This very small shield is a favorite of duelists and quick, lightly armored warriors. It’s typically made of steel and strapped to your forearm. You can Raise a Shield with your buckler as long as you have that hand free or are holding a light object that’s not a weapon in that hand." };
+            yield return new TextBlock { Id = Guid.Parse("067483c4-7d31-43f1-8faa-d57b1c9d42f9"), Type = TextBlockType.Text, Text = "This very small shield is a favorite of duelists and quick, lightly armored warriors. It's typically made of steel and strapped to your forearm. You can Raise a Shield with your buckler as long as you have that hand free or are holding a light object that's not a weapon in that hand." };
         }
 
         protected override SourcePage GetSourcePage()

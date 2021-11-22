@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("832f8f39-2be7-4702-8dd9-68b9375b4e2e"), Type = TextBlockType.Text, Text = "The target can walk on the surface of water and other liquids without falling through. It can go underwater if it wishes, but in that case it must Swim normally. This spell doesn’t grant the ability to breathe underwater." };
+            yield return new TextBlock { Id = Guid.Parse("832f8f39-2be7-4702-8dd9-68b9375b4e2e"), Type = TextBlockType.Text, Text = "The target can walk on the surface of water and other liquids without falling through. It can go underwater if it wishes, but in that case it must Swim normally. This spell doesn't grant the ability to breathe underwater." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("9fed9ca9-7989-4dc5-a8ad-abae1965ffa9"), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, the duration increases to 1 hour, and you can target up to 10 creatures." }
+                    new TextBlock { Id = Guid.Parse("9fed9ca9-7989-4dc5-a8ad-abae1965ffa9"), Type = TextBlockType.Text, Text = "The spell's range increases to 30 feet, the duration increases to 1 hour, and you can target up to 10 creatures." }
                 }
             };
         }

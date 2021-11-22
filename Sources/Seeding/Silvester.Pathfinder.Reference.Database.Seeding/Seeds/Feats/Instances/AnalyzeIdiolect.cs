@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("05e8a742-fd92-41f6-ba00-c9ff42a7e70f"), Type = TextBlockType.Text, Text = "You break down a specific individual’s idiolect, memorizing their speech mannerisms and habits. If you interact with someone for at least 10 minutes, when you later attempt to (action: Impersonate) that individual, you gain a +4 circumstance bonus to your Deception checks and DCs. Due to the intense character study required, you can’t remember more than one idiolect at a time." };
+            yield return new TextBlock { Id = Guid.Parse("05e8a742-fd92-41f6-ba00-c9ff42a7e70f"), Type = TextBlockType.Text, Text = "You break down a specific individual's idiolect, memorizing their speech mannerisms and habits. If you interact with someone for at least 10 minutes, when you later attempt to (action: Impersonate) that individual, you gain a +4 circumstance bonus to your Deception checks and DCs. Due to the intense character study required, you can't remember more than one idiolect at a time." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

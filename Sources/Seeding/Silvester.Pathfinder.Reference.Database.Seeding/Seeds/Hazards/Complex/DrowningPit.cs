@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
             {
                 Id = ID,
                 Name = "Drowning Pit",
-                Description = "A trapdoor covers a 10-foot-square pit that’s 30 feet deep and has 5 feet of water at the bottom. Four water spouts in the walls connect to hidden water tanks. Each water spout extends out of a different wall, 6 inches from the top of the pit.",
+                Description = "A trapdoor covers a 10-foot-square pit that's 30 feet deep and has 5 feet of water at the bottom. Four water spouts in the walls connect to hidden water tanks. Each water spout extends out of a different wall, 6 inches from the top of the pit.",
                 Level = 3,
                 ArmorClass = 19,
                 Fortitude = 8,
@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
 
         protected override IEnumerable<TextBlock> GetRoutineDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("d58fd9ed-f604-45d1-ab07-65c3cc68799c"), Type = TextBlockType.Text, Text = "The trap loses 1 action each turn for each disabled water spout. On each of the trap’s actions, a spout pours water, increasing the depth of the water by 5 feet. Once the pit is full of water, the pit stops using actions, but creatures in the pit begin drowning (page 478)." };
+            yield return new TextBlock { Id = Guid.Parse("d58fd9ed-f604-45d1-ab07-65c3cc68799c"), Type = TextBlockType.Text, Text = "The trap loses 1 action each turn for each disabled water spout. On each of the trap's actions, a spout pours water, increasing the depth of the water by 5 feet. Once the pit is full of water, the pit stops using actions, but creatures in the pit begin drowning (page 478)." };
         }
 
         protected override IEnumerable<HazardComponent> GetComponents()

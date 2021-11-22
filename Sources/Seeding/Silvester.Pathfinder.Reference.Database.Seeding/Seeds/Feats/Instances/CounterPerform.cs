@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("59c88c24-6ce8-4928-979d-d31522cf1b8b"), Type = TextBlockType.Text, Text = "You gain the (spell: counter performance) composition spell. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by engaging your muse. (For more on composition spells, see page 97.)" };
+            yield return new TextBlock { Id = Guid.Parse("59c88c24-6ce8-4928-979d-d31522cf1b8b"), Type = TextBlockType.Text, Text = "You gain the (spell: counter performance) composition spell. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by engaging your muse. (For more on composition spells, see page 97.)" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

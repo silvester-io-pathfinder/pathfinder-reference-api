@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c099f0cd-afcf-445f-b78c-6407f1104174"), Type = TextBlockType.Text, Text = "Your elemental ancestor’s legacy asserts itself as brackish water, like the seawater of the ocean. You gain the (feat: Salt Wound) reaction." };
+            yield return new TextBlock { Id = Guid.Parse("c099f0cd-afcf-445f-b78c-6407f1104174"), Type = TextBlockType.Text, Text = "Your elemental ancestor's legacy asserts itself as brackish water, like the seawater of the ocean. You gain the (feat: Salt Wound) reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

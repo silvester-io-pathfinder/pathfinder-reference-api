@@ -46,10 +46,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 RollableEffect = new RollableEffect
                 {
                     Id = Guid.Parse("ad329a6e-7b83-49d8-8df6-2f29902844aa"),
-                    CriticalSuccess = "It’s enfeebled 1 until the end of your next turn.",
-                    Success = "It’s enfeebled 2 until the end of your next turn.",
-                    Failure = "It’s enfeebled 3 until the end of your next turn.",
-                    CriticalFailure = "It’s destroyed."
+                    CriticalSuccess = "It's enfeebled 1 until the end of your next turn.",
+                    Success = "It's enfeebled 2 until the end of your next turn.",
+                    Failure = "It's enfeebled 3 until the end of your next turn.",
+                    CriticalFailure = "It's destroyed."
                 }
             };
         }

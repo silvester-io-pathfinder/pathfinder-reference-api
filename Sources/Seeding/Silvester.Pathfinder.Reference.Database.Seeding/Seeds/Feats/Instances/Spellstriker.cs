@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("59b2dfeb-732f-43bb-ac35-8e98b49222b5"), Type = TextBlockType.Text, Text = "You gain the magus’s (feat: Spellstrike) activity. You can recharge it only as an activity that takes 1 minute. This restriction applies even if you gain another ability that recharges (feat: Spellstrike)." };
+            yield return new TextBlock { Id = Guid.Parse("59b2dfeb-732f-43bb-ac35-8e98b49222b5"), Type = TextBlockType.Text, Text = "You gain the magus's (feat: Spellstrike) activity. You can recharge it only as an activity that takes 1 minute. This restriction applies even if you gain another ability that recharges (feat: Spellstrike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

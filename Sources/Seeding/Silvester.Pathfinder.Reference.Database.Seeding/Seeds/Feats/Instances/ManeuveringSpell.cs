@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cef6c9b2-58b5-4024-a643-84e94b117587"), Type = TextBlockType.Text, Text = "You instantly tap into the magical power of a spell you&#39;re casting to quickly pounce around the battlefield. You (action: Step), (action: Leap), or (action: Stand | Stand / Drop Prone). This action can be before or after you (action: Cast the Spell | Cast a Spell)." };
+            yield return new TextBlock { Id = Guid.Parse("cef6c9b2-58b5-4024-a643-84e94b117587"), Type = TextBlockType.Text, Text = "You instantly tap into the magical power of a spell you're casting to quickly pounce around the battlefield. You (action: Step), (action: Leap), or (action: Stand | Stand / Drop Prone). This action can be before or after you (action: Cast the Spell | Cast a Spell)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

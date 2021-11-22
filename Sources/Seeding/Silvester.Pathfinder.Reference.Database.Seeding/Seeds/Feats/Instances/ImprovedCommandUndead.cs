@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dbaf2a4a-372e-44ec-88ba-d18584eae703"), Type = TextBlockType.Text, Text = "Undead creatures find it all but impossible to resist your commands. When you use (action: Command Undead), if the undead succeeds at its save but doesn’t critically succeed, it is your minion for 1 round. If the undead fails its save, it is your minion for 10 minutes. If it critically fails, it is your minion for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("dbaf2a4a-372e-44ec-88ba-d18584eae703"), Type = TextBlockType.Text, Text = "Undead creatures find it all but impossible to resist your commands. When you use (action: Command Undead), if the undead succeeds at its save but doesn't critically succeed, it is your minion for 1 round. If the undead fails its save, it is your minion for 10 minutes. If it critically fails, it is your minion for 24 hours." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

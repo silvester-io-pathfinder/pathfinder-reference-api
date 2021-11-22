@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8cf0bf92-5cd3-4fb7-9692-3a1958760582"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single arcane or occult cantrip of your choice (which is heightened to a spell level equal to half your level rounded up). If you weren&#39;t already, you become trained in that tradition&#39;s spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
+            yield return new TextBlock { Id = Guid.Parse("8cf0bf92-5cd3-4fb7-9692-3a1958760582"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single arcane or occult cantrip of your choice (which is heightened to a spell level equal to half your level rounded up). If you weren't already, you become trained in that tradition's spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
             yield return new TextBlock { Id = Guid.Parse("9ea108cf-246d-4468-87bd-caca7bebeee3"), Type = TextBlockType.Text, Text = "Regardless of whether you choose an arcane or occult cantrip, you also become an expert in your choice of either Arcana or Occultism. You also gain a +1 circumstance bonus to checks you attempt with the chosen skill when (action: Investigating | Investigate) or (action: Identifying Magic | Identify Magic)." };
         }
 

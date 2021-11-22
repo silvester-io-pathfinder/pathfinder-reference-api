@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("06487cd4-8f08-4bda-bbdb-74387d15734e"), Type = Utilities.Text.TextBlockType.Text, Text = "You blink quickly between the Material Plane and the Ethereal Plane. You gain resistance 5 to all damage (except force). You can Sustain the Spell to vanish and reappear 10 feet away in a random direction determined by the GM; the movement doesn’t trigger reactions. At the end of your turn, you vanish and reappear as above." };
+            yield return new TextBlock { Id = Guid.Parse("06487cd4-8f08-4bda-bbdb-74387d15734e"), Type = Utilities.Text.TextBlockType.Text, Text = "You blink quickly between the Material Plane and the Ethereal Plane. You gain resistance 5 to all damage (except force). You can Sustain the Spell to vanish and reappear 10 feet away in a random direction determined by the GM; the movement doesn't trigger reactions. At the end of your turn, you vanish and reappear as above." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

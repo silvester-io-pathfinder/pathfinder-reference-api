@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f23e3d68-5b8b-4caf-b46b-201eef595735"), Type = TextBlockType.Text, Text = "You’ve learned techniques first devised by your ancestors during their ancient wars, allowing you to comfortably wear massive suits of armor. Ignore the reduction to your Speed from any armor you wear." };
-            yield return new TextBlock { Id = Guid.Parse("73bbcf0d-5642-4c92-bb9a-3d61e11566f7"), Type = TextBlockType.Text, Text = "In addition, any time you’re taking a penalty to your Speed from some other reason, deduct 5 feet from the penalty. If your Speed is taking multiple penalties, pick only one penalty to reduce." };
+            yield return new TextBlock { Id = Guid.Parse("f23e3d68-5b8b-4caf-b46b-201eef595735"), Type = TextBlockType.Text, Text = "You've learned techniques first devised by your ancestors during their ancient wars, allowing you to comfortably wear massive suits of armor. Ignore the reduction to your Speed from any armor you wear." };
+            yield return new TextBlock { Id = Guid.Parse("73bbcf0d-5642-4c92-bb9a-3d61e11566f7"), Type = TextBlockType.Text, Text = "In addition, any time you're taking a penalty to your Speed from some other reason, deduct 5 feet from the penalty. If your Speed is taking multiple penalties, pick only one penalty to reduce." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8c567bc7-e1b4-42e8-8c67-53b6616d3cdd"), Type = TextBlockType.Text, Text = "You’ve started to make a meaningful connection about the common underpinnings of the four traditions of magic and magical essences, allowing you to understand them all through an arcane lens. Whenever you use a skill action or a skill feat that requires a Nature, Occultism, or Religion check, depending on the magic tradition, you can use Arcana instead. If you would normally take a penalty or have a higher DC for using Arcana on other magic (such as when using (action: Identify Magic)), you no longer do so." };
+            yield return new TextBlock { Id = Guid.Parse("8c567bc7-e1b4-42e8-8c67-53b6616d3cdd"), Type = TextBlockType.Text, Text = "You've started to make a meaningful connection about the common underpinnings of the four traditions of magic and magical essences, allowing you to understand them all through an arcane lens. Whenever you use a skill action or a skill feat that requires a Nature, Occultism, or Religion check, depending on the magic tradition, you can use Arcana instead. If you would normally take a penalty or have a higher DC for using Arcana on other magic (such as when using (action: Identify Magic)), you no longer do so." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

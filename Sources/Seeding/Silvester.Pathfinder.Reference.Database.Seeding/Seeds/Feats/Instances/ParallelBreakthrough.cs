@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3508ac8b-9264-4b21-bc4e-46f85b426001"), Type = TextBlockType.Text, Text = "You expand your mind beyond your area of psychic specialty. You gain the unique surface psi cantrip for a conscious mind other than your own. You don’t gain any other benefits of that conscious mind, such as additional spells known or the amps for the other surface cantrips." };
+            yield return new TextBlock { Id = Guid.Parse("3508ac8b-9264-4b21-bc4e-46f85b426001"), Type = TextBlockType.Text, Text = "You expand your mind beyond your area of psychic specialty. You gain the unique surface psi cantrip for a conscious mind other than your own. You don't gain any other benefits of that conscious mind, such as additional spells known or the amps for the other surface cantrips." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

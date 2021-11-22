@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = ID,
                 Name = "Lucky Break",
                 Level = 4,
-                Trigger = "You fail (but don’t critically fail) a saving throw.",
+                Trigger = "You fail (but don't critically fail) a saving throw.",
                 DomainId = Domains.Instances.Luck.ID,
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 ClassId = Classes.Instances.Cleric.ID,

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1773916c-d944-45ad-8410-e5f2ff1b797a"), Type = TextBlockType.Text, Text = "You spend time teaching an animal to do a certain action. You can either select a basic action the animal already knows how to do (typically those listed in the (action: Command an Animal) action) or attempt to teach the animal a new basic action. The GM determines the DC of any check required and the amount of time the training takes (usually at least a week). It’s usually impossible to teach an animal a trick that uses critical thinking. If you’re expert, master, or legendary in Nature, you might be able to train more unusual creatures, at the GM’s discretion." };
+            yield return new TextBlock { Id = Guid.Parse("1773916c-d944-45ad-8410-e5f2ff1b797a"), Type = TextBlockType.Text, Text = "You spend time teaching an animal to do a certain action. You can either select a basic action the animal already knows how to do (typically those listed in the (action: Command an Animal) action) or attempt to teach the animal a new basic action. The GM determines the DC of any check required and the amount of time the training takes (usually at least a week). It's usually impossible to teach an animal a trick that uses critical thinking. If you're expert, master, or legendary in Nature, you might be able to train more unusual creatures, at the GM's discretion." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
                 Id = Guid.Parse("92692a78-e998-4362-b70e-1aa50af1f4a0"),
                 
                 Success = "The animal learns the action. If it was an action the animal already knew, you can (action: Command the Animal | Command an Animal) to take that action without attempting a Nature check. If it was a new basic action, add that action to the actions the animal can take when (action: Commanded | Command an Animal), but you must still roll.",
-                Failure = "The animal doesn’t learn the trick.",
+                Failure = "The animal doesn't learn the trick.",
                  
             };
         }

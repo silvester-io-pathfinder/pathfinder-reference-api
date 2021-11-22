@@ -70,7 +70,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instance
             return new DivineIntercession
             {
                 Id = Guid.Parse("80c35e11-a431-42f0-9d18-3a42bfe8af09"),
-                Description = "Abadar’s gifts take the form of riches, while his ire tends to cause offenders to lose wealth.",
+                Description = "Abadar's gifts take the form of riches, while his ire tends to cause offenders to lose wealth.",
                 MinorBoon = "Abadar warns his favored against those who might unfairly take advantage. Once, when someone rolls a success on a Deception check to Lie maliciously to you and you alone, they get a critical failure instead. Abadar typically chooses to grant this boon in response to an extremely consequential lie.",
                 ModerateBoon = "Abadar blesses all your enterprises, leading to financial success as all your ventures always seems to work out. If you roll a critical failure at a check to Earn Income, you get a failure instead. If you roll a success on a check to Earn Income, you earn twice the usual amount of income.",
                 MajorBoon = "Your silver tongue is infallible, allowing you to reach a compromise if one is even remotely possible. Once per day, you know just what to offer to make a deal or broker a negotiation, and if you offer your divinely inspired deal, you can automatically receive a result of 20 + your Diplomacy modifier on your Diplomacy check instead of rolling. This does not increase your degree of success like rolling a 20 would. If there is legitimately nothing you could offer to reach an agreement, you learn that, and you don't expend your daily use of the boon.",

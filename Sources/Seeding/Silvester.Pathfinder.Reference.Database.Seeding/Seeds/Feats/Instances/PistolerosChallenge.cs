@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("29401404-556a-4ac6-8e4d-9356fbdd01f6"), Type = TextBlockType.Text, Text = "With a stern call, carefully chosen barb, or some other challenging declaration, you demand your foe’s attention in a duel. Choose an opponent within 30 feet who you can perceive and can hear you, and make your choice of a Deception or Intimidation check against the target’s Will DC. No matter the result of the check, the foe is temporarily immune to your Pistolero’s Challenge until noon the next day." };
+            yield return new TextBlock { Id = Guid.Parse("29401404-556a-4ac6-8e4d-9356fbdd01f6"), Type = TextBlockType.Text, Text = "With a stern call, carefully chosen barb, or some other challenging declaration, you demand your foe's attention in a duel. Choose an opponent within 30 feet who you can perceive and can hear you, and make your choice of a Deception or Intimidation check against the target's Will DC. No matter the result of the check, the foe is temporarily immune to your Pistolero's Challenge until noon the next day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -49,9 +49,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             {
                 Id = Guid.Parse("4476e376-9ac2-48ab-b7b6-33f624381d1a"),
                 
-                Success = "Both you and the opponent gain a +2 status bonus to damage rolls with (action: Strikes|Strike) made against each other. If you’re a master in the skill you used for the check, the status bonus to damage rolls increases to +3, and if you’re legendary, it increases to +4. You can have only one challenge in effect at a time; challenging a new opponent ends this effect on any current target. Otherwise, the effect lasts until one of you is defeated, flees, or the encounter ends.",
+                Success = "Both you and the opponent gain a +2 status bonus to damage rolls with (action: Strikes|Strike) made against each other. If you're a master in the skill you used for the check, the status bonus to damage rolls increases to +3, and if you're legendary, it increases to +4. You can have only one challenge in effect at a time; challenging a new opponent ends this effect on any current target. Otherwise, the effect lasts until one of you is defeated, flees, or the encounter ends.",
                 
-                CriticalFailure = "You become frightened 1 and can’t use this ability again for 1 minute.", 
+                CriticalFailure = "You become frightened 1 and can't use this ability again for 1 minute.", 
             };
         }
             

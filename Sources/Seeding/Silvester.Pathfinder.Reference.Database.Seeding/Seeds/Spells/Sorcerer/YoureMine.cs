@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e0ecc4f7-2529-407b-b50a-2e1f41a1828e"), Type = TextBlockType.Text, Text = "You manipulate the target’s emotions, potentially allowing you to control it for a brief instant. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("e0ecc4f7-2529-407b-b50a-2e1f41a1828e"), Type = TextBlockType.Text, Text = "You manipulate the target's emotions, potentially allowing you to control it for a brief instant. The target must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("078b2af8-41ba-4ada-933d-b8eb222e9b45"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is stunned 1.",
-                Failure = "On the target’s next turn, it’s stunned 1 and you partially control it, causing it to take a single action of your choice. If it has actions left, it can act normally.",
+                Failure = "On the target's next turn, it's stunned 1 and you partially control it, causing it to take a single action of your choice. If it has actions left, it can act normally.",
                 CriticalFailure = "The target is controlled for 1 round."
             };
         }

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8356e3aa-00c7-422e-91e2-2f537bfc34a8"), Type = TextBlockType.Text, Text = "By unraveling memories and connections passed down from your progenitors, you learn to convert your inherent magic into psychic power. You can cast any innate spells you know from an ancestry feat or heritage using your psychic spellcasting components. When you do so, the spell’s tradition becomes occult, if it wasn’t already, and you can use your psychic spellcasting ability modifier instead of the ability modifier you would ordinarily use for your ancestry spells, if different, to determine your spell attack roll and spell DC." };
+            yield return new TextBlock { Id = Guid.Parse("8356e3aa-00c7-422e-91e2-2f537bfc34a8"), Type = TextBlockType.Text, Text = "By unraveling memories and connections passed down from your progenitors, you learn to convert your inherent magic into psychic power. You can cast any innate spells you know from an ancestry feat or heritage using your psychic spellcasting components. When you do so, the spell's tradition becomes occult, if it wasn't already, and you can use your psychic spellcasting ability modifier instead of the ability modifier you would ordinarily use for your ancestry spells, if different, to determine your spell attack roll and spell DC." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

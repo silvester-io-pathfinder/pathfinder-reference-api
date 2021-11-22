@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("60c7c9ae-9867-4419-9c3b-1fe678d0a0a3"), Type = TextBlockType.Text, Text = "Your target glows with a magical aura visible only to you and those who follow your lead. Your target is visible to you and others sharing your Hunt Prey benefits even if it wouldn’t normally be due to lighting or the concealed or invisible conditions, though cover from opaque objects still blocks your sight. You ignore the flat check against the target due to the concealed condition, and the target isn’t automatically hidden from you due to darkness or being invisible." };
+            yield return new TextBlock { Id = Guid.Parse("60c7c9ae-9867-4419-9c3b-1fe678d0a0a3"), Type = TextBlockType.Text, Text = "Your target glows with a magical aura visible only to you and those who follow your lead. Your target is visible to you and others sharing your Hunt Prey benefits even if it wouldn't normally be due to lighting or the concealed or invisible conditions, though cover from opaque objects still blocks your sight. You ignore the flat check against the target due to the concealed condition, and the target isn't automatically hidden from you due to darkness or being invisible." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

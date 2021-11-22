@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27c8b86f-9a69-4c27-8a77-ce18be3cd1ed"), Type = TextBlockType.Text, Text = "You can read lips of others nearby who you can clearly see. When you’re at your leisure, you can do this automatically. In encounter mode or when attempting a more difficult feat of lipreading, you’re fascinated and flat-footed during each round in which you focus on lip movements, and you must succeed at a Society check (DC determined by the GM) to successfully read someone’s lips. In either case, the language read must be one that you know." };
+            yield return new TextBlock { Id = Guid.Parse("27c8b86f-9a69-4c27-8a77-ce18be3cd1ed"), Type = TextBlockType.Text, Text = "You can read lips of others nearby who you can clearly see. When you're at your leisure, you can do this automatically. In encounter mode or when attempting a more difficult feat of lipreading, you're fascinated and flat-footed during each round in which you focus on lip movements, and you must succeed at a Society check (DC determined by the GM) to successfully read someone's lips. In either case, the language read must be one that you know." };
             yield return new TextBlock { Id = Guid.Parse("dcb559bb-3e85-4b6f-ae52-c9da68dbc0e7"), Type = TextBlockType.Text, Text = "If you are deaf or hard of hearing and have Read Lips, you recognize the lip movements for the spoken form of your languages. You can also speak the spoken form of your languages clearly enough for others to understand you." };
         }
 

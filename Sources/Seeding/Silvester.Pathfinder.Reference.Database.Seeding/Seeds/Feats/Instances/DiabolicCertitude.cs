@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea6aeefc-361d-4565-89f7-2c4e7707beb3"), Type = TextBlockType.Text, Text = "Your Hellknight training drilled details of Hell’s denizens deep into your mind. Make an attempt to (action: Recall Knowledge) about a devil you’re observing. If you roll a critical failure on this check, you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("ea6aeefc-361d-4565-89f7-2c4e7707beb3"), Type = TextBlockType.Text, Text = "Your Hellknight training drilled details of Hell's denizens deep into your mind. Make an attempt to (action: Recall Knowledge) about a devil you're observing. If you roll a critical failure on this check, you get a failure instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

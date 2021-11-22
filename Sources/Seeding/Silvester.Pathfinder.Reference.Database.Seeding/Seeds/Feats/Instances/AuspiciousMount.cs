@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("387d13af-d68d-4504-98d1-ec3c26192f02"), Type = TextBlockType.Text, Text = "Guided by your ongoing care, your steed has developed incredible intelligence and skill. The mount you gained through the divine ally class feature is now a specialized animal companion (page 217). You can select one of the usual specializations or the auspice specialization." };
-            yield return new TextBlock { Id = Guid.Parse("5903c454-d3c2-41d9-8630-afaa98e18ac7"), Type = TextBlockType.Text, Text = "Auspice mounts gain the following benefits: Your companion is marked by your deity’s religious symbol as a sacred creature of your deity. Its proficiency rank in Religion increases to expert, it can speak the language associated with your deity’s servitors (Celestial for champions who follow the tenets of good), and its Intelligence modifier increases by 2 and its Wisdom modifier by 1." };
+            yield return new TextBlock { Id = Guid.Parse("5903c454-d3c2-41d9-8630-afaa98e18ac7"), Type = TextBlockType.Text, Text = "Auspice mounts gain the following benefits: Your companion is marked by your deity's religious symbol as a sacred creature of your deity. Its proficiency rank in Religion increases to expert, it can speak the language associated with your deity's servitors (Celestial for champions who follow the tenets of good), and its Intelligence modifier increases by 2 and its Wisdom modifier by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

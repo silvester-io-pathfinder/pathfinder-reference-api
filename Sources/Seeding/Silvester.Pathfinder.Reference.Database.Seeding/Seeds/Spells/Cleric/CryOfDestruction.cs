@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7d3c13bb-010a-49fd-97d5-b0abb0fdcd7a"), Type = TextBlockType.Text, Text = "Your voice booms, smashing what’s in front of you. Each creature and unattended object in the area takes 1d8 sonic damage. If you already dealt damage to an enemy this turn with a Strike or spell, increase the damage dice from this spell to d12s." };
+            yield return new TextBlock { Id = Guid.Parse("7d3c13bb-010a-49fd-97d5-b0abb0fdcd7a"), Type = TextBlockType.Text, Text = "Your voice booms, smashing what's in front of you. Each creature and unattended object in the area takes 1d8 sonic damage. If you already dealt damage to an enemy this turn with a Strike or spell, increase the damage dice from this spell to d12s." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

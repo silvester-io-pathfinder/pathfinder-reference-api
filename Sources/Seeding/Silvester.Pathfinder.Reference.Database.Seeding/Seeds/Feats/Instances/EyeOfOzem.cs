@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fa4bbc33-4c46-4346-87d3-1e915cb045b2"), Type = TextBlockType.Text, Text = "You’ve learned how to spot danger at a distance, allowing you to serve as a sentry with ease. You gain a +2 circumstance bonus to initiative rolls when using Perception, and when you’re (action: Scouting | Scout), you grant your allies a +2 circumstance bonus instead of +1." };
+            yield return new TextBlock { Id = Guid.Parse("fa4bbc33-4c46-4346-87d3-1e915cb045b2"), Type = TextBlockType.Text, Text = "You've learned how to spot danger at a distance, allowing you to serve as a sentry with ease. You gain a +2 circumstance bonus to initiative rolls when using Perception, and when you're (action: Scouting | Scout), you grant your allies a +2 circumstance bonus instead of +1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -75,7 +75,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
         {
             yield return new SkillActionExample { Id = Guid.Parse("01cdf940-5e78-4213-a486-e2137e8678b5"), ProficiencyId = Proficiencies.Instances.Trained.ID, Description = "Entry-level philosphy treatise." };
             yield return new SkillActionExample { Id = Guid.Parse("b8127760-6381-4c80-88fd-87c6a9b9a337"), ProficiencyId = Proficiencies.Instances.Expert.ID, Description = "Complex code, such as a cipher." };
-            yield return new SkillActionExample { Id = Guid.Parse("1104143e-ad5c-4176-ad4f-a0eef1a4378a"), ProficiencyId = Proficiencies.Instances.Master.ID, Description = "Spymaster’s code or advanced research notes." };
+            yield return new SkillActionExample { Id = Guid.Parse("1104143e-ad5c-4176-ad4f-a0eef1a4378a"), ProficiencyId = Proficiencies.Instances.Master.ID, Description = "Spymaster's code or advanced research notes." };
             yield return new SkillActionExample { Id = Guid.Parse("0a0bc7a9-2183-4047-8816-78efc2cc1b53"), ProficiencyId = Proficiencies.Instances.Legendary.ID, Description = "Esoteric planar text written in metaphor by an ancient celestial." };
         }
 

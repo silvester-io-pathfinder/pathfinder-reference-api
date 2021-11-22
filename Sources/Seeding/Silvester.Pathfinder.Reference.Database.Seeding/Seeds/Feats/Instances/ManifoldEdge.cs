@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("03d96358-ccd4-4ae1-9e36-9a6ab9719a17"), Type = TextBlockType.Text, Text = "You’ve learned every possible edge to use against your foes. When you use (feat: Hunt Prey), you can gain a hunter’s edge benefit other than the one you selected at 1st level. If you do, you don’t gain the additional benefit from masterful hunter." };
+            yield return new TextBlock { Id = Guid.Parse("03d96358-ccd4-4ae1-9e36-9a6ab9719a17"), Type = TextBlockType.Text, Text = "You've learned every possible edge to use against your foes. When you use (feat: Hunt Prey), you can gain a hunter's edge benefit other than the one you selected at 1st level. If you do, you don't gain the additional benefit from masterful hunter." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

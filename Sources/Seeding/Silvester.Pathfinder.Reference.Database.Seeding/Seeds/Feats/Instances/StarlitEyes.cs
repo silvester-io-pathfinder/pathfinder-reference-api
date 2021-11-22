@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9304ba95-d296-4299-8e46-742b70e7e4d0"), Type = TextBlockType.Text, Text = "Starlight shines in your sight, enhancing your perception and range. When you make a ranged (action: Strike) while in (feat: Arcane Cascade) stance, you lower the DC of your flat check to target a creature that’s concealed or hidden from you. The DC is reduced to 3 instead of 5 against a concealed creature and to 9 instead of 11 against a hidden one. When you cast (spell: shooting star) and target a hidden creature, you don’t have to attempt the flat check for targeting a hidden creature with a ranged (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("9304ba95-d296-4299-8e46-742b70e7e4d0"), Type = TextBlockType.Text, Text = "Starlight shines in your sight, enhancing your perception and range. When you make a ranged (action: Strike) while in (feat: Arcane Cascade) stance, you lower the DC of your flat check to target a creature that's concealed or hidden from you. The DC is reduced to 3 instead of 5 against a concealed creature and to 9 instead of 11 against a hidden one. When you cast (spell: shooting star) and target a hidden creature, you don't have to attempt the flat check for targeting a hidden creature with a ranged (action: Strike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

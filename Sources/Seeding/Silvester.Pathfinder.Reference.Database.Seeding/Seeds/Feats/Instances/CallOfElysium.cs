@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d98129e-8e77-4e50-8ba2-d14c8da4e16f"), Type = TextBlockType.Text, Text = "The wild wonder of Elysium harmonizes within you, and in dire straits, you can share its benefits with your allies. Your Speed increases by 5 feet; the Speed increase from this feat isn’t cumulative with any Speed increase from your ancestry feats (such as (feat: Nimble Elf)). Allies who begin their turn in combat adjacent to you gain a +5-foot status bonus to their Speed for the round." };
+            yield return new TextBlock { Id = Guid.Parse("2d98129e-8e77-4e50-8ba2-d14c8da4e16f"), Type = TextBlockType.Text, Text = "The wild wonder of Elysium harmonizes within you, and in dire straits, you can share its benefits with your allies. Your Speed increases by 5 feet; the Speed increase from this feat isn't cumulative with any Speed increase from your ancestry feats (such as (feat: Nimble Elf)). Allies who begin their turn in combat adjacent to you gain a +5-foot status bonus to their Speed for the round." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

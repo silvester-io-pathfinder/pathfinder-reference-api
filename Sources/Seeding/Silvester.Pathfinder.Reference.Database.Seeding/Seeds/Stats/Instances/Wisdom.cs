@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Stats.Instances
                 Id = ID,
                 Name = "Wisdom", 
                 Abbreviation = "WIS",
-                Description = "Wisdom measures your character’s common sense, awareness, and intuition. Your Wisdom modifier is added to your Perception and Will saving throws." 
+                Description = "Wisdom measures your character's common sense, awareness, and intuition. Your Wisdom modifier is added to your Perception and Will saving throws." 
             };
         }
     }

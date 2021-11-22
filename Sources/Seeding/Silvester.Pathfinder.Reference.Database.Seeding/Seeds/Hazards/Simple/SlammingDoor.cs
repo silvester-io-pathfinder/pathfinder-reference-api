@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
             {
                 Id = ID,
                 Name = "Slamming Door",
-                Description = "Pressure-sensitive panels in the floor connect to a stone slab hidden in a hallway’s ceiling.",
+                Description = "Pressure-sensitive panels in the floor connect to a stone slab hidden in a hallway's ceiling.",
                 Level = 1,
                 ArmorClass = 16,
                 Fortitude = 10,

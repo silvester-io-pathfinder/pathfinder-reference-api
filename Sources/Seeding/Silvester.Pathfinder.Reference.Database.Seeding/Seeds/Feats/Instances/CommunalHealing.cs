@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("06784b51-3794-4d5e-8c2d-2c71a7da37ed"), Type = TextBlockType.Text, Text = "You’re a conduit for positive energy, and as you channel it through you, it heals some of your minor injuries. When you cast the (spell: heal) spell to heal a single creature other than yourself, you regain Hit Points equal to the spell level of the heal spell." };
+            yield return new TextBlock { Id = Guid.Parse("06784b51-3794-4d5e-8c2d-2c71a7da37ed"), Type = TextBlockType.Text, Text = "You're a conduit for positive energy, and as you channel it through you, it heals some of your minor injuries. When you cast the (spell: heal) spell to heal a single creature other than yourself, you regain Hit Points equal to the spell level of the heal spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

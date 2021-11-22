@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("70ae409b-2a2e-4f75-9d69-3cfad9d828c1"), Type = TextBlockType.Text, Text = "After your initial attack redirects your foe’s defenses, your follow-up wrests their weapon from their grasp. Make a melee (action: Strike) with the required weapon. In addition to its other effects, this (action: Strike) gains the success and critical success effects of the (action: Disarm) action. The (action: Strike) also has the following failure effect." };
+            yield return new TextBlock { Id = Guid.Parse("70ae409b-2a2e-4f75-9d69-3cfad9d828c1"), Type = TextBlockType.Text, Text = "After your initial attack redirects your foe's defenses, your follow-up wrests their weapon from their grasp. Make a melee (action: Strike) with the required weapon. In addition to its other effects, this (action: Strike) gains the success and critical success effects of the (action: Disarm) action. The (action: Strike) also has the following failure effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

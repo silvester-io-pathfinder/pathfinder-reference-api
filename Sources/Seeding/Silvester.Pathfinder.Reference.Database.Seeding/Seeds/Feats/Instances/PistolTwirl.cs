@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a677961e-605d-4b9a-89e7-0a02b9e9e6b0"), Type = TextBlockType.Text, Text = "Your quick gestures and flair for performance distract your opponent, leaving it vulnerable to your follow-up attacks. You (action: Feint) against an opponent within the required weapon’s first range increment, rather than an opponent within melee reach. If you succeed, the foe is flat-footed against your melee and ranged attacks, rather than only your melee attacks. On a critical failure, you’re flat-footed against the target’s melee and ranged attacks, rather than only its melee attacks." };
+            yield return new TextBlock { Id = Guid.Parse("a677961e-605d-4b9a-89e7-0a02b9e9e6b0"), Type = TextBlockType.Text, Text = "Your quick gestures and flair for performance distract your opponent, leaving it vulnerable to your follow-up attacks. You (action: Feint) against an opponent within the required weapon's first range increment, rather than an opponent within melee reach. If you succeed, the foe is flat-footed against your melee and ranged attacks, rather than only your melee attacks. On a critical failure, you're flat-footed against the target's melee and ranged attacks, rather than only its melee attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

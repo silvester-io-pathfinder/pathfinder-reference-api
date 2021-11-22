@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8662b423-cdbe-4e43-8e77-5f9938bf4496"), Type = TextBlockType.Text, Text = "You’ve built tools into your innovation so you can access and use them easily. When you take this feat, choose up to two sets of tools you own, such as (item: thieves’ tools) or (item: healer’s tools), that weigh a total of 2 Bulk or less. These tools become part of your innovation. The innovation’s Bulk doesn’t increase from this addition. As long as you are wielding, wearing, or adjacent to your innovation, you have the same quick access to these tools as the tools you are wearing, and they don’t count against the usual limit of tools you can wear." };
+            yield return new TextBlock { Id = Guid.Parse("8662b423-cdbe-4e43-8e77-5f9938bf4496"), Type = TextBlockType.Text, Text = "You've built tools into your innovation so you can access and use them easily. When you take this feat, choose up to two sets of tools you own, such as (item: thieves' tools) or (item: healer's tools), that weigh a total of 2 Bulk or less. These tools become part of your innovation. The innovation's Bulk doesn't increase from this addition. As long as you are wielding, wearing, or adjacent to your innovation, you have the same quick access to these tools as the tools you are wearing, and they don't count against the usual limit of tools you can wear." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

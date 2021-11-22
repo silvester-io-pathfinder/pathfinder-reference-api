@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("be99c269-5795-40aa-b766-d1c271946226"), Type = TextBlockType.Text, Text = "You fill the creature’s mind with a terrifying vision out of its nightmares. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("be99c269-5795-40aa-b766-d1c271946226"), Type = TextBlockType.Text, Text = "You fill the creature's mind with a terrifying vision out of its nightmares. The target must attempt a Will save." };
             yield return new TextBlock { Id = Guid.Parse("5d0a6d19-7b6f-4623-aaea-cccccbcffb4a"), Type = TextBlockType.Text, Text = "If the target is unconscious when you Cast this Spell on it, it immediately wakes up before attempting its save, and if it fails its save, it gains the fleeing condition for 1 round in addition to the effects noted above." };
         }
 

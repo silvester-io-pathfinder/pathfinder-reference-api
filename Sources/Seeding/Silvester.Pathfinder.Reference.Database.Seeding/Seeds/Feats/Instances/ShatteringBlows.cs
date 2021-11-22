@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("93290b20-1634-4134-a616-5c0c2794cd79"), Type = TextBlockType.Text, Text = "Your forceful blows shatter objects with ease. While you are raging, your melee (action: Strikes | Strike) ignore 5 points of an object’s Hardness. If you have the devastator class feature, you instead ignore 10 points of an object’s Hardness." };
+            yield return new TextBlock { Id = Guid.Parse("93290b20-1634-4134-a616-5c0c2794cd79"), Type = TextBlockType.Text, Text = "Your forceful blows shatter objects with ease. While you are raging, your melee (action: Strikes | Strike) ignore 5 points of an object's Hardness. If you have the devastator class feature, you instead ignore 10 points of an object's Hardness." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

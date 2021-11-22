@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cf5e5cf8-c7fa-4623-ba92-f70fe8cbe8b1"), Type = TextBlockType.Text, Text = "You make a weapon unbearable to hold. Attempt an Athletics check to (action: Disarm) a target creature. You don’t need to have a hand free to make this (action: Disarm) attempt. If the (action: Disarm) attempt succeeds, the target takes 4d6 fire damage unless it drops the weapon, and on a critical success, it takes 4d6 fire damage and drops the weapon. If you’re legendary in Athletics, this increases to 8d6 fire damage." };
+            yield return new TextBlock { Id = Guid.Parse("cf5e5cf8-c7fa-4623-ba92-f70fe8cbe8b1"), Type = TextBlockType.Text, Text = "You make a weapon unbearable to hold. Attempt an Athletics check to (action: Disarm) a target creature. You don't need to have a hand free to make this (action: Disarm) attempt. If the (action: Disarm) attempt succeeds, the target takes 4d6 fire damage unless it drops the weapon, and on a critical success, it takes 4d6 fire damage and drops the weapon. If you're legendary in Athletics, this increases to 8d6 fire damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

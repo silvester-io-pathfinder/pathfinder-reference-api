@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f83e1342-21a1-46ab-83b4-b3e5e01d4220"), Type = TextBlockType.Text, Text = "Once you’ve locked on to a target, little can obscure your aim. Make a ranged weapon (action: Strike) against the required target. This (action: Strike) ignores the target’s concealed condition and reduces the flat check for the hidden condition from 11 to 5." };
+            yield return new TextBlock { Id = Guid.Parse("f83e1342-21a1-46ab-83b4-b3e5e01d4220"), Type = TextBlockType.Text, Text = "Once you've locked on to a target, little can obscure your aim. Make a ranged weapon (action: Strike) against the required target. This (action: Strike) ignores the target's concealed condition and reduces the flat check for the hidden condition from 11 to 5." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

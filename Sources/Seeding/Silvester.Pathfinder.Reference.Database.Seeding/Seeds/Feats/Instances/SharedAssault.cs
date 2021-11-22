@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ac4fb8eb-9761-424a-9de6-7bd0486557d6"), Type = TextBlockType.Text, Text = "In the triumph of battle, you can share the glory with another ally. When the ally you chose for (feat: Courageous Assault) critically succeeds at the (action: Strike) granted by that action, another ally affected by your (spell: inspire courage) composition spell can immediately use a reaction to make a melee (action: Strike). Since the second ally wasn’t the ally you chose for (feat: Courageous Assault), this effect doesn’t continue to a third ally, even if the second ally also critically succeeds at their (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("ac4fb8eb-9761-424a-9de6-7bd0486557d6"), Type = TextBlockType.Text, Text = "In the triumph of battle, you can share the glory with another ally. When the ally you chose for (feat: Courageous Assault) critically succeeds at the (action: Strike) granted by that action, another ally affected by your (spell: inspire courage) composition spell can immediately use a reaction to make a melee (action: Strike). Since the second ally wasn't the ally you chose for (feat: Courageous Assault), this effect doesn't continue to a third ally, even if the second ally also critically succeeds at their (action: Strike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

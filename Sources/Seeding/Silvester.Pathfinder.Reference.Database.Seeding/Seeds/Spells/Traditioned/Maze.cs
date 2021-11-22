@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("55c2746d-8954-4b1a-a790-fe3b793983a2"), Type = TextBlockType.Text, Text = "You transport the target into an extradimensional maze of eldritch origin and trap it there. Once each turn, the target can spend 1 action to attempt a Survival check or Perception check against your spell DC to escape the maze. The possible outcomes are as follows." };
-            yield return new TextBlock { Id = Guid.Parse("ebd83dab-97c8-4aaf-acaa-cbcc9577830d"), Type = TextBlockType.Text, Text = "Teleportation magic doesn’t help the creature escape unless the magic can transport across planes, such as plane shift. When the spell ends, either because the target escaped or the duration ran out, the target returns to the space it occupied when it was banished, or to the nearest space if the original is now filled." };
+            yield return new TextBlock { Id = Guid.Parse("ebd83dab-97c8-4aaf-acaa-cbcc9577830d"), Type = TextBlockType.Text, Text = "Teleportation magic doesn't help the creature escape unless the magic can transport across planes, such as plane shift. When the spell ends, either because the target escaped or the duration ran out, the target returns to the space it occupied when it was banished, or to the nearest space if the original is now filled." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

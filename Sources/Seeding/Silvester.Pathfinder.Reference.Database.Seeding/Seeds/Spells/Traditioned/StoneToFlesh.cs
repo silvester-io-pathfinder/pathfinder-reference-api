@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9374ed73-e410-426d-9175-e04b4237a7b9"), Type = TextBlockType.Text, Text = "Manipulating the fundamental particles of matter, you convert stone into flesh and blood. You restore a petrified creature to its normal state or transform a stone object into a mass of inert flesh (without stone’s Hardness) in roughly the same shape." };
+            yield return new TextBlock { Id = Guid.Parse("9374ed73-e410-426d-9175-e04b4237a7b9"), Type = TextBlockType.Text, Text = "Manipulating the fundamental particles of matter, you convert stone into flesh and blood. You restore a petrified creature to its normal state or transform a stone object into a mass of inert flesh (without stone's Hardness) in roughly the same shape." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

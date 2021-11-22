@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9d46462c-b73e-4733-ade8-587ac5a987e3"), Type = TextBlockType.Text, Text = "You lob bombs unerringly, despite obstructions or distance. When you throw an alchemical item with the (trait: bomb) trait, its range increment increases to 60 feet, you reduce any circumstance bonus to the target’s AC from cover by 1, and you automatically succeed at the flat check when targeting a concealed creature." };
+            yield return new TextBlock { Id = Guid.Parse("9d46462c-b73e-4733-ade8-587ac5a987e3"), Type = TextBlockType.Text, Text = "You lob bombs unerringly, despite obstructions or distance. When you throw an alchemical item with the (trait: bomb) trait, its range increment increases to 60 feet, you reduce any circumstance bonus to the target's AC from cover by 1, and you automatically succeed at the flat check when targeting a concealed creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

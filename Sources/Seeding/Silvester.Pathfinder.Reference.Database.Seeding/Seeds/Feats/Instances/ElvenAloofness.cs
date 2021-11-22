@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cf4f376e-da80-4df5-8acb-d8337901c37d"), Type = TextBlockType.Text, Text = "As much as you might care for them, you’ve come to terms with the ephemeral nature of non-elves, and it makes their threats feel less troublesome. If a non-elf rolls a failure on a check to (action: Coerce) you using Intimidation, it gets a critical failure instead (and thus can’t try to (action: Coerce) you again for 1 week). When a non-elf attempts to (action: Demoralize) you, you become temporarily immune for 1 day, instead of 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("cf4f376e-da80-4df5-8acb-d8337901c37d"), Type = TextBlockType.Text, Text = "As much as you might care for them, you've come to terms with the ephemeral nature of non-elves, and it makes their threats feel less troublesome. If a non-elf rolls a failure on a check to (action: Coerce) you using Intimidation, it gets a critical failure instead (and thus can't try to (action: Coerce) you again for 1 week). When a non-elf attempts to (action: Demoralize) you, you become temporarily immune for 1 day, instead of 10 minutes." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

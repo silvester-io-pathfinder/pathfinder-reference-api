@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4717edeb-aba8-497a-86bc-6cf874d52227"), Type = TextBlockType.Text, Text = "You become familiar with using your weapons both in and out of water. Whenever you critically hit using an azarketi weapon or one of the weapons listed in (feat: Azarketi Weapon Familiarity), you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("4717edeb-aba8-497a-86bc-6cf874d52227"), Type = TextBlockType.Text, Text = "You become familiar with using your weapons both in and out of water. Whenever you critically hit using an azarketi weapon or one of the weapons listed in (feat: Azarketi Weapon Familiarity), you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

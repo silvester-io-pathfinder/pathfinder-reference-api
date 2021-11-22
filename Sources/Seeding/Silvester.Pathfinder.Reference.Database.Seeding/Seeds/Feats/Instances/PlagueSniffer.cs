@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d296eed-25a4-47d4-a04a-bd966325bdea"), Type = TextBlockType.Text, Text = "You can sniff out the pungent tang of disease. When you detect a creature by scent, you can also detect if that creature is suffering from a disease at a non-carrier state. If the disease is particularly subtle, you might need to attempt a Perception check against the disease’s DC (subject to the GM’s discretion)." };
+            yield return new TextBlock { Id = Guid.Parse("4d296eed-25a4-47d4-a04a-bd966325bdea"), Type = TextBlockType.Text, Text = "You can sniff out the pungent tang of disease. When you detect a creature by scent, you can also detect if that creature is suffering from a disease at a non-carrier state. If the disease is particularly subtle, you might need to attempt a Perception check against the disease's DC (subject to the GM's discretion)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

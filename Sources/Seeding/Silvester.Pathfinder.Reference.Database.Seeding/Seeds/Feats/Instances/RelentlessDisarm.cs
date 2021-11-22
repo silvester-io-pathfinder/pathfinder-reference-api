@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6cb9b18-1b42-45ba-9715-422a2ca2de20"), Type = TextBlockType.Text, Text = "When you succeed, but don’t critically succeed, at a check to (action: Disarm) a creature, your circumstance bonus to further checks to (action: Disarm) that creature is +4 instead of +2. Other creatures gain only the normal bonus." };
+            yield return new TextBlock { Id = Guid.Parse("a6cb9b18-1b42-45ba-9715-422a2ca2de20"), Type = TextBlockType.Text, Text = "When you succeed, but don't critically succeed, at a check to (action: Disarm) a creature, your circumstance bonus to further checks to (action: Disarm) that creature is +4 instead of +2. Other creatures gain only the normal bonus." };
             yield return new TextBlock { Id = Guid.Parse("6b34bbce-5618-47fb-9b32-d686f86cfbaa"), Type = TextBlockType.Text, Text = "When you critically succeed at a (action: Disarm) check, you can immediately (action: Demoralize) your target as a reaction." };
         }
 

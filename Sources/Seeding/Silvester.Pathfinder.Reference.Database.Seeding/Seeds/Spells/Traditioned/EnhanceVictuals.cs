@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2b92456-bacd-4cd6-be7e-dc83cf12d700"), Type = TextBlockType.Text, Text = "You transform the target into delicious fare, changing water into wine or another fine beverage or enhancing the food’s taste and ingredients to make it a gourmet treat." };
+            yield return new TextBlock { Id = Guid.Parse("e2b92456-bacd-4cd6-be7e-dc83cf12d700"), Type = TextBlockType.Text, Text = "You transform the target into delicious fare, changing water into wine or another fine beverage or enhancing the food's taste and ingredients to make it a gourmet treat." };
             yield return new TextBlock { Id = Guid.Parse("da3c267d-086c-477d-b09d-93c9f656beb4"), Type = TextBlockType.Text, Text = "Prior to the transformation, the spell attempts to counteract any poisons in the food or water. The food turns back to normal if not consumed before the duration expires, though any poisons that were counteracted are still gone." };
         }
 

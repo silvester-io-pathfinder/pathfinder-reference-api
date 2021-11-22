@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2476bb81-fb12-4ef1-8022-0963324aa340"), Type = TextBlockType.Text, Text = "Because you know your mind is superior, you scoff at anyone who would alter your mental state—but this hubris gets the better of you when you’re wrong. You gain a +2 circumstance bonus to saves against (trait: mental) effects. If you succeed at a save against a mental effect, you critically succeed instead; similarly, if you fail at a save against a mental effect, you critically fail instead." };
+            yield return new TextBlock { Id = Guid.Parse("2476bb81-fb12-4ef1-8022-0963324aa340"), Type = TextBlockType.Text, Text = "Because you know your mind is superior, you scoff at anyone who would alter your mental state—but this hubris gets the better of you when you're wrong. You gain a +2 circumstance bonus to saves against (trait: mental) effects. If you succeed at a save against a mental effect, you critically succeed instead; similarly, if you fail at a save against a mental effect, you critically fail instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

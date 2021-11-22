@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6bdc45a4-a315-4a5f-854a-d45c94588ba4"), Type = TextBlockType.Text, Text = "You’ve discovered how to add the magic of dragons to your tradition. Add the draconic bloodline’s granted spells to your spell list; you must still learn them or add them to your repertoire as normal. These spells are (spell: shield), (spell: true strike), (spell: resist energy), (spell: haste), (spell: spell immunity), (spell: chromatic wall), (spell: dragon form), (spell: mask of terror), (spell: prismatic wall), and (spell: overwhelming presence)." };
+            yield return new TextBlock { Id = Guid.Parse("6bdc45a4-a315-4a5f-854a-d45c94588ba4"), Type = TextBlockType.Text, Text = "You've discovered how to add the magic of dragons to your tradition. Add the draconic bloodline's granted spells to your spell list; you must still learn them or add them to your repertoire as normal. These spells are (spell: shield), (spell: true strike), (spell: resist energy), (spell: haste), (spell: spell immunity), (spell: chromatic wall), (spell: dragon form), (spell: mask of terror), (spell: prismatic wall), and (spell: overwhelming presence)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

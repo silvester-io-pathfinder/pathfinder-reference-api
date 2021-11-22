@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a4622bed-4770-416b-8cd0-2010c462b04a"), Type = TextBlockType.Text, Text = "You&#39;ve traversed enough untamed wilderness to gain an intuitive understanding of the dangers that exist in such places. Your extensive familiarity means you sometimes notice perils even when you&#39;re not trying to. Even if you aren&#39;t (action: Searching | Search) in exploration mode, you can attempt a check to find environmental hazards that normally require you to (action: Search) for them. You still need to meet any other requirements to find a particular hazard." };
+            yield return new TextBlock { Id = Guid.Parse("a4622bed-4770-416b-8cd0-2010c462b04a"), Type = TextBlockType.Text, Text = "You've traversed enough untamed wilderness to gain an intuitive understanding of the dangers that exist in such places. Your extensive familiarity means you sometimes notice perils even when you're not trying to. Even if you aren't (action: Searching | Search) in exploration mode, you can attempt a check to find environmental hazards that normally require you to (action: Search) for them. You still need to meet any other requirements to find a particular hazard." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

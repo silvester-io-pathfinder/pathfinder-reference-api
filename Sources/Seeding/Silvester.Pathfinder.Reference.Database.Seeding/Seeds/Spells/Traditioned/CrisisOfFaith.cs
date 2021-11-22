@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("06dc06f4-c454-423d-9791-25b2e2fb90e3"), Type = Utilities.Text.TextBlockType.Text, Text = "You assault the target’s faith, riddling the creature with doubt and mental turmoil that deal 6d6 mental damage, or 6d8 mental damage if it can cast divine spells. The effects are determined by its Will save." };
+            yield return new TextBlock { Id = Guid.Parse("06dc06f4-c454-423d-9791-25b2e2fb90e3"), Type = Utilities.Text.TextBlockType.Text, Text = "You assault the target's faith, riddling the creature with doubt and mental turmoil that deal 6d6 mental damage, or 6d8 mental damage if it can cast divine spells. The effects are determined by its Will save." };
             yield return new TextBlock { Id = Guid.Parse("858468ee-88f6-495c-8cf5-542d9209b061"), Type = Utilities.Text.TextBlockType.Text, Text = "To many deities, casting this spell on a follower of your own deity without significant cause is anathema." }; 
         }
 
@@ -39,8 +39,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("6a073760-7f3c-41ea-adbc-276607b88ece"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes half damage.",
-                Failure = "The target takes full damage; if the target can cast divine spells, it’s stupefied 1 for 1 round.",
-                CriticalFailure = "The target takes double damage, is stupefied 1 for 1 round, and can’t cast divine spells for 1 round."
+                Failure = "The target takes full damage; if the target can cast divine spells, it's stupefied 1 for 1 round.",
+                CriticalFailure = "The target takes double damage, is stupefied 1 for 1 round, and can't cast divine spells for 1 round."
             };
         }
 

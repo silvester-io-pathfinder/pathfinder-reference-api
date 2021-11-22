@@ -33,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalElixir
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("83785b35-3536-4517-8ad1-e06c530cba25"), Text = "This tingly solution increases the elasticity and contraction of your leg muscles. For 1 minute after drinking this elixir, you can High Jump or Long Jump as a single action instead of 2 actions. If you do, you don’t perform the initial Stride (nor do you fail if you don’t Stride 10 feet)." };
+            yield return new TextBlock { Id = Guid.Parse("83785b35-3536-4517-8ad1-e06c530cba25"), Text = "This tingly solution increases the elasticity and contraction of your leg muscles. For 1 minute after drinking this elixir, you can High Jump or Long Jump as a single action instead of 2 actions. If you do, you don't perform the initial Stride (nor do you fail if you don't Stride 10 feet)." };
         }
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()

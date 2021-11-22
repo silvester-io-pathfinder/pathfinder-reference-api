@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("50f5918f-2d7e-4c4f-9a62-c1941b6f3ea2"), Type = TextBlockType.Text, Text = "You swing a weapon you’re holding, and the weapon magically multiplies into duplicates that swipe at all creatures in either a cone or an emanation. This flurry deals four dice of damage to creatures in the area. This damage has the same type as the weapon and uses the same die size. Determine the die size as if you were attacking with the weapon; for instance, if you were wielding a two-hand weapon in both hands, you’d use its two-hand damage die." };
+            yield return new TextBlock { Id = Guid.Parse("50f5918f-2d7e-4c4f-9a62-c1941b6f3ea2"), Type = TextBlockType.Text, Text = "You swing a weapon you're holding, and the weapon magically multiplies into duplicates that swipe at all creatures in either a cone or an emanation. This flurry deals four dice of damage to creatures in the area. This damage has the same type as the weapon and uses the same die size. Determine the die size as if you were attacking with the weapon; for instance, if you were wielding a two-hand weapon in both hands, you'd use its two-hand damage die." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The target takes half damage.",
                 Failure = "The target takes full damage.",
-                CriticalFailure = "The target takes double damage and is subject to the weapon’s critical specialization effect."
+                CriticalFailure = "The target takes double damage and is subject to the weapon's critical specialization effect."
             };
         }
 

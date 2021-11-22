@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b6104694-07f5-4cb4-9727-e109e1c51b1f"), Type = TextBlockType.Text, Text = "You reveal a glimpse of the impossible conflicts between the divine anathema behind your curse, forcing you to reckon with another’s conflicts as well. You and the target each take 9d6 mental damage with a basic Will save, and the target is stunned 1 if it critically fails its save. You get a degree of success one better than you rolled for your saving throw." };
+            yield return new TextBlock { Id = Guid.Parse("b6104694-07f5-4cb4-9727-e109e1c51b1f"), Type = TextBlockType.Text, Text = "You reveal a glimpse of the impossible conflicts between the divine anathema behind your curse, forcing you to reckon with another's conflicts as well. You and the target each take 9d6 mental damage with a basic Will save, and the target is stunned 1 if it critically fails its save. You get a degree of success one better than you rolled for your saving throw." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

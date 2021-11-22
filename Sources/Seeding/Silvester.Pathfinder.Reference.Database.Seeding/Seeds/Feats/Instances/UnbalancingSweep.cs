@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2771c06f-6ee7-4320-8857-26bb925916d1"), Type = TextBlockType.Text, Text = "You make a great sweep about yourself, knocking creatures off their feet and away from you. Choose up to three adjacent foes and choose whether to (action: Shove) or (action: Trip) all three of them. Whichever of the two options you choose, roll a separate Athletics check against each foe, performing the same action against each foe. Each attempt counts toward your multiple attack penalty, but don’t increase your penalty until you have made all the attempts." };
+            yield return new TextBlock { Id = Guid.Parse("2771c06f-6ee7-4320-8857-26bb925916d1"), Type = TextBlockType.Text, Text = "You make a great sweep about yourself, knocking creatures off their feet and away from you. Choose up to three adjacent foes and choose whether to (action: Shove) or (action: Trip) all three of them. Whichever of the two options you choose, roll a separate Athletics check against each foe, performing the same action against each foe. Each attempt counts toward your multiple attack penalty, but don't increase your penalty until you have made all the attempts." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

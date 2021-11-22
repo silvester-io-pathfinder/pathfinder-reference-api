@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Stats.Instances
                 Id = ID,
                 Name = "Constitution",
                 Abbreviation = "CON", 
-                Description = "Constitution measures your character’s overall health and stamina. Constitution is an important statistic for all characters, especially those who fight in close combat.  Your Constitution modifier is added to your Hit Points and Fortitude saving throws." 
+                Description = "Constitution measures your character's overall health and stamina. Constitution is an important statistic for all characters, especially those who fight in close combat.  Your Constitution modifier is added to your Hit Points and Fortitude saving throws." 
             };
         }
     }

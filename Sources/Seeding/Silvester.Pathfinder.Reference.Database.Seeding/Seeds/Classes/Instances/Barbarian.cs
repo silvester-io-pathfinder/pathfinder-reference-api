@@ -17,9 +17,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
                 BaseHealth = 12,
 
                 Description = "Rage consumes you in battle. You delight in wreaking havoc and using powerful weapons to carve through your enemies, relying on astonishing durability without needing complicated techniques or rigid training. Your rages draw upon a vicious instinct, which you might associate with an animal, a spirit, or some part of yourself. To many barbarians, brute force is a hammer and every problem looks like a nail, whereas others try to hold back the storm of emotions inside them and release their rage only when it matters most.",
-                DuringCombatEncounters = "You summon your rage and rush to the front lines to smash your way through. Offense is your best defense—you’ll need to drop foes before they can exploit your relatively low defenses.",
-                DuringSocialEncounters = "You use intimidation to get what you need, especially when gentler persuasion can’t get the job done.",
-                WhileExploring = "You look out for danger, ready to rush headfirst into battle in an instant. You climb the challenging rock wall and drop a rope for others to follow, and you wade into the risky currents to reach the hidden switch beneath the water’s surface. If something needs breaking, you’re up to the task!",
+                DuringCombatEncounters = "You summon your rage and rush to the front lines to smash your way through. Offense is your best defense—you'll need to drop foes before they can exploit your relatively low defenses.",
+                DuringSocialEncounters = "You use intimidation to get what you need, especially when gentler persuasion can't get the job done.",
+                WhileExploring = "You look out for danger, ready to rush headfirst into battle in an instant. You climb the challenging rock wall and drop a rope for others to follow, and you wade into the risky currents to reach the hidden switch beneath the water's surface. If something needs breaking, you're up to the task!",
                 InDowntime = "You might head to a tavern to carouse, build up the fearsome legend of your mighty deeds, or recruit followers to become a warlord in your own right.",
 
                 ClassDcProficiencyId = Proficiencies.Instances.Trained.ID,

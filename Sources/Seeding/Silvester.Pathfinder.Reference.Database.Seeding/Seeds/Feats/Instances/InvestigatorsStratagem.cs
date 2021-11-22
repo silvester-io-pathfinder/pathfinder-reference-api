@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("716549f2-10d2-43ce-b92e-4d815f09369d"), Type = TextBlockType.Text, Text = "You play out battles in your head, allowing you to strike when the time is right. You gain the (feat: Devise a Stratagem) action; however, when you substitute its result for your attack roll, you can’t use your Intelligence modifier in place of your Strength or Dexterity modifier. You also can’t use your Intelligence modifier on other rolls from abilities that expand (feat: Devise a Stratagem), such as the (feat: Athletic Strategist) feat." };
+            yield return new TextBlock { Id = Guid.Parse("716549f2-10d2-43ce-b92e-4d815f09369d"), Type = TextBlockType.Text, Text = "You play out battles in your head, allowing you to strike when the time is right. You gain the (feat: Devise a Stratagem) action; however, when you substitute its result for your attack roll, you can't use your Intelligence modifier in place of your Strength or Dexterity modifier. You also can't use your Intelligence modifier on other rolls from abilities that expand (feat: Devise a Stratagem), such as the (feat: Athletic Strategist) feat." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

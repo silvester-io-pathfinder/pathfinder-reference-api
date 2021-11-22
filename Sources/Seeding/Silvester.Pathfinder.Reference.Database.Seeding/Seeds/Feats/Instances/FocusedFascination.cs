@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d27366f-ea68-456d-9cc6-0f44cecff9e0"), Type = TextBlockType.Text, Text = "When you use (feat: Fascinating Performance) in a combat encounter, you need only a success, rather than a critical success, to fascinate your target. This works only if you’re attempting to fascinate one target. For example, if you were an expert in Performance, you could choose to target multiple creatures normally or target one creature and fascinate it on a success." };
+            yield return new TextBlock { Id = Guid.Parse("4d27366f-ea68-456d-9cc6-0f44cecff9e0"), Type = TextBlockType.Text, Text = "When you use (feat: Fascinating Performance) in a combat encounter, you need only a success, rather than a critical success, to fascinate your target. This works only if you're attempting to fascinate one target. For example, if you were an expert in Performance, you could choose to target multiple creatures normally or target one creature and fascinate it on a success." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

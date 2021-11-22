@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d45fd659-908e-480c-8e5a-c430c0d83f78"), Type = TextBlockType.Text, Text = "Exchanging material energy with that of the Shadow Plane, you transform the triggering spell into a partially illusory version of itself. Attempt to counteract the target spell. If the attempt is successful, any creatures that would be damaged by the spell instead take only half as much damage, but the spell otherwise works as normal. Treat shadow siphon’s counteract level as 2 higher for this attempt." };
+            yield return new TextBlock { Id = Guid.Parse("d45fd659-908e-480c-8e5a-c430c0d83f78"), Type = TextBlockType.Text, Text = "Exchanging material energy with that of the Shadow Plane, you transform the triggering spell into a partially illusory version of itself. Attempt to counteract the target spell. If the attempt is successful, any creatures that would be damaged by the spell instead take only half as much damage, but the spell otherwise works as normal. Treat shadow siphon's counteract level as 2 higher for this attempt." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fe58a599-6f78-4aab-97d0-40a49f5d5cf5"), Type = TextBlockType.Text, Text = "The cave gecko snaps out its tongue, attempting to pull a foe within 10 feet toward it. The gecko attempts an Athletics check against the foe’s Fortitude DC. On a success, the cave gecko pulls the foe next to it. This movement is forced movement. On a critical success, the foe is also grabbed until the beginning of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("fe58a599-6f78-4aab-97d0-40a49f5d5cf5"), Type = TextBlockType.Text, Text = "The cave gecko snaps out its tongue, attempting to pull a foe within 10 feet toward it. The gecko attempts an Athletics check against the foe's Fortitude DC. On a success, the cave gecko pulls the foe next to it. This movement is forced movement. On a critical success, the foe is also grabbed until the beginning of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

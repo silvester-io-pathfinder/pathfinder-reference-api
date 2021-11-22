@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("234f6717-ae66-4925-be98-475244721b73"), Type = TextBlockType.Text, Text = "You interpose yourself between an attacker and your mount, defending your mount from harm. Use your own AC against the triggering attack instead your mount’s AC. If the triggering attack hits, you take the effects of the attack instead of your mount." };
+            yield return new TextBlock { Id = Guid.Parse("234f6717-ae66-4925-be98-475244721b73"), Type = TextBlockType.Text, Text = "You interpose yourself between an attacker and your mount, defending your mount from harm. Use your own AC against the triggering attack instead your mount's AC. If the triggering attack hits, you take the effects of the attack instead of your mount." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

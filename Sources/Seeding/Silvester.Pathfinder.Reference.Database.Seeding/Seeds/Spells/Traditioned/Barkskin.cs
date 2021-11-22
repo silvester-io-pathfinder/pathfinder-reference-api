@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d60b56d5-b4f6-4bb9-927b-5c26ebceaa33"), Type = Utilities.Text.TextBlockType.Text, Text = "The target’s skin becomes covered in bark. The target gains resistance 2 to bludgeoning and piercing damage and weakness 3 to fire. After the target takes fire damage, it can Dismiss the spell as a free action triggered by taking the damage; doing so doesn’t reduce the fire damage the target was dealt." };
+            yield return new TextBlock { Id = Guid.Parse("d60b56d5-b4f6-4bb9-927b-5c26ebceaa33"), Type = Utilities.Text.TextBlockType.Text, Text = "The target's skin becomes covered in bark. The target gains resistance 2 to bludgeoning and piercing damage and weakness 3 to fire. After the target takes fire damage, it can Dismiss the spell as a free action triggered by taking the damage; doing so doesn't reduce the fire damage the target was dealt." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

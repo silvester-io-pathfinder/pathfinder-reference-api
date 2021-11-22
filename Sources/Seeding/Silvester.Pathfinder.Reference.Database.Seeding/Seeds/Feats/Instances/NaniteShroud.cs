@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0c07f703-bc46-46f0-a87e-5358a0fbe180"), Type = TextBlockType.Text, Text = "Your nanites fly out of your body, swarming around you in a cloud. You become concealed for a number of rounds equal to half your level. You can’t use this concealment to (action: Hide) or (action: Sneak), as normal for concealment that makes your position obvious. While Nanite Shroud is active, you can’t use other abilities that require the use of your nanites." };
+            yield return new TextBlock { Id = Guid.Parse("0c07f703-bc46-46f0-a87e-5358a0fbe180"), Type = TextBlockType.Text, Text = "Your nanites fly out of your body, swarming around you in a cloud. You become concealed for a number of rounds equal to half your level. You can't use this concealment to (action: Hide) or (action: Sneak), as normal for concealment that makes your position obvious. While Nanite Shroud is active, you can't use other abilities that require the use of your nanites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

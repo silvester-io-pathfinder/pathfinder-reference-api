@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d3a89607-1e05-4551-bf1b-2d9005c285db"), Type = TextBlockType.Text, Text = "Your internal organs and blood vessels have shifted and changed, and even you don’t know precisely where in your body they are. You gain resistance to precision damage equal to 2 + your number of class feats from the oozemorph archetype. The DC of your flat checks to recover from persistent bleed damage is 13, rather than 15." };
+            yield return new TextBlock { Id = Guid.Parse("d3a89607-1e05-4551-bf1b-2d9005c285db"), Type = TextBlockType.Text, Text = "Your internal organs and blood vessels have shifted and changed, and even you don't know precisely where in your body they are. You gain resistance to precision damage equal to 2 + your number of class feats from the oozemorph archetype. The DC of your flat checks to recover from persistent bleed damage is 13, rather than 15." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

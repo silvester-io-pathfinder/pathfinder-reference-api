@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5d7c2d67-6eba-4587-ae4a-edace360fcec"), Type = TextBlockType.Text, Text = "Your deity sends you a vision of faith to steel you against mental attacks. Reroll the triggering saving throw with a +2 circumstance bonus. You must use the second result, even if it’s worse." };
+            yield return new TextBlock { Id = Guid.Parse("5d7c2d67-6eba-4587-ae4a-edace360fcec"), Type = TextBlockType.Text, Text = "Your deity sends you a vision of faith to steel you against mental attacks. Reroll the triggering saving throw with a +2 circumstance bonus. You must use the second result, even if it's worse." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

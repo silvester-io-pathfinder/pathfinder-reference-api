@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("23bb74fd-8199-4b3f-be76-c1b0d251411d"), Type = TextBlockType.Text, Text = "You’ve spent enough time helping your comrades equip medium and heavy armor that you spread your own expertise to those armors as well. If you have expert proficiency in any armor or unarmored defense, you also gain expert proficiency in medium and heavy armor." };
+            yield return new TextBlock { Id = Guid.Parse("23bb74fd-8199-4b3f-be76-c1b0d251411d"), Type = TextBlockType.Text, Text = "You've spent enough time helping your comrades equip medium and heavy armor that you spread your own expertise to those armors as well. If you have expert proficiency in any armor or unarmored defense, you also gain expert proficiency in medium and heavy armor." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

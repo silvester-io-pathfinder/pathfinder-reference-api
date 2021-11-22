@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8669b621-a19b-4b74-8b99-57beba49e92d"), Type = TextBlockType.Text, Text = "You and the targets are instantly transported to any location within range, as long as you can identify the location precisely both by its position relative to your starting position and by its appearance (or other identifying features). Incorrect knowledge of the location’s appearance usually causes the spell to fail, but it could instead lead to teleporting to an unwanted location or some other unusual mishap determined by the GM. Teleport is not precise over great distances. The targets appear at a distance from the intended destination equal to roughly 1 percent of the total distance traveled, in a direction determined by the GM. For short journeys, this lack of precision is irrelevant, but for long distances this could be up to 1 mile." };
+            yield return new TextBlock { Id = Guid.Parse("8669b621-a19b-4b74-8b99-57beba49e92d"), Type = TextBlockType.Text, Text = "You and the targets are instantly transported to any location within range, as long as you can identify the location precisely both by its position relative to your starting position and by its appearance (or other identifying features). Incorrect knowledge of the location's appearance usually causes the spell to fail, but it could instead lead to teleporting to an unwanted location or some other unusual mishap determined by the GM. Teleport is not precise over great distances. The targets appear at a distance from the intended destination equal to roughly 1 percent of the total distance traveled, in a direction determined by the GM. For short journeys, this lack of precision is irrelevant, but for long distances this could be up to 1 mile." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -58,7 +58,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("088eaa01-7a50-417b-8fce-5daa5083dc3e"), Type = TextBlockType.Text, Text = "You and the other targets can travel to any location on another planet within the same solar system. Assuming you have accurate knowledge of the location’s position and appearance, you arrive on the new planet 100 miles off target." }
+                    new TextBlock { Id = Guid.Parse("088eaa01-7a50-417b-8fce-5daa5083dc3e"), Type = TextBlockType.Text, Text = "You and the other targets can travel to any location on another planet within the same solar system. Assuming you have accurate knowledge of the location's position and appearance, you arrive on the new planet 100 miles off target." }
                 }
             };
 

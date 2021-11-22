@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bd2e07d5-5c99-4934-9033-c4208643cc14"), Type = TextBlockType.Text, Text = "The target’s feet transform into fins, improving mobility in the water but reducing it on land. The target gains a swim Speed equal to its normal land Speed, but its land Speed becomes 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("bd2e07d5-5c99-4934-9033-c4208643cc14"), Type = TextBlockType.Text, Text = "The target's feet transform into fins, improving mobility in the water but reducing it on land. The target gains a swim Speed equal to its normal land Speed, but its land Speed becomes 5 feet." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -48,8 +48,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("d5fbd5d7-3c21-44af-8d83-6488e176c1be"),
-                CriticalSuccess = "Reduce the creature’s frightened value by 2.",
-                Success = "Reduce the creature’s frightened value by 1.",
+                CriticalSuccess = "Reduce the creature's frightened value by 2.",
+                Success = "Reduce the creature's frightened value by 1.",
                 
                  
             };

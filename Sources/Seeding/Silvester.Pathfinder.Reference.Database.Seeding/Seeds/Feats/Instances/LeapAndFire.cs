@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("420ebee3-21c8-477a-9d1f-ea44b7f0b53e"), Type = TextBlockType.Text, Text = "You’re quick enough to line up a shot even while diving to the ground. When you use your (feat: Hit the Dirt!) reaction, at any point during your (action: Leap) you can also make a ranged (action: Strike) with a loaded firearm or crossbow, targeting the creature whose attack triggered the reaction." };
+            yield return new TextBlock { Id = Guid.Parse("420ebee3-21c8-477a-9d1f-ea44b7f0b53e"), Type = TextBlockType.Text, Text = "You're quick enough to line up a shot even while diving to the ground. When you use your (feat: Hit the Dirt!) reaction, at any point during your (action: Leap) you can also make a ranged (action: Strike) with a loaded firearm or crossbow, targeting the creature whose attack triggered the reaction." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

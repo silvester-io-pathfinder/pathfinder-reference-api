@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ac896f8-e0f3-45ef-82c9-8a7841145b59"), Type = TextBlockType.Text, Text = "A life of evil has made you a nexus for your deity’s vile power. You’re continuously surrounded by a (spell: bane) spell with a spell level equal to half your level (rounded up). The radius is 15 feet, and you can’t increase it. You can (action: Dismiss) the spell; if you do, it returns automatically after 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("8ac896f8-e0f3-45ef-82c9-8a7841145b59"), Type = TextBlockType.Text, Text = "A life of evil has made you a nexus for your deity's vile power. You're continuously surrounded by a (spell: bane) spell with a spell level equal to half your level (rounded up). The radius is 15 feet, and you can't increase it. You can (action: Dismiss) the spell; if you do, it returns automatically after 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

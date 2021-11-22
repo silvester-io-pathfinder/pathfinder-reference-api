@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("2e280524-2382-4125-b3e5-0f4d96124c62"), Type = TextBlockType.Text, Text = "The creature instead grows to size Huge. The status bonus to melee damage is +4 and the creature’s reach increases by 10 feet (or 15 feet if the creature started out Tiny). The spell has no effect on a Huge or larger creature." }
+                    new TextBlock { Id = Guid.Parse("2e280524-2382-4125-b3e5-0f4d96124c62"), Type = TextBlockType.Text, Text = "The creature instead grows to size Huge. The status bonus to melee damage is +4 and the creature's reach increases by 10 feet (or 15 feet if the creature started out Tiny). The spell has no effect on a Huge or larger creature." }
                 }
             };
 

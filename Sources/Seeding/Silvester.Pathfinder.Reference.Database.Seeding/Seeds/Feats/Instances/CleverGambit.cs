@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e791a98e-a862-4b83-ad48-7e7140cf0804"), Type = TextBlockType.Text, Text = "Your battle tactics are aided by your assessment of your foes’ capabilities, allowing you to instantly adjust your movements to maximum advantage. You (action: Step) or (action: Stride); this movement doesn’t trigger reactions from the triggering creature." };
+            yield return new TextBlock { Id = Guid.Parse("e791a98e-a862-4b83-ad48-7e7140cf0804"), Type = TextBlockType.Text, Text = "Your battle tactics are aided by your assessment of your foes' capabilities, allowing you to instantly adjust your movements to maximum advantage. You (action: Step) or (action: Stride); this movement doesn't trigger reactions from the triggering creature." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

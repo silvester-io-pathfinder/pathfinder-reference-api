@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9ca020f9-debb-4d01-87dc-a17f6ba24436"), Type = TextBlockType.Text, Text = "You have an eye for angles and can find shots that others believe are impossible. When using (feat: Ricochet Shot), you can bounce your bullet off up to two solid surfaces within your weapon’s first range increment instead of just one." };
+            yield return new TextBlock { Id = Guid.Parse("9ca020f9-debb-4d01-87dc-a17f6ba24436"), Type = TextBlockType.Text, Text = "You have an eye for angles and can find shots that others believe are impossible. When using (feat: Ricochet Shot), you can bounce your bullet off up to two solid surfaces within your weapon's first range increment instead of just one." };
             yield return new TextBlock { Id = Guid.Parse("ce421db2-b6d6-4785-8a3c-150f76951e86"), Type = TextBlockType.Text, Text = "In addition, a creature is flat-footed the first time you attack it with a (feat: Ricochet Shot) during an encounter." };
         }
 

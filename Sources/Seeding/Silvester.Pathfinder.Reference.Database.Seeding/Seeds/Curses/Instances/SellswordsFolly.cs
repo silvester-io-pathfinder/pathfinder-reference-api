@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Curses.Instances
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3b1acf9a-6f81-4321-8c2f-9ac27a9cc810"), Type = TextBlockType.Text, Text = "Even the most experienced combat veteran becomes as reckless as a rookie when suffering from sellsword’s folly." };
+            yield return new TextBlock { Id = Guid.Parse("3b1acf9a-6f81-4321-8c2f-9ac27a9cc810"), Type = TextBlockType.Text, Text = "Even the most experienced combat veteran becomes as reckless as a rookie when suffering from sellsword's folly." };
         }
 
         public override SourcePage GetSourcePage()

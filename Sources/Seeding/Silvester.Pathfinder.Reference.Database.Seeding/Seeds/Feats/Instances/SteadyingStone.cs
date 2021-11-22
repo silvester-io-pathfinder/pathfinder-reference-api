@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4b8a1c67-6f75-470a-87d3-b9f00cce63d2"), Type = TextBlockType.Text, Text = "The earth has taught you how to remain unyielding and firm. If you roll a success on an Acrobatics check made to (action: Balance) on uneven ground composed of earth or rock, you get a critical success instead. As long as you remain on the ground, you gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to (action: Shove) or (action: Trip) you. This bonus also applies to saving throws against spells or effects that would attempt to knock you prone. If you’re a rock dwarf, this bonus increases to +3." };
+            yield return new TextBlock { Id = Guid.Parse("4b8a1c67-6f75-470a-87d3-b9f00cce63d2"), Type = TextBlockType.Text, Text = "The earth has taught you how to remain unyielding and firm. If you roll a success on an Acrobatics check made to (action: Balance) on uneven ground composed of earth or rock, you get a critical success instead. As long as you remain on the ground, you gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to (action: Shove) or (action: Trip) you. This bonus also applies to saving throws against spells or effects that would attempt to knock you prone. If you're a rock dwarf, this bonus increases to +3." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

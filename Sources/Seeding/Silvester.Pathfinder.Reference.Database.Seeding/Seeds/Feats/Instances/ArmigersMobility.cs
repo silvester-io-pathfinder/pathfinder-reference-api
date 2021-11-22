@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a0f5a2d9-95f5-4b89-b031-ca3f9250c924"), Type = TextBlockType.Text, Text = "You’ve learned how best to move in heavy armor. When wearing heavy armor, if you meet the Strength requirement, instead of reducing the movement penalty by 5 feet, you reduce the penalty by 10 feet (typically reducing the penalty to 0). If you are a dwarf with the (feat: Unburdened Iron) feat, increase your Speed by 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("a0f5a2d9-95f5-4b89-b031-ca3f9250c924"), Type = TextBlockType.Text, Text = "You've learned how best to move in heavy armor. When wearing heavy armor, if you meet the Strength requirement, instead of reducing the movement penalty by 5 feet, you reduce the penalty by 10 feet (typically reducing the penalty to 0). If you are a dwarf with the (feat: Unburdened Iron) feat, increase your Speed by 5 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

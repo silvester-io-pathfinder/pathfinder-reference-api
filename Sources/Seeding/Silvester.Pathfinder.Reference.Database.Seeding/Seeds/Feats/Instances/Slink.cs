@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("70ae8185-bfaf-4a4b-b4f6-bd89d2f3394e"), Type = TextBlockType.Text, Text = "You can move through gloom with the speed of darkness. You can move 5 feet farther when you take the (action: Sneak) action, up to your Speed. In addition, as long as you continue to use (action: Sneak) actions and succeed at your Stealth check, you don’t become observed if you end a (action: Sneak) action in dim light or darkness, as long as you have cover or greater cover or are concealed at the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("70ae8185-bfaf-4a4b-b4f6-bd89d2f3394e"), Type = TextBlockType.Text, Text = "You can move through gloom with the speed of darkness. You can move 5 feet farther when you take the (action: Sneak) action, up to your Speed. In addition, as long as you continue to use (action: Sneak) actions and succeed at your Stealth check, you don't become observed if you end a (action: Sneak) action in dim light or darkness, as long as you have cover or greater cover or are concealed at the end of your turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

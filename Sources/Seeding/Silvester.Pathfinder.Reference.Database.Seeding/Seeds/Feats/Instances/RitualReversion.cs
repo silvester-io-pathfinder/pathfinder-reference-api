@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("5fd86171-f4d7-4514-a839-9a765a6f0bf4"), Type = TextBlockType.Text, Text = "You can temporarily revert to a less conspicuous form without diminishing your senses." };
-            yield return new TextBlock { Id = Guid.Parse("f8076ac5-04e1-4a04-92fe-2fa14383709a"), Type = TextBlockType.Text, Text = "You take the form of an ordinary specimen of the type of plant or fungus that most closely resembles you, reverting to your body’s appearance just before your spirit joined with it. This otherwise has the effects of (spell: tree shape), except that your size remains Small." };
+            yield return new TextBlock { Id = Guid.Parse("f8076ac5-04e1-4a04-92fe-2fa14383709a"), Type = TextBlockType.Text, Text = "You take the form of an ordinary specimen of the type of plant or fungus that most closely resembles you, reverting to your body's appearance just before your spirit joined with it. This otherwise has the effects of (spell: tree shape), except that your size remains Small." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

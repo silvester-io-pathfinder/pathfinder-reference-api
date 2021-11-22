@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("fb8fcb88-0c4d-45f8-a5d3-2bc17bdc6f94"), Type = TextBlockType.Text, Text = "Your deity blesses base metals to transform them into precious materials. The target item transforms from its normal metal into cold iron, copper, gold, iron, silver, or steel (the details for these metals are found on pages 577–579). An item transmuted in this way deals damage according to its new material. For example, a steel sword transmuted to cold iron would deal additional damage to a creature with a weakness to cold iron." };
-            yield return new TextBlock { Id = Guid.Parse("d7cbecd5-384e-42ad-a688-5730e4a45f9b"), Type = TextBlockType.Text, Text = "This change is clearly magical and temporary, so the item’s monetary value doesn’t change; you couldn’t transmute copper coins to gold and use those coins to purchase something or as a cost for a spell." };
+            yield return new TextBlock { Id = Guid.Parse("d7cbecd5-384e-42ad-a688-5730e4a45f9b"), Type = TextBlockType.Text, Text = "This change is clearly magical and temporary, so the item's monetary value doesn't change; you couldn't transmute copper coins to gold and use those coins to purchase something or as a cost for a spell." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

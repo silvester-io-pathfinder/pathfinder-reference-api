@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponGroups.Ins
             {
                 Id = ID,
                 Name = "Bomb",
-                CriticalEffect = "Increase the radius of the bomb’s splash damage (if any) to 10 feet."
+                CriticalEffect = "Increase the radius of the bomb's splash damage (if any) to 10 feet."
             };
         }
 

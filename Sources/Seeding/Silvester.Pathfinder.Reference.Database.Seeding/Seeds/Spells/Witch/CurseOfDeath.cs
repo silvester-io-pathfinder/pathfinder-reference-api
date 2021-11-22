@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("d3ac62e5-f081-4c83-8c0d-37a3455254bf"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target is afflicted with the curse of death at stage 1, and the stage of the curse can’t increase beyond stage 1.",
+                Success = "The target is afflicted with the curse of death at stage 1, and the stage of the curse can't increase beyond stage 1.",
                 Failure = "The target is afflicted with the curse of death at stage 1.",
                 CriticalFailure = "The target is afflicted with the curse of death at stage 2."
             };

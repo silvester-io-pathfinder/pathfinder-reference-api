@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = ID,
                 Name = "Champion's Sacrifice",
                 Level = 6,
-                Trigger = "An ally is hit by a Strike, or an ally fails a saving throw against an effect that doesn’t affect you.",
+                Trigger = "An ally is hit by a Strike, or an ally fails a saving throw against an effect that doesn't affect you.",
                 Range = "30 feet.",
                 Targets = "1 ally.",
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6ea58467-3a0e-4082-bfb3-995bc7f7e03c"), Type = TextBlockType.Text, Text = "You know trouble can lurk around every corner, and your hands never stray far from your holsters. You can (action: Interact) to draw a one-handed ranged weapon and can then (action: Interact) to draw a one-handed melee weapon. As your first action on your first turn, you can (action: Stride) as a free action toward an enemy you can perceive. If you can’t perceive any enemies or can’t end your movement closer to one, you can’t use this (action: Stride)." };
+            yield return new TextBlock { Id = Guid.Parse("6ea58467-3a0e-4082-bfb3-995bc7f7e03c"), Type = TextBlockType.Text, Text = "You know trouble can lurk around every corner, and your hands never stray far from your holsters. You can (action: Interact) to draw a one-handed ranged weapon and can then (action: Interact) to draw a one-handed melee weapon. As your first action on your first turn, you can (action: Stride) as a free action toward an enemy you can perceive. If you can't perceive any enemies or can't end your movement closer to one, you can't use this (action: Stride)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

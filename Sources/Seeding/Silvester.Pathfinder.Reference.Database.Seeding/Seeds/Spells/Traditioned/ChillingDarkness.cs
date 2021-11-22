@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("2fa66aff-6516-439b-821c-a0e5aa52c2f5"), Type = Utilities.Text.TextBlockType.Text, Text = "You shoot an utterly cold ray of darkness tinged with unholy energy. Make a ranged spell attack against the target. You deal 5d6 cold damage, plus 5d6 evil damage if the target is a celestial." };
-            yield return new TextBlock { Id = Guid.Parse("1ae42c07-60c6-4292-a8b6-b06568f97f97"), Type = Utilities.Text.TextBlockType.Text, Text = "If the ray passes through an area of magical light or targets a creature affected by magical light, chilling darkness attempts to counteract the light. If you need to determine whether the ray passes through an area of light, draw a line between yourself and the spell’s target." };
+            yield return new TextBlock { Id = Guid.Parse("1ae42c07-60c6-4292-a8b6-b06568f97f97"), Type = Utilities.Text.TextBlockType.Text, Text = "If the ray passes through an area of magical light or targets a creature affected by magical light, chilling darkness attempts to counteract the light. If you need to determine whether the ray passes through an area of light, draw a line between yourself and the spell's target." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

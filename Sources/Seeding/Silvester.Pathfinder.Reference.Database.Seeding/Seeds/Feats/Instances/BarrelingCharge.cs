@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("278071ff-fc40-4285-b187-4402beb89d81"), Type = TextBlockType.Text, Text = "You rush forward, moving enemies aside to reach your foe. You (action: Stride), attempting to move through your enemies’ spaces and make a melee (action: Strike). Roll an Athletics check and compare the result to the Fortitude DC of each creature whose space you attempt to move through during your (action: Stride), moving through its space on a success but ending your movement before entering its space on a failure. You can use Barreling Charge to (action: Burrow), (action: Climb), (action: Fly), or (action: Swim) instead of (action: Stride), as long as you have the corresponding movement type." };
+            yield return new TextBlock { Id = Guid.Parse("278071ff-fc40-4285-b187-4402beb89d81"), Type = TextBlockType.Text, Text = "You rush forward, moving enemies aside to reach your foe. You (action: Stride), attempting to move through your enemies' spaces and make a melee (action: Strike). Roll an Athletics check and compare the result to the Fortitude DC of each creature whose space you attempt to move through during your (action: Stride), moving through its space on a success but ending your movement before entering its space on a failure. You can use Barreling Charge to (action: Burrow), (action: Climb), (action: Fly), or (action: Swim) instead of (action: Stride), as long as you have the corresponding movement type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

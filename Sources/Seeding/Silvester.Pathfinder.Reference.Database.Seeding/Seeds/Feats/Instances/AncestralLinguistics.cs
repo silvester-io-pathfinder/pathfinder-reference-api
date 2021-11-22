@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("499c4d4d-8068-4004-95ee-9d0bcf09c95e"), Type = TextBlockType.Text, Text = "Over your extensive lifespan, you’ve studied many languages. During your daily preparations, you can recede into old memories to become fluent in one common language or one other language you have access to. You know this language until you prepare again. Since this knowledge is temporary, you can’t use it as a prerequisite for a permanent character option." };
+            yield return new TextBlock { Id = Guid.Parse("499c4d4d-8068-4004-95ee-9d0bcf09c95e"), Type = TextBlockType.Text, Text = "Over your extensive lifespan, you've studied many languages. During your daily preparations, you can recede into old memories to become fluent in one common language or one other language you have access to. You know this language until you prepare again. Since this knowledge is temporary, you can't use it as a prerequisite for a permanent character option." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

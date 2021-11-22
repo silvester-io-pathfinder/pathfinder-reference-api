@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("744b9d10-299a-4eae-b4af-66d3915517ba"), Type = TextBlockType.Text, Text = "Somehow your stray bullet causes an unintended reaction that creates a problem for your enemy: perhaps a ricochet knocks your foe’s weapon away or they stumble over stray debris in an attempt to dodge your bullets. Roll a Deception check to attempt to (action: Shove), (action: Trip), or (action: Disarm) the foe you missed." };
+            yield return new TextBlock { Id = Guid.Parse("744b9d10-299a-4eae-b4af-66d3915517ba"), Type = TextBlockType.Text, Text = "Somehow your stray bullet causes an unintended reaction that creates a problem for your enemy: perhaps a ricochet knocks your foe's weapon away or they stumble over stray debris in an attempt to dodge your bullets. Roll a Deception check to attempt to (action: Shove), (action: Trip), or (action: Disarm) the foe you missed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

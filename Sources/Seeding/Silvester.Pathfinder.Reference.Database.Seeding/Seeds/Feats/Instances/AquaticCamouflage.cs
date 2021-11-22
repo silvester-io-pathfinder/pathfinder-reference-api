@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ac23d3bb-3cc7-4fe3-8cf0-d80f7c8124cf"), Type = TextBlockType.Text, Text = "You blend into the waves. While fully submerged in water, as long as an observer is at least 20 feet away from you, you don’t need cover from that observer to (action: Hide) or (action: Sneak)." };
+            yield return new TextBlock { Id = Guid.Parse("ac23d3bb-3cc7-4fe3-8cf0-d80f7c8124cf"), Type = TextBlockType.Text, Text = "You blend into the waves. While fully submerged in water, as long as an observer is at least 20 feet away from you, you don't need cover from that observer to (action: Hide) or (action: Sneak)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

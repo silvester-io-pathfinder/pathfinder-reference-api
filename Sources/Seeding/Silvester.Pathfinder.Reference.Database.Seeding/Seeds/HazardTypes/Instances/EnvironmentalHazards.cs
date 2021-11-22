@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.HazardTypes.Inst
                 Id = ID, 
                 SourcePageId = Guid.Parse("3ab73fe4-1b68-42e0-8a0e-c7cc58cb5301"), 
                 Name = "Environmental Hazards", 
-                Description = "Environmental hazards are either living things, like dangerous spores and molds, or simply features of the terrain or environment, like avalanches or rockslides. While they are always physical, some environmental hazards can’t reasonably be attacked or damaged, such as a cloud of poisonous gas or a patch of quicksand. Survival is the most common skill used to disable environmental hazards." 
+                Description = "Environmental hazards are either living things, like dangerous spores and molds, or simply features of the terrain or environment, like avalanches or rockslides. While they are always physical, some environmental hazards can't reasonably be attacked or damaged, such as a cloud of poisonous gas or a patch of quicksand. Survival is the most common skill used to disable environmental hazards." 
             };
         }
 

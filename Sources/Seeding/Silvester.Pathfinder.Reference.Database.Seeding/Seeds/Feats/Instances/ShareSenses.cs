@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("be5a1f3f-7b98-4644-8a05-5fb98cfe382e"), Type = TextBlockType.Text, Text = "You project your senses into your eidolon, allowing you to perceive through it. When you do, you lose all sensory information from your own body, but can sense through your eidolon’s body for up to 1 minute. You can (action: Dismiss) this effect." };
+            yield return new TextBlock { Id = Guid.Parse("be5a1f3f-7b98-4644-8a05-5fb98cfe382e"), Type = TextBlockType.Text, Text = "You project your senses into your eidolon, allowing you to perceive through it. When you do, you lose all sensory information from your own body, but can sense through your eidolon's body for up to 1 minute. You can (action: Dismiss) this effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

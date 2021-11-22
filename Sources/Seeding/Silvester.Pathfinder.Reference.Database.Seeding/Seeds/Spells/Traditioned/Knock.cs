@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2a938e2d-48bc-4330-977c-d91e89b75f5f"), Type = TextBlockType.Text, Text = "You make the target easier to open. Knock grants a +4 status bonus to any creature that tries to open the target door, lock, or container with an Athletics or a Thievery check. You can attempt a Thievery check to open the target as part of casting knock, and you add your level even if you’re untrained." };
+            yield return new TextBlock { Id = Guid.Parse("2a938e2d-48bc-4330-977c-d91e89b75f5f"), Type = TextBlockType.Text, Text = "You make the target easier to open. Knock grants a +4 status bonus to any creature that tries to open the target door, lock, or container with an Athletics or a Thievery check. You can attempt a Thievery check to open the target as part of casting knock, and you add your level even if you're untrained." };
             yield return new TextBlock { Id = Guid.Parse("59a6a59e-7f5a-4274-86e8-0e1b5f4f270e"), Type = TextBlockType.Text, Text = "Knock counteracts lock." };
         }
 

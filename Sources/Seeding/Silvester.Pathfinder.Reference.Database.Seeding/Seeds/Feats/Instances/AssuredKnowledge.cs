@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2a8c202c-c619-45dd-96d4-34d8c59004eb"), Type = TextBlockType.Text, Text = "You can procure information with confidence. Whenever you (action: Recall Knowledge) using any skill (including Loremaster Lore), you can forgo rolling your check to instead receive a result of 10 + your proficiency bonus (don’t apply any other bonuses, penalties, or modifiers). As long as you are an expert in a skill, you meet the prerequisites for the (feat: Automatic Knowledge) skill feat in that skill, even if you don’t have (feat: Assurance) in that skill." };
+            yield return new TextBlock { Id = Guid.Parse("2a8c202c-c619-45dd-96d4-34d8c59004eb"), Type = TextBlockType.Text, Text = "You can procure information with confidence. Whenever you (action: Recall Knowledge) using any skill (including Loremaster Lore), you can forgo rolling your check to instead receive a result of 10 + your proficiency bonus (don't apply any other bonuses, penalties, or modifiers). As long as you are an expert in a skill, you meet the prerequisites for the (feat: Automatic Knowledge) skill feat in that skill, even if you don't have (feat: Assurance) in that skill." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

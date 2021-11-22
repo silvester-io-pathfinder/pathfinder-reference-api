@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ada20c61-75c9-459c-bfe4-84506e0f7914"), Type = TextBlockType.Text, Text = "You create a seven-layered sphere to protect an area. This multicolored sphere functions like a prismatic wall but is shaped in a 10-foot burst centered on a corner of your space. You must form the sphere in an unbroken open space so its edges don’t pass through any creatures or objects, or the spell is lost." };
+            yield return new TextBlock { Id = Guid.Parse("ada20c61-75c9-459c-bfe4-84506e0f7914"), Type = TextBlockType.Text, Text = "You create a seven-layered sphere to protect an area. This multicolored sphere functions like a prismatic wall but is shaped in a 10-foot burst centered on a corner of your space. You must form the sphere in an unbroken open space so its edges don't pass through any creatures or objects, or the spell is lost." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

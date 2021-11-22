@@ -35,7 +35,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalTools.
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8238f38f-f33e-4252-9f51-f0ec7ae0b938"), Type = TextBlockType.Text, Text = "This 1-foot-long, gold-tipped rod glows after it’s struck on a hard surface. For the next 6 hours, it sheds bright light in a 20-foot radius (and dim light to the next 40 feet)." };
+            yield return new TextBlock { Id = Guid.Parse("8238f38f-f33e-4252-9f51-f0ec7ae0b938"), Type = TextBlockType.Text, Text = "This 1-foot-long, gold-tipped rod glows after it's struck on a hard surface. For the next 6 hours, it sheds bright light in a 20-foot radius (and dim light to the next 40 feet)." };
         }
 
         protected override SourcePage? GetSourcePage()

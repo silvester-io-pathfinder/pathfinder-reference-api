@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92d0dffc-6cb3-4b94-916b-6bb20a8d0a4e"), Type = TextBlockType.Text, Text = "You create an illusory visual image of a stationary object. The entire image must fit within the spell’s area. The object appears to animate naturally, but it doesn’t make sounds or generate smells. For example, water would appear to pour down an illusory waterfall, but it would be silent." };
+            yield return new TextBlock { Id = Guid.Parse("92d0dffc-6cb3-4b94-916b-6bb20a8d0a4e"), Type = TextBlockType.Text, Text = "You create an illusory visual image of a stationary object. The entire image must fit within the spell's area. The object appears to animate naturally, but it doesn't make sounds or generate smells. For example, water would appear to pour down an illusory waterfall, but it would be silent." };
             yield return new TextBlock { Id = Guid.Parse("1d323474-d269-4551-831c-213b67e821f8"), Type = TextBlockType.Text, Text = "Any creature that touches the image or uses the Seek action to examine it can attempt to disbelieve your illusion." };
         }
 

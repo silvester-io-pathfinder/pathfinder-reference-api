@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ItemCurses.Insta
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f889ad21-5731-4546-bd72-71d323d5be54"), Type = TextBlockType.Text, Text = "This property is associated with a specific color, which is defined at the time of the curse’s creation. Whenever you use the affected equipment while taking a manipulate action with another object, the second object is permanently stained the associated color. For instance, if you used a set of yellow staining lockpicks to open a door, the lock would permanently become yellow. This color change does not otherwise unnaturally persist and can be changed via any normal mundane or magical means." };
+            yield return new TextBlock { Id = Guid.Parse("f889ad21-5731-4546-bd72-71d323d5be54"), Type = TextBlockType.Text, Text = "This property is associated with a specific color, which is defined at the time of the curse's creation. Whenever you use the affected equipment while taking a manipulate action with another object, the second object is permanently stained the associated color. For instance, if you used a set of yellow staining lockpicks to open a door, the lock would permanently become yellow. This color change does not otherwise unnaturally persist and can be changed via any normal mundane or magical means." };
         }
 
         public override SourcePage GetSourcePage()

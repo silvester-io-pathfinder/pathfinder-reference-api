@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3f785d9b-2143-4dd9-a747-ebb624591b91"), Type = TextBlockType.Text, Text = "You aim a shot at your spotter, intending for your spotter to redirect that shot off their own weapon or shield to hit your foe from a better angle, and avoid your foe’s cover. If your next action is to make a ranged (action: Strike), you treat your spotter’s position as your own for the purposes of determining cover and range. Your spotter must be within your weapon’s first range increment and they must use a reaction to redirect your shot." };
+            yield return new TextBlock { Id = Guid.Parse("3f785d9b-2143-4dd9-a747-ebb624591b91"), Type = TextBlockType.Text, Text = "You aim a shot at your spotter, intending for your spotter to redirect that shot off their own weapon or shield to hit your foe from a better angle, and avoid your foe's cover. If your next action is to make a ranged (action: Strike), you treat your spotter's position as your own for the purposes of determining cover and range. Your spotter must be within your weapon's first range increment and they must use a reaction to redirect your shot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

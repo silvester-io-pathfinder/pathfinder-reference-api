@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("e34b166e-0632-45cd-96ed-a8348b0830b1"), Type = TextBlockType.Text, Text = "~ Access: Help either the Washboard Dogs or the Diobel Sweepers destroy their rival." };
-            yield return new TextBlock { Id = Guid.Parse("7af94da7-14bc-4e83-bb37-3a4b92a8e9eb"), Type = TextBlockType.Text, Text = "When you succeed or critically succeed at a Deception check to (action: Feint) an opponent, that target can&#39;t flank with their allies until the beginning of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("7af94da7-14bc-4e83-bb37-3a4b92a8e9eb"), Type = TextBlockType.Text, Text = "When you succeed or critically succeed at a Deception check to (action: Feint) an opponent, that target can't flank with their allies until the beginning of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

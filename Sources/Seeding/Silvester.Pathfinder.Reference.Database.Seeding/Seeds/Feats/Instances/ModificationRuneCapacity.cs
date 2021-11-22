@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b46780ed-e1b5-4690-8cd8-38113be5bc6d"), Type = TextBlockType.Text, Text = "Whether you’ve done some dabbling in orichalcum alloys or found another engineering solution, you’ve built your innovation in such a way that it can hold an additional property rune. Your innovation can have one more property rune than a normal item of its kind (to a maximum of four property runes with a +3 potency armor)." };
+            yield return new TextBlock { Id = Guid.Parse("b46780ed-e1b5-4690-8cd8-38113be5bc6d"), Type = TextBlockType.Text, Text = "Whether you've done some dabbling in orichalcum alloys or found another engineering solution, you've built your innovation in such a way that it can hold an additional property rune. Your innovation can have one more property rune than a normal item of its kind (to a maximum of four property runes with a +3 potency armor)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

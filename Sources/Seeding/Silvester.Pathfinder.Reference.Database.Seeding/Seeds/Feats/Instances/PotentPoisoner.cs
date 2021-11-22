@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("01d98e2e-a9b4-4922-b3cb-751f09fe499b"), Type = TextBlockType.Text, Text = "By concentrating your poisons’ toxic components, you make them harder for victims to resist. When you craft an alchemical item with the (trait: poison) trait by any means, the DC is increased by up to 4, to a maximum of your class DC." };
+            yield return new TextBlock { Id = Guid.Parse("01d98e2e-a9b4-4922-b3cb-751f09fe499b"), Type = TextBlockType.Text, Text = "By concentrating your poisons' toxic components, you make them harder for victims to resist. When you craft an alchemical item with the (trait: poison) trait by any means, the DC is increased by up to 4, to a maximum of your class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

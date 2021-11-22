@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("678db53d-d19f-4cb1-9bb7-f961e1ffc4c5"), Type = TextBlockType.Text, Text = "Your construct innovation has articulated hands or similar appendages with significant manual dexterity. It can perform (trait: manipulate) actions with up to two of its limbs. As normal for a companion, it still can’t wield weapons or held items that don’t have the (trait: companion) trait, and it can’t activate items." };
+            yield return new TextBlock { Id = Guid.Parse("678db53d-d19f-4cb1-9bb7-f961e1ffc4c5"), Type = TextBlockType.Text, Text = "Your construct innovation has articulated hands or similar appendages with significant manual dexterity. It can perform (trait: manipulate) actions with up to two of its limbs. As normal for a companion, it still can't wield weapons or held items that don't have the (trait: companion) trait, and it can't activate items." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

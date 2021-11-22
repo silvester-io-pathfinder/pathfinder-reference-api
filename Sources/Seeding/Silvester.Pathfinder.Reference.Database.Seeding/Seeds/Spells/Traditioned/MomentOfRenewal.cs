@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79a4b64c-bdf3-454f-bd35-035f6638aec4"), Type = TextBlockType.Text, Text = "The targets experience a day’s worth of recovery in an instant. Any detrimental effects that would be gone after 24 hours end, though this doesn’t shorten the duration of any active spells affecting the targets. The targets regain Hit Points and recover from conditions as if they had taken 24 hours of rest, but they do not make their daily preparations again or gain any benefits of rest other than healing. The targets are then temporarily immune for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("79a4b64c-bdf3-454f-bd35-035f6638aec4"), Type = TextBlockType.Text, Text = "The targets experience a day's worth of recovery in an instant. Any detrimental effects that would be gone after 24 hours end, though this doesn't shorten the duration of any active spells affecting the targets. The targets regain Hit Points and recover from conditions as if they had taken 24 hours of rest, but they do not make their daily preparations again or gain any benefits of rest other than healing. The targets are then temporarily immune for 1 day." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

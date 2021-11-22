@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6955e3d2-7cff-40a5-bc28-9d0d2246c38a"), Type = TextBlockType.Text, Text = "You detonate the required bombs in order to bring a wall down on a creature. If your bombs deal enough damage to reduce the wall’s Hit Points below its Broken Threshold, the wall partially collapses on the creature. The creature takes bludgeoning damage equal to the damage dealt to the wall (basic Reflex save; the DC for this save is equal to your class DC or spell DC, whichever is higher). On a failure, they must spend an Interact action to dig themselves out of the collapse, and on a critical failure, they must spend 2 Interact actions to do so." };
+            yield return new TextBlock { Id = Guid.Parse("6955e3d2-7cff-40a5-bc28-9d0d2246c38a"), Type = TextBlockType.Text, Text = "You detonate the required bombs in order to bring a wall down on a creature. If your bombs deal enough damage to reduce the wall's Hit Points below its Broken Threshold, the wall partially collapses on the creature. The creature takes bludgeoning damage equal to the damage dealt to the wall (basic Reflex save; the DC for this save is equal to your class DC or spell DC, whichever is higher). On a failure, they must spend an Interact action to dig themselves out of the collapse, and on a critical failure, they must spend 2 Interact actions to do so." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

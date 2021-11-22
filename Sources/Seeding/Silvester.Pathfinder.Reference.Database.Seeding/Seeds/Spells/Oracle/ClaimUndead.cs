@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("4d991e1a-9a88-4e78-8f30-ee8dbcfbc38a"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is stunned 1 as it fights off your commands.",
-                Failure = "The target becomes controlled by you and follows your orders. It (or the creature previously controlling it) can attempt a new Will save at the end of each of its turns, and the spell ends on a success. If you issue an obviously self-destructive order, the target doesn’t act until you issue a new order.",
+                Failure = "The target becomes controlled by you and follows your orders. It (or the creature previously controlling it) can attempt a new Will save at the end of each of its turns, and the spell ends on a success. If you issue an obviously self-destructive order, the target doesn't act until you issue a new order.",
                 CriticalFailure = "As failure, but the target (or the creature previously controlling it) receives a new save only if you give it a new order that is against its nature."
             };
         }

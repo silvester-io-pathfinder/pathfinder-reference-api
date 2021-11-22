@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalPoison
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84e7645e-26c9-436c-824e-f485cba68ba0"), Text = "This venom erodes its target’s defenses, aiding the spider in securing prey." };
+            yield return new TextBlock { Id = Guid.Parse("84e7645e-26c9-436c-824e-f485cba68ba0"), Text = "This venom erodes its target's defenses, aiding the spider in securing prey." };
         }
 
         protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages()

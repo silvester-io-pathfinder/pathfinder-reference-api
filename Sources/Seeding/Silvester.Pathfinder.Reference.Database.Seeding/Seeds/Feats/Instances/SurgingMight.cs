@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f045ca52-6a64-4619-ab0a-2150ff85889b"), Type = TextBlockType.Text, Text = "With a complex gesture, you focus the power of your spell to overcome enemies’ resistances. If the next action you use is to (action: Cast a Spell), the spell ignores an amount of the target’s resistance equal to your level against all the following types of damage: chaotic, evil, good, lawful, negative, and positive. This applies to all damage the spell deals, including persistent damage and damage caused by an ongoing effect of the spell, such as the positive energy within a (spell: field of life). This doesn’t cause the spell to ignore immunities, only resistances." };
+            yield return new TextBlock { Id = Guid.Parse("f045ca52-6a64-4619-ab0a-2150ff85889b"), Type = TextBlockType.Text, Text = "With a complex gesture, you focus the power of your spell to overcome enemies' resistances. If the next action you use is to (action: Cast a Spell), the spell ignores an amount of the target's resistance equal to your level against all the following types of damage: chaotic, evil, good, lawful, negative, and positive. This applies to all damage the spell deals, including persistent damage and damage caused by an ongoing effect of the spell, such as the positive energy within a (spell: field of life). This doesn't cause the spell to ignore immunities, only resistances." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

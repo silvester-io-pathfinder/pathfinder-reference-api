@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd14012d-3d9f-44e9-88dc-c7ee9cfec8b4"), Type = TextBlockType.Text, Text = "You’re trained in occult spell attack rolls and spell DCs. Your key spellcasting ability is Charisma. Add an occult cantrip that requires a spell attack roll to your spell repertoire." };
+            yield return new TextBlock { Id = Guid.Parse("cd14012d-3d9f-44e9-88dc-c7ee9cfec8b4"), Type = TextBlockType.Text, Text = "You're trained in occult spell attack rolls and spell DCs. Your key spellcasting ability is Charisma. Add an occult cantrip that requires a spell attack roll to your spell repertoire." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -31,8 +31,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c8f0078c-8b19-4296-97ae-b61d090689a8"), Type = TextBlockType.Text, Text = "You magically spy on a creature of your choice. Scrying works like clairvoyance (page 324), except that the image you receive is less precise, insufficient for teleport and similar spells. Instead of creating an eye in a set location within 500 feet, you instead create an eye that manifests just above the target. You can choose a target either by name or by touching one of its possessions or a piece of its body. If you haven’t met the target in person, scrying’s DC is 2 lower, and if you are unaware of the target’s identity (perhaps because you found an unknown creature’s fang at a crime scene), the DC is instead 10 lower." };
-            yield return new TextBlock { Id = Guid.Parse("320fedd5-e8a7-458b-8e5d-0807ecf72343"), Type = TextBlockType.Text, Text = "The effect of scrying depends on the target’s Will save." };
+            yield return new TextBlock { Id = Guid.Parse("c8f0078c-8b19-4296-97ae-b61d090689a8"), Type = TextBlockType.Text, Text = "You magically spy on a creature of your choice. Scrying works like clairvoyance (page 324), except that the image you receive is less precise, insufficient for teleport and similar spells. Instead of creating an eye in a set location within 500 feet, you instead create an eye that manifests just above the target. You can choose a target either by name or by touching one of its possessions or a piece of its body. If you haven't met the target in person, scrying's DC is 2 lower, and if you are unaware of the target's identity (perhaps because you found an unknown creature's fang at a crime scene), the DC is instead 10 lower." };
+            yield return new TextBlock { Id = Guid.Parse("320fedd5-e8a7-458b-8e5d-0807ecf72343"), Type = TextBlockType.Text, Text = "The effect of scrying depends on the target's Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

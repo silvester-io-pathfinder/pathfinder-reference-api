@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("94adcd48-2483-4162-90dd-4567f6c57cc1"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
-            yield return new TextBlock { Id = Guid.Parse("9cb7098b-15dd-4d58-977f-e39e0177b606"), Type = TextBlockType.Text, Text = "You’ve added long, snagging spikes to your weapon, which you can use to impede your foes’ movement. Your innovation gains the (trait: hampering) and (trait: versatile P) traits." };
+            yield return new TextBlock { Id = Guid.Parse("9cb7098b-15dd-4d58-977f-e39e0177b606"), Type = TextBlockType.Text, Text = "You've added long, snagging spikes to your weapon, which you can use to impede your foes' movement. Your innovation gains the (trait: hampering) and (trait: versatile P) traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

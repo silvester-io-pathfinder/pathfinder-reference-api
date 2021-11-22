@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("54ec92d2-3e08-48c2-b96f-38f2c2df0e13"), Type = TextBlockType.Text, Text = "You are luckier even than most catfolk. You can trigger (feat: Cat&#39;s Luck) when you fail or critically fail a Fortitude or Will saving throw in addition to Reflex saving throws. You still can use (feat: Cat&#39;s Luck) only once per day." };
+            yield return new TextBlock { Id = Guid.Parse("54ec92d2-3e08-48c2-b96f-38f2c2df0e13"), Type = TextBlockType.Text, Text = "You are luckier even than most catfolk. You can trigger (feat: Cat's Luck) when you fail or critically fail a Fortitude or Will saving throw in addition to Reflex saving throws. You still can use (feat: Cat's Luck) only once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0a79c70a-0aef-47ca-a3f3-515e287b0aad"), Type = TextBlockType.Text, Text = "Your affinity with process and order makes you a natural artisan. You gain the trained proficiency rank in Crafting (or another skill of your choice, if you’re already trained in Crafting). You gain the (feat: Specialty Crafting) skill feat in a specialty of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("0a79c70a-0aef-47ca-a3f3-515e287b0aad"), Type = TextBlockType.Text, Text = "Your affinity with process and order makes you a natural artisan. You gain the trained proficiency rank in Crafting (or another skill of your choice, if you're already trained in Crafting). You gain the (feat: Specialty Crafting) skill feat in a specialty of your choice." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

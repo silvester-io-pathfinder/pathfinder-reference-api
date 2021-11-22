@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f7316a7-2836-4a82-8af9-b137653ae6cb"), Type = TextBlockType.Text, Text = "You can take advantage of the terrain to bypass foes’ defenses. Non-lizardfolk creatures in difficult terrain are flat-footed to you. If you have a swim Speed, non-lizardfolk creatures that are in water and lack a swim Speed are also flat-footed to you." };
+            yield return new TextBlock { Id = Guid.Parse("5f7316a7-2836-4a82-8af9-b137653ae6cb"), Type = TextBlockType.Text, Text = "You can take advantage of the terrain to bypass foes' defenses. Non-lizardfolk creatures in difficult terrain are flat-footed to you. If you have a swim Speed, non-lizardfolk creatures that are in water and lack a swim Speed are also flat-footed to you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

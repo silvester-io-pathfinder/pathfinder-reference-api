@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("59373aed-e066-43f7-85ce-691e58b72897"), Type = TextBlockType.Text, Text = "Physical obstacles can’t hold back your fury. While you are raging, you gain a climb Speed and swim Speed equal to your land Speed and the DC of (action: High Jumps | High Jump) and (action: Long Jumps | Long Jump) decreases by 10. Your distance for a vertical (action: Leap) increases to 5 feet vertically, and your distance for a horizontal (action: Leap) increases to 15 feet if your Speed is at least 15 feet and to 20 feet if your Speed is at least 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("59373aed-e066-43f7-85ce-691e58b72897"), Type = TextBlockType.Text, Text = "Physical obstacles can't hold back your fury. While you are raging, you gain a climb Speed and swim Speed equal to your land Speed and the DC of (action: High Jumps | High Jump) and (action: Long Jumps | Long Jump) decreases by 10. Your distance for a vertical (action: Leap) increases to 5 feet vertically, and your distance for a horizontal (action: Leap) increases to 15 feet if your Speed is at least 15 feet and to 20 feet if your Speed is at least 30 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

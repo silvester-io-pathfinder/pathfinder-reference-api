@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("741d0bcf-c73e-4c52-89dd-51694fa04985"), Type = TextBlockType.Text, Text = "Select one type of difficult terrain from the following list: rubble, snow, or underbrush. While undetected by all non-allies in that type of terrain, you can (Action: Sneak) without attempting a Stealth check as long as you move no more than 5 feet and do not move within 10 feet of an enemy at any point during your movement. This also allows you to automatically approach creatures to within 15 feet while (Activity: Avoiding Notice | Avoid Notice) during exploration as long as they aren’t actively (Activity: Searching | Search) or on guard." };
+            yield return new TextBlock { Id = Guid.Parse("741d0bcf-c73e-4c52-89dd-51694fa04985"), Type = TextBlockType.Text, Text = "Select one type of difficult terrain from the following list: rubble, snow, or underbrush. While undetected by all non-allies in that type of terrain, you can (Action: Sneak) without attempting a Stealth check as long as you move no more than 5 feet and do not move within 10 feet of an enemy at any point during your movement. This also allows you to automatically approach creatures to within 15 feet while (Activity: Avoiding Notice | Avoid Notice) during exploration as long as they aren't actively (Activity: Searching | Search) or on guard." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

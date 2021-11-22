@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("058e1e73-e522-4c1e-b9c5-5ed432b940c3"), Type = TextBlockType.Text, Text = "Spells you cast can transform briefly into vital essence, traveling harmlessly through living and undead creatures between you and your target, blocked only by solid objects. If the next action you use is to (activity: Cast a Spell) that requires a spell attack roll, your targets don’t benefit from cover provided by living or undead creatures." };
+            yield return new TextBlock { Id = Guid.Parse("058e1e73-e522-4c1e-b9c5-5ed432b940c3"), Type = TextBlockType.Text, Text = "Spells you cast can transform briefly into vital essence, traveling harmlessly through living and undead creatures between you and your target, blocked only by solid objects. If the next action you use is to (activity: Cast a Spell) that requires a spell attack roll, your targets don't benefit from cover provided by living or undead creatures." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

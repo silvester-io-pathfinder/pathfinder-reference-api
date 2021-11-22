@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81984c55-cf9c-4167-8aa4-e06433ac80f5"), Type = TextBlockType.Text, Text = "You (activity: Cast a Spell) that takes 1 or 2 actions to cast and requires a spell attack roll. The effects of the spell do not occur immediately but are imbued into the bow you’re wielding." };
-            yield return new TextBlock { Id = Guid.Parse("c6b9d991-a89c-408c-944f-304e723e310a"), Type = TextBlockType.Text, Text = "Make a (action: Strike) with that bow. Your spell flies with the ammunition, using your attack roll result to determine the effects of both the (action: Strike) and the spell. This counts as two attacks for your multiple attack penalty, but you don’t apply the penalty until after you’ve completed both attacks." };
+            yield return new TextBlock { Id = Guid.Parse("81984c55-cf9c-4167-8aa4-e06433ac80f5"), Type = TextBlockType.Text, Text = "You (activity: Cast a Spell) that takes 1 or 2 actions to cast and requires a spell attack roll. The effects of the spell do not occur immediately but are imbued into the bow you're wielding." };
+            yield return new TextBlock { Id = Guid.Parse("c6b9d991-a89c-408c-944f-304e723e310a"), Type = TextBlockType.Text, Text = "Make a (action: Strike) with that bow. Your spell flies with the ammunition, using your attack roll result to determine the effects of both the (action: Strike) and the spell. This counts as two attacks for your multiple attack penalty, but you don't apply the penalty until after you've completed both attacks." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

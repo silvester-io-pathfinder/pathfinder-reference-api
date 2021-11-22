@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d3bc6a71-510c-4cbf-88fa-1af5f306ce8a"), Type = TextBlockType.Text, Text = "You are an expert at moving through extremely tight spaces. You gain the (feat: Quick Squeeze) skill feat, even if you’re not trained in Acrobatics. When you roll a success on an Acrobatics check to (action: Squeeze), you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("d3bc6a71-510c-4cbf-88fa-1af5f306ce8a"), Type = TextBlockType.Text, Text = "You are an expert at moving through extremely tight spaces. You gain the (feat: Quick Squeeze) skill feat, even if you're not trained in Acrobatics. When you roll a success on an Acrobatics check to (action: Squeeze), you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

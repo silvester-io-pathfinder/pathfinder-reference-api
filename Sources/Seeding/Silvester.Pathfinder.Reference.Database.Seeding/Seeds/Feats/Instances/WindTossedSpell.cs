@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ae6f3553-4cf6-4d86-92a7-4edef2ec2727"), Type = TextBlockType.Text, Text = "You enhance your spell with elemental air, using the wind to find your target and carry your magic around cover. If the next action you use is to (action: Cast a Spell) that requires a spell attack roll, you ignore the target’s concealed condition and any cover they have from you. The spell gains the (trait: air) trait." };
+            yield return new TextBlock { Id = Guid.Parse("ae6f3553-4cf6-4d86-92a7-4edef2ec2727"), Type = TextBlockType.Text, Text = "You enhance your spell with elemental air, using the wind to find your target and carry your magic around cover. If the next action you use is to (action: Cast a Spell) that requires a spell attack roll, you ignore the target's concealed condition and any cover they have from you. The spell gains the (trait: air) trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

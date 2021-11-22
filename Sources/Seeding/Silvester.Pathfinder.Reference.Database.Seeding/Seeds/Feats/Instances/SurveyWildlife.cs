@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8d3b5268-8756-4c46-93f0-deb5839f90e1"), Type = TextBlockType.Text, Text = "You can study details in the wilderness to determine the presence of nearby creatures. You can spend 10 minutes assessing the area around you to find out what creatures are nearby, based on nests, scat, and marks on vegetation. Attempt a Survival check against a DC determined by the GM based on how obvious the signs are. On a success, you can attempt a (Action: Recall Knowledge) check with a -2 penalty to learn more about the creatures just from these signs. If you’re a master in Survival, you don’t take the penalty." };
+            yield return new TextBlock { Id = Guid.Parse("8d3b5268-8756-4c46-93f0-deb5839f90e1"), Type = TextBlockType.Text, Text = "You can study details in the wilderness to determine the presence of nearby creatures. You can spend 10 minutes assessing the area around you to find out what creatures are nearby, based on nests, scat, and marks on vegetation. Attempt a Survival check against a DC determined by the GM based on how obvious the signs are. On a success, you can attempt a (Action: Recall Knowledge) check with a -2 penalty to learn more about the creatures just from these signs. If you're a master in Survival, you don't take the penalty." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

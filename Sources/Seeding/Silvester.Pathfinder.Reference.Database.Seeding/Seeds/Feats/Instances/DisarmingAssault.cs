@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fd771e27-1081-48df-ab6a-889c8ddb6a99"), Type = TextBlockType.Text, Text = "You attack with enough force to knock the weapon out of your foe’s hands. Make a melee (action: Strike); if you hit, you can attempt an Athletics check to (action: Disarm) that foe." };
+            yield return new TextBlock { Id = Guid.Parse("fd771e27-1081-48df-ab6a-889c8ddb6a99"), Type = TextBlockType.Text, Text = "You attack with enough force to knock the weapon out of your foe's hands. Make a melee (action: Strike); if you hit, you can attempt an Athletics check to (action: Disarm) that foe." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

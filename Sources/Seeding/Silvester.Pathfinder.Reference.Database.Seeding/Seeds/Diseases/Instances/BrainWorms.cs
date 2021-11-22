@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
             {
                 Id = ID,
                 Name = "Brain Worms",
-                Description = "Scholars suspect these brain parasites have an otherworldly or extraplanar origin. Though transmitted by the bites of infected targets, the disease remains relatively rare—most hosts are killed by the effects before they can pass it on. While infected, whenever you attack due to confusion, you bite your target (if you don’t have a jaws or fangs attack, you deal piercing damage as an unarmed attack with damage equal to your lowest unarmed attack).",
+                Description = "Scholars suspect these brain parasites have an otherworldly or extraplanar origin. Though transmitted by the bites of infected targets, the disease remains relatively rare—most hosts are killed by the effects before they can pass it on. While infected, whenever you attack due to confusion, you bite your target (if you don't have a jaws or fangs attack, you deal piercing damage as an unarmed attack with damage equal to your lowest unarmed attack).",
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = 28,
                 Onset = "1 Day"
@@ -56,7 +56,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
                 Effects = new DiseaseStageEffect[]
                 {
                     new ConditionDiseaseStageEffect { ConditionId = Stupefied.ID, Severity = 2},
-                    new OtherDiseaseStageEffect {Effect = "Whenever you take damage, you must succeed at a Will save against the disease’s DC or become confused for 1 round."}
+                    new OtherDiseaseStageEffect {Effect = "Whenever you take damage, you must succeed at a Will save against the disease's DC or become confused for 1 round."}
                 }
             };
 
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
                 Effects = new DiseaseStageEffect[]
                 {
                     new ConditionDiseaseStageEffect { ConditionId = Stupefied.ID, Severity = 3},
-                    new OtherDiseaseStageEffect {Effect = "Whenever you take damage, you must succeed at a Will save against the disease’s DC or become confused for 1 minute."}
+                    new OtherDiseaseStageEffect {Effect = "Whenever you take damage, you must succeed at a Will save against the disease's DC or become confused for 1 minute."}
                 }
             };
 

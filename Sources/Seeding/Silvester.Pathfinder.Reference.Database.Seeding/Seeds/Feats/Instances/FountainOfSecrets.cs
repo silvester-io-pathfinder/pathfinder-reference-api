@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("06b02060-6fb4-4a0c-9b56-92b1888480ec"), Type = TextBlockType.Text, Text = "You constantly remember details about the world. You attempt a check to (action: Recall Knowledge). If you succeed, you gain additional information or context. If you critically succeed, at the GM’s discretion you might gain even more additional information or context than normal." };
+            yield return new TextBlock { Id = Guid.Parse("06b02060-6fb4-4a0c-9b56-92b1888480ec"), Type = TextBlockType.Text, Text = "You constantly remember details about the world. You attempt a check to (action: Recall Knowledge). If you succeed, you gain additional information or context. If you critically succeed, at the GM's discretion you might gain even more additional information or context than normal." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

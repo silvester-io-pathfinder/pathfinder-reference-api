@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0bc39f82-d473-4a3d-986b-8b06ed6f3eec"), Type = TextBlockType.Text, Text = "You know basic facts off the top of your head. When you select this feat, choose a skill you’re an expert in that has the (action: Recall Knowledge) action and for which you have the (feat: Assurance) feat. You can use the (action: Recall Knowledge) action with that skill as a free action once per round. If you do, you must use (feat: Assurance) on the skill check." };
+            yield return new TextBlock { Id = Guid.Parse("0bc39f82-d473-4a3d-986b-8b06ed6f3eec"), Type = TextBlockType.Text, Text = "You know basic facts off the top of your head. When you select this feat, choose a skill you're an expert in that has the (action: Recall Knowledge) action and for which you have the (feat: Assurance) feat. You can use the (action: Recall Knowledge) action with that skill as a free action once per round. If you do, you must use (feat: Assurance) on the skill check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

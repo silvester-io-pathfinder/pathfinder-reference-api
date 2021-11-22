@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
             {
                 Id = ID,
                 Name = "Nightmare Fever",
-                Description = "Thought to be caused by a night hag’s curse, nightmare fever inflicts you with terrible nightmares, and you awaken with the wounds you received in your dreams. Some versions cause you to dream of being wounded by bludgeoning or piercing weapons, in which case you take that type of damage instead. Damage and the fatigued condition caused by the disease can’t be healed until the disease is removed.",
+                Description = "Thought to be caused by a night hag's curse, nightmare fever inflicts you with terrible nightmares, and you awaken with the wounds you received in your dreams. Some versions cause you to dream of being wounded by bludgeoning or piercing weapons, in which case you take that type of damage instead. Damage and the fatigued condition caused by the disease can't be healed until the disease is removed.",
                 SavingThrowStatId = SavingThrowStats.Instances.Will.ID,
                 DifficultyCheck = 25,
                 Onset = "Immediate"
@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
                 {
                     new ConditionDiseaseStageEffect { ConditionId = Fatigued.ID},
                     new DamageDiseaseStageEffect {DamageTypeId = DamageTypes.Instances.Slashing.ID, Damage = "4d6"},
-                    new OtherDiseaseStageEffect { Effect = "Whenever you take slashing damage, you must succeed at a Will save against the disease’s DC or become frightened 2."}
+                    new OtherDiseaseStageEffect { Effect = "Whenever you take slashing damage, you must succeed at a Will save against the disease's DC or become frightened 2."}
                 }
             };
 
@@ -80,7 +80,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
                 {
                     new ConditionDiseaseStageEffect { ConditionId = Fatigued.ID},
                     new DamageDiseaseStageEffect {DamageTypeId = DamageTypes.Instances.Slashing.ID, Damage = "6d6"},
-                    new OtherDiseaseStageEffect { Effect = "Whenever you take slashing damage, you must succeed at a Will save against the disease’s DC or become paralyzed for 1 round."}
+                    new OtherDiseaseStageEffect { Effect = "Whenever you take slashing damage, you must succeed at a Will save against the disease's DC or become paralyzed for 1 round."}
                 }
             };
 

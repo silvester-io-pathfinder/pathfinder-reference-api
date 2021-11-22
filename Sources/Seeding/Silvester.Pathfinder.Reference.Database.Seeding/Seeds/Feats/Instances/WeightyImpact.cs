@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a7d02e81-28ce-45f9-a614-77569294df3c"), Type = TextBlockType.Text, Text = "Your eidolon knocks enemies down. Choose one of the eidolon’s unarmed attacks with the (trait: trip) trait. It gains the Knockdown action (Bestiary pg. 343) for that attack." };
+            yield return new TextBlock { Id = Guid.Parse("a7d02e81-28ce-45f9-a614-77569294df3c"), Type = TextBlockType.Text, Text = "Your eidolon knocks enemies down. Choose one of the eidolon's unarmed attacks with the (trait: trip) trait. It gains the Knockdown action (Bestiary pg. 343) for that attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

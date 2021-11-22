@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("54d10e5d-a6bf-481f-a8d1-d0ff17edbfb1"), Type = TextBlockType.Text, Text = "You give a throaty growl to attempt to (action: Demoralize) a creature you just found. You don’t take the –4 penalty for not sharing a language with the creature." };
+            yield return new TextBlock { Id = Guid.Parse("54d10e5d-a6bf-481f-a8d1-d0ff17edbfb1"), Type = TextBlockType.Text, Text = "You give a throaty growl to attempt to (action: Demoralize) a creature you just found. You don't take the –4 penalty for not sharing a language with the creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

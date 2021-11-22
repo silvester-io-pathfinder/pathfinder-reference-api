@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("06db64b1-3aa9-4b9a-9c28-ab8b19869359"), Type = TextBlockType.Text, Text = "A ray that saps a foe’s strength flashes from your hand. Attempt a ranged spell attack against the target. If you succeed, that creature attempts a Fortitude save to determine the spell’s effect. If your attack roll is a critical success, use the outcome for one degree of success worse than the result of its save." };
+            yield return new TextBlock { Id = Guid.Parse("06db64b1-3aa9-4b9a-9c28-ab8b19869359"), Type = TextBlockType.Text, Text = "A ray that saps a foe's strength flashes from your hand. Attempt a ranged spell attack against the target. If you succeed, that creature attempts a Fortitude save to determine the spell's effect. If your attack roll is a critical success, use the outcome for one degree of success worse than the result of its save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

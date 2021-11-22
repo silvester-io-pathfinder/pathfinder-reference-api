@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Curses.Instances
                 Name = "Curse of the Ravenous",
                 DifficultyCheck = 20,
                 SavingThrowStatId = Fortitude.ID,
-                Effect = "No matter how much you eat, you aren’t satiated. After 1 day, you begin starving. Each week, you receive a new saving throw against the curse."
+                Effect = "No matter how much you eat, you aren't satiated. After 1 day, you begin starving. Each week, you receive a new saving throw against the curse."
             };
         }
 

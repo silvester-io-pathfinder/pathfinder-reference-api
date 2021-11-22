@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ac2b6361-9ebe-4860-b580-bb8d48fd2576"), Type = TextBlockType.Text, Text = "You know how to efficiently use weapons that rake across your enemies. Whenever you critically hit using a catfolk weapon or one of the weapons listed in (feat: Catfolk Weapon Familiarity), you apply the weapon&#39;s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("ac2b6361-9ebe-4860-b580-bb8d48fd2576"), Type = TextBlockType.Text, Text = "You know how to efficiently use weapons that rake across your enemies. Whenever you critically hit using a catfolk weapon or one of the weapons listed in (feat: Catfolk Weapon Familiarity), you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

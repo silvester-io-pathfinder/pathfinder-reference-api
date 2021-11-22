@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9f3e655f-ebbf-46e3-a907-316e9939a5a9"), Type = TextBlockType.Text, Text = "You often find that the best way to win a conflict means avoiding a fight in the first place. You&#39;re good at talking to potential opponents without making things worse. If you would critically fail at a check to (action: Make an Impression), you instead fail. You can attempt checks to make (action: Requests | Request) of creatures who&#39;re indifferent or unfriendly toward you." };
+            yield return new TextBlock { Id = Guid.Parse("9f3e655f-ebbf-46e3-a907-316e9939a5a9"), Type = TextBlockType.Text, Text = "You often find that the best way to win a conflict means avoiding a fight in the first place. You're good at talking to potential opponents without making things worse. If you would critically fail at a check to (action: Make an Impression), you instead fail. You can attempt checks to make (action: Requests | Request) of creatures who're indifferent or unfriendly toward you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("73e0fcf0-ae89-40f8-b022-5bffb30a3802"), Type = TextBlockType.Text, Text = "You gain the ability to fuse and play with shadows by using focus spells specific to shadowcaster. You learn a shadowcaster focus spell of your choice: (spell: dance of darkness) or (spell: shadow jump). If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by meditating within an area of dim light or darkness. The rules for focus spells appear on page 300." };
+            yield return new TextBlock { Id = Guid.Parse("73e0fcf0-ae89-40f8-b022-5bffb30a3802"), Type = TextBlockType.Text, Text = "You gain the ability to fuse and play with shadows by using focus spells specific to shadowcaster. You learn a shadowcaster focus spell of your choice: (spell: dance of darkness) or (spell: shadow jump). If you don't already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by meditating within an area of dim light or darkness. The rules for focus spells appear on page 300." };
             yield return new TextBlock { Id = Guid.Parse("2b9b6b45-fdc2-40a9-b3fd-3265d7abb58f"), Type = TextBlockType.Text, Text = "Shadowcaster focus spells are occult spells. You become trained in occult spell attack rolls and spell DCs, and your spellcasting ability for these spells is Charisma." };
         }
 

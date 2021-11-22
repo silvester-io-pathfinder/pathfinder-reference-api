@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c6d99e76-fffc-41a7-a89a-791687f7c145"), Type = TextBlockType.Text, Text = "Your immortal lineage has granted you a lifespan much longer than most mortals, and you’ve learned a lot along the way. You become trained in two skills of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("c6d99e76-fffc-41a7-a89a-791687f7c145"), Type = TextBlockType.Text, Text = "Your immortal lineage has granted you a lifespan much longer than most mortals, and you've learned a lot along the way. You become trained in two skills of your choice." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

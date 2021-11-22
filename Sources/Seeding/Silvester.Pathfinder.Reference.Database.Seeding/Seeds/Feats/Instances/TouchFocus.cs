@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("36708056-87b3-46ab-ac3d-e5a84b23c654"), Type = TextBlockType.Text, Text = "You can redirect a spell&#39;s power through you to deliver it within striking distance. If your next action is to (action: Cast a Spell) with 1 or more targets and a range farther than touch, you can change the range to touch. If the altered spell requires a spell attack roll, you gain a +2 circumstance bonus to the attack. This only allows you to touch a single target with the spell, even if the spell originally affected more than 1 target. After you (action: Cast the Spell | Cast a Spell), you can (action: Disarm), (action: Shove), (action: Trip), or (action: Strike) the target with an unarmed attack." };
+            yield return new TextBlock { Id = Guid.Parse("36708056-87b3-46ab-ac3d-e5a84b23c654"), Type = TextBlockType.Text, Text = "You can redirect a spell's power through you to deliver it within striking distance. If your next action is to (action: Cast a Spell) with 1 or more targets and a range farther than touch, you can change the range to touch. If the altered spell requires a spell attack roll, you gain a +2 circumstance bonus to the attack. This only allows you to touch a single target with the spell, even if the spell originally affected more than 1 target. After you (action: Cast the Spell | Cast a Spell), you can (action: Disarm), (action: Shove), (action: Trip), or (action: Strike) the target with an unarmed attack." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

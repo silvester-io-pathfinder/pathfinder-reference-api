@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2897e717-d50b-4928-a206-2c8496b1500f"), Type = TextBlockType.Text, Text = "Your earth elemental ancestor’s influence manifests in you as dust and dirt, like the soil of a field or the hot desert sands. You gain the trained proficiency rank in Survival. If you would automatically become trained in Survival (from your background or class, for example), you instead become trained in a skill of your choice. You can sustain yourself on dirt and ash instead of normal food and water." };
+            yield return new TextBlock { Id = Guid.Parse("2897e717-d50b-4928-a206-2c8496b1500f"), Type = TextBlockType.Text, Text = "Your earth elemental ancestor's influence manifests in you as dust and dirt, like the soil of a field or the hot desert sands. You gain the trained proficiency rank in Survival. If you would automatically become trained in Survival (from your background or class, for example), you instead become trained in a skill of your choice. You can sustain yourself on dirt and ash instead of normal food and water." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

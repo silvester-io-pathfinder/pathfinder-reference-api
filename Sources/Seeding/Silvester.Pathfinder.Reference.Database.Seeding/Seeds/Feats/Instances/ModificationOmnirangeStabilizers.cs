@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("ad75fb6a-8632-4b64-b76f-021a347ff7d2"), Type = TextBlockType.Enumeration, Text = "*Ranged Only**" };
-            yield return new TextBlock { Id = Guid.Parse("a30929a0-c1bf-44fc-a051-51f72d9de6f1"), Type = TextBlockType.Text, Text = "You’ve modified your innovation to be dangerous and effective at any range. If your innovation had the (trait: volley) trait, remove the (trait: volley) trait. Otherwise, increase your innovation’s range increment by 50 feet or an amount equal to the weapon’s base range increment, whichever is more." };
+            yield return new TextBlock { Id = Guid.Parse("a30929a0-c1bf-44fc-a051-51f72d9de6f1"), Type = TextBlockType.Text, Text = "You've modified your innovation to be dangerous and effective at any range. If your innovation had the (trait: volley) trait, remove the (trait: volley) trait. Otherwise, increase your innovation's range increment by 50 feet or an amount equal to the weapon's base range increment, whichever is more." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

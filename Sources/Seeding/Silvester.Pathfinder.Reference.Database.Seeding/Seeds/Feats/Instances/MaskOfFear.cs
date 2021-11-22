@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("280e93c6-f2ed-4fb0-b7ba-b75e25593113"), Type = TextBlockType.Text, Text = "Your warmask burns off of your face, releasing your apprehension. You remove the frightened condition. Your warmask is destroyed, and you can’t reapply it until your next daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("280e93c6-f2ed-4fb0-b7ba-b75e25593113"), Type = TextBlockType.Text, Text = "Your warmask burns off of your face, releasing your apprehension. You remove the frightened condition. Your warmask is destroyed, and you can't reapply it until your next daily preparations." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

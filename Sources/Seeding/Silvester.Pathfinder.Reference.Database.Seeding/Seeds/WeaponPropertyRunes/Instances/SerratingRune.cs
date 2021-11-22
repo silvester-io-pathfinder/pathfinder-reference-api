@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 PotencyId = Potencies.Instances.Unclassified.ID,
                 Benefits = new[]
                 {
-                    new TextBlock {Id = Guid.Parse("3d0b5a29-2e4e-4e8e-b16a-123d6c947bb9"), Type = TextBlockType.Text, Text = "A serrating weapon’s bladed edge separates into jagged, swirling shards that spin along the blade. When dealing slashing damage, the weapon deals an additional 1d4 damage."},
+                    new TextBlock {Id = Guid.Parse("3d0b5a29-2e4e-4e8e-b16a-123d6c947bb9"), Type = TextBlockType.Text, Text = "A serrating weapon's bladed edge separates into jagged, swirling shards that spin along the blade. When dealing slashing damage, the weapon deals an additional 1d4 damage."},
                 },
             };
         }

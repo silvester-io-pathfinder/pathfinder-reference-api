@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7fccdfcc-4f8b-4772-b8b1-4cbccf0ede14"), Type = TextBlockType.Text, Text = "To you, crocodilians, giant lizards, and dinosaurs are loyal steeds, not monsters. You gain the (feat: Ride) feat, even if you don’t meet the prerequisites. You gain a +1 circumstance bonus to Nature checks to (action: Command an Animal) as long as the animal is a reptile, dinosaur, or even a non-sapient dragon." };
+            yield return new TextBlock { Id = Guid.Parse("7fccdfcc-4f8b-4772-b8b1-4cbccf0ede14"), Type = TextBlockType.Text, Text = "To you, crocodilians, giant lizards, and dinosaurs are loyal steeds, not monsters. You gain the (feat: Ride) feat, even if you don't meet the prerequisites. You gain a +1 circumstance bonus to Nature checks to (action: Command an Animal) as long as the animal is a reptile, dinosaur, or even a non-sapient dragon." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

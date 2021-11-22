@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("20149fd9-c908-4517-9729-14a4778efab8"), Type = TextBlockType.Text, Text = "When you cast energy spells, you retain some of that energy as a protective barrier. If your next action is to (activity: Cast a Spell) that deals energy damage, whether or not it successfully deals damage, you gain resistance to that type of energy equal to the spell’s level (minimum 1) until the end of your next turn. If the spell deals more than one type of energy damage, choose one and gain resistance to that type." };
+            yield return new TextBlock { Id = Guid.Parse("20149fd9-c908-4517-9729-14a4778efab8"), Type = TextBlockType.Text, Text = "When you cast energy spells, you retain some of that energy as a protective barrier. If your next action is to (activity: Cast a Spell) that deals energy damage, whether or not it successfully deals damage, you gain resistance to that type of energy equal to the spell's level (minimum 1) until the end of your next turn. If the spell deals more than one type of energy damage, choose one and gain resistance to that type." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

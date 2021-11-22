@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("31c4317f-f8a8-4082-a007-1426d6a09946"), Type = TextBlockType.Text, Text = "With a burst of effort, you weave a path through your enemies, striking each in turn as you move past them. You (action: Stride); this movement doesn’t trigger reactions. You can (action: Strike) up to three times at any point during your movement, each against a different enemy. Each attack counts toward your multiple attack penalty, but your multiple attack penalty doesn’t increase until you have made all your attacks." };
+            yield return new TextBlock { Id = Guid.Parse("31c4317f-f8a8-4082-a007-1426d6a09946"), Type = TextBlockType.Text, Text = "With a burst of effort, you weave a path through your enemies, striking each in turn as you move past them. You (action: Stride); this movement doesn't trigger reactions. You can (action: Strike) up to three times at any point during your movement, each against a different enemy. Each attack counts toward your multiple attack penalty, but your multiple attack penalty doesn't increase until you have made all your attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

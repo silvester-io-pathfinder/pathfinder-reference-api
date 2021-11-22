@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PreciousMaterial
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("2bfa2361-2c6b-481e-9cd1-097f7cd30880"), Type = TextBlockType.Text, Text = "Adamantine weapons have a shiny black appearance and cut through lesser items with ease. They treat any object they hit as if it had half as much Hardness as usual, unless the object’s Hardness is greater than that of the adamantine weapon." };
+            yield return new TextBlock { Id = Guid.Parse("2bfa2361-2c6b-481e-9cd1-097f7cd30880"), Type = TextBlockType.Text, Text = "Adamantine weapons have a shiny black appearance and cut through lesser items with ease. They treat any object they hit as if it had half as much Hardness as usual, unless the object's Hardness is greater than that of the adamantine weapon." };
         }
 
         protected override IEnumerable<PreciousMaterialWeaponVariant> GetVariants()

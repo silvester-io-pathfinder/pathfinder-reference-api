@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("19e109ee-c3b1-457a-a936-82c008b0b32d"), Type = TextBlockType.Text, Text = "You grab your foe while it’s distracted by your attack. The foe you hit becomes grabbed, as if you had succeeded at an Athletics check to (action: Grapple) the foe." };
+            yield return new TextBlock { Id = Guid.Parse("19e109ee-c3b1-457a-a936-82c008b0b32d"), Type = TextBlockType.Text, Text = "You grab your foe while it's distracted by your attack. The foe you hit becomes grabbed, as if you had succeeded at an Athletics check to (action: Grapple) the foe." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

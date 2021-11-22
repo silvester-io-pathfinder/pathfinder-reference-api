@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b74180a3-846d-4d38-a3ed-b55014574783"), Type = TextBlockType.Text, Text = "Your lethal unarmed attacks leave bloody gouges or cause severe internal bleeding. When you critically hit with a (action: Strike) using an unarmed attack that isn&#39;t (trait: nonlethal), the target takes 1d4 persistent bleed damage. This can be because you&#39;re taking the penalty to use a fist for a lethal attack or because you have an unarmed attack without the (trait: nonlethal) trait due to (feat: Iron Fists), (feat: Tusks), or a similar ability." };
+            yield return new TextBlock { Id = Guid.Parse("b74180a3-846d-4d38-a3ed-b55014574783"), Type = TextBlockType.Text, Text = "Your lethal unarmed attacks leave bloody gouges or cause severe internal bleeding. When you critically hit with a (action: Strike) using an unarmed attack that isn't (trait: nonlethal), the target takes 1d4 persistent bleed damage. This can be because you're taking the penalty to use a fist for a lethal attack or because you have an unarmed attack without the (trait: nonlethal) trait due to (feat: Iron Fists), (feat: Tusks), or a similar ability." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

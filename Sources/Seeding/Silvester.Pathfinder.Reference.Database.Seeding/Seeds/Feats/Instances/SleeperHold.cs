@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("17ae8842-8015-40e2-b992-2b08d0659ca4"), Type = TextBlockType.Text, Text = "You pinch crucial points of your target’s nervous system, impeding its ability to function. Attempt an Athletics check to (action: Grapple) the creature, with the following success and critical success effects instead of the usual effects." };
+            yield return new TextBlock { Id = Guid.Parse("17ae8842-8015-40e2-b992-2b08d0659ca4"), Type = TextBlockType.Text, Text = "You pinch crucial points of your target's nervous system, impeding its ability to function. Attempt an Athletics check to (action: Grapple) the creature, with the following success and critical success effects instead of the usual effects." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("17d9065f-0f28-48c0-aef4-ca18e9afeff8"),
-                CriticalSuccess = "The target falls unconscious for 1 minute, though it remains standing and doesn’t drop what it holds.",
+                CriticalSuccess = "The target falls unconscious for 1 minute, though it remains standing and doesn't drop what it holds.",
                 Success = "The target is clumsy 1 until the end of its next turn.",
                 
                  

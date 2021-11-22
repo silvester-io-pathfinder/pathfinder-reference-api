@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5f316cf-a3a9-4f4a-81be-a320238aec61"), Type = TextBlockType.Text, Text = "Your warmask sharpens your connection to the source of your mask’s power. During your daily preparations, choose (spell: fear), (spell: phantom pain), or (spell: true strike). Until your next daily preparations, you can cast this spell as a 1st-level innate spell once per day; the spell’s tradition is determined by the tradition tied to your warmask. You must be wearing your warmask to (action: Cast the Spell | Cast a Spell)." };
+            yield return new TextBlock { Id = Guid.Parse("d5f316cf-a3a9-4f4a-81be-a320238aec61"), Type = TextBlockType.Text, Text = "Your warmask sharpens your connection to the source of your mask's power. During your daily preparations, choose (spell: fear), (spell: phantom pain), or (spell: true strike). Until your next daily preparations, you can cast this spell as a 1st-level innate spell once per day; the spell's tradition is determined by the tradition tied to your warmask. You must be wearing your warmask to (action: Cast the Spell | Cast a Spell)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

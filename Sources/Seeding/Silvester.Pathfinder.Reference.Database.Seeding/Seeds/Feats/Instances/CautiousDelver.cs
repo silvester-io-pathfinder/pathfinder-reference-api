@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e1b82619-c9a5-4739-b9fd-82cf5704749c"), Type = TextBlockType.Text, Text = "You&#39;ve studied the many ways that ancient architects and spellcasters protected their possessions, such as by implementing deadly traps and curses, and learned some magic to counteract them. You can cast (spell: dispel magic), (spell: knock), and (spell: resist energy) as innate spells, each once per day. If you can already cast spells, these spells are of the same tradition. Otherwise, they&#39;re arcane spells, you use Intelligence as your spellcasting ability, and you become trained in spell attack rolls and spell DCs for arcane spells." };
+            yield return new TextBlock { Id = Guid.Parse("e1b82619-c9a5-4739-b9fd-82cf5704749c"), Type = TextBlockType.Text, Text = "You've studied the many ways that ancient architects and spellcasters protected their possessions, such as by implementing deadly traps and curses, and learned some magic to counteract them. You can cast (spell: dispel magic), (spell: knock), and (spell: resist energy) as innate spells, each once per day. If you can already cast spells, these spells are of the same tradition. Otherwise, they're arcane spells, you use Intelligence as your spellcasting ability, and you become trained in spell attack rolls and spell DCs for arcane spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

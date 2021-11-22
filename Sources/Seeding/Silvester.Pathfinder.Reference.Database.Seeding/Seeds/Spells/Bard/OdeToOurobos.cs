@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = 5,
                 Range = "60 feet.",
                 Targets = "The triggering creature.",
-                Trigger = "A creature’s dying condition would reach the value at which they would die.",
+                Trigger = "A creature's dying condition would reach the value at which they would die.",
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 ClassId = Classes.Instances.Bard.ID,
                 SpellTypeId = SpellTypes.Instances.Focus.ID,
@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d141a0f-93d6-48ef-a607-01554a481807"), Type = TextBlockType.Text, Text = "Your ode temporarily staves off death. The target’s dying condition remains 1 below the value at which it dies. This doesn’t help prevent death from effects that kill the target without increasing its dying condition, such as disintegrate and death effects." };
+            yield return new TextBlock { Id = Guid.Parse("4d141a0f-93d6-48ef-a607-01554a481807"), Type = TextBlockType.Text, Text = "Your ode temporarily staves off death. The target's dying condition remains 1 below the value at which it dies. This doesn't help prevent death from effects that kill the target without increasing its dying condition, such as disintegrate and death effects." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

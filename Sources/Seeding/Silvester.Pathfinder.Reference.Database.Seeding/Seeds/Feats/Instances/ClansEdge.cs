@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79bf7e6b-4046-48b2-9548-15c2fecf7164"), Type = TextBlockType.Text, Text = "By moving your clan dagger with rapid precision, you can protect yourself more effectively. Make two (item: clan dagger) (action: Strikes | Strike) against different targets. Your multiple attack penalty applies normally to these (action: Strikes | Strike). You then use an (action: Interact) action to gain the +1 circumstance bonus to your AC from your clan dagger’s (trait: parry) trait." };
+            yield return new TextBlock { Id = Guid.Parse("79bf7e6b-4046-48b2-9548-15c2fecf7164"), Type = TextBlockType.Text, Text = "By moving your clan dagger with rapid precision, you can protect yourself more effectively. Make two (item: clan dagger) (action: Strikes | Strike) against different targets. Your multiple attack penalty applies normally to these (action: Strikes | Strike). You then use an (action: Interact) action to gain the +1 circumstance bonus to your AC from your clan dagger's (trait: parry) trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

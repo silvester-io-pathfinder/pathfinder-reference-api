@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c274fc3f-b7a4-4138-8dee-6c06525a4d7d"), Type = TextBlockType.Text, Text = "The sheer power of your attacks, or the overwhelming number of them, leaves an enemy flustered. If you critically hit your hunted prey with a ranged weapon, or hit it at least twice on the same turn with a ranged weapon, it’s flat-footed until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("c274fc3f-b7a4-4138-8dee-6c06525a4d7d"), Type = TextBlockType.Text, Text = "The sheer power of your attacks, or the overwhelming number of them, leaves an enemy flustered. If you critically hit your hunted prey with a ranged weapon, or hit it at least twice on the same turn with a ranged weapon, it's flat-footed until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

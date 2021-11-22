@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e1b16195-0093-4d01-a891-96582e9d2eeb"), Type = TextBlockType.Text, Text = "You transform unrealized spell energy into a protective shield. If you’re a spontaneous spellcaster, expend a spell slot; if you’re a prepared spellcaster, expend a spell prepared in a spell slot. Reduce the triggering damage by an amount equal to four times the level of the expended slot or spell." };
+            yield return new TextBlock { Id = Guid.Parse("e1b16195-0093-4d01-a891-96582e9d2eeb"), Type = TextBlockType.Text, Text = "You transform unrealized spell energy into a protective shield. If you're a spontaneous spellcaster, expend a spell slot; if you're a prepared spellcaster, expend a spell prepared in a spell slot. Reduce the triggering damage by an amount equal to four times the level of the expended slot or spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

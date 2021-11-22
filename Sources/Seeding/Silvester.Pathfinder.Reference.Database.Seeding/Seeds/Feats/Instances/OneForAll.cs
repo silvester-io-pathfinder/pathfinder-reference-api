@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("adba9dab-a215-4687-a5ea-cf638b8ff3f1"), Type = TextBlockType.Text, Text = "With precisely the right words of encouragement, you bolster an ally’s efforts. Designate an ally within 30 feet; this action counts as sufficient preparation to (action: Aid) that ally. When you use the (action: Aid) reaction to help that ally, you can roll Diplomacy in place of the usual check. If your swashbuckler’s style is wit and your Diplomacy check to (action: Aid) meets or exceeds the very hard DC for your level, you gain panache." };
+            yield return new TextBlock { Id = Guid.Parse("adba9dab-a215-4687-a5ea-cf638b8ff3f1"), Type = TextBlockType.Text, Text = "With precisely the right words of encouragement, you bolster an ally's efforts. Designate an ally within 30 feet; this action counts as sufficient preparation to (action: Aid) that ally. When you use the (action: Aid) reaction to help that ally, you can roll Diplomacy in place of the usual check. If your swashbuckler's style is wit and your Diplomacy check to (action: Aid) meets or exceeds the very hard DC for your level, you gain panache." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

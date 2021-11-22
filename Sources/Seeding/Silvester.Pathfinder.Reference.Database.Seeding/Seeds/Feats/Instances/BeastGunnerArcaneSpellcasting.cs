@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("52af90f9-207e-4260-a280-39a3f6923202"), Type = TextBlockType.Text, Text = "You’re trained in arcane spell attack rolls and spell DCs. Your key spellcasting ability is Charisma. Add an arcane cantrip that requires a spell attack roll to your spell repertoire." };
+            yield return new TextBlock { Id = Guid.Parse("52af90f9-207e-4260-a280-39a3f6923202"), Type = TextBlockType.Text, Text = "You're trained in arcane spell attack rolls and spell DCs. Your key spellcasting ability is Charisma. Add an arcane cantrip that requires a spell attack roll to your spell repertoire." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

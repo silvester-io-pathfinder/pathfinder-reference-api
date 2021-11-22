@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c66d755c-9eb9-42e6-83f9-5732155a83c4"), Type = TextBlockType.Text, Text = "Nothing can keep you from your enemy. (action: Stride) twice. During this movement you ignore difficult terrain, greater difficult terrain, and any effects that would impose a penalty to Speed. You can attempt an Athletics check instead of an Acrobatics check to (action: Balance) when moving across narrow surfaces or uneven ground, using the same DC. This doesn&#39;t prevent you from being harmed by hazardous terrain. You can increase the number of actions this activity takes to 3 to (action: Stride) three times instead." };
+            yield return new TextBlock { Id = Guid.Parse("c66d755c-9eb9-42e6-83f9-5732155a83c4"), Type = TextBlockType.Text, Text = "Nothing can keep you from your enemy. (action: Stride) twice. During this movement you ignore difficult terrain, greater difficult terrain, and any effects that would impose a penalty to Speed. You can attempt an Athletics check instead of an Acrobatics check to (action: Balance) when moving across narrow surfaces or uneven ground, using the same DC. This doesn't prevent you from being harmed by hazardous terrain. You can increase the number of actions this activity takes to 3 to (action: Stride) three times instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

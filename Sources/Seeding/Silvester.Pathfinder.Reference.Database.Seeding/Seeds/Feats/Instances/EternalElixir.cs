@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("42c92d33-4d98-4fc9-bcd1-36980671f9b7"), Type = TextBlockType.Text, Text = "Your body readily accepts and retains minor changes. When you drink one of your alchemical items that has the (trait: elixir) and (trait: infused) traits and a duration of 1 minute or more, you can make the elixir’s duration indefinite. You can do so only if the elixir’s level is half your level or lower. If you later consume a different elixir and make it indefinite, the effect of the previous indefinite elixir ends." };
+            yield return new TextBlock { Id = Guid.Parse("42c92d33-4d98-4fc9-bcd1-36980671f9b7"), Type = TextBlockType.Text, Text = "Your body readily accepts and retains minor changes. When you drink one of your alchemical items that has the (trait: elixir) and (trait: infused) traits and a duration of 1 minute or more, you can make the elixir's duration indefinite. You can do so only if the elixir's level is half your level or lower. If you later consume a different elixir and make it indefinite, the effect of the previous indefinite elixir ends." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d9ca856-2b8d-40b2-acd8-de53e723931d"), Type = Utilities.Text.TextBlockType.Text, Text = "You befuddle your target with strange impulses, causing it to act randomly. The effects are determined by the target’s Will save. You can Dismiss the spell." };
+            yield return new TextBlock { Id = Guid.Parse("1d9ca856-2b8d-40b2-acd8-de53e723931d"), Type = Utilities.Text.TextBlockType.Text, Text = "You befuddle your target with strange impulses, causing it to act randomly. The effects are determined by the target's Will save. You can Dismiss the spell." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

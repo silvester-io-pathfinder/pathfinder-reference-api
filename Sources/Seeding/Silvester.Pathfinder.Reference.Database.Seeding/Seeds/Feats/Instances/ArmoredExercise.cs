@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7322093b-119c-4ba5-bf8c-7c288b5f3d3a"), Type = TextBlockType.Text, Text = "You&#39;ve spent time training in your armor alongside other agents from the Swords. Your proficiency rank for light, medium, and heavy armor increases to expert for whichever of those you already had the trained proficiency rank in." };
+            yield return new TextBlock { Id = Guid.Parse("7322093b-119c-4ba5-bf8c-7c288b5f3d3a"), Type = TextBlockType.Text, Text = "You've spent time training in your armor alongside other agents from the Swords. Your proficiency rank for light, medium, and heavy armor increases to expert for whichever of those you already had the trained proficiency rank in." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

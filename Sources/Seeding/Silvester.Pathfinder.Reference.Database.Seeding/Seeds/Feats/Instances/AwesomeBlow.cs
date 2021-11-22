@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6314908-28b9-4a0e-8e5b-70cda1e4994e"), Type = TextBlockType.Text, Text = "Your attacks are so powerful, they can flatten your opponents. When you use (feat: Knockback), you can attempt an Athletics check against your target’s Fortitude DC." };
+            yield return new TextBlock { Id = Guid.Parse("a6314908-28b9-4a0e-8e5b-70cda1e4994e"), Type = TextBlockType.Text, Text = "Your attacks are so powerful, they can flatten your opponents. When you use (feat: Knockback), you can attempt an Athletics check against your target's Fortitude DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

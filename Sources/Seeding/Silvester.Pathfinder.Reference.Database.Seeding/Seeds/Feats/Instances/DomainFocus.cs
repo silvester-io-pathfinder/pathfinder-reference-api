@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec468dd6-3e37-4a8d-ab45-1cbfa1895dd4"), Type = TextBlockType.Text, Text = "Your devotion to your deity’s domains grows greater, and so does the power granted to you. If you have spent at least 2 Focus Points since the last time you (action: Refocused | Refocus), you recover 2 Focus Points when you (action: Refocus) instead of 1." };
+            yield return new TextBlock { Id = Guid.Parse("ec468dd6-3e37-4a8d-ab45-1cbfa1895dd4"), Type = TextBlockType.Text, Text = "Your devotion to your deity's domains grows greater, and so does the power granted to you. If you have spent at least 2 Focus Points since the last time you (action: Refocused | Refocus), you recover 2 Focus Points when you (action: Refocus) instead of 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

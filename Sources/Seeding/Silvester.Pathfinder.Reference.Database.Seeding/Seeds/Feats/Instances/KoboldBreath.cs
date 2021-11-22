@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d00d697f-e6b6-4345-8639-5110bcaea47b"), Type = TextBlockType.Text, Text = "You channel your draconic exemplar&#39;s power into a gout of energy that manifests as a 30-foot line or a 15-foot cone, dealing 1d4 damage. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. You can&#39;t use this ability again for 1d4 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("d00d697f-e6b6-4345-8639-5110bcaea47b"), Type = TextBlockType.Text, Text = "You channel your draconic exemplar's power into a gout of energy that manifests as a 30-foot line or a 15-foot cone, dealing 1d4 damage. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. You can't use this ability again for 1d4 rounds." };
             yield return new TextBlock { Id = Guid.Parse("3151956b-3876-4d29-bd68-34e7baee05bf"), Type = TextBlockType.Text, Text = "At 3rd level and every 2 levels thereafter, the damage increases by 1d4. The shape of the breath, the damage type, and the saving throw match those of your draconic exemplar. This ability has the trait associated with the type of damage it deals." };
         }
 

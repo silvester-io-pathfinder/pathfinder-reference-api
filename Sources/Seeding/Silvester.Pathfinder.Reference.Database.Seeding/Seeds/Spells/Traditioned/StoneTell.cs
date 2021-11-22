@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d613f3f-d1fb-4d11-a215-1fed8828a60b"), Type = TextBlockType.Text, Text = "You can ask questions of and receive answers from natural or worked stone. While stone is not intelligent, you speak with the natural spirits of the stone, which have a personality colored by the type of stone, as well as by the type of structure the stone is part of, for worked stone. A stone’s perspective, perception, and knowledge give it a worldview different enough from a human’s that it doesn’t consider the same details important. Stones can mostly answer questions about creatures that touched them in the past and what is concealed beneath or behind them." };
+            yield return new TextBlock { Id = Guid.Parse("1d613f3f-d1fb-4d11-a215-1fed8828a60b"), Type = TextBlockType.Text, Text = "You can ask questions of and receive answers from natural or worked stone. While stone is not intelligent, you speak with the natural spirits of the stone, which have a personality colored by the type of stone, as well as by the type of structure the stone is part of, for worked stone. A stone's perspective, perception, and knowledge give it a worldview different enough from a human's that it doesn't consider the same details important. Stones can mostly answer questions about creatures that touched them in the past and what is concealed beneath or behind them." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -35,7 +35,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("e31f9efe-e0aa-4e78-835d-8d0b1b558410"),
                 CriticalSuccess = "The status bonus from your inspire courage or inspire defense increases to +3.",
                 Success = "The status bonus from inspire courage or inspire defense increases to +2.",
-                Failure = "Your inspire courage or inspire defense provides only its normal bonus of +1, but you don’t spend the Focus Point for casting this spell.",
+                Failure = "Your inspire courage or inspire defense provides only its normal bonus of +1, but you don't spend the Focus Point for casting this spell.",
             };
         }
 

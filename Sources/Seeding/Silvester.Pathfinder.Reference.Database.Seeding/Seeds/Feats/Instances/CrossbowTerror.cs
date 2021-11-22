@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c330672-1f78-43e9-88e4-e95edff4a902"), Type = TextBlockType.Text, Text = "You are a dynamo with the crossbow. You gain a +2 circumstance bonus to damage with crossbows. If the crossbow is a simple weapon, also increase the damage die size for your attacks made with that crossbow by one step. As normal, this damage die increase can’t be combined with other abilities that alter the weapon damage die (such as the ranger feat (feat: Crossbow Ace))." };
+            yield return new TextBlock { Id = Guid.Parse("4c330672-1f78-43e9-88e4-e95edff4a902"), Type = TextBlockType.Text, Text = "You are a dynamo with the crossbow. You gain a +2 circumstance bonus to damage with crossbows. If the crossbow is a simple weapon, also increase the damage die size for your attacks made with that crossbow by one step. As normal, this damage die increase can't be combined with other abilities that alter the weapon damage die (such as the ranger feat (feat: Crossbow Ace))." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

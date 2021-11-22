@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aabec015-1778-4701-a9eb-8af4eb6ea157"), Type = TextBlockType.Text, Text = "You have learned to manipulate reflections of magic, similar to the resonant reflections. You reclaim the magic of an ongoing spell, using it to reprepare a spell with a duration. You (action: Dismiss) a spell of 4th level or lower that you cast today from a spell slot with at least half its duration remaining, even if that spell can’t normally be (action: Dismissed | Dismiss). You can then spend 10 minutes to reprepare the spell in that spell slot, as (feat: Reprepare Spell)." };
+            yield return new TextBlock { Id = Guid.Parse("aabec015-1778-4701-a9eb-8af4eb6ea157"), Type = TextBlockType.Text, Text = "You have learned to manipulate reflections of magic, similar to the resonant reflections. You reclaim the magic of an ongoing spell, using it to reprepare a spell with a duration. You (action: Dismiss) a spell of 4th level or lower that you cast today from a spell slot with at least half its duration remaining, even if that spell can't normally be (action: Dismissed | Dismiss). You can then spend 10 minutes to reprepare the spell in that spell slot, as (feat: Reprepare Spell)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

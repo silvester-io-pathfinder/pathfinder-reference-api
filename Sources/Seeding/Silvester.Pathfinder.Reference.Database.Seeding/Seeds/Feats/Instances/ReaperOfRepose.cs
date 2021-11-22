@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("883c2fcf-7f6a-4d3c-8626-bf0f273cf2d2"), Type = TextBlockType.Text, Text = "Your skill and fervor allow you to pierce undead defenses and exploit their weaknesses. When you make an attack using a weapon with which you have master proficiency and hit an undead creature, you ignore 5 points of the creature’s resistances, and the undead’s weaknesses are 2 higher against your attack." };
+            yield return new TextBlock { Id = Guid.Parse("883c2fcf-7f6a-4d3c-8626-bf0f273cf2d2"), Type = TextBlockType.Text, Text = "Your skill and fervor allow you to pierce undead defenses and exploit their weaknesses. When you make an attack using a weapon with which you have master proficiency and hit an undead creature, you ignore 5 points of the creature's resistances, and the undead's weaknesses are 2 higher against your attack." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("119294d2-5c52-4fe3-a0b5-2e399cc1903e"), Type = TextBlockType.Text, Text = "You&#39;re adept at noticing the tells of a liar – sweat, flushing, a quavering voice, a quickening pulse. You gain a +1 circumstance bonus to Perception checks to (action: Sense Motive) and to Perception DCs against attempts to (action: Lie) to you. When you determine someone is lying to you, you can use their deceit to your advantage to gain a +1 circumstance bonus to the next Deception, Diplomacy, Intimidation, or Performance check you attempt against that creature within the next minute." };
+            yield return new TextBlock { Id = Guid.Parse("119294d2-5c52-4fe3-a0b5-2e399cc1903e"), Type = TextBlockType.Text, Text = "You're adept at noticing the tells of a liar – sweat, flushing, a quavering voice, a quickening pulse. You gain a +1 circumstance bonus to Perception checks to (action: Sense Motive) and to Perception DCs against attempts to (action: Lie) to you. When you determine someone is lying to you, you can use their deceit to your advantage to gain a +1 circumstance bonus to the next Deception, Diplomacy, Intimidation, or Performance check you attempt against that creature within the next minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

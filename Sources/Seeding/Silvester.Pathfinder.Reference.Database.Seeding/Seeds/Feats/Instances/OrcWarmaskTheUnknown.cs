@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8445fb61-9ad9-4400-9084-26d1d4e3d64b"), Type = TextBlockType.Text, Text = "The source of your (item: warmask | warmask the unknown)’s power is from the mystery of the unknown. You become trained in Occultism and your mask&#39;s magical tradition is (trait: occult)." };
+            yield return new TextBlock { Id = Guid.Parse("8445fb61-9ad9-4400-9084-26d1d4e3d64b"), Type = TextBlockType.Text, Text = "The source of your (item: warmask | warmask the unknown)'s power is from the mystery of the unknown. You become trained in Occultism and your mask's magical tradition is (trait: occult)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

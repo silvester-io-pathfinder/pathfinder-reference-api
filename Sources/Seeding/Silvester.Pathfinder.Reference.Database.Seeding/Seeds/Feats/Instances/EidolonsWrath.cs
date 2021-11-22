@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f5b9c5b4-0ad5-473c-91b7-e5f3e59b92ad"), Type = TextBlockType.Text, Text = "Your eidolon gains the (spell: eidolon’s wrath) focus spell, which it casts, instead of you. You determine the damage type when you gain the feat: acid, cold, electricity, fire, negative, positive, or sonic. If your eidolon is a celestial, fiend, or monitor with an alignment other than true neutral, you can choose a damage type in its alignment. Increase the number of Focus Points in your focus pool by 1. As normal, your eidolon shares your Focus Points." };
+            yield return new TextBlock { Id = Guid.Parse("f5b9c5b4-0ad5-473c-91b7-e5f3e59b92ad"), Type = TextBlockType.Text, Text = "Your eidolon gains the (spell: eidolon's wrath) focus spell, which it casts, instead of you. You determine the damage type when you gain the feat: acid, cold, electricity, fire, negative, positive, or sonic. If your eidolon is a celestial, fiend, or monitor with an alignment other than true neutral, you can choose a damage type in its alignment. Increase the number of Focus Points in your focus pool by 1. As normal, your eidolon shares your Focus Points." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

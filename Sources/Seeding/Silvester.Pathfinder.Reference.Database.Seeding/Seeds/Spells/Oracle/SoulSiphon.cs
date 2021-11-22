@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("17e82c6e-02ee-43c7-a911-4d5446438dfa"), Type = TextBlockType.Text, Text = "You siphon off a portion of the target’s soul to bolster your own vitality. The target must attempt a Fortitude save or take 1d4 negative damage. You gain temporary Hit Points equal to the total amount of HP the target loses, including the HP lost from becoming drained." };
+            yield return new TextBlock { Id = Guid.Parse("17e82c6e-02ee-43c7-a911-4d5446438dfa"), Type = TextBlockType.Text, Text = "You siphon off a portion of the target's soul to bolster your own vitality. The target must attempt a Fortitude save or take 1d4 negative damage. You gain temporary Hit Points equal to the total amount of HP the target loses, including the HP lost from becoming drained." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

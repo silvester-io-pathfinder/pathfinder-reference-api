@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("22794f5c-4ecf-486f-9d86-e57522d77c76"), Type = TextBlockType.Text, Text = "You don’t take the normal -2 penalty to attack rolls with improvised weapons. Additionally, whenever you gain a class feature that grants you expert or greater proficiency with any weapon, you also gain that proficiency with improvised weapons." };
+            yield return new TextBlock { Id = Guid.Parse("22794f5c-4ecf-486f-9d86-e57522d77c76"), Type = TextBlockType.Text, Text = "You don't take the normal -2 penalty to attack rolls with improvised weapons. Additionally, whenever you gain a class feature that grants you expert or greater proficiency with any weapon, you also gain that proficiency with improvised weapons." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

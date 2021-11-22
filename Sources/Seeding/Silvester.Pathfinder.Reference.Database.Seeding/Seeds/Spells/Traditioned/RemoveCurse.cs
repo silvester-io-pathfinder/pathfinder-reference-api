@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("06d4cf6b-2a4f-47b4-a31a-a8f70e797fbe"), Type = TextBlockType.Text, Text = "Your touch grants a reprieve to a cursed creature. You attempt to counteract one curse afflicting the target. If the curse comes from a cursed item or other external source, a success indicates that the target creature can rid itself of the cursed item, but it doesn’t remove the curse from the item." };
+            yield return new TextBlock { Id = Guid.Parse("06d4cf6b-2a4f-47b4-a31a-a8f70e797fbe"), Type = TextBlockType.Text, Text = "Your touch grants a reprieve to a cursed creature. You attempt to counteract one curse afflicting the target. If the curse comes from a cursed item or other external source, a success indicates that the target creature can rid itself of the cursed item, but it doesn't remove the curse from the item." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

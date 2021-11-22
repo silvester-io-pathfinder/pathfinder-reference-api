@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ada76d0-f927-4dc1-9028-fa61a355ec61"), Type = TextBlockType.Text, Text = "When you pull forth positive or negative energy, you also create a smaller pocket of that energy. If the next action you use is to cast a 2-action (spell: harm) or (spell: heal) to heal or damage a single creature, choose one additional creature adjacent to either you or the target. Target that creature with a 1-action version of the same spell. This spell is the same level as the 2-action (spell: harm) or (spell: heal) you cast and doesn’t cost another spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("3ada76d0-f927-4dc1-9028-fa61a355ec61"), Type = TextBlockType.Text, Text = "When you pull forth positive or negative energy, you also create a smaller pocket of that energy. If the next action you use is to cast a 2-action (spell: harm) or (spell: heal) to heal or damage a single creature, choose one additional creature adjacent to either you or the target. Target that creature with a 1-action version of the same spell. This spell is the same level as the 2-action (spell: harm) or (spell: heal) you cast and doesn't cost another spell slot." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

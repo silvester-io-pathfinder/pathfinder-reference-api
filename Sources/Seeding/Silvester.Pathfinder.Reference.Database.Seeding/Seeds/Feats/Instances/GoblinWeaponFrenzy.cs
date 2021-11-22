@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c6ee97fd-c1ec-47de-a631-8e347ee9237e"), Type = TextBlockType.Text, Text = "You know how to wield your people’s vicious weapons. Whenever you score a critical hit using a goblin weapon, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("c6ee97fd-c1ec-47de-a631-8e347ee9237e"), Type = TextBlockType.Text, Text = "You know how to wield your people's vicious weapons. Whenever you score a critical hit using a goblin weapon, you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("43da22c8-0ecb-47cb-9cf9-3487352f25be"), Type = TextBlockType.Text, Text = "Your mother was a sea hag, granting you one sea-green or blue eye. You find comfort both in the sea and on the shore. Whenever you roll a success on an Athletics check to (action: Swim), you get a critical success instead. If you end your turn in water without having succeeded at a (action: Swim) action that round, you don&#39;t sink (but you might still be moved by the current)." };
+            yield return new TextBlock { Id = Guid.Parse("43da22c8-0ecb-47cb-9cf9-3487352f25be"), Type = TextBlockType.Text, Text = "Your mother was a sea hag, granting you one sea-green or blue eye. You find comfort both in the sea and on the shore. Whenever you roll a success on an Athletics check to (action: Swim), you get a critical success instead. If you end your turn in water without having succeeded at a (action: Swim) action that round, you don't sink (but you might still be moved by the current)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

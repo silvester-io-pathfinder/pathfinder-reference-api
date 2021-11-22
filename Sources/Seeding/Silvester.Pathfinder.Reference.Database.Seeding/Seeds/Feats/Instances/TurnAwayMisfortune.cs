@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ed140fb-ae97-4717-8e07-dc8f58c471f5"), Type = TextBlockType.Text, Text = "You perform a superstition, such as casting salt over your shoulder to ward off bad luck. Turn Away Misfortune’s (trait: fortune) trait cancels out the (trait: misfortune) effect, causing you to roll normally" };
+            yield return new TextBlock { Id = Guid.Parse("3ed140fb-ae97-4717-8e07-dc8f58c471f5"), Type = TextBlockType.Text, Text = "You perform a superstition, such as casting salt over your shoulder to ward off bad luck. Turn Away Misfortune's (trait: fortune) trait cancels out the (trait: misfortune) effect, causing you to roll normally" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8cf03819-ad11-4dc6-8cbf-0c2723d6869c"), Type = TextBlockType.Text, Text = "You draw upon the reservoir of your patron’s magic that resides within your familiar. During your turn, you can cast one spell your familiar knows that was granted by your patron’s theme or lessons without spending a spell slot to do so (or even having it prepared). The spell must be at least 1 level lower than the highest-level spell you can cast." };
+            yield return new TextBlock { Id = Guid.Parse("8cf03819-ad11-4dc6-8cbf-0c2723d6869c"), Type = TextBlockType.Text, Text = "You draw upon the reservoir of your patron's magic that resides within your familiar. During your turn, you can cast one spell your familiar knows that was granted by your patron's theme or lessons without spending a spell slot to do so (or even having it prepared). The spell must be at least 1 level lower than the highest-level spell you can cast." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

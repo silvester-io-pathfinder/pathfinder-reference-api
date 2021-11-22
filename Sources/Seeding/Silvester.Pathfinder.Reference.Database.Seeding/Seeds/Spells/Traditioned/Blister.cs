@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("54cb3487-b80d-41af-b5e0-12d932bd7f54"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target grows one blister. You can spend a single action, which has the concentrate trait, to pop a blister. The target and each creature in a 15-foot cone originating from the target takes 7d6 acid damage (basic Fortitude save). You choose the direction of the cone, which can’t include the target. When no blisters are left, the spell ends.",
+                Success = "The target grows one blister. You can spend a single action, which has the concentrate trait, to pop a blister. The target and each creature in a 15-foot cone originating from the target takes 7d6 acid damage (basic Fortitude save). You choose the direction of the cone, which can't include the target. When no blisters are left, the spell ends.",
                 Failure = "As success, but the target grows two blisters.",
                 CriticalFailure = "As success, but the target grows four blisters."
             };

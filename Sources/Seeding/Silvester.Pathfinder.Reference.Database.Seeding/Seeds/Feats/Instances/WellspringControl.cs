@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("196d2396-27d1-414b-8538-2816b8de99ae"), Type = TextBlockType.Text, Text = "When you generate a wellspring surge, roll twice on Table 5–2 (SoM pg. 250) and take the result of your choice. This doesn’t apply when you cause another creature to generate a wellspring surge." };
+            yield return new TextBlock { Id = Guid.Parse("196d2396-27d1-414b-8538-2816b8de99ae"), Type = TextBlockType.Text, Text = "When you generate a wellspring surge, roll twice on Table 5–2 (SoM pg. 250) and take the result of your choice. This doesn't apply when you cause another creature to generate a wellspring surge." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

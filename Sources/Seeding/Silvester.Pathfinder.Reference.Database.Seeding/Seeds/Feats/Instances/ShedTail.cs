@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6b266184-f799-4a86-acc1-1693ae98fe87"), Type = TextBlockType.Text, Text = "You can shed your tail to escape. You cease being grabbed, then (Action: Stride) without triggering any reactions from the creature that grabbed you. It takes 1 week for your tail to fully grow back. Until it does, you can’t use your tail unarmed attack, and you take a -2 circumstance penalty on checks to (Action: Balance)." };
+            yield return new TextBlock { Id = Guid.Parse("6b266184-f799-4a86-acc1-1693ae98fe87"), Type = TextBlockType.Text, Text = "You can shed your tail to escape. You cease being grabbed, then (Action: Stride) without triggering any reactions from the creature that grabbed you. It takes 1 week for your tail to fully grow back. Until it does, you can't use your tail unarmed attack, and you take a -2 circumstance penalty on checks to (Action: Balance)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

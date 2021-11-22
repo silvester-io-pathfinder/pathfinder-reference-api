@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalElixir
                 PotionPotencyId = Potencies.Instances.Moderate.ID,
                 Level = 12,
                 Price = 32000,
-                Benefits = "You’re also protected from extreme heat."
+                Benefits = "You're also protected from extreme heat."
             };
 
             yield return new AlchemicalElixirPotencyBinding
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalElixir
                 PotionPotencyId = Potencies.Instances.Greater.ID,
                 Level = 16,
                 Price = 140000,
-                Benefits = "You’re also protected from extreme and incredible heat."
+                Benefits = "You're also protected from extreme and incredible heat."
             };
         }
 

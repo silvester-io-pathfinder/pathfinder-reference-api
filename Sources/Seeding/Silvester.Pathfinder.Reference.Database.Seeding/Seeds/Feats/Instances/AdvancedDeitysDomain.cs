@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("489c4f52-5e0f-4465-a60f-424b9feae8d4"), Type = TextBlockType.Text, Text = "Through your conviction, you have glimpsed the deeper secrets of your deity’s domain. You gain an advanced domain spell from the domain you chose with (feat: Deity&#39;s Domain). You can cast that spell as a devotion spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("489c4f52-5e0f-4465-a60f-424b9feae8d4"), Type = TextBlockType.Text, Text = "Through your conviction, you have glimpsed the deeper secrets of your deity's domain. You gain an advanced domain spell from the domain you chose with (feat: Deity's Domain). You can cast that spell as a devotion spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

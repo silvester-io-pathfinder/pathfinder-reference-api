@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d3feead-6443-4a16-adbb-9cb413ede270"), Type = TextBlockType.Text, Text = "You can (action: Identify Magic) swiftly. You take only 1 minute when using (action: Identify Magic) to determine the properties of an item, ongoing effect, or location, rather than 10 minutes. If you’re a master, it takes a 3-action activity, and if you’re legendary, it takes 1 action." };
+            yield return new TextBlock { Id = Guid.Parse("2d3feead-6443-4a16-adbb-9cb413ede270"), Type = TextBlockType.Text, Text = "You can (action: Identify Magic) swiftly. You take only 1 minute when using (action: Identify Magic) to determine the properties of an item, ongoing effect, or location, rather than 10 minutes. If you're a master, it takes a 3-action activity, and if you're legendary, it takes 1 action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

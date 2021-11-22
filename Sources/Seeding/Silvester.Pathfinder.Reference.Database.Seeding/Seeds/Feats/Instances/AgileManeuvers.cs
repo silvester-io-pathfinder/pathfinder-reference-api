@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7e7c3e55-f46f-4acf-a19c-5118a8cb490c"), Type = TextBlockType.Text, Text = "Your easily maneuver against your foes. Your (action: Grapple), (action: Shove), and (action: Trip) actions have a lower multiple attack penalty: -4 instead of -5 if they’re the second attack on your turn, or -8 instead of -10 if they’re the third or subsequent attack on your turn." };
+            yield return new TextBlock { Id = Guid.Parse("7e7c3e55-f46f-4acf-a19c-5118a8cb490c"), Type = TextBlockType.Text, Text = "Your easily maneuver against your foes. Your (action: Grapple), (action: Shove), and (action: Trip) actions have a lower multiple attack penalty: -4 instead of -5 if they're the second attack on your turn, or -8 instead of -10 if they're the third or subsequent attack on your turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

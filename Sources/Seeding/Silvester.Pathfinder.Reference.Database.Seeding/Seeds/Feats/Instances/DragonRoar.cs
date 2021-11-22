@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b1dbef62-60d0-40ce-950b-547a24f9ea39"), Type = TextBlockType.Text, Text = "You bellow, instilling fear in your enemies. Enemies within a 15-foot emanation must succeed at a Will save against your Intimidation DC or be frightened 1 (frightened 2 on a critical failure). When a creature frightened by the roar begins its turn adjacent to you, it can’t reduce its frightened value below 1 on that turn. Your first attack that hits a frightened creature after you roar and before the end of your next turn gains a +4 circumstance bonus to damage." };
-            yield return new TextBlock { Id = Guid.Parse("5df1041b-2d71-49bb-90e2-cfdda2f71d1b"), Type = TextBlockType.Text, Text = "After you use Dragon Roar, you can’t use it again for 1d4 rounds. Its effects end immediately if you leave (feat: Dragon Stance). Creatures in the area of your roar are then temporarily immune for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("b1dbef62-60d0-40ce-950b-547a24f9ea39"), Type = TextBlockType.Text, Text = "You bellow, instilling fear in your enemies. Enemies within a 15-foot emanation must succeed at a Will save against your Intimidation DC or be frightened 1 (frightened 2 on a critical failure). When a creature frightened by the roar begins its turn adjacent to you, it can't reduce its frightened value below 1 on that turn. Your first attack that hits a frightened creature after you roar and before the end of your next turn gains a +4 circumstance bonus to damage." };
+            yield return new TextBlock { Id = Guid.Parse("5df1041b-2d71-49bb-90e2-cfdda2f71d1b"), Type = TextBlockType.Text, Text = "After you use Dragon Roar, you can't use it again for 1d4 rounds. Its effects end immediately if you leave (feat: Dragon Stance). Creatures in the area of your roar are then temporarily immune for 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -70,7 +70,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instance
             return new DivineIntercession
             {
                 Id = Guid.Parse("48c255f0-bdbd-44ac-9bf8-f5c79fee14c1"),
-                Description = "The Whisper in Bronze doesn’t dole out punishments or rewards to her followers lightly.",
+                Description = "The Whisper in Bronze doesn't dole out punishments or rewards to her followers lightly.",
                 MinorBoon = "Knowledge floods your mind. Once, you can reroll a failed skill check to Recall Knowledge; you must use the second result, even if it's worse.",
                 ModerateBoon = "You become a wellspring of invention. You gain the Inventor feat, even if you don't meet its prerequisites, and when you roll a Crafting check for the Inventor feat, you use the result one degree of success better than the result you rolled.",
                 MajorBoon = "You gain the companionship of a loyal construct ally of Brigh's choice at least 1 level lower than you. If the construct is destroyed, it rebuilds itself over the course of a week, and as you gain levels, the construct upgrades and improves itself, becoming more powerful.",

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("82d2d590-90c9-48ea-8167-3f20c968560f"), Type = TextBlockType.Text, Text = "Your eidolon phases out of reality slightly, gaining resistance to all damage (except force and negative) equal to half your level. It’s not (trait: incorporeal), but it can’t use (action: Strikes | Strike) or actions that require a fully physical form, such as (action: Grapple), (action: Shove), or (action: Trip). Your eidolon can return to its normal form with a single action, which has the (trait: concentrate) trait." };
+            yield return new TextBlock { Id = Guid.Parse("82d2d590-90c9-48ea-8167-3f20c968560f"), Type = TextBlockType.Text, Text = "Your eidolon phases out of reality slightly, gaining resistance to all damage (except force and negative) equal to half your level. It's not (trait: incorporeal), but it can't use (action: Strikes | Strike) or actions that require a fully physical form, such as (action: Grapple), (action: Shove), or (action: Trip). Your eidolon can return to its normal form with a single action, which has the (trait: concentrate) trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

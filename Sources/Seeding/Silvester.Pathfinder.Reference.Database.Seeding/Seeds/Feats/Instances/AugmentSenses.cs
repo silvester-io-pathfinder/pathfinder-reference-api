@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4065172f-55f7-409c-ab59-94989d652766"), Type = TextBlockType.Text, Text = "You open vestigial eyes, unfurl tympanic flaps of skin, or otherwise enhance your senses. Until the start of your next turn, you gain the following benefits: you can’t be flanked; when you (action: Seek) for creatures, you can scan a 60-foot cone or a 30-foot burst instead of the normal area; and when you (action: Seek) for hidden objects, you can search a 15-foot square instead of the normal area." };
+            yield return new TextBlock { Id = Guid.Parse("4065172f-55f7-409c-ab59-94989d652766"), Type = TextBlockType.Text, Text = "You open vestigial eyes, unfurl tympanic flaps of skin, or otherwise enhance your senses. Until the start of your next turn, you gain the following benefits: you can't be flanked; when you (action: Seek) for creatures, you can scan a 60-foot cone or a 30-foot burst instead of the normal area; and when you (action: Seek) for hidden objects, you can search a 15-foot square instead of the normal area." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

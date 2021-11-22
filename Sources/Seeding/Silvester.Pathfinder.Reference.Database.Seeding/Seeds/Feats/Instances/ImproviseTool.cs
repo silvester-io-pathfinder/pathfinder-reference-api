@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("457fcec1-77ab-4204-b6fa-cb1ca18b970a"), Type = TextBlockType.Text, Text = "You can jury-rig solutions when you don’t have the proper tools on hand. You can attempt to (action: Repair) damaged items without a (item: repair kit)." };
-            yield return new TextBlock { Id = Guid.Parse("2a667415-812c-4288-8e81-5fa9906fb11f"), Type = TextBlockType.Text, Text = "If you have the raw materials available, you can (action: Craft) a basic (item: caltrop set | Caltrops), (item: candle), (item: compass), (item: crowbar), (item: fishing tackle), (item: flint and steel), (item: hammer), (item: ladder | Ladder 10-foot), (item: piton), (item: rope | Rope 50 feet), (item: 10-foot pole | Ten-Foot Pole), (item: replacement thieves’ picks | Replacement Picks), (item: long | Tool long) or (item: short tool | Tool short), or (item: torch) without consulting a (item: basic crafter’s book)." };
+            yield return new TextBlock { Id = Guid.Parse("457fcec1-77ab-4204-b6fa-cb1ca18b970a"), Type = TextBlockType.Text, Text = "You can jury-rig solutions when you don't have the proper tools on hand. You can attempt to (action: Repair) damaged items without a (item: repair kit)." };
+            yield return new TextBlock { Id = Guid.Parse("2a667415-812c-4288-8e81-5fa9906fb11f"), Type = TextBlockType.Text, Text = "If you have the raw materials available, you can (action: Craft) a basic (item: caltrop set | Caltrops), (item: candle), (item: compass), (item: crowbar), (item: fishing tackle), (item: flint and steel), (item: hammer), (item: ladder | Ladder 10-foot), (item: piton), (item: rope | Rope 50 feet), (item: 10-foot pole | Ten-Foot Pole), (item: replacement thieves' picks | Replacement Picks), (item: long | Tool long) or (item: short tool | Tool short), or (item: torch) without consulting a (item: basic crafter's book)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

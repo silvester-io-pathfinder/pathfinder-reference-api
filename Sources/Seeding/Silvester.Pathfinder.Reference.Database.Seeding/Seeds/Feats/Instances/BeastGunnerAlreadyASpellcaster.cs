@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("713a95b1-68c1-4e60-90ba-b2b3574522bd"), Type = TextBlockType.Text, Text = "You learn one additional cantrip. If you’re a prepared caster, you can prepare this spell in addition to your usual cantrips per day; if you’re a spontaneous caster, you add this cantrip to your spell repertoire." };
+            yield return new TextBlock { Id = Guid.Parse("713a95b1-68c1-4e60-90ba-b2b3574522bd"), Type = TextBlockType.Text, Text = "You learn one additional cantrip. If you're a prepared caster, you can prepare this spell in addition to your usual cantrips per day; if you're a spontaneous caster, you add this cantrip to your spell repertoire." };
             yield return new TextBlock { Id = Guid.Parse("e514dc9d-1e5f-4fc8-96f1-d488490e3e84"), Type = TextBlockType.Text, Text = "__Add the extra spell slot manually.__" };
         }
 

@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ArmorPropertyRun
                 Id = Guid.Parse("13ef1f89-bd03-400e-960f-2cf2ffc951d5"),
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 Name = "Command",
-                Effect = "You gain the effects of an ethereal jaunt spell. This doesn’t require concentration and lasts for 10 minutes or until you choose to return to material form as a free action.",
+                Effect = "You gain the effects of an ethereal jaunt spell. This doesn't require concentration and lasts for 10 minutes or until you choose to return to material form as a free action.",
                 Frequency = "Once per day."
             };
         }

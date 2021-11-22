@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6b5380f2-45d0-40e8-9787-60579a59f107"), Type = TextBlockType.Text, Text = "You dip and spin, unleashing a wide whirlpool of water. Make an Athletics check to (action: Trip) each creature standing on the ground in a 10-foot emanation. These attacks all count toward your multiple attack penalty, but the penalty doesn’t increase until after you make all the attacks." };
+            yield return new TextBlock { Id = Guid.Parse("6b5380f2-45d0-40e8-9787-60579a59f107"), Type = TextBlockType.Text, Text = "You dip and spin, unleashing a wide whirlpool of water. Make an Athletics check to (action: Trip) each creature standing on the ground in a 10-foot emanation. These attacks all count toward your multiple attack penalty, but the penalty doesn't increase until after you make all the attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

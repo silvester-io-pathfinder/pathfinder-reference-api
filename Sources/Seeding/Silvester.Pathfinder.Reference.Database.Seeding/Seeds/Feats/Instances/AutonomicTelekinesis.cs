@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13028d6f-a65d-4654-8072-d06090335ec5"), Type = TextBlockType.Text, Text = "You can move objects even without casting a specific spell. You can telekinetically perform simple (action: Interact) actions within squares adjacent to you, such as opening a door. You can’t perform actions that require significant manual dexterity, including any action that would require a check to accomplish, and you can’t use it to hold items, though you can use an (action: Interact) action to telekinetically draw a nearby item to a hand to hold it." };
+            yield return new TextBlock { Id = Guid.Parse("13028d6f-a65d-4654-8072-d06090335ec5"), Type = TextBlockType.Text, Text = "You can move objects even without casting a specific spell. You can telekinetically perform simple (action: Interact) actions within squares adjacent to you, such as opening a door. You can't perform actions that require significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items, though you can use an (action: Interact) action to telekinetically draw a nearby item to a hand to hold it." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

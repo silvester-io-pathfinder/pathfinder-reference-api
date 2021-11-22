@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("156b41ca-397e-444a-afaf-c114b321c2d6"), Type = TextBlockType.Text, Text = "If you use a hostile action, the invisibility doesn’t end." }
+                    new TextBlock { Id = Guid.Parse("156b41ca-397e-444a-afaf-c114b321c2d6"), Type = TextBlockType.Text, Text = "If you use a hostile action, the invisibility doesn't end." }
                 }
             };
         }

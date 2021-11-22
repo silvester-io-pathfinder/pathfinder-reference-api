@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc191e7d-f252-48e7-8a30-00dbc02bc04d"), Type = TextBlockType.Text, Text = "You gain a +2 status bonus to your Intimidation checks and don’t take any penalties for not sharing a language when (action: Demoralizing|Demoralize) foes who can perceive your armament’s essence form. When you manifest the essence form, you can attempt to (action: Demoralize) an enemy who can perceive the manifestation." };
-            yield return new TextBlock { Id = Guid.Parse("e5aadbe3-1000-4a57-9702-d5af218ca483"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ If you attempt to (action: Demoralize) an enemy, your (action: Demoralize) also targets the ally closest to you.get. This (action: Strike) uses the same multiple attack penalty as the missed (action: Strike) and doesn’t count toward your multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("fc191e7d-f252-48e7-8a30-00dbc02bc04d"), Type = TextBlockType.Text, Text = "You gain a +2 status bonus to your Intimidation checks and don't take any penalties for not sharing a language when (action: Demoralizing|Demoralize) foes who can perceive your armament's essence form. When you manifest the essence form, you can attempt to (action: Demoralize) an enemy who can perceive the manifestation." };
+            yield return new TextBlock { Id = Guid.Parse("e5aadbe3-1000-4a57-9702-d5af218ca483"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ If you attempt to (action: Demoralize) an enemy, your (action: Demoralize) also targets the ally closest to you.get. This (action: Strike) uses the same multiple attack penalty as the missed (action: Strike) and doesn't count toward your multiple attack penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13a3944e-bab9-4641-82b4-41a065b1023c"), Type = TextBlockType.Text, Text = "You have extensive knowledge of your ancestors’ ancient origins. You gain the trained proficiency rank in Alghollthu Lore and Azlanti Lore. If you roll a critical failure on an Alghollthu Lore or Azlanti Lore check to (action: Recall Knowledge), you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("13a3944e-bab9-4641-82b4-41a065b1023c"), Type = TextBlockType.Text, Text = "You have extensive knowledge of your ancestors' ancient origins. You gain the trained proficiency rank in Alghollthu Lore and Azlanti Lore. If you roll a critical failure on an Alghollthu Lore or Azlanti Lore check to (action: Recall Knowledge), you get a failure instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Aklys",
-                Description = "The aklys is a throwing club with a hook on one end and a lengthy cord attached to the other. Though aklyses aren’t available in most shops, one might be purchased for 5 gp from a vendor that specializes in strange weapons.",
+                Description = "The aklys is a throwing club with a hook on one end and a lengthy cord attached to the other. Though aklyses aren't available in most shops, one might be purchased for 5 gp from a vendor that specializes in strange weapons.",
                 Price = 500,
                 Damage = "1d6",
                 Hands = "1",

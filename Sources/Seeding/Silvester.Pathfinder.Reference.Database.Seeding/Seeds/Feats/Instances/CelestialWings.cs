@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fa6f8142-df56-4fa1-a251-12cf52d79aa7"), Type = TextBlockType.Text, Text = "With effort, you can call forth magical wings from your back, similar in appearance to those of your celestial forebears. These wings remain for 10 minutes. You gain a fly Speed equal to your Speed while you&#39;ve manifested your wings." };
+            yield return new TextBlock { Id = Guid.Parse("fa6f8142-df56-4fa1-a251-12cf52d79aa7"), Type = TextBlockType.Text, Text = "With effort, you can call forth magical wings from your back, similar in appearance to those of your celestial forebears. These wings remain for 10 minutes. You gain a fly Speed equal to your Speed while you've manifested your wings." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

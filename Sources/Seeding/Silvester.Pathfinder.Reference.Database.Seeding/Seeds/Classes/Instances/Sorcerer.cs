@@ -17,8 +17,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
                 Name = "Sorcerer",
                 BaseHealth = 6,
 
-                Description = "You didn’t choose to become a spellcaster—you were born one. There’s magic in your blood, whether a divinity touched one of your ancestors, a forebear communed with a primal creature, or a powerful occult ritual influenced your line. Self-reflection and study allow you to refine your inherent magical skills and unlock new, more powerful abilities. The power in your blood carries a risk, however, and you constantly face the choice of whether you’ll rise to become a master spellcaster or fall into destruction.",
-                DuringCombatEncounters = "You use spells to injure your enemies, influence their minds, and hamper their movements. You might be too vulnerable to get into melee combat, or your bloodline might give you abilities that help you hold your own in a brawl. While your magic is powerful, to conserve your best spells—or when you’ve used them all up—you also rely on cantrips.",
+                Description = "You didn't choose to become a spellcaster—you were born one. There's magic in your blood, whether a divinity touched one of your ancestors, a forebear communed with a primal creature, or a powerful occult ritual influenced your line. Self-reflection and study allow you to refine your inherent magical skills and unlock new, more powerful abilities. The power in your blood carries a risk, however, and you constantly face the choice of whether you'll rise to become a master spellcaster or fall into destruction.",
+                DuringCombatEncounters = "You use spells to injure your enemies, influence their minds, and hamper their movements. You might be too vulnerable to get into melee combat, or your bloodline might give you abilities that help you hold your own in a brawl. While your magic is powerful, to conserve your best spells—or when you've used them all up—you also rely on cantrips.",
                 DuringSocialEncounters = "Your natural charisma makes you good at interacting with people.",
                 WhileExploring = "You detect the magic around you, finding treasures and warning your adventuring group of magical traps. When the group encounters mysteries or problems related to your bloodline, you try to solve them.",
                 InDowntime = "You craft magic items or scribe scrolls. Your bloodline might drive you to research your ancestry or associate with affiliated people or creatures.",
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
         {
             yield return new ClassCharacteristic { Id = Guid.Parse("9266174a-c40c-4aa9-a834-44c58fde1056"), Text = "Marvel at your ability to create magic from thin air and view your abilities with equal parts admiration and mistrust." };
             yield return new ClassCharacteristic { Id = Guid.Parse("3844b3a3-6ece-44f4-aa24-3da8c2a50ce1"), Text = "Consider you less dedicated than studious wizards, devoted clerics, and other practitioners of magic, since power comes to you naturally." };
-            yield return new ClassCharacteristic { Id = Guid.Parse("417aafb9-414d-44cd-834f-a41bd953f331"), Text = "Assume you’re as unpredictable as the magic you bring forth, even if your personality proves otherwise." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("417aafb9-414d-44cd-834f-a41bd953f331"), Text = "Assume you're as unpredictable as the magic you bring forth, even if your personality proves otherwise." };
         }
 
         protected override Type GetClassFeaturesNamespace()

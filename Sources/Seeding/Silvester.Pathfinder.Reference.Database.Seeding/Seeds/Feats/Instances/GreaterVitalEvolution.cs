@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f741ada7-6516-422c-9798-3ac2c35c0411"), Type = TextBlockType.Text, Text = "Vital power surges through you like a font of energy. Twice per day, you can (activity: Cast a Spell) after you’ve run out of spell slots of the appropriate spell level; the two spells you cast with this feat must be of different spell levels." };
+            yield return new TextBlock { Id = Guid.Parse("f741ada7-6516-422c-9798-3ac2c35c0411"), Type = TextBlockType.Text, Text = "Vital power surges through you like a font of energy. Twice per day, you can (activity: Cast a Spell) after you've run out of spell slots of the appropriate spell level; the two spells you cast with this feat must be of different spell levels." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

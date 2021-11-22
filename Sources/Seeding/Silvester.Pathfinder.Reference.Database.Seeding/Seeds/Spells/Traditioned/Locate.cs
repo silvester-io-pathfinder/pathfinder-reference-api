@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bf813ba0-278c-43d7-900c-3538924fd4d3"), Type = TextBlockType.Text, Text = "You learn the direction to the target (if you picked a specific object, such as “my mother’s sword”) or the nearest target (if you picked a type of object, such as “swords”). If the target is a specific object, you must have observed it directly with your own senses. If it’s a type of object, you still need to have an accurate mental image of the type of object. If there’s lead or running water between you and the target, this spell can’t locate the object. This means you might find a type of object farther away if the nearest one is behind lead or running water." };
+            yield return new TextBlock { Id = Guid.Parse("bf813ba0-278c-43d7-900c-3538924fd4d3"), Type = TextBlockType.Text, Text = "You learn the direction to the target (if you picked a specific object, such as “my mother's sword”) or the nearest target (if you picked a type of object, such as “swords”). If the target is a specific object, you must have observed it directly with your own senses. If it's a type of object, you still need to have an accurate mental image of the type of object. If there's lead or running water between you and the target, this spell can't locate the object. This means you might find a type of object farther away if the nearest one is behind lead or running water." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

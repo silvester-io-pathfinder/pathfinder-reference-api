@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("93ab9a4e-1918-4645-9de5-aef2711f3aa2"), Type = TextBlockType.Text, Text = "You capitalize on your ally’s attack to create a coordinated barrage. Make a ranged (action: Strike) with a -2 penalty against the opponent targeted by the triggering attack. This (action: Strike) doesn’t count toward your multiple attack penalty, and your multiple attack penalty doesn’t apply to this (action: Strike). If this (action: Strike) is successful, combine the damage from the attack with the damage from your ally’s attack for the purpose of resistances and weaknesses." };
+            yield return new TextBlock { Id = Guid.Parse("93ab9a4e-1918-4645-9de5-aef2711f3aa2"), Type = TextBlockType.Text, Text = "You capitalize on your ally's attack to create a coordinated barrage. Make a ranged (action: Strike) with a -2 penalty against the opponent targeted by the triggering attack. This (action: Strike) doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this (action: Strike). If this (action: Strike) is successful, combine the damage from the attack with the damage from your ally's attack for the purpose of resistances and weaknesses." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

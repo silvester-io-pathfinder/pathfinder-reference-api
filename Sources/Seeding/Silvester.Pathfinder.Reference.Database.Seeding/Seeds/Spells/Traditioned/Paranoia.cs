@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("8e82d049-9724-436b-b4ea-1308c590bf5a"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target believes everyone it sees is a potential threat. It becomes unfriendly to all creatures to which it wasn’t already hostile, even those that were previously allies. It treats no one as an ally. The spell ends after 1 round.",
+                Success = "The target believes everyone it sees is a potential threat. It becomes unfriendly to all creatures to which it wasn't already hostile, even those that were previously allies. It treats no one as an ally. The spell ends after 1 round.",
                 Failure = "As success, but the effect lasts 1 minute.",
                 CriticalFailure = "As failure, except the target believes that everyone it sees is a mortal enemy. It uses its reactions and free actions against everyone, regardless of whether they were previously its allies, as determined by the GM. It otherwise acts as rationally as it normally does and likely prefers to attack creatures that are actively attacking or hindering it over those leaving it alone."
             };

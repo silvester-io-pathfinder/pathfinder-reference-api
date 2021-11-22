@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3990b1e2-9f8f-4552-9dc4-a59bebdb0fe3"), Type = TextBlockType.Text, Text = "You slam your fist into the ground or twirl your arms about to cause the terrain around you to shift and ripple, potentially throwing others off balance. Each creature within your area of difficult terrain from (feat: Rough Terrain Stance) must attempt a Reflex saving throw against your spell DC with the following effects. After you use this action, you can’t use it again for 1d4 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("3990b1e2-9f8f-4552-9dc4-a59bebdb0fe3"), Type = TextBlockType.Text, Text = "You slam your fist into the ground or twirl your arms about to cause the terrain around you to shift and ripple, potentially throwing others off balance. Each creature within your area of difficult terrain from (feat: Rough Terrain Stance) must attempt a Reflex saving throw against your spell DC with the following effects. After you use this action, you can't use it again for 1d4 rounds." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

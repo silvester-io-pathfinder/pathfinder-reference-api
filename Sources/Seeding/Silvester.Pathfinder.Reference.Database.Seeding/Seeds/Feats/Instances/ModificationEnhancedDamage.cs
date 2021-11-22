@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad519204-2978-40f1-acf3-8f09123348b7"), Type = TextBlockType.Text, Text = "You’ve made your innovation more powerful than other weapons of its kind. Increase your innovation’s weapon damage die by one step (d4 to d6, d6 to d8, d8 to d10, d10 to d12). As normal, you can’t increase your die by more than one size, so this modification isn’t cumulative with (feat: complex simplicity | Modification - Complex Simplicity)." };
+            yield return new TextBlock { Id = Guid.Parse("ad519204-2978-40f1-acf3-8f09123348b7"), Type = TextBlockType.Text, Text = "You've made your innovation more powerful than other weapons of its kind. Increase your innovation's weapon damage die by one step (d4 to d6, d6 to d8, d8 to d10, d10 to d12). As normal, you can't increase your die by more than one size, so this modification isn't cumulative with (feat: complex simplicity | Modification - Complex Simplicity)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

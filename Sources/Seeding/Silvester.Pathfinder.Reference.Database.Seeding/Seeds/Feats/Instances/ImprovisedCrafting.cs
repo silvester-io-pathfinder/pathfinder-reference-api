@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b6c7b033-472b-44a5-8718-51fe87b51f1c"), Type = TextBlockType.Text, Text = "You&#39;ve learned to repair your equipment even in challenging circumstances, making use of what you have available. You can attempt to (action: Repair) an item without a (item: repair kit), instead improvising tools out of your gear or found items. This adds 5 minutes to the time it takes to (action: Repair) the item. You can also (action: Repair) an item while on the move without needing a stable surface. This adds 10 minutes to the times it takes to (action: Repair) the item." };
+            yield return new TextBlock { Id = Guid.Parse("b6c7b033-472b-44a5-8718-51fe87b51f1c"), Type = TextBlockType.Text, Text = "You've learned to repair your equipment even in challenging circumstances, making use of what you have available. You can attempt to (action: Repair) an item without a (item: repair kit), instead improvising tools out of your gear or found items. This adds 5 minutes to the time it takes to (action: Repair) the item. You can also (action: Repair) an item while on the move without needing a stable surface. This adds 10 minutes to the times it takes to (action: Repair) the item." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

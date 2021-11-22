@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5622afe2-1aa9-463c-beda-d4874ff6f46c"), Type = TextBlockType.Text, Text = "You descend from one of the truly ancient vampires, a nosferatu cursed to eternal life but not eternal youth. People call you straveika, or ancient-born. The vestiges of your forebear&#39;s powers of domination have left you with an understanding of how a creature&#39;s intentions change its behaviors. You gain a +1 circumstance bonus to Perception checks to (action: Sense Motive) and Perception DCs against attempts to (action: Lie) to you." };
+            yield return new TextBlock { Id = Guid.Parse("5622afe2-1aa9-463c-beda-d4874ff6f46c"), Type = TextBlockType.Text, Text = "You descend from one of the truly ancient vampires, a nosferatu cursed to eternal life but not eternal youth. People call you straveika, or ancient-born. The vestiges of your forebear's powers of domination have left you with an understanding of how a creature's intentions change its behaviors. You gain a +1 circumstance bonus to Perception checks to (action: Sense Motive) and Perception DCs against attempts to (action: Lie) to you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

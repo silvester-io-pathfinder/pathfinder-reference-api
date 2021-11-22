@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("52bebb48-1118-4e3c-871c-462b380a6e78"), Type = TextBlockType.Text, Text = "The targeted corpse doesn’t decay, nor can it be transformed into an undead. If the corpse is subject to a spell that requires the corpse to have died within a certain amount of time (for example, raise dead), do not count the duration of gentle repose against that time. This spell also prevents ordinary bugs and pests (such as maggots) from consuming the body." };
+            yield return new TextBlock { Id = Guid.Parse("52bebb48-1118-4e3c-871c-462b380a6e78"), Type = TextBlockType.Text, Text = "The targeted corpse doesn't decay, nor can it be transformed into an undead. If the corpse is subject to a spell that requires the corpse to have died within a certain amount of time (for example, raise dead), do not count the duration of gentle repose against that time. This spell also prevents ordinary bugs and pests (such as maggots) from consuming the body." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("992a4115-39c3-443d-a7df-028494b19063"), Type = TextBlockType.Text, Text = "The spell’s duration is unlimited, but the spell takes one more action to cast and requires a material component and a cost (embalming fluid worth 6 gp)." }
+                    new TextBlock { Id = Guid.Parse("992a4115-39c3-443d-a7df-028494b19063"), Type = TextBlockType.Text, Text = "The spell's duration is unlimited, but the spell takes one more action to cast and requires a material component and a cost (embalming fluid worth 6 gp)." }
                 }
             };
         }

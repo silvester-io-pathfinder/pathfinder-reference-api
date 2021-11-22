@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2e12497d-6af4-4ff1-8c63-41d67b86579d"), Type = TextBlockType.Text, Text = "You quiet the target’s voice, preventing it from giving away valuable secrets. This doesn’t prevent the target from talking or providing verbal spell components, but no creature more than 10 feet away can hear its whispers without succeeding at a Perception check against your spell DC, which might interfere with auditory or linguistic effects as well as communication. The spell’s duration depends on the target’s Fortitude save. After attempting its save, the target becomes temporarily immune for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("2e12497d-6af4-4ff1-8c63-41d67b86579d"), Type = TextBlockType.Text, Text = "You quiet the target's voice, preventing it from giving away valuable secrets. This doesn't prevent the target from talking or providing verbal spell components, but no creature more than 10 feet away can hear its whispers without succeeding at a Perception check against your spell DC, which might interfere with auditory or linguistic effects as well as communication. The spell's duration depends on the target's Fortitude save. After attempting its save, the target becomes temporarily immune for 24 hours." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

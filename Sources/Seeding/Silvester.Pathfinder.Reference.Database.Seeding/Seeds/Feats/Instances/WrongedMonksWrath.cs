@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a60951c4-898d-4058-a009-77aea00a3744"), Type = TextBlockType.Text, Text = "You gain the (spell: wronged monk&#39;s wrath) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("a60951c4-898d-4058-a009-77aea00a3744"), Type = TextBlockType.Text, Text = "You gain the (spell: wronged monk's wrath) ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

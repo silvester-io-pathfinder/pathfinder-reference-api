@@ -17,10 +17,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
                 Name = "Bard",
                 BaseHealth = 8,
 
-                Description = "You are a master of artistry, a scholar of hidden secrets, and a captivating persuader. Using powerful performances, you influence minds and elevate souls to new levels of heroics. You might use your powers to become a charismatic leader, or perhaps you might instead be a counselor, manipulator, scholar, scoundrel, or virtuoso. While your versatility leads some to consider you a beguiling ne’erdo- well and a jack-of-all-trades, it’s dangerous to dismiss you as a master of none.",
+                Description = "You are a master of artistry, a scholar of hidden secrets, and a captivating persuader. Using powerful performances, you influence minds and elevate souls to new levels of heroics. You might use your powers to become a charismatic leader, or perhaps you might instead be a counselor, manipulator, scholar, scoundrel, or virtuoso. While your versatility leads some to consider you a beguiling ne'erdo- well and a jack-of-all-trades, it's dangerous to dismiss you as a master of none.",
                 DuringCombatEncounters = "You use magical performances to alter the odds in favor of your allies. You confidently alternate between attacks, healing, and helpful spells as needed.",
                 DuringSocialEncounters = "You persuade, prevaricate, and threaten with ease.",
-                WhileExploring = "You’re a font of knowledge, folktales, legends, and lore that provide a deeper context and helpful reconnaissance for the group’s adventure. Your spells and performances inspire your allies to greater discovery and success.",
+                WhileExploring = "You're a font of knowledge, folktales, legends, and lore that provide a deeper context and helpful reconnaissance for the group's adventure. Your spells and performances inspire your allies to greater discovery and success.",
                 InDowntime = "You can earn money and prestige with your performances, gaining a name for yourself and acquiring patrons. Eventually, tales of your talents and triumphs might attract other bards to study your techniques in a bardic college.",
 
                 ClassDcProficiencyId = Proficiencies.Instances.Untrained.ID,
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
         {
             yield return new ClassMannerism { Id = Guid.Parse("0a4f9595-7e77-468a-b87c-b99d8d3a76fc"), Text = "Have a passion for your art so strong that you forge a spiritual connection with it." };
             yield return new ClassMannerism { Id = Guid.Parse("9bfdd4d6-3cb2-41c0-95ff-37bf69699243"), Text = "Take point when tact and nonviolent solutions are required." };
-            yield return new ClassMannerism { Id = Guid.Parse("8aa705e5-ec47-4553-a673-7bed0a7ae57f"), Text = "Follow your muse, whether it’s a mysterious fey creature, a philosophical concept, a psychic force, or a deity of art or music, and with its aid learn secret lore that few others have." };
+            yield return new ClassMannerism { Id = Guid.Parse("8aa705e5-ec47-4553-a673-7bed0a7ae57f"), Text = "Follow your muse, whether it's a mysterious fey creature, a philosophical concept, a psychic force, or a deity of art or music, and with its aid learn secret lore that few others have." };
         }
 
         protected override IEnumerable<ClassCharacteristic> GetCharacteristics()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("29da1bc2-1457-40b8-bdd9-b1c74ce742ed"), Type = TextBlockType.Text, Text = "You can capably deliver toxins with a blowgun. Your (item: blowgun) (action: Strikes | Strike) can apply (trait: injury) poisons even if they deal no damage due to a creature’s resistance. If you critically succeed at an attack roll using a (item: blowgun) loaded with a dart you’ve poisoned and the target rolls a failure on the poison’s initial save, the target critically fails instead." };
+            yield return new TextBlock { Id = Guid.Parse("29da1bc2-1457-40b8-bdd9-b1c74ce742ed"), Type = TextBlockType.Text, Text = "You can capably deliver toxins with a blowgun. Your (item: blowgun) (action: Strikes | Strike) can apply (trait: injury) poisons even if they deal no damage due to a creature's resistance. If you critically succeed at an attack roll using a (item: blowgun) loaded with a dart you've poisoned and the target rolls a failure on the poison's initial save, the target critically fails instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

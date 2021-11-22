@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("da32ef16-6792-4930-830a-a6ea394c6bac"), Type = TextBlockType.Text, Text = "You have learned to exploit your enemies’ lowered defenses. When you succeed or critically succeed at a (action: Strike) using your Strength modifier on the attack roll and you would deal sneak attack damage, you can change the additional damage from sneak attack into ordinary damage of the same type as your (action: Strike), rather than precision damage." };
+            yield return new TextBlock { Id = Guid.Parse("da32ef16-6792-4930-830a-a6ea394c6bac"), Type = TextBlockType.Text, Text = "You have learned to exploit your enemies' lowered defenses. When you succeed or critically succeed at a (action: Strike) using your Strength modifier on the attack roll and you would deal sneak attack damage, you can change the additional damage from sneak attack into ordinary damage of the same type as your (action: Strike), rather than precision damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

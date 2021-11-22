@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("54b56fa0-5746-4448-bdce-2851d8b351c2"), Type = TextBlockType.Text, Text = "You warp space to make a creature smaller. The target shrinks to become Tiny in size. Its equipment shrinks with it but returns to its original size if removed. The creature’s reach changes to 0 feet. This spell has no effect on a Tiny creature." };
+            yield return new TextBlock { Id = Guid.Parse("54b56fa0-5746-4448-bdce-2851d8b351c2"), Type = TextBlockType.Text, Text = "You warp space to make a creature smaller. The target shrinks to become Tiny in size. Its equipment shrinks with it but returns to its original size if removed. The creature's reach changes to 0 feet. This spell has no effect on a Tiny creature." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

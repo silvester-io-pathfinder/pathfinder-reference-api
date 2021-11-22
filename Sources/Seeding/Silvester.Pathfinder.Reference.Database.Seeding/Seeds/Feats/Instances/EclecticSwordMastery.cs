@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c594fac0-f9d3-4635-bd88-186f47df57b5"), Type = TextBlockType.Text, Text = "You instinctively learn how to use a sword with just a few practice swings. You change one of the swords designated in your (feat: Tengu Weapon Familiarity) to a new one that you’re wielding, provided the sword meets the specifications of (feat: Tengu Weapon Familiarity). You can (action: Interact) to draw a sword as part of this activity, designating the sword as part of drawing it; disrupting that (action: Interact) action prevents you from designating it as one of your swords. This designation lasts until your next daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("c594fac0-f9d3-4635-bd88-186f47df57b5"), Type = TextBlockType.Text, Text = "You instinctively learn how to use a sword with just a few practice swings. You change one of the swords designated in your (feat: Tengu Weapon Familiarity) to a new one that you're wielding, provided the sword meets the specifications of (feat: Tengu Weapon Familiarity). You can (action: Interact) to draw a sword as part of this activity, designating the sword as part of drawing it; disrupting that (action: Interact) action prevents you from designating it as one of your swords. This designation lasts until your next daily preparations." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

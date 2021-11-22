@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("36fdfaec-488d-49aa-8a79-a88d4d584cce"), Type = TextBlockType.Text, Text = "Leaping out from hiding, you assail your target when they least expect it. You (action: Stride) up to your Speed, but you must end your movement next to an enemy you’re hidden from or undetected by. You then (action: Strike) that enemy; you remain hidden from or undetected by that creature until after you (action: Strike). You can use Spring from the Shadows while (action: Burrowing | Burrow), (action: Climbing | Climb), (action: Flying | Fly), or (action: Swimming | Swim) instead of (action: Striding | Stride) if you have the corresponding movement type." };
+            yield return new TextBlock { Id = Guid.Parse("36fdfaec-488d-49aa-8a79-a88d4d584cce"), Type = TextBlockType.Text, Text = "Leaping out from hiding, you assail your target when they least expect it. You (action: Stride) up to your Speed, but you must end your movement next to an enemy you're hidden from or undetected by. You then (action: Strike) that enemy; you remain hidden from or undetected by that creature until after you (action: Strike). You can use Spring from the Shadows while (action: Burrowing | Burrow), (action: Climbing | Climb), (action: Flying | Fly), or (action: Swimming | Swim) instead of (action: Striding | Stride) if you have the corresponding movement type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

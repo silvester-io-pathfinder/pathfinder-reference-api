@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b6851595-88ae-40ca-a699-0ae4b9239993"), Type = TextBlockType.Text, Text = "You conjure a Large, magical, equine creature that only you (or another Medium or Small creature you choose) can ride. The horse is clearly phantasmal in nature, has 20 AC and 10 Hit Points, and automatically fails all saves. If it’s reduced to 0 Hit Points, it disappears and the spell ends. The steed has a Speed of 40 feet and can hold its rider’s body weight, plus 20 Bulk." };
+            yield return new TextBlock { Id = Guid.Parse("b6851595-88ae-40ca-a699-0ae4b9239993"), Type = TextBlockType.Text, Text = "You conjure a Large, magical, equine creature that only you (or another Medium or Small creature you choose) can ride. The horse is clearly phantasmal in nature, has 20 AC and 10 Hit Points, and automatically fails all saves. If it's reduced to 0 Hit Points, it disappears and the spell ends. The steed has a Speed of 40 feet and can hold its rider's body weight, plus 20 Bulk." };
         }
         
         public override IEnumerable<SpellHeightening> GetHeightenings()

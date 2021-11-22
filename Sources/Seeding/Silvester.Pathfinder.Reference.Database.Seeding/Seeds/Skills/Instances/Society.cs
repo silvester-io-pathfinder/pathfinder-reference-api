@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances
                 HasArmorCheckPenalty = false,
                 HasRecallKnowledgeAction = true,
                 StatModifierId = Intelligence.ID,
-                Description = "You understand the people and systems that make civilization run, and you know the historical events that make societies what they are today. Further, you can use that knowledge to navigate the complex physical, societal, and economic workings of settlements. Even if you’re untrained in Society, you can use it for the following general skill actions (page 234)."
+                Description = "You understand the people and systems that make civilization run, and you know the historical events that make societies what they are today. Further, you can use that knowledge to navigate the complex physical, societal, and economic workings of settlements. Even if you're untrained in Society, you can use it for the following general skill actions (page 234)."
             };
         }
     }

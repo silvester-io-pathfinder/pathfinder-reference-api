@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("de0ea5c1-9f7e-4b4a-89cf-d290a9dd1055"), Type = TextBlockType.Text, Text = "Your elemental ancestor was a janni, genies that walk the mortal world and embody all four elements together. You inherited a janni’s nature as a wanderer and ability to survive in many types of environment, from the hottest desert to the coldest tundra. You gain the trained proficiency rank in Survival. If you would automatically become trained in Survival (from your background or class, for example), you instead become trained in a skill of your choice. You gain the (feat: Forager) skill feat as a bonus feat." };
+            yield return new TextBlock { Id = Guid.Parse("de0ea5c1-9f7e-4b4a-89cf-d290a9dd1055"), Type = TextBlockType.Text, Text = "Your elemental ancestor was a janni, genies that walk the mortal world and embody all four elements together. You inherited a janni's nature as a wanderer and ability to survive in many types of environment, from the hottest desert to the coldest tundra. You gain the trained proficiency rank in Survival. If you would automatically become trained in Survival (from your background or class, for example), you instead become trained in a skill of your choice. You gain the (feat: Forager) skill feat as a bonus feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

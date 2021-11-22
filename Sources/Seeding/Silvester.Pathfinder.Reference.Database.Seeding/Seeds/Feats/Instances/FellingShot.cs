@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
                 
                 Success = "The target is unaffected.",
                 Failure = "The target falls up to 120 feet. If it hits the ground, it takes no damage from the fall.",
-                CriticalFailure = "As failure, and the target can’t fly, jump, levitate, or otherwise leave the ground until the end of your next turn.", 
+                CriticalFailure = "As failure, and the target can't fly, jump, levitate, or otherwise leave the ground until the end of your next turn.", 
             };
         }
             

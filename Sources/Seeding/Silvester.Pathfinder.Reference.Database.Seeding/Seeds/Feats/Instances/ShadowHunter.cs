@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("113cd736-f236-4462-96af-771a113f5d2b"), Type = TextBlockType.Text, Text = "You blend in to your surroundings so well that others have trouble telling you apart from the terrain. While in natural terrain, you’re always concealed from all foes if you choose to be, except for your hunted prey." };
+            yield return new TextBlock { Id = Guid.Parse("113cd736-f236-4462-96af-771a113f5d2b"), Type = TextBlockType.Text, Text = "You blend in to your surroundings so well that others have trouble telling you apart from the terrain. While in natural terrain, you're always concealed from all foes if you choose to be, except for your hunted prey." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

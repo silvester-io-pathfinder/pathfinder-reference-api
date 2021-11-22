@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("155078da-980a-4f8e-8b51-b2b6138fe918"), Type = TextBlockType.Text, Text = "You hail from deep in a jungle or forest, and you’ve learned how to use your small size to wriggle through undergrowth, vines, and other obstacles. You ignore difficult terrain from trees, foliage, and undergrowth." };
+            yield return new TextBlock { Id = Guid.Parse("155078da-980a-4f8e-8b51-b2b6138fe918"), Type = TextBlockType.Text, Text = "You hail from deep in a jungle or forest, and you've learned how to use your small size to wriggle through undergrowth, vines, and other obstacles. You ignore difficult terrain from trees, foliage, and undergrowth." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ba191250-e287-4ba3-980b-aa76fa553af1"), Type = TextBlockType.Text, Text = "Any status penalties you take from the following conditions are 1 less than their condition’s value: clumsy, drained, enfeebled, frightened, sickened, stupefied. This doesn’t change the actual condition value, or any other effects of the condition (such as stupefied’s disruption and its DC)." };
+            yield return new TextBlock { Id = Guid.Parse("ba191250-e287-4ba3-980b-aa76fa553af1"), Type = TextBlockType.Text, Text = "Any status penalties you take from the following conditions are 1 less than their condition's value: clumsy, drained, enfeebled, frightened, sickened, stupefied. This doesn't change the actual condition value, or any other effects of the condition (such as stupefied's disruption and its DC)." };
             yield return new TextBlock { Id = Guid.Parse("bdfd0880-94ea-4f6a-aba4-8e4cf5f10889"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ Whenever you take a status penalty from the listed conditions, you also take a –1 penalty to the same statistics." };
         }
 

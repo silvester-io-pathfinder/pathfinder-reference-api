@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9936245d-7832-41e9-9933-5732dd390ade"), Type = TextBlockType.Text, Text = "The target makes no sound, preventing creatures from noticing it using hearing or other senses alone. The target can’t use sonic attacks, nor can it use actions with the auditory trait. This prevents it from casting spells that include verbal components." };
+            yield return new TextBlock { Id = Guid.Parse("9936245d-7832-41e9-9933-5732dd390ade"), Type = TextBlockType.Text, Text = "The target makes no sound, preventing creatures from noticing it using hearing or other senses alone. The target can't use sonic attacks, nor can it use actions with the auditory trait. This prevents it from casting spells that include verbal components." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

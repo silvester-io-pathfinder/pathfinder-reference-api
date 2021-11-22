@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ItemCategories.I
                 Id = ID, 
                 PageNumber = 572, 
                 Name = "Held Items", 
-                Description = "A wide variety of items you use with your hands. This doesn’t include more narrow categories of held items, such as weapons." 
+                Description = "A wide variety of items you use with your hands. This doesn't include more narrow categories of held items, such as weapons." 
             };
         }
     }

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("128c9471-2d37-4d0d-987d-4d12f6174bbf"), Type = TextBlockType.Text, Text = "Once you have penetrated a foe’s defenses, you can home in on the same spot to exploit your opponent’s wound and deal some serious damage. The second time you hit and deal damage with a melee axe (action: Strike) to the same opponent or object during your turn, you ignore half of the opponent’s or object’s Hardness, if any. If you hit and deal damage with a melee axe (action: Strike) to the same opponent or object a third or fourth time during your turn, you ignore all of its Hardness, if any." };
+            yield return new TextBlock { Id = Guid.Parse("128c9471-2d37-4d0d-987d-4d12f6174bbf"), Type = TextBlockType.Text, Text = "Once you have penetrated a foe's defenses, you can home in on the same spot to exploit your opponent's wound and deal some serious damage. The second time you hit and deal damage with a melee axe (action: Strike) to the same opponent or object during your turn, you ignore half of the opponent's or object's Hardness, if any. If you hit and deal damage with a melee axe (action: Strike) to the same opponent or object a third or fourth time during your turn, you ignore all of its Hardness, if any." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

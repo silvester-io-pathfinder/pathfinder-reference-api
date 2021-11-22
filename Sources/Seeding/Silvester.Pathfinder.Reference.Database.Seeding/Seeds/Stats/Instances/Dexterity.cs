@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Stats.Instances
                 Id = ID,
                 Name = "Dexterity", 
                 Abbreviation = "DEX", 
-                Description = "Dexterity measures your character’s agility, balance, and reflexes. Dexterity is important if your character plans to make attacks with ranged weapons or use stealth to surprise foes. Your Dexterity modifier is also added to your character’s AC and Reflex saving throws." 
+                Description = "Dexterity measures your character's agility, balance, and reflexes. Dexterity is important if your character plans to make attacks with ranged weapons or use stealth to surprise foes. Your Dexterity modifier is also added to your character's AC and Reflex saving throws." 
             };
         }
     }

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("011ea4a0-05f3-4c27-b172-9b2133f1e71c"), Type = TextBlockType.Text, Text = "You enter the stance of a crane, holding your arms in an imitation of a crane’s wings and using flowing, defensive motions. You gain a +1 circumstance bonus to AC, but the only (action: Strikes | Strike) you can make are crane wing attacks. These deal 1d6 bludgeoning damage; are in the brawling group; and have the (trait: agile), (trait: finesse), (trait: nonlethal), and (trait: unarmed) traits." };
+            yield return new TextBlock { Id = Guid.Parse("011ea4a0-05f3-4c27-b172-9b2133f1e71c"), Type = TextBlockType.Text, Text = "You enter the stance of a crane, holding your arms in an imitation of a crane's wings and using flowing, defensive motions. You gain a +1 circumstance bonus to AC, but the only (action: Strikes | Strike) you can make are crane wing attacks. These deal 1d6 bludgeoning damage; are in the brawling group; and have the (trait: agile), (trait: finesse), (trait: nonlethal), and (trait: unarmed) traits." };
             yield return new TextBlock { Id = Guid.Parse("8c3ad11f-8fef-4f15-96ed-5dc252ff6cd3"), Type = TextBlockType.Text, Text = "While in Crane Stance, reduce the DC for (action: High Jump) and (action: Long Jump) by 5, and when you (action: Leap), you can move an additional 5 feet horizontally or 2 feet vertically." };
         }
 

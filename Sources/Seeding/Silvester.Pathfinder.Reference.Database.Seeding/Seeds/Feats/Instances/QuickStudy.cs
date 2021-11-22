@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4e602d68-b4d7-4c66-bf6f-9193ca891079"), Type = TextBlockType.Text, Text = "During your daily preparations, you can study a particular subject to gain the trained proficiency rank in one Lore skill of your choice. You must have interacted with that subject in some way on the previous day, whether by reading about it, talking to someone knowledgeable on the topic, or experiencing it yourself. Alternatively, you can reference your notes to instead choose a Lore skill you’ve prepared before with Quick Study. This proficiency lasts until you prepare again. Since this proficiency is temporary, you can’t use it as a prerequisite for a skill increase or a permanent character option like a feat." };
+            yield return new TextBlock { Id = Guid.Parse("4e602d68-b4d7-4c66-bf6f-9193ca891079"), Type = TextBlockType.Text, Text = "During your daily preparations, you can study a particular subject to gain the trained proficiency rank in one Lore skill of your choice. You must have interacted with that subject in some way on the previous day, whether by reading about it, talking to someone knowledgeable on the topic, or experiencing it yourself. Alternatively, you can reference your notes to instead choose a Lore skill you've prepared before with Quick Study. This proficiency lasts until you prepare again. Since this proficiency is temporary, you can't use it as a prerequisite for a skill increase or a permanent character option like a feat." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

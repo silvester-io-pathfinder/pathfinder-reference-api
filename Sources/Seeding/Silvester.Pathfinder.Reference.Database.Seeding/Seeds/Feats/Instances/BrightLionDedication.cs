@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("390765ca-9e25-4db2-9463-83cf7f6ba24e"), Type = TextBlockType.Text, Text = "~ Access: Bright Lion background" };
-            yield return new TextBlock { Id = Guid.Parse("9deaa7c9-eafa-466c-af43-3f6fa2cb07b5"), Type = TextBlockType.Text, Text = "You become trained in your choice of Deception or Diplomacy and in Mzali Lore; if you were already trained, you become an expert instead. You incorporate enough worship of Walkena in your daily life to avoid suspicion. You typically don’t need to (action: Lie) or (action: Impersonate) to pass yourself off as a worshipper of Walkena. Against careful inspection, you gain a +4 circumstance bonus to Deception checks specifically to pass yourself off as a version of yourself faithful to Walkena." };
+            yield return new TextBlock { Id = Guid.Parse("9deaa7c9-eafa-466c-af43-3f6fa2cb07b5"), Type = TextBlockType.Text, Text = "You become trained in your choice of Deception or Diplomacy and in Mzali Lore; if you were already trained, you become an expert instead. You incorporate enough worship of Walkena in your daily life to avoid suspicion. You typically don't need to (action: Lie) or (action: Impersonate) to pass yourself off as a worshipper of Walkena. Against careful inspection, you gain a +4 circumstance bonus to Deception checks specifically to pass yourself off as a version of yourself faithful to Walkena." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

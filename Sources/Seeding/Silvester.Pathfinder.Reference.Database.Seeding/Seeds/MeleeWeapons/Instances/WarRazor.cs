@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "War Razor",
-                Description = "A war razor is an exaggerated version of the barbers’ tool. It is a brittle but extremely sharp weapon that is very easy to slip into a pocket or sleeve.",
+                Description = "A war razor is an exaggerated version of the barbers' tool. It is a brittle but extremely sharp weapon that is very easy to slip into a pocket or sleeve.",
                 Price = 30,
                 Damage = "1d4",
                 Hands = "1",

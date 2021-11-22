@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bef14f62-926c-4f16-ad6c-4ebdc8c5cd6f"), Type = TextBlockType.Text, Text = "You gain your bloodline’s initial bloodline spell. If you don’t already have one, you also gain a focus pool of 1 Focus Point, which you can (action: Refocus) without any special effort. (For more on bloodline spells, see page 194.)" };
+            yield return new TextBlock { Id = Guid.Parse("bef14f62-926c-4f16-ad6c-4ebdc8c5cd6f"), Type = TextBlockType.Text, Text = "You gain your bloodline's initial bloodline spell. If you don't already have one, you also gain a focus pool of 1 Focus Point, which you can (action: Refocus) without any special effort. (For more on bloodline spells, see page 194.)" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

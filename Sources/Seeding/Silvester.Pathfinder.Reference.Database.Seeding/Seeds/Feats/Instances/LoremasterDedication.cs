@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9a2dec16-81ec-41bc-846b-5da3f646889e"), Type = TextBlockType.Text, Text = "You’ve compiled a vast repository of information that touches on nearly every subject. You are trained in Loremaster Lore, a special Lore skill that can be used only to (action: Recall Knowledge), but on any topic. If you have legendary proficiency in a skill used to (action: Decipher Writing), you gain expert proficiency in Loremaster Lore, but you can’t increase your proficiency rank in Loremaster Lore by any other means." };
+            yield return new TextBlock { Id = Guid.Parse("9a2dec16-81ec-41bc-846b-5da3f646889e"), Type = TextBlockType.Text, Text = "You've compiled a vast repository of information that touches on nearly every subject. You are trained in Loremaster Lore, a special Lore skill that can be used only to (action: Recall Knowledge), but on any topic. If you have legendary proficiency in a skill used to (action: Decipher Writing), you gain expert proficiency in Loremaster Lore, but you can't increase your proficiency rank in Loremaster Lore by any other means." };
             yield return new TextBlock { Id = Guid.Parse("8eebe1fe-7897-40a8-9139-53709b9816a8"), Type = TextBlockType.Text, Text = "If you have the (feat: Bardic Lore) class feat, you gain a +1 circumstance bonus to skill checks with Bardic Lore." };
         }
 

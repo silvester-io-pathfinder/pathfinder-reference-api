@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f6ef7b51-e38a-4533-92be-8e77327fad5f"), Type = TextBlockType.Text, Text = "You shift the colors of the targets’ outermost layer of clothing and gear to be closer to their environment when they remain still. Creatures affected by the spell gain a +3 status bonus to Stealth checks to Hide. The changed color granted by the spell always shifts to match the environment, even if there are drastic changes. If any piece of gear or clothing affected by the spell is removed from a creature, the spell ends for that creature." };
+            yield return new TextBlock { Id = Guid.Parse("f6ef7b51-e38a-4533-92be-8e77327fad5f"), Type = TextBlockType.Text, Text = "You shift the colors of the targets' outermost layer of clothing and gear to be closer to their environment when they remain still. Creatures affected by the spell gain a +3 status bonus to Stealth checks to Hide. The changed color granted by the spell always shifts to match the environment, even if there are drastic changes. If any piece of gear or clothing affected by the spell is removed from a creature, the spell ends for that creature." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

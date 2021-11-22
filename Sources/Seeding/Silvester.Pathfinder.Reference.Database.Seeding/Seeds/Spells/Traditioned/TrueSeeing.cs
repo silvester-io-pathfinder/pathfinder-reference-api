@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("43810ed1-6b68-4256-ae7a-f15e6a2ba52c"), Type = TextBlockType.Text, Text = "You see things within 60 feet as they actually are. The GM rolls a secret counteract check against any illusion or transmutation in the area, but only for the purpose of determining whether you see through it (for instance, if the check succeeds against a polymorph spell, you can see the creature’s true form, but you don’t end the polymorph spell)." };
+            yield return new TextBlock { Id = Guid.Parse("43810ed1-6b68-4256-ae7a-f15e6a2ba52c"), Type = TextBlockType.Text, Text = "You see things within 60 feet as they actually are. The GM rolls a secret counteract check against any illusion or transmutation in the area, but only for the purpose of determining whether you see through it (for instance, if the check succeeds against a polymorph spell, you can see the creature's true form, but you don't end the polymorph spell)." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eccce86a-ab48-4ad3-994c-a5dcf9abb8c6"), Type = TextBlockType.Text, Text = "You have dealings with a variety of unsavory characters, which you can leverage to trade favors or meet powerful people. When you’re in an area where you have connections (typically a settlement where you’ve spent downtime building connections or possibly another area in the same nation), you can attempt a Society check to arrange a meeting with an important criminal, such as a thieves’ guild leader, or ask for a favor in exchange for a later favor of your contact’s choice. The GM decides the DC based on the difficulty of the favor and the figure’s prominence." };
+            yield return new TextBlock { Id = Guid.Parse("eccce86a-ab48-4ad3-994c-a5dcf9abb8c6"), Type = TextBlockType.Text, Text = "You have dealings with a variety of unsavory characters, which you can leverage to trade favors or meet powerful people. When you're in an area where you have connections (typically a settlement where you've spent downtime building connections or possibly another area in the same nation), you can attempt a Society check to arrange a meeting with an important criminal, such as a thieves' guild leader, or ask for a favor in exchange for a later favor of your contact's choice. The GM decides the DC based on the difficulty of the favor and the figure's prominence." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

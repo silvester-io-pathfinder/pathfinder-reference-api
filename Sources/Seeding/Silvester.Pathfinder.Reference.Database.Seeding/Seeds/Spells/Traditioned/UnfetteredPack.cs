@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8b675cff-cc03-4767-8ae8-0dd74c96c97f"), Type = TextBlockType.Text, Text = "You free those who travel alongside you from environmental hindrances. Targets don’t take circumstance penalties to Speed from vegetation, rubble, winds, or other properties of the environment, whether or not the environment is magical, and they ignore difficult terrain from such environmental properties." };
+            yield return new TextBlock { Id = Guid.Parse("8b675cff-cc03-4767-8ae8-0dd74c96c97f"), Type = TextBlockType.Text, Text = "You free those who travel alongside you from environmental hindrances. Targets don't take circumstance penalties to Speed from vegetation, rubble, winds, or other properties of the environment, whether or not the environment is magical, and they ignore difficult terrain from such environmental properties." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

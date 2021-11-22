@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("610bf938-cd16-45f4-a8b4-16d5930ae590"), Type = TextBlockType.Text, Text = "You’ve deeply studied the secrets of your blood and can force reality to act against its own wishes. You can cast (spell: blur) and (spell: silence) once per day each as 2nd-level divine innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("610bf938-cd16-45f4-a8b4-16d5930ae590"), Type = TextBlockType.Text, Text = "You've deeply studied the secrets of your blood and can force reality to act against its own wishes. You can cast (spell: blur) and (spell: silence) once per day each as 2nd-level divine innate spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

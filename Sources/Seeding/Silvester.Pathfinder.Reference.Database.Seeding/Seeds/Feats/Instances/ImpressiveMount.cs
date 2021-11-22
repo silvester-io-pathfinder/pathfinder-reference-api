@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1efb3946-296e-4fb5-bfff-91598c6b39be"), Type = TextBlockType.Text, Text = "You’ve trained your mount to become a powerful force on the battlefield. The mount you gained through the (feat: Cavalier Dedication) feat becomes a mature animal companion, granting it additional capabilities. During an encounter, even if you don’t use the (action: Command an Animal) action, your animal companion can still use 1 action on your turn to (action: Stride) or (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("1efb3946-296e-4fb5-bfff-91598c6b39be"), Type = TextBlockType.Text, Text = "You've trained your mount to become a powerful force on the battlefield. The mount you gained through the (feat: Cavalier Dedication) feat becomes a mature animal companion, granting it additional capabilities. During an encounter, even if you don't use the (action: Command an Animal) action, your animal companion can still use 1 action on your turn to (action: Stride) or (action: Strike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

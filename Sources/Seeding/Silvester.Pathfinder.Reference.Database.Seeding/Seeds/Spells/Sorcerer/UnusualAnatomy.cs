@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("1ee77545-d18d-4e4c-b6c9-275bdccd5bcc"), Type = TextBlockType.Text, Text = "You transform your flesh and organs into a bizarre amalgam of glistening skin, rough scales, tufts of hair, and tumorous protuberances. This has three effects:" };
-            yield return new TextBlock { Id = Guid.Parse("64091158-1c38-4811-a13a-d62d83663063"), Type = TextBlockType.Enumeration, Text = "You gain resistance 10 to precision damage and resistance 10 to extra damage from critical hits. If the resistance is greater than the extra damage, it reduces the extra damage to 0 but doesn’t reduce the attack’s normal damage." };
+            yield return new TextBlock { Id = Guid.Parse("64091158-1c38-4811-a13a-d62d83663063"), Type = TextBlockType.Enumeration, Text = "You gain resistance 10 to precision damage and resistance 10 to extra damage from critical hits. If the resistance is greater than the extra damage, it reduces the extra damage to 0 but doesn't reduce the attack's normal damage." };
             yield return new TextBlock { Id = Guid.Parse("2e31a000-50ab-4baa-83f0-38c100b3446c"), Type = TextBlockType.Enumeration, Text = "You gain darkvision." };
             yield return new TextBlock { Id = Guid.Parse("4e7363d0-6262-46c6-8507-f845dc270538"), Type = TextBlockType.Enumeration, Text = "Acid oozes from your skin. Any creature that hits you with an unarmed attack or with a non-reach melee weapon takes 2d6 acid damage." };
         }

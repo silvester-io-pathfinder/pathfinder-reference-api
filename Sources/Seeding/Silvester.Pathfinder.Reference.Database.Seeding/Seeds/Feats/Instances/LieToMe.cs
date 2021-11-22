@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("adf66035-7b75-4abc-b776-43eb6b440179"), Type = TextBlockType.Text, Text = "You can use Deception to weave traps to trip up anyone trying to deceive you. If you can engage in conversation with someone trying to (action: Lie) to you, use your Deception DC if it is higher than your Perception DC to determine whether they succeed. This doesn’t apply if you don’t have a back-and-forth dialogue, such as when someone attempts to (action: Lie) during a long speech." };
+            yield return new TextBlock { Id = Guid.Parse("adf66035-7b75-4abc-b776-43eb6b440179"), Type = TextBlockType.Text, Text = "You can use Deception to weave traps to trip up anyone trying to deceive you. If you can engage in conversation with someone trying to (action: Lie) to you, use your Deception DC if it is higher than your Perception DC to determine whether they succeed. This doesn't apply if you don't have a back-and-forth dialogue, such as when someone attempts to (action: Lie) during a long speech." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

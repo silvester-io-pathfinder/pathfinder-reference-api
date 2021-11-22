@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fffab088-9e51-46f3-b87f-032a2516b646"), Type = TextBlockType.Text, Text = "You are dedicated to the cause of the Shining Sentinels. You gain expert proficiency in Religion. When you are between an ally and a foe and would provide lesser cover to your ally against the foe’s attacks, you twist to become even more obtrusive, providing standard cover instead." };
+            yield return new TextBlock { Id = Guid.Parse("fffab088-9e51-46f3-b87f-032a2516b646"), Type = TextBlockType.Text, Text = "You are dedicated to the cause of the Shining Sentinels. You gain expert proficiency in Religion. When you are between an ally and a foe and would provide lesser cover to your ally against the foe's attacks, you twist to become even more obtrusive, providing standard cover instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

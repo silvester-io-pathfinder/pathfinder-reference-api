@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1a576209-74b8-4f6f-a7eb-849df8422576"), Type = TextBlockType.Text, Text = "You’ve learned a gunslinger’s tricks for staking out your territory in a fight. You gain the initial deed for the way you selected with Gunslinger’s Dedication." };
+            yield return new TextBlock { Id = Guid.Parse("1a576209-74b8-4f6f-a7eb-849df8422576"), Type = TextBlockType.Text, Text = "You've learned a gunslinger's tricks for staking out your territory in a fight. You gain the initial deed for the way you selected with Gunslinger's Dedication." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

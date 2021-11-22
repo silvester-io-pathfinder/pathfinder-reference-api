@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7aedc71d-fce5-490f-85d5-80035c5c6023"), Type = TextBlockType.Text, Text = "You learned folk medicine to help recover from diseases and poison, and using it diligently has made you especially resilient. When you (Action: Treat a Disease | Treat Disease) or (Action: Treat a Poison | Treat Poison), or someone else uses one of these actions on you, increase the circumstance bonus granted on a success to +4, and if the result of the patient’s saving throw is a success, the patient gets a critical success." };
+            yield return new TextBlock { Id = Guid.Parse("7aedc71d-fce5-490f-85d5-80035c5c6023"), Type = TextBlockType.Text, Text = "You learned folk medicine to help recover from diseases and poison, and using it diligently has made you especially resilient. When you (Action: Treat a Disease | Treat Disease) or (Action: Treat a Poison | Treat Poison), or someone else uses one of these actions on you, increase the circumstance bonus granted on a success to +4, and if the result of the patient's saving throw is a success, the patient gets a critical success." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

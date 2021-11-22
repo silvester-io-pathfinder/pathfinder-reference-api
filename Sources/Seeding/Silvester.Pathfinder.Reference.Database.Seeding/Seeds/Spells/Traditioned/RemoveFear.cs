@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d447c2a-fb83-4616-be54-c04fd321a47a"), Type = TextBlockType.Text, Text = "With a touch, you ease a creature’s fears. You can attempt to counteract a single fear effect that the target suffers from. This frees only the target, not any other creatures under the fear effect." };
+            yield return new TextBlock { Id = Guid.Parse("2d447c2a-fb83-4616-be54-c04fd321a47a"), Type = TextBlockType.Text, Text = "With a touch, you ease a creature's fears. You can attempt to counteract a single fear effect that the target suffers from. This frees only the target, not any other creatures under the fear effect." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("cc9285bf-aecb-4f35-a672-fbe397e49794"), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, and you can target up to 10 creatures." }
+                    new TextBlock { Id = Guid.Parse("cc9285bf-aecb-4f35-a672-fbe397e49794"), Type = TextBlockType.Text, Text = "The spell's range increases to 30 feet, and you can target up to 10 creatures." }
                 }
             };
         }

@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("660aed99-247f-4f87-a8f2-25c25d69e984"), Type = TextBlockType.Text, Text = "Powerful winds carry you smoothly through the air, giving you a fly Speed equal to your Speed. When this spell’s duration would end, if you’re still flying, you float to the ground, as feather fall." };
+            yield return new TextBlock { Id = Guid.Parse("660aed99-247f-4f87-a8f2-25c25d69e984"), Type = TextBlockType.Text, Text = "Powerful winds carry you smoothly through the air, giving you a fly Speed equal to your Speed. When this spell's duration would end, if you're still flying, you float to the ground, as feather fall." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("ef01260a-2504-4d87-a743-a51a1331d5a5"), Type = TextBlockType.Text, Text = "When you fly using stormwind flight, you don’t count flying against the wind as difficult terrain." }
+                    new TextBlock { Id = Guid.Parse("ef01260a-2504-4d87-a743-a51a1331d5a5"), Type = TextBlockType.Text, Text = "When you fly using stormwind flight, you don't count flying against the wind as difficult terrain." }
                 }
             };
         }

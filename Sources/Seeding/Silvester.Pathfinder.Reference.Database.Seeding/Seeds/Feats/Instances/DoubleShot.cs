@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("98099652-d8f3-4abc-aae4-9775297d4734"), Type = TextBlockType.Text, Text = "You shoot twice in blindingly fast succession. Make two (action: Strikes | Strike), each against a separate target and with a -2 penalty. Both attacks count toward your multiple attack penalty, but the penalty doesn’t increase until after you’ve made both of them." };
+            yield return new TextBlock { Id = Guid.Parse("98099652-d8f3-4abc-aae4-9775297d4734"), Type = TextBlockType.Text, Text = "You shoot twice in blindingly fast succession. Make two (action: Strikes | Strike), each against a separate target and with a -2 penalty. Both attacks count toward your multiple attack penalty, but the penalty doesn't increase until after you've made both of them." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

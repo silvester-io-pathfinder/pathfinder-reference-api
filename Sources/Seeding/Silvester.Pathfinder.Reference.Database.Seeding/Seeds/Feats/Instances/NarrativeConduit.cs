@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3352a1f3-8c2a-4c3e-ae9e-06eba59244c9"), Type = TextBlockType.Text, Text = "You act as a conduit for your companions just as your stories are a conduit between teller and listener. When you Spin a Tale and the hero of your tale (action: Casts a Spell|Cast a Spell) against the villain, you warp the world, allowing the hero to calculate range and cover to the villain from your space instead of their own if they prefer. The hero must choose to calculate both range and cover from the same space; they can&#39;t use one space for range and the other for cover." };
+            yield return new TextBlock { Id = Guid.Parse("3352a1f3-8c2a-4c3e-ae9e-06eba59244c9"), Type = TextBlockType.Text, Text = "You act as a conduit for your companions just as your stories are a conduit between teller and listener. When you Spin a Tale and the hero of your tale (action: Casts a Spell|Cast a Spell) against the villain, you warp the world, allowing the hero to calculate range and cover to the villain from your space instead of their own if they prefer. The hero must choose to calculate both range and cover from the same space; they can't use one space for range and the other for cover." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

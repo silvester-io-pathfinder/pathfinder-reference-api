@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ceb8abb5-9e1e-42be-a8e7-21402e0cea7e"), Type = TextBlockType.Text, Text = "Your rubbery physique makes it easier for you to wedge yourself into tight spaces and more difficult for your enemies to dislodge you. You become trained in Acrobatics. If you would automatically become trained in Acrobatics (from your background or class, for example), you instead become trained in a skill of your choice. If you roll a success to (action: Squeeze), you get a critical success instead. While you’re (action: Squeezing | Squeeze), you gain a +4 circumstance bonus to your Fortitude or Reflex DCs against attempts to (action: Shove) you or otherwise move you from your space." };
+            yield return new TextBlock { Id = Guid.Parse("ceb8abb5-9e1e-42be-a8e7-21402e0cea7e"), Type = TextBlockType.Text, Text = "Your rubbery physique makes it easier for you to wedge yourself into tight spaces and more difficult for your enemies to dislodge you. You become trained in Acrobatics. If you would automatically become trained in Acrobatics (from your background or class, for example), you instead become trained in a skill of your choice. If you roll a success to (action: Squeeze), you get a critical success instead. While you're (action: Squeezing | Squeeze), you gain a +4 circumstance bonus to your Fortitude or Reflex DCs against attempts to (action: Shove) you or otherwise move you from your space." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

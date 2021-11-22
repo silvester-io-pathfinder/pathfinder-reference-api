@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("908ca142-bd80-4206-82fb-a1e3aa1b7000"), Type = TextBlockType.Text, Text = "Your eidolon constricts the creature, dealing bludgeoning damage equal to your eidolon’s level plus its Strength modifier, with a basic Fortitude save against your spell DC." };
+            yield return new TextBlock { Id = Guid.Parse("908ca142-bd80-4206-82fb-a1e3aa1b7000"), Type = TextBlockType.Text, Text = "Your eidolon constricts the creature, dealing bludgeoning damage equal to your eidolon's level plus its Strength modifier, with a basic Fortitude save against your spell DC." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

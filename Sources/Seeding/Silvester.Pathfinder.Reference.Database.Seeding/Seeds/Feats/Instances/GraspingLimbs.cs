@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7b57d0c3-b9af-467e-8844-c30a7faba8ee"), Type = TextBlockType.Text, Text = "Your eidolon grabs enemies. Choose one of the eidolon’s unarmed attacks with the (trait: grapple) trait. It gains the Grab action (Bestiary pg. 343) on that unarmed attack." };
+            yield return new TextBlock { Id = Guid.Parse("7b57d0c3-b9af-467e-8844-c30a7faba8ee"), Type = TextBlockType.Text, Text = "Your eidolon grabs enemies. Choose one of the eidolon's unarmed attacks with the (trait: grapple) trait. It gains the Grab action (Bestiary pg. 343) on that unarmed attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

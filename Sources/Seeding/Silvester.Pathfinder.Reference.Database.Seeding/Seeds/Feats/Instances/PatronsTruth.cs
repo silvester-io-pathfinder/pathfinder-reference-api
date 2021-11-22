@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("afbc42d4-8a1d-4ba0-bcc5-ca993246906f"), Type = TextBlockType.Text, Text = "You have mastered the greatest secrets of your patron’s magic and learned a fundamental truth about your patron, even if their identity still remains a mystery. You gain an additional 10th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("afbc42d4-8a1d-4ba0-bcc5-ca993246906f"), Type = TextBlockType.Text, Text = "You have mastered the greatest secrets of your patron's magic and learned a fundamental truth about your patron, even if their identity still remains a mystery. You gain an additional 10th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("799a6970-9f89-4dd0-a33a-3eef1732b8b1"), Type = TextBlockType.Text, Text = "Underestimating you is a grave mistake, but it&#39;s one others keep making. You&#39;ve learned to take advantage of slips in your foes&#39; defenses. When you (action: Strike) a flat-footed creature using a melee weapon or unarmed attack that has the (trait: agile) and (trait: finesse) traits, it gains the (trait: backstabber) trait." };
+            yield return new TextBlock { Id = Guid.Parse("799a6970-9f89-4dd0-a33a-3eef1732b8b1"), Type = TextBlockType.Text, Text = "Underestimating you is a grave mistake, but it's one others keep making. You've learned to take advantage of slips in your foes' defenses. When you (action: Strike) a flat-footed creature using a melee weapon or unarmed attack that has the (trait: agile) and (trait: finesse) traits, it gains the (trait: backstabber) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

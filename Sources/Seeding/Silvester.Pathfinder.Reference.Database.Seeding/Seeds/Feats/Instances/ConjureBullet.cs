@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1adf9b11-3698-4e95-b00d-6d6b1665849e"), Type = TextBlockType.Text, Text = "You conjure an ordinary level-0 bolt or bullet out of thin air and then immediately (action: Interact) to load it into your weapon. If the bolt or bullet isn’t fired before the end of your turn, the effect is wasted." };
+            yield return new TextBlock { Id = Guid.Parse("1adf9b11-3698-4e95-b00d-6d6b1665849e"), Type = TextBlockType.Text, Text = "You conjure an ordinary level-0 bolt or bullet out of thin air and then immediately (action: Interact) to load it into your weapon. If the bolt or bullet isn't fired before the end of your turn, the effect is wasted." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

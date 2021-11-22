@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5278f2b4-76b0-4d2a-9ec2-26bc2e92e65f"), Type = TextBlockType.Text, Text = "Your connection to one of the great elemental aspects of nature deepens, allowing you further control over its powers. You gain the advanced order spell associated with your order: if you’re a member of the flame order, you gain (spell: combustion); if you’re a member of the stone order, you gain (spell: stone lance); if you’re a member of the storm order, you gain (spell: powerful inhalation); if you’re a member of the wave order, you gain (spell: pulverizing cascade). Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("5278f2b4-76b0-4d2a-9ec2-26bc2e92e65f"), Type = TextBlockType.Text, Text = "Your connection to one of the great elemental aspects of nature deepens, allowing you further control over its powers. You gain the advanced order spell associated with your order: if you're a member of the flame order, you gain (spell: combustion); if you're a member of the stone order, you gain (spell: stone lance); if you're a member of the storm order, you gain (spell: powerful inhalation); if you're a member of the wave order, you gain (spell: pulverizing cascade). Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalElixir
                 Name = "Quicksilver Mutagen",
                 Usage = "Held in 1 hand",
                 Benefit = "You gain an item bonus to Acrobatics checks, Stealth checks, Thievery checks, Reflex saves, and Dexterity-based attack rolls, and you gain the listed status bonus to your Speed.",
-                Drawback = "You take damage equal to twice your level; you can’t recover Hit Points lost in this way by any means while the mutagen lasts. You take a –2 penalty to Fortitude saves.",
+                Drawback = "You take damage equal to twice your level; you can't recover Hit Points lost in this way by any means while the mutagen lasts. You take a –2 penalty to Fortitude saves.",
                 ItemBonus = 1,
                 BulkId = Bulks.Instances.LightBulk.ID
             };

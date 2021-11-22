@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d0d730fe-964b-486f-b39d-1e24f68bb245"), Type = TextBlockType.Text, Text = "You fly the banner of your pledge from your mount, raising your allies’ spirits. You and all allies within 30 feet gain a +1 circumstance bonus to Will saves and DCs against (trait: fear) effects. If your banner is destroyed or removed, allies within 30 feet become frightened 1." };
+            yield return new TextBlock { Id = Guid.Parse("d0d730fe-964b-486f-b39d-1e24f68bb245"), Type = TextBlockType.Text, Text = "You fly the banner of your pledge from your mount, raising your allies' spirits. You and all allies within 30 feet gain a +1 circumstance bonus to Will saves and DCs against (trait: fear) effects. If your banner is destroyed or removed, allies within 30 feet become frightened 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

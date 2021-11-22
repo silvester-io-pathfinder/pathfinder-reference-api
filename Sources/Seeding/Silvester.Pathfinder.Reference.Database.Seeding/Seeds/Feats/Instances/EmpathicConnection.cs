@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("00b3666b-ae1a-4982-b1fe-c41c89b42932"), Type = TextBlockType.Text, Text = "Your sensitivity to your allies’ emotions allows you to benefit from some of the same effects they do. Choose one of the following two benefits." };
+            yield return new TextBlock { Id = Guid.Parse("00b3666b-ae1a-4982-b1fe-c41c89b42932"), Type = TextBlockType.Text, Text = "Your sensitivity to your allies' emotions allows you to benefit from some of the same effects they do. Choose one of the following two benefits." };
             yield return new TextBlock { Id = Guid.Parse("7706d168-bd96-4ef2-b113-bf40496c0394"), Type = TextBlockType.Enumeration, Text = " : If the ally regained Hit Points due to the triggering effect, you gain half these Hit Points as temporary Hit Points that last until the end of your next turn." };
-            yield return new TextBlock { Id = Guid.Parse("8d24810f-f5a8-4abe-a37b-5899e68a9abf"), Type = TextBlockType.Enumeration, Text = " : If the ally gained a status bonus to a type of save or other check due to the triggering effect, you gain the same bonus. This benefit ends at the end of your next turn if it hasn’t already ended before then due to its normal limitations or duration." };
+            yield return new TextBlock { Id = Guid.Parse("8d24810f-f5a8-4abe-a37b-5899e68a9abf"), Type = TextBlockType.Enumeration, Text = " : If the ally gained a status bonus to a type of save or other check due to the triggering effect, you gain the same bonus. This benefit ends at the end of your next turn if it hasn't already ended before then due to its normal limitations or duration." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

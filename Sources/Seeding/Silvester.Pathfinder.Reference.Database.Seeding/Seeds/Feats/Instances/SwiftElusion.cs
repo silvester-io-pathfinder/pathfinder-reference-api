@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b31298ad-8f92-4cd5-a932-0c0087f9a7d8"), Type = TextBlockType.Text, Text = "Attempt an Acrobatics check against the foe’s Reflex DC. If you succeed, either (action: Stride) to a different space adjacent to the foe or move the foe to a different space adjacent to you." };
+            yield return new TextBlock { Id = Guid.Parse("b31298ad-8f92-4cd5-a932-0c0087f9a7d8"), Type = TextBlockType.Text, Text = "Attempt an Acrobatics check against the foe's Reflex DC. If you succeed, either (action: Stride) to a different space adjacent to the foe or move the foe to a different space adjacent to you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = ID,
                 Name = "Scholarly Recollection",
                 Level = 1,
-                Trigger = "You attempt a Perception check to Seek, or you attempt a skill check to Recall Knowledge with a skill you’re trained in.",
+                Trigger = "You attempt a Perception check to Seek, or you attempt a skill check to Recall Knowledge with a skill you're trained in.",
                 DomainId = Domains.Instances.Knowledge.ID,
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 ClassId = Classes.Instances.Cleric.ID,
@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("39f32fbc-fb17-45d3-bbda-9eb51e7ca2f4"), Type = TextBlockType.Text, Text = "Speaking a short prayer as you gather your thoughts, you’re blessed to find that your deity gave you just the right bit of information for your situation. Roll the triggering check twice and use the better result." };
+            yield return new TextBlock { Id = Guid.Parse("39f32fbc-fb17-45d3-bbda-9eb51e7ca2f4"), Type = TextBlockType.Text, Text = "Speaking a short prayer as you gather your thoughts, you're blessed to find that your deity gave you just the right bit of information for your situation. Roll the triggering check twice and use the better result." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

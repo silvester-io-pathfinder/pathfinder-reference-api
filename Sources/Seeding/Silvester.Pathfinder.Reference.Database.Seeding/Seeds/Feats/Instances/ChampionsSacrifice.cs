@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4ce05581-2d61-4f03-a778-b0fd6278e562"), Type = TextBlockType.Text, Text = "You can suffer so that others might live. You can cast the (spell: champion&#39;s sacrifice) devotion spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("4ce05581-2d61-4f03-a778-b0fd6278e562"), Type = TextBlockType.Text, Text = "You can suffer so that others might live. You can cast the (spell: champion's sacrifice) devotion spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

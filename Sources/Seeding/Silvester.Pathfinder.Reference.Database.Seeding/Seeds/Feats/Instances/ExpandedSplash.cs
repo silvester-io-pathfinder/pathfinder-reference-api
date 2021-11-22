@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b475a240-5a08-4ac9-b458-5a275c05567e"), Type = TextBlockType.Text, Text = "The particularly volatile compounds that you brew into your bombs result in them creating especially large and powerful explosions. When you throw an alchemical bomb and that bomb has the (trait: splash) trait, you can add your Intelligence modifier to the bomb’s usual splash damage, and it deals splash damage to every creature within 10 feet of the target." };
+            yield return new TextBlock { Id = Guid.Parse("b475a240-5a08-4ac9-b458-5a275c05567e"), Type = TextBlockType.Text, Text = "The particularly volatile compounds that you brew into your bombs result in them creating especially large and powerful explosions. When you throw an alchemical bomb and that bomb has the (trait: splash) trait, you can add your Intelligence modifier to the bomb's usual splash damage, and it deals splash damage to every creature within 10 feet of the target." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

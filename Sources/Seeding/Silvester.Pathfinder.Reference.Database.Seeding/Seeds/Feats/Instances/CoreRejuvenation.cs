@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c62ea8d-1768-4b2b-9688-b69712608d1f"), Type = TextBlockType.Text, Text = "Your soul taps into your core’s power to push against the grasp of death and allow you to recover consciousness. You’re restored to 1 Hit Point, lose the dying and unconscious conditions, and can act normally on this turn. You gain or increase the wounded condition as normal when losing the dying condition in this way." };
+            yield return new TextBlock { Id = Guid.Parse("7c62ea8d-1768-4b2b-9688-b69712608d1f"), Type = TextBlockType.Text, Text = "Your soul taps into your core's power to push against the grasp of death and allow you to recover consciousness. You're restored to 1 Hit Point, lose the dying and unconscious conditions, and can act normally on this turn. You gain or increase the wounded condition as normal when losing the dying condition in this way." };
             yield return new TextBlock { Id = Guid.Parse("3e427925-a7ac-403c-8206-115b0ae44c71"), Type = TextBlockType.Text, Text = "----" };
             yield return new TextBlock { Id = Guid.Parse("2c244668-d42c-4bdf-88d9-37f7cd42f0e2"), Type = TextBlockType.Text, Text = "~ Enhancement: Your soul can draw even more power from your core, granting you additional benefits. When you use Core Rejuvenation, you also gain a number of temporary Hit Points equal to three times your level. These Hit Points remain for 1 minute." };
         }

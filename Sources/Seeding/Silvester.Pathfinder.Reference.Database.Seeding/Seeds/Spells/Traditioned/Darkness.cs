@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3d55aeb6-b47c-4221-a8b0-7117c09da7fe"), Type = Utilities.Text.TextBlockType.Text, Text = "You create a shroud of darkness that prevents light from penetrating or emanating within the area. Light does not enter the area and any non-magical light sources, such as a torch or lantern, do not emanate any light while inside the area, even if their light radius would extend beyond the darkness. This also suppresses magical light of your darkness spell’s level or lower. Light can’t pass through, so creatures in the area can’t see outside. From outside, it appears as a globe of pure darkness." };
+            yield return new TextBlock { Id = Guid.Parse("3d55aeb6-b47c-4221-a8b0-7117c09da7fe"), Type = Utilities.Text.TextBlockType.Text, Text = "You create a shroud of darkness that prevents light from penetrating or emanating within the area. Light does not enter the area and any non-magical light sources, such as a torch or lantern, do not emanate any light while inside the area, even if their light radius would extend beyond the darkness. This also suppresses magical light of your darkness spell's level or lower. Light can't pass through, so creatures in the area can't see outside. From outside, it appears as a globe of pure darkness." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

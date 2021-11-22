@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c6600c03-b194-4b5f-b56e-c79855b88ff2"), Type = TextBlockType.Text, Text = "You gain a skill feat and the rogue’s surprise attack class feature (page 181). You become trained in light armor. In addition, you become trained in Stealth or Thievery plus one skill of your choice; if you are already trained in both Stealth and Thievery, you become trained in an additional skill of your choice. You become trained in rogue class DC." };
+            yield return new TextBlock { Id = Guid.Parse("c6600c03-b194-4b5f-b56e-c79855b88ff2"), Type = TextBlockType.Text, Text = "You gain a skill feat and the rogue's surprise attack class feature (page 181). You become trained in light armor. In addition, you become trained in Stealth or Thievery plus one skill of your choice; if you are already trained in both Stealth and Thievery, you become trained in an additional skill of your choice. You become trained in rogue class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("d57e0288-0552-4e93-b877-50a5cd7a9a4b"), Type = TextBlockType.Text, Text = "~ Access: Lirgeni nationality" };
-            yield return new TextBlock { Id = Guid.Parse("a5b593a1-a86e-4d42-bffa-95d41722cae1"), Type = TextBlockType.Text, Text = "The ancient Saoc Brethren were the masters of astrology, and while your knowledge may be but a pale shadow of their wisdom, it still comes in handy. You recall the stars’ predictions about your current situation. If your next action requires you to attempt one or more skill checks, roll 1d8. On a result of 6, 7, or 8, you gain a +2 circumstance bonus to the first such skill check you attempt. On a 3, 4, or 5, you gain a +1 circumstance bonus. On a 2, you gain nothing. On a 1, you take a -1 circumstance penalty to the skill check." };
+            yield return new TextBlock { Id = Guid.Parse("a5b593a1-a86e-4d42-bffa-95d41722cae1"), Type = TextBlockType.Text, Text = "The ancient Saoc Brethren were the masters of astrology, and while your knowledge may be but a pale shadow of their wisdom, it still comes in handy. You recall the stars' predictions about your current situation. If your next action requires you to attempt one or more skill checks, roll 1d8. On a result of 6, 7, or 8, you gain a +2 circumstance bonus to the first such skill check you attempt. On a 3, 4, or 5, you gain a +1 circumstance bonus. On a 2, you gain nothing. On a 1, you take a -1 circumstance penalty to the skill check." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

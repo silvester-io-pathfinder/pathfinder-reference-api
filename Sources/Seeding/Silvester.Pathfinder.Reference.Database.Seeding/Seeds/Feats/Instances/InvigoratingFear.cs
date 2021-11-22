@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b3451235-6f10-4ea4-9bab-26fd220e94b9"), Type = TextBlockType.Text, Text = "You are invigorated by the shock of a prank or the thrum of terror. You gain temporary Hit Points equal to the creature&#39;s level or 3, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("b3451235-6f10-4ea4-9bab-26fd220e94b9"), Type = TextBlockType.Text, Text = "You are invigorated by the shock of a prank or the thrum of terror. You gain temporary Hit Points equal to the creature's level or 3, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

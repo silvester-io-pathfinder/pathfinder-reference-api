@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("73a841fd-02f4-40d5-a0ee-7dbd631288a7"), Type = TextBlockType.Text, Text = "The target’s skin hardens like stone. It gains resistance 5 to physical damage, except adamantine. Each time the target is hit by a bludgeoning, piercing, or slashing attack, stoneskin’s duration decreases by 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("73a841fd-02f4-40d5-a0ee-7dbd631288a7"), Type = TextBlockType.Text, Text = "The target's skin hardens like stone. It gains resistance 5 to physical damage, except adamantine. Each time the target is hit by a bludgeoning, piercing, or slashing attack, stoneskin's duration decreases by 1 minute." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

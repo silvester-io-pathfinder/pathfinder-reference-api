@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5d92b82c-3401-4a23-b080-549c24f7457e"), Type = TextBlockType.Text, Text = "Your clan dagger can protect your allies as easily as yourself. When you use an (action: Interact) action to gain a circumstance bonus to AC from your (item: clan dagger)’s (trait: parry) trait, you can grant the circumstance bonus to an adjacent ally instead of gaining it yourself. You can use multiple (action: Interact) actions to protect multiple allies, or to protect yourself and an ally. The ally benefits from the bonus to AC only when they are adjacent to you." };
+            yield return new TextBlock { Id = Guid.Parse("5d92b82c-3401-4a23-b080-549c24f7457e"), Type = TextBlockType.Text, Text = "Your clan dagger can protect your allies as easily as yourself. When you use an (action: Interact) action to gain a circumstance bonus to AC from your (item: clan dagger)'s (trait: parry) trait, you can grant the circumstance bonus to an adjacent ally instead of gaining it yourself. You can use multiple (action: Interact) actions to protect multiple allies, or to protect yourself and an ally. The ally benefits from the bonus to AC only when they are adjacent to you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

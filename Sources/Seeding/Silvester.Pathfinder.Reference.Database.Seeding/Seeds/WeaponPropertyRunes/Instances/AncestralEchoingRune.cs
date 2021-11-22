@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 PotencyId = Potencies.Instances.Unclassified.ID,
                 Benefits = new[]
                 {
-                    new TextBlock {Id = Guid.Parse("e337a626-4b09-4e8c-9bb1-28cc5f89335b"), Type = TextBlockType.Text, Text = "The wisdom of this weapon’s past owners flows into your mind, amplifying your own abilities with the weapon. Your proficiency rank with this weapon is one step higher than normal, to a maximum of the highest proficiency rank you have in any weapon. For instance, if you had master proficieny with martial weapons and expert proficiency with advanced weapons, you would have master proficiency with advanced weapon that had this rune."},
-                    new TextBlock {Id = Guid.Parse("bc8e78cc-7535-4e8e-9e8a-59da36aa6076"), Type = TextBlockType.Text, Text = "In addition, while wielding the ancestral echoing weapon, you have expert proficiency in one Lore skill relevant to one or more of the weapon’s previous owners. This is typically Dwarven Lore but is ultimately determined by the GM depending on the weapon’s history."},
+                    new TextBlock {Id = Guid.Parse("e337a626-4b09-4e8c-9bb1-28cc5f89335b"), Type = TextBlockType.Text, Text = "The wisdom of this weapon's past owners flows into your mind, amplifying your own abilities with the weapon. Your proficiency rank with this weapon is one step higher than normal, to a maximum of the highest proficiency rank you have in any weapon. For instance, if you had master proficieny with martial weapons and expert proficiency with advanced weapons, you would have master proficiency with advanced weapon that had this rune."},
+                    new TextBlock {Id = Guid.Parse("bc8e78cc-7535-4e8e-9e8a-59da36aa6076"), Type = TextBlockType.Text, Text = "In addition, while wielding the ancestral echoing weapon, you have expert proficiency in one Lore skill relevant to one or more of the weapon's previous owners. This is typically Dwarven Lore but is ultimately determined by the GM depending on the weapon's history."},
                 },
             };
         }

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("197d3ea1-49ca-44bf-97b6-a3ed7cbf8031"), Type = TextBlockType.Text, Text = "The magic flowing through your signifer’s mask allows you to see in the dark, and the mask dampens the distraction caused by sudden flashes of bright light. While wearing your signifer’s mask, you gain darkvision. Additionally, if you are dazzled while wearing your signifer’s mask and the target is concealed only because you are dazzled, you reduce the flat check DC to target that creature from 5 to 3." };
+            yield return new TextBlock { Id = Guid.Parse("197d3ea1-49ca-44bf-97b6-a3ed7cbf8031"), Type = TextBlockType.Text, Text = "The magic flowing through your signifer's mask allows you to see in the dark, and the mask dampens the distraction caused by sudden flashes of bright light. While wearing your signifer's mask, you gain darkvision. Additionally, if you are dazzled while wearing your signifer's mask and the target is concealed only because you are dazzled, you reduce the flat check DC to target that creature from 5 to 3." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("7d21d819-56fe-41c7-a0be-4a71db93456c"), Type = TextBlockType.Text, Text = "Four acorns grow in your hand, their shells streaked with pulsing red and orange patterns. You or anyone else who has one of the acorns can toss it up to 30 feet with an Interact action. It explodes in a 5-foot burst, dealing 4d6 fire damage. The save uses your spell DC, even if someone else throws the acorn." };
-            yield return new TextBlock { Id = Guid.Parse("ed0082a2-cf17-4ef4-b15c-bfff7da31567"), Type = TextBlockType.Text, Text = "Flames continue to burn on the ground in the burst for 1 minute, dealing 2d6 fire damage to any creature that enters the flames or ends its turn within them. A creature can take damage from the continuing flames only once per round, even if it’s in overlapping areas of fire created by different acorns." };
+            yield return new TextBlock { Id = Guid.Parse("ed0082a2-cf17-4ef4-b15c-bfff7da31567"), Type = TextBlockType.Text, Text = "Flames continue to burn on the ground in the burst for 1 minute, dealing 2d6 fire damage to any creature that enters the flames or ends its turn within them. A creature can take damage from the continuing flames only once per round, even if it's in overlapping areas of fire created by different acorns." };
             yield return new TextBlock { Id = Guid.Parse("8bcade86-bae2-4100-8b26-a4720c4746ba"), Type = TextBlockType.Text, Text = "When the spell ends, any remaining acorns rot and turn to ordinary soil." };
         }
 
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "8th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("f6472638-75c8-40dc-86ee-3979c4ca118d"), Type = TextBlockType.Text, Text = "The burst’s damage increases to 5d6, and the continuing flames damage increases to 3d6." }
+                    new TextBlock { Id = Guid.Parse("f6472638-75c8-40dc-86ee-3979c4ca118d"), Type = TextBlockType.Text, Text = "The burst's damage increases to 5d6, and the continuing flames damage increases to 3d6." }
                 }
             };
 
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("10a397f6-ce42-43e5-9afc-8076db1e9c1e"), Type = TextBlockType.Text, Text = "The burst’s damage increases to 6d6, and the continuing flames damage increases to 3d6." }
+                    new TextBlock { Id = Guid.Parse("10a397f6-ce42-43e5-9afc-8076db1e9c1e"), Type = TextBlockType.Text, Text = "The burst's damage increases to 6d6, and the continuing flames damage increases to 3d6." }
                 }
             };
         }

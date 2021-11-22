@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
             {
                 Id = ID,
                 Name = "Pharaoh's Ward",
-                Description = "A curse is imbued on an entryway’s threshold.",
+                Description = "A curse is imbued on an entryway's threshold.",
                 Level = 7,
                 Reset = "The trap resets when the door is shut.",
                 CanBeDetectedMagically = false,
@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = new List<TextBlock>
                 {
-                    new TextBlock { Id = Guid.Parse("d9095071-f339-42ec-99a9-b36054c97766"), Type = TextBlockType.Text, Text = "Each living creature within 60 feet must succeed at a DC 23 Will save or be subjected to the pharaoh’s curse. A cursed creature takes a –2 status penalty to Fortitude saves, and any natural or magical healing it receives is halved. The curse remains until removed by remove curse or similar magic." },
+                    new TextBlock { Id = Guid.Parse("d9095071-f339-42ec-99a9-b36054c97766"), Type = TextBlockType.Text, Text = "Each living creature within 60 feet must succeed at a DC 23 Will save or be subjected to the pharaoh's curse. A cursed creature takes a –2 status penalty to Fortitude saves, and any natural or magical healing it receives is halved. The curse remains until removed by remove curse or similar magic." },
                 }
             };
         }

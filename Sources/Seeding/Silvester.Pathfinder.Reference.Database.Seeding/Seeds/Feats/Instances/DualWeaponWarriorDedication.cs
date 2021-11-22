@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("47442ce9-b5c1-4fc5-bd62-92e55bf6eb2d"), Type = TextBlockType.Text, Text = "You’re exceptional in your use of two weapons. You gain the (feat: Double Slice) fighter feat. This serves as (feat: Double Slice) for the purpose of meeting prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("47442ce9-b5c1-4fc5-bd62-92e55bf6eb2d"), Type = TextBlockType.Text, Text = "You're exceptional in your use of two weapons. You gain the (feat: Double Slice) fighter feat. This serves as (feat: Double Slice) for the purpose of meeting prerequisites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

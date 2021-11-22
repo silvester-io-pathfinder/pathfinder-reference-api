@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1344f717-2d4b-4346-8a5a-ac2c9ff6b140"), Type = TextBlockType.Text, Text = "A high-frequency sonic attack shatters a nearby object. You deal 2d10 sonic damage to the object, ignoring the object’s Hardness if it is 4 or lower." };
+            yield return new TextBlock { Id = Guid.Parse("1344f717-2d4b-4346-8a5a-ac2c9ff6b140"), Type = TextBlockType.Text, Text = "A high-frequency sonic attack shatters a nearby object. You deal 2d10 sonic damage to the object, ignoring the object's Hardness if it is 4 or lower." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

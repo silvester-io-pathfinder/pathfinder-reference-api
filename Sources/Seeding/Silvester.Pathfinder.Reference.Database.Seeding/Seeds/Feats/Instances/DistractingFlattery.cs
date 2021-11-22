@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27d8b1a9-9b10-4aeb-8d06-b0db523b015c"), Type = TextBlockType.Text, Text = "You know how to maintain a good impression and manage your image, even while keeping uncouth company. Make a Deception check against the target’s Will DC. Regardless of your result, the target is temporarily immune to your Distracting Flattery for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("27d8b1a9-9b10-4aeb-8d06-b0db523b015c"), Type = TextBlockType.Text, Text = "You know how to maintain a good impression and manage your image, even while keeping uncouth company. Make a Deception check against the target's Will DC. Regardless of your result, the target is temporarily immune to your Distracting Flattery for 10 minutes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -50,9 +50,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             {
                 Id = Guid.Parse("07a9d89f-feb3-4583-8e11-c4b9cfba59c7"),
                 
-                Success = "The target’s attitude doesn’t decrease as a result of you or your ally’s social blunder.",
-                Failure = "The target’s attitude decreases, as normal.",
-                CriticalFailure = "Your attempt makes matters worse, decreasing the target’s attitude toward you by one step, in addition to any changes from the behavior that triggered this reaction.", 
+                Success = "The target's attitude doesn't decrease as a result of you or your ally's social blunder.",
+                Failure = "The target's attitude decreases, as normal.",
+                CriticalFailure = "Your attempt makes matters worse, decreasing the target's attitude toward you by one step, in addition to any changes from the behavior that triggered this reaction.", 
             };
         }
             

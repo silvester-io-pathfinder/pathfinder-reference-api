@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("802ac689-1b9b-4bf8-ac82-8a2cc90a0c20"), Type = TextBlockType.Text, Text = "Whether you are climbing a ship’s rigging, a jungle tree, or a clock tower, you have an uncanny knack for finding footholds and handholds where larger creatures can’t. You gain a climb Speed of 10 feet. You can take the Legendary Climber feat even if you don’t have the (feat: Quick Climb) feat, provided you meet its other prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("802ac689-1b9b-4bf8-ac82-8a2cc90a0c20"), Type = TextBlockType.Text, Text = "Whether you are climbing a ship's rigging, a jungle tree, or a clock tower, you have an uncanny knack for finding footholds and handholds where larger creatures can't. You gain a climb Speed of 10 feet. You can take the Legendary Climber feat even if you don't have the (feat: Quick Climb) feat, provided you meet its other prerequisites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "3rd", 
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("12971af1-dc37-4275-8caa-f1b40df0c206"), Type = Utilities.Text.TextBlockType.Text, Text = "The spell’s range is touch and it targets 1 willing creature." }
+                    new TextBlock { Id = Guid.Parse("12971af1-dc37-4275-8caa-f1b40df0c206"), Type = Utilities.Text.TextBlockType.Text, Text = "The spell's range is touch and it targets 1 willing creature." }
                 }
             };
 
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("58b96894-4f49-442f-977c-482e7dd65f1c"), Type = Utilities.Text.TextBlockType.Text, Text = "The spell’s range is touch and it targets 1 willing creature.The duration is until the next time you make your daily preparations." }
+                    new TextBlock { Id = Guid.Parse("58b96894-4f49-442f-977c-482e7dd65f1c"), Type = Utilities.Text.TextBlockType.Text, Text = "The spell's range is touch and it targets 1 willing creature.The duration is until the next time you make your daily preparations." }
                 }
             };
         }

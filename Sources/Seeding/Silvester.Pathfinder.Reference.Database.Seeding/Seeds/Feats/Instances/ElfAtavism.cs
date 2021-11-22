@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2b42bf1e-f37c-4597-97ab-1b6bf79b7495"), Type = TextBlockType.Text, Text = "Your elven blood runs particularly strong, granting you features far more elven than those of a typical half-elf. You may also have been raised among elves, steeped in your elven ancestors’ heritage. You gain the benefits of the elf heritage of your elven parent or ancestors. You typically can’t select a heritage that depends on or improves an elven feature you don’t have. For example, you couldn’t gain the cavern elf’s darkvision ability if you didn’t have low-light vision. In these cases, at the GM’s discretion, you might gain a different benefit." };
+            yield return new TextBlock { Id = Guid.Parse("2b42bf1e-f37c-4597-97ab-1b6bf79b7495"), Type = TextBlockType.Text, Text = "Your elven blood runs particularly strong, granting you features far more elven than those of a typical half-elf. You may also have been raised among elves, steeped in your elven ancestors' heritage. You gain the benefits of the elf heritage of your elven parent or ancestors. You typically can't select a heritage that depends on or improves an elven feature you don't have. For example, you couldn't gain the cavern elf's darkvision ability if you didn't have low-light vision. In these cases, at the GM's discretion, you might gain a different benefit." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

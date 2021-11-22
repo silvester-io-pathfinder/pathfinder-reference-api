@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("398b5d5d-c902-4e50-b79b-f576c02ceca0"), Type = TextBlockType.Text, Text = "You know there’s so much more to sensation than whips and chains—but whips and chains also have their place. You can cast (spell: telekinetic maneuver) and (spell: web) once per day each as 2nd-level divine innate spells; in both cases, the spells manifest shadowy chains rather than their usual visual signifiers." };
+            yield return new TextBlock { Id = Guid.Parse("398b5d5d-c902-4e50-b79b-f576c02ceca0"), Type = TextBlockType.Text, Text = "You know there's so much more to sensation than whips and chains—but whips and chains also have their place. You can cast (spell: telekinetic maneuver) and (spell: web) once per day each as 2nd-level divine innate spells; in both cases, the spells manifest shadowy chains rather than their usual visual signifiers." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d7d67b3-51b2-410f-994b-0154cd38f908"), Type = TextBlockType.Text, Text = "Confident in your technique, you don’t easily lose your concentration when you (activity: Cast a Spell). If a reaction would disrupt your spellcasting action, attempt a DC 15 flat check. If you succeed, your action isn’t disrupted." };
+            yield return new TextBlock { Id = Guid.Parse("1d7d67b3-51b2-410f-994b-0154cd38f908"), Type = TextBlockType.Text, Text = "Confident in your technique, you don't easily lose your concentration when you (activity: Cast a Spell). If a reaction would disrupt your spellcasting action, attempt a DC 15 flat check. If you succeed, your action isn't disrupted." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

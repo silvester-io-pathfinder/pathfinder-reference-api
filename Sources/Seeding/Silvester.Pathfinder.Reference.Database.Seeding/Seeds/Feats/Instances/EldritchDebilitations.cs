@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             yield return new TextBlock { Id = Guid.Parse("b2de8ed4-50d6-4e9c-8353-b41e1f77e9e7"), Type = TextBlockType.Text, Text = "You know how to apply debilitations that are particularly troublesome for spellcasters. Add the following debilitations to the list you can choose from when you use (feat: Debilitating Strike)." };
             yield return new TextBlock { Id = Guid.Parse("ab2be4e7-83fa-4f07-a3a6-82edfe9460f0"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target is stupefied 1." };
-            yield return new TextBlock { Id = Guid.Parse("356d8718-eace-4237-9818-c379b87c027d"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target can’t (action: Step)." };
+            yield return new TextBlock { Id = Guid.Parse("356d8718-eace-4237-9818-c379b87c027d"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target can't (action: Step)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

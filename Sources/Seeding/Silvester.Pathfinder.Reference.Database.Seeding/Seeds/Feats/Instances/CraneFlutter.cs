@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5648cca7-9ab5-4b7f-81d2-13184061a399"), Type = TextBlockType.Text, Text = "You interpose your arm between yourself and your opponent. Your circumstance bonus to AC from (feat: Crane Stance) increases to +3 against the triggering attack. If the attack misses you, you can immediately make a crane wing (action: Strike) against the attacker at a -2 penalty, even if the attacker isn’t within your reach." };
+            yield return new TextBlock { Id = Guid.Parse("5648cca7-9ab5-4b7f-81d2-13184061a399"), Type = TextBlockType.Text, Text = "You interpose your arm between yourself and your opponent. Your circumstance bonus to AC from (feat: Crane Stance) increases to +3 against the triggering attack. If the attack misses you, you can immediately make a crane wing (action: Strike) against the attacker at a -2 penalty, even if the attacker isn't within your reach." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

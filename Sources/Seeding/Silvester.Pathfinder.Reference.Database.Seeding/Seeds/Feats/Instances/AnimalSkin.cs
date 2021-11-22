@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b7f7089-1761-4cfa-91cc-cab23505e533"), Type = TextBlockType.Text, Text = "Your proficiency in unarmored defense increases to expert. While you are raging and unarmored, your skin transforms into a thick hide resembling your animal’s skin. You gain a +1 status bonus to AC instead of taking a -1 penalty to AC; if you have the greater juggernaut class feature, this status bonus increases to +2. The thickness of your hide gives you a Dexterity modifier cap to your AC of +3." };
+            yield return new TextBlock { Id = Guid.Parse("0b7f7089-1761-4cfa-91cc-cab23505e533"), Type = TextBlockType.Text, Text = "Your proficiency in unarmored defense increases to expert. While you are raging and unarmored, your skin transforms into a thick hide resembling your animal's skin. You gain a +1 status bonus to AC instead of taking a -1 penalty to AC; if you have the greater juggernaut class feature, this status bonus increases to +2. The thickness of your hide gives you a Dexterity modifier cap to your AC of +3." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

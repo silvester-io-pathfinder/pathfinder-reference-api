@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e5e934a2-7bf8-47fc-a081-1af1a6d28808"), Type = TextBlockType.Text, Text = "You crush the target by causing it to collapse in on itself, dealing 75 damage. The first time each round you Sustain the Spell, you must choose a new target to be subject to the same effect; the same creature can never be targeted more than once with a single casting of this spell. You also can’t affect more than one creature per turn with implosion. You can’t target a creature that’s incorporeal, gaseous, or liquid, or otherwise lacking a solid form." };
+            yield return new TextBlock { Id = Guid.Parse("e5e934a2-7bf8-47fc-a081-1af1a6d28808"), Type = TextBlockType.Text, Text = "You crush the target by causing it to collapse in on itself, dealing 75 damage. The first time each round you Sustain the Spell, you must choose a new target to be subject to the same effect; the same creature can never be targeted more than once with a single casting of this spell. You also can't affect more than one creature per turn with implosion. You can't target a creature that's incorporeal, gaseous, or liquid, or otherwise lacking a solid form." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3791fb58-435b-4564-bff7-659b78701ba9"), Type = TextBlockType.Text, Text = "You become an expert in Acrobatics. At 7th level, you become a master in Acrobatics, and at 15th level, you become legendary in Acrobatics. Whenever you critically succeed at an Acrobatics check to (action: Tumble Through) an enemy’s space, you don’t treat the enemy’s space as difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("3791fb58-435b-4564-bff7-659b78701ba9"), Type = TextBlockType.Text, Text = "You become an expert in Acrobatics. At 7th level, you become a master in Acrobatics, and at 15th level, you become legendary in Acrobatics. Whenever you critically succeed at an Acrobatics check to (action: Tumble Through) an enemy's space, you don't treat the enemy's space as difficult terrain." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

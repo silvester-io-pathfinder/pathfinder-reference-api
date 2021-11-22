@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 PotencyId = Potencies.Instances.Greater.ID,
                 Benefits = new[]
                 {
-                    new TextBlock {Id = Guid.Parse("43a36fa8-f7a4-4c49-8cf7-0bd08378d2f9"), Type = TextBlockType.Text, Text = "The save DC is 34, and the deafness is permanent. Sonic damage dealt by this weapon ignores the target’s sonic resistance."},
+                    new TextBlock {Id = Guid.Parse("43a36fa8-f7a4-4c49-8cf7-0bd08378d2f9"), Type = TextBlockType.Text, Text = "The save DC is 34, and the deafness is permanent. Sonic damage dealt by this weapon ignores the target's sonic resistance."},
                 },
             };
         }

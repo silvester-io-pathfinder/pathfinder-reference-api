@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eee1fd3f-b824-4ae3-819e-bde672ca0dd5"), Type = TextBlockType.Text, Text = "You have filed your teeth into jagged points and have an unusually powerful jaw, making your mouth a dangerous weapon. If you’re an irongut goblin, you gain a jaws unarmed attack that deals 1d4 piercing damage, and if you’re a razortooth goblin, your jaws unarmed attack deals 1d8 piercing damage and loses the finesse trait. Whenever you score a critical hit with your jaws unarmed attack, your target takes 1 persistent bleed damage per weapon damage die." };
+            yield return new TextBlock { Id = Guid.Parse("eee1fd3f-b824-4ae3-819e-bde672ca0dd5"), Type = TextBlockType.Text, Text = "You have filed your teeth into jagged points and have an unusually powerful jaw, making your mouth a dangerous weapon. If you're an irongut goblin, you gain a jaws unarmed attack that deals 1d4 piercing damage, and if you're a razortooth goblin, your jaws unarmed attack deals 1d8 piercing damage and loses the finesse trait. Whenever you score a critical hit with your jaws unarmed attack, your target takes 1 persistent bleed damage per weapon damage die." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

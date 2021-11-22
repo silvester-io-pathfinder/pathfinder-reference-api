@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ArmorGroups.Inst
             {
                 Id = ID,
                 Name = "Composite",
-                ArmorSpecializationEffect = "The numerous overlapping pieces of this armor protect you from piercing attacks. You gain resistance to piercing damage equal to 1 + the value of the armor’s potency rune for medium armor, or 2 + the value of the armor’s potency rune for heavy armor."
+                ArmorSpecializationEffect = "The numerous overlapping pieces of this armor protect you from piercing attacks. You gain resistance to piercing damage equal to 1 + the value of the armor's potency rune for medium armor, or 2 + the value of the armor's potency rune for heavy armor."
             };
         }
 

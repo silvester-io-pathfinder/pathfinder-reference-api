@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7eec8271-97f2-4f16-be27-5e2bccf466cb"), Type = TextBlockType.Text, Text = "If the next action you use is to (activity: Cast a Spell) from your spell slots that damages other creatures, you can bend some of that spell’s offensive energy, protecting allies in the area and boosting your own defenses against certain foes. Select any number of targets of the spell and reduce the spell’s damage to those targets by an amount equal to the spell’s level. Until your next turn, when one of those targets damages you, that damage is reduced by twice the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("7eec8271-97f2-4f16-be27-5e2bccf466cb"), Type = TextBlockType.Text, Text = "If the next action you use is to (activity: Cast a Spell) from your spell slots that damages other creatures, you can bend some of that spell's offensive energy, protecting allies in the area and boosting your own defenses against certain foes. Select any number of targets of the spell and reduce the spell's damage to those targets by an amount equal to the spell's level. Until your next turn, when one of those targets damages you, that damage is reduced by twice the spell's level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

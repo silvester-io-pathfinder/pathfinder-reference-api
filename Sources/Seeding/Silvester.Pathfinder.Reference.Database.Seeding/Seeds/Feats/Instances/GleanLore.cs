@@ -43,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             {
                 Id = Guid.Parse("f9b179dd-2daa-47da-841d-5c04a5979d11"),
                 CriticalSuccess = "You comprehend the lore accurately or gain a useful clue from the divine about your situation.",
-                Success = "You learn two pieces of information about the topic, one true and one erroneous, but you don’t know which is which.",
+                Success = "You learn two pieces of information about the topic, one true and one erroneous, but you don't know which is which.",
                 Failure = "You recall incorrect information or gain an erroneous or misleading clue.",
                 CriticalFailure = "You recall two pieces of incorrect information or gain two erroneous or misleading clues.", 
             };

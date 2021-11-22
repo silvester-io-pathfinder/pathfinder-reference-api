@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("032201c2-3644-4d86-9f46-39d1511b0297"), Type = TextBlockType.Text, Text = "~ Access: Side with the Washboard Dogs in the gang conflict." };
-            yield return new TextBlock { Id = Guid.Parse("eb4ec717-b2df-44a7-af3e-b8e842bfce99"), Type = TextBlockType.Text, Text = "You emerge from hiding and deliver a blow that can knock an enemy sprawling to the ground. You (action: Stride) up to half your Speed, but you must end your movement next to a foe you&#39;re hidden from or undetected by. You then (action: Strike) that enemy with the required weapon; if you hit, the target is knocked prone." };
+            yield return new TextBlock { Id = Guid.Parse("eb4ec717-b2df-44a7-af3e-b8e842bfce99"), Type = TextBlockType.Text, Text = "You emerge from hiding and deliver a blow that can knock an enemy sprawling to the ground. You (action: Stride) up to half your Speed, but you must end your movement next to a foe you're hidden from or undetected by. You then (action: Strike) that enemy with the required weapon; if you hit, the target is knocked prone." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

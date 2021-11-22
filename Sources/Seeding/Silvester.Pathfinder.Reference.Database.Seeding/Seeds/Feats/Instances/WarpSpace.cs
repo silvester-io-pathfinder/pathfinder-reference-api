@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("37a4fca2-91a6-4bd7-be61-73c45bb9bb5a"), Type = TextBlockType.Text, Text = "As you unleash your spell, you use your magic to bend and distort space, allowing your spell to strike your target from an unexpected vector. Use this amp in place of the psi cantrip’s normal amp entry. The amped psi cantrip must have a range." };
+            yield return new TextBlock { Id = Guid.Parse("37a4fca2-91a6-4bd7-be61-73c45bb9bb5a"), Type = TextBlockType.Text, Text = "As you unleash your spell, you use your magic to bend and distort space, allowing your spell to strike your target from an unexpected vector. Use this amp in place of the psi cantrip's normal amp entry. The amped psi cantrip must have a range." };
             yield return new TextBlock { Id = Guid.Parse("a4d3b5d8-d360-4be5-bd1a-71859203cb18"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("62c54c26-6fe1-4313-82f2-b3817fa7dd09"), Type = TextBlockType.Text, Text = "~ Amp: Choose a square within 30 feet and determine your spell’s line of effect and line of sight from there as well as whether creatures have cover against the spell. Any bonus from cover the target has is reduced by 2 against this spell. The spell still can’t exceed its normal range as measured from you." };
+            yield return new TextBlock { Id = Guid.Parse("62c54c26-6fe1-4313-82f2-b3817fa7dd09"), Type = TextBlockType.Text, Text = "~ Amp: Choose a square within 30 feet and determine your spell's line of effect and line of sight from there as well as whether creatures have cover against the spell. Any bonus from cover the target has is reduced by 2 against this spell. The spell still can't exceed its normal range as measured from you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

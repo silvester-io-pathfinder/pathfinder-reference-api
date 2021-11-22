@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d6c903a-6b2a-4905-acdd-00ce422ad7a6"), Type = TextBlockType.Text, Text = "You use your foes’ openings to expose even greater weaknesses. When you hit a creature as part of an (feat: Attack of Opportunity), that creature becomes flat-footed until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("4d6c903a-6b2a-4905-acdd-00ce422ad7a6"), Type = TextBlockType.Text, Text = "You use your foes' openings to expose even greater weaknesses. When you hit a creature as part of an (feat: Attack of Opportunity), that creature becomes flat-footed until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

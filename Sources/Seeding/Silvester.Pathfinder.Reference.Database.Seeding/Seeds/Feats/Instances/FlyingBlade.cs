@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c94f27ca-6d01-4861-98a7-49fb1aae59c0"), Type = TextBlockType.Text, Text = "You’ve learned to apply your flashy techniques to thrown weapons as easily as melee attacks. When you have panache, you apply your precise strike damage on ranged (action: Strikes | Strike) you make with a thrown weapon within that weapon’s first range increment. The (trait: thrown) weapon must be an (trait: agile) or (trait: finesse) weapon. This also allows you to make a thrown weapon ranged (action: Strike) for (feat: Confident Finisher) and any other (trait: finisher) that includes a (action: Strike) that can benefit from your precise strike." };
+            yield return new TextBlock { Id = Guid.Parse("c94f27ca-6d01-4861-98a7-49fb1aae59c0"), Type = TextBlockType.Text, Text = "You've learned to apply your flashy techniques to thrown weapons as easily as melee attacks. When you have panache, you apply your precise strike damage on ranged (action: Strikes | Strike) you make with a thrown weapon within that weapon's first range increment. The (trait: thrown) weapon must be an (trait: agile) or (trait: finesse) weapon. This also allows you to make a thrown weapon ranged (action: Strike) for (feat: Confident Finisher) and any other (trait: finisher) that includes a (action: Strike) that can benefit from your precise strike." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

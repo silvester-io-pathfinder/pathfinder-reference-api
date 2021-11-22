@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1c987456-9184-4c49-acd9-433c5e13f379"), Type = TextBlockType.Text, Text = "You imbue water with your deity’s blessing. Choose a container of water on your person that is of light Bulk. For 1 round, if you or an ally throw this container at a foe, it has the damaging effects of (item: holy water) (if you follow a good deity) or (item: unholy water) (if you follow an evil deity). The water’s transient power doesn’t make it gain any value, allow it to be used to supply the cost for a spell or ritual, and so on." };
+            yield return new TextBlock { Id = Guid.Parse("1c987456-9184-4c49-acd9-433c5e13f379"), Type = TextBlockType.Text, Text = "You imbue water with your deity's blessing. Choose a container of water on your person that is of light Bulk. For 1 round, if you or an ally throw this container at a foe, it has the damaging effects of (item: holy water) (if you follow a good deity) or (item: unholy water) (if you follow an evil deity). The water's transient power doesn't make it gain any value, allow it to be used to supply the cost for a spell or ritual, and so on." };
             yield return new TextBlock { Id = Guid.Parse("e4d21146-5661-4549-a641-3b970cf037f8"), Type = TextBlockType.Text, Text = "If you have legendary proficiency in Religion, you can sanctify three containers held by you or allies within your reach instead of one." };
         }
 

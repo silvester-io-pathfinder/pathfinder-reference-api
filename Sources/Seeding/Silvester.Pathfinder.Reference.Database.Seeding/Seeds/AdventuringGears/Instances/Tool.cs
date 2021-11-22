@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AdventuringGears
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("ba51c149-5e99-44be-8fe4-6941b41d481a"), Type = TextBlockType.Text, Text = "This entry is a catchall for basic hand tools that don’t have a specific adventuring purpose. A hoe, shovel, or sledgehammer is a long tool, and a hand drill, ice hook, or trowel is a short tool. A tool can usually be used as an improvised weapon, dealing 1d4 damage for a short tool or 1d6 for a long tool. The GM determines the damage type that’s appropriate or adjusts the damage if needed." };
+            yield return new TextBlock { Id = Guid.Parse("ba51c149-5e99-44be-8fe4-6941b41d481a"), Type = TextBlockType.Text, Text = "This entry is a catchall for basic hand tools that don't have a specific adventuring purpose. A hoe, shovel, or sledgehammer is a long tool, and a hand drill, ice hook, or trowel is a short tool. A tool can usually be used as an improvised weapon, dealing 1d4 damage for a short tool or 1d6 for a long tool. The GM determines the damage type that's appropriate or adjusts the damage if needed." };
         }
 
         protected override IEnumerable<AdventuringGearVariant> GetVariants()

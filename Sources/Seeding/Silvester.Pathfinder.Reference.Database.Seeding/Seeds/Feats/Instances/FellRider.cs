@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("679ca285-efcc-48c5-9fbc-c015b816effb"), Type = TextBlockType.Text, Text = "You have trained with your animal companion to become a terrifying, unified juggernaut on the battlefield. Your animal companion becomes trained in Intimidation. If your animal companion uses Support while serving as your mount, it grants you the effects of the (action: Aid) reaction on your first Intimidation check to (action: Demoralize) on the same turn, even though it can’t take reactions." };
+            yield return new TextBlock { Id = Guid.Parse("679ca285-efcc-48c5-9fbc-c015b816effb"), Type = TextBlockType.Text, Text = "You have trained with your animal companion to become a terrifying, unified juggernaut on the battlefield. Your animal companion becomes trained in Intimidation. If your animal companion uses Support while serving as your mount, it grants you the effects of the (action: Aid) reaction on your first Intimidation check to (action: Demoralize) on the same turn, even though it can't take reactions." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

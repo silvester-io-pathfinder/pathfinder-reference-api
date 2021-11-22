@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c169a55-4a4e-499a-a21a-44e3ab73a10a"), Type = TextBlockType.Text, Text = "You call out a quick cadence, guiding your allies into a more efficient rhythm. Each willing ally within your marshal’s aura is quickened until the end of their next turn, and they can use the extra action only to (action: Stride). At the end of each ally’s turn, if they used the extra action, they then become slowed 1 until the end of their following turn." };
+            yield return new TextBlock { Id = Guid.Parse("2c169a55-4a4e-499a-a21a-44e3ab73a10a"), Type = TextBlockType.Text, Text = "You call out a quick cadence, guiding your allies into a more efficient rhythm. Each willing ally within your marshal's aura is quickened until the end of their next turn, and they can use the extra action only to (action: Stride). At the end of each ally's turn, if they used the extra action, they then become slowed 1 until the end of their following turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

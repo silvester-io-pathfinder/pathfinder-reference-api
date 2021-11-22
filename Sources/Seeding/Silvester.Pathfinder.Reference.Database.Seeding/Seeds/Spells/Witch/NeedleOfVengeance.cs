@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8d7d06a2-8a79-4602-b894-1b919af6cb1a"), Type = TextBlockType.Text, Text = "A long, jagged needle jabs into the target foe’s psyche whenever it tries to attack a specifically forbidden creature. Name yourself or one of your allies. The target takes 2 mental damage any time it uses a hostile action against the named creature." };
+            yield return new TextBlock { Id = Guid.Parse("8d7d06a2-8a79-4602-b894-1b919af6cb1a"), Type = TextBlockType.Text, Text = "A long, jagged needle jabs into the target foe's psyche whenever it tries to attack a specifically forbidden creature. Name yourself or one of your allies. The target takes 2 mental damage any time it uses a hostile action against the named creature." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("411811e7-bf19-4118-a128-ce3d5dfd034a"), Type = TextBlockType.Text, Text = "You can instantly grow or shrink your hair, eyebrows, beard, or mustache by up to several feet and manipulate your hair for use as a weapon, though your control isn’t fine enough for more dexterous tasks. You gain a hair unarmed attack that deals 1d4 bludgeoning damage; is in the brawling group; and has the (trait: agile), (trait: disarm), (trait: finesse), (trait: trip), and (trait: unarmed) traits." };
+            yield return new TextBlock { Id = Guid.Parse("411811e7-bf19-4118-a128-ce3d5dfd034a"), Type = TextBlockType.Text, Text = "You can instantly grow or shrink your hair, eyebrows, beard, or mustache by up to several feet and manipulate your hair for use as a weapon, though your control isn't fine enough for more dexterous tasks. You gain a hair unarmed attack that deals 1d4 bludgeoning damage; is in the brawling group; and has the (trait: agile), (trait: disarm), (trait: finesse), (trait: trip), and (trait: unarmed) traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

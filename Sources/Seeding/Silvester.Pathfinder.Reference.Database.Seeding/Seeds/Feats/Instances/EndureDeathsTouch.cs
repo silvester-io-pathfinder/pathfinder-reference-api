@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("648aa352-62dd-4a17-b83c-33ff2d7222fe"), Type = TextBlockType.Text, Text = "Your conviction redirects the undead’s attack through your armor and then harmlessly away. You gain resistance 5 to physical damage and resistance 10 to negative damage against the triggering attack. You gain a +2 circumstance bonus on any saving throws against effects from the undead’s natural attack; if you succeed at the saving throw, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("648aa352-62dd-4a17-b83c-33ff2d7222fe"), Type = TextBlockType.Text, Text = "Your conviction redirects the undead's attack through your armor and then harmlessly away. You gain resistance 5 to physical damage and resistance 10 to negative damage against the triggering attack. You gain a +2 circumstance bonus on any saving throws against effects from the undead's natural attack; if you succeed at the saving throw, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

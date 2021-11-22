@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d451add9-b4c2-45ea-84f3-b54202846d17"), Type = Utilities.Text.TextBlockType.Text, Text = "You send the target back to its home plane. The target must attempt a Will save. You can spend an extra action while Casting this Spell and add a material component to give the creature a –2 circumstance penalty to its save. The component must be a specially gathered object that is anathema to the creature, and not from a material component pouch. This spell fails if you aren’t on your home plane when you cast it." };
+            yield return new TextBlock { Id = Guid.Parse("d451add9-b4c2-45ea-84f3-b54202846d17"), Type = Utilities.Text.TextBlockType.Text, Text = "You send the target back to its home plane. The target must attempt a Will save. You can spend an extra action while Casting this Spell and add a material component to give the creature a –2 circumstance penalty to its save. The component must be a specially gathered object that is anathema to the creature, and not from a material component pouch. This spell fails if you aren't on your home plane when you cast it." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 CriticalSuccess = "The target resists being banished and you are stunned 1.",
                 Success = "The target resists being banished.",
                 Failure = "The target is banished.",
-                CriticalFailure = "The target is banished and can’t return by any means to the plane it’s banished from for 1 week."
+                CriticalFailure = "The target is banished and can't return by any means to the plane it's banished from for 1 week."
             };
         }
 

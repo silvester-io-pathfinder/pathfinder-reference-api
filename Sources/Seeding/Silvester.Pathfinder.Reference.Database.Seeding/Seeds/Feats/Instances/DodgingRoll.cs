@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8bbda37c-0872-4072-af11-f1b70096e5a3"), Type = TextBlockType.Text, Text = "You dodge a blow at the last possible moment. You (action: Step) and gain resistance to all damage equal to your level against the triggering effect. If your (action: Step) moves you out of the triggering effect’s area, this resistance is instead equal to your level plus your Dexterity modifier." };
+            yield return new TextBlock { Id = Guid.Parse("8bbda37c-0872-4072-af11-f1b70096e5a3"), Type = TextBlockType.Text, Text = "You dodge a blow at the last possible moment. You (action: Step) and gain resistance to all damage equal to your level against the triggering effect. If your (action: Step) moves you out of the triggering effect's area, this resistance is instead equal to your level plus your Dexterity modifier." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

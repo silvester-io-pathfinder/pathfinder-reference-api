@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Curses.Instances
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d84fc50c-1e94-4484-b4c3-108ec8336188"), Type = TextBlockType.Text, Text = "A reviling earth curse usually appears across a specific geographical region, such as a ruined town, a necromancer’s domain, or a similar area." };
+            yield return new TextBlock { Id = Guid.Parse("d84fc50c-1e94-4484-b4c3-108ec8336188"), Type = TextBlockType.Text, Text = "A reviling earth curse usually appears across a specific geographical region, such as a ruined town, a necromancer's domain, or a similar area." };
         }
 
         public override SourcePage GetSourcePage()

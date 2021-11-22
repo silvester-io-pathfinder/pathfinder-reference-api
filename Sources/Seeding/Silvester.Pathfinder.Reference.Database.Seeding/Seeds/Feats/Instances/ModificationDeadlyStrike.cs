@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bd863ebe-72d7-4b4a-a860-335998a9f472"), Type = TextBlockType.Text, Text = "Through precise calculation, you’ve found the perfect shape for your weapon to deal extreme damage on a well-placed strike. Your innovation gains the (trait: deadly d8) trait. If your innovation was already deadly, it increases its (trait: deadly die to d12 | deadly d12) instead of gaining (trait: deadly d8)." };
+            yield return new TextBlock { Id = Guid.Parse("bd863ebe-72d7-4b4a-a860-335998a9f472"), Type = TextBlockType.Text, Text = "Through precise calculation, you've found the perfect shape for your weapon to deal extreme damage on a well-placed strike. Your innovation gains the (trait: deadly d8) trait. If your innovation was already deadly, it increases its (trait: deadly die to d12 | deadly d12) instead of gaining (trait: deadly d8)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

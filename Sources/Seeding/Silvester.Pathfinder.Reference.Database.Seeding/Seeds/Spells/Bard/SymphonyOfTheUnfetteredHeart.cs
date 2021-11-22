@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fad31499-2398-422c-897c-2b71d0028514"), Type = TextBlockType.Text, Text = "Your symphony lifts listeners from their worldly concerns. Attempt a Performance check to counteract one of the following conditions affecting the target: grabbed, immobilized, paralyzed, restrained, slowed, or stunned. If you fail, you can’t target that effect on the target for 1 day. Use the condition’s source to determine the counteract DC (for example, the Escape DC for grabbed)." };
+            yield return new TextBlock { Id = Guid.Parse("fad31499-2398-422c-897c-2b71d0028514"), Type = TextBlockType.Text, Text = "Your symphony lifts listeners from their worldly concerns. Attempt a Performance check to counteract one of the following conditions affecting the target: grabbed, immobilized, paralyzed, restrained, slowed, or stunned. If you fail, you can't target that effect on the target for 1 day. Use the condition's source to determine the counteract DC (for example, the Escape DC for grabbed)." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

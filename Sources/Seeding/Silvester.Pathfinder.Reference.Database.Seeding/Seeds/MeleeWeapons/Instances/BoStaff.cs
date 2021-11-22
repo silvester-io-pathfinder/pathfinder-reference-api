@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Bo Staff",
-                Description = "This strong but slender staff is tapered at the ends and well balanced. It’s designed to be an offensive and defensive weapon.",
+                Description = "This strong but slender staff is tapered at the ends and well balanced. It's designed to be an offensive and defensive weapon.",
                 Price = 20,
                 Damage = "1d8",
                 Hands = "2",

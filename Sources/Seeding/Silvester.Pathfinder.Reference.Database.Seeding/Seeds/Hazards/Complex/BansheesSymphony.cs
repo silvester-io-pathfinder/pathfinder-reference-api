@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
 
         protected override IEnumerable<TextBlock> GetRoutineDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("2411b443-2b72-48d1-b59e-b6688b774df9"), Type = TextBlockType.Text, Text = "The trap uses its action to force one random creature that failed its save against wail of the banshee last turn to emit a wail of the banshee with the same statistics as the initial one. The creature wails even if it is dead or unable to speak, no matter how far away from the trap it is. Unlike a casting of the spell, the drained condition from this trap’s wail of the banshee spells increases the targets’ drained condition values. A creature that critically succeeds at any of its saves can still be affected by the trap on future rounds, but can’t be forced to wail by the trap." };
+            yield return new TextBlock { Id = Guid.Parse("2411b443-2b72-48d1-b59e-b6688b774df9"), Type = TextBlockType.Text, Text = "The trap uses its action to force one random creature that failed its save against wail of the banshee last turn to emit a wail of the banshee with the same statistics as the initial one. The creature wails even if it is dead or unable to speak, no matter how far away from the trap it is. Unlike a casting of the spell, the drained condition from this trap's wail of the banshee spells increases the targets' drained condition values. A creature that critically succeeds at any of its saves can still be affected by the trap on future rounds, but can't be forced to wail by the trap." };
         }
 
         protected override IEnumerable<HazardAction> GetActions()

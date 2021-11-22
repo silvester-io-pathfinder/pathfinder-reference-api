@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e57759ac-79a2-4c9e-8442-290279de8bbd"), Type = TextBlockType.Text, Text = "You have learned special tricks that help you follow individuals without them noticing you. When you attempt a Stealth check to (action: Avoid Notice) while following a specific target, the target takes a -2 circumstance penalty to their Perception DC. If you have master proficiency in Stealth, the penalty is -3 or -4 if you’re legendary. If you start an encounter with the target while shadowing them, the target takes this penalty to their initiative roll and to their Perception DC to determine if they notice you, as normal for (action: Sneak)." };
+            yield return new TextBlock { Id = Guid.Parse("e57759ac-79a2-4c9e-8442-290279de8bbd"), Type = TextBlockType.Text, Text = "You have learned special tricks that help you follow individuals without them noticing you. When you attempt a Stealth check to (action: Avoid Notice) while following a specific target, the target takes a -2 circumstance penalty to their Perception DC. If you have master proficiency in Stealth, the penalty is -3 or -4 if you're legendary. If you start an encounter with the target while shadowing them, the target takes this penalty to their initiative roll and to their Perception DC to determine if they notice you, as normal for (action: Sneak)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

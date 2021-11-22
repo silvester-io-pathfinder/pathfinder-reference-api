@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("9b962b42-8441-47b4-b19d-7b5319df1f81"), Type = TextBlockType.Text, Text = "You tilt the scales of luck slightly to protect a creature from disaster. When the target would attempt a saving throw, it can roll twice and use the better result. Once it does this, the spell ends." };
-            yield return new TextBlock { Id = Guid.Parse("2ace6c08-8e19-4ba3-8183-79aed4016fb8"), Type = TextBlockType.Text, Text = "If you cast bit of luck again, any previous bit of luck you cast that’s still in effect ends. After a creature has been targeted with bit of luck, it becomes temporarily immune for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("2ace6c08-8e19-4ba3-8183-79aed4016fb8"), Type = TextBlockType.Text, Text = "If you cast bit of luck again, any previous bit of luck you cast that's still in effect ends. After a creature has been targeted with bit of luck, it becomes temporarily immune for 24 hours." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

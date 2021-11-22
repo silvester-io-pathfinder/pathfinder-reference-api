@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a2c47671-4eb9-4517-96d0-ee6c29733604"), Type = TextBlockType.Text, Text = "You forge a connection of life energy between you and your target, distributing harm between both of you. When you first Cast the Spell, the target recovers 1d4 Hit Points. The first time each round that the target takes damage, reduce the damage it takes by 3 (to a minimum of 0 damage). You lose 3 Hit Points each time, or the total damage dealt, if less than 3; this damage ignores any immunities or resistances you have and can’t otherwise be mitigated in any way." };
+            yield return new TextBlock { Id = Guid.Parse("a2c47671-4eb9-4517-96d0-ee6c29733604"), Type = TextBlockType.Text, Text = "You forge a connection of life energy between you and your target, distributing harm between both of you. When you first Cast the Spell, the target recovers 1d4 Hit Points. The first time each round that the target takes damage, reduce the damage it takes by 3 (to a minimum of 0 damage). You lose 3 Hit Points each time, or the total damage dealt, if less than 3; this damage ignores any immunities or resistances you have and can't otherwise be mitigated in any way." };
             yield return new TextBlock { Id = Guid.Parse("52e27b81-075b-4a02-8061-90fba5e7358c"), Type = TextBlockType.Text, Text = "The spell ends immediately if you fall unconscious. You can Dismiss the spell." };
         }
 

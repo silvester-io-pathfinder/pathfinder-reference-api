@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("2f42892f-369e-46d4-a60d-eb819baf6061"), Type = TextBlockType.Text, Text = "Telepathy loses the linguistic trait. You can communicate telepathically with creatures using shared mental imagery even if you don’t share a language." }
+                    new TextBlock { Id = Guid.Parse("2f42892f-369e-46d4-a60d-eb819baf6061"), Type = TextBlockType.Text, Text = "Telepathy loses the linguistic trait. You can communicate telepathically with creatures using shared mental imagery even if you don't share a language." }
                 }
             };
         }

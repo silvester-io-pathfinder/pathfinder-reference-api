@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Conditions.Insta
 
         public override IEnumerable<TextBlock> GetConditionDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ecf6343-5513-4313-817c-2fee4c074167"), Type = Utilities.Text.TextBlockType.Text, Text = "You are frozen in place. You have the flat-footed condition and can’t act except to Recall Knowledge and use actions that require only your mind (as determined by the GM). Your senses still function, but only in the areas you can perceive without moving, so you can’t Seek while paralyzed." };
+            yield return new TextBlock { Id = Guid.Parse("0ecf6343-5513-4313-817c-2fee4c074167"), Type = Utilities.Text.TextBlockType.Text, Text = "You are frozen in place. You have the flat-footed condition and can't act except to Recall Knowledge and use actions that require only your mind (as determined by the GM). Your senses still function, but only in the areas you can perceive without moving, so you can't Seek while paralyzed." };
         }
 
         public override SourcePage? GetSourcePage()

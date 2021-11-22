@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d68369e7-a3f0-425b-b5f7-508df2ced118"), Type = TextBlockType.Text, Text = "__Your patron’s tradition is arcane.__" };
+            yield return new TextBlock { Id = Guid.Parse("d68369e7-a3f0-425b-b5f7-508df2ced118"), Type = TextBlockType.Text, Text = "__Your patron's tradition is arcane.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("03d8285b-7c02-495a-b95f-f3134ed1fecf"), Type = TextBlockType.Text, Text = "You dance at a lively tempo, speeding your allies’ movement. You and all allies in the area gain a +10-foot status bonus to all Speeds for 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("03d8285b-7c02-495a-b95f-f3134ed1fecf"), Type = TextBlockType.Text, Text = "You dance at a lively tempo, speeding your allies' movement. You and all allies in the area gain a +10-foot status bonus to all Speeds for 1 round." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

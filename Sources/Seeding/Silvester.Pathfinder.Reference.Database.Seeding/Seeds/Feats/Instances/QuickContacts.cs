@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81095912-a223-4833-84ca-ff916133775e"), Type = TextBlockType.Text, Text = "You know where to go, who to talk to, and how to make new connections, fast. Upon entering a new settlement, spending 1 day of downtime allows you to build enough connections to make use of the (feat: Connections) or (feat: Criminal Connections) feats. If you’re legendary in Society, you can form the required connections within 1 hour of entering a new settlement." };
+            yield return new TextBlock { Id = Guid.Parse("81095912-a223-4833-84ca-ff916133775e"), Type = TextBlockType.Text, Text = "You know where to go, who to talk to, and how to make new connections, fast. Upon entering a new settlement, spending 1 day of downtime allows you to build enough connections to make use of the (feat: Connections) or (feat: Criminal Connections) feats. If you're legendary in Society, you can form the required connections within 1 hour of entering a new settlement." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

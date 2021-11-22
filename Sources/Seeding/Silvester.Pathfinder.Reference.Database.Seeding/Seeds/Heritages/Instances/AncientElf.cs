@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("99e33dd1-781e-44eb-88d6-d8ae898f0cae"), Type = TextBlockType.Text, Text = "In your long life, you’ve dabbled in many paths and many styles. Choose a class other than your own. You gain the multiclass dedication feat for that class, even though you don’t meet its level prerequisite. You must still meet its other prerequisites to gain the feat." };
+            yield return new TextBlock { Id = Guid.Parse("99e33dd1-781e-44eb-88d6-d8ae898f0cae"), Type = TextBlockType.Text, Text = "In your long life, you've dabbled in many paths and many styles. Choose a class other than your own. You gain the multiclass dedication feat for that class, even though you don't meet its level prerequisite. You must still meet its other prerequisites to gain the feat." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

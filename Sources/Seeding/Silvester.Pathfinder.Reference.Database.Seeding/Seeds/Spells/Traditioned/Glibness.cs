@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e6a559e6-ea69-4847-8e66-76ca556036dd"), Type = TextBlockType.Text, Text = "Falsehoods pass your lips as smoothly as silk. You gain a +4 status bonus to Deception checks to Lie and against Perception checks to discern if you are telling the truth, and you add your level even if you’re untrained. If the implausibility of your lies prompts a circumstance penalty or a DC increase, reduce that penalty or increase by half." };
+            yield return new TextBlock { Id = Guid.Parse("e6a559e6-ea69-4847-8e66-76ca556036dd"), Type = TextBlockType.Text, Text = "Falsehoods pass your lips as smoothly as silk. You gain a +4 status bonus to Deception checks to Lie and against Perception checks to discern if you are telling the truth, and you add your level even if you're untrained. If the implausibility of your lies prompts a circumstance penalty or a DC increase, reduce that penalty or increase by half." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

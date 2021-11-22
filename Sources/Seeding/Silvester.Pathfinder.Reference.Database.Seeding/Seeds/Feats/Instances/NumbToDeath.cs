@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92a06f81-6bab-46af-a822-02fc3ba66dda"), Type = TextBlockType.Text, Text = "Your past has left you numb to death’s call. The first time each day that you regain Hit Points while you are dying, you regain additional Hit Points equal to your level, and you neither gain the wounded condition nor increase the value of this condition." };
+            yield return new TextBlock { Id = Guid.Parse("92a06f81-6bab-46af-a822-02fc3ba66dda"), Type = TextBlockType.Text, Text = "Your past has left you numb to death's call. The first time each day that you regain Hit Points while you are dying, you regain additional Hit Points equal to your level, and you neither gain the wounded condition nor increase the value of this condition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

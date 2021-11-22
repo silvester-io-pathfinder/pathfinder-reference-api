@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04f2559c-474e-4889-a460-98e5b2091aaa"), Type = TextBlockType.Text, Text = "With a single fluid gesture, you catch a projectile out of the air, load it in your weapon, and shoot it back at the attacker. (action: Interact) to load the projectile into your weapon, then make a (action: Strike) with the required weapon against the triggering opponent. Since you’re using the foe’s ammunition, this (action: Strike) applies any special effects that ammunition would have (for instance, if it was (item: explosive ammunition), it would explode in a burst of fire if your (action: Strike) hits)." };
+            yield return new TextBlock { Id = Guid.Parse("04f2559c-474e-4889-a460-98e5b2091aaa"), Type = TextBlockType.Text, Text = "With a single fluid gesture, you catch a projectile out of the air, load it in your weapon, and shoot it back at the attacker. (action: Interact) to load the projectile into your weapon, then make a (action: Strike) with the required weapon against the triggering opponent. Since you're using the foe's ammunition, this (action: Strike) applies any special effects that ammunition would have (for instance, if it was (item: explosive ammunition), it would explode in a burst of fire if your (action: Strike) hits)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

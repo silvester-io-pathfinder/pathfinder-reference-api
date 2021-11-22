@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("62f9c0e0-5e35-4001-88c9-0822721004ee"), Type = TextBlockType.Text, Text = "Your battle instincts make you more aware of concealed and invisible opponents. You don’t need to succeed at a flat check to target concealed creatures. You’re not flat-footed to creatures that are hidden from you (unless you’re flat-footed to them for reasons other than the hidden condition), and you need only a successful DC 5 flat check to target a hidden creature." };
-            yield return new TextBlock { Id = Guid.Parse("442c3470-571f-4db7-a00e-55e9856f5791"), Type = TextBlockType.Text, Text = "While you’re adjacent to an undetected creature of your level or lower, it is instead only hidden from you." };
+            yield return new TextBlock { Id = Guid.Parse("62f9c0e0-5e35-4001-88c9-0822721004ee"), Type = TextBlockType.Text, Text = "Your battle instincts make you more aware of concealed and invisible opponents. You don't need to succeed at a flat check to target concealed creatures. You're not flat-footed to creatures that are hidden from you (unless you're flat-footed to them for reasons other than the hidden condition), and you need only a successful DC 5 flat check to target a hidden creature." };
+            yield return new TextBlock { Id = Guid.Parse("442c3470-571f-4db7-a00e-55e9856f5791"), Type = TextBlockType.Text, Text = "While you're adjacent to an undetected creature of your level or lower, it is instead only hidden from you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

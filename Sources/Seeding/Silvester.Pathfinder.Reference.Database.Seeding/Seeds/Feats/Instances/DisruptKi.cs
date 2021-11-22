@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f15d0232-5b6f-4b96-bf75-3a3106f11aa7"), Type = TextBlockType.Text, Text = "Make an unarmed (action: Strike). If it deals damage to a living creature, you block that creature’s inner life force. The creature takes 2d6 persistent negative damage and is enfeebled 1 until the persistent damage ends. If you’re 18th level or higher, this deals 3d6 persistent negative damage instead." };
+            yield return new TextBlock { Id = Guid.Parse("f15d0232-5b6f-4b96-bf75-3a3106f11aa7"), Type = TextBlockType.Text, Text = "Make an unarmed (action: Strike). If it deals damage to a living creature, you block that creature's inner life force. The creature takes 2d6 persistent negative damage and is enfeebled 1 until the persistent damage ends. If you're 18th level or higher, this deals 3d6 persistent negative damage instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

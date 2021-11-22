@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a621b8b9-2bbd-43d5-8509-e75ff3c4c77e"), Type = TextBlockType.Text, Text = "The shield gains a +2 status bonus to its Hardness and gains temporary Hit Points equal to your level + 2 that last until the essence effect ends. If you don’t have the (feat: Shield Block) reaction, you gain it while your shield is manifested." };
-            yield return new TextBlock { Id = Guid.Parse("a9e5fce1-c63b-4a99-9816-3566d0194460"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ When you take damage while (action: Raising a Shield | Raise a Shield) or use (feat: Shield Block), attempt a DC 5 flat check. If you fail, the shield is (action: Dismissed | Dismiss) if it’s your soulforged armament or dropped if it’s a different shield." };
+            yield return new TextBlock { Id = Guid.Parse("a621b8b9-2bbd-43d5-8509-e75ff3c4c77e"), Type = TextBlockType.Text, Text = "The shield gains a +2 status bonus to its Hardness and gains temporary Hit Points equal to your level + 2 that last until the essence effect ends. If you don't have the (feat: Shield Block) reaction, you gain it while your shield is manifested." };
+            yield return new TextBlock { Id = Guid.Parse("a9e5fce1-c63b-4a99-9816-3566d0194460"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ When you take damage while (action: Raising a Shield | Raise a Shield) or use (feat: Shield Block), attempt a DC 5 flat check. If you fail, the shield is (action: Dismissed | Dismiss) if it's your soulforged armament or dropped if it's a different shield." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

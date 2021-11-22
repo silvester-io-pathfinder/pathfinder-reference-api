@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("600dbfed-e967-4fc5-bb2d-de6e5ba38231"), Type = TextBlockType.Text, Text = "You can call upon divine insights to single out your foes’ weak points. You learn the (spell: vision of weakness) revelation spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("600dbfed-e967-4fc5-bb2d-de6e5ba38231"), Type = TextBlockType.Text, Text = "You can call upon divine insights to single out your foes' weak points. You learn the (spell: vision of weakness) revelation spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

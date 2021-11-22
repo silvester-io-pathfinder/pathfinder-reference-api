@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instance
             return new DivineIntercession
             {
                 Id = Guid.Parse("a07d810b-596b-48b7-a5dc-ee658152e458"),
-                Description = "The Calamitous Turn’s pleasure most often manifests as improbably good luck, while her displeasure creates startling misfortune. ",
+                Description = "The Calamitous Turn's pleasure most often manifests as improbably good luck, while her displeasure creates startling misfortune. ",
                 MinorBoon = "Once, you can choose the result of the next ordinary coin you flip or ordinary die you roll. If this ability is used for personal gain at the expense of someone innocent or less fortunate, Chaldira levies her moderate curse on you as punishment.",
                 ModerateBoon = "You gain a lucky impetuousness, allowing you to roll for initiative twice and use the higher result once per day. This is a fortune effect.",
                 MajorBoon = "Chaldira's major boon grants truly improbable luck in combat. Your movement doesn't trigger reactions. You always succeed at flat checks you make to hit opponents with attack actions; this is a fortune effect.",

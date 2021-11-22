@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9fa8a077-7f07-431d-9b97-291c8fe326e5"), Type = TextBlockType.Text, Text = "A heap of insults and invectives spew from your mouth— words so devastating your foes burn from the intensity of your diatribe. Your words deal 2d6 persistent fire damage, and the target must attempt a Will save. If the target doesn’t understand the language or you’re not speaking a language, it gains a +4 circumstance bonus to its save." };
+            yield return new TextBlock { Id = Guid.Parse("9fa8a077-7f07-431d-9b97-291c8fe326e5"), Type = TextBlockType.Text, Text = "A heap of insults and invectives spew from your mouth— words so devastating your foes burn from the intensity of your diatribe. Your words deal 2d6 persistent fire damage, and the target must attempt a Will save. If the target doesn't understand the language or you're not speaking a language, it gains a +4 circumstance bonus to its save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

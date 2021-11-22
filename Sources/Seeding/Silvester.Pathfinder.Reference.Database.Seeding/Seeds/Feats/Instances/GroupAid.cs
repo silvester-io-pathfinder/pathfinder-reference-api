@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("08ce85fd-e69d-4112-9a2c-57012e69cd89"), Type = TextBlockType.Text, Text = "Your upbringing emphasized teamwork and helping your allies comes naturally to you. After you (action: Aid) an ally at a skill check that doesn’t have the (trait: attack) trait, you can also (action: Aid) any other ally who attempts the same skill check for the same purpose that round. You do so as a free action rather than a reaction." };
+            yield return new TextBlock { Id = Guid.Parse("08ce85fd-e69d-4112-9a2c-57012e69cd89"), Type = TextBlockType.Text, Text = "Your upbringing emphasized teamwork and helping your allies comes naturally to you. After you (action: Aid) an ally at a skill check that doesn't have the (trait: attack) trait, you can also (action: Aid) any other ally who attempts the same skill check for the same purpose that round. You do so as a free action rather than a reaction." };
             yield return new TextBlock { Id = Guid.Parse("70da21c2-aa82-49db-8a2a-e1202fec8ed6"), Type = TextBlockType.Text, Text = "The preparation you did to help must still apply to the other allies, and you can (action: Aid) each ally only once. For example, if you helped lift up an ally to (action: Aid) them on an Athletics check to scale a wall, you could keep the same posture to give a boost to other allies attempting to scale the wall in the same round." };
         }
 

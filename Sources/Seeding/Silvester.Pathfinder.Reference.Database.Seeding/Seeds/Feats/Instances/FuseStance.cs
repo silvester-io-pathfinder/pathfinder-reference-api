@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("0ef7a939-79a7-443a-8de7-6f104c48d4d3"), Type = TextBlockType.Text, Text = "You have combined two stances into a single stance all your own. When you take this feat, choose two stances you know and combine them into a single fused stance. Give your new fused stance a unique name. When you enter your fused stance, you gain all the effects of both stances, including the requirements and restrictions." };
-            yield return new TextBlock { Id = Guid.Parse("aa98bce4-80b5-42e9-a572-aa9b01fbcacb"), Type = TextBlockType.Text, Text = "You can’t fuse stances with fundamentally incompatible requirements or restrictions (such as (feat: Ironblood Stance) and (feat: Crane Stance), which both require using only one type of (action: Strike))." };
+            yield return new TextBlock { Id = Guid.Parse("aa98bce4-80b5-42e9-a572-aa9b01fbcacb"), Type = TextBlockType.Text, Text = "You can't fuse stances with fundamentally incompatible requirements or restrictions (such as (feat: Ironblood Stance) and (feat: Crane Stance), which both require using only one type of (action: Strike))." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

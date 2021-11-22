@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0444a559-4513-4b65-9833-69d6b3d5d0a2"), Type = TextBlockType.Text, Text = "You’ve learned to stretch your exceptionally long tongue beyond its original limits. When you use your tongue to deliver touch range spells or perform very simple (action: Interact) actions, you can do so at a distance that is 5 feet beyond your usual reach." };
+            yield return new TextBlock { Id = Guid.Parse("0444a559-4513-4b65-9833-69d6b3d5d0a2"), Type = TextBlockType.Text, Text = "You've learned to stretch your exceptionally long tongue beyond its original limits. When you use your tongue to deliver touch range spells or perform very simple (action: Interact) actions, you can do so at a distance that is 5 feet beyond your usual reach." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -30,8 +30,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("76accefa-5de2-4591-9ba7-6e195ec309c7"), Type = TextBlockType.Text, Text = "You alter the target’s memories, either erasing a memory, enhancing a memory’s clarity, altering a memory, or adding a false memory. The target can attempt a Will save to resist the spell." };
-            yield return new TextBlock { Id = Guid.Parse("57ba153d-ea60-476b-94de-4c339f4601ff"), Type = TextBlockType.Text, Text = "Any memories you’ve altered remain changed as long as the spell is active. If the target moves out of range before the 5 minutes is up, you can’t alter any further memories." };
+            yield return new TextBlock { Id = Guid.Parse("76accefa-5de2-4591-9ba7-6e195ec309c7"), Type = TextBlockType.Text, Text = "You alter the target's memories, either erasing a memory, enhancing a memory's clarity, altering a memory, or adding a false memory. The target can attempt a Will save to resist the spell." };
+            yield return new TextBlock { Id = Guid.Parse("57ba153d-ea60-476b-94de-4c339f4601ff"), Type = TextBlockType.Text, Text = "Any memories you've altered remain changed as long as the spell is active. If the target moves out of range before the 5 minutes is up, you can't alter any further memories." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("ddabf3d4-886e-4c34-a66e-6378e631e5ba"),
                 CriticalSuccess = "The target is unaffected and realizes you tried to alter its memory.",
                 Success = "The target is unaffected but thinks your spell was something harmless instead of modify memory, unless it identifies the spell.",
-                Failure = "During the first 5 minutes of the spell’s duration, you can Sustain the Spell to modify a memory once each round. When you do, you imagine up to 6 seconds of memory to modify, to a maximum of 5 continuous minutes of memory.",
+                Failure = "During the first 5 minutes of the spell's duration, you can Sustain the Spell to modify a memory once each round. When you do, you imagine up to 6 seconds of memory to modify, to a maximum of 5 continuous minutes of memory.",
             };
         }
 

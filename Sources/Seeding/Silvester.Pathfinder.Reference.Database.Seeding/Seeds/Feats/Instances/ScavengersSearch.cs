@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("94d5acbf-148d-4dfc-aadb-eddd0d477bba"), Type = TextBlockType.Text, Text = "You&#39;re always on the lookout for supplies and valuables. Each time you use the (action: Seek) action to search for objects (including secret doors and hazards), you can search for objects in your choice of a 10-foot emanation around you or an adjacent 15-foot-by-15-foot area, rather than a single adjacent 10-foot-by-10-foot area." };
+            yield return new TextBlock { Id = Guid.Parse("94d5acbf-148d-4dfc-aadb-eddd0d477bba"), Type = TextBlockType.Text, Text = "You're always on the lookout for supplies and valuables. Each time you use the (action: Seek) action to search for objects (including secret doors and hazards), you can search for objects in your choice of a 10-foot emanation around you or an adjacent 15-foot-by-15-foot area, rather than a single adjacent 10-foot-by-10-foot area." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

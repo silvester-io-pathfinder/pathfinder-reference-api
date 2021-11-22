@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a225a8f5-77a7-4e76-8b61-0f9969d258b6"), Type = TextBlockType.Text, Text = "Rather than hide an object somewhere the inspectors won’t search, you’re skilled at keeping the object on the move so it’s never where they look. When you (action: Conceal an Object) of light Bulk or less, you can use Thievery instead of Stealth for your checks and for the DC of an active searcher’s Perception check. You roll the check only once, but you must continue to use actions to (action: Conceal an Object) throughout the process." };
+            yield return new TextBlock { Id = Guid.Parse("a225a8f5-77a7-4e76-8b61-0f9969d258b6"), Type = TextBlockType.Text, Text = "Rather than hide an object somewhere the inspectors won't search, you're skilled at keeping the object on the move so it's never where they look. When you (action: Conceal an Object) of light Bulk or less, you can use Thievery instead of Stealth for your checks and for the DC of an active searcher's Perception check. You roll the check only once, but you must continue to use actions to (action: Conceal an Object) throughout the process." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

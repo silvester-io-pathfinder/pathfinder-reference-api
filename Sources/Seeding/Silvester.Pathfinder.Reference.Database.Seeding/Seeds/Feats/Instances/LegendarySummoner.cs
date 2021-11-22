@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ebc58e7-b11d-48c9-b8df-ab7aaf7708b4"), Type = TextBlockType.Text, Text = "Your ability to summon extends past your other spellcasting. When you sacrifice a 9th-level spell slot to gain two summoning slots using (feat: Master Summoner), you can use those slots to cast summoning spells heightened to 10th level. You can’t use these spell slots for any purpose other than casting the summoning spells, and you don’t count as having 10th-level spell slots for other abilities or rules." };
+            yield return new TextBlock { Id = Guid.Parse("8ebc58e7-b11d-48c9-b8df-ab7aaf7708b4"), Type = TextBlockType.Text, Text = "Your ability to summon extends past your other spellcasting. When you sacrifice a 9th-level spell slot to gain two summoning slots using (feat: Master Summoner), you can use those slots to cast summoning spells heightened to 10th level. You can't use these spell slots for any purpose other than casting the summoning spells, and you don't count as having 10th-level spell slots for other abilities or rules." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

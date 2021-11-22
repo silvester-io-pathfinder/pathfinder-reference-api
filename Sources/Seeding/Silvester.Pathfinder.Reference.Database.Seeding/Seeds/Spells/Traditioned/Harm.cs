@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 Effects = new TextBlock[]
                 {
-                   new TextBlock {Id = Guid.Parse("8c462a78-74de-4210-9089-1835cf1efbaa"), Type = TextBlockType.Text, Text = "The spell has a range of 30 feet. If you’re healing an undead creature, increase the Hit Points restored by 8."},
+                   new TextBlock {Id = Guid.Parse("8c462a78-74de-4210-9089-1835cf1efbaa"), Type = TextBlockType.Text, Text = "The spell has a range of 30 feet. If you're healing an undead creature, increase the Hit Points restored by 8."},
                 }
             };
 

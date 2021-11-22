@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a5275150-5bb2-4e46-9140-fda86aaadf37"), Type = TextBlockType.Text, Text = "You are so suspicious of everyone you meet that you keep mental notes on how to defeat them all – even your own allies. After interacting with a creature for at least 1 minute, you automatically (feat: Pursue a Lead) with that creature as the subject. You can have any number of such leads at any given time, and when you (feat: Pursue a Lead) again, you don&#39;t give up any of these automatic subjects." };
+            yield return new TextBlock { Id = Guid.Parse("a5275150-5bb2-4e46-9140-fda86aaadf37"), Type = TextBlockType.Text, Text = "You are so suspicious of everyone you meet that you keep mental notes on how to defeat them all – even your own allies. After interacting with a creature for at least 1 minute, you automatically (feat: Pursue a Lead) with that creature as the subject. You can have any number of such leads at any given time, and when you (feat: Pursue a Lead) again, you don't give up any of these automatic subjects." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

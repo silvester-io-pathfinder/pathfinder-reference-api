@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a8fba2e8-268e-43f3-bb90-2cf01a608ab0"), Type = TextBlockType.Text, Text = "You seize the elemental essence of an incoming spell and redirect the spell to a creature of your choice within the spell’s area. The attacker rerolls the spell’s attack roll against the new target." };
+            yield return new TextBlock { Id = Guid.Parse("a8fba2e8-268e-43f3-bb90-2cf01a608ab0"), Type = TextBlockType.Text, Text = "You seize the elemental essence of an incoming spell and redirect the spell to a creature of your choice within the spell's area. The attacker rerolls the spell's attack roll against the new target." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

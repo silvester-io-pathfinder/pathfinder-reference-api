@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("03babf6a-179f-45a8-b511-7f2cae0b3e76"), Type = TextBlockType.Text, Text = "You can’t be affected by anything unless you choose to be. For the duration of the spell, you are immune to any effect or damage that would harm you, excluding effects caused by artifacts, deific power, and similarly powerful sources. You can still be affected by anything you’re willing to have affect you." };
+            yield return new TextBlock { Id = Guid.Parse("03babf6a-179f-45a8-b511-7f2cae0b3e76"), Type = TextBlockType.Text, Text = "You can't be affected by anything unless you choose to be. For the duration of the spell, you are immune to any effect or damage that would harm you, excluding effects caused by artifacts, deific power, and similarly powerful sources. You can still be affected by anything you're willing to have affect you." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

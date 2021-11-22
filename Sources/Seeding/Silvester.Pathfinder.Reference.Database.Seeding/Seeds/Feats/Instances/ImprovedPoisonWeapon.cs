@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("82ffb9b0-94ac-4087-9c45-5e478b4b2c7c"), Type = TextBlockType.Text, Text = "You deliver poisons in ways that maximize their harmful effects. When you apply a simple poison with (feat: Poison Weapon), the poison deals 2d4 poison damage instead of 1d4 poison damage. You don’t waste a poison you apply with (feat: Poison Weapon) on a critically failed attack roll." };
+            yield return new TextBlock { Id = Guid.Parse("82ffb9b0-94ac-4087-9c45-5e478b4b2c7c"), Type = TextBlockType.Text, Text = "You deliver poisons in ways that maximize their harmful effects. When you apply a simple poison with (feat: Poison Weapon), the poison deals 2d4 poison damage instead of 1d4 poison damage. You don't waste a poison you apply with (feat: Poison Weapon) on a critically failed attack roll." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

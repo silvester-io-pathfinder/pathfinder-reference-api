@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("88e81f6c-8726-46a6-88f6-26ca4f12e288"), Type = TextBlockType.Text, Text = "Your magic rivals that of lesser dragons. Choose one 3rd-level spell and one 4th-level spell from those listed for a dragon spellcaster of your draconic exemplar&#39;s type (such as (spell: paralyze) and (spell: stinking cloud) for a black dragon exemplar). You can cast each of these spells once per day as arcane innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("88e81f6c-8726-46a6-88f6-26ca4f12e288"), Type = TextBlockType.Text, Text = "Your magic rivals that of lesser dragons. Choose one 3rd-level spell and one 4th-level spell from those listed for a dragon spellcaster of your draconic exemplar's type (such as (spell: paralyze) and (spell: stinking cloud) for a black dragon exemplar). You can cast each of these spells once per day as arcane innate spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

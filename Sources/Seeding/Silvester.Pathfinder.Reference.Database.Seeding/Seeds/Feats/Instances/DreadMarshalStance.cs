@@ -49,10 +49,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("a2108d94-3974-4cf4-9767-e3c60c171a57"),
-                CriticalSuccess = "Your marshal’s aura increases to a 20-foot emanation, and it grants you and allies a status bonus to damage rolls equal to the number of weapon damage dice of the unarmed attack or weapon you are wielding that has the most weapon damage dice. When you or an ally in the aura critically hits an enemy with a (action: Strike), that enemy is frightened 1.",
-                Success = "As critical success, but your aura’s size doesn’t increase.",
+                CriticalSuccess = "Your marshal's aura increases to a 20-foot emanation, and it grants you and allies a status bonus to damage rolls equal to the number of weapon damage dice of the unarmed attack or weapon you are wielding that has the most weapon damage dice. When you or an ally in the aura critically hits an enemy with a (action: Strike), that enemy is frightened 1.",
+                Success = "As critical success, but your aura's size doesn't increase.",
                 Failure = "You fail to enter the stance.",
-                CriticalFailure = "You fail to enter the stance and can’t take this action again for 1 minute.", 
+                CriticalFailure = "You fail to enter the stance and can't take this action again for 1 minute.", 
             };
         }
             

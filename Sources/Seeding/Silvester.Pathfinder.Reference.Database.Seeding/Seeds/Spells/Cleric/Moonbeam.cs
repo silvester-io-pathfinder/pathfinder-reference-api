@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("66aec60a-6b67-4ac2-b7ef-60f1a39c31fe"), Type = TextBlockType.Text, Text = "The ray’s damage increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("66aec60a-6b67-4ac2-b7ef-60f1a39c31fe"), Type = TextBlockType.Text, Text = "The ray's damage increases by 1d6." }
                 }
             };
         }

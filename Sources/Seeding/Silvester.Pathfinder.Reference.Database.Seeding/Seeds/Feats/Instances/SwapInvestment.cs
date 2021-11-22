@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("078b9dc6-65ed-4415-9ee0-f502db8f89a1"), Type = TextBlockType.Text, Text = "Your time as a Pathfinder has taught you how to improvise, and you&#39;ve learned to make use of the resources you find in the field. You Invest a magic item and remove a previously invested item. The previous item no longer counts against your limit of 10 invested items." };
+            yield return new TextBlock { Id = Guid.Parse("078b9dc6-65ed-4415-9ee0-f502db8f89a1"), Type = TextBlockType.Text, Text = "Your time as a Pathfinder has taught you how to improvise, and you've learned to make use of the resources you find in the field. You Invest a magic item and remove a previously invested item. The previous item no longer counts against your limit of 10 invested items." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

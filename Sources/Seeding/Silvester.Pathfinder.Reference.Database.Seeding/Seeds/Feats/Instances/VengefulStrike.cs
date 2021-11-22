@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d126ae81-c3fc-485a-b7ca-b9fac501dcdb"), Type = TextBlockType.Text, Text = "When struck by an enemy, you respond in turn. Make a melee (action: Strike) against the triggering creature. This (action: Strike) doesn’t count toward your multiple attack penalty, and your multiple attack penalty doesn’t apply to this (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("d126ae81-c3fc-485a-b7ca-b9fac501dcdb"), Type = TextBlockType.Text, Text = "When struck by an enemy, you respond in turn. Make a melee (action: Strike) against the triggering creature. This (action: Strike) doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this (action: Strike)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

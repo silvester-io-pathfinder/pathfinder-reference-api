@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("161d3313-a15e-4985-aab9-b6f4d582d4e7"), Type = TextBlockType.Text, Text = "Leathery wings sprout from your back, giving you a fly Speed of 60 feet or your Speed, whichever is faster. When this spell’s duration would end, if you’re still flying, you float to the ground, as feather fall. You can increase the Focus Point cost by 1 to gain the effects of dragon claws as long as the wings last." };
+            yield return new TextBlock { Id = Guid.Parse("161d3313-a15e-4985-aab9-b6f4d582d4e7"), Type = TextBlockType.Text, Text = "Leathery wings sprout from your back, giving you a fly Speed of 60 feet or your Speed, whichever is faster. When this spell's duration would end, if you're still flying, you float to the ground, as feather fall. You can increase the Focus Point cost by 1 to gain the effects of dragon claws as long as the wings last." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("97fbc425-7a7c-49d4-94cd-6fc35ba5afb8"), Type = TextBlockType.Text, Text = "Your mercy grants clarity to those around you just when they need it most. When you use (feat: Mercy), you can instead attempt a counteract check to remove the confused or stupefied conditions, using the source of that condition to determine the counteract level and DC. If the condition was caused by an ongoing effect and you don’t remove that effect, the condition returns at the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("97fbc425-7a7c-49d4-94cd-6fc35ba5afb8"), Type = TextBlockType.Text, Text = "Your mercy grants clarity to those around you just when they need it most. When you use (feat: Mercy), you can instead attempt a counteract check to remove the confused or stupefied conditions, using the source of that condition to determine the counteract level and DC. If the condition was caused by an ongoing effect and you don't remove that effect, the condition returns at the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

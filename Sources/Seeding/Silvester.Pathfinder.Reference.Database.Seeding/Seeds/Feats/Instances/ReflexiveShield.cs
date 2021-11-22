@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ef0e95f0-e4a3-4b5a-82d6-bc884f1b1bdf"), Type = TextBlockType.Text, Text = "You can use your shield to fend off the worst of area effects and other damage. When you (action: Raise your Shield | Raise a Shield), you gain your shield’s circumstance bonus to Reflex saves. Additionally, damage you take as a result of a Reflex save can trigger the (feat: Shield Block) reaction, even if the damage isn’t physical damage." };
+            yield return new TextBlock { Id = Guid.Parse("ef0e95f0-e4a3-4b5a-82d6-bc884f1b1bdf"), Type = TextBlockType.Text, Text = "You can use your shield to fend off the worst of area effects and other damage. When you (action: Raise your Shield | Raise a Shield), you gain your shield's circumstance bonus to Reflex saves. Additionally, damage you take as a result of a Reflex save can trigger the (feat: Shield Block) reaction, even if the damage isn't physical damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d9e83418-2e3d-45f0-b133-39fd059357ef"), Type = TextBlockType.Text, Text = "You can predict which consumables you might need in advance. When using (feat: Prescient Planner), you can procure a consumable item from your backpack, instead of a piece of adventuring gear. The consumable item must still be common with a level no higher than half your level, and its Bulk must be low enough that carrying it wouldn’t have made you encumbered." };
+            yield return new TextBlock { Id = Guid.Parse("d9e83418-2e3d-45f0-b133-39fd059357ef"), Type = TextBlockType.Text, Text = "You can predict which consumables you might need in advance. When using (feat: Prescient Planner), you can procure a consumable item from your backpack, instead of a piece of adventuring gear. The consumable item must still be common with a level no higher than half your level, and its Bulk must be low enough that carrying it wouldn't have made you encumbered." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cc9eba30-942e-46f6-8daf-fd41a422c4be"), Type = TextBlockType.Text, Text = "Your connection to the earth makes natural uneven surfaces less of a hindrance for you. You can ignore difficult terrain caused by rubble and uneven ground made of stone and earth. In addition, when you use the Acrobatics skill to (action: Balance) on narrow surfaces or uneven ground made of stone and earth, you aren’t flat-footed, and when you roll a success at one of these Acrobatics checks, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("cc9eba30-942e-46f6-8daf-fd41a422c4be"), Type = TextBlockType.Text, Text = "Your connection to the earth makes natural uneven surfaces less of a hindrance for you. You can ignore difficult terrain caused by rubble and uneven ground made of stone and earth. In addition, when you use the Acrobatics skill to (action: Balance) on narrow surfaces or uneven ground made of stone and earth, you aren't flat-footed, and when you roll a success at one of these Acrobatics checks, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

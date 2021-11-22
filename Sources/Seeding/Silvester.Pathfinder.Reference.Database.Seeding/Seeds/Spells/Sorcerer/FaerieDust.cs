@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eeaf4af4-f117-41b9-b492-a48951c8508a"), Type = TextBlockType.Text, Text = "You sprinkle magical dust in the spell’s area, making those within easier to trick. Each creature in the area must attempt a Will save. For each additional action you use Casting the Spell, the burst’s radius increases by 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("eeaf4af4-f117-41b9-b492-a48951c8508a"), Type = TextBlockType.Text, Text = "You sprinkle magical dust in the spell's area, making those within easier to trick. Each creature in the area must attempt a Will save. For each additional action you use Casting the Spell, the burst's radius increases by 5 feet." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("e891f741-047b-440d-a5eb-78887054d97b"),
                 Success = "The creature is unaffected.",
-                Failure = "The creature can’t use reactions and takes a –2 status penalty to Perception checks and Will saves.",
+                Failure = "The creature can't use reactions and takes a –2 status penalty to Perception checks and Will saves.",
                 CriticalFailure = "As failure, and the creature also takes a –1 status penalty to Perception checks and Will saves for 1 minute."
             };
         }

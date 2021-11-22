@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instance
             return new DivineIntercession
             {
                 Id = Guid.Parse("4b6e0266-4d6d-4148-bb5a-4b50bed6aac3"),
-                Description = "Norgorber’s favor and displeasure are subtle, yet powerful.",
+                Description = "Norgorber's favor and displeasure are subtle, yet powerful.",
                 MinorBoon = "Norgorber protects your secrets and lies. Once, when you roll a failure at a Deception check to tell a Lie, you get a critical success instead. Norgorber typically chooses to grant this boon to protect an extremely consequential lie.",
                 ModerateBoon = "Your poisons are everlasting. If your Strike with a poisoned weapon critically fails, or succeeds but fails to deal slashing or piercing damage, the poison is not spent. The poison is still spent once successfully applied to a creature.",
                 MajorBoon = "You become a living secret. You are immune to divination effects and attempts to magically alter your memory, unless you choose to be affected or those effects come from a deity, artifact, or similarly powerful source. You also can never be tricked or forced by mundane means into uttering a secret you wish to keep.",

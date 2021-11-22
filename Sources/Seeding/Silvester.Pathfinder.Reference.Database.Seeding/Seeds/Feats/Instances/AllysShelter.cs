@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("73039314-e22b-49a6-9386-84e1af9ecede"), Type = TextBlockType.Text, Text = "In stressful circumstances, you find strength in your allies&#39; example. Roll the save using an adjacent ally&#39;s modifier for that type of saving throw instead of your own." };
+            yield return new TextBlock { Id = Guid.Parse("73039314-e22b-49a6-9386-84e1af9ecede"), Type = TextBlockType.Text, Text = "In stressful circumstances, you find strength in your allies' example. Roll the save using an adjacent ally's modifier for that type of saving throw instead of your own." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

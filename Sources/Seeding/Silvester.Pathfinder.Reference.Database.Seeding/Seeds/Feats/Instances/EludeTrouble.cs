@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("73e58524-d7b8-46df-b4be-33c1bbbf40c3"), Type = TextBlockType.Text, Text = "You slip through your foe’s opening. (action: Stride) up to your Speed. This movement doesn’t trigger movement-based reactions from the creature that missed you." };
+            yield return new TextBlock { Id = Guid.Parse("73e58524-d7b8-46df-b4be-33c1bbbf40c3"), Type = TextBlockType.Text, Text = "You slip through your foe's opening. (action: Stride) up to your Speed. This movement doesn't trigger movement-based reactions from the creature that missed you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

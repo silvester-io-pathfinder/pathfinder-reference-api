@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("06d14c23-0dc1-457d-8c49-3fdab5484171"), Type = Utilities.Text.TextBlockType.Text, Text = "You unravel the magic behind a spell or effect. Attempt a counteract check against the target (page 458). If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn’t change the item’s non-magical properties. If the target is an artifact or similar item, you automatically fail." };
+            yield return new TextBlock { Id = Guid.Parse("06d14c23-0dc1-457d-8c49-3fdab5484171"), Type = Utilities.Text.TextBlockType.Text, Text = "You unravel the magic behind a spell or effect. Attempt a counteract check against the target (page 458). If you successfully counteract a magic item, the item becomes a mundane item of its type for 10 minutes. This doesn't change the item's non-magical properties. If the target is an artifact or similar item, you automatically fail." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

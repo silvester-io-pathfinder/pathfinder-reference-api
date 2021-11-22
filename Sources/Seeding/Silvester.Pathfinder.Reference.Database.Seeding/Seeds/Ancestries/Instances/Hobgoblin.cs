@@ -43,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
         {
             yield return new TextBlock { Id = Guid.Parse("538655a6-e698-43fa-a616-a91fec9698e1"), Type = TextBlockType.Enumeration, Text = "Seek out the most effective and practical solutions to any problem." };
             yield return new TextBlock { Id = Guid.Parse("a6ec6d27-b62c-4f69-b929-bde7b9e0d228"), Type = TextBlockType.Enumeration, Text = "Encourage a clear chain of command among any group you travel with, following orders even if you disagree with them." };
-            yield return new TextBlock { Id = Guid.Parse("f0d286c3-11ae-44fc-aadf-2befaa0085f5"), Type = TextBlockType.Enumeration, Text = "Look for opportune alliances with other creatures, even if you don’t fully understand or trust them." };
+            yield return new TextBlock { Id = Guid.Parse("f0d286c3-11ae-44fc-aadf-2befaa0085f5"), Type = TextBlockType.Enumeration, Text = "Look for opportune alliances with other creatures, even if you don't fully understand or trust them." };
         }
     
         protected override IEnumerable<TextBlock> GetOthersProbably()
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
         protected override IEnumerable<TextBlock> GetSociety()
         {
             yield return new TextBlock { Id = Guid.Parse("5306b5e0-388f-4be1-bda2-e54217c6e8f7"), Type = TextBlockType.Text, Text = "Hobgoblins structure their society after military hierarchies. Even civilian groups such as farming collectives or trading houses organize into regiments, companies, and divisions. Most hobgoblins fixate on social status, and many constantly strive to advance their social position. Hobgoblin punishments are primarily social demotions, although execution or slavery are common for serious crimes, such as arson or desertion." };
-            yield return new TextBlock { Id = Guid.Parse("d2824998-ff4a-42da-b983-918687acfe67"), Type = TextBlockType.Text, Text = "Hobgoblin veterans hold a high place in their society, usually becoming leaders or advisors. Magic is rarely practiced and often derided, as most hobgoblins don’t trust it over the strength of their own sword arms. Their arts tend to have a military bent; many hobgoblins consider stirring marches and weaponsmithing the only artistic endeavors worth pursuing, though Oprak’s enforced era of peace is beginning to change this." };
+            yield return new TextBlock { Id = Guid.Parse("d2824998-ff4a-42da-b983-918687acfe67"), Type = TextBlockType.Text, Text = "Hobgoblin veterans hold a high place in their society, usually becoming leaders or advisors. Magic is rarely practiced and often derided, as most hobgoblins don't trust it over the strength of their own sword arms. Their arts tend to have a military bent; many hobgoblins consider stirring marches and weaponsmithing the only artistic endeavors worth pursuing, though Oprak's enforced era of peace is beginning to change this." };
         }
     
         protected override IEnumerable<TextBlock> GetAlignmentAndReligion()
@@ -77,7 +77,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
     
         protected override IEnumerable<TextBlock> GetNames()
         {
-            yield return new TextBlock { Id = Guid.Parse("95945532-9d97-4b09-b73b-57623131e398"), Type = TextBlockType.Text, Text = "Like goblins, hobgoblin names tend to be simple, though hobgoblin names usually sound more guttural and forceful. On rare occasions, hobgoblins will alter their names, keeping the core but adding aspects, usually in response to an extreme trauma or a life-altering event. Hobgoblins have no surnames, considering them both pointless and presumptuous; an individual’s merits and demerits are to be earned by their actions, not by an association with a particular lineage." };
+            yield return new TextBlock { Id = Guid.Parse("95945532-9d97-4b09-b73b-57623131e398"), Type = TextBlockType.Text, Text = "Like goblins, hobgoblin names tend to be simple, though hobgoblin names usually sound more guttural and forceful. On rare occasions, hobgoblins will alter their names, keeping the core but adding aspects, usually in response to an extreme trauma or a life-altering event. Hobgoblins have no surnames, considering them both pointless and presumptuous; an individual's merits and demerits are to be earned by their actions, not by an association with a particular lineage." };
         }
     
         protected override IEnumerable<TextBlock> GetOtherInformation()

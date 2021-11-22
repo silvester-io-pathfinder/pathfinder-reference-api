@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5cdbf67b-48c5-4758-9a31-57a7ca0e485b"), Type = TextBlockType.Text, Text = "You dull the target’s mind; the target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("5cdbf67b-48c5-4758-9a31-57a7ca0e485b"), Type = TextBlockType.Text, Text = "You dull the target's mind; the target must attempt a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

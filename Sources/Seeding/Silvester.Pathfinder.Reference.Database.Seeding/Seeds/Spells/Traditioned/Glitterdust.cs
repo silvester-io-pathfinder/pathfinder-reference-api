@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("77be37d5-c650-4476-a511-d3bacf4798c5"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target’s invisibility is negated for 2 rounds.",
+                Success = "The target's invisibility is negated for 2 rounds.",
                 Failure = "The target is dazzled for 1 minute and its invisibility is negated for 1 minute.",
                 CriticalFailure = "The target is blinded for 1 round and dazzled for 10 minutes.Its invisibility is negated for 10 minutes."
             };

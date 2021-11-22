@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ab6f746-362c-433a-a60b-97eeae760480"), Type = TextBlockType.Text, Text = "You sweep your foe into your dance. Attempt a Performance check against an adjacent enemy’s Will DC. If your swashbuckler’s style is battledancer and you succeed, you gain panache." };
+            yield return new TextBlock { Id = Guid.Parse("0ab6f746-362c-433a-a60b-97eeae760480"), Type = TextBlockType.Text, Text = "You sweep your foe into your dance. Attempt a Performance check against an adjacent enemy's Will DC. If your swashbuckler's style is battledancer and you succeed, you gain panache." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -48,9 +48,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("7223b45d-fe9d-47e2-8fc7-3c3c5154c1a4"),
-                CriticalSuccess = "Your foe is swept up in your dance. You both move up to 10 feet in the same direction, remaining adjacent to one another. Your movement doesn’t trigger reactions from the target (and the target’s movement doesn’t trigger reactions because it’s forced movement).",
+                CriticalSuccess = "Your foe is swept up in your dance. You both move up to 10 feet in the same direction, remaining adjacent to one another. Your movement doesn't trigger reactions from the target (and the target's movement doesn't trigger reactions because it's forced movement).",
                 Success = "As critical success, but you both move only 5 feet.",
-                Failure = "The foe doesn’t follow your steps. You can move 5 feet if you choose, but this movement triggers reactions normally.",
+                Failure = "The foe doesn't follow your steps. You can move 5 feet if you choose, but this movement triggers reactions normally.",
                 CriticalFailure = "You stumble, falling prone in your space.", 
             };
         }

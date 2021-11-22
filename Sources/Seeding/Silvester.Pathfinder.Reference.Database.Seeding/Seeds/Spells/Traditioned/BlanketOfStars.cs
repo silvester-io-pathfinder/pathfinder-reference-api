@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("86b509bb-c558-4256-b23e-614ba304fc12"), Type = TextBlockType.Text, Text = "A flowing cloak of utter darkness drapes over you, filled with pinpricks of light like distant stars. It imparts the stillness of the cosmos to you, granting you a +2 status bonus to Stealth checks to Hide and Sneak. While outside under a starry night sky, you’re also invisible as long as you remain still. When moving under a starry night sky, you are concealed instead." };
+            yield return new TextBlock { Id = Guid.Parse("86b509bb-c558-4256-b23e-614ba304fc12"), Type = TextBlockType.Text, Text = "A flowing cloak of utter darkness drapes over you, filled with pinpricks of light like distant stars. It imparts the stillness of the cosmos to you, granting you a +2 status bonus to Stealth checks to Hide and Sneak. While outside under a starry night sky, you're also invisible as long as you remain still. When moving under a starry night sky, you are concealed instead." };
             yield return new TextBlock { Id = Guid.Parse("c004523f-bccb-4814-ac16-0e8a8eaead8f"), Type = TextBlockType.Text, Text = "Gazing too closely into the stars is disorienting. Any creature that ends its turn adjacent to you must attempt a Will save; this is a mental, visual effect." };
         }
 

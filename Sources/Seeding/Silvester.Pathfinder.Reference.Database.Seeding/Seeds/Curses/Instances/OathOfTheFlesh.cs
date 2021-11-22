@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Curses.Instances
                 Name = "Oath of the Fresh",
                 DifficultyCheck = 23,
                 SavingThrowStatId = Fortitude.ID,
-                Effect = "Each time you make a promise to someone, an ornate symbol representing that promise is magically carved into your flesh. Breaking any of these promises causes the symbol tattoo to grow into a gaping wound, dealing 3d6 slashing damage to you; damage from the curse can’t be healed as long as the curse is still in effect."
+                Effect = "Each time you make a promise to someone, an ornate symbol representing that promise is magically carved into your flesh. Breaking any of these promises causes the symbol tattoo to grow into a gaping wound, dealing 3d6 slashing damage to you; damage from the curse can't be healed as long as the curse is still in effect."
             };
         }
 

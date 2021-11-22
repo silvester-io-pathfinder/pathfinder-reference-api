@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 PotencyId = Potencies.Instances.Greater.ID,
                 Benefits = new[]
                 {
-                    new TextBlock {Id = Guid.Parse("318feeb1-4c1a-4ee7-a9d9-0735d4a43c13"), Type = TextBlockType.Text, Text = "The weapon deals 1d4 bleed damage to creatures designated as the clan’s enemy, and the DC of the Fortitude save to avoid becoming sickened is 30."},
+                    new TextBlock {Id = Guid.Parse("318feeb1-4c1a-4ee7-a9d9-0735d4a43c13"), Type = TextBlockType.Text, Text = "The weapon deals 1d4 bleed damage to creatures designated as the clan's enemy, and the DC of the Fortitude save to avoid becoming sickened is 30."},
                 }
             };
         }

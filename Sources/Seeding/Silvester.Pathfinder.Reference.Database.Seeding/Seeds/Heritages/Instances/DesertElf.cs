@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("2384de9e-93fb-4783-97fa-810053e44209"), Type = TextBlockType.Text, Text = "You live under the desert’s blazing heat, gaining incredible resilience to warm environments. You gain fire resistance equal to half your level (minimum 1), and environmental heat effects are one step less extreme for you (incredible heat becomes extreme, extreme heat becomes severe, and so on)." };
+            yield return new TextBlock { Id = Guid.Parse("2384de9e-93fb-4783-97fa-810053e44209"), Type = TextBlockType.Text, Text = "You live under the desert's blazing heat, gaining incredible resilience to warm environments. You gain fire resistance equal to half your level (minimum 1), and environmental heat effects are one step less extreme for you (incredible heat becomes extreme, extreme heat becomes severe, and so on)." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

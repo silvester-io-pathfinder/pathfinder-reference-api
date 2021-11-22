@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("91266a7d-2661-42ab-9cce-d41d23635316"), Type = TextBlockType.Text, Text = "You share information with the triggering creature. They gain a circumstance bonus to their check equal to your circumstance bonus to checks investigating your subject from (feat: Pursue a Lead). The GM can add any relevant traits to this reaction depending on the situation, such as (trait: auditory) and (trait: linguistic) if you&#39;re conveying information verbally." };
+            yield return new TextBlock { Id = Guid.Parse("91266a7d-2661-42ab-9cce-d41d23635316"), Type = TextBlockType.Text, Text = "You share information with the triggering creature. They gain a circumstance bonus to their check equal to your circumstance bonus to checks investigating your subject from (feat: Pursue a Lead). The GM can add any relevant traits to this reaction depending on the situation, such as (trait: auditory) and (trait: linguistic) if you're conveying information verbally." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cfb67a9f-d656-4db9-abc6-7d3739f553f5"), Type = TextBlockType.Text, Text = "Your steps echo with the thunderous retort of exploding black powder as you dance a dance of death. Take any of the following actions you choose in any order: (action: Step), (action: Strike) against a target within your firearm’s first range increment, and (action: Interact) to reload. If you attempted a (action: Strike) and it succeeded, you can repeat these three actions again in any order. If you attempted a (action: Strike) in the second set and succeeded, you can repeat the actions one last time." };
+            yield return new TextBlock { Id = Guid.Parse("cfb67a9f-d656-4db9-abc6-7d3739f553f5"), Type = TextBlockType.Text, Text = "Your steps echo with the thunderous retort of exploding black powder as you dance a dance of death. Take any of the following actions you choose in any order: (action: Step), (action: Strike) against a target within your firearm's first range increment, and (action: Interact) to reload. If you attempted a (action: Strike) and it succeeded, you can repeat these three actions again in any order. If you attempted a (action: Strike) in the second set and succeeded, you can repeat the actions one last time." };
             yield return new TextBlock { Id = Guid.Parse("01808168-91d1-4985-9628-ff24e5285740"), Type = TextBlockType.Text, Text = "After using Dance of Thunder, you become fatigued for 1 minute." };
         }
 

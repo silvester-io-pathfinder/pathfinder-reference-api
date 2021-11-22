@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7d41288a-6672-435f-accb-d8bec9bf638f"), Type = TextBlockType.Text, Text = "You call upon the power of your spells to protect you from the worst of the magic headed your way. You fail your saving throw instead of critically failing. For 1 minute, increase the circumstance bonus to saving throws from the (feat: Spellmaster&#39;s Resilience) feat to +2, and increase the resistance to damage it grants to 10." };
+            yield return new TextBlock { Id = Guid.Parse("7d41288a-6672-435f-accb-d8bec9bf638f"), Type = TextBlockType.Text, Text = "You call upon the power of your spells to protect you from the worst of the magic headed your way. You fail your saving throw instead of critically failing. For 1 minute, increase the circumstance bonus to saving throws from the (feat: Spellmaster's Resilience) feat to +2, and increase the resistance to damage it grants to 10." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4186bc5c-7327-48aa-9725-1865a59a4059"), Type = TextBlockType.Text, Text = "You use your familiar’s senses as easily as your own. You project your senses into your familiar. When you do, you lose all sensory information from your own body, but you can sense through your familiar’s body until you (action: Dismiss) the effect. While projecting your senses in this way, you can converse telepathically with your familiar if it understands a language." };
+            yield return new TextBlock { Id = Guid.Parse("4186bc5c-7327-48aa-9725-1865a59a4059"), Type = TextBlockType.Text, Text = "You use your familiar's senses as easily as your own. You project your senses into your familiar. When you do, you lose all sensory information from your own body, but you can sense through your familiar's body until you (action: Dismiss) the effect. While projecting your senses in this way, you can converse telepathically with your familiar if it understands a language." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

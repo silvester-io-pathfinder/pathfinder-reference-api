@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("01b35800-d7c3-4630-a808-c85f411b03e0"), Type = TextBlockType.Text, Text = "You can understand the true meaning of texts quickly, and even when you get lost or hit a dead end, you aren’t discouraged from making further attempts to get to the bottom of things. When you (action: Decipher Writing), you need only half as long as usual (reducing the time from about 1 minute to about half a minute per page), and if you fail, you don’t take the usual -2 circumstance penalty to further checks to decipher that text." };
+            yield return new TextBlock { Id = Guid.Parse("01b35800-d7c3-4630-a808-c85f411b03e0"), Type = TextBlockType.Text, Text = "You can understand the true meaning of texts quickly, and even when you get lost or hit a dead end, you aren't discouraged from making further attempts to get to the bottom of things. When you (action: Decipher Writing), you need only half as long as usual (reducing the time from about 1 minute to about half a minute per page), and if you fail, you don't take the usual -2 circumstance penalty to further checks to decipher that text." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

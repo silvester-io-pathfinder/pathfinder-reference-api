@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("68810aee-e637-4b91-bd8d-75ace196b201"), Type = TextBlockType.Text, Text = "Each creature in the area becomes drowsy and might fall asleep. A creature that falls unconscious from this spell doesn’t fall prone or release what it’s holding. This spell doesn’t prevent creatures from waking up due to" };
+            yield return new TextBlock { Id = Guid.Parse("68810aee-e637-4b91-bd8d-75ace196b201"), Type = TextBlockType.Text, Text = "Each creature in the area becomes drowsy and might fall asleep. A creature that falls unconscious from this spell doesn't fall prone or release what it's holding. This spell doesn't prevent creatures from waking up due to" };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("f867dd5b-0023-4abb-97fa-46e0371386b7"), Type = TextBlockType.Text, Text = "The creatures fall unconscious for 1 round on a failure or 1 minute on a critical failure. They fall prone and release what they’re holding, and they can’t attempt Perception checks to wake up. When the duration ends, the creature is sleeping normally instead of automatically waking up." }
+                    new TextBlock { Id = Guid.Parse("f867dd5b-0023-4abb-97fa-46e0371386b7"), Type = TextBlockType.Text, Text = "The creatures fall unconscious for 1 round on a failure or 1 minute on a critical failure. They fall prone and release what they're holding, and they can't attempt Perception checks to wake up. When the duration ends, the creature is sleeping normally instead of automatically waking up." }
                 }
             };
         }
@@ -51,8 +51,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("5ffadddc-181f-40b7-abee-214ed2d489a4"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes a –1 status penalty to Perception checks for 1 round.",
-                Failure = "The creature falls unconscious. If it’s still unconscious after 1 minute, it wakes up automatically.",
-                CriticalFailure = "The creature falls unconscious. If it’s still unconscious after 1 hour, it wakes up automatically."
+                Failure = "The creature falls unconscious. If it's still unconscious after 1 minute, it wakes up automatically.",
+                CriticalFailure = "The creature falls unconscious. If it's still unconscious after 1 hour, it wakes up automatically."
             };
         }
 

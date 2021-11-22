@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2fb42ad5-c4c9-4262-b35b-88e9aeca465c"), Type = TextBlockType.Text, Text = "You stomp, shaking the earth beneath you. Creatures on the ground within a 20-foot emanation take damage equal to your Strength modifier (minimum 0), which they can resist with a basic Fortitude save. On a failure, they also fall prone. After you use this action, you can’t use it again for 1d4 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("2fb42ad5-c4c9-4262-b35b-88e9aeca465c"), Type = TextBlockType.Text, Text = "You stomp, shaking the earth beneath you. Creatures on the ground within a 20-foot emanation take damage equal to your Strength modifier (minimum 0), which they can resist with a basic Fortitude save. On a failure, they also fall prone. After you use this action, you can't use it again for 1d4 rounds." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

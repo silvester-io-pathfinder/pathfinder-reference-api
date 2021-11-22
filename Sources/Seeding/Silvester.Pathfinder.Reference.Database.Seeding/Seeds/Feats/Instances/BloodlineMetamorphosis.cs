@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8218d111-6d45-4976-9ee2-29b5da59e980"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor’s Pins or an alliance with Mengkare." };
-            yield return new TextBlock { Id = Guid.Parse("ae224236-1df9-4157-bd42-a740373ce5ce"), Type = TextBlockType.Text, Text = "You have learned to manipulate the innate power of your bloodline and adapt it to your needs. When making your daily preparations, you can swap out a single spell of 9th level or lower for another spell of the same level. You can’t swap out spells granted specifically by your bloodline." };
+            yield return new TextBlock { Id = Guid.Parse("8218d111-6d45-4976-9ee2-29b5da59e980"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor's Pins or an alliance with Mengkare." };
+            yield return new TextBlock { Id = Guid.Parse("ae224236-1df9-4157-bd42-a740373ce5ce"), Type = TextBlockType.Text, Text = "You have learned to manipulate the innate power of your bloodline and adapt it to your needs. When making your daily preparations, you can swap out a single spell of 9th level or lower for another spell of the same level. You can't swap out spells granted specifically by your bloodline." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

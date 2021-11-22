@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd8f0729-d6b6-41cc-a6e0-b3c0fe90fc2f"), Type = TextBlockType.Text, Text = "You stun the target with an arcane word of power. Once targeted, the target is then temporarily immune for 10 minutes. The effect of the spell depends on the target’s level." };
+            yield return new TextBlock { Id = Guid.Parse("cd8f0729-d6b6-41cc-a6e0-b3c0fe90fc2f"), Type = TextBlockType.Text, Text = "You stun the target with an arcane word of power. Once targeted, the target is then temporarily immune for 10 minutes. The effect of the spell depends on the target's level." };
             yield return new TextBlock { Id = Guid.Parse("8d0011e6-c38e-4863-95e8-101d185517b9"), Type = TextBlockType.Enumeration, Text = "13th or Lower - The target is stunned for 1d6 rounds." };
             yield return new TextBlock { Id = Guid.Parse("e4c39da0-52d6-4f8b-b1ca-b45a411161fa"), Type = TextBlockType.Enumeration, Text = "14th to 15th - The target is stunned for 1 round." };
             yield return new TextBlock { Id = Guid.Parse("4c893f47-5fdf-410d-8b5d-1b681d8893a3"), Type = TextBlockType.Enumeration, Text = "16th or Higher - The target is stunned 1." };

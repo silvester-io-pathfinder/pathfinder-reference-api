@@ -35,7 +35,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("66178f73-c84d-45fe-8d92-60e9b9b440e5"),
                 CriticalSuccess = "The composition lasts 4 rounds.",
                 Success = "The composition lasts 3 rounds.",
-                Failure = "The composition lasts 1 round, but you don’t spend the Focus Point for casting this spell.",
+                Failure = "The composition lasts 1 round, but you don't spend the Focus Point for casting this spell.",
             };
         }
 

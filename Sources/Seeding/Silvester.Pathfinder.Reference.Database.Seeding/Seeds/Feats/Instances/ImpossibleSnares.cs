@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a86f2c9f-4448-4ef5-8daf-3a5a020a8ea4"), Type = TextBlockType.Text, Text = "You can create endless shorter-lived snares, protecting your lair or using them against foes. Once per minute, you can (action: Craft) one of the snares you’ve prepared for quick deployment without expending the prepared snare. Once deployed, such a snare lasts for 10 minutes before losing its effectiveness." };
+            yield return new TextBlock { Id = Guid.Parse("a86f2c9f-4448-4ef5-8daf-3a5a020a8ea4"), Type = TextBlockType.Text, Text = "You can create endless shorter-lived snares, protecting your lair or using them against foes. Once per minute, you can (action: Craft) one of the snares you've prepared for quick deployment without expending the prepared snare. Once deployed, such a snare lasts for 10 minutes before losing its effectiveness." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

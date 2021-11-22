@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4dc0ac21-cf43-4744-9247-b4fffabf54ba"), Type = TextBlockType.Text, Text = "The memories of long-dead spellcasters grant you knowledge in a specific skill. Choose any non-Lore skill, or a Lore skill related to the ancient empire from which your bloodline sprang. You temporarily become trained in that skill and might gain other memories associated with an ancestor who was trained in that skill. If you attempt a task or activity that lasts beyond this spell’s duration, use the lower proficiency modifier." };
+            yield return new TextBlock { Id = Guid.Parse("4dc0ac21-cf43-4744-9247-b4fffabf54ba"), Type = TextBlockType.Text, Text = "The memories of long-dead spellcasters grant you knowledge in a specific skill. Choose any non-Lore skill, or a Lore skill related to the ancient empire from which your bloodline sprang. You temporarily become trained in that skill and might gain other memories associated with an ancestor who was trained in that skill. If you attempt a task or activity that lasts beyond this spell's duration, use the lower proficiency modifier." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

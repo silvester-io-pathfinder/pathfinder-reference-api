@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a40b7714-5bd4-4aa7-a14a-4be9ce4efdb7"), Type = TextBlockType.Text, Text = "You scramble a creature’s mental faculties and sensory input. The target must attempt a Will saving throw. Regardless of the result of that save, the target is then temporarily immune for 10 minutes. Warp mind’s effects happen instantly, so dispel magic and other effects that counteract spells can’t counteract them. However, alter reality, miracle, primal phenomenon, restoration, or wish can still counteract the effects." };
+            yield return new TextBlock { Id = Guid.Parse("a40b7714-5bd4-4aa7-a14a-4be9ce4efdb7"), Type = TextBlockType.Text, Text = "You scramble a creature's mental faculties and sensory input. The target must attempt a Will saving throw. Regardless of the result of that save, the target is then temporarily immune for 10 minutes. Warp mind's effects happen instantly, so dispel magic and other effects that counteract spells can't counteract them. However, alter reality, miracle, primal phenomenon, restoration, or wish can still counteract the effects." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

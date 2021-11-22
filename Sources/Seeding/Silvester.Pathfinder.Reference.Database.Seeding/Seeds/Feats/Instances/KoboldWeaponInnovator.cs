@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f12342da-daf1-4c50-ba3d-8fd591b999cf"), Type = TextBlockType.Text, Text = "You’ve learned devious tactics with your kobold weapons. Whenever you critically hit with a (item: crossbow), (item: greatpick), (item: light pick), (item: pick), (item: spear), or kobold weapon, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("f12342da-daf1-4c50-ba3d-8fd591b999cf"), Type = TextBlockType.Text, Text = "You've learned devious tactics with your kobold weapons. Whenever you critically hit with a (item: crossbow), (item: greatpick), (item: light pick), (item: pick), (item: spear), or kobold weapon, you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("09185ac4-2fc9-4e4f-91eb-8d76ea9a5021"), Type = TextBlockType.Text, Text = "You create an immobile sphere of force to either trap or protect the target, blocking anything that would pass through the sphere. The sphere has AC 5, Hardness 10, and 40 Hit Points. It’s immune to critical hits and precision damage. Disintegrate destroys the sphere instantly. If the target is unwilling, the effects of the sphere depend on the target’s Reflex save." };
+            yield return new TextBlock { Id = Guid.Parse("09185ac4-2fc9-4e4f-91eb-8d76ea9a5021"), Type = TextBlockType.Text, Text = "You create an immobile sphere of force to either trap or protect the target, blocking anything that would pass through the sphere. The sphere has AC 5, Hardness 10, and 40 Hit Points. It's immune to critical hits and precision damage. Disintegrate destroys the sphere instantly. If the target is unwilling, the effects of the sphere depend on the target's Reflex save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new RollableEffect
             {
                 Id = Guid.Parse("01b06dbe-0d2e-4f94-af09-883d2a79e058"),
-                CriticalSuccess = "The target disrupts the sphere’s integrity, causing it to collapse entirely.",
+                CriticalSuccess = "The target disrupts the sphere's integrity, causing it to collapse entirely.",
                 Success = "The sphere functions normally but has only 10 Hit Points instead of 40.",
                 Failure = "The sphere has its normal effect.",
             };

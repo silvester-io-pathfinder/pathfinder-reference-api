@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("679503e4-dd27-4248-8599-49bf71e04824"), Type = TextBlockType.Text, Text = "You’ve learned devious ways to make the most of your grippli weapons. Whenever you critically hit using a (item: blowguns | Blowgun), (item: hatchets | Hatchet), (item: scythes | Scythe), (item: shortbows | Shortbow), (item: composite shortbows | Composite Shortbow), or grippli weapon, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("679503e4-dd27-4248-8599-49bf71e04824"), Type = TextBlockType.Text, Text = "You've learned devious ways to make the most of your grippli weapons. Whenever you critically hit using a (item: blowguns | Blowgun), (item: hatchets | Hatchet), (item: scythes | Scythe), (item: shortbows | Shortbow), (item: composite shortbows | Composite Shortbow), or grippli weapon, you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

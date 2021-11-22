@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9ddb63d0-a952-4dfe-bda2-31396a74fd66"), Type = TextBlockType.Text, Text = "After the triggering attack is done, (action: Step). You must end this (action: Step) within the attacker’s reach. Then, you can attempt an Athletics check to (action: Disarm) or (action: Trip) the attacker." };
+            yield return new TextBlock { Id = Guid.Parse("9ddb63d0-a952-4dfe-bda2-31396a74fd66"), Type = TextBlockType.Text, Text = "After the triggering attack is done, (action: Step). You must end this (action: Step) within the attacker's reach. Then, you can attempt an Athletics check to (action: Disarm) or (action: Trip) the attacker." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

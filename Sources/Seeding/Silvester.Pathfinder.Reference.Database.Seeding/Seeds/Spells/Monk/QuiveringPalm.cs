@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("3dc15c3d-d43c-4c69-9433-7252c704376a"),
                 CriticalSuccess = "The target survives, the spell ends, and the target is then temporarily immune for 24 hours.",
                 Success = "The target is stunned 1 and takes 40 damage, the spell ends, and the target is then temporarily immune for 24 hours.",
-                Failure = "The target is stunned 3 and takes 80 damage. The spell’s duration continues, but the target is then temporarily immune for 24 hours against being killed by quivering palm.",
+                Failure = "The target is stunned 3 and takes 80 damage. The spell's duration continues, but the target is then temporarily immune for 24 hours against being killed by quivering palm.",
                 CriticalFailure = "The target dies."
             };
         }

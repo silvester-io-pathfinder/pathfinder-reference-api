@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1ce81e5e-40e2-4764-b7cc-0b6bb29ddc50"), Type = TextBlockType.Text, Text = "You can deliver silent messages. You gain touch telepathy, allowing you to communicate silently and mentally with any creature you’re touching, as long as you share a language." };
+            yield return new TextBlock { Id = Guid.Parse("1ce81e5e-40e2-4764-b7cc-0b6bb29ddc50"), Type = TextBlockType.Text, Text = "You can deliver silent messages. You gain touch telepathy, allowing you to communicate silently and mentally with any creature you're touching, as long as you share a language." };
             yield return new TextBlock { Id = Guid.Parse("b0e35cee-6c69-4ecd-a672-d973578c94dc"), Type = TextBlockType.Text, Text = "----" };
             yield return new TextBlock { Id = Guid.Parse("0b0f6b4e-0918-43bd-976f-091947e0cce8"), Type = TextBlockType.Text, Text = "~ Enhancement: You can send your messages even further. Your telepathy gains a range of 10 feet, but you still have to share a language with your target." };
         }

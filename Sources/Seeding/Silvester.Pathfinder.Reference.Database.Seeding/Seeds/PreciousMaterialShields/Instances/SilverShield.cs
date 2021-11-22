@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PreciousMaterial
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("0e6b4e48-e741-45da-85e4-823a172ea0c4"), Type = TextBlockType.Text, Text = "Silver shields don’t typically have an additional effect, though when used for a shield bash, they are silver weapons." };
+            yield return new TextBlock { Id = Guid.Parse("0e6b4e48-e741-45da-85e4-823a172ea0c4"), Type = TextBlockType.Text, Text = "Silver shields don't typically have an additional effect, though when used for a shield bash, they are silver weapons." };
         }
 
         protected override IEnumerable<PreciousMaterialShieldVariant> GetVariants()

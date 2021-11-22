@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             {
                 Id = Guid.Parse("c2326d50-7745-4705-93cc-2977712bb46c"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target&#39;s muscles become temporarily weaker. For 1 round, the target is enfeebled 2, and any time it attempts to take an action with the (trait: manipulate) trait, the action is disrupted unless it succeeds at a flat check with a DC equal to 5 + its enfeebled value.",
+                Success = "The target's muscles become temporarily weaker. For 1 round, the target is enfeebled 2, and any time it attempts to take an action with the (trait: manipulate) trait, the action is disrupted unless it succeeds at a flat check with a DC equal to 5 + its enfeebled value.",
                 Failure = "As success, but the duration is 1 minute.",
                 CriticalFailure = "As success, but the duration is 1 minute, the flat check is DC 11, and the target takes –10-foot status penalty to all Speeds for the duration.", 
             };

@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "2nd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("edb4e96d-2949-4309-9cb0-f475438fde22"), Type = TextBlockType.Text, Text = "The spell’s duration increases to 1 hour, and you can also change the tone, quality, and other aspects of your voice. Before a creature can attempt to disbelieve your illusion, it must actively attempt a Perception check or otherwise use actions to interact with the sound." }
+                    new TextBlock { Id = Guid.Parse("edb4e96d-2949-4309-9cb0-f475438fde22"), Type = TextBlockType.Text, Text = "The spell's duration increases to 1 hour, and you can also change the tone, quality, and other aspects of your voice. Before a creature can attempt to disbelieve your illusion, it must actively attempt a Perception check or otherwise use actions to interact with the sound." }
                 }
             };
         }

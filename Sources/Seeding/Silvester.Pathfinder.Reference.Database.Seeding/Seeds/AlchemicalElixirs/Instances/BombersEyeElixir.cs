@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalElixir
                 PotionPotencyId = Potencies.Instances.Lesser.ID,
                 Level = 4,
                 Price = 1400,
-                Benefits = "Reduce your targets’ circumstance bonus by 1."
+                Benefits = "Reduce your targets' circumstance bonus by 1."
             };
 
             yield return new AlchemicalElixirPotencyBinding
@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalElixir
                 PotionPotencyId = Potencies.Instances.Greater.ID,
                 Level = 14,
                 Price = 70000,
-                Benefits = "Reduce your targets’ circumstance bonus by 2."
+                Benefits = "Reduce your targets' circumstance bonus by 2."
             };
         }
 

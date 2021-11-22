@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b7bde55-fe92-4736-bda4-a5817e24de56"), Type = TextBlockType.Text, Text = "Using ancient dwarven methods developed to fight enemies wielding magical darkness, you’ve honed your darkvision and sworn not to use such magic yourself. You gain greater darkvision, enabling you to see through magical darkness even if it normally hampers darkvision (such as the darkness created by a 4th-level (spell: darkness) spell). You can’t cast spells with the (trait: darkness) trait, use item activations with the (trait: darkness) trait, or use any other ability with the (trait: darkness) trait." };
+            yield return new TextBlock { Id = Guid.Parse("0b7bde55-fe92-4736-bda4-a5817e24de56"), Type = TextBlockType.Text, Text = "Using ancient dwarven methods developed to fight enemies wielding magical darkness, you've honed your darkvision and sworn not to use such magic yourself. You gain greater darkvision, enabling you to see through magical darkness even if it normally hampers darkvision (such as the darkness created by a 4th-level (spell: darkness) spell). You can't cast spells with the (trait: darkness) trait, use item activations with the (trait: darkness) trait, or use any other ability with the (trait: darkness) trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

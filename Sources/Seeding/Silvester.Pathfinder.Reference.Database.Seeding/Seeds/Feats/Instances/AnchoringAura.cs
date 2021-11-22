@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2576f6e-05d6-46ea-9cfc-4bcd45f59a5e"), Type = TextBlockType.Text, Text = "Your aura hampers fiends’ teleportation. Your aura attempts to counteract (trait: teleportation) spells cast by fiends within 15 feet, using the spell level and DC of your devotion spells." };
+            yield return new TextBlock { Id = Guid.Parse("e2576f6e-05d6-46ea-9cfc-4bcd45f59a5e"), Type = TextBlockType.Text, Text = "Your aura hampers fiends' teleportation. Your aura attempts to counteract (trait: teleportation) spells cast by fiends within 15 feet, using the spell level and DC of your devotion spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

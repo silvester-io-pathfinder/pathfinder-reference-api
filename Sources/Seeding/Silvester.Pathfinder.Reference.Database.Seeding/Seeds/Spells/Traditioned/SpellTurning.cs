@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9317afe9-244c-4d18-b1be-571698f3fa71"), Type = TextBlockType.Text, Text = "This abjuration reflects spells cast at you back at their caster. When a spell targets you, you can spend a reaction to attempt to reflect it. This uses the rules for counteracting the spell, but if the spell is successfully counteracted, the effect is turned back on the caster. Whether or not the counteract attempt is successful, spell turning then ends. Spell turning can’t affect spells that aren’t targeted (such as area spells)." };
+            yield return new TextBlock { Id = Guid.Parse("9317afe9-244c-4d18-b1be-571698f3fa71"), Type = TextBlockType.Text, Text = "This abjuration reflects spells cast at you back at their caster. When a spell targets you, you can spend a reaction to attempt to reflect it. This uses the rules for counteracting the spell, but if the spell is successfully counteracted, the effect is turned back on the caster. Whether or not the counteract attempt is successful, spell turning then ends. Spell turning can't affect spells that aren't targeted (such as area spells)." };
             yield return new TextBlock { Id = Guid.Parse("0f32ca73-1e49-474a-93f7-442f37d2551a"), Type = TextBlockType.Text, Text = "If spell turning reflects a spell back at a caster who is also under the effect of spell turning, their spell turning can attempt to reflect their own spell back at you again; if they do so, their counteract attempt automatically succeeds." };
         }
 

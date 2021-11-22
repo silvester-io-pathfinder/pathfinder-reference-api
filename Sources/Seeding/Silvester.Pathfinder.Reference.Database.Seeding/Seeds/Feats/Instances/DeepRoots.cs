@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("483709d6-8401-42d7-9897-481e71c2e533"), Type = TextBlockType.Text, Text = "Your insidious mind-control spells send burrowing mental roots so deep that they tear at your target’s mind even after they are removed or have run their course. When you cast a spell that imposes the controlled condition or otherwise forces the target to take certain actions (such as (spell: command)), you can choose one target who critically failed its save. When that target finishes fulfilling any commands issued by your spell, or when the spell is dispelled or counteracted, it takes 1d4 mental damage per level of the spell." };
+            yield return new TextBlock { Id = Guid.Parse("483709d6-8401-42d7-9897-481e71c2e533"), Type = TextBlockType.Text, Text = "Your insidious mind-control spells send burrowing mental roots so deep that they tear at your target's mind even after they are removed or have run their course. When you cast a spell that imposes the controlled condition or otherwise forces the target to take certain actions (such as (spell: command)), you can choose one target who critically failed its save. When that target finishes fulfilling any commands issued by your spell, or when the spell is dispelled or counteracted, it takes 1d4 mental damage per level of the spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

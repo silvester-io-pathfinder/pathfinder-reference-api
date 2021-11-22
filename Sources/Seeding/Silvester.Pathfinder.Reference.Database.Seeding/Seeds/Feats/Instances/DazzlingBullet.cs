@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("18771754-2b07-4931-b9b5-ef9eb121ab2d"), Type = TextBlockType.Text, Text = "Your tricks discombobulate your opponent, leaving spots in their vision from the bright flash of your gunshot reflected straight into their eyes (or other visual organs). Attempt a Performance check against the target creature’s Will DC and make a ranged firearm (action: Strike) against that target. If the (action: Strike) deals damage to the target creature and you succeed at the Performance check, the creature is dazzled for 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("18771754-2b07-4931-b9b5-ef9eb121ab2d"), Type = TextBlockType.Text, Text = "Your tricks discombobulate your opponent, leaving spots in their vision from the bright flash of your gunshot reflected straight into their eyes (or other visual organs). Attempt a Performance check against the target creature's Will DC and make a ranged firearm (action: Strike) against that target. If the (action: Strike) deals damage to the target creature and you succeed at the Performance check, the creature is dazzled for 1 round." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

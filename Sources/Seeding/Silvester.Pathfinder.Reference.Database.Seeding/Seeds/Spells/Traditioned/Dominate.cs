@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("854f9ba4-d984-4022-a611-0308695b7280"), Type = TextBlockType.Text, Text = "You take command of the target, forcing it to obey your orders. If you issue an obviously self-destructive order, the target doesn’t act until you issue a new order. The effect depends on its Will save." };
+            yield return new TextBlock { Id = Guid.Parse("854f9ba4-d984-4022-a611-0308695b7280"), Type = TextBlockType.Text, Text = "You take command of the target, forcing it to obey your orders. If you issue an obviously self-destructive order, the target doesn't act until you issue a new order. The effect depends on its Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7ed6dfd7-9fb6-4661-996d-d888ec657c05"), Type = TextBlockType.Text, Text = "When you focus your magic on an ally, you can remove harmful conditions. If your next action is to (activity: Cast a Spell) from a spell slot, and that spell targets only a single ally, you can also attempt to remove a harmful condition from that ally. The condition must be one that could be removed by your (feat: Mercy) feat, including those granted by later feats such as (feat: Greater Mercy). Attempt a counteract check based on the spell’s DC and level. This effect is in addition to the normal effects of your spell." };
+            yield return new TextBlock { Id = Guid.Parse("7ed6dfd7-9fb6-4661-996d-d888ec657c05"), Type = TextBlockType.Text, Text = "When you focus your magic on an ally, you can remove harmful conditions. If your next action is to (activity: Cast a Spell) from a spell slot, and that spell targets only a single ally, you can also attempt to remove a harmful condition from that ally. The condition must be one that could be removed by your (feat: Mercy) feat, including those granted by later feats such as (feat: Greater Mercy). Attempt a counteract check based on the spell's DC and level. This effect is in addition to the normal effects of your spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

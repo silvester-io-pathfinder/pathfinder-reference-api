@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("16f84d6b-1fc2-48af-aa25-0a142acab7e6"), Type = TextBlockType.Text, Text = "Your eidolon’s heart beats with energy. Choose an energy damage type other than force. One of its unarmed attacks changes its damage type to the chosen type, and it gains resistance to that type equal to half your level (minimum 1)." };
+            yield return new TextBlock { Id = Guid.Parse("16f84d6b-1fc2-48af-aa25-0a142acab7e6"), Type = TextBlockType.Text, Text = "Your eidolon's heart beats with energy. Choose an energy damage type other than force. One of its unarmed attacks changes its damage type to the chosen type, and it gains resistance to that type equal to half your level (minimum 1)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

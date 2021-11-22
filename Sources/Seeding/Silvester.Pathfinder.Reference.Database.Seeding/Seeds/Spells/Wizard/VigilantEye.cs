@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("fd5f857c-2087-4e88-b59b-2d12b1a67d83"), Type = TextBlockType.Text, Text = "You create an invisible eye sensor, as clairvoyance (page 324). When created, this eye must be in your line of sight." };
-            yield return new TextBlock { Id = Guid.Parse("23df727e-014c-4a99-adbf-584d61e6899a"), Type = TextBlockType.Text, Text = "When the spell’s duration ends, you can spend 1 Focus Point as a free action to extend the duration for another hour, though as normal, it ends immediately during your next daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("23df727e-014c-4a99-adbf-584d61e6899a"), Type = TextBlockType.Text, Text = "When the spell's duration ends, you can spend 1 Focus Point as a free action to extend the duration for another hour, though as normal, it ends immediately during your next daily preparations." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

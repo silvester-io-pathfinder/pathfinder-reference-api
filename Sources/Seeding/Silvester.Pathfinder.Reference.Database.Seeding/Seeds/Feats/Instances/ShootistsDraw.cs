@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2bb35e14-1cb2-4b06-8a6f-40c4c88fd207"), Type = TextBlockType.Text, Text = "You (action: Interact) to draw a (item: hand crossbow) and (action: Strike) with it, or you (action: Strike) with a loaded (item: hand crossbow) you&#39;re already holding and then (action: Interact) to stow it." };
+            yield return new TextBlock { Id = Guid.Parse("2bb35e14-1cb2-4b06-8a6f-40c4c88fd207"), Type = TextBlockType.Text, Text = "You (action: Interact) to draw a (item: hand crossbow) and (action: Strike) with it, or you (action: Strike) with a loaded (item: hand crossbow) you're already holding and then (action: Interact) to stow it." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

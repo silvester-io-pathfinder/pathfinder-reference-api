@@ -43,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             {
                 Id = Guid.Parse("c6282236-0e72-4910-a5e5-8ba78c5f17bd"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target can’t use reactions until its next turn.",
+                Success = "The target can't use reactions until its next turn.",
                 Failure = "The target is stunned 1.",
                 CriticalFailure = "The target is stunned 3.", 
             };

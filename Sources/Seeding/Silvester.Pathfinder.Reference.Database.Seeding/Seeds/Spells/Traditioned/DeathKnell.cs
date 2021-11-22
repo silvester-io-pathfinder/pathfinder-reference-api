@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("1d97f155-61d4-4e3e-b56a-5db39776f857"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target’s dying value increases by 1.",
+                Success = "The target's dying value increases by 1.",
                 Failure = "The target dies."
             };
         }

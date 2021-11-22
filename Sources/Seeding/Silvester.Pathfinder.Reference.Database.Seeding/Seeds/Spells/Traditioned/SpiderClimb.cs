@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a4674f5b-95ac-4a64-b387-bdb201883e97"), Type = TextBlockType.Text, Text = "Tiny clinging hairs sprout across the creature’s hands and feet, offering purchase on nearly any surface. The target gains a climb Speed equal to its Speed." };
+            yield return new TextBlock { Id = Guid.Parse("a4674f5b-95ac-4a64-b387-bdb201883e97"), Type = TextBlockType.Text, Text = "Tiny clinging hairs sprout across the creature's hands and feet, offering purchase on nearly any surface. The target gains a climb Speed equal to its Speed." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

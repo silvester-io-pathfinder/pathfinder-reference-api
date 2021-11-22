@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9b193de9-40b1-49da-84aa-4283b3185f9f"), Type = TextBlockType.Text, Text = "Your eidolon extends its roots underground to entangle and possibly damage all foes nearby. All enemies within your eidolon’s reach take damage of the same type and amount as your eidolon’s most damaging (action: Strike), depending on their Reflex saves. Any ongoing effects of the save last until the enemy either (action: Escapes | Escape) or leaves your eidolon’s reach. After using Field of Roots, your eidolon is immobilized until it takes a single action, which has the (trait: manipulate) trait, to detach from the ground; this also ends any remaining effects on enemies from Field of Roots." };
+            yield return new TextBlock { Id = Guid.Parse("9b193de9-40b1-49da-84aa-4283b3185f9f"), Type = TextBlockType.Text, Text = "Your eidolon extends its roots underground to entangle and possibly damage all foes nearby. All enemies within your eidolon's reach take damage of the same type and amount as your eidolon's most damaging (action: Strike), depending on their Reflex saves. Any ongoing effects of the save last until the enemy either (action: Escapes | Escape) or leaves your eidolon's reach. After using Field of Roots, your eidolon is immobilized until it takes a single action, which has the (trait: manipulate) trait, to detach from the ground; this also ends any remaining effects on enemies from Field of Roots." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

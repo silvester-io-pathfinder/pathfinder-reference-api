@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c58a9617-0b43-44a3-9c1b-66ab2756768d"), Type = TextBlockType.Text, Text = "You easily banish creatures with your weapon. You can use (action: Swift Banishment) as long as you have a spell slot of 5th level or higher remaining, even if you don’t have (spell: banishment) prepared. You must sacrifice a prepared spell of 5th level or higher, and the banishment effect you create is heightened to the level of that spell. Your weapon serves as the special material component of banishment, causing the target to take the -2 penalty to its save against any (spell: banishment) you cast using (action: Swift Banishment)." };
+            yield return new TextBlock { Id = Guid.Parse("c58a9617-0b43-44a3-9c1b-66ab2756768d"), Type = TextBlockType.Text, Text = "You easily banish creatures with your weapon. You can use (action: Swift Banishment) as long as you have a spell slot of 5th level or higher remaining, even if you don't have (spell: banishment) prepared. You must sacrifice a prepared spell of 5th level or higher, and the banishment effect you create is heightened to the level of that spell. Your weapon serves as the special material component of banishment, causing the target to take the -2 penalty to its save against any (spell: banishment) you cast using (action: Swift Banishment)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

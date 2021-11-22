@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("542bb175-cfb4-4eef-9d65-76d2f24ddb7b"), Type = TextBlockType.Text, Text = "You’ve learned how to synchronize traditional martial arts and guns. You gain the (feat: Bullet Dancer Stance) action. Whenever your proficiency in any weapon increases to expert or beyond, you gain that new proficiency with bayonets, reinforced stocks, simple firearms and unarmed attacks." };
+            yield return new TextBlock { Id = Guid.Parse("542bb175-cfb4-4eef-9d65-76d2f24ddb7b"), Type = TextBlockType.Text, Text = "You've learned how to synchronize traditional martial arts and guns. You gain the (feat: Bullet Dancer Stance) action. Whenever your proficiency in any weapon increases to expert or beyond, you gain that new proficiency with bayonets, reinforced stocks, simple firearms and unarmed attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

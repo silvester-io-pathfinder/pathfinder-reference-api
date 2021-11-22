@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3abe3580-270a-40c5-a090-e9f46db12d61"), Type = TextBlockType.Text, Text = "You fire to ensure that even if your shot doesn’t land cleanly, it still lands close enough to deal some damage. Make a ranged (action: Strike). It gains the following effect on a failure (though not a critical failure)." };
+            yield return new TextBlock { Id = Guid.Parse("3abe3580-270a-40c5-a090-e9f46db12d61"), Type = TextBlockType.Text, Text = "You fire to ensure that even if your shot doesn't land cleanly, it still lands close enough to deal some damage. Make a ranged (action: Strike). It gains the following effect on a failure (though not a critical failure)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
                 Id = Guid.Parse("d7c7cf76-b495-4707-9b18-16fe298e53b5"),
                 
                 
-                Failure = "Though your attack misses, it still deals one die of damage plus any damage from your weapon specialization class feature. This uses your weapon’s normal damage die and damage type. This attack doesn’t add extra damage from any other sources or abilities.",
+                Failure = "Though your attack misses, it still deals one die of damage plus any damage from your weapon specialization class feature. This uses your weapon's normal damage die and damage type. This attack doesn't add extra damage from any other sources or abilities.",
                  
             };
         }

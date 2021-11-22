@@ -22,8 +22,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Conditions.Insta
 
         public override IEnumerable<TextBlock> GetConditionDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8cf1621e-3546-4afa-a642-b9230fdb4738"), Type = Utilities.Text.TextBlockType.Text, Text = "A powerful force has gripped your soul, calling you closer to death. Doomed always includes a value. The dying value at which you die is reduced by your doomed value. If your maximum dying value is reduced to 0, you instantly die. When you die, you’re no longer doomed." };
-            yield return new TextBlock { Id = Guid.Parse("78319886-dc7a-4b52-bf06-737bd98c21e3"), Type = Utilities.Text.TextBlockType.Text, Text = "Your doomed value decreases by 1 each time you get a full night’s rest." };
+            yield return new TextBlock { Id = Guid.Parse("8cf1621e-3546-4afa-a642-b9230fdb4738"), Type = Utilities.Text.TextBlockType.Text, Text = "A powerful force has gripped your soul, calling you closer to death. Doomed always includes a value. The dying value at which you die is reduced by your doomed value. If your maximum dying value is reduced to 0, you instantly die. When you die, you're no longer doomed." };
+            yield return new TextBlock { Id = Guid.Parse("78319886-dc7a-4b52-bf06-737bd98c21e3"), Type = Utilities.Text.TextBlockType.Text, Text = "Your doomed value decreases by 1 each time you get a full night's rest." };
         }
 
         public override SourcePage? GetSourcePage()

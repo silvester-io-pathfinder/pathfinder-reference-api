@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("865ee541-6040-4242-ae49-c32ff91ae16f"), Type = TextBlockType.Text, Text = "You can assemble a formation even with members of ancestries that lack the hobgoblins’ military discipline, and you can extend these benefits to your hobgoblin allies. When you are adjacent to at least two humanoid allies, you gain the benefits of (Feat: Formation Training), even if they aren’t hobgoblin allies. Hobgoblin allies adjacent to you and at least one other hobgoblin ally also gain the bonuses from your (Feat: Formation Training) feat." };
+            yield return new TextBlock { Id = Guid.Parse("865ee541-6040-4242-ae49-c32ff91ae16f"), Type = TextBlockType.Text, Text = "You can assemble a formation even with members of ancestries that lack the hobgoblins' military discipline, and you can extend these benefits to your hobgoblin allies. When you are adjacent to at least two humanoid allies, you gain the benefits of (Feat: Formation Training), even if they aren't hobgoblin allies. Hobgoblin allies adjacent to you and at least one other hobgoblin ally also gain the bonuses from your (Feat: Formation Training) feat." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6c4f660f-53eb-41dc-b935-970874b7b4fe"), Type = TextBlockType.Text, Text = "Your divine touch rejuvenates the weak and tired. When you use (feat: Mercy), you can instead attempt a counteract check to remove the clumsy or enfeebled conditions, using the source of that condition to determine the counteract level and DC. If the condition was caused by an ongoing effect and you don’t remove that effect, the condition returns at the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("6c4f660f-53eb-41dc-b935-970874b7b4fe"), Type = TextBlockType.Text, Text = "Your divine touch rejuvenates the weak and tired. When you use (feat: Mercy), you can instead attempt a counteract check to remove the clumsy or enfeebled conditions, using the source of that condition to determine the counteract level and DC. If the condition was caused by an ongoing effect and you don't remove that effect, the condition returns at the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

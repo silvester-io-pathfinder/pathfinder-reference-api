@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9635438e-1c33-4bef-aade-eb594a225be4"), Type = TextBlockType.Text, Text = "You find opportunities to perform stylish feats in the moments between others’ heartbeats and eye blinks. You are permanently quickened. You can use the extra action only to (action: Tumble Through) or perform the skill action listed in your swashbuckler’s style as one that allows you to gain panache, or other actions that would allow you to gain panache at the GM’s discretion." };
+            yield return new TextBlock { Id = Guid.Parse("9635438e-1c33-4bef-aade-eb594a225be4"), Type = TextBlockType.Text, Text = "You find opportunities to perform stylish feats in the moments between others' heartbeats and eye blinks. You are permanently quickened. You can use the extra action only to (action: Tumble Through) or perform the skill action listed in your swashbuckler's style as one that allows you to gain panache, or other actions that would allow you to gain panache at the GM's discretion." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.FundamentalWeapo
         protected override IEnumerable<TextBlock> GetDetails()
         {
             yield return new TextBlock { Id = Guid.Parse("02e64508-1a08-461d-b94b-4ecb7a4ddbac"), Type = TextBlockType.Text, Text = "Magical enhancements make this weapon strike true." };
-            yield return new TextBlock { Id = Guid.Parse("4940b654-9d55-4d56-86b5-fca5c9f1b9ef"), Type = TextBlockType.Text, Text = "You can upgrade the weapon potency rune already etched on a weapon to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes’ Prices." };
+            yield return new TextBlock { Id = Guid.Parse("4940b654-9d55-4d56-86b5-fca5c9f1b9ef"), Type = TextBlockType.Text, Text = "You can upgrade the weapon potency rune already etched on a weapon to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes' Prices." };
         }
 
         protected override IEnumerable<FundamentalWeaponRuneVariant> GetLevels()

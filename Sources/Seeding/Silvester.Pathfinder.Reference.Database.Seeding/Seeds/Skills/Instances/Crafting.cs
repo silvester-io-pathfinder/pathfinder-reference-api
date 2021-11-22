@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances
                 HasArmorCheckPenalty = false,
                 HasRecallKnowledgeAction = true,
                 StatModifierId = Intelligence.ID,
-                Description = "You can use this skill to create and repair items. Even if you’re untrained, you can Recall Knowledge (page 238)."
+                Description = "You can use this skill to create and repair items. Even if you're untrained, you can Recall Knowledge (page 238)."
             };
         }
     }

@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances
                 HasArmorCheckPenalty = false,
                 HasRecallKnowledgeAction = true,
                 StatModifierId = Wisdom.ID,
-                Description = "The secrets of deities, dogma, faith, and the realms of divine creatures both sublime and sinister are open to you. You also understand how magic works, though your training imparts a religious slant to that knowledge. Even if you’re untrained in Religion, you can use it to Recall Knowledge (page 238)."
+                Description = "The secrets of deities, dogma, faith, and the realms of divine creatures both sublime and sinister are open to you. You also understand how magic works, though your training imparts a religious slant to that knowledge. Even if you're untrained in Religion, you can use it to Recall Knowledge (page 238)."
             };
         }
     }

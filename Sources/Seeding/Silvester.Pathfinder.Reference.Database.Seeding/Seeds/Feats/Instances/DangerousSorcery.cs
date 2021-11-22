@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("630e8417-e28f-409d-852b-4310a662d503"), Type = TextBlockType.Text, Text = "Your legacy grants you great destructive power. When you (activity: Cast a Spell) from your spell slots, if the spell deals damage and doesn’t have a duration, you gain a status bonus to that spell’s damage equal to the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("630e8417-e28f-409d-852b-4310a662d503"), Type = TextBlockType.Text, Text = "Your legacy grants you great destructive power. When you (activity: Cast a Spell) from your spell slots, if the spell deals damage and doesn't have a duration, you gain a status bonus to that spell's damage equal to the spell's level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3dadcaa9-af0a-44e3-b7d3-4c14fa961a4d"), Type = TextBlockType.Text, Text = "You hold a deep understanding of the innate fundamental structures of the physical world, and you can enforce your will upon that structure as far as your own blood is concerned. Once per day, you can use a sorcerer spell slot to cast any common polymorph battle form spell of the spell slot’s level as if it were a signature spell in your repertoire." };
+            yield return new TextBlock { Id = Guid.Parse("3dadcaa9-af0a-44e3-b7d3-4c14fa961a4d"), Type = TextBlockType.Text, Text = "You hold a deep understanding of the innate fundamental structures of the physical world, and you can enforce your will upon that structure as far as your own blood is concerned. Once per day, you can use a sorcerer spell slot to cast any common polymorph battle form spell of the spell slot's level as if it were a signature spell in your repertoire." };
             yield return new TextBlock { Id = Guid.Parse("1314f69a-ecec-4cf8-8ef4-1c058e9b41b3"), Type = TextBlockType.Text, Text = "If you have (feat: Arcane Evolution), you can also choose from any battle form spell in your spellbook. If you have (feat: Primal Evolution), you can (activity: Cast a Spell) listed in that feat using the extra spell slot the feat grants (instead of a sorcerer spell slot)." };
         }
 

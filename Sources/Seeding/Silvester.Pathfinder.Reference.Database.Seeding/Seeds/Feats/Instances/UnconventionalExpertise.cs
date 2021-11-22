@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f178d071-b715-4b47-9851-29f210474501"), Type = TextBlockType.Text, Text = "You’ve continued to advance your powers using your unconventional weapon. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency in the weapon you chose for (feat: Unconventional Weaponry)." };
+            yield return new TextBlock { Id = Guid.Parse("f178d071-b715-4b47-9851-29f210474501"), Type = TextBlockType.Text, Text = "You've continued to advance your powers using your unconventional weapon. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency in the weapon you chose for (feat: Unconventional Weaponry)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

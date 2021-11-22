@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("af924638-0cce-4fbd-b764-eb4e4de6a0aa"), Type = TextBlockType.Text, Text = "You grace the target’s mind, boosting its mental defenses and healing its wounds. The target regains 1d10+4 Hit Points when you Cast the Spell and gains a +2 status bonus to saves against mental effects for the duration." };
+            yield return new TextBlock { Id = Guid.Parse("af924638-0cce-4fbd-b764-eb4e4de6a0aa"), Type = TextBlockType.Text, Text = "You grace the target's mind, boosting its mental defenses and healing its wounds. The target regains 1d10+4 Hit Points when you Cast the Spell and gains a +2 status bonus to saves against mental effects for the duration." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -56,8 +56,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
 
         protected override IEnumerable<TextBlock> GetRoutineDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("5bfc3074-35e2-4406-bcd4-152b4c8f3069"), Type = TextBlockType.Text, Text = "Each decoration uses 3 of the trap’s actions each turn, and the trap loses 3 actions each turn for every decoration that is disabled. A decoration uses its first action to move its cloud of objects up to 200 feet, its second action to make the objects Strike, and its third action to add more objects to the cloud, increasing its damage by 1d12 (to a maximum of 4d12+10). If a decoration’s cloud is already at maximum damage, it does nothing with its third action." };
-            yield return new TextBlock { Id = Guid.Parse("3564caf0-6c49-4cff-9e37-0cfdc2f57bf2"), Type = TextBlockType.Text, Text = "If a decoration’s cloud has been destroyed, the decoration instead spends its first action to create a new cloud of objects inside the room (using the starting damage value) and then its second and third actions to have the cloud move and Strike." };
+            yield return new TextBlock { Id = Guid.Parse("5bfc3074-35e2-4406-bcd4-152b4c8f3069"), Type = TextBlockType.Text, Text = "Each decoration uses 3 of the trap's actions each turn, and the trap loses 3 actions each turn for every decoration that is disabled. A decoration uses its first action to move its cloud of objects up to 200 feet, its second action to make the objects Strike, and its third action to add more objects to the cloud, increasing its damage by 1d12 (to a maximum of 4d12+10). If a decoration's cloud is already at maximum damage, it does nothing with its third action." };
+            yield return new TextBlock { Id = Guid.Parse("3564caf0-6c49-4cff-9e37-0cfdc2f57bf2"), Type = TextBlockType.Text, Text = "If a decoration's cloud has been destroyed, the decoration instead spends its first action to create a new cloud of objects inside the room (using the starting damage value) and then its second and third actions to have the cloud move and Strike." };
         }
 
         protected override IEnumerable<HazardAction> GetActions()
@@ -71,7 +71,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("76ef593c-5381-4d39-8935-56aad69cdecf"), Type = Utilities.Text.TextBlockType.Text, Text = "Each telekinetic decoration constructs a cloud of objects in the room (three clouds total) and the trap rolls initiative. The creatures in the room when the trap is triggered become the trap’s targets, regardless of whether they leave the room or other creatures later enter the room. Each decoration targets a different creature if possible. A target creature that moves at least 1 mile from the trap ceases being a target, at which point the decoration designates a new target." },
+                    new TextBlock { Id = Guid.Parse("76ef593c-5381-4d39-8935-56aad69cdecf"), Type = Utilities.Text.TextBlockType.Text, Text = "Each telekinetic decoration constructs a cloud of objects in the room (three clouds total) and the trap rolls initiative. The creatures in the room when the trap is triggered become the trap's targets, regardless of whether they leave the room or other creatures later enter the room. Each decoration targets a different creature if possible. A target creature that moves at least 1 mile from the trap ceases being a target, at which point the decoration designates a new target." },
                 },
                 Effects = new HazardActionEffect[]
                 {

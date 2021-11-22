@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
 
         protected override IEnumerable<TextBlock> GetRoutineDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("bb0601b7-7b22-47fc-a985-a53eccad97a2"), Type = TextBlockType.Text, Text = "The trap uses its first action to make a spinning blade Strike against each adjacent creature, its second action to move straight in a random direction (roll 1d4 to determine the direction), and its third action to make a spinning blade Strike against each adjacent creature. This trap doesn’t take a multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("bb0601b7-7b22-47fc-a985-a53eccad97a2"), Type = TextBlockType.Text, Text = "The trap uses its first action to make a spinning blade Strike against each adjacent creature, its second action to move straight in a random direction (roll 1d4 to determine the direction), and its third action to make a spinning blade Strike against each adjacent creature. This trap doesn't take a multiple attack penalty." };
         }
 
         protected override IEnumerable<HazardAction> GetActions()

@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8d05189a-7002-49b1-bfea-fddf7cd1e7c3"), Type = TextBlockType.Text, Text = "You emanate a shimmering aura of protective magic. You and any allies in the area gain a +1 status bonus to AC. Each time you Sustain the Spell, the emanation’s radius increases by 5 feet, to a maximum of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("8d05189a-7002-49b1-bfea-fddf7cd1e7c3"), Type = TextBlockType.Text, Text = "You emanate a shimmering aura of protective magic. You and any allies in the area gain a +1 status bonus to AC. Each time you Sustain the Spell, the emanation's radius increases by 5 feet, to a maximum of 30 feet." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("63354352-363e-44fa-9995-60ada027888b"), Type = TextBlockType.Text, Text = "When you shield your ally against an attack, you call upon your power to protect your ally further. You use the (feat: Shield Block) reaction to prevent damage to an ally and also use your champion’s reaction against the foe that attacked your ally." };
+            yield return new TextBlock { Id = Guid.Parse("63354352-363e-44fa-9995-60ada027888b"), Type = TextBlockType.Text, Text = "When you shield your ally against an attack, you call upon your power to protect your ally further. You use the (feat: Shield Block) reaction to prevent damage to an ally and also use your champion's reaction against the foe that attacked your ally." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

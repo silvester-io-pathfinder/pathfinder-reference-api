@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("48113ea8-b072-49f0-92b2-ada6a7733c11"), Type = TextBlockType.Text, Text = "You call upon the beyond to guide your route. When you Cast this Spell, choose a destination; you receive an inspired route to that destination, allowing you and allies who travel overland with you to reduce the movement penalty from difficult terrain by half for the duration, as long as you don’t deviate from the inspired route. This doesn’t have any effect on movement during encounters. If you use this ability again before the duration is over, this effect ends and is replaced by that of the new route." };
+            yield return new TextBlock { Id = Guid.Parse("48113ea8-b072-49f0-92b2-ada6a7733c11"), Type = TextBlockType.Text, Text = "You call upon the beyond to guide your route. When you Cast this Spell, choose a destination; you receive an inspired route to that destination, allowing you and allies who travel overland with you to reduce the movement penalty from difficult terrain by half for the duration, as long as you don't deviate from the inspired route. This doesn't have any effect on movement during encounters. If you use this ability again before the duration is over, this effect ends and is replaced by that of the new route." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

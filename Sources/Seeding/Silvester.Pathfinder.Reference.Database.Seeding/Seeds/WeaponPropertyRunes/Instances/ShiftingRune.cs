@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 Id = Guid.Parse("5be2c09b-99e6-4d4a-ab43-90c92dce906b"),
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 Name = "Interact",
-                Effect = "The weapon takes the shape of another melee weapon that requires the same number of hands to wield. The weapon’s runes and any precious material it’s made of apply to the weapon’s new shape. Any property runes that can’t apply to the new form are suppressed until the item takes a shape to which they can apply."
+                Effect = "The weapon takes the shape of another melee weapon that requires the same number of hands to wield. The weapon's runes and any precious material it's made of apply to the weapon's new shape. Any property runes that can't apply to the new form are suppressed until the item takes a shape to which they can apply."
             };
         }
 

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ba2d399c-2fa0-453d-9c98-adde1e895203"), Type = TextBlockType.Text, Text = "When you (action: Strike) with a thrown weapon, the weapon’s range increment increases 10 feet." };
+            yield return new TextBlock { Id = Guid.Parse("ba2d399c-2fa0-453d-9c98-adde1e895203"), Type = TextBlockType.Text, Text = "When you (action: Strike) with a thrown weapon, the weapon's range increment increases 10 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

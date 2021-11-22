@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bef99abe-5e00-4dea-891b-db6d3a95c243"), Type = TextBlockType.Text, Text = "You have a keen sense for avoiding spurious lines of inquiry. When you (feat: Pursue a Lead), the GM tells you if the lead you chose is inconsequential. For example, if you found a splatter of gray mud on the wall, thought it was suspicious, and (feat: Pursued it as a Lead | Pursue a Lead), the GM would tell you if there was no greater mystery related to it. When the GM tells you a lead is inconsequential, you can decline to (feat: Pursue the Lead | Pursue a Lead), keeping any leads you were already pursuing. You still can&#39;t use (feat: Pursue a Lead) again for 10 minutes, as normal." };
+            yield return new TextBlock { Id = Guid.Parse("bef99abe-5e00-4dea-891b-db6d3a95c243"), Type = TextBlockType.Text, Text = "You have a keen sense for avoiding spurious lines of inquiry. When you (feat: Pursue a Lead), the GM tells you if the lead you chose is inconsequential. For example, if you found a splatter of gray mud on the wall, thought it was suspicious, and (feat: Pursued it as a Lead | Pursue a Lead), the GM would tell you if there was no greater mystery related to it. When the GM tells you a lead is inconsequential, you can decline to (feat: Pursue the Lead | Pursue a Lead), keeping any leads you were already pursuing. You still can't use (feat: Pursue a Lead) again for 10 minutes, as normal." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

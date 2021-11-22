@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
             {
                 Id = ID,
                 Name = "Scarlet Leprosy",
-                Description = "Scarlet leprosy is widely feared for its devastating effects, crushing bones and organs while making recovery nearly impossible.Damage taken from scarlet leprosy can’t be healed until the disease is cured.",
+                Description = "Scarlet leprosy is widely feared for its devastating effects, crushing bones and organs while making recovery nearly impossible.Damage taken from scarlet leprosy can't be healed until the disease is cured.",
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = 19,
                 Onset = "1 Day"

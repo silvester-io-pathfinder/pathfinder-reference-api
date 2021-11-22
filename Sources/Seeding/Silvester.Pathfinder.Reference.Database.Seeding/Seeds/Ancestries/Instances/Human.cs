@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
                 Name = "Human", 
                 BaseHealth = 8, 
                 RarityId = Rarities.Instances.Common.ID, 
-                SampleNames = "A variety of human ethnic groups—many of which have origins on distant lands— populates the continents bordering Golarion’s Inner Sea. Human characters can be any of these ethnicities, regardless of what lands they call home. Characters of human ethnicities in the Inner Sea region speak Common (also known as Taldane), and some ethnicities grant access to an uncommon language."
+                SampleNames = "A variety of human ethnic groups—many of which have origins on distant lands— populates the continents bordering Golarion's Inner Sea. Human characters can be any of these ethnicities, regardless of what lands they call home. Characters of human ethnicities in the Inner Sea region speak Common (also known as Taldane), and some ethnicities grant access to an uncommon language."
             };
         }
 
@@ -34,8 +34,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
 
         protected override IEnumerable<TextBlock> GetDescription()
         {
-            yield return new TextBlock { Id = Guid.Parse("241bc818-ae5d-4439-a960-b6719498f96a"), Type = TextBlockType.Text, Text = "As unpredictable and varied as any of Golarion’s peoples, humans have exceptional drive and the capacity to endure and expand. Though many civilizations thrived before humanity rose to prominence, humans have built some of the greatest and the most terrible societies throughout the course of history, and today they are the most populous people in the realms around the Inner Sea." };
-            yield return new TextBlock { Id = Guid.Parse("33bd5233-6d0e-4962-a515-3a6e511cf4f7"), Type = TextBlockType.Text, Text = "Humans’ ambition, versatility, and exceptional potential have led to their status as the world’s predominant ancestry. Their empires and nations are vast, sprawling things, and their citizens carve names for themselves with the strength of their sword arms and the power of their spells. Humanity is diverse and tumultuous, running the gamut from nomadic to imperial, sinister to saintly. Many of them venture forth to explore, to map the expanse of the multiverse, to search for long-lost treasure, or to lead mighty armies to conquer their neighbors—for no better reason than because they can." };
+            yield return new TextBlock { Id = Guid.Parse("241bc818-ae5d-4439-a960-b6719498f96a"), Type = TextBlockType.Text, Text = "As unpredictable and varied as any of Golarion's peoples, humans have exceptional drive and the capacity to endure and expand. Though many civilizations thrived before humanity rose to prominence, humans have built some of the greatest and the most terrible societies throughout the course of history, and today they are the most populous people in the realms around the Inner Sea." };
+            yield return new TextBlock { Id = Guid.Parse("33bd5233-6d0e-4962-a515-3a6e511cf4f7"), Type = TextBlockType.Text, Text = "Humans' ambition, versatility, and exceptional potential have led to their status as the world's predominant ancestry. Their empires and nations are vast, sprawling things, and their citizens carve names for themselves with the strength of their sword arms and the power of their spells. Humanity is diverse and tumultuous, running the gamut from nomadic to imperial, sinister to saintly. Many of them venture forth to explore, to map the expanse of the multiverse, to search for long-lost treasure, or to lead mighty armies to conquer their neighbors—for no better reason than because they can." };
             yield return new TextBlock { Id = Guid.Parse("7deb8209-6f39-4bf8-9fd1-e9f1d87027de"), Type = TextBlockType.Text, Text = "If you want a character who can be just about anything, you should play a human." };
         }
 
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
         {
             yield return new TextBlock { Id = Guid.Parse("8ac7ddf2-796d-4606-ae50-bde17ae595ae"), Type = TextBlockType.Enumeration, Text = "Respect your flexibility, your adaptability, and—in most cases— your open‑mindedness. " };
             yield return new TextBlock { Id = Guid.Parse("e2e04343-2422-492b-af78-0867a69457c8"), Type = TextBlockType.Enumeration, Text = "Distrust your intentions, fearing you seek only power or wealth. " };
-            yield return new TextBlock { Id = Guid.Parse("aa77be0a-418b-406e-a470-e482656278c9"), Type = TextBlockType.Enumeration, Text = "Aren’t sure what to expect from you and are hesitant to assume your intentions." };
+            yield return new TextBlock { Id = Guid.Parse("aa77be0a-418b-406e-a470-e482656278c9"), Type = TextBlockType.Enumeration, Text = "Aren't sure what to expect from you and are hesitant to assume your intentions." };
         }
     
         protected override IEnumerable<TextBlock> GetPhysicalDescription()

@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
                 Id = Guid.Parse("4116ff11-b12f-409f-8080-bf1f94d58bcf"),
                 
                 Success = "The target is unaffected.",
-                Failure = "The target is dazed and can barely vocalize. It’s stunned 1 and its speech is raspy and hard to understand. It must succeed at a DC 11 flat check to use (trait: linguistic) actions or supply verbal spellcasting components until the end of its next turn.",
+                Failure = "The target is dazed and can barely vocalize. It's stunned 1 and its speech is raspy and hard to understand. It must succeed at a DC 11 flat check to use (trait: linguistic) actions or supply verbal spellcasting components until the end of its next turn.",
                 CriticalFailure = "As failure, but the creature is stunned 3 instead of stunned 1.", 
             };
         }

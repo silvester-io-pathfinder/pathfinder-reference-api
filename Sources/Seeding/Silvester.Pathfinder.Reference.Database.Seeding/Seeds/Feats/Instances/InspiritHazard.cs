@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c21253ec-28e6-4a62-9230-2c63200b0862"), Type = TextBlockType.Text, Text = "You awaken a spirit of creation within the hazard. You learn the hazard’s effects. Once in the next 10 minutes, when you observe a creature take an action that would trigger one of the hazard’s reactions or free actions if you hadn’t (action: Disabled | Disable a Device) it, you can use a reaction to rearm the hazard, causing the observed creature to trigger it immediately." };
+            yield return new TextBlock { Id = Guid.Parse("c21253ec-28e6-4a62-9230-2c63200b0862"), Type = TextBlockType.Text, Text = "You awaken a spirit of creation within the hazard. You learn the hazard's effects. Once in the next 10 minutes, when you observe a creature take an action that would trigger one of the hazard's reactions or free actions if you hadn't (action: Disabled | Disable a Device) it, you can use a reaction to rearm the hazard, causing the observed creature to trigger it immediately." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

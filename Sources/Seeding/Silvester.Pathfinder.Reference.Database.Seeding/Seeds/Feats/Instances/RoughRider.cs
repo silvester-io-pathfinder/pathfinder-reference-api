@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1969af56-a7c9-4151-9c2a-db0d0db59dc4"), Type = TextBlockType.Text, Text = "You are especially good at riding traditional goblin mounts. You gain the (feat: Ride) feat, even if you don’t meet the prerequisites. You gain a +1 circumstance bonus to Nature checks to use (action: Command an Animal) on a goblin dog or wolf mount. You can always select a wolf as your animal companion, even if you would usually select an animal companion with the mount special ability, such as for a champion’s steed ally." };
+            yield return new TextBlock { Id = Guid.Parse("1969af56-a7c9-4151-9c2a-db0d0db59dc4"), Type = TextBlockType.Text, Text = "You are especially good at riding traditional goblin mounts. You gain the (feat: Ride) feat, even if you don't meet the prerequisites. You gain a +1 circumstance bonus to Nature checks to use (action: Command an Animal) on a goblin dog or wolf mount. You can always select a wolf as your animal companion, even if you would usually select an animal companion with the mount special ability, such as for a champion's steed ally." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Stats.Instances
                 Id = ID,
                 Name = "Charisma", 
                 Abbreviation = "CHA",
-                Description = "Charisma measures your character’s personal magnetism and strength of personality. A high Charisma score helps you influence the thoughts and moods of others." 
+                Description = "Charisma measures your character's personal magnetism and strength of personality. A high Charisma score helps you influence the thoughts and moods of others." 
             };
         }
     }

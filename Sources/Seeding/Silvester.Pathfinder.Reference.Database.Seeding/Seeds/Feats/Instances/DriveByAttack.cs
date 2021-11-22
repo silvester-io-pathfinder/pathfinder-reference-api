@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("29dafc95-42b1-4923-80c6-9c93128d159e"), Type = TextBlockType.Text, Text = "You can smoothly line up an attack without disrupting your control. You Drive, gaining the effects of the Drive action for the same number of actions you spent to Drive-By Attack. At any point during your vehicle’s movement, you (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("29dafc95-42b1-4923-80c6-9c93128d159e"), Type = TextBlockType.Text, Text = "You can smoothly line up an attack without disrupting your control. You Drive, gaining the effects of the Drive action for the same number of actions you spent to Drive-By Attack. At any point during your vehicle's movement, you (action: Strike)." };
             yield return new TextBlock { Id = Guid.Parse("f3a23bb0-0b52-4dc9-8cf3-23204cb47efb"), Type = TextBlockType.Text, Text = "You may use ONE-ACTION to THREE-ACTIONS when performing this activity." };
         }
 

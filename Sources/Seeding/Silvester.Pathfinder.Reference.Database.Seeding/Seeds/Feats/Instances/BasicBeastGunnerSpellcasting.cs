@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("073160f8-3c22-4381-b338-b2da96bbff77"), Type = TextBlockType.Text, Text = "You’ve unlocked the first secrets of beast guns, granting you the power of their synergistic magic. You gain a 1st-level spell slot. At 6th level, you gain a 2nd-level spell slot and you can select one spell from your repertoire as a signature spell. At 8th level, you gain a 3rd-level spell slot. Each time you gain a spell slot of a new level from this archetype, add a spell of the appropriate spell level to your repertoire, either a common spell of your chosen tradition or another spell of that tradition you’ve learned or discovered." };
+            yield return new TextBlock { Id = Guid.Parse("073160f8-3c22-4381-b338-b2da96bbff77"), Type = TextBlockType.Text, Text = "You've unlocked the first secrets of beast guns, granting you the power of their synergistic magic. You gain a 1st-level spell slot. At 6th level, you gain a 2nd-level spell slot and you can select one spell from your repertoire as a signature spell. At 8th level, you gain a 3rd-level spell slot. Each time you gain a spell slot of a new level from this archetype, add a spell of the appropriate spell level to your repertoire, either a common spell of your chosen tradition or another spell of that tradition you've learned or discovered." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

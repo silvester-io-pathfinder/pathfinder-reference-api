@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dc87ff88-71ef-4632-96d7-e62f72759e82"), Type = TextBlockType.Text, Text = "Your eidolon makes a melee (action: Strike) against the triggering creature. If the attack is a critical hit and the trigger was a (trait: manipulate) action, your eidolon disrupts that action. This (action: Strike) doesn’t count toward your multiple attack penalty, and your multiple attack penalty doesn’t apply to this (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("dc87ff88-71ef-4632-96d7-e62f72759e82"), Type = TextBlockType.Text, Text = "Your eidolon makes a melee (action: Strike) against the triggering creature. If the attack is a critical hit and the trigger was a (trait: manipulate) action, your eidolon disrupts that action. This (action: Strike) doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this (action: Strike)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

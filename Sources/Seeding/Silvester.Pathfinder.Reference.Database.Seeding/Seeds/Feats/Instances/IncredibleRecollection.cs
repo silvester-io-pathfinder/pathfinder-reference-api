@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("30e3c725-c028-4742-93c3-d7fac103604e"), Type = TextBlockType.Text, Text = "You can sift through knowledge locked within your mind at an incredible pace. You instantly use up to 5 (action: Recall Knowledge) actions. If you have any special abilities or free actions that would normally be triggered when you (action: Recall Knowledge), you can&#39;t use them for these actions." };
+            yield return new TextBlock { Id = Guid.Parse("30e3c725-c028-4742-93c3-d7fac103604e"), Type = TextBlockType.Text, Text = "You can sift through knowledge locked within your mind at an incredible pace. You instantly use up to 5 (action: Recall Knowledge) actions. If you have any special abilities or free actions that would normally be triggered when you (action: Recall Knowledge), you can't use them for these actions." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

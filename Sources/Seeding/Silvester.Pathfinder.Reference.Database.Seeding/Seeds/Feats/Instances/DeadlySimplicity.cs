@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81eed2c4-d305-48eb-a625-d5f0dd893e26"), Type = TextBlockType.Text, Text = "Your deity’s weapon is especially powerful in your hands. When you are wielding your deity’s favored weapon, increase the damage die size of that weapon by one step." };
-            yield return new TextBlock { Id = Guid.Parse("b2cab529-3f86-46c8-bc68-0e5f06d181ce"), Type = TextBlockType.Text, Text = "If your deity’s favored weapon is an unarmed attack (such as a fist, if you worship Irori) and its damage die is smaller than d6, instead increase its damage die size to d6." };
+            yield return new TextBlock { Id = Guid.Parse("81eed2c4-d305-48eb-a625-d5f0dd893e26"), Type = TextBlockType.Text, Text = "Your deity's weapon is especially powerful in your hands. When you are wielding your deity's favored weapon, increase the damage die size of that weapon by one step." };
+            yield return new TextBlock { Id = Guid.Parse("b2cab529-3f86-46c8-bc68-0e5f06d181ce"), Type = TextBlockType.Text, Text = "If your deity's favored weapon is an unarmed attack (such as a fist, if you worship Irori) and its damage die is smaller than d6, instead increase its damage die size to d6." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

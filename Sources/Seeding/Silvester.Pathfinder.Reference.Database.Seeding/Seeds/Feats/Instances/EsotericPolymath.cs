@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9101d048-c225-49e4-aef4-5c9633efb137"), Type = TextBlockType.Text, Text = "You keep a book of occult spells, similar to a wizard’s (item: spellbook), and can use its spells to supplement your spell repertoire. Add all the spells in your repertoire to this book for free. You can use the Occultism skill to (action: Learn Spells | Learn a Spell) and add them to your (item: spellbook) by paying the appropriate cost, similar to a wizard." };
-            yield return new TextBlock { Id = Guid.Parse("27c003fd-bf33-4626-bd80-24dfd2ea11ad"), Type = TextBlockType.Text, Text = "During your daily preparations, choose any one spell from your book of occult spells. If that spell is already in your spell repertoire, you can treat it as an additional signature spell that day. If it isn’t in your repertoire, treat it as though it were until your next daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("9101d048-c225-49e4-aef4-5c9633efb137"), Type = TextBlockType.Text, Text = "You keep a book of occult spells, similar to a wizard's (item: spellbook), and can use its spells to supplement your spell repertoire. Add all the spells in your repertoire to this book for free. You can use the Occultism skill to (action: Learn Spells | Learn a Spell) and add them to your (item: spellbook) by paying the appropriate cost, similar to a wizard." };
+            yield return new TextBlock { Id = Guid.Parse("27c003fd-bf33-4626-bd80-24dfd2ea11ad"), Type = TextBlockType.Text, Text = "During your daily preparations, choose any one spell from your book of occult spells. If that spell is already in your spell repertoire, you can treat it as an additional signature spell that day. If it isn't in your repertoire, treat it as though it were until your next daily preparations." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec685595-6922-494c-aea3-fe35f31a4314"), Type = TextBlockType.Text, Text = "You aim for your prey’s weak spots, making your shot more challenging but dealing more damage if you hit. Make a ranged (action: Strike) against your hunted prey at a -2 penalty. You gain a +4 circumstance bonus to damage on that (action: Strike). This bonus increases to +6 at 11th level and +8 at 15th level." };
+            yield return new TextBlock { Id = Guid.Parse("ec685595-6922-494c-aea3-fe35f31a4314"), Type = TextBlockType.Text, Text = "You aim for your prey's weak spots, making your shot more challenging but dealing more damage if you hit. Make a ranged (action: Strike) against your hunted prey at a -2 penalty. You gain a +4 circumstance bonus to damage on that (action: Strike). This bonus increases to +6 at 11th level and +8 at 15th level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

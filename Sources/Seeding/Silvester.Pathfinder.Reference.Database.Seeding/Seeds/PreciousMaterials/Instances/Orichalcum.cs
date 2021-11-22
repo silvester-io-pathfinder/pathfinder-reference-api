@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PreciousMaterial
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("335d178d-d113-456c-a618-f8dd8c50fe7f"), Type = TextBlockType.Text, Text = "The most rare and valuable skymetal, orichalcum is coveted for its incredible time-related magical properties. This dull, coppery metal isn’t as physically sturdy as adamantine, but orichalcum’s time-bending properties protect it, granting it greater Hardness and Hit Points. If an orichalcum item takes damage but isn’t destroyed, it repairs itself completely 24 hours later." };
+            yield return new TextBlock { Id = Guid.Parse("335d178d-d113-456c-a618-f8dd8c50fe7f"), Type = TextBlockType.Text, Text = "The most rare and valuable skymetal, orichalcum is coveted for its incredible time-related magical properties. This dull, coppery metal isn't as physically sturdy as adamantine, but orichalcum's time-bending properties protect it, granting it greater Hardness and Hit Points. If an orichalcum item takes damage but isn't destroyed, it repairs itself completely 24 hours later." };
         }
 
         protected override IEnumerable<PreciousMaterialItem> GetItems()

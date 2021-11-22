@@ -21,8 +21,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Conditions.Insta
 
         public override IEnumerable<TextBlock> GetConditionDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b53d24af-320c-4f46-b25a-d65dd014713b"), Type = Utilities.Text.TextBlockType.Text, Text = "You’re tired and can’t summon much energy. You take a –1 status penalty to AC and saving throws. You can’t use exploration activities performed while traveling, such as those on pages 479–480." };
-            yield return new TextBlock { Id = Guid.Parse("ab4a8033-4de6-4f8c-bd8c-8576da289805"), Type = Utilities.Text.TextBlockType.Text, Text = "You recover from fatigue after a full night’s rest." };
+            yield return new TextBlock { Id = Guid.Parse("b53d24af-320c-4f46-b25a-d65dd014713b"), Type = Utilities.Text.TextBlockType.Text, Text = "You're tired and can't summon much energy. You take a –1 status penalty to AC and saving throws. You can't use exploration activities performed while traveling, such as those on pages 479–480." };
+            yield return new TextBlock { Id = Guid.Parse("ab4a8033-4de6-4f8c-bd8c-8576da289805"), Type = Utilities.Text.TextBlockType.Text, Text = "You recover from fatigue after a full night's rest." };
         }
 
         public override SourcePage? GetSourcePage()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a1aa06c8-ef2a-4f98-a573-de30b99d20e2"), Type = TextBlockType.Text, Text = "Your powerful legs allow you to make sudden and dramatic leaps. You can (action: Leap) as a 2-action activity to double the distance you can (action: Leap) vertically, or (action: Leap) as a 3-action activity to triple the distance you can (action: Leap) vertically. You don&#39;t automatically fail (action: Long Jumps | Long Jump) for jumping in a different direction than your (action: Stride)." };
+            yield return new TextBlock { Id = Guid.Parse("a1aa06c8-ef2a-4f98-a573-de30b99d20e2"), Type = TextBlockType.Text, Text = "Your powerful legs allow you to make sudden and dramatic leaps. You can (action: Leap) as a 2-action activity to double the distance you can (action: Leap) vertically, or (action: Leap) as a 3-action activity to triple the distance you can (action: Leap) vertically. You don't automatically fail (action: Long Jumps | Long Jump) for jumping in a different direction than your (action: Stride)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

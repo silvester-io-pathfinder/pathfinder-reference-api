@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6470b54-3138-4b7f-80f1-dbd5be077a09"), Type = TextBlockType.Text, Text = "You create a false image that fools any attempts to scry on an area. Any scrying spell sees, hears, smells, and otherwise detects whatever you wish within the area, rather than what is actually in the area. You can Sustain the Spell each round to change the illusion as you desire, including playing out a complex scene. If the scrying spell is of a higher level than false vision, the scryer can attempt a Perception check to disbelieve the illusion, though even if they’re successful, they can’t learn what’s truly going on in the area." };
+            yield return new TextBlock { Id = Guid.Parse("a6470b54-3138-4b7f-80f1-dbd5be077a09"), Type = TextBlockType.Text, Text = "You create a false image that fools any attempts to scry on an area. Any scrying spell sees, hears, smells, and otherwise detects whatever you wish within the area, rather than what is actually in the area. You can Sustain the Spell each round to change the illusion as you desire, including playing out a complex scene. If the scrying spell is of a higher level than false vision, the scryer can attempt a Perception check to disbelieve the illusion, though even if they're successful, they can't learn what's truly going on in the area." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

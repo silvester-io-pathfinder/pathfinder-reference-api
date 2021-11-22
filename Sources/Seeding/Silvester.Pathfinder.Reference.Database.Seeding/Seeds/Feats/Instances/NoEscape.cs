@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f34d2751-253b-4ed6-81ad-99b5fcde3652"), Type = TextBlockType.Text, Text = "You keep pace with a retreating foe. (Action: Stride) up to your Speed, following the foe and keeping it in reach throughout its movement until it stops moving or you’ve moved your full Speed. You can use No Escape to (Action: Burrow), (Action: Climb), (Action: Fly), or (Action: Swim) instead of (Action: Stride) if you have the corresponding movement type." };
+            yield return new TextBlock { Id = Guid.Parse("f34d2751-253b-4ed6-81ad-99b5fcde3652"), Type = TextBlockType.Text, Text = "You keep pace with a retreating foe. (Action: Stride) up to your Speed, following the foe and keeping it in reach throughout its movement until it stops moving or you've moved your full Speed. You can use No Escape to (Action: Burrow), (Action: Climb), (Action: Fly), or (Action: Swim) instead of (Action: Stride) if you have the corresponding movement type." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

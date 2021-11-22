@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("86d4e976-7881-45a8-9fda-d08a151b5483"), Type = TextBlockType.Text, Text = "You apply esoterica to an adjacent ally’s weapons and body. That ally’s (action: Strikes|Strike) apply the weakness of the subject of your esoterica the same way your (action: Strikes|Strike) do. This benefit ends when (feat: Esoteric Antithesis) ends or you Share Antithesis again. You can’t share a custom weakness you created with (feat: Esoteric Antithesis), only a weakness the creature has normally." };
+            yield return new TextBlock { Id = Guid.Parse("86d4e976-7881-45a8-9fda-d08a151b5483"), Type = TextBlockType.Text, Text = "You apply esoterica to an adjacent ally's weapons and body. That ally's (action: Strikes|Strike) apply the weakness of the subject of your esoterica the same way your (action: Strikes|Strike) do. This benefit ends when (feat: Esoteric Antithesis) ends or you Share Antithesis again. You can't share a custom weakness you created with (feat: Esoteric Antithesis), only a weakness the creature has normally." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

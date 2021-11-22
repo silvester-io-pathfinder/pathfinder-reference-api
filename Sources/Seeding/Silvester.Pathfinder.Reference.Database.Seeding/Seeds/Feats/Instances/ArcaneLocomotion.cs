@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("303af694-d315-49bd-a59b-83cfc633dcef"), Type = TextBlockType.Text, Text = "You’ve modified your body to allow you to augment your movement. You gain either a climb Speed of 20 feet or a swim Speed of 20 feet, your choice." };
+            yield return new TextBlock { Id = Guid.Parse("303af694-d315-49bd-a59b-83cfc633dcef"), Type = TextBlockType.Text, Text = "You've modified your body to allow you to augment your movement. You gain either a climb Speed of 20 feet or a swim Speed of 20 feet, your choice." };
             yield return new TextBlock { Id = Guid.Parse("78be7fe7-df7c-4ee5-8657-ed6ccf2a2233"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("5b9cc408-8895-4858-9e60-788724d5ad4f"), Type = TextBlockType.Text, Text = "~ Enhancement: Your body allows for even further forms of movement. You can either select the option from this feat you haven’t chosen yet (climb Speed or swim Speed), or you can increase your land Speed by 5 feet and increase the Speed you chose from this feat increase to be equal to your adjusted land Speed." };
+            yield return new TextBlock { Id = Guid.Parse("5b9cc408-8895-4858-9e60-788724d5ad4f"), Type = TextBlockType.Text, Text = "~ Enhancement: Your body allows for even further forms of movement. You can either select the option from this feat you haven't chosen yet (climb Speed or swim Speed), or you can increase your land Speed by 5 feet and increase the Speed you chose from this feat increase to be equal to your adjusted land Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

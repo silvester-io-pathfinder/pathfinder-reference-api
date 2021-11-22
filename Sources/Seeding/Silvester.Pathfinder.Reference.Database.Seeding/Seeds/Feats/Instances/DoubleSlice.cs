@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cff12066-c359-446a-90c1-bfde8f6e1dc6"), Type = TextBlockType.Text, Text = "You lash out at your foe with both weapons. Make two (Action: Strikes | Strike), one with each of your two melee weapons, each using your current multiple attack penalty. Both (Action: Strikes | Strike) must have the same target. If the second (Action: Strike) is made with a weapon that doesn’t have the (trait: agile) trait, it takes a -2 penalty." };
+            yield return new TextBlock { Id = Guid.Parse("cff12066-c359-446a-90c1-bfde8f6e1dc6"), Type = TextBlockType.Text, Text = "You lash out at your foe with both weapons. Make two (Action: Strikes | Strike), one with each of your two melee weapons, each using your current multiple attack penalty. Both (Action: Strikes | Strike) must have the same target. If the second (Action: Strike) is made with a weapon that doesn't have the (trait: agile) trait, it takes a -2 penalty." };
             yield return new TextBlock { Id = Guid.Parse("2d596907-f0ff-4d3a-a300-52a4b1ea62ea"), Type = TextBlockType.Text, Text = "If both attacks hit, combine their damage, and then add any other applicable effects from both weapons. You add any precision damage only once, to the attack of your choice. Combine the damage from both (Action: Strikes | Strike) and apply resistances and weaknesses only once. This counts as two attacks when calculating your multiple attack penalty." };
         }
 

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad1c81f7-27da-49ea-b35d-79a3e699f0a3"), Type = TextBlockType.Text, Text = "When you&#39;re on a case, you stay watchful and resolute to avoid tricks your suspect might pull. You gain your circumstance bonus from (feat: Pursue a Lead) on saving throws (and their DCs, as normal) against the subject of a lead, and you can use (feat: Clue In) to assist an ally&#39;s saving throw against that subject." };
+            yield return new TextBlock { Id = Guid.Parse("ad1c81f7-27da-49ea-b35d-79a3e699f0a3"), Type = TextBlockType.Text, Text = "When you're on a case, you stay watchful and resolute to avoid tricks your suspect might pull. You gain your circumstance bonus from (feat: Pursue a Lead) on saving throws (and their DCs, as normal) against the subject of a lead, and you can use (feat: Clue In) to assist an ally's saving throw against that subject." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

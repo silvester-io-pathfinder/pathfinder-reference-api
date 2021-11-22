@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7814c7cb-d635-4d14-87aa-c6a958c29337"), Type = TextBlockType.Text, Text = "You gain resistance 15 to acid, cold, electricity, or fire damage from the triggering effect (one type of your choice). The resistance applies only to the triggering effect’s initial damage." };
+            yield return new TextBlock { Id = Guid.Parse("7814c7cb-d635-4d14-87aa-c6a958c29337"), Type = TextBlockType.Text, Text = "You gain resistance 15 to acid, cold, electricity, or fire damage from the triggering effect (one type of your choice). The resistance applies only to the triggering effect's initial damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("f1949fc9-1c90-4552-88bb-6ad5613b8a53"), Type = TextBlockType.Text, Text = "~ Access: Erutaki ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("ce40079b-7087-4be8-8738-9314a42254f3"), Type = TextBlockType.Text, Text = "You know the truth behind old stories that tell of sending a fetish of bone and sinew to seek vengeance. These old magics allow you to conjure constructs with ease. Add the (spell: summon construct) spell to your spell list. The constructs you summon have a distinct ivory scrimshaw appearance, and if you include a drop of blood, lock of hair, or other portion of a creature’s body as part of the spell’s material component, the summoned construct gains a +4 status bonus to Perception checks to sense or locate that creature." };
+            yield return new TextBlock { Id = Guid.Parse("ce40079b-7087-4be8-8738-9314a42254f3"), Type = TextBlockType.Text, Text = "You know the truth behind old stories that tell of sending a fetish of bone and sinew to seek vengeance. These old magics allow you to conjure constructs with ease. Add the (spell: summon construct) spell to your spell list. The constructs you summon have a distinct ivory scrimshaw appearance, and if you include a drop of blood, lock of hair, or other portion of a creature's body as part of the spell's material component, the summoned construct gains a +4 status bonus to Perception checks to sense or locate that creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

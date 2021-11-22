@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("847816ff-1b69-4955-9662-349d7cb850ea"), Type = TextBlockType.Text, Text = "You remember more about your previous incarnations than most leshys. During your daily preparations, you can meditate upon fragmentary memories of your past lives to gain the trained proficiency rank in one skill of your choice. This proficiency lasts until you prepare again. Since this proficiency is temporary, you can’t use it as a prerequisite for a skill increase or a permanent character option like a feat." };
+            yield return new TextBlock { Id = Guid.Parse("847816ff-1b69-4955-9662-349d7cb850ea"), Type = TextBlockType.Text, Text = "You remember more about your previous incarnations than most leshys. During your daily preparations, you can meditate upon fragmentary memories of your past lives to gain the trained proficiency rank in one skill of your choice. This proficiency lasts until you prepare again. Since this proficiency is temporary, you can't use it as a prerequisite for a skill increase or a permanent character option like a feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

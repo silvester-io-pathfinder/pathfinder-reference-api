@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c792f15d-74b1-4395-be5c-13cbaf1a0f09"), Type = TextBlockType.Text, Text = "You attempt to (action: Disarm) the creature whose attack you blocked of the weapon they attacked you with. You can do so even if you don’t have a hand free." };
+            yield return new TextBlock { Id = Guid.Parse("c792f15d-74b1-4395-be5c-13cbaf1a0f09"), Type = TextBlockType.Text, Text = "You attempt to (action: Disarm) the creature whose attack you blocked of the weapon they attacked you with. You can do so even if you don't have a hand free." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

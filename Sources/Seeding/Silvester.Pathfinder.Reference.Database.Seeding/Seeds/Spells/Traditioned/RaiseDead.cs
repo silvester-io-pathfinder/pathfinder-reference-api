@@ -28,8 +28,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("78794f12-b6af-40f2-a60e-55168b03acce"), Type = TextBlockType.Text, Text = "You attempt to call forth the dead creature’s soul, requiring the creature’s body to be present and relatively intact. The creature must have died within the past 3 days. If Pharasma has decided that the creature’s time has come (at the GM’s discretion), or if the creature doesn’t wish to return to life, this spell automatically fails, but the diamonds aren’t consumed in the casting." };
-            yield return new TextBlock { Id = Guid.Parse("16d7d4b6-39dc-407b-8270-4c9143b9e312"), Type = TextBlockType.Text, Text = "If the spell is successful, the creature returns to life with 1 Hit Point, no spells prepared or spell slots available, no points in any pools or any other daily resources, and still with any long-term debilitations of the old body. The time spent in the Boneyard leaves the target temporarily debilitated, making it clumsy 2, drained 2, and enfeebled 2 for 1 week; these conditions can’t be removed or reduced by any means until the week has passed. The creature is also permanently changed by its time in the afterlife, such as a slight personality shift, a streak of white in the hair, or a strange new birthmark." };
+            yield return new TextBlock { Id = Guid.Parse("78794f12-b6af-40f2-a60e-55168b03acce"), Type = TextBlockType.Text, Text = "You attempt to call forth the dead creature's soul, requiring the creature's body to be present and relatively intact. The creature must have died within the past 3 days. If Pharasma has decided that the creature's time has come (at the GM's discretion), or if the creature doesn't wish to return to life, this spell automatically fails, but the diamonds aren't consumed in the casting." };
+            yield return new TextBlock { Id = Guid.Parse("16d7d4b6-39dc-407b-8270-4c9143b9e312"), Type = TextBlockType.Text, Text = "If the spell is successful, the creature returns to life with 1 Hit Point, no spells prepared or spell slots available, no points in any pools or any other daily resources, and still with any long-term debilitations of the old body. The time spent in the Boneyard leaves the target temporarily debilitated, making it clumsy 2, drained 2, and enfeebled 2 for 1 week; these conditions can't be removed or reduced by any means until the week has passed. The creature is also permanently changed by its time in the afterlife, such as a slight personality shift, a streak of white in the hair, or a strange new birthmark." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "7th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("44a5610f-9ff1-458a-b7e7-c211dfdf6726"), Type = TextBlockType.Text, Text = "The maximum level of the target increases to 15. The cost increases to the target’s level (minimum 1) × 400 gp." }
+                    new TextBlock { Id = Guid.Parse("44a5610f-9ff1-458a-b7e7-c211dfdf6726"), Type = TextBlockType.Text, Text = "The maximum level of the target increases to 15. The cost increases to the target's level (minimum 1) × 400 gp." }
                 }
             };
 
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "8th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("001c124a-51d9-41aa-a472-40fe5e80d999"), Type = TextBlockType.Text, Text = "The maximum level of the target increases to 17. The cost increases to the target’s level (minimum 1) × 800 gp." }
+                    new TextBlock { Id = Guid.Parse("001c124a-51d9-41aa-a472-40fe5e80d999"), Type = TextBlockType.Text, Text = "The maximum level of the target increases to 17. The cost increases to the target's level (minimum 1) × 800 gp." }
                 }
             };
 
@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("234bd077-bb66-406b-9d03-919bf1c096aa"), Type = TextBlockType.Text, Text = "The maximum level of the target increases to 19. The cost increases to the target’s level (minimum 1) × 1,600 gp." }
+                    new TextBlock { Id = Guid.Parse("234bd077-bb66-406b-9d03-919bf1c096aa"), Type = TextBlockType.Text, Text = "The maximum level of the target increases to 19. The cost increases to the target's level (minimum 1) × 1,600 gp." }
                 }
             };
 
@@ -70,7 +70,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "10th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("95a1dd3a-32a2-44dc-b7b6-4eb8ca66879d"), Type = TextBlockType.Text, Text = "The maximum level of the target increases to 21. The cost increases to the target’s level (minimum 1) × 3,200 gp." }
+                    new TextBlock { Id = Guid.Parse("95a1dd3a-32a2-44dc-b7b6-4eb8ca66879d"), Type = TextBlockType.Text, Text = "The maximum level of the target increases to 21. The cost increases to the target's level (minimum 1) × 3,200 gp." }
                 }
             };
         }

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("06cb3a2f-72fc-46a9-b696-c998e04ca396"), Type = TextBlockType.Text, Text = "You enter the stance of an implacable mountain – a technique first discovered by dwarven monks – allowing you to strike with the weight of an avalanche. The only (action: Strikes | Strike) you can make are falling stone unarmed attacks. These deal 1d8 bludgeoning damage; are in the brawling group; and have the (trait: forceful), (trait: nonlethal), and (trait: unarmed) traits." };
-            yield return new TextBlock { Id = Guid.Parse("607ed5a8-6b2a-4616-a298-309af3d59a20"), Type = TextBlockType.Text, Text = "While in Mountain Stance, you gain a +4 status bonus to AC and a +2 circumstance bonus to any defenses against being (action: Shoved | Shove) or (action: Tripped | Trip). However, you have a Dexterity modifier cap to your AC of +0, meaning you don’t add your Dexterity to your AC, and your Speeds are all reduced by 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("607ed5a8-6b2a-4616-a298-309af3d59a20"), Type = TextBlockType.Text, Text = "While in Mountain Stance, you gain a +4 status bonus to AC and a +2 circumstance bonus to any defenses against being (action: Shoved | Shove) or (action: Tripped | Trip). However, you have a Dexterity modifier cap to your AC of +0, meaning you don't add your Dexterity to your AC, and your Speeds are all reduced by 5 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

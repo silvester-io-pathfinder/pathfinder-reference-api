@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ecd9ec1-e07a-4792-ba73-7e6dcf0498db"), Type = TextBlockType.Text, Text = "You call upon an endless barrage of flames, producing miniature fireballs in your hands to hurl at foes. You cast produce flame as part of casting flaming fusillade. For the duration of flaming fusillade, produce flame’s casting time is reduced from 2 actions to 1." };
+            yield return new TextBlock { Id = Guid.Parse("8ecd9ec1-e07a-4792-ba73-7e6dcf0498db"), Type = TextBlockType.Text, Text = "You call upon an endless barrage of flames, producing miniature fireballs in your hands to hurl at foes. You cast produce flame as part of casting flaming fusillade. For the duration of flaming fusillade, produce flame's casting time is reduced from 2 actions to 1." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("56118699-a92f-49bf-b323-2eea469e36d6"), Type = TextBlockType.Text, Text = "For the duration, you also gain a status bonus to the damage dealt by produce flame equal to flaming fusillade’s spell level." }
+                    new TextBlock { Id = Guid.Parse("56118699-a92f-49bf-b323-2eea469e36d6"), Type = TextBlockType.Text, Text = "For the duration, you also gain a status bonus to the damage dealt by produce flame equal to flaming fusillade's spell level." }
                 }
             };
         }

@@ -29,12 +29,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3db073eb-c6be-4025-84ab-2f0bc67339cc"), Type = TextBlockType.Text, Text = "You can discuss with the GM any spells from other sources you want to add to your list. As a general rule, spells with the (trait: air), (trait: earth), (trait: fire), or (trait: water) trait belong on the list, including spells that add one of those traits depending on how they’re cast, such as (spell: elemental zone). Spells that are general and appear on every tradition’s spell list also make good candidates." };
+            yield return new TextBlock { Id = Guid.Parse("3db073eb-c6be-4025-84ab-2f0bc67339cc"), Type = TextBlockType.Text, Text = "You can discuss with the GM any spells from other sources you want to add to your list. As a general rule, spells with the (trait: air), (trait: earth), (trait: fire), or (trait: water) trait belong on the list, including spells that add one of those traits depending on how they're cast, such as (spell: elemental zone). Spells that are general and appear on every tradition's spell list also make good candidates." };
             yield return new TextBlock { Id = Guid.Parse("c0a75ed6-8804-435f-b4db-efec5ea867f7"), Type = TextBlockType.Enumeration, Text = "**Elemental Cantrips***" };
             yield return new TextBlock { Id = Guid.Parse("eec13e64-25c6-4929-aca8-6b1051caa392"), Type = TextBlockType.Text, Text = "(spell: Dancing Lights): Create four floating lights you can move." };
             yield return new TextBlock { Id = Guid.Parse("345e7469-7a55-42bf-ace2-e0e8963b410b"), Type = TextBlockType.Text, Text = "(spell: Detect Magic): Sense whether magic is nearby." };
             yield return new TextBlock { Id = Guid.Parse("43767f36-85f4-475c-a131-a7d2fdff2613"), Type = TextBlockType.Text, Text = "(spell: Gale Blast): Damage and push adjacent creatures with air." };
-            yield return new TextBlock { Id = Guid.Parse("bc434280-635a-499d-961c-e138dfa4b41f"), Type = TextBlockType.Text, Text = "(spell: Healing Plaster): Transform mud into a healing plaster to treat wounds without healer’s tools." };
+            yield return new TextBlock { Id = Guid.Parse("bc434280-635a-499d-961c-e138dfa4b41f"), Type = TextBlockType.Text, Text = "(spell: Healing Plaster): Transform mud into a healing plaster to treat wounds without healer's tools." };
             yield return new TextBlock { Id = Guid.Parse("db95b8dd-5b70-4861-bf4f-568c8b059177"), Type = TextBlockType.Text, Text = "(spell: Light): Make an object glow." };
             yield return new TextBlock { Id = Guid.Parse("55556b64-6de2-4ac0-989e-f78dce8f4ba3"), Type = TextBlockType.Text, Text = "(spell: Mage Hand): Command a floating hand to move an object." };
             yield return new TextBlock { Id = Guid.Parse("4581aab2-82af-4c80-adcb-dff789731483"), Type = TextBlockType.Text, Text = "(spell: Message): Speak a message to a distant creature, who can reply." };
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("aa26d11f-4447-4b90-ac81-7ab6828406c4"), Type = TextBlockType.Text, Text = "(spell: Breadcrumbs): Make a trail behind a creature." };
             yield return new TextBlock { Id = Guid.Parse("92495733-cc48-48b1-84c7-8e0269407986"), Type = TextBlockType.Text, Text = "(spell: Burning Hands): A small cone of flame rushes from your hands." };
             yield return new TextBlock { Id = Guid.Parse("653e74a3-ae24-4237-9c0c-e77acb671094"), Type = TextBlockType.Text, Text = "(spell: Create Water): Conjure 2 gallons of water." };
-            yield return new TextBlock { Id = Guid.Parse("83cef998-e055-4a14-956b-d18467d12d7c"), Type = TextBlockType.Text, Text = "(spell: Feather Fall): React to slow a creature’s fall." };
+            yield return new TextBlock { Id = Guid.Parse("83cef998-e055-4a14-956b-d18467d12d7c"), Type = TextBlockType.Text, Text = "(spell: Feather Fall): React to slow a creature's fall." };
             yield return new TextBlock { Id = Guid.Parse("3e33d6a0-7a62-4c29-be89-24d1f7cbd875"), Type = TextBlockType.Text, Text = "(spell: Gust of Wind): Wind blows out fires and knocks back objects and creatures." };
             yield return new TextBlock { Id = Guid.Parse("684ffd1d-44b0-4e82-9fd3-c2f5943b0be6"), Type = TextBlockType.Text, Text = "(spell: Hydraulic Push): Damage and push a creature with a blast of water." };
             yield return new TextBlock { Id = Guid.Parse("0658660f-a65d-43f2-84e9-5ac6dd6ae35d"), Type = TextBlockType.Text, Text = "(spell: Mage Armor): Ward yourself with magical armor." };
@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("86494327-7930-4872-934c-099f5781df32"), Type = TextBlockType.Text, Text = "(spell: Blistering Invective): Light a creature on fire with the sheer viciousness of your words." };
             yield return new TextBlock { Id = Guid.Parse("c6bee0bf-9e01-43c1-b6ff-dad07486a4b7"), Type = TextBlockType.Text, Text = "(spell: Continual Flame): A magical flame burns indefinitely." };
             yield return new TextBlock { Id = Guid.Parse("cefd3844-266e-45ea-bdd1-9c8f8a8cc8be"), Type = TextBlockType.Text, Text = "(spell: Darkvision): See in the dark." };
-            yield return new TextBlock { Id = Guid.Parse("521a73ba-2a4b-409c-be36-d1d0a1cee9bc"), Type = TextBlockType.Text, Text = "(spell: Dispel Magic): End a spell or suppress an item’s magic." };
+            yield return new TextBlock { Id = Guid.Parse("521a73ba-2a4b-409c-be36-d1d0a1cee9bc"), Type = TextBlockType.Text, Text = "(spell: Dispel Magic): End a spell or suppress an item's magic." };
             yield return new TextBlock { Id = Guid.Parse("dec70c78-3edb-4d67-8199-e4fad91f0ee9"), Type = TextBlockType.Text, Text = "(spell: Elemental Zone): Make one element more damaging within a zone." };
             yield return new TextBlock { Id = Guid.Parse("5d0fcedc-5c2c-4502-b7e5-a6ead7622471"), Type = TextBlockType.Text, Text = "(spell: Endure Elements): Protect a creature from severe cold or heat." };
             yield return new TextBlock { Id = Guid.Parse("9efde31d-55d6-4d2f-bbf8-4a87ae8d9d61"), Type = TextBlockType.Text, Text = "(spell: Expeditious Excavation): Dig up loose soil, sand, and gravel." };
@@ -77,7 +77,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("d7441636-dc1e-4dd6-bb8d-67a9ba7e2952"), Type = TextBlockType.Text, Text = "(spell: Final Sacrifice): Channel energy to blow up your minion." };
             yield return new TextBlock { Id = Guid.Parse("6b10185c-1a48-46bd-92d6-2e627e45c5ff"), Type = TextBlockType.Text, Text = "(spell: Flame Wisp): Fire wisps damage those you strike, and more grow if you cast fire spells." };
             yield return new TextBlock { Id = Guid.Parse("beee3380-7cec-4920-93b5-238bc5bf20ff"), Type = TextBlockType.Text, Text = "(spell: Flaming Sphere): A ball of fire rolls about at your command." };
-            yield return new TextBlock { Id = Guid.Parse("8f222428-0d4e-46b6-bde3-7d94804571a5"), Type = TextBlockType.Text, Text = "(spell: Gentle Repose): A corpse doesn’t decay and can’t become undead." };
+            yield return new TextBlock { Id = Guid.Parse("8f222428-0d4e-46b6-bde3-7d94804571a5"), Type = TextBlockType.Text, Text = "(spell: Gentle Repose): A corpse doesn't decay and can't become undead." };
             yield return new TextBlock { Id = Guid.Parse("1b6bab4e-8b00-47dd-8679-a8a303ca12c1"), Type = TextBlockType.Text, Text = "(spell: Heat Metal): Make metal red hot." };
             yield return new TextBlock { Id = Guid.Parse("0dd42036-e4e2-407b-a95d-fb84611cbeb6"), Type = TextBlockType.Text, Text = "(spell: Ignite Fireworks): Throw exploding fireworks." };
             yield return new TextBlock { Id = Guid.Parse("442c7cb3-6e63-4130-b915-e4e31e0405cb"), Type = TextBlockType.Text, Text = "(spell: Obscuring Mist): Conceal creatures in a cloud of mist." };
@@ -95,7 +95,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2eb3fd31-2e9c-489f-965e-e675b9f9f519"), Type = TextBlockType.Text, Text = "(spell: Earthbind): Bring a flying creature to the ground." };
             yield return new TextBlock { Id = Guid.Parse("7e2e3cb1-db79-40a2-9134-325022170195"), Type = TextBlockType.Text, Text = "(spell: Elemental Absorption): Resist elemental effects and then release the energy against a foe." };
             yield return new TextBlock { Id = Guid.Parse("fd95295c-2287-4b3e-b411-774d1368f4d9"), Type = TextBlockType.Text, Text = "(spell: Elemental Annihilation Wave): Draw in elemental energy to unleash a cone of burning destruction." };
-            yield return new TextBlock { Id = Guid.Parse("abee69db-bb94-4e11-ae27-6b489af5d1ed"), Type = TextBlockType.Text, Text = "(spell: Feet to Fins): Turn a creature’s feet into fins, enabling it swim but slowing it on land." };
+            yield return new TextBlock { Id = Guid.Parse("abee69db-bb94-4e11-ae27-6b489af5d1ed"), Type = TextBlockType.Text, Text = "(spell: Feet to Fins): Turn a creature's feet into fins, enabling it swim but slowing it on land." };
             yield return new TextBlock { Id = Guid.Parse("4aa9b590-f99f-4b8e-a1ab-bf0611d3e634"), Type = TextBlockType.Text, Text = "(spell: Fireball): An explosion of fire in an area burns creatures." };
             yield return new TextBlock { Id = Guid.Parse("e19d1283-bf22-4f17-9106-e0f077b530f4"), Type = TextBlockType.Text, Text = "(spell: Glyph of Warding): Store a spell in a symbol to make a trap." };
             yield return new TextBlock { Id = Guid.Parse("3b9cd73c-1ad4-45d9-bfbb-8f01d8e267cf"), Type = TextBlockType.Text, Text = "(spell: Levitate): Float an object or creature a few feet off the ground." };
@@ -119,7 +119,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("c6c91be2-19b5-48a9-9a90-340c86063e29"), Type = TextBlockType.Text, Text = "(spell: Soothing Spring): Create a rejuvenating hot spring that heals the wounded and tired." };
             yield return new TextBlock { Id = Guid.Parse("6073fa2d-7f1d-43e7-bcaf-47cbb7539a40"), Type = TextBlockType.Text, Text = "(spell: Spell Immunity): Name a spell to negate its effects on you." };
             yield return new TextBlock { Id = Guid.Parse("1ac36e5e-66d7-429e-b14b-e31d532b89fc"), Type = TextBlockType.Text, Text = "(spell: Spike Stones): Grow sharp spikes out of the ground." };
-            yield return new TextBlock { Id = Guid.Parse("e2fa4e99-931e-4ca2-aac0-abe7b8ced8f2"), Type = TextBlockType.Text, Text = "(spell: Stoneskin): Harden a creature’s skin into durable stone." };
+            yield return new TextBlock { Id = Guid.Parse("e2fa4e99-931e-4ca2-aac0-abe7b8ced8f2"), Type = TextBlockType.Text, Text = "(spell: Stoneskin): Harden a creature's skin into durable stone." };
             yield return new TextBlock { Id = Guid.Parse("64fc7b46-55c7-42f2-a33c-5c4e308409bd"), Type = TextBlockType.Text, Text = "(spell: Wall of Fire): Create a blazing wall that burns creatures that pass through." };
             yield return new TextBlock { Id = Guid.Parse("355e0508-01e6-404d-a6fa-5c785b738972"), Type = TextBlockType.Enumeration, Text = "**Elemental 5th-Level Spells***" };
             yield return new TextBlock { Id = Guid.Parse("70dc10bf-1791-4cc4-bd88-c214046bd5cb"), Type = TextBlockType.Text, Text = "(spell: Banishment): Send a creature back to its home plane." };
@@ -132,7 +132,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("cc55e0bc-b1ec-4a97-b9fe-35b130a3a8e3"), Type = TextBlockType.Text, Text = "(spell: Geyser): Blast foes upward with superheated water, causing them to fall and leaving concealing fog." };
             yield return new TextBlock { Id = Guid.Parse("eea643f4-f6f1-4f83-865c-06611dfce656"), Type = TextBlockType.Text, Text = "(spell: Mantle of the Frozen Heart): Morph your body with ice, which you can change during the spell." };
             yield return new TextBlock { Id = Guid.Parse("589b007f-a6eb-46a5-9633-1c7e3b3db74a"), Type = TextBlockType.Text, Text = "(spell: Mantle of the Magma Heart): Morph yourself with fire, which you can change during the spell." };
-            yield return new TextBlock { Id = Guid.Parse("c9a338a6-c225-4d6a-aa4b-e04fda5eea01"), Type = TextBlockType.Text, Text = "(spell: Mariner’s Curse): Infect a creature with the curse of the rolling sea." };
+            yield return new TextBlock { Id = Guid.Parse("c9a338a6-c225-4d6a-aa4b-e04fda5eea01"), Type = TextBlockType.Text, Text = "(spell: Mariner's Curse): Infect a creature with the curse of the rolling sea." };
             yield return new TextBlock { Id = Guid.Parse("26723f33-1726-434a-a49a-195c83efb35c"), Type = TextBlockType.Text, Text = "(spell: Passwall): Form an earthen tunnel through a wall." };
             yield return new TextBlock { Id = Guid.Parse("34fe1ca8-d6e0-4e73-901c-9a96dc4921fa"), Type = TextBlockType.Text, Text = "(spell: Summon Giant): Conjure a giant to fight on your behalf." };
             yield return new TextBlock { Id = Guid.Parse("f0a375a5-cdb2-4cb4-b683-ec2bfbc75569"), Type = TextBlockType.Text, Text = "(spell: Temporary Glyph): Quickly scribe a short-lived glyph to blast foes." };
@@ -159,7 +159,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("7391c404-2ae2-4997-a3b1-2549ebe9a00e"), Type = TextBlockType.Text, Text = "(spell: Unfettered Pack): Let creatures avoid environmental hindrances." };
             yield return new TextBlock { Id = Guid.Parse("ed097c9e-d02f-4c6a-8e8c-2081d1dbd7f4"), Type = TextBlockType.Text, Text = "(spell: Volcanic Eruption): Cause massive lava sprays that burn creatures and encase them in rock." };
             yield return new TextBlock { Id = Guid.Parse("dc32c1d2-c110-4ef7-a6b1-8d6e72d96e9d"), Type = TextBlockType.Enumeration, Text = "**Elemental 8th-Level Spells***" };
-            yield return new TextBlock { Id = Guid.Parse("a3aedf08-9b3d-405d-a7ab-3ceeadae79df"), Type = TextBlockType.Text, Text = "(spell: Boil Blood): Boil a foe’s blood." };
+            yield return new TextBlock { Id = Guid.Parse("a3aedf08-9b3d-405d-a7ab-3ceeadae79df"), Type = TextBlockType.Text, Text = "(spell: Boil Blood): Boil a foe's blood." };
             yield return new TextBlock { Id = Guid.Parse("cd569060-784b-48d5-9195-20b4513176fa"), Type = TextBlockType.Text, Text = "(spell: Burning Blossoms): A tree fascinates enemies and burns people who stay under it." };
             yield return new TextBlock { Id = Guid.Parse("5d315984-c295-4223-9b6c-beb716cac6f9"), Type = TextBlockType.Text, Text = "(spell: Earthquake): Shake the ground with a devastating earthquake." };
             yield return new TextBlock { Id = Guid.Parse("7bcaf085-dddc-4cac-b8de-349e4f8e78fe"), Type = TextBlockType.Text, Text = "(spell: Horrid Wilting): Pull moisture from creatures, damaging them." };

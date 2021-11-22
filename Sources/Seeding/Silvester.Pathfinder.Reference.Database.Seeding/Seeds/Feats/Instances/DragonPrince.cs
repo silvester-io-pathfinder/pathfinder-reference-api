@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c6352257-019f-4977-8667-caa2a077def6"), Type = TextBlockType.Text, Text = "The blood of the Dragon Kings runs strong in your veins. Your draconic heritage is clearly visible, with hair that is almost entirely crimson, azure, or the like, and that shines like a dragon’s scales. You can cast the (spell: dragon breath) sorcerer bloodline spell (page 403) as an innate arcane spell once per day, but you can use only the dragon breath that is associated with your heritage and that matches the energy type of your (feat: Dragon Spit) feat. At 12th level and every 3 levels thereafter, the spell is heightened by an additional spell level." };
+            yield return new TextBlock { Id = Guid.Parse("c6352257-019f-4977-8667-caa2a077def6"), Type = TextBlockType.Text, Text = "The blood of the Dragon Kings runs strong in your veins. Your draconic heritage is clearly visible, with hair that is almost entirely crimson, azure, or the like, and that shines like a dragon's scales. You can cast the (spell: dragon breath) sorcerer bloodline spell (page 403) as an innate arcane spell once per day, but you can use only the dragon breath that is associated with your heritage and that matches the energy type of your (feat: Dragon Spit) feat. At 12th level and every 3 levels thereafter, the spell is heightened by an additional spell level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

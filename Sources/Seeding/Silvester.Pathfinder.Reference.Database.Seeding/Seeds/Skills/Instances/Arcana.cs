@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances
                 HasArmorCheckPenalty = false,
                 HasRecallKnowledgeAction = true,
                 StatModifierId = Intelligence.ID,
-                Description = "Arcana measures how much you know about arcane magic and creatures. Even if you’re untrained, you can Recall Knowledge (page 238)."
+                Description = "Arcana measures how much you know about arcane magic and creatures. Even if you're untrained, you can Recall Knowledge (page 238)."
             };
         }
     }

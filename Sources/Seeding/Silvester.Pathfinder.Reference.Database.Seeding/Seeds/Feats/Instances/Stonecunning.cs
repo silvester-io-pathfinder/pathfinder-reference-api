@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("83756201-3bf5-467f-ab4c-8edbd15951d8"), Type = TextBlockType.Text, Text = "You have a knack for noticing even small inconsistencies and craftsmanship techniques in the stonework around you. You gain a +2 circumstance bonus to Perception checks to notice unusual stonework. This bonus applies to checks to discover mechanical traps made of stone or hidden within stone." };
-            yield return new TextBlock { Id = Guid.Parse("32928d83-2736-4fff-938e-57c3fc50c2d7"), Type = TextBlockType.Text, Text = "If you aren’t using the (Action: Seek) action or searching, the GM automatically rolls a secret check for you to notice unusual stonework anyway. This check doesn’t gain the circumstance bonus, and it takes a –2 circumstance penalty." };
+            yield return new TextBlock { Id = Guid.Parse("32928d83-2736-4fff-938e-57c3fc50c2d7"), Type = TextBlockType.Text, Text = "If you aren't using the (Action: Seek) action or searching, the GM automatically rolls a secret check for you to notice unusual stonework anyway. This check doesn't gain the circumstance bonus, and it takes a –2 circumstance penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

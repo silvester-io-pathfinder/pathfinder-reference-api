@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6b6389fa-8e33-4e0a-8d09-eef7f074c22b"), Type = TextBlockType.Text, Text = "Even when you don’t hit squarely, you can still score a glancing blow. Make a melee (Action: Strike). It gains the following failure effect." };
+            yield return new TextBlock { Id = Guid.Parse("6b6389fa-8e33-4e0a-8d09-eef7f074c22b"), Type = TextBlockType.Text, Text = "Even when you don't hit squarely, you can still score a glancing blow. Make a melee (Action: Strike). It gains the following failure effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

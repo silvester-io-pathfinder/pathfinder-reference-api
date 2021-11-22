@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("42160ace-5a98-41c7-acd9-c9433775155e"), Type = TextBlockType.Text, Text = "You blend in with unnatural subtlety. When you are concealed or hidden, increase the DC of the flat check to target you to 6 if you&#39;re concealed or 12 if you&#39;re hidden." };
+            yield return new TextBlock { Id = Guid.Parse("42160ace-5a98-41c7-acd9-c9433775155e"), Type = TextBlockType.Text, Text = "You blend in with unnatural subtlety. When you are concealed or hidden, increase the DC of the flat check to target you to 6 if you're concealed or 12 if you're hidden." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

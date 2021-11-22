@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c2060ebf-1cc1-450f-99ae-9255c8730502"), Type = TextBlockType.Text, Text = "Your proficiency ranks for your bloodline&#39;s spell attack rolls and spell DCs increase to expert, and you gain a 4th-level spell slot. You can select a second spell from your repertoire as a signature spell. At 14th level, you gain a 5th-level spell slot, and at 16th level, you gain a 6th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("c2060ebf-1cc1-450f-99ae-9255c8730502"), Type = TextBlockType.Text, Text = "Your proficiency ranks for your bloodline's spell attack rolls and spell DCs increase to expert, and you gain a 4th-level spell slot. You can select a second spell from your repertoire as a signature spell. At 14th level, you gain a 5th-level spell slot, and at 16th level, you gain a 6th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

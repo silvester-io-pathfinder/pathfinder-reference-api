@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("99c81f4d-59f4-4924-a0d2-879dff30ef43"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor’s Pins or an alliance with Mengkare." };
+            yield return new TextBlock { Id = Guid.Parse("99c81f4d-59f4-4924-a0d2-879dff30ef43"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor's Pins or an alliance with Mengkare." };
             yield return new TextBlock { Id = Guid.Parse("b5e60826-dc3e-406d-a310-8ab4fa8e0b3d"), Type = TextBlockType.Text, Text = "You can make your debilitation last an exceptionally long time. The triggering debilitation lasts for 1 minute instead of until the end of your next turn." };
         }
 

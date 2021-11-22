@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2b7f86a9-5332-47ab-a209-f59bde3b053f"), Type = TextBlockType.Text, Text = "With a flourish, you fulfill a creature’s wish for protection, bending reality to keep them from harm. The target vanishes in a burst of brightly colored smoke and sparkles, reappearing an instant later. They become concealed against the triggering attack and until the end of the current creature’s turn." };
+            yield return new TextBlock { Id = Guid.Parse("2b7f86a9-5332-47ab-a209-f59bde3b053f"), Type = TextBlockType.Text, Text = "With a flourish, you fulfill a creature's wish for protection, bending reality to keep them from harm. The target vanishes in a burst of brightly colored smoke and sparkles, reappearing an instant later. They become concealed against the triggering attack and until the end of the current creature's turn." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

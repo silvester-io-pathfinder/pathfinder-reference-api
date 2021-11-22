@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d159068d-1f3c-45f6-ab70-4ea50ceaf559"), Type = TextBlockType.Text, Text = "You use your deceptive skills to make your illusions seem even more real. Attempt a Deception check against the target’s Perception DC. If you succeed, the target fails to disbelieve the illusion." };
+            yield return new TextBlock { Id = Guid.Parse("d159068d-1f3c-45f6-ab70-4ea50ceaf559"), Type = TextBlockType.Text, Text = "You use your deceptive skills to make your illusions seem even more real. Attempt a Deception check against the target's Perception DC. If you succeed, the target fails to disbelieve the illusion." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

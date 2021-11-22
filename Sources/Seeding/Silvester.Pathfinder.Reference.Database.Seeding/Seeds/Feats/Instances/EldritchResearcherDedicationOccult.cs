@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d0f6a57-6a6b-43b6-9d83-52184a2c725f"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single occult cantrip of your choice. If you weren&#39;t already, you become trained in occult spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
+            yield return new TextBlock { Id = Guid.Parse("1d0f6a57-6a6b-43b6-9d83-52184a2c725f"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single occult cantrip of your choice. If you weren't already, you become trained in occult spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

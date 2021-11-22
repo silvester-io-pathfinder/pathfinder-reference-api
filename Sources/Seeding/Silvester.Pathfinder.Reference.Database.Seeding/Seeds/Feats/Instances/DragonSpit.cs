@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad8e36de-8d18-4f73-af05-d98cadfab44a"), Type = TextBlockType.Text, Text = "Many of your people claim to have dragon blood in their veins, and in your case, this is true – you can spit energy, and you might have an especially visible sign of your draconic heritage. Choose one of the following cantrips: (spell: acid splash), (spell: electric arc), (spell: produce flame), or (spell: ray of frost). You can cast this spell as an innate arcane spell at will, and when you cast it, the spell’s energy emerges from your mouth." };
+            yield return new TextBlock { Id = Guid.Parse("ad8e36de-8d18-4f73-af05-d98cadfab44a"), Type = TextBlockType.Text, Text = "Many of your people claim to have dragon blood in their veins, and in your case, this is true – you can spit energy, and you might have an especially visible sign of your draconic heritage. Choose one of the following cantrips: (spell: acid splash), (spell: electric arc), (spell: produce flame), or (spell: ray of frost). You can cast this spell as an innate arcane spell at will, and when you cast it, the spell's energy emerges from your mouth." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

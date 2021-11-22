@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7658a67e-f1ff-40ec-95db-2e9f64c9cc76"), Type = TextBlockType.Text, Text = "Using your occult connections and incredible powers of persuasion, you convince yourself that the triggering damage is a figment of your imagination. The damage changes from its usual damage type to mental damage, and the damaging effect gains the (trait: nonlethal) trait. You can’t use this reaction if you are immune to mental effects or mental damage." };
+            yield return new TextBlock { Id = Guid.Parse("7658a67e-f1ff-40ec-95db-2e9f64c9cc76"), Type = TextBlockType.Text, Text = "Using your occult connections and incredible powers of persuasion, you convince yourself that the triggering damage is a figment of your imagination. The damage changes from its usual damage type to mental damage, and the damaging effect gains the (trait: nonlethal) trait. You can't use this reaction if you are immune to mental effects or mental damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
         protected override IEnumerable<TextBlock> GetYouMight()
         {
             yield return new TextBlock { Id = Guid.Parse("1d86dd3f-8740-4de6-aaf4-a0e3495ef3db"), Type = TextBlockType.Enumeration, Text = "Demonstrate extreme patience, even when pressured to act." };
-            yield return new TextBlock { Id = Guid.Parse("8c7a1e96-ba3a-41a2-a926-7ddaf9d2f8f2"), Type = TextBlockType.Enumeration, Text = "Hold your people’s history in high regard and look to the past for solutions to present problems." };
+            yield return new TextBlock { Id = Guid.Parse("8c7a1e96-ba3a-41a2-a926-7ddaf9d2f8f2"), Type = TextBlockType.Enumeration, Text = "Hold your people's history in high regard and look to the past for solutions to present problems." };
             yield return new TextBlock { Id = Guid.Parse("d4226684-7d09-4e28-8c54-916fbffbdf03"), Type = TextBlockType.Enumeration, Text = "Strive to adapt perfectly to your environment while also keeping your culture and traditions intact." };
         }
     
@@ -76,7 +76,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
     
         protected override IEnumerable<TextBlock> GetNames()
         {
-            yield return new TextBlock { Id = Guid.Parse("9e42ef94-8077-4072-9bc6-c6104c574d66"), Type = TextBlockType.Text, Text = "Lizardfolk names come from their ancient language and tend to be traditional. Names are typically chosen by the clan’s astrologer in accordance to omens and which star signs are ascendant when an iruxi egg hatches, though occasionally an iruxi’s parents may name a hatchling for an ancestor or a beloved historical hero." };
+            yield return new TextBlock { Id = Guid.Parse("9e42ef94-8077-4072-9bc6-c6104c574d66"), Type = TextBlockType.Text, Text = "Lizardfolk names come from their ancient language and tend to be traditional. Names are typically chosen by the clan's astrologer in accordance to omens and which star signs are ascendant when an iruxi egg hatches, though occasionally an iruxi's parents may name a hatchling for an ancestor or a beloved historical hero." };
         }
     
         protected override IEnumerable<TextBlock> GetOtherInformation()

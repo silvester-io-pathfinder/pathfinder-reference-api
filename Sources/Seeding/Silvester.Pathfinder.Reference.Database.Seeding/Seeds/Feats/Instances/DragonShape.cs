@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d948db60-d781-49ea-a2f9-12c3df01ab9c"), Type = TextBlockType.Text, Text = "You can take on the form of some of the world’s most fearsome creatures. Add the forms listed in (Spell: dragon form) to your (Spell: wild shape) list. Whenever you’re polymorphed into another form using (Spell: wild shape), you gain resistance 5 to your choice of acid, cold, electricity, fire, or poison." };
+            yield return new TextBlock { Id = Guid.Parse("d948db60-d781-49ea-a2f9-12c3df01ab9c"), Type = TextBlockType.Text, Text = "You can take on the form of some of the world's most fearsome creatures. Add the forms listed in (Spell: dragon form) to your (Spell: wild shape) list. Whenever you're polymorphed into another form using (Spell: wild shape), you gain resistance 5 to your choice of acid, cold, electricity, fire, or poison." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4bd404d2-d3b8-4560-981d-89eeec9b06a1"), Type = TextBlockType.Enumeration, Text = "*One-handed Melee Weapon Only; Can’t Have the (trait: Agile), (trait: Attached), or (trait: Free-hand) Trait**" };
-            yield return new TextBlock { Id = Guid.Parse("8e00f757-3c24-4b5c-a35c-23c8a8c795bf"), Type = TextBlockType.Text, Text = "Your weapon’s modified weight distribution can increase power in exchange for taking more hands to wield. Your innovation gains the (trait: two-hand) trait, with a damage die one size higher than the weapon’s normal weapon damage die size (for instance, a longsword would gain the (trait: two-hand d10) trait). Your innovation also gains the (trait: versatile B) trait." };
+            yield return new TextBlock { Id = Guid.Parse("4bd404d2-d3b8-4560-981d-89eeec9b06a1"), Type = TextBlockType.Enumeration, Text = "*One-handed Melee Weapon Only; Can't Have the (trait: Agile), (trait: Attached), or (trait: Free-hand) Trait**" };
+            yield return new TextBlock { Id = Guid.Parse("8e00f757-3c24-4b5c-a35c-23c8a8c795bf"), Type = TextBlockType.Text, Text = "Your weapon's modified weight distribution can increase power in exchange for taking more hands to wield. Your innovation gains the (trait: two-hand) trait, with a damage die one size higher than the weapon's normal weapon damage die size (for instance, a longsword would gain the (trait: two-hand d10) trait). Your innovation also gains the (trait: versatile B) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

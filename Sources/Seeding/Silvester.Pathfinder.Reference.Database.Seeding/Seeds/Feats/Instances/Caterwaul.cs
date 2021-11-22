@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d2d2d693-07d8-4599-b477-60e4a7a7084e"), Type = TextBlockType.Text, Text = "You give a daring yowl in the face of adversity, calling your companion back from the brink of unconsciousness. Your ally isn&#39;t knocked out and remains at 1 Hit Point. Your ally&#39;s wounded condition still increases by 1 as though they had been dying and recovered." };
+            yield return new TextBlock { Id = Guid.Parse("d2d2d693-07d8-4599-b477-60e4a7a7084e"), Type = TextBlockType.Text, Text = "You give a daring yowl in the face of adversity, calling your companion back from the brink of unconsciousness. Your ally isn't knocked out and remains at 1 Hit Point. Your ally's wounded condition still increases by 1 as though they had been dying and recovered." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

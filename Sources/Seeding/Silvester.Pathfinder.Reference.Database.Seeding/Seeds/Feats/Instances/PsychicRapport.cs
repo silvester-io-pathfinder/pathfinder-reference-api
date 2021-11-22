@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("18299067-e7d3-4178-ad02-709b97650c29"), Type = TextBlockType.Text, Text = "Your telepathic sensitivity intensifies when you’re affected by mental magic, making it easier for you to link to other creatures. When you’re affected by a (trait: mental) spell or have cast a (trait: mental) spell this round, you gain a +1 circumstance bonus on Deception, Diplomacy, and Intimidation checks, and on Perception checks to (action: Sense Motive)." };
+            yield return new TextBlock { Id = Guid.Parse("18299067-e7d3-4178-ad02-709b97650c29"), Type = TextBlockType.Text, Text = "Your telepathic sensitivity intensifies when you're affected by mental magic, making it easier for you to link to other creatures. When you're affected by a (trait: mental) spell or have cast a (trait: mental) spell this round, you gain a +1 circumstance bonus on Deception, Diplomacy, and Intimidation checks, and on Perception checks to (action: Sense Motive)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

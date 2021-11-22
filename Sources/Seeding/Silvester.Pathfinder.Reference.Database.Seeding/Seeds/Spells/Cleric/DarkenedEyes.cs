@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0d4fe2f8-c5aa-448c-beae-61e60d910bd1"), Type = TextBlockType.Text, Text = "You infuse a creature’s vision with darkness. After attempting its save, the target becomes temporarily immune for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("0d4fe2f8-c5aa-448c-beae-61e60d910bd1"), Type = TextBlockType.Text, Text = "You infuse a creature's vision with darkness. After attempting its save, the target becomes temporarily immune for 24 hours." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -40,9 +40,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("324ced5a-220f-4874-b0d2-7b829b0ee113"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target’s darkvision or low-light vision is suppressed for 1 round.",
+                Success = "The target's darkvision or low-light vision is suppressed for 1 round.",
                 Failure = "As success, but the duration is 1 minute.",
-                CriticalFailure = "As success, but the duration is 1 minute, and the target is also blinded for the duration. It can attempt a new save at the end of each of its turns. If it succeeds, it’s no longer blinded, but its darkvision or low-light vision remains suppressed."
+                CriticalFailure = "As success, but the duration is 1 minute, and the target is also blinded for the duration. It can attempt a new save at the end of each of its turns. If it succeeds, it's no longer blinded, but its darkvision or low-light vision remains suppressed."
             };
         }
 

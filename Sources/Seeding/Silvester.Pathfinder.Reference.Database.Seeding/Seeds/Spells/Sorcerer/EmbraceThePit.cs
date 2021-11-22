@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("77984545-797d-458c-88c2-38a0dce04535"), Type = TextBlockType.Text, Text = "Devil horns grow from your skull, and your skin takes on features of the devil responsible for your diabolic bloodline. You gain resistance 5 to evil, fire, and poison, and resistance 1 to physical damage (except silver). You can take good damage, even if you aren’t evil, and you gain weakness 5 to good damage." };
+            yield return new TextBlock { Id = Guid.Parse("77984545-797d-458c-88c2-38a0dce04535"), Type = TextBlockType.Text, Text = "Devil horns grow from your skull, and your skin takes on features of the devil responsible for your diabolic bloodline. You gain resistance 5 to evil, fire, and poison, and resistance 1 to physical damage (except silver). You can take good damage, even if you aren't evil, and you gain weakness 5 to good damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

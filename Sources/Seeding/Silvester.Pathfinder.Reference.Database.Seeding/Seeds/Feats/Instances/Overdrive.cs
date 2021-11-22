@@ -42,10 +42,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("2b1ef6aa-8145-48de-a351-9da79b70618a"),
-                CriticalSuccess = "Your gizmos go into a state of incredible efficiency called critical overdrive, adding great power to your attacks. Your (action: Strikes | Strike) deal additional damage equal to your Intelligence modifier for 1 minute. After the Overdrive ends, your gizmos become unusable as they cool down or reset, and you can’t use Overdrive for 1 minute.",
+                CriticalSuccess = "Your gizmos go into a state of incredible efficiency called critical overdrive, adding great power to your attacks. Your (action: Strikes | Strike) deal additional damage equal to your Intelligence modifier for 1 minute. After the Overdrive ends, your gizmos become unusable as they cool down or reset, and you can't use Overdrive for 1 minute.",
                 Success = "Your gizmos go into overdrive, adding power to your attacks. As critical success, except the additional damage is equal to half your Intelligence modifier.",
                 Failure = "You make a miscalculation and nothing happens.",
-                CriticalFailure = "Whoops! Something explodes. You take fire damage equal to your level, and you can’t use Overdrive again for 1 minute as your gizmos cool down and reset.", 
+                CriticalFailure = "Whoops! Something explodes. You take fire damage equal to your level, and you can't use Overdrive again for 1 minute as your gizmos cool down and reset.", 
             };
         }
             

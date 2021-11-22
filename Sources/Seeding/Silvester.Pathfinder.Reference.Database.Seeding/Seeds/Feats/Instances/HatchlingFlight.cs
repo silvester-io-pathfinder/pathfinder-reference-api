@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0857c8fd-b644-4946-b9bd-a00d22b7a628"), Type = TextBlockType.Text, Text = "You can fly a little! You (action: Fly) up to half your Speed. If you don’t end your movement on solid ground, you fall at the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("0857c8fd-b644-4946-b9bd-a00d22b7a628"), Type = TextBlockType.Text, Text = "You can fly a little! You (action: Fly) up to half your Speed. If you don't end your movement on solid ground, you fall at the end of your turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

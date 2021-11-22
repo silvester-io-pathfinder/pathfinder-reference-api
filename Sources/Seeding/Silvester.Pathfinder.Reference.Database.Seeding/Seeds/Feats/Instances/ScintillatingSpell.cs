@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("74417252-789c-475a-918c-94f487fe078c"), Type = TextBlockType.Text, Text = "Your spells become a radiant display of light and color. If your next action is to (action: Cast a Spell) that doesn’t have the (trait: darkness) trait, has no duration, and requires creatures to attempt a Reflex save, the spell explodes in a spray of scintillating lights, in addition to its other effects. Each creature that failed its Reflex save against the spell is dazzled for 1 round, and those who critically failed are instead blinded for 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("74417252-789c-475a-918c-94f487fe078c"), Type = TextBlockType.Text, Text = "Your spells become a radiant display of light and color. If your next action is to (action: Cast a Spell) that doesn't have the (trait: darkness) trait, has no duration, and requires creatures to attempt a Reflex save, the spell explodes in a spray of scintillating lights, in addition to its other effects. Each creature that failed its Reflex save against the spell is dazzled for 1 round, and those who critically failed are instead blinded for 1 round." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

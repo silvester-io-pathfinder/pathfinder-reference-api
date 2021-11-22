@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("60c83f0b-f052-4f43-82b8-788e89bc7a2b"), Type = TextBlockType.Text, Text = "Even when caught in falsehoods, you pile lie upon lie. Reduce the circumstance bonus a target gains for your previous attempts to (action: Create a Diversion) or (action: Lie) to it from +4 to +2. If you’re a master in Deception, reduce the bonus to +1, and if you’re legendary, your targets don’t get these bonuses at all." };
+            yield return new TextBlock { Id = Guid.Parse("60c83f0b-f052-4f43-82b8-788e89bc7a2b"), Type = TextBlockType.Text, Text = "Even when caught in falsehoods, you pile lie upon lie. Reduce the circumstance bonus a target gains for your previous attempts to (action: Create a Diversion) or (action: Lie) to it from +4 to +2. If you're a master in Deception, reduce the bonus to +1, and if you're legendary, your targets don't get these bonuses at all." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

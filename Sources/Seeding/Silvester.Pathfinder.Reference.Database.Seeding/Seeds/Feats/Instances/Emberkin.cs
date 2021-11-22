@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("258de82a-5fa9-4bd5-8153-90fec9c37c9b"), Type = TextBlockType.Text, Text = "A peri’s roaring spirit burns in your soul. Peris engage in constant struggle to right the wrongs of their fallen forebears, and that struggle has been passed on to you. You have a direct impulse to right wrongs and better the world. You gain a +1 circumstance bonus to saving throws against (trait: fire) effects, and your perception is unaffected by non-magical flames, fog and smoke." };
+            yield return new TextBlock { Id = Guid.Parse("258de82a-5fa9-4bd5-8153-90fec9c37c9b"), Type = TextBlockType.Text, Text = "A peri's roaring spirit burns in your soul. Peris engage in constant struggle to right the wrongs of their fallen forebears, and that struggle has been passed on to you. You have a direct impulse to right wrongs and better the world. You gain a +1 circumstance bonus to saving throws against (trait: fire) effects, and your perception is unaffected by non-magical flames, fog and smoke." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

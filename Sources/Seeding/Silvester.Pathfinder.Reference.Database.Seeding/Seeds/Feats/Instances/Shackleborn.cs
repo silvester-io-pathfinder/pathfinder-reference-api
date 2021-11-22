@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e95acf7a-640f-48e1-b9cb-a5539967016e"), Type = TextBlockType.Text, Text = "Your lineage shows the signs of velstrac tampering, including some curious quirk bequeathed by those shadowy surgeons of flesh and souls. Your flesh heals cleanly and quickly—all the better for you to serve as a subject for their ghastly art. You gain the (feat: Fast Recovery) feat, even if you don’t meet the prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("e95acf7a-640f-48e1-b9cb-a5539967016e"), Type = TextBlockType.Text, Text = "Your lineage shows the signs of velstrac tampering, including some curious quirk bequeathed by those shadowy surgeons of flesh and souls. Your flesh heals cleanly and quickly—all the better for you to serve as a subject for their ghastly art. You gain the (feat: Fast Recovery) feat, even if you don't meet the prerequisites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

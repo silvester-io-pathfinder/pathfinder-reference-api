@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Actions.Instance
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("015a016b-90ec-42b1-9e9b-28c230d06999"), Text = "You dig your way through dirt, sand, or a similar loose material at a rate up to your burrow Speed. You can’t burrow through rock or other substances denser than dirt unless you have an ability that allows you to do so." };
+            yield return new TextBlock { Id = Guid.Parse("015a016b-90ec-42b1-9e9b-28c230d06999"), Text = "You dig your way through dirt, sand, or a similar loose material at a rate up to your burrow Speed. You can't burrow through rock or other substances denser than dirt unless you have an ability that allows you to do so." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

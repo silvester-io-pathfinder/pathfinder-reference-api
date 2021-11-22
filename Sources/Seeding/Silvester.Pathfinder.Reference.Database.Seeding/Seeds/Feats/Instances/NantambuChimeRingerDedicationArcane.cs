@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f0ce127d-00ed-4baa-83d7-ef656bf13076"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single arcane cantrip of your choice. If you weren&#39;t already, you become trained in arcane spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
+            yield return new TextBlock { Id = Guid.Parse("f0ce127d-00ed-4baa-83d7-ef656bf13076"), Type = TextBlockType.Text, Text = "You gain the ability to cast a single arcane cantrip of your choice. If you weren't already, you become trained in arcane spell DCs and spell attack rolls with Intelligence as your spellcasting ability." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

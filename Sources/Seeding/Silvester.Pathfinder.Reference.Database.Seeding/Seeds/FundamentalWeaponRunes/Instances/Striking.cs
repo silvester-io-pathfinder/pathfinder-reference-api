@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.FundamentalWeapo
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e34371c-5e72-4bb0-ae4e-eb3ff196ff19"), Type = TextBlockType.Text, Text = "You can upgrade the striking rune already etched on a weapon to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes’ Prices." };
+            yield return new TextBlock { Id = Guid.Parse("1e34371c-5e72-4bb0-ae4e-eb3ff196ff19"), Type = TextBlockType.Text, Text = "You can upgrade the striking rune already etched on a weapon to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes' Prices." };
         }
 
         protected override IEnumerable<FundamentalWeaponRuneVariant> GetLevels()

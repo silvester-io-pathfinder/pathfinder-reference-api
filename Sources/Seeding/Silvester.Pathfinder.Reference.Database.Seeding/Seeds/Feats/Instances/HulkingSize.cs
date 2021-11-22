@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5d4ac491-9c7b-410c-ae27-588df0637d29"), Type = TextBlockType.Text, Text = "Your eidolon grows substantially. Your eidolon becomes Large, instead of its previous size, and its reach increases to 10 feet. This doesn’t change any of its other statistics." };
+            yield return new TextBlock { Id = Guid.Parse("5d4ac491-9c7b-410c-ae27-588df0637d29"), Type = TextBlockType.Text, Text = "Your eidolon grows substantially. Your eidolon becomes Large, instead of its previous size, and its reach increases to 10 feet. This doesn't change any of its other statistics." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

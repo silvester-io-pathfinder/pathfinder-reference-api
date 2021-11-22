@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8525f67b-9127-43ad-8ed8-bd232bc17a58"), Type = TextBlockType.Text, Text = "You&#39;ve mastered combat practices that let you get up close and bring down perpetrators alive. You can use your Intelligence modifier on attack rolls when you (feat: Devise a Stratagem) if you&#39;re using a weapon of the club group in one hand (like a (item: club), (item: staff), or (item: sap)), in addition to the usual weapons, and those (action: Strikes | Strike) qualify for your strategic strike. Additionally, you can make any of your (action: Strikes | Strike) (trait: nonlethal) without taking the normal -2 penalty." };
+            yield return new TextBlock { Id = Guid.Parse("8525f67b-9127-43ad-8ed8-bd232bc17a58"), Type = TextBlockType.Text, Text = "You've mastered combat practices that let you get up close and bring down perpetrators alive. You can use your Intelligence modifier on attack rolls when you (feat: Devise a Stratagem) if you're using a weapon of the club group in one hand (like a (item: club), (item: staff), or (item: sap)), in addition to the usual weapons, and those (action: Strikes | Strike) qualify for your strategic strike. Additionally, you can make any of your (action: Strikes | Strike) (trait: nonlethal) without taking the normal -2 penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

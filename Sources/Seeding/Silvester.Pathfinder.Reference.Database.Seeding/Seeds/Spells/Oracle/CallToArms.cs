@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("70688af2-20e4-487a-ac58-8c908ac3cb6f"), Type = TextBlockType.Text, Text = "You cry out a call to arms, inspiring your allies to enter the fray. Each ally in the area gains a +2 status bonus to their initiative roll and gains temporary Hit Points equal to the spell’s level; these temporary Hit Points last for the spell’s duration." };
+            yield return new TextBlock { Id = Guid.Parse("70688af2-20e4-487a-ac58-8c908ac3cb6f"), Type = TextBlockType.Text, Text = "You cry out a call to arms, inspiring your allies to enter the fray. Each ally in the area gains a +2 status bonus to their initiative roll and gains temporary Hit Points equal to the spell's level; these temporary Hit Points last for the spell's duration." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

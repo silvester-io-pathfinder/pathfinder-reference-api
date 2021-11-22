@@ -77,7 +77,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "9th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("2539b2e0-f4a8-4a15-a515-a724b3d50585"), Type = TextBlockType.Text, Text = "You can learn about an event that occurred within the entirety of the object’s history." }
+                    new TextBlock { Id = Guid.Parse("2539b2e0-f4a8-4a15-a515-a724b3d50585"), Type = TextBlockType.Text, Text = "You can learn about an event that occurred within the entirety of the object's history." }
                 }
             };
         }

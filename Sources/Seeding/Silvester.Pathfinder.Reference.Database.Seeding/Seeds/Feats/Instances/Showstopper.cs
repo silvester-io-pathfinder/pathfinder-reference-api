@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("47eef16c-cc43-48a3-b839-852c0c8e747b"), Type = TextBlockType.Text, Text = "Your twirling weapons create a grand distraction that’s difficult to look away from. When using (feat: Pistol Twirl) to (action: Feint), you can target all enemies within your weapon’s first range increment who you can perceive and who can see you. You roll one Deception check and compare it against each target’s Perception DC." };
+            yield return new TextBlock { Id = Guid.Parse("47eef16c-cc43-48a3-b839-852c0c8e747b"), Type = TextBlockType.Text, Text = "Your twirling weapons create a grand distraction that's difficult to look away from. When using (feat: Pistol Twirl) to (action: Feint), you can target all enemies within your weapon's first range increment who you can perceive and who can see you. You roll one Deception check and compare it against each target's Perception DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

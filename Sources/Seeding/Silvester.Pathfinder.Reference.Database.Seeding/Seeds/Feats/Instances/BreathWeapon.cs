@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6bb6fcdb-930a-4c28-976f-9753361454ab"), Type = TextBlockType.Text, Text = "Your eidolon exhales a blast of destructive energy. Your eidolon deals 1d6 damage to all creatures in the area, with a basic Reflex save against your spell DC. The area and damage type of the Breath Weapon are chosen when the eidolon gains this ability. Your eidolon then can’t use their Breath Weapon again for the next 1d4 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("6bb6fcdb-930a-4c28-976f-9753361454ab"), Type = TextBlockType.Text, Text = "Your eidolon exhales a blast of destructive energy. Your eidolon deals 1d6 damage to all creatures in the area, with a basic Reflex save against your spell DC. The area and damage type of the Breath Weapon are chosen when the eidolon gains this ability. Your eidolon then can't use their Breath Weapon again for the next 1d4 rounds." };
             yield return new TextBlock { Id = Guid.Parse("af73bb3b-9ab0-4750-b207-b4050335ecd3"), Type = TextBlockType.Text, Text = "At 3rd level and every 2 levels thereafter, the damage increases by 1d6." };
         }
 

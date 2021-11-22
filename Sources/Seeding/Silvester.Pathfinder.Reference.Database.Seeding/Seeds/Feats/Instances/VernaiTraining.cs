@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("89375c75-75a5-424d-82c6-e47ad9a6bf5c"), Type = TextBlockType.Text, Text = "To resurrect a creature you’ve slain, a spellcaster must counteract your influence on its death. The DC of this check is equal to your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("89375c75-75a5-424d-82c6-e47ad9a6bf5c"), Type = TextBlockType.Text, Text = "To resurrect a creature you've slain, a spellcaster must counteract your influence on its death. The DC of this check is equal to your class DC or spell DC, whichever is higher." };
             yield return new TextBlock { Id = Guid.Parse("df0ef7fc-b48f-446a-bd2c-62b48057084b"), Type = TextBlockType.Text, Text = "In addition, add two 5th-level spells to your Red Mantis assassin spellbook – both spells must be chosen from the following options: (spell: death ward), (spell: drop dead), (spell: false vision), (spell: hallucination), (spell: illusory scene), (spell: mind probe), or (spell: sending). You gain a 5th-level spell slot that you can use to prepare a spell from your Red Mantis assassin spellbook." };
         }
 

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cbb9072a-c852-4398-ba5d-017e6a934553"), Type = TextBlockType.Text, Text = "When you focus on aiming, your attack becomes particularly accurate. Make a ranged weapon (action: Strike) against your hunted prey. On this (action: Strike), you gain a +2 circumstance bonus to the attack roll and ignore your prey’s concealed condition." };
+            yield return new TextBlock { Id = Guid.Parse("cbb9072a-c852-4398-ba5d-017e6a934553"), Type = TextBlockType.Text, Text = "When you focus on aiming, your attack becomes particularly accurate. Make a ranged weapon (action: Strike) against your hunted prey. On this (action: Strike), you gain a +2 circumstance bonus to the attack roll and ignore your prey's concealed condition." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4b3e6480-38c8-4b3f-aec1-b7ca79f5ecca"), Type = TextBlockType.Text, Text = "You’re mystically connected to your bonded item and can call it to your hand. If your bonded item is 1 Bulk or less, you teleport your bonded item into your hand from up to 1 mile away." };
+            yield return new TextBlock { Id = Guid.Parse("4b3e6480-38c8-4b3f-aec1-b7ca79f5ecca"), Type = TextBlockType.Text, Text = "You're mystically connected to your bonded item and can call it to your hand. If your bonded item is 1 Bulk or less, you teleport your bonded item into your hand from up to 1 mile away." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

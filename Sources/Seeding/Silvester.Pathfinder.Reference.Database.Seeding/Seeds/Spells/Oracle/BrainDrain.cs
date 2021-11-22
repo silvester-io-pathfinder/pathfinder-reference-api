@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9e5b198-1a39-4aa4-ae73-b2e639510c18"), Type = TextBlockType.Text, Text = "You probe the target’s mind to glean knowledge. This deals 1d8 mental damage with a basic Will save. If the target fails the save, you sort through the stolen memories to attempt a single check to Recall Knowledge. Choose a skill that has the Recall Knowledge action, and use the target’s skill modifier for the check." };
+            yield return new TextBlock { Id = Guid.Parse("b9e5b198-1a39-4aa4-ae73-b2e639510c18"), Type = TextBlockType.Text, Text = "You probe the target's mind to glean knowledge. This deals 1d8 mental damage with a basic Will save. If the target fails the save, you sort through the stolen memories to attempt a single check to Recall Knowledge. Choose a skill that has the Recall Knowledge action, and use the target's skill modifier for the check." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

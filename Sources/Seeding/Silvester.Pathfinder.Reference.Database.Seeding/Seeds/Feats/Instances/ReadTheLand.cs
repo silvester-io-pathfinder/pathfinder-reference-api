@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f92f9514-bfc2-4857-bd91-d7a82f13f199"), Type = TextBlockType.Text, Text = "You’ve learned how to commune with the land to learn information. You learn the commune with nature ritual if you didn’t know it already. You can perform this ritual with a casting time of 1 hour instead of 1 day and without a secondary caster." };
+            yield return new TextBlock { Id = Guid.Parse("f92f9514-bfc2-4857-bd91-d7a82f13f199"), Type = TextBlockType.Text, Text = "You've learned how to commune with the land to learn information. You learn the commune with nature ritual if you didn't know it already. You can perform this ritual with a casting time of 1 hour instead of 1 day and without a secondary caster." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c68f8897-c511-4cd9-9d23-cbd9359f23f5"), Type = TextBlockType.Text, Text = "You concentrate ethereal energy and attack a creature’s spirit, dealing 16d6 force damage. Because spirit blast affects the creature’s spirit, it can damage a target projecting its consciousness (such as via project image) or possessing another creature even if the target’s body is elsewhere. The possessed creature isn’t harmed by the blast. The blast doesn’t harm creatures that have no spirit, such as constructs." };
+            yield return new TextBlock { Id = Guid.Parse("c68f8897-c511-4cd9-9d23-cbd9359f23f5"), Type = TextBlockType.Text, Text = "You concentrate ethereal energy and attack a creature's spirit, dealing 16d6 force damage. Because spirit blast affects the creature's spirit, it can damage a target projecting its consciousness (such as via project image) or possessing another creature even if the target's body is elsewhere. The possessed creature isn't harmed by the blast. The blast doesn't harm creatures that have no spirit, such as constructs." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

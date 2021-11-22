@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c531041a-c626-4594-9bfb-e74338bd6229"), Type = TextBlockType.Text, Text = "After your foe has tried their best, you show everyone how it’s really done. Attempt a check using the same skill that triggered this reaction." };
+            yield return new TextBlock { Id = Guid.Parse("c531041a-c626-4594-9bfb-e74338bd6229"), Type = TextBlockType.Text, Text = "After your foe has tried their best, you show everyone how it's really done. Attempt a check using the same skill that triggered this reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

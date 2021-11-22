@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e553b53-e84a-4e01-9469-4f02411fc016"), Type = TextBlockType.Text, Text = "You can snap your shield into place just as you would take a blow, avoiding the hit at the last second. You immediately use the (action: Raise a Shield) action and gain your shield’s bonus to AC. The circumstance bonus from the shield applies to your AC when you’re determining the outcome of the triggering attack." };
+            yield return new TextBlock { Id = Guid.Parse("1e553b53-e84a-4e01-9469-4f02411fc016"), Type = TextBlockType.Text, Text = "You can snap your shield into place just as you would take a blow, avoiding the hit at the last second. You immediately use the (action: Raise a Shield) action and gain your shield's bonus to AC. The circumstance bonus from the shield applies to your AC when you're determining the outcome of the triggering attack." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

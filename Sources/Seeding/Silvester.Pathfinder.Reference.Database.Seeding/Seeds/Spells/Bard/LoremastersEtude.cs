@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("437f0fc5-4c7f-4f18-88de-4c76a9cdecd2"), Type = TextBlockType.Text, Text = "You call upon your muse’s deep mysteries, granting the target a greater ability to think and recall information. Roll the triggering Recall Knowledge skill check twice and use the better result." };
+            yield return new TextBlock { Id = Guid.Parse("437f0fc5-4c7f-4f18-88de-4c76a9cdecd2"), Type = TextBlockType.Text, Text = "You call upon your muse's deep mysteries, granting the target a greater ability to think and recall information. Roll the triggering Recall Knowledge skill check twice and use the better result." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

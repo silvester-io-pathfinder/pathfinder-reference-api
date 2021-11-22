@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.PreciousMaterial
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("a2250e00-31de-49f9-8b72-36fcac2b1148"), Type = TextBlockType.Text, Text = "Orichalcum shields’ time-bending properties are particularly useful for keeping them intact. The first time each day an orichalcum shield would be destroyed, it is instead left with 1 Hit Point and the broken condition." };
+            yield return new TextBlock { Id = Guid.Parse("a2250e00-31de-49f9-8b72-36fcac2b1148"), Type = TextBlockType.Text, Text = "Orichalcum shields' time-bending properties are particularly useful for keeping them intact. The first time each day an orichalcum shield would be destroyed, it is instead left with 1 Hit Point and the broken condition." };
         }
 
         protected override IEnumerable<PreciousMaterialShieldVariant> GetVariants()

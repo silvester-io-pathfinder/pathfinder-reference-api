@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6c4f3046-d6bf-4915-9c56-c1933de9a3df"), Type = TextBlockType.Text, Text = "You bring your performance to a sudden, dramatic finish, drowning out other sounds. Your composition spell ends immediately, and all allies that had been benefiting from the spell’s effects gain sonic resistance against the triggering damage equal to twice the composition spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("6c4f3046-d6bf-4915-9c56-c1933de9a3df"), Type = TextBlockType.Text, Text = "You bring your performance to a sudden, dramatic finish, drowning out other sounds. Your composition spell ends immediately, and all allies that had been benefiting from the spell's effects gain sonic resistance against the triggering damage equal to twice the composition spell's level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

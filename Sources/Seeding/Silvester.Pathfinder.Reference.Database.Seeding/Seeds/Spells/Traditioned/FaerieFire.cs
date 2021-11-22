@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("794778ac-97d6-4031-940d-9b576265d5a4"), Type = TextBlockType.Text, Text = "All creatures in the area when you cast the spell are limned in colorful, heatless fire of a color of your choice for the duration. Visible creatures can’t be concealed while affected by faerie fire. If the creatures are invisible, they are concealed while affected by faerie fire, rather than being undetected." };
+            yield return new TextBlock { Id = Guid.Parse("794778ac-97d6-4031-940d-9b576265d5a4"), Type = TextBlockType.Text, Text = "All creatures in the area when you cast the spell are limned in colorful, heatless fire of a color of your choice for the duration. Visible creatures can't be concealed while affected by faerie fire. If the creatures are invisible, they are concealed while affected by faerie fire, rather than being undetected." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

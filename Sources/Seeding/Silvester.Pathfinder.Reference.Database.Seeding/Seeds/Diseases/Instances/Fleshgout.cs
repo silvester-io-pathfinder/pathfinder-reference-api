@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
             {
                 Id = ID,
                 Name = "Fleshgout",
-                Description = "A ghonhatine’s vomit carries an awful disease that, over time, can cause a suffering creature’s flesh to develop painful boils that eventually slough away, leaving gaping wounds",
+                Description = "A ghonhatine's vomit carries an awful disease that, over time, can cause a suffering creature's flesh to develop painful boils that eventually slough away, leaving gaping wounds",
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = 28,
                 Onset = "Immediate"

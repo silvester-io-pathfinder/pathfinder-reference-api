@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("97fee1b6-f6d5-46f7-bc67-d44b4556468c"), Type = TextBlockType.Text, Text = "Using the weight of earth, you hamper a target’s flight, with effects based on its Fortitude save. If the creature reaches the ground safely, it doesn’t take falling damage." };
+            yield return new TextBlock { Id = Guid.Parse("97fee1b6-f6d5-46f7-bc67-d44b4556468c"), Type = TextBlockType.Text, Text = "Using the weight of earth, you hamper a target's flight, with effects based on its Fortitude save. If the creature reaches the ground safely, it doesn't take falling damage." };
         }
 
 
@@ -41,8 +41,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("651afaa5-1173-4e8f-94a3-aec89cbfcada"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target falls safely up to 120 feet.",
-                Failure = "The target falls safely up to 120 feet. If it hits the ground, it can’t Fly, levitate, or otherwise leave the ground for 1 round.",
-                CriticalFailure = "The target falls safely up to 120 feet. If it hits the ground, it can’t Fly, levitate, or otherwise leave the ground for 1 minute."
+                Failure = "The target falls safely up to 120 feet. If it hits the ground, it can't Fly, levitate, or otherwise leave the ground for 1 round.",
+                CriticalFailure = "The target falls safely up to 120 feet. If it hits the ground, it can't Fly, levitate, or otherwise leave the ground for 1 minute."
             };
         }
 

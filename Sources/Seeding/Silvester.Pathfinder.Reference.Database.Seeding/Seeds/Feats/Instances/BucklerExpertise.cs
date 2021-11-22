@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2cb29cd0-f289-4955-bf6d-b0b4a7584cc8"), Type = TextBlockType.Text, Text = "You’ve learned a flexible way to position your buckler to provide more protection. When you (action: Raise a Shield) to gain a circumstance bonus to AC from a (item: buckler), increase the bonus from +1 to +2." };
+            yield return new TextBlock { Id = Guid.Parse("2cb29cd0-f289-4955-bf6d-b0b4a7584cc8"), Type = TextBlockType.Text, Text = "You've learned a flexible way to position your buckler to provide more protection. When you (action: Raise a Shield) to gain a circumstance bonus to AC from a (item: buckler), increase the bonus from +1 to +2." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

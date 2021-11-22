@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eabc47ea-7e99-425a-a5ab-8bf15f522c41"), Type = TextBlockType.Text, Text = "You’ve learned to fight underwater. You are not flat-footed while in water, and you don’t take the usual penalties for using a bludgeoning or slashing melee weapon in water." };
+            yield return new TextBlock { Id = Guid.Parse("eabc47ea-7e99-425a-a5ab-8bf15f522c41"), Type = TextBlockType.Text, Text = "You've learned to fight underwater. You are not flat-footed while in water, and you don't take the usual penalties for using a bludgeoning or slashing melee weapon in water." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

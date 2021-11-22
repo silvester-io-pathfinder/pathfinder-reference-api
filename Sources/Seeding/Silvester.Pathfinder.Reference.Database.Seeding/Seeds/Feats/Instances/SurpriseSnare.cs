@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("20f03f1f-3732-4258-b844-8dc026121c9a"), Type = TextBlockType.Text, Text = "You install one of your snares prepared for quick deployment in a space that’s occupied by an opponent. It must be a snare that normally takes 1 minute or less to (action: Craft). The snare automatically triggers, but it takes a -2 circumstance penalty to any applicable save DC, as well as any attack rolls or other checks the snare attempts." };
+            yield return new TextBlock { Id = Guid.Parse("20f03f1f-3732-4258-b844-8dc026121c9a"), Type = TextBlockType.Text, Text = "You install one of your snares prepared for quick deployment in a space that's occupied by an opponent. It must be a snare that normally takes 1 minute or less to (action: Craft). The snare automatically triggers, but it takes a -2 circumstance penalty to any applicable save DC, as well as any attack rolls or other checks the snare attempts." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

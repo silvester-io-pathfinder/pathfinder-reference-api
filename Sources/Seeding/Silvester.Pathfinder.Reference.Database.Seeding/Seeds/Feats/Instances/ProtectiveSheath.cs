@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fec88c4a-90e9-45fd-ae68-a7def84adcce"), Type = TextBlockType.Text, Text = "When you lash out with your (item: clan dagger), you keep its sheath close at hand. When you use (feat: Clan’s Edge), if the hand you’re not holding the dagger with is empty, you can use your clan dagger’s sheath to block attacks as well. The circumstance bonus to your AC from parrying increases to a +2 against any target you hit with a (action: Strike) this turn." };
+            yield return new TextBlock { Id = Guid.Parse("fec88c4a-90e9-45fd-ae68-a7def84adcce"), Type = TextBlockType.Text, Text = "When you lash out with your (item: clan dagger), you keep its sheath close at hand. When you use (feat: Clan's Edge), if the hand you're not holding the dagger with is empty, you can use your clan dagger's sheath to block attacks as well. The circumstance bonus to your AC from parrying increases to a +2 against any target you hit with a (action: Strike) this turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

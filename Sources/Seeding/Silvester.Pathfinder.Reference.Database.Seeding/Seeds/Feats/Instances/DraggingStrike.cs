@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7784a13e-b550-4ef9-9dc6-9fe9342a1c7b"), Type = TextBlockType.Text, Text = "You aim your weapon to snag a foe’s armor, clothing, or flesh to pull them closer. Make a melee (action: Strike). If you hit a target that is your size or smaller, that creature is flat-footed until the end of your current turn, and you can move it 5 feet toward you. When you move the creature, you can move the same distance in the same direction as it, even if you’re adjacent to the target. This movement doesn’t trigger reactions." };
+            yield return new TextBlock { Id = Guid.Parse("7784a13e-b550-4ef9-9dc6-9fe9342a1c7b"), Type = TextBlockType.Text, Text = "You aim your weapon to snag a foe's armor, clothing, or flesh to pull them closer. Make a melee (action: Strike). If you hit a target that is your size or smaller, that creature is flat-footed until the end of your current turn, and you can move it 5 feet toward you. When you move the creature, you can move the same distance in the same direction as it, even if you're adjacent to the target. This movement doesn't trigger reactions." };
             yield return new TextBlock { Id = Guid.Parse("7edb2ffe-e056-462c-ac1b-637b30f0db4e"), Type = TextBlockType.Text, Text = "This (action: Strike) has the following failure effect." };
         }
 

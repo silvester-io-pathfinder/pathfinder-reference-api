@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bdee741a-5916-4dca-9699-1dbdabc86607"), Type = TextBlockType.Text, Text = "A vision of apocalyptic destruction fills the mind of each creature in the area. The vision deals 11d6 mental damage (basic Will save). On a critical failure, the creature must also succeed at a Reflex save or believe it’s trapped (stuck in a fissure, adrift at sea, or some other fate in keeping with its vision). If it fails the second save, it’s also stunned for 1 minute. It can attempt a new Will save at the end of each of its turns, and on a success, it disbelieves the illusion and recovers from the stunned condition." };
+            yield return new TextBlock { Id = Guid.Parse("bdee741a-5916-4dca-9699-1dbdabc86607"), Type = TextBlockType.Text, Text = "A vision of apocalyptic destruction fills the mind of each creature in the area. The vision deals 11d6 mental damage (basic Will save). On a critical failure, the creature must also succeed at a Reflex save or believe it's trapped (stuck in a fissure, adrift at sea, or some other fate in keeping with its vision). If it fails the second save, it's also stunned for 1 minute. It can attempt a new Will save at the end of each of its turns, and on a success, it disbelieves the illusion and recovers from the stunned condition." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

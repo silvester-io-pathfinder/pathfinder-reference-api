@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ddfa0095-dbc8-47d1-a729-a344f8f44031"), Type = TextBlockType.Text, Text = "You are familiar with the fittings and cogwheels of your snares and can repurpose parts from prepared quick-deploy snares to assemble a new creation on the fly. Using two of the snares you prepared for quick deployment during daily preparations, you can quickly deploy a different snare that you know how to (action: Craft), even if you didn’t prepare that snare during your daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("ddfa0095-dbc8-47d1-a729-a344f8f44031"), Type = TextBlockType.Text, Text = "You are familiar with the fittings and cogwheels of your snares and can repurpose parts from prepared quick-deploy snares to assemble a new creation on the fly. Using two of the snares you prepared for quick deployment during daily preparations, you can quickly deploy a different snare that you know how to (action: Craft), even if you didn't prepare that snare during your daily preparations." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

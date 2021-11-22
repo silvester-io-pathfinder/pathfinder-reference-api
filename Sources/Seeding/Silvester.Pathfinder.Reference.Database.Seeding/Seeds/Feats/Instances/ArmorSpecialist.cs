@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5d1ca4e9-a378-4755-860e-bd62c40e34a2"), Type = TextBlockType.Text, Text = "You have trained hard to optimize your armor’s protective qualities. You gain the armor specialization effects of medium and heavy armor." };
+            yield return new TextBlock { Id = Guid.Parse("5d1ca4e9-a378-4755-860e-bd62c40e34a2"), Type = TextBlockType.Text, Text = "You have trained hard to optimize your armor's protective qualities. You gain the armor specialization effects of medium and heavy armor." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

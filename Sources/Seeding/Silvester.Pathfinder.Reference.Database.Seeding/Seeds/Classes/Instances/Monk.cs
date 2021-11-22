@@ -16,10 +16,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
                 Name = "Monk",
                 BaseHealth = 10,
 
-                Description = "The strength of your fist flows from your mind and spirit. You seek perfection—honing your body into a flawless instrument and your mind into an orderly bastion of wisdom.You’re a fierce combatant renowned for martial arts skills and combat stances that grant you unique fighting moves.While the challenge of mastering many fighting styles drives you to great heights, you also enjoy meditating on philosophical questions and discovering new ways to obtain peace and enlightenment.",
+                Description = "The strength of your fist flows from your mind and spirit. You seek perfection—honing your body into a flawless instrument and your mind into an orderly bastion of wisdom.You're a fierce combatant renowned for martial arts skills and combat stances that grant you unique fighting moves.While the challenge of mastering many fighting styles drives you to great heights, you also enjoy meditating on philosophical questions and discovering new ways to obtain peace and enlightenment.",
                 DuringCombatEncounters = "You speed into the fray, dodging or leaping past obstacles with acrobatic maneuvers. You strike opponents in a rapid flurry of attacks, using your bare fists or wielding specialized weapons that you mastered during your monastic training. Stances let you change up your combat style for different situations, and ki abilities allow you to perform mystic feats like healing yourself and soaring through the air.",
                 DuringSocialEncounters = "Your perceptiveness lets you see through falsehoods, and your philosophical trainingprovides insight into any situation.",
-                WhileExploring = "You climb up walls, dodge traps, overcome obstacles, and leap over pits. You usually stay toward the outside of the group to protect more vulnerable members, and you’re well suited to looking for danger or moving stealthily.",
+                WhileExploring = "You climb up walls, dodge traps, overcome obstacles, and leap over pits. You usually stay toward the outside of the group to protect more vulnerable members, and you're well suited to looking for danger or moving stealthily.",
                 InDowntime = "You diligently exercise, eat healthy foods, meditate, and study various philosophies. You might also take up a craft that you strive to perfect.",
 
                 ClassDcProficiencyId = Proficiencies.Instances.Trained.ID,
@@ -57,7 +57,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Classes.Instance
         protected override IEnumerable<ClassCharacteristic> GetCharacteristics()
         {
             yield return new ClassCharacteristic { Id = Guid.Parse("01a10cfa-4e2b-4668-bc1c-939754abd9b4"), Text = "Marvel at your feats of physical prowess." };
-            yield return new ClassCharacteristic { Id = Guid.Parse("2d776caa-fcbf-420b-aed9-a56ee5c6a8aa"), Text = "Think you’re more than a bit uptight, given your vows and tenets." };
+            yield return new ClassCharacteristic { Id = Guid.Parse("2d776caa-fcbf-420b-aed9-a56ee5c6a8aa"), Text = "Think you're more than a bit uptight, given your vows and tenets." };
             yield return new ClassCharacteristic { Id = Guid.Parse("16536a58-583e-454b-a549-c2a2f6496c11"), Text = "Come to you for philosophical advice." };
         }
 

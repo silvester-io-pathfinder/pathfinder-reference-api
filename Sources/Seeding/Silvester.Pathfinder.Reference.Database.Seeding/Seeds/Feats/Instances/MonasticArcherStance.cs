@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e4dbffff-6887-47b1-98fa-324bb032e22e"), Type = TextBlockType.Text, Text = "You enter a specialized stance for a unique martial art centered around the use of a bow. While in this stance, the only (action: Strikes | Strike) you can make are those using longbows, shortbows, or bows with the (trait: monk | Monk - Item) trait. You can use (feat: Flurry of Blows) with these bows. You can use your other monk feats or monk abilities that normally require unarmed attacks with these bows when attacking within half the first range increment (normally 50 feet for a longbow and 30 feet for a shortbow), so long as the feat or ability doesn’t require a single, specific (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("e4dbffff-6887-47b1-98fa-324bb032e22e"), Type = TextBlockType.Text, Text = "You enter a specialized stance for a unique martial art centered around the use of a bow. While in this stance, the only (action: Strikes | Strike) you can make are those using longbows, shortbows, or bows with the (trait: monk | Monk - Item) trait. You can use (feat: Flurry of Blows) with these bows. You can use your other monk feats or monk abilities that normally require unarmed attacks with these bows when attacking within half the first range increment (normally 50 feet for a longbow and 30 feet for a shortbow), so long as the feat or ability doesn't require a single, specific (action: Strike)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

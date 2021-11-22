@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79be002d-2dc4-441c-9328-6198172b9f7b"), Type = TextBlockType.Text, Text = "You trample foes as you charge past. When you use (feat: Barreling Charge) and successfully move through a creature’s space, that creature takes bludgeoning damage equal to your Strength modifier. On a critical success, the creature takes double damage and is flat-footed until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("79be002d-2dc4-441c-9328-6198172b9f7b"), Type = TextBlockType.Text, Text = "You trample foes as you charge past. When you use (feat: Barreling Charge) and successfully move through a creature's space, that creature takes bludgeoning damage equal to your Strength modifier. On a critical success, the creature takes double damage and is flat-footed until the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

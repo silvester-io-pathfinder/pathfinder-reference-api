@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("99ba9122-bac5-4c4b-8f9d-dcbd846ce6aa"), Type = TextBlockType.Text, Text = "You emulate your vampiric parent&#39;s techniques for drawing blood from a victim. Your fangs (action: Strikes | Strike) deal an additional 1d4 persistent bleed damage on a critical hit." };
+            yield return new TextBlock { Id = Guid.Parse("99ba9122-bac5-4c4b-8f9d-dcbd846ce6aa"), Type = TextBlockType.Text, Text = "You emulate your vampiric parent's techniques for drawing blood from a victim. Your fangs (action: Strikes | Strike) deal an additional 1d4 persistent bleed damage on a critical hit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

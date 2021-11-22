@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("74d506fe-cae9-4d97-9f45-886a3206cd00"), Type = TextBlockType.Text, Text = "You use some of the spell’s magic to heal yourself, regaining 1d8 Hit Points per level of the spell." };
+            yield return new TextBlock { Id = Guid.Parse("74d506fe-cae9-4d97-9f45-886a3206cd00"), Type = TextBlockType.Text, Text = "You use some of the spell's magic to heal yourself, regaining 1d8 Hit Points per level of the spell." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

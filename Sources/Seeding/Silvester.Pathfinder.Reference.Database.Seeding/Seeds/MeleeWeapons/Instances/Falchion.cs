@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Falchion",
-                Description = "This weapon is a heavier, two-handed version of the curved-bladed scimitar. It is weighted toward the blade’s end, making it a powerful slashing weapon.",
+                Description = "This weapon is a heavier, two-handed version of the curved-bladed scimitar. It is weighted toward the blade's end, making it a powerful slashing weapon.",
                 Price = 300,
                 Damage = "1d10",
                 Hands = "2",

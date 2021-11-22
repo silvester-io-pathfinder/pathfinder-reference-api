@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f34a12ad-a02f-4149-9219-dc48594b4ec2"), Type = TextBlockType.Text, Text = "You’ve adopted the calming presence of catrinas, the festive dead; you might have even danced with a catrina yourself! So long as you are visibly carrying fresh flowers or colorful ribbons somewhere on your person, you can cast (spell: calm emotions) twice per day as a 2nd-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("f34a12ad-a02f-4149-9219-dc48594b4ec2"), Type = TextBlockType.Text, Text = "You've adopted the calming presence of catrinas, the festive dead; you might have even danced with a catrina yourself! So long as you are visibly carrying fresh flowers or colorful ribbons somewhere on your person, you can cast (spell: calm emotions) twice per day as a 2nd-level divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

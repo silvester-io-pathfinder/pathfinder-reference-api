@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a985845a-0dda-4fa8-8038-7b4e0673ed5c"), Type = TextBlockType.Text, Text = "You know how to get the most out of your allies. While exploring, when you are leading and allies are (Action: Following the Expert | Follow the Expert), you grant a +3 circumstance bonus instead of +2 if you’re an expert in the applicable skill, and a +4 circumstance bonus if you’re a master." };
+            yield return new TextBlock { Id = Guid.Parse("a985845a-0dda-4fa8-8038-7b4e0673ed5c"), Type = TextBlockType.Text, Text = "You know how to get the most out of your allies. While exploring, when you are leading and allies are (Action: Following the Expert | Follow the Expert), you grant a +3 circumstance bonus instead of +2 if you're an expert in the applicable skill, and a +4 circumstance bonus if you're a master." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

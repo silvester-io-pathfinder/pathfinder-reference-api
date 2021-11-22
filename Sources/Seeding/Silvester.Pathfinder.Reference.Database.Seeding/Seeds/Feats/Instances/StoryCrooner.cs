@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("400c3a9b-8424-44ca-9b23-b31a373be58a"), Type = TextBlockType.Text, Text = "You’re a talented story weaver and use your voice effectively. You are trained in Performance. If you would automatically become trained in Performance, you instead become trained in a skill of your choice. You also gain the (feat: Impressive Performance) skill feat and gain a +1 circumstance bonus when (action: Performing | Perform) for an audience of strix." };
+            yield return new TextBlock { Id = Guid.Parse("400c3a9b-8424-44ca-9b23-b31a373be58a"), Type = TextBlockType.Text, Text = "You're a talented story weaver and use your voice effectively. You are trained in Performance. If you would automatically become trained in Performance, you instead become trained in a skill of your choice. You also gain the (feat: Impressive Performance) skill feat and gain a +1 circumstance bonus when (action: Performing | Perform) for an audience of strix." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

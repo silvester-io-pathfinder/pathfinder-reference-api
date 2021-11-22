@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = ID,
                 Name = "Hunter's Luck",
                 Level = 2,
-                Trigger = "You attempt a check to Recall Knowledge about a creature, but you haven’t rolled yet.",
+                Trigger = "You attempt a check to Recall Knowledge about a creature, but you haven't rolled yet.",
                 ActionTypeId = ActionTypes.Instances.FreeAction.ID,
                 ClassId = Classes.Instances.Ranger.ID,
                 SpellTypeId = SpellTypes.Instances.Focus.ID,

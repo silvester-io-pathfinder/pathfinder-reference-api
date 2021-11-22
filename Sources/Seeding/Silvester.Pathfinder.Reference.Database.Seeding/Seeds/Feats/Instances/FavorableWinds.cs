@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a828e7a5-b0b7-4b9f-9a57-25398879157f"), Type = TextBlockType.Text, Text = "You wrap a shell of favorable wind around a weapon you wield. On your next (action: Strike) with a ranged weapon before the start of your next turn, you don’t take circumstance penalties on the attack roll due to wind. In addition, if that weapon has a range increment of 10 feet or less, increase its range increment by 10 feet for that (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("a828e7a5-b0b7-4b9f-9a57-25398879157f"), Type = TextBlockType.Text, Text = "You wrap a shell of favorable wind around a weapon you wield. On your next (action: Strike) with a ranged weapon before the start of your next turn, you don't take circumstance penalties on the attack roll due to wind. In addition, if that weapon has a range increment of 10 feet or less, increase its range increment by 10 feet for that (action: Strike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

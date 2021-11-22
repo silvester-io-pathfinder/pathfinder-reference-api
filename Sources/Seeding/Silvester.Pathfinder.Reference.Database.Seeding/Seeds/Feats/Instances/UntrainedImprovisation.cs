@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c022ba5-e4ad-4b96-a6df-96d83a529842"), Type = TextBlockType.Text, Text = "You’ve learned how to handle situations when you’re out of your depth. Your proficiency bonus to untrained skill checks is equal to half your level instead of +0. If you’re 7th level or higher, the bonus increases to your full level instead. This doesn’t allow you to use the skill’s trained actions." };
+            yield return new TextBlock { Id = Guid.Parse("7c022ba5-e4ad-4b96-a6df-96d83a529842"), Type = TextBlockType.Text, Text = "You've learned how to handle situations when you're out of your depth. Your proficiency bonus to untrained skill checks is equal to half your level instead of +0. If you're 7th level or higher, the bonus increases to your full level instead. This doesn't allow you to use the skill's trained actions." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

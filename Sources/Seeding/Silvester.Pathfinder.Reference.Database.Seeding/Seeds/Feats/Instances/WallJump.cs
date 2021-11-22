@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2e48e1d1-3167-453c-9701-20ca1af988c3"), Type = TextBlockType.Text, Text = "You can use your momentum from a jump to propel yourself off a wall. If you’re adjacent to a wall at the end of a jump (whether performing a (action: High Jump), (action: Long Jump), or (action: Leap)), you don’t fall as long as your next action is another jump. Furthermore, since your previous jump gives you momentum, you can use (action: High Jump) or (action: Long Jump) as a single action, but you don’t get to (action: Stride) as part of the activity." };
-            yield return new TextBlock { Id = Guid.Parse("9b5222da-19e5-49b2-98f5-9b963f42c2e5"), Type = TextBlockType.Text, Text = "You can use Wall Jump only once in a turn, unless you’re legendary in Athletics, in which case you can use Wall Jump as many times as you can use consecutive jump actions in that turn." };
+            yield return new TextBlock { Id = Guid.Parse("2e48e1d1-3167-453c-9701-20ca1af988c3"), Type = TextBlockType.Text, Text = "You can use your momentum from a jump to propel yourself off a wall. If you're adjacent to a wall at the end of a jump (whether performing a (action: High Jump), (action: Long Jump), or (action: Leap)), you don't fall as long as your next action is another jump. Furthermore, since your previous jump gives you momentum, you can use (action: High Jump) or (action: Long Jump) as a single action, but you don't get to (action: Stride) as part of the activity." };
+            yield return new TextBlock { Id = Guid.Parse("9b5222da-19e5-49b2-98f5-9b963f42c2e5"), Type = TextBlockType.Text, Text = "You can use Wall Jump only once in a turn, unless you're legendary in Athletics, in which case you can use Wall Jump as many times as you can use consecutive jump actions in that turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

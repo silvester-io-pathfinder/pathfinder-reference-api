@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("423c7046-6468-477f-bcb0-61bf646e58c1"), Type = TextBlockType.Text, Text = "You are as light as a leaf whirling in the breeze. When you (action: Leap) or succeed at a (action: High Jump) or (action: Long Jump), increase the distance you jump by 5 feet. When calculating the damage you take from falling, don’t count any distance fallen while you are adjacent to a wall." };
+            yield return new TextBlock { Id = Guid.Parse("423c7046-6468-477f-bcb0-61bf646e58c1"), Type = TextBlockType.Text, Text = "You are as light as a leaf whirling in the breeze. When you (action: Leap) or succeed at a (action: High Jump) or (action: Long Jump), increase the distance you jump by 5 feet. When calculating the damage you take from falling, don't count any distance fallen while you are adjacent to a wall." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

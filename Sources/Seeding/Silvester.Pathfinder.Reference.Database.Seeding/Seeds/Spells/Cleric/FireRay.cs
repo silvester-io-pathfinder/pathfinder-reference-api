@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("6f24b88d-aeb0-419e-9ef0-d7719aa0c0e8"), Type = TextBlockType.Text, Text = "The ray’s initial damage increases by 2d6, and the persistent fire damage on a critical success increases by 1d4." }
+                    new TextBlock { Id = Guid.Parse("6f24b88d-aeb0-419e-9ef0-d7719aa0c0e8"), Type = TextBlockType.Text, Text = "The ray's initial damage increases by 2d6, and the persistent fire damage on a critical success increases by 1d4." }
                 }
             };
         }

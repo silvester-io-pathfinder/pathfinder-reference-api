@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("225d6850-76c9-4ac7-b571-fa403baca7b2"), Type = TextBlockType.Text, Text = "You use glimmering gears and gnashing mechanisms to manufacture snares using specialized parts. Your snares include clockwork and steam-powered cogwheels and gears, and their gush of steam can hinder those you ensnare. If you choose to construct a snare using gears and a creature fails their saving throw against the snare, all creatures are concealed to that creature for 1 round, as a burst of steam obscures its vision." };
-            yield return new TextBlock { Id = Guid.Parse("fe96a184-28cf-4f73-a4c5-fcd3b47fbb44"), Type = TextBlockType.Text, Text = "__You can select this dedication feat for the trapsmith archetype even if you haven’t yet gained three feats from the snarecrafter archetype.__" };
+            yield return new TextBlock { Id = Guid.Parse("fe96a184-28cf-4f73-a4c5-fcd3b47fbb44"), Type = TextBlockType.Text, Text = "__You can select this dedication feat for the trapsmith archetype even if you haven't yet gained three feats from the snarecrafter archetype.__" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

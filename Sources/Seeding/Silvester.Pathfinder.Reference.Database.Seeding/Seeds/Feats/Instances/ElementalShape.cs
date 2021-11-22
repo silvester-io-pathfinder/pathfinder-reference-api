@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cf4f5d5e-98aa-4208-abe9-4476a9df3669"), Type = TextBlockType.Text, Text = "You understand the fundamental elements of nature such that you can imbue them into your body and manifest as a living embodiment of those elements. Add the forms in (Spell: elemental form) to your wild shape list. Whenever you’re polymorphed into another form using (Spell: wild shape), you gain resistance 5 to fire." };
+            yield return new TextBlock { Id = Guid.Parse("cf4f5d5e-98aa-4208-abe9-4476a9df3669"), Type = TextBlockType.Text, Text = "You understand the fundamental elements of nature such that you can imbue them into your body and manifest as a living embodiment of those elements. Add the forms in (Spell: elemental form) to your wild shape list. Whenever you're polymorphed into another form using (Spell: wild shape), you gain resistance 5 to fire." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

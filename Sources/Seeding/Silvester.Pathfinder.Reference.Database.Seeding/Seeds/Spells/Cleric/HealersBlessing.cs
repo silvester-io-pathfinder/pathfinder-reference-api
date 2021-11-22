@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("ac356683-d3cc-48b4-944e-6cd7d7a9744f"), Type = TextBlockType.Text, Text = "Your words bless a creature with an enhanced connection to positive energy. When the target regains Hit Points from a healing spell, it regains 2 additional Hit Points." };
-            yield return new TextBlock { Id = Guid.Parse("2e9dda41-cda9-49df-b53d-fef01907e0a3"), Type = TextBlockType.Text, Text = "The target regains additional Hit Points from healer’s blessing only the first time it regains HP from a given healing spell, so a spell that heals the creature repeatedly over a duration would restore additional Hit Points only once." };
+            yield return new TextBlock { Id = Guid.Parse("2e9dda41-cda9-49df-b53d-fef01907e0a3"), Type = TextBlockType.Text, Text = "The target regains additional Hit Points from healer's blessing only the first time it regains HP from a given healing spell, so a spell that heals the creature repeatedly over a duration would restore additional Hit Points only once." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

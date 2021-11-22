@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b0bd2e8d-0ad8-4dc5-aaf1-00a7385314af"), Type = TextBlockType.Text, Text = "You temporarily improve the target’s physique. The target gains a +2 status bonus to the next Acrobatics check, Athletics check, Fortitude save, or Reflex save it attempts." };
+            yield return new TextBlock { Id = Guid.Parse("b0bd2e8d-0ad8-4dc5-aaf1-00a7385314af"), Type = TextBlockType.Text, Text = "You temporarily improve the target's physique. The target gains a +2 status bonus to the next Acrobatics check, Athletics check, Fortitude save, or Reflex save it attempts." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

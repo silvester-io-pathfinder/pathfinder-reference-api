@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27fc90ca-993f-4b02-a531-212cba2e486f"), Type = TextBlockType.Text, Text = "You utter an arcane word of power that can make the target blinded upon hearing it. Once targeted, the target is then temporarily immune for 10 minutes. The effect of the spell depends on the target’s level." };
+            yield return new TextBlock { Id = Guid.Parse("27fc90ca-993f-4b02-a531-212cba2e486f"), Type = TextBlockType.Text, Text = "You utter an arcane word of power that can make the target blinded upon hearing it. Once targeted, the target is then temporarily immune for 10 minutes. The effect of the spell depends on the target's level." };
             yield return new TextBlock { Id = Guid.Parse("02bce5e7-5369-4955-8f47-9bfa75055b96"), Type = TextBlockType.Enumeration, Text = "11th or lower - The target is blinded permanently." };
             yield return new TextBlock { Id = Guid.Parse("452c3bc6-0c9d-4856-8153-7a44e99fbbb7"), Type = TextBlockType.Enumeration, Text = "12th to 13th -  The target is blinded for 1d4 minutes." };
             yield return new TextBlock { Id = Guid.Parse("98a6d70d-119d-45fb-ae75-4bad5d20dda9"), Type = TextBlockType.Enumeration, Text = "14th or higher -  The target is dazzled for 1 minute." };

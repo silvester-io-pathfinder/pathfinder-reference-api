@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ffe6a820-2c09-47f6-8479-e2d9d9bc6ba7"), Type = TextBlockType.Text, Text = "You inspire yourself and your allies to protect themselves more effectively. You and all allies in the area gain a +1 status bonus to AC and saving throws, as well as resistance equal to half the spell’s level to physical damage." };
+            yield return new TextBlock { Id = Guid.Parse("ffe6a820-2c09-47f6-8479-e2d9d9bc6ba7"), Type = TextBlockType.Text, Text = "You inspire yourself and your allies to protect themselves more effectively. You and all allies in the area gain a +1 status bonus to AC and saving throws, as well as resistance equal to half the spell's level to physical damage." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

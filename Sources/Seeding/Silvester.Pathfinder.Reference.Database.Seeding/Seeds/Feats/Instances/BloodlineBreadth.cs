@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4aa45cdd-b478-401d-9456-45863e8729c7"), Type = TextBlockType.Text, Text = "Your repertoire expands, and you can cast more spells of your bloodline’s tradition each day. Increase the number of spells in your repertoire and number of spell slots you gain from sorcerer archetype feats by 1 for each spell level other than your two highest sorcerer spell slots." };
+            yield return new TextBlock { Id = Guid.Parse("4aa45cdd-b478-401d-9456-45863e8729c7"), Type = TextBlockType.Text, Text = "Your repertoire expands, and you can cast more spells of your bloodline's tradition each day. Increase the number of spells in your repertoire and number of spell slots you gain from sorcerer archetype feats by 1 for each spell level other than your two highest sorcerer spell slots." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

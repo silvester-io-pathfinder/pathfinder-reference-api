@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea298fbc-4f7d-498c-a64b-61baccb3597b"), Type = TextBlockType.Text, Text = "Your (feat: Elemental Assault) cycles through all four elements. When you use (feat: Elemental Assault), instead of choosing a single element, you can choose an element from the list when using the action, and then choose a different element at the beginning of each of your next 3 turns without spending an action; once you have chosen an element, you can’t choose it again during this (feat: Elemental Assault), meaning you must select all four elements over the course of 4 turns." };
+            yield return new TextBlock { Id = Guid.Parse("ea298fbc-4f7d-498c-a64b-61baccb3597b"), Type = TextBlockType.Text, Text = "Your (feat: Elemental Assault) cycles through all four elements. When you use (feat: Elemental Assault), instead of choosing a single element, you can choose an element from the list when using the action, and then choose a different element at the beginning of each of your next 3 turns without spending an action; once you have chosen an element, you can't choose it again during this (feat: Elemental Assault), meaning you must select all four elements over the course of 4 turns." };
             yield return new TextBlock { Id = Guid.Parse("b6c0970b-d546-48a6-b250-fa44dc27e53d"), Type = TextBlockType.Text, Text = "Each time you choose an element, until the beginning of your next turn, your (action: Strikes | Strike) deal an additional 1d6 damage of the indicated type and have the trait corresponding to that element." };
         }
 

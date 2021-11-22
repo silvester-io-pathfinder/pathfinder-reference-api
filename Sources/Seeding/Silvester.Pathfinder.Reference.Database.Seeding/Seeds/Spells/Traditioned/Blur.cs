@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("de383eb7-ec7f-460b-8b53-87dafd843c6e"), Type = Utilities.Text.TextBlockType.Text, Text = "The target’s form appears blurry. It becomes concealed. As the nature of this effect still leaves the target’s location obvious, the target can’t use this concealment to Hide or Sneak." };
+            yield return new TextBlock { Id = Guid.Parse("de383eb7-ec7f-460b-8b53-87dafd843c6e"), Type = Utilities.Text.TextBlockType.Text, Text = "The target's form appears blurry. It becomes concealed. As the nature of this effect still leaves the target's location obvious, the target can't use this concealment to Hide or Sneak." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

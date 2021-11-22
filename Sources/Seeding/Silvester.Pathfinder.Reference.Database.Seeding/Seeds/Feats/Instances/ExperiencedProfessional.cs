@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5de43951-9d7c-4f0c-9ed8-c9c766bbdf76"), Type = TextBlockType.Text, Text = "You carefully safeguard your professional endeavors to prevent disaster. When you use Lore to (action: Earn Income), if you roll a critical failure, you instead get a failure. If you’re an expert in Lore, you gain twice as much income from a failed check to (action: Earn Income), unless it was originally a critical failure." };
+            yield return new TextBlock { Id = Guid.Parse("5de43951-9d7c-4f0c-9ed8-c9c766bbdf76"), Type = TextBlockType.Text, Text = "You carefully safeguard your professional endeavors to prevent disaster. When you use Lore to (action: Earn Income), if you roll a critical failure, you instead get a failure. If you're an expert in Lore, you gain twice as much income from a failed check to (action: Earn Income), unless it was originally a critical failure." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

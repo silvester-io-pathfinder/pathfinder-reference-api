@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("5d4699d0-7437-4684-b08f-b8fec907ea61"), Type = TextBlockType.Text, Text = "You create a pattern of lights that pulses with intensity. Creatures are dazzled while inside the pattern." };
-            yield return new TextBlock { Id = Guid.Parse("51cb811e-7a24-456a-8451-b5ff28641856"), Type = TextBlockType.Text, Text = "In addition, a creature must attempt a Will saving throw if it’s inside the pattern when you cast it, enters the pattern, ends its turn within the pattern, or uses a Seek or Interact action on the pattern. A creature currently blinded by the pattern doesn’t need to attempt new saving throws." };
+            yield return new TextBlock { Id = Guid.Parse("51cb811e-7a24-456a-8451-b5ff28641856"), Type = TextBlockType.Text, Text = "In addition, a creature must attempt a Will saving throw if it's inside the pattern when you cast it, enters the pattern, ends its turn within the pattern, or uses a Seek or Interact action on the pattern. A creature currently blinded by the pattern doesn't need to attempt new saving throws." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

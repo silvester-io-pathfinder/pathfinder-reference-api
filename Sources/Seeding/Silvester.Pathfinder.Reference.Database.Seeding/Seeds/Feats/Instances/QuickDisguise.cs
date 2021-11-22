@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("afc086f1-e577-48a8-849c-76028506f296"), Type = TextBlockType.Text, Text = "You can set up a disguise in half the usual time (generally 5 minutes). If you’re a master, it takes one-tenth the usual time (usually 1 minute). If you’re legendary, you can create a full disguise and (action: Impersonate) as a 3-action activity." };
+            yield return new TextBlock { Id = Guid.Parse("afc086f1-e577-48a8-849c-76028506f296"), Type = TextBlockType.Text, Text = "You can set up a disguise in half the usual time (generally 5 minutes). If you're a master, it takes one-tenth the usual time (usually 1 minute). If you're legendary, you can create a full disguise and (action: Impersonate) as a 3-action activity." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("47b8afc6-864b-4874-bda6-675cbd366351"), Type = TextBlockType.Text, Text = "You use a performer’s cold reading techniques, aura reading, and other tricks to discover your foe’s strengths and weaknesses. The GM rolls a secret Occultism check for you against the Deception or Stealth DC (whichever is higher) of an enemy of your choice who is engaged in combat and isn’t concealed from you, hidden from you, or undetected by you. The GM might apply a penalty for the distance between you and the enemy. The enemy is then temporarily immune to your Combat Reading for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("47b8afc6-864b-4874-bda6-675cbd366351"), Type = TextBlockType.Text, Text = "You use a performer's cold reading techniques, aura reading, and other tricks to discover your foe's strengths and weaknesses. The GM rolls a secret Occultism check for you against the Deception or Stealth DC (whichever is higher) of an enemy of your choice who is engaged in combat and isn't concealed from you, hidden from you, or undetected by you. The GM might apply a penalty for the distance between you and the enemy. The enemy is then temporarily immune to your Combat Reading for 1 day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("dbf007fc-8178-441f-b907-746f2e25074d"),
-                CriticalSuccess = "The GM chooses and tells you two of the following pieces of information about the enemy: which of the enemy’s weaknesses is highest, which of the enemy’s saving throws has the lowest modifier, one immunity the enemy has, or which of the enemy’s resistances is highest. In the event of a tie, the GM should pick one at random.",
+                CriticalSuccess = "The GM chooses and tells you two of the following pieces of information about the enemy: which of the enemy's weaknesses is highest, which of the enemy's saving throws has the lowest modifier, one immunity the enemy has, or which of the enemy's resistances is highest. In the event of a tie, the GM should pick one at random.",
                 Success = "The GM chooses one piece of information from the above list to tell you about the enemy.",
                 
                 CriticalFailure = "The GM gives you false information (the GM makes up the information).", 

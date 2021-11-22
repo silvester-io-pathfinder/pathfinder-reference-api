@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ab2be067-e382-4ba8-81fb-75c498d56468"), Type = TextBlockType.Text, Text = "Whether by following occult rituals, piecing together scraps of arcane theory, or some other method, you’ve called forth a creature that now serves as your constant companion in your studies of the supernatural. You gain a familiar." };
+            yield return new TextBlock { Id = Guid.Parse("ab2be067-e382-4ba8-81fb-75c498d56468"), Type = TextBlockType.Text, Text = "Whether by following occult rituals, piecing together scraps of arcane theory, or some other method, you've called forth a creature that now serves as your constant companion in your studies of the supernatural. You gain a familiar." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

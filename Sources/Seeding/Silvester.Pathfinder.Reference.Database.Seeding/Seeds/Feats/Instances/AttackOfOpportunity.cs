@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4eb4cd9f-e6d9-49a3-8c07-4279f1992719"), Type = TextBlockType.Text, Text = "You lash out at a vulnerable foe. Make a melee (action: Strike) against the triggering creature. If your attack is a critical hit and the trigger was a (trait: manipulate) action, you disrupt that action. This (action: Strike) doesn’t count toward your multiple attack penalty, and your multiple attack penalty doesn’t apply to this (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("4eb4cd9f-e6d9-49a3-8c07-4279f1992719"), Type = TextBlockType.Text, Text = "You lash out at a vulnerable foe. Make a melee (action: Strike) against the triggering creature. If your attack is a critical hit and the trigger was a (trait: manipulate) action, you disrupt that action. This (action: Strike) doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this (action: Strike)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

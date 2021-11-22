@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("60037700-5384-4bd4-ae26-b4209e1d8cef"), Type = TextBlockType.Text, Text = "With a flick of your wrist, you fling a chunk of your elemental matter at your foe. Make a spell attack roll, dealing 1d8 bludgeoning damage (or fire damage if your element is fire) on a success, and double damage on a critical success. This spell has your element’s trait." };
+            yield return new TextBlock { Id = Guid.Parse("60037700-5384-4bd4-ae26-b4209e1d8cef"), Type = TextBlockType.Text, Text = "With a flick of your wrist, you fling a chunk of your elemental matter at your foe. Make a spell attack roll, dealing 1d8 bludgeoning damage (or fire damage if your element is fire) on a success, and double damage on a critical success. This spell has your element's trait." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

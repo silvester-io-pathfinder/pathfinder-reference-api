@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13e49035-8698-43ed-a8a2-d73e6193048e"), Type = TextBlockType.Text, Text = "You teleport one object of light or negligible Bulk held in your hand to the target. The object appears instantly in the target’s hand, if they have a free hand, or at their feet if they don’t. The target knows what object you are attempting to send them. If the target is unconscious or refuses to accept your gift, or if the spell would teleport a creature (even if the creature is inside an extradimensional container), the spell fails." };
+            yield return new TextBlock { Id = Guid.Parse("13e49035-8698-43ed-a8a2-d73e6193048e"), Type = TextBlockType.Text, Text = "You teleport one object of light or negligible Bulk held in your hand to the target. The object appears instantly in the target's hand, if they have a free hand, or at their feet if they don't. The target knows what object you are attempting to send them. If the target is unconscious or refuses to accept your gift, or if the spell would teleport a creature (even if the creature is inside an extradimensional container), the spell fails." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "3rd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("7c79a7d6-8900-4390-8e26-a2f2f81c335d"), Type = TextBlockType.Text, Text = "The spell’s range increases to 500 feet." }
+                    new TextBlock { Id = Guid.Parse("7c79a7d6-8900-4390-8e26-a2f2f81c335d"), Type = TextBlockType.Text, Text = "The spell's range increases to 500 feet." }
                 }
             };
 
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("af6b1420-7885-462e-a50f-76c41f6067a5"), Type = TextBlockType.Text, Text = "As 3rd level, and the object’s maximum Bulk increases to 1. You can Cast the Spell with 3 actions instead of 1; doing so increases the range to 1 mile and you don’t need line of sight to the target, but you must be extremely familiar with the target." }
+                    new TextBlock { Id = Guid.Parse("af6b1420-7885-462e-a50f-76c41f6067a5"), Type = TextBlockType.Text, Text = "As 3rd level, and the object's maximum Bulk increases to 1. You can Cast the Spell with 3 actions instead of 1; doing so increases the range to 1 mile and you don't need line of sight to the target, but you must be extremely familiar with the target." }
                 }
             };
         }

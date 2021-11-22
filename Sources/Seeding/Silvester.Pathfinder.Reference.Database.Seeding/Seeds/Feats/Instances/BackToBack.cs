@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a3c3823-f72c-4107-8209-424b3a234596"), Type = TextBlockType.Text, Text = "You excel at watching your allies’ backs and helping them watch yours. As long as you and an ally are adjacent to each other, neither of you can become flat-footed due to flanking unless both of you are flanked. If you’re adjacent to more than one ally, all eligible allies can benefit at a given time. The benefit is negated for everyone if at least you and any one eligible ally are flanked, but not if your allies are flanked and you aren’t." };
+            yield return new TextBlock { Id = Guid.Parse("6a3c3823-f72c-4107-8209-424b3a234596"), Type = TextBlockType.Text, Text = "You excel at watching your allies' backs and helping them watch yours. As long as you and an ally are adjacent to each other, neither of you can become flat-footed due to flanking unless both of you are flanked. If you're adjacent to more than one ally, all eligible allies can benefit at a given time. The benefit is negated for everyone if at least you and any one eligible ally are flanked, but not if your allies are flanked and you aren't." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

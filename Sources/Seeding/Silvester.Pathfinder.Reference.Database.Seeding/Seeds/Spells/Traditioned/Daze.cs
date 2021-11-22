@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("47e75e5c-6ee0-4c24-bb1e-b51bad67e26a"), Type = Utilities.Text.TextBlockType.Text, Text = "You cloud the target’s mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also stunned 1." };
+            yield return new TextBlock { Id = Guid.Parse("47e75e5c-6ee0-4c24-bb1e-b51bad67e26a"), Type = Utilities.Text.TextBlockType.Text, Text = "You cloud the target's mind and daze it with a mental jolt. The jolt deals mental damage equal to your spellcasting ability modifier; the target must attempt a basic Will save. If the target critically fails the save, it is also stunned 1." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

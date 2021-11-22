@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("93d8782b-10ea-4989-bf52-7bf9a92bde46"), Type = TextBlockType.Text, Text = "You evoke a magical stone and throw it, with your god’s presence guiding your aim. Make a spell attack roll against the target. The stone deals bludgeoning damage equal to 1d6 plus your Strength modifier." };
+            yield return new TextBlock { Id = Guid.Parse("93d8782b-10ea-4989-bf52-7bf9a92bde46"), Type = TextBlockType.Text, Text = "You evoke a magical stone and throw it, with your god's presence guiding your aim. Make a spell attack roll against the target. The stone deals bludgeoning damage equal to 1d6 plus your Strength modifier." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "+1",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("d0414da8-2be0-45b2-b532-bdf51005707b"), Type = TextBlockType.Text, Text = "The stone’s damage increases by 1d6." }
+                    new TextBlock { Id = Guid.Parse("d0414da8-2be0-45b2-b532-bdf51005707b"), Type = TextBlockType.Text, Text = "The stone's damage increases by 1d6." }
                 }
             };
         }

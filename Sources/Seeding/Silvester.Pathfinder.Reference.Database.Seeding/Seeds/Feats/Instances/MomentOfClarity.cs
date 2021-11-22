@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fdeb74b7-70c0-4582-8575-1e1b19b42131"), Type = TextBlockType.Text, Text = "You push back your rage for a moment in order to think clearly. Until the end of this turn, you can use actions with the (trait: concentrate) trait even if those actions don’t have the (trait: rage) trait." };
+            yield return new TextBlock { Id = Guid.Parse("fdeb74b7-70c0-4582-8575-1e1b19b42131"), Type = TextBlockType.Text, Text = "You push back your rage for a moment in order to think clearly. Until the end of this turn, you can use actions with the (trait: concentrate) trait even if those actions don't have the (trait: rage) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

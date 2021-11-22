@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalPoison
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("240bf270-cf24-434c-983a-4b5217b80772"), Text = "Properly harvested and preserved, the poison from a wyvern’s sting is effective and direct." };
+            yield return new TextBlock { Id = Guid.Parse("240bf270-cf24-434c-983a-4b5217b80772"), Text = "Properly harvested and preserved, the poison from a wyvern's sting is effective and direct." };
         }
 
         protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages()

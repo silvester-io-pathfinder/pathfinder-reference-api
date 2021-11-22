@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d450502c-63e1-4e3a-a081-51501e4ab78f"), Type = TextBlockType.Text, Text = "Snares you create have complicated inner workings that are quite difficult to disable. Creatures attempting to (action: Disable your snares | Disable a Device) that use gears must succeed at an additional Thievery check in order to disable the snare. On a failed check, while the snare doesn’t fully trigger, the grinding mechanisms deal bludgeoning damage to the creature equal to half your level. The snare still triggers on a critical failure, as normal." };
+            yield return new TextBlock { Id = Guid.Parse("d450502c-63e1-4e3a-a081-51501e4ab78f"), Type = TextBlockType.Text, Text = "Snares you create have complicated inner workings that are quite difficult to disable. Creatures attempting to (action: Disable your snares | Disable a Device) that use gears must succeed at an additional Thievery check in order to disable the snare. On a failed check, while the snare doesn't fully trigger, the grinding mechanisms deal bludgeoning damage to the creature equal to half your level. The snare still triggers on a critical failure, as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

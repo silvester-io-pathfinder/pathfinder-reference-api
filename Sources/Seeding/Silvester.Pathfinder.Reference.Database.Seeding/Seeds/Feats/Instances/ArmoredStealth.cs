@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea2f3538-b4e0-4ec7-b2d1-c28abdbcaa3d"), Type = TextBlockType.Text, Text = "You have learned techniques to adjust and modify your armor and movements to reduce the noise you make. When you wear non-(trait: noisy) armor with which you are trained, your penalty to Stealth checks is reduced by 1 (to a minimum penalty of 0). If you’re a master in Stealth, reduce the penalty by 2, and if you’re legendary, reduce the penalty by 3. If your armor has the (trait: noisy) trait, instead of reducing the penalty to Stealth checks, you ignore the effects of the (trait: noisy) trait, enabling you to remove the penalty with a sufficient Strength score as normal." };
+            yield return new TextBlock { Id = Guid.Parse("ea2f3538-b4e0-4ec7-b2d1-c28abdbcaa3d"), Type = TextBlockType.Text, Text = "You have learned techniques to adjust and modify your armor and movements to reduce the noise you make. When you wear non-(trait: noisy) armor with which you are trained, your penalty to Stealth checks is reduced by 1 (to a minimum penalty of 0). If you're a master in Stealth, reduce the penalty by 2, and if you're legendary, reduce the penalty by 3. If your armor has the (trait: noisy) trait, instead of reducing the penalty to Stealth checks, you ignore the effects of the (trait: noisy) trait, enabling you to remove the penalty with a sufficient Strength score as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

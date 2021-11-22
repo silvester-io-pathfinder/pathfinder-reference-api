@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8c25ca38-96dd-4f85-93b6-2dc9d7ad8c6d"), Type = TextBlockType.Text, Text = "Your studies or prayers have unlocked deeper secrets of your deity’s domain. You gain an advanced domain spell from one of your domains. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("8c25ca38-96dd-4f85-93b6-2dc9d7ad8c6d"), Type = TextBlockType.Text, Text = "Your studies or prayers have unlocked deeper secrets of your deity's domain. You gain an advanced domain spell from one of your domains. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5be61222-f7f5-4ff0-89f1-9417dbcbed69"), Type = TextBlockType.Text, Text = "You smell of honey and savory things. You can cast (spell: enthrall) as a 3rd-level occult innate spell once per day, except the spell has a range of 30 feet and the (trait: inhaled) trait instead of the (trait: auditory) trait. Targets don’t gain any circumstance bonus for disagreeing with you. Your circumstance bonus to checks to (action: Make an Impression) if the target can smell your breath increases to +2." };
+            yield return new TextBlock { Id = Guid.Parse("5be61222-f7f5-4ff0-89f1-9417dbcbed69"), Type = TextBlockType.Text, Text = "You smell of honey and savory things. You can cast (spell: enthrall) as a 3rd-level occult innate spell once per day, except the spell has a range of 30 feet and the (trait: inhaled) trait instead of the (trait: auditory) trait. Targets don't gain any circumstance bonus for disagreeing with you. Your circumstance bonus to checks to (action: Make an Impression) if the target can smell your breath increases to +2." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

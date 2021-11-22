@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c96fbdee-5e6b-4c4b-a311-907602ad8a82"), Type = TextBlockType.Text, Text = "You can adapt your patron’s power to transform other creatures into forms more befitting their behavior or your whims. Your familiar learns (spell: baleful polymorph), even if (spell: baleful polymorph) isn’t on your tradition’s spell list. By spending 10 minutes in communion with your familiar, you can replace one spell of 6th level or higher you’ve prepared in one of your witch spell slots with a (spell: baleful polymorph) spell of the same level." };
+            yield return new TextBlock { Id = Guid.Parse("c96fbdee-5e6b-4c4b-a311-907602ad8a82"), Type = TextBlockType.Text, Text = "You can adapt your patron's power to transform other creatures into forms more befitting their behavior or your whims. Your familiar learns (spell: baleful polymorph), even if (spell: baleful polymorph) isn't on your tradition's spell list. By spending 10 minutes in communion with your familiar, you can replace one spell of 6th level or higher you've prepared in one of your witch spell slots with a (spell: baleful polymorph) spell of the same level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

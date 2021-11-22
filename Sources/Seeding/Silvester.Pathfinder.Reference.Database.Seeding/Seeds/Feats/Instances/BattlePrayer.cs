@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("21a4a8b3-40ac-43c0-9871-d35b4e011df3"), Type = TextBlockType.Text, Text = "Calling out to your deity, you recite scripture to harm a foe. When you select this feat, choose (trait: chaos | chaotic), (trait: evil), (trait: good), or (trait: law | lawful). Your choice must match one of your deity’s alignment components. This action has the trait corresponding to the chosen alignment." };
+            yield return new TextBlock { Id = Guid.Parse("21a4a8b3-40ac-43c0-9871-d35b4e011df3"), Type = TextBlockType.Text, Text = "Calling out to your deity, you recite scripture to harm a foe. When you select this feat, choose (trait: chaos | chaotic), (trait: evil), (trait: good), or (trait: law | lawful). Your choice must match one of your deity's alignment components. This action has the trait corresponding to the chosen alignment." };
             yield return new TextBlock { Id = Guid.Parse("4751a97f-28fc-462d-ba5b-439ba696a187"), Type = TextBlockType.Text, Text = "Attempt a Religion check against the Will DC of a foe within 30 feet. The foe is then temporarily immune to Battle Prayers from your deity for 1 day." };
         }
 
@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
                 CriticalSuccess = "You deal 2d6 damage of the chosen alignment type, or 6d6 damage if you have legendary proficiency in Religion.",
                 Success = "You deal 1d6 damage of the chosen alignment type, or 3d6 damage if you have legendary proficiency in Religion.",
                 Failure = "There is no effect.",
-                CriticalFailure = "The backlash of your foe’s will against your prayer prevents you from using Battle Prayer again for 10 minutes.", 
+                CriticalFailure = "The backlash of your foe's will against your prayer prevents you from using Battle Prayer again for 10 minutes.", 
             };
         }
             

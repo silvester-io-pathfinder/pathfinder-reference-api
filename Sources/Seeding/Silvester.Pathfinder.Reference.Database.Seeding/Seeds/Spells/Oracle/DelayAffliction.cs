@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c096d15-ee2e-465d-b643-9ef68c89243b"), Type = TextBlockType.Text, Text = "With a surge of healing energy, you push back against an affliction threatening the target and grant a small amount of healing. The target recovers 3d8 Hit Points. You attempt to counteract any one affliction you are aware the target has, suspending its effects for 1 hour on a success rather than removing it. The target is then temporarily immune to delay affliction for 1 day. You don’t need to have identified the name of the specific affliction, but you do need to be aware of it; for instance, you couldn’t delay an ingested poison during its onset period unless you were aware of the poison." };
+            yield return new TextBlock { Id = Guid.Parse("4c096d15-ee2e-465d-b643-9ef68c89243b"), Type = TextBlockType.Text, Text = "With a surge of healing energy, you push back against an affliction threatening the target and grant a small amount of healing. The target recovers 3d8 Hit Points. You attempt to counteract any one affliction you are aware the target has, suspending its effects for 1 hour on a success rather than removing it. The target is then temporarily immune to delay affliction for 1 day. You don't need to have identified the name of the specific affliction, but you do need to be aware of it; for instance, you couldn't delay an ingested poison during its onset period unless you were aware of the poison." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b36c8848-5a1e-4d8d-9de2-94344110237d"), Type = TextBlockType.Text, Text = "You can use your magic to transform into a small creature of a type that commonly serves as a spellcaster&#39;s familiar, potentially allowing you to safely scout for your party while retaining a degree of spellcasting ability. You gain the (spell: familiar form) focus spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("b36c8848-5a1e-4d8d-9de2-94344110237d"), Type = TextBlockType.Text, Text = "You can use your magic to transform into a small creature of a type that commonly serves as a spellcaster's familiar, potentially allowing you to safely scout for your party while retaining a degree of spellcasting ability. You gain the (spell: familiar form) focus spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

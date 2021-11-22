@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("23b19ac8-5006-409f-8263-5ddc1b20e2c9"), Type = TextBlockType.Text, Text = "You can channel the entire realm of possibilities of your (item: spellbook) into an attack. Once during your daily preparations, you can use a spell slot to hold that infinite potential, rather than using it to prepare a spell. When you make a (feat: Spellstrike), you can expend this special spell slot to immediately prepare and cast a spell from your (item: spellbook) at 2 levels lower than the slot’s level. (As normal for preparing spells, you can use a spell of an even-lower level, heightening it accordingly.) You don’t have any spell prepared in that slot until you cast from that slot." };
+            yield return new TextBlock { Id = Guid.Parse("23b19ac8-5006-409f-8263-5ddc1b20e2c9"), Type = TextBlockType.Text, Text = "You can channel the entire realm of possibilities of your (item: spellbook) into an attack. Once during your daily preparations, you can use a spell slot to hold that infinite potential, rather than using it to prepare a spell. When you make a (feat: Spellstrike), you can expend this special spell slot to immediately prepare and cast a spell from your (item: spellbook) at 2 levels lower than the slot's level. (As normal for preparing spells, you can use a spell of an even-lower level, heightening it accordingly.) You don't have any spell prepared in that slot until you cast from that slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

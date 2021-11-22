@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ca6b27e-6b2a-43eb-bb5e-ceee7ac8f8e3"), Type = TextBlockType.Text, Text = "You capitalize on your enemies’ fear to slip past their defenses. Any creature that has the frightened condition is also flat-footed against your attacks." };
+            yield return new TextBlock { Id = Guid.Parse("0ca6b27e-6b2a-43eb-bb5e-ceee7ac8f8e3"), Type = TextBlockType.Text, Text = "You capitalize on your enemies' fear to slip past their defenses. Any creature that has the frightened condition is also flat-footed against your attacks." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

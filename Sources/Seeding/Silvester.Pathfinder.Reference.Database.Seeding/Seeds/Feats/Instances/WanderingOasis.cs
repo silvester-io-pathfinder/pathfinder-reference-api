@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("56a78ab4-98e2-45ed-8e07-a8e10f90e524"), Type = TextBlockType.Text, Text = "You’re surrounded by soothing energy. You and allies within 60 feet of you are protected from severe environmental heat and cold. If you’re legendary in Survival, you and those allies are also protected from extreme environmental heat and cold." };
+            yield return new TextBlock { Id = Guid.Parse("56a78ab4-98e2-45ed-8e07-a8e10f90e524"), Type = TextBlockType.Text, Text = "You're surrounded by soothing energy. You and allies within 60 feet of you are protected from severe environmental heat and cold. If you're legendary in Survival, you and those allies are also protected from extreme environmental heat and cold." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

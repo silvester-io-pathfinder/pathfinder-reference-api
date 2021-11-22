@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fa741647-715e-4a62-8b4e-f1f32fa58bd9"), Type = TextBlockType.Text, Text = "You’re extremely extroverted, and you often spend your time carousing or otherwise socializing. You are trained in Diplomacy (or another skill of your choice if you were already trained in Diplomacy), and you gain the (feat: Hobnobber) skill feat." };
+            yield return new TextBlock { Id = Guid.Parse("fa741647-715e-4a62-8b4e-f1f32fa58bd9"), Type = TextBlockType.Text, Text = "You're extremely extroverted, and you often spend your time carousing or otherwise socializing. You are trained in Diplomacy (or another skill of your choice if you were already trained in Diplomacy), and you gain the (feat: Hobnobber) skill feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

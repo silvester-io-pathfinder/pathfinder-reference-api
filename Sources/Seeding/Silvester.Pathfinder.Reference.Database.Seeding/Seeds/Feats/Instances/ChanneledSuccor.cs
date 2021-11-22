@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1506c35c-48fc-44bb-8f80-8cc3244bfa47"), Type = TextBlockType.Text, Text = "You can remove conditions with divine grace. You can sacrifice one (spell: heal) spell you’ve prepared in your extra slots from healing font to cast one of the following spells instead: (spell: remove curse), (spell: remove disease), (spell: remove paralysis), or (spell: restoration). The spell is heightened to the same level as the heal spell you sacrificed." };
+            yield return new TextBlock { Id = Guid.Parse("1506c35c-48fc-44bb-8f80-8cc3244bfa47"), Type = TextBlockType.Text, Text = "You can remove conditions with divine grace. You can sacrifice one (spell: heal) spell you've prepared in your extra slots from healing font to cast one of the following spells instead: (spell: remove curse), (spell: remove disease), (spell: remove paralysis), or (spell: restoration). The spell is heightened to the same level as the heal spell you sacrificed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f7b97001-bfed-4ae5-b038-a2bc48b8a688"), Type = TextBlockType.Text, Text = "You can ask questions of, receive answers from, and use the Diplomacy skill with animals. The spell doesn’t make them more friendly than normal. Cunning animals are likely to be terse and evasive, while less intelligent ones often make inane comments." };
+            yield return new TextBlock { Id = Guid.Parse("f7b97001-bfed-4ae5-b038-a2bc48b8a688"), Type = TextBlockType.Text, Text = "You can ask questions of, receive answers from, and use the Diplomacy skill with animals. The spell doesn't make them more friendly than normal. Cunning animals are likely to be terse and evasive, while less intelligent ones often make inane comments." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("02843477-95e9-429f-91aa-c6196051bdcf"), Type = TextBlockType.Text, Text = "You move as fast and as high as the wind itself. You’re permanently quickened. You can use your extra action to (action: Stride) or (action: Leap), or to provide one of the actions needed for a (action: High Jump) or (action: Long Jump)." };
+            yield return new TextBlock { Id = Guid.Parse("02843477-95e9-429f-91aa-c6196051bdcf"), Type = TextBlockType.Text, Text = "You move as fast and as high as the wind itself. You're permanently quickened. You can use your extra action to (action: Stride) or (action: Leap), or to provide one of the actions needed for a (action: High Jump) or (action: Long Jump)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

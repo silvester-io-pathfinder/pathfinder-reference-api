@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0fcaa9ae-d031-4527-b37e-634bf17c2ea3"), Type = TextBlockType.Text, Text = "You’ve learned how to create traps that cause greater injuries. You deal an additional 1d6 precision damage with damaging snares you craft. This increases to 2d6 additional precision damage if you’re legendary in Crafting." };
+            yield return new TextBlock { Id = Guid.Parse("0fcaa9ae-d031-4527-b37e-634bf17c2ea3"), Type = TextBlockType.Text, Text = "You've learned how to create traps that cause greater injuries. You deal an additional 1d6 precision damage with damaging snares you craft. This increases to 2d6 additional precision damage if you're legendary in Crafting." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

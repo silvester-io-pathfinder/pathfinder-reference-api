@@ -69,19 +69,19 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
     
         protected override IEnumerable<TextBlock> GetAlignmentAndReligion()
         {
-            yield return new TextBlock { Id = Guid.Parse("eed52890-6801-4248-8794-f1d1d6424bf4"), Type = TextBlockType.Text, Text = "Catfolk aren’t a particularly religious people, but most do believe they were uplifted from great primeval cats to confront the evil abominations despoiling natural places and laboring to unmake reality. The gods blessed catfolk with language, the use of tools and weapons, and a strong sense of community." };
+            yield return new TextBlock { Id = Guid.Parse("eed52890-6801-4248-8794-f1d1d6424bf4"), Type = TextBlockType.Text, Text = "Catfolk aren't a particularly religious people, but most do believe they were uplifted from great primeval cats to confront the evil abominations despoiling natural places and laboring to unmake reality. The gods blessed catfolk with language, the use of tools and weapons, and a strong sense of community." };
             yield return new TextBlock { Id = Guid.Parse("607dafaa-d3b8-4e9d-bbde-defb6f9ac245"), Type = TextBlockType.Text, Text = "Most catfolk are good. They enjoy the freedom to travel and like to set their own paths in life, so more catfolk are chaotic than lawful. Religious catfolk most often practice a nebulous form of animism, appeasing the spirits of the land and the creatures they hunt to preserve the natural order." };
         }
     
         protected override IEnumerable<TextBlock> GetAdventurers()
         {
             yield return new TextBlock { Id = Guid.Parse("dea6db91-7b8c-4402-b301-76f80b12239f"), Type = TextBlockType.Text, Text = "Catfolk delight in venturing into unexplored areas, whether untrammeled wildernesses or ancient dungeons. They like finding treasures and baubles, but for most catfolk, the experience of the journey itself is the true reward." };
-            yield return new TextBlock { Id = Guid.Parse("78701e65-9e0d-4c48-a8db-61a99a190561"), Type = TextBlockType.Text, Text = "Typical catfolk backgrounds includeacrobat,artist,gambler,hunter,nomad, andscoutfrom theCore Rulebook, plusbandit,courier,insurgent,outrider, androot workerfrom this book. Catfolk’s inherent curiosity and agility mean they excel asswashbucklers,bards,fighters, androgues. Their love of the natural world and drive to puzzle out secrets of all types leads many to become investigators, druids, or sorcerers." };
+            yield return new TextBlock { Id = Guid.Parse("78701e65-9e0d-4c48-a8db-61a99a190561"), Type = TextBlockType.Text, Text = "Typical catfolk backgrounds includeacrobat,artist,gambler,hunter,nomad, andscoutfrom theCore Rulebook, plusbandit,courier,insurgent,outrider, androot workerfrom this book. Catfolk's inherent curiosity and agility mean they excel asswashbucklers,bards,fighters, androgues. Their love of the natural world and drive to puzzle out secrets of all types leads many to become investigators, druids, or sorcerers." };
         }
     
         protected override IEnumerable<TextBlock> GetNames()
         {
-            yield return new TextBlock { Id = Guid.Parse("55493182-98e9-429d-8589-826578409962"), Type = TextBlockType.Text, Text = "Catfolk are given short names in their youth. Adolescent catfolk are free to choose a different name when they first leave home, though some simply keep the name they’ve gotten used to. Catfolk love to add titles and honorifics to their names. Some catfolk use their titles exclusively among non-catfolk, and so become known by epithets like Six Fates, Fiend Killer, or Mistcloak." };
+            yield return new TextBlock { Id = Guid.Parse("55493182-98e9-429d-8589-826578409962"), Type = TextBlockType.Text, Text = "Catfolk are given short names in their youth. Adolescent catfolk are free to choose a different name when they first leave home, though some simply keep the name they've gotten used to. Catfolk love to add titles and honorifics to their names. Some catfolk use their titles exclusively among non-catfolk, and so become known by epithets like Six Fates, Fiend Killer, or Mistcloak." };
         }
     
         protected override IEnumerable<TextBlock> GetOtherInformation()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f12c8335-ce2b-4cc3-a9bb-52636bcfa9bc"), Type = TextBlockType.Text, Text = "You can extend the range of your spells. If the next action you use is to (activity: Cast a Spell) that has a range, increase that spell’s range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("f12c8335-ce2b-4cc3-a9bb-52636bcfa9bc"), Type = TextBlockType.Text, Text = "You can extend the range of your spells. If the next action you use is to (activity: Cast a Spell) that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

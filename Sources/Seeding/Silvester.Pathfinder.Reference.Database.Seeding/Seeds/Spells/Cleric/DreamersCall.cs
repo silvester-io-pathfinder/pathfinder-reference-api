@@ -40,9 +40,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("749c528f-62ef-4e65-bbef-ce951ddd121b"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target’s attention wavers. It becomes flat-footed and fascinated by its daydreams.",
-                Failure = "As success, except that you appear in the dream and give a suggestion. This can be to approach you, run away (as if it had the fleeing condition), Release what it’s holding, Drop Prone, or stand in place. The creature follows this course of action as its first action after you Cast the Spell.",
-                CriticalFailure = "As failure, but the target follows the course of action for as many actions as possible for the spell’s duration, and it does nothing else."
+                Success = "The target's attention wavers. It becomes flat-footed and fascinated by its daydreams.",
+                Failure = "As success, except that you appear in the dream and give a suggestion. This can be to approach you, run away (as if it had the fleeing condition), Release what it's holding, Drop Prone, or stand in place. The creature follows this course of action as its first action after you Cast the Spell.",
+                CriticalFailure = "As failure, but the target follows the course of action for as many actions as possible for the spell's duration, and it does nothing else."
             };
         }
 

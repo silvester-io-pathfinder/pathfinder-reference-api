@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("09c7cf16-f301-4ead-ad9d-52874e28724b"), Type = TextBlockType.Text, Text = "You go to extreme lengths to support your allies, even when it means bringing (spell: harm) to yourself. If your next action is to cast (spell: harm) or (spell: heal) from your healing or harmful font to restore Hit Points to a single ally, you can channel your own vitality along with the spell. You lose 1d8 Hit Points per level of the spell, which can’t be reduced or mitigated in any way, and your ally regains an equal number of Hit Points." };
+            yield return new TextBlock { Id = Guid.Parse("09c7cf16-f301-4ead-ad9d-52874e28724b"), Type = TextBlockType.Text, Text = "You go to extreme lengths to support your allies, even when it means bringing (spell: harm) to yourself. If your next action is to cast (spell: harm) or (spell: heal) from your healing or harmful font to restore Hit Points to a single ally, you can channel your own vitality along with the spell. You lose 1d8 Hit Points per level of the spell, which can't be reduced or mitigated in any way, and your ally regains an equal number of Hit Points." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

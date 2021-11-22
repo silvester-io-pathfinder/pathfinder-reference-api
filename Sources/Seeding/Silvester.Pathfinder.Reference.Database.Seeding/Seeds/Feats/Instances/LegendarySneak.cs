@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f7eccff3-850a-4039-8ddc-bced109ebf30"), Type = TextBlockType.Text, Text = "You’re always sneaking unless you choose to be seen, even when there’s nowhere to hide. You can (Action: Hide) and (Action: Sneak) even without cover or being concealed. When you employ an exploration tactic other than (Action: Avoiding Notice | Avoid Notice), you also gain the benefits of (Action: Avoiding Notice | Avoid Notice) unless you choose not to." };
+            yield return new TextBlock { Id = Guid.Parse("f7eccff3-850a-4039-8ddc-bced109ebf30"), Type = TextBlockType.Text, Text = "You're always sneaking unless you choose to be seen, even when there's nowhere to hide. You can (Action: Hide) and (Action: Sneak) even without cover or being concealed. When you employ an exploration tactic other than (Action: Avoiding Notice | Avoid Notice), you also gain the benefits of (Action: Avoiding Notice | Avoid Notice) unless you choose not to." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

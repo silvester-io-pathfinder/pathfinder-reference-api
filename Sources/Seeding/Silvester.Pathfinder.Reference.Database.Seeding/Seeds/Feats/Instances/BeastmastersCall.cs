@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("55f047a6-c21c-4b13-a84a-877e00b7fe8b"), Type = TextBlockType.Text, Text = "You quickly call in a primal projection of a non-active companion to provide the companion’s support benefit. The projection arrives in an unoccupied square of your choice within 30 feet of you, grants you its support benefit, and then disappears on your next turn. The projection has the same AC and saving throw modifiers as the real companion, and if it would take any damage before your next turn, it disappears and the support benefit ends immediately." };
+            yield return new TextBlock { Id = Guid.Parse("55f047a6-c21c-4b13-a84a-877e00b7fe8b"), Type = TextBlockType.Text, Text = "You quickly call in a primal projection of a non-active companion to provide the companion's support benefit. The projection arrives in an unoccupied square of your choice within 30 feet of you, grants you its support benefit, and then disappears on your next turn. The projection has the same AC and saving throw modifiers as the real companion, and if it would take any damage before your next turn, it disappears and the support benefit ends immediately." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

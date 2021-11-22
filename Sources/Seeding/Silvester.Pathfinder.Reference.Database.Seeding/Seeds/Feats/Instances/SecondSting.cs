@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4292a13a-e104-435d-8d48-565e5bc27e8e"), Type = TextBlockType.Text, Text = "You read your prey’s movements and transform them into openings, so failures with one weapon set up glancing blows with the other. Make a melee (action: Strike) with one of the required weapons against your hunted prey. The (action: Strike) gains the following failure effect." };
+            yield return new TextBlock { Id = Guid.Parse("4292a13a-e104-435d-8d48-565e5bc27e8e"), Type = TextBlockType.Text, Text = "You read your prey's movements and transform them into openings, so failures with one weapon set up glancing blows with the other. Make a melee (action: Strike) with one of the required weapons against your hunted prey. The (action: Strike) gains the following failure effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

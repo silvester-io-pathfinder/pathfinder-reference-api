@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c005ffdf-62c8-41a9-8736-4cd40141dded"), Type = TextBlockType.Text, Text = "You can increase the duration of your eidolon’s boosts. You learn the (spell: extend boost) link spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("c005ffdf-62c8-41a9-8736-4cd40141dded"), Type = TextBlockType.Text, Text = "You can increase the duration of your eidolon's boosts. You learn the (spell: extend boost) link spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

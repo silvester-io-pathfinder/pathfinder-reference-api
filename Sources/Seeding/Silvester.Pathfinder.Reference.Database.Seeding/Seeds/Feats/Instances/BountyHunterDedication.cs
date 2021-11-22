@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b95653df-274f-4fc0-86b6-74574c3e5c68"), Type = TextBlockType.Text, Text = "When focused on finding your quarry, you’re relentless. You gain the (feat: Hunt Prey) action. You can use (feat: Hunt Prey) to designate only a creature that you’ve seen, heard about, or learned about through some other means, such as a bounty board or wanted poster. In addition to the other benefits of (feat: Hunt Prey), you gain a +2 circumstance bonus to checks to (action: Gather Information) regarding your prey." };
-            yield return new TextBlock { Id = Guid.Parse("045be7b4-487e-46e2-ab50-1ec03745af4a"), Type = TextBlockType.Text, Text = "If you already have (feat: Hunt Prey), you become an expert in Survival and gain the circumstance bonus to (action: Gather Information) about your prey; you can still designate a creature you’re tracking during exploration, in addition to the conditions above." };
+            yield return new TextBlock { Id = Guid.Parse("b95653df-274f-4fc0-86b6-74574c3e5c68"), Type = TextBlockType.Text, Text = "When focused on finding your quarry, you're relentless. You gain the (feat: Hunt Prey) action. You can use (feat: Hunt Prey) to designate only a creature that you've seen, heard about, or learned about through some other means, such as a bounty board or wanted poster. In addition to the other benefits of (feat: Hunt Prey), you gain a +2 circumstance bonus to checks to (action: Gather Information) regarding your prey." };
+            yield return new TextBlock { Id = Guid.Parse("045be7b4-487e-46e2-ab50-1ec03745af4a"), Type = TextBlockType.Text, Text = "If you already have (feat: Hunt Prey), you become an expert in Survival and gain the circumstance bonus to (action: Gather Information) about your prey; you can still designate a creature you're tracking during exploration, in addition to the conditions above." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

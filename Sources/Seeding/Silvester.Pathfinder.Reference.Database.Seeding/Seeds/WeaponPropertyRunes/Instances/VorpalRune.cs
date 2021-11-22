@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Name = "Envision",
                 Trigger = "You roll a natural 20 on a Strike with the weapon, critically succeed, and deal slashing damage. The target must have a head.",
-                Effect = "The target must succeed at a DC 37 Fortitude save or be decapitated. This kills any creature except ones that don’t require a head to live. For creatures with multiple heads, this usually kills the creature only if you sever its last head."
+                Effect = "The target must succeed at a DC 37 Fortitude save or be decapitated. This kills any creature except ones that don't require a head to live. For creatures with multiple heads, this usually kills the creature only if you sever its last head."
             };
         }
 

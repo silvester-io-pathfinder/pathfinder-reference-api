@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4b2a9766-f39b-420a-ab09-de79f2556ce9"), Type = TextBlockType.Text, Text = "You use your medical training to ameliorate sickness or assuage fears. When you use Medicine to (action: Administer First Aid), instead of Stabilizing a character or Stopping Bleeding, you can reduce an ally’s frightened or sickened condition by 2, or remove either of those conditions entirely on a critical success. You can remove only one condition at a time. The DC for the Medicine check is usually the DC of the effect that caused the condition." };
+            yield return new TextBlock { Id = Guid.Parse("4b2a9766-f39b-420a-ab09-de79f2556ce9"), Type = TextBlockType.Text, Text = "You use your medical training to ameliorate sickness or assuage fears. When you use Medicine to (action: Administer First Aid), instead of Stabilizing a character or Stopping Bleeding, you can reduce an ally's frightened or sickened condition by 2, or remove either of those conditions entirely on a critical success. You can remove only one condition at a time. The DC for the Medicine check is usually the DC of the effect that caused the condition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

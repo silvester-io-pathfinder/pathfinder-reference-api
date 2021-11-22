@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a419a73-8aa4-494c-b4b6-d8502eeaaeb9"), Type = TextBlockType.Text, Text = "You were raised with an aasimar or celestial relative, or you&#39;ve devoted yourself to researching the secrets of the celestial realms. You gain the trained proficiency rank in Diplomacy and Religion. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in a Lore skill related to the celestial realm from which you trace your lineage (usually Elysium Lore, Heaven Lore, or Nirvana Lore)." };
+            yield return new TextBlock { Id = Guid.Parse("5a419a73-8aa4-494c-b4b6-d8502eeaaeb9"), Type = TextBlockType.Text, Text = "You were raised with an aasimar or celestial relative, or you've devoted yourself to researching the secrets of the celestial realms. You gain the trained proficiency rank in Diplomacy and Religion. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in a Lore skill related to the celestial realm from which you trace your lineage (usually Elysium Lore, Heaven Lore, or Nirvana Lore)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

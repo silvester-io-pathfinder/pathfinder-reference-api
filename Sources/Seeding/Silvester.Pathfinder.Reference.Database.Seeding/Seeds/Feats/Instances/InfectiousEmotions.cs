@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f5a3b926-0c95-4a1d-8ba8-dbfdcbe31047"), Type = TextBlockType.Text, Text = "When you use (feat: Catharsis), one ally within 30 feet gains the catharsis activation benefits in addition to you. If these benefits require an (feat: emotional focus), they use your (feat: emotional focus) as they’re experiencing an empathic imprint of your emotions. Depending on the activation benefit, it might be impossible to grant it to an ally; for instance, (feat: pride) could only have an effect for an ally if both you and the ally critically failed the same saving throw against the same effect." };
+            yield return new TextBlock { Id = Guid.Parse("f5a3b926-0c95-4a1d-8ba8-dbfdcbe31047"), Type = TextBlockType.Text, Text = "When you use (feat: Catharsis), one ally within 30 feet gains the catharsis activation benefits in addition to you. If these benefits require an (feat: emotional focus), they use your (feat: emotional focus) as they're experiencing an empathic imprint of your emotions. Depending on the activation benefit, it might be impossible to grant it to an ally; for instance, (feat: pride) could only have an effect for an ally if both you and the ally critically failed the same saving throw against the same effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

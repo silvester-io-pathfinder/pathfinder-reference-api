@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("81ea4c1f-1fa0-446f-9154-8f58665f5e10"),
                 CriticalSuccess = "The target disbelieves the illusion and is unaffected.",
                 Success = "For 1 round, the target is stupefied 2 and takes a –2 status penalty to any checks it makes to determine the effects of reactions.",
-                Failure = "For 1 minute, the target is stupefied 2 and can’t use reactions.",
+                Failure = "For 1 minute, the target is stupefied 2 and can't use reactions.",
                 CriticalFailure = "As failure, and all spaces are difficult terrain for the target."
             };
         }

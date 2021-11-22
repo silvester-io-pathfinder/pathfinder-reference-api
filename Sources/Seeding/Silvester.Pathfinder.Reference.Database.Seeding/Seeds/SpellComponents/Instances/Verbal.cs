@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SpellComponents.
             {
                 Id = ID,
                 Name = "Verbal",
-                Description = "A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it’s hard to conceal that you’re Casting a Spell.The spell gains the concentrate trait.You must be able to speak to provide this component."
+                Description = "A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it's hard to conceal that you're Casting a Spell.The spell gains the concentrate trait.You must be able to speak to provide this component."
             };
         }
     }

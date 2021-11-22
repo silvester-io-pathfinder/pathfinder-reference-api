@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("52978669-6c0b-48fb-ab2f-c957687154bc"), Type = TextBlockType.Text, Text = "All too aware of your true nature, you’ve studied hags and their powers. You gain the trained proficiency rank in Deception and Occultism. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Hag Lore." };
+            yield return new TextBlock { Id = Guid.Parse("52978669-6c0b-48fb-ab2f-c957687154bc"), Type = TextBlockType.Text, Text = "All too aware of your true nature, you've studied hags and their powers. You gain the trained proficiency rank in Deception and Occultism. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Hag Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

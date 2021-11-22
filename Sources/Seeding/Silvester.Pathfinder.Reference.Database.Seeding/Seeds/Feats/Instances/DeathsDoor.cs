@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d9ae0d40-f859-4357-acd3-138156e24c2c"), Type = TextBlockType.Text, Text = "You continue to fight when others would fall. Just before taking the triggering damage, you gain temporary Hit Points equal to twice your level. If you have Hit Points remaining after gaining these temporary Hit Points, you aren’t knocked unconscious, nor do you suffer the other effects of being reduced to 0 Hit Points. Any temporary Hit Points that remain after applying the damage last for up to 4 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("d9ae0d40-f859-4357-acd3-138156e24c2c"), Type = TextBlockType.Text, Text = "You continue to fight when others would fall. Just before taking the triggering damage, you gain temporary Hit Points equal to twice your level. If you have Hit Points remaining after gaining these temporary Hit Points, you aren't knocked unconscious, nor do you suffer the other effects of being reduced to 0 Hit Points. Any temporary Hit Points that remain after applying the damage last for up to 4 rounds." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

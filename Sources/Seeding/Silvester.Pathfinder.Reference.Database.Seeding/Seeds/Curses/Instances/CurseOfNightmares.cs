@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Curses.Instances
                 Name = "Curse of Nightmares",
                 DifficultyCheck = 16,
                 SavingThrowStatId = Will.ID,
-                Effect = "You must rest for 12 hours instead of 8 to avoid becoming fatigued and can’t gain any benefits from resting or long-term rest. You can still make your daily preparations."
+                Effect = "You must rest for 12 hours instead of 8 to avoid becoming fatigued and can't gain any benefits from resting or long-term rest. You can still make your daily preparations."
             };
         }
 

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0edde832-5ae1-4560-a8d7-bcdf2a91970c"), Type = TextBlockType.Text, Text = "You interpret a creature’s words, repeating their message in a different language that you know. If the triggering effect’s targets speak either the original language or the one you translated into, they are affected." };
+            yield return new TextBlock { Id = Guid.Parse("0edde832-5ae1-4560-a8d7-bcdf2a91970c"), Type = TextBlockType.Text, Text = "You interpret a creature's words, repeating their message in a different language that you know. If the triggering effect's targets speak either the original language or the one you translated into, they are affected." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

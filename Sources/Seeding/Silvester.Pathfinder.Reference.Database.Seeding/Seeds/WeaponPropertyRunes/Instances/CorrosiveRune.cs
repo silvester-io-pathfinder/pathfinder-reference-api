@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 PotencyId = Potencies.Instances.Unclassified.ID,
                 Benefits = new[]
                 {
-                    new TextBlock {Id = Guid.Parse("1cb19254-c8f0-4214-8e82-4070dd4a805c"), Type = TextBlockType.Text, Text = "Acid sizzles across the surface of the weapon. When you hit with the weapon, add 1d6 acid damage to the damage dealt. In addition, on a critical hit, the target’s armor (if any) takes 3d6 acid damage (before applying Hardness); if the target has a shield raised, the shield takes this damage instead."},
+                    new TextBlock {Id = Guid.Parse("1cb19254-c8f0-4214-8e82-4070dd4a805c"), Type = TextBlockType.Text, Text = "Acid sizzles across the surface of the weapon. When you hit with the weapon, add 1d6 acid damage to the damage dealt. In addition, on a critical hit, the target's armor (if any) takes 3d6 acid damage (before applying Hardness); if the target has a shield raised, the shield takes this damage instead."},
                 },
             };
 
@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 PotencyId = Potencies.Instances.Greater.ID,
                 Benefits = new[]
                 {
-                    new TextBlock {Id = Guid.Parse("df27e8fb-9b52-4d80-8f87-fff9fbbbdda1"), Type = TextBlockType.Text, Text = "The acid damage dealt by this weapon ignores the target’s acid resistance. Increase the acid damage dealt to armor or a shield on a critical hit to 6d6."},
+                    new TextBlock {Id = Guid.Parse("df27e8fb-9b52-4d80-8f87-fff9fbbbdda1"), Type = TextBlockType.Text, Text = "The acid damage dealt by this weapon ignores the target's acid resistance. Increase the acid damage dealt to armor or a shield on a critical hit to 6d6."},
                 },
             };
         }

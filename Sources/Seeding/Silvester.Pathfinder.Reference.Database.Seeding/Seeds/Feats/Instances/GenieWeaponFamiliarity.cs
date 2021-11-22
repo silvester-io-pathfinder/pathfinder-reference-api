@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("29d9bfca-799a-4987-9887-57f3644bd5e8"), Type = TextBlockType.Text, Text = "You’ve trained with weapons used by your genie ancestors. You are trained with (item: falchions | falchion), (item: ranseurs | ranseur), (item: scimitars | scimitar), and (item: tridents | trident). In addition, you gain access to all uncommon geniekin weapons. For the purpose of determining your proficiency, martial geniekin weapons are simple weapons and advanced geniekin weapons are martial weapons." };
+            yield return new TextBlock { Id = Guid.Parse("29d9bfca-799a-4987-9887-57f3644bd5e8"), Type = TextBlockType.Text, Text = "You've trained with weapons used by your genie ancestors. You are trained with (item: falchions | falchion), (item: ranseurs | ranseur), (item: scimitars | scimitar), and (item: tridents | trident). In addition, you gain access to all uncommon geniekin weapons. For the purpose of determining your proficiency, martial geniekin weapons are simple weapons and advanced geniekin weapons are martial weapons." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

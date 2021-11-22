@@ -30,8 +30,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b306b8c5-a272-4278-b7c8-bfa40c406882"), Type = TextBlockType.Text, Text = "Huge amounts of food and drink fill the target. It receives a full meal’s worth of nourishment and must attempt a Fortitude save." };
-            yield return new TextBlock { Id = Guid.Parse("bf085581-8105-4736-ac8a-42b8a99ca37c"), Type = TextBlockType.Text, Text = "A target sickened by this spell takes a –10-foot status penalty to its Speed until it’s no longer sickened." };
+            yield return new TextBlock { Id = Guid.Parse("b306b8c5-a272-4278-b7c8-bfa40c406882"), Type = TextBlockType.Text, Text = "Huge amounts of food and drink fill the target. It receives a full meal's worth of nourishment and must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("bf085581-8105-4736-ac8a-42b8a99ca37c"), Type = TextBlockType.Text, Text = "A target sickened by this spell takes a –10-foot status penalty to its Speed until it's no longer sickened." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

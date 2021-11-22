@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Conditions.Insta
 
         public override IEnumerable<TextBlock> GetConditionDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b7dabd8d-11d5-4498-a799-c904741c3619"), Type = Utilities.Text.TextBlockType.Text, Text = "You’re gripped by fear and struggle to control your nerves. The frightened condition always includes a value. You take a status penalty equal to this value to all your checks and DCs. Unless specified otherwise, at the end of each of your turns, the value of your frightened condition decreases by 1." };
+            yield return new TextBlock { Id = Guid.Parse("b7dabd8d-11d5-4498-a799-c904741c3619"), Type = Utilities.Text.TextBlockType.Text, Text = "You're gripped by fear and struggle to control your nerves. The frightened condition always includes a value. You take a status penalty equal to this value to all your checks and DCs. Unless specified otherwise, at the end of each of your turns, the value of your frightened condition decreases by 1." };
         }
 
         public override SourcePage? GetSourcePage()

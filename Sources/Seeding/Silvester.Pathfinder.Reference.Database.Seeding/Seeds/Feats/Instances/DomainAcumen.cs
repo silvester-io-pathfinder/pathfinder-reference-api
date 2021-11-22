@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8b997e5a-ea60-484f-bef4-52a1abaf36a1"), Type = TextBlockType.Text, Text = "Every oracle’s mystery touches on a divine domain of the deities that fuel it; you can access that power. Choose one of the domains associated with your mystery for which you don’t already have an initial domain spell. You gain an initial domain spell from that domain, which you cast as a revelation spell. It gains the (trait: cursebound) trait. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("8b997e5a-ea60-484f-bef4-52a1abaf36a1"), Type = TextBlockType.Text, Text = "Every oracle's mystery touches on a divine domain of the deities that fuel it; you can access that power. Choose one of the domains associated with your mystery for which you don't already have an initial domain spell. You gain an initial domain spell from that domain, which you cast as a revelation spell. It gains the (trait: cursebound) trait. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

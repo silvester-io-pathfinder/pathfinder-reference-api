@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("ebb8b07c-dc34-4128-9494-0660150353ee"), Type = TextBlockType.Enumeration, Text = "*Ranged Only**" };
-            yield return new TextBlock { Id = Guid.Parse("e9ebff7f-b10a-4ed7-a639-76f2cf75230e"), Type = TextBlockType.Text, Text = "Your weapon can shoot projectiles that split into simple ropes or nets around your foes’ legs to trip your targets, and you can climb using the grappling hooks built into the weapon. Your weapon innovation gains the (trait: climbing) and (trait: ranged trip) traits." };
+            yield return new TextBlock { Id = Guid.Parse("e9ebff7f-b10a-4ed7-a639-76f2cf75230e"), Type = TextBlockType.Text, Text = "Your weapon can shoot projectiles that split into simple ropes or nets around your foes' legs to trip your targets, and you can climb using the grappling hooks built into the weapon. Your weapon innovation gains the (trait: climbing) and (trait: ranged trip) traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

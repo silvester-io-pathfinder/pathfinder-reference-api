@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AdventuringGears
             {
                 Id = Guid.Parse("40f98c83-06bd-46eb-bf55-db5a5917d157"),
                 NameAddendum = "Extra Ink and Paper",
-                DescriptionAddendum = "If you’ve written a large amount, you can refill your kit with extra ink and paper.",
+                DescriptionAddendum = "If you've written a large amount, you can refill your kit with extra ink and paper.",
                 ItemLevel = 0,
                 Price = 10,
                 BulkId = Bulks.Instances.NegligibleBulk.ID,

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cff976f0-9ea3-415f-b161-267e68ef9401"), Type = TextBlockType.Text, Text = "You are so skilled at navigating the wild, your movement is completely unaffected by terrain. You ignore the effects of all difficult terrain, greater difficult terrain, and hazardous terrain, and you don’t trigger traps and hazards that are triggered by moving into an area (such as trip wires and pressure plates), unless you want to." };
+            yield return new TextBlock { Id = Guid.Parse("cff976f0-9ea3-415f-b161-267e68ef9401"), Type = TextBlockType.Text, Text = "You are so skilled at navigating the wild, your movement is completely unaffected by terrain. You ignore the effects of all difficult terrain, greater difficult terrain, and hazardous terrain, and you don't trigger traps and hazards that are triggered by moving into an area (such as trip wires and pressure plates), unless you want to." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

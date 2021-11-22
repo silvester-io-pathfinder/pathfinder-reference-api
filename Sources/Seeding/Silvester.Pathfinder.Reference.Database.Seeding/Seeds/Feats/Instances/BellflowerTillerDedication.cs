@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("a57bd094-2595-438f-921d-7647b7ebcac7"), Type = TextBlockType.Text, Text = "You dedicate yourself to freeing slaves and escorting them to freedom. You gain a +5-foot status bonus to your Speed." };
-            yield return new TextBlock { Id = Guid.Parse("1ca0ac44-c4d4-4baf-bedc-019b502b57cc"), Type = TextBlockType.Text, Text = "Choose up to six other people to be your “crop.” Members of your crop can use your Speed for overland travel if it’s higher than their own. Members more than 60 feet from you lose all benefits (from this or other Bellflower tiller feats) of being part of your crop, but they regain those benefits immediately when they return. You can add or remove someone from your crop by spending 10 minutes in conversation with them." };
+            yield return new TextBlock { Id = Guid.Parse("1ca0ac44-c4d4-4baf-bedc-019b502b57cc"), Type = TextBlockType.Text, Text = "Choose up to six other people to be your “crop.” Members of your crop can use your Speed for overland travel if it's higher than their own. Members more than 60 feet from you lose all benefits (from this or other Bellflower tiller feats) of being part of your crop, but they regain those benefits immediately when they return. You can add or remove someone from your crop by spending 10 minutes in conversation with them." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

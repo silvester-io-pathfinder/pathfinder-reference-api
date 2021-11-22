@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("230e7f4d-e11a-48bd-ac0f-06c8f2178bf6"), Type = TextBlockType.Text, Text = "You glimpse into the target’s future. Roll a d20; when the target attempts a non-secret saving throw or skill check, it can use the number you rolled instead of rolling, and the spell ends. Alternatively, you can instead reveal the result of the die roll for one of the target’s secret checks during the duration, and the spell ends. Casting it again ends any active diviner’s sight you have cast, as well as any active diviner’s sight on the target." };
+            yield return new TextBlock { Id = Guid.Parse("230e7f4d-e11a-48bd-ac0f-06c8f2178bf6"), Type = TextBlockType.Text, Text = "You glimpse into the target's future. Roll a d20; when the target attempts a non-secret saving throw or skill check, it can use the number you rolled instead of rolling, and the spell ends. Alternatively, you can instead reveal the result of the die roll for one of the target's secret checks during the duration, and the spell ends. Casting it again ends any active diviner's sight you have cast, as well as any active diviner's sight on the target." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e47d375a-7490-4544-81be-809b2bd3cbf8"), Type = Utilities.Text.TextBlockType.Text, Text = "You interfere with the target’s ability to teleport and travel between dimensions. Dimensional anchor attempts to counteract any teleportation effect, or any effect that would move the target to a different plane. The duration is determined by the target’s Will save." };
+            yield return new TextBlock { Id = Guid.Parse("e47d375a-7490-4544-81be-809b2bd3cbf8"), Type = Utilities.Text.TextBlockType.Text, Text = "You interfere with the target's ability to teleport and travel between dimensions. Dimensional anchor attempts to counteract any teleportation effect, or any effect that would move the target to a different plane. The duration is determined by the target's Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -38,9 +38,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("7a397e05-ef94-4531-a4d8-24e4596d37c7"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The effect’s duration is 1 minute.",
-                Failure = "The effect’s duration is 10 minutes.", 
-                CriticalFailure = "The effect’s duration is 1 hour."
+                Success = "The effect's duration is 1 minute.",
+                Failure = "The effect's duration is 10 minutes.", 
+                CriticalFailure = "The effect's duration is 1 hour."
             };
         }
 

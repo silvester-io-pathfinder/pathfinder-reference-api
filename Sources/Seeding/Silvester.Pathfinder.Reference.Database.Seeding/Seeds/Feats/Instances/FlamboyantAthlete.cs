@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         {
             yield return new TextBlock { Id = Guid.Parse("ec63af04-42df-426e-947f-adf6fc2a166e"), Type = TextBlockType.Text, Text = "Your panache allows you to perform incredible feats: climbing, swimming, and leaping far beyond your normal capacity. While you have panache, you gain the following benefits." };
             yield return new TextBlock { Id = Guid.Parse("56363127-4a4a-469c-8d8f-7189622b72a4"), Type = TextBlockType.Enumeration, Text = " : You gain climb and swim Speeds equal to half your land Speed." };
-            yield return new TextBlock { Id = Guid.Parse("2cf58798-bc5e-4ee3-889c-c16473b8a810"), Type = TextBlockType.Enumeration, Text = " : The DCs of your (action: High Jumps | High Jump) and (action: Long Jumps | Long Jump) decrease by 10. This doesn’t combine with other abilities that reduce those DCs." };
+            yield return new TextBlock { Id = Guid.Parse("2cf58798-bc5e-4ee3-889c-c16473b8a810"), Type = TextBlockType.Enumeration, Text = " : The DCs of your (action: High Jumps | High Jump) and (action: Long Jumps | Long Jump) decrease by 10. This doesn't combine with other abilities that reduce those DCs." };
             yield return new TextBlock { Id = Guid.Parse("4b9c5048-2ec6-40ef-9cba-c3945a5f0d38"), Type = TextBlockType.Enumeration, Text = " : The distance you can move with a vertical (action: Leap) increases to 5 feet. Your distance for a horizontal (action: Leap) increases to 15 feet if your Speed is at least 15 feet, or to 20 feet if your Speed is at least 30 feet." };
         }
 

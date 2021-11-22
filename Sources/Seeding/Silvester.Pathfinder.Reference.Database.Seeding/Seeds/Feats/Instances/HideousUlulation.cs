@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f9140b65-dcbc-4cf1-9ed5-9ae725eb3826"), Type = TextBlockType.Text, Text = "Your throat has multiple separate chambers that can give your voice an eerie echo. You can be clearly heard at distances of up to 300 feet regardless of ambient sound, although your voice doesn’t penetrate a magical silence effect." };
+            yield return new TextBlock { Id = Guid.Parse("f9140b65-dcbc-4cf1-9ed5-9ae725eb3826"), Type = TextBlockType.Text, Text = "Your throat has multiple separate chambers that can give your voice an eerie echo. You can be clearly heard at distances of up to 300 feet regardless of ambient sound, although your voice doesn't penetrate a magical silence effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

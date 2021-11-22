@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("91b93f44-f7f0-45ea-813e-0849027a47ef"), Type = TextBlockType.Text, Text = "Your attacks are swift and deadly beyond explanation. Nothing can prevent you from making a sneak attack, even if your opponent can see every blow coming. Instead of dealing the damage from (feat: Sly Striker), you can deal your full sneak attack damage to a target even if the target isn’t flat-footed." };
+            yield return new TextBlock { Id = Guid.Parse("91b93f44-f7f0-45ea-813e-0849027a47ef"), Type = TextBlockType.Text, Text = "Your attacks are swift and deadly beyond explanation. Nothing can prevent you from making a sneak attack, even if your opponent can see every blow coming. Instead of dealing the damage from (feat: Sly Striker), you can deal your full sneak attack damage to a target even if the target isn't flat-footed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

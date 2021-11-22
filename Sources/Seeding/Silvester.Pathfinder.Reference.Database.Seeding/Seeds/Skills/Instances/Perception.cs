@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances
                 HasArmorCheckPenalty = false,
                 HasRecallKnowledgeAction = false,
                 StatModifierId = Wisdom.ID,
-                Description = "Perception measures your ability to be aware of your environment. Every creature has Perception, which works with and is limited by a creature’s senses (described on page 464). Whenever you need to attempt a check based on your awareness, you’ll attempt a Perception check. Your Perception uses your Wisdom modifier, so you’ll use the following formula when attempting a Perception check."
+                Description = "Perception measures your ability to be aware of your environment. Every creature has Perception, which works with and is limited by a creature's senses (described on page 464). Whenever you need to attempt a check based on your awareness, you'll attempt a Perception check. Your Perception uses your Wisdom modifier, so you'll use the following formula when attempting a Perception check."
             };
         }
     }

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c16720aa-4599-4171-bb13-d67c4fc9638a"), Type = TextBlockType.Text, Text = "Your claws carry your mother&#39;s hag magic. When you critically hit with a claw (action: Strike), the target takes an additional 1d4 persistent mental damage." };
+            yield return new TextBlock { Id = Guid.Parse("c16720aa-4599-4171-bb13-d67c4fc9638a"), Type = TextBlockType.Text, Text = "Your claws carry your mother's hag magic. When you critically hit with a claw (action: Strike), the target takes an additional 1d4 persistent mental damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

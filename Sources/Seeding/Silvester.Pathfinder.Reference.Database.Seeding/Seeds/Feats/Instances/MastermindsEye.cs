@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d265bc4e-3dfa-4de6-bd91-e66569f43267"), Type = TextBlockType.Text, Text = "When you succeed at identifying a creature using (action: Recall Knowledge), that creature is flat-footed against your attacks until the start of your next turn; if you critically succeed, it&#39;s flat-footed against your attacks for 1 minute. This feat serves as the rogue&#39;s mastermind racket for the purpose of meeting prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("d265bc4e-3dfa-4de6-bd91-e66569f43267"), Type = TextBlockType.Text, Text = "When you succeed at identifying a creature using (action: Recall Knowledge), that creature is flat-footed against your attacks until the start of your next turn; if you critically succeed, it's flat-footed against your attacks for 1 minute. This feat serves as the rogue's mastermind racket for the purpose of meeting prerequisites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

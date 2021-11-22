@@ -28,8 +28,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("129be4c7-9d5f-4d05-a66e-bffd1031ea3d"), Type = TextBlockType.Text, Text = "You and all targets are invisible except to each other as long asyou remain within the spell’s area. If a creature made invisible by this spell leaves the spell’s area, it becomes visible and remains so even if it returns to the spell’s area. If any creature made invisible by this spell uses a hostile action, the spell ends after the hostile action is completed." };
-            yield return new TextBlock { Id = Guid.Parse("00133eb4-6fd3-44d9-9ae4-352539d6c817"), Type = TextBlockType.Text, Text = "While exploring, it’s easy to move together slowly and remain invisible. This is untenable in a battle, however. Once an encounter begins, creatures remain invisible until at most the end of the first round, at which point the spell ends." };
+            yield return new TextBlock { Id = Guid.Parse("129be4c7-9d5f-4d05-a66e-bffd1031ea3d"), Type = TextBlockType.Text, Text = "You and all targets are invisible except to each other as long asyou remain within the spell's area. If a creature made invisible by this spell leaves the spell's area, it becomes visible and remains so even if it returns to the spell's area. If any creature made invisible by this spell uses a hostile action, the spell ends after the hostile action is completed." };
+            yield return new TextBlock { Id = Guid.Parse("00133eb4-6fd3-44d9-9ae4-352539d6c817"), Type = TextBlockType.Text, Text = "While exploring, it's easy to move together slowly and remain invisible. This is untenable in a battle, however. Once an encounter begins, creatures remain invisible until at most the end of the first round, at which point the spell ends." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

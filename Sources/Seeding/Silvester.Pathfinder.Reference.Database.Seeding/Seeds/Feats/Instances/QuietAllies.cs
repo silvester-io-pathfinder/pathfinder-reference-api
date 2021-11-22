@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9536542d-6e19-4538-8b03-d75204a0e9c1"), Type = TextBlockType.Text, Text = "You’re skilled at moving with a group. When you are (Activity: Avoiding Notice | Avoid Notice) and your allies (Activity: Follow the Expert), you and those allies can roll a single Stealth check, using the lowest modifier, instead of rolling separately. This doesn’t apply for initiative rolls." };
+            yield return new TextBlock { Id = Guid.Parse("9536542d-6e19-4538-8b03-d75204a0e9c1"), Type = TextBlockType.Text, Text = "You're skilled at moving with a group. When you are (Activity: Avoiding Notice | Avoid Notice) and your allies (Activity: Follow the Expert), you and those allies can roll a single Stealth check, using the lowest modifier, instead of rolling separately. This doesn't apply for initiative rolls." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

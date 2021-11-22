@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("f5e8d362-20e3-4342-bd65-73ca29c1825b"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target’s body gains minor features of the harmless animal. Its insides churn as they partially transform, causing it to be sickened 1. When it recovers from the sickened condition, its features revert to normal.",
+                Success = "The target's body gains minor features of the harmless animal. Its insides churn as they partially transform, causing it to be sickened 1. When it recovers from the sickened condition, its features revert to normal.",
                 Failure = "The target transforms for 1 minute but keeps its mind. If it spends all its actions on its turn concentrating on its original form, it can attempt a Will save to end the effect immediately.",
                 CriticalFailure = "The target is transformed into the chosen harmless animal, body and mind, for an unlimited duration."
             };

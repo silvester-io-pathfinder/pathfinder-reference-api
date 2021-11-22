@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5fd712c9-05b8-4c6f-a3af-1c8114219ac3"), Type = TextBlockType.Text, Text = "You have heard the Call, and in constantly resisting that persistent demand, you&#39;ve developed a mental bulwark against effects that would target your mind. You gain a +1 circumstance bonus to Will saving throws against (trait: mental) effects. If you roll a success on your saving throw against a (trait: mental) effect that would make you controlled, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("5fd712c9-05b8-4c6f-a3af-1c8114219ac3"), Type = TextBlockType.Text, Text = "You have heard the Call, and in constantly resisting that persistent demand, you've developed a mental bulwark against effects that would target your mind. You gain a +1 circumstance bonus to Will saving throws against (trait: mental) effects. If you roll a success on your saving throw against a (trait: mental) effect that would make you controlled, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

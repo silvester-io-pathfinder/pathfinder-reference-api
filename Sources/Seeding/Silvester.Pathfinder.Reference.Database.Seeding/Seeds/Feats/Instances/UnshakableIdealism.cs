@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7530883d-4a88-44ea-8563-20fa39963d95"), Type = TextBlockType.Text, Text = "Your faith and hope can’t be shaken, and you won’t flee when lives are at stake. You gain a +1 circumstance bonus on saves against (trait: fear) effects and (trait: emotion) effects that inflict despair. When you would gain the fleeing condition, you can choose to stand your ground and be stunned for the effect’s duration as well, preventing you from running and allowing you to re-enter the fight more quickly when the effect ends." };
+            yield return new TextBlock { Id = Guid.Parse("7530883d-4a88-44ea-8563-20fa39963d95"), Type = TextBlockType.Text, Text = "Your faith and hope can't be shaken, and you won't flee when lives are at stake. You gain a +1 circumstance bonus on saves against (trait: fear) effects and (trait: emotion) effects that inflict despair. When you would gain the fleeing condition, you can choose to stand your ground and be stunned for the effect's duration as well, preventing you from running and allowing you to re-enter the fight more quickly when the effect ends." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

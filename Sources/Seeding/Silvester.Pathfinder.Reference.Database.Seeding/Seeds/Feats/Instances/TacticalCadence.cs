@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f1f4fae7-4e9c-49e5-8e03-ad2dadac3162"), Type = TextBlockType.Text, Text = "Your remarkable breath control and concise instructions allow you to coordinate your allies more effectively. When you grant allies the quickened condition using (feat: Cadence Call), they can use the extra action to either (action: Stride) or (action: Strike), and they aren’t slowed 1 on their following turn if they use the extra action." };
+            yield return new TextBlock { Id = Guid.Parse("f1f4fae7-4e9c-49e5-8e03-ad2dadac3162"), Type = TextBlockType.Text, Text = "Your remarkable breath control and concise instructions allow you to coordinate your allies more effectively. When you grant allies the quickened condition using (feat: Cadence Call), they can use the extra action to either (action: Stride) or (action: Strike), and they aren't slowed 1 on their following turn if they use the extra action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

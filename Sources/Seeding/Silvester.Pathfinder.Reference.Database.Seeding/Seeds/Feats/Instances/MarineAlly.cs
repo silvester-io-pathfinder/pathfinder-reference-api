@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("80d6ade5-f1e5-4285-8fbb-001195b52c62"), Type = TextBlockType.Text, Text = "You’ve befriended a sea creature, which becomes magically bonded to you. You gain a familiar. The type of creature is up to you, but one of its abilities must always be a swim Speed or the amphibious familiar ability." };
+            yield return new TextBlock { Id = Guid.Parse("80d6ade5-f1e5-4285-8fbb-001195b52c62"), Type = TextBlockType.Text, Text = "You've befriended a sea creature, which becomes magically bonded to you. You gain a familiar. The type of creature is up to you, but one of its abilities must always be a swim Speed or the amphibious familiar ability." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

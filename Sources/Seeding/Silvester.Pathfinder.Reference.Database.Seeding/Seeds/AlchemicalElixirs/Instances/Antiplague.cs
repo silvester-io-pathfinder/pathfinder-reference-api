@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalElixir
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("743b8c94-0516-4c3d-9c02-6e54afceab7d"), Text = "Antiplague can fortify the body’s defenses against diseases. Upon drinking an antiplague, you gain an item bonus to Fortitude saving throws against diseases for 24 hours; this applies to your daily save against a disease’s progression." };
+            yield return new TextBlock { Id = Guid.Parse("743b8c94-0516-4c3d-9c02-6e54afceab7d"), Text = "Antiplague can fortify the body's defenses against diseases. Upon drinking an antiplague, you gain an item bonus to Fortitude saving throws against diseases for 24 hours; this applies to your daily save against a disease's progression." };
         }
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()

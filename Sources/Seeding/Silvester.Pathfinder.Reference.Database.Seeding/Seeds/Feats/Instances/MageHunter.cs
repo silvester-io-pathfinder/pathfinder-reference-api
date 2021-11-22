@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5ee02efb-6f3b-4fbe-923c-3ea10ccdde42"), Type = TextBlockType.Text, Text = "You use your hatred of magic to lash out at the sight of spellcasting, allowing you to interrupt an enemy’s spell. Make a melee (action: Strike) against the triggering creature. If the attack is a critical hit, you disrupt the spell." };
+            yield return new TextBlock { Id = Guid.Parse("5ee02efb-6f3b-4fbe-923c-3ea10ccdde42"), Type = TextBlockType.Text, Text = "You use your hatred of magic to lash out at the sight of spellcasting, allowing you to interrupt an enemy's spell. Make a melee (action: Strike) against the triggering creature. If the attack is a critical hit, you disrupt the spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

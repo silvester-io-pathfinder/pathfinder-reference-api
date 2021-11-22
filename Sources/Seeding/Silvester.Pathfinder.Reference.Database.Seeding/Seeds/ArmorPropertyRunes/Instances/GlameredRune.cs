@@ -43,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ArmorPropertyRun
                 Id = Guid.Parse("8fa28249-b9cf-45b0-a5c9-fc721aa278df"),
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 Name = "Envision",
-                Effect = "You change the shape and appearance of this armor to appear as ordinary or fine clothes of your imagining. The armor’s statistics do not change. Only a creature that is benefiting from true seeing or a similar effect can attempt to disbelieve this illusion, with a DC of 25.",
+                Effect = "You change the shape and appearance of this armor to appear as ordinary or fine clothes of your imagining. The armor's statistics do not change. Only a creature that is benefiting from true seeing or a similar effect can attempt to disbelieve this illusion, with a DC of 25.",
             };
         }
 

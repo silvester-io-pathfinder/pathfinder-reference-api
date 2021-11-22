@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5241426b-3d43-46e8-bc30-77951b6c3748"), Type = TextBlockType.Text, Text = "You time the components of your spell with exacting precision, setting up a resonance that duplicates the spell’s effects. If your next action is to (action: Cast a Spell) of 4th level or lower that has no duration, the spell’s energy reverberates and echoes. You can (action: Cast the Spell | Cast a Spell) a second time before the end of your next turn without expending a spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("5241426b-3d43-46e8-bc30-77951b6c3748"), Type = TextBlockType.Text, Text = "You time the components of your spell with exacting precision, setting up a resonance that duplicates the spell's effects. If your next action is to (action: Cast a Spell) of 4th level or lower that has no duration, the spell's energy reverberates and echoes. You can (action: Cast the Spell | Cast a Spell) a second time before the end of your next turn without expending a spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

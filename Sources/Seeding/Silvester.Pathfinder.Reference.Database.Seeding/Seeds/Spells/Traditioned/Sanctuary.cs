@@ -37,8 +37,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("c607b915-9901-4fc2-8538-786b7f1a015b"),
                 CriticalSuccess = "Sanctuary ends.",
                 Success = "The creature can attempt its attack and any other attacks against the target this turn.",
-                Failure = "The creature can’t attack the target and wastes the action. It can’t attempt further attacks against the target this turn.",
-                CriticalFailure = "The creature wastes the action and can’t attempt to attack the target for the rest of sanctuary’s duration."
+                Failure = "The creature can't attack the target and wastes the action. It can't attempt further attacks against the target this turn.",
+                CriticalFailure = "The creature wastes the action and can't attempt to attack the target for the rest of sanctuary's duration."
             };
         }
 

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("22aaf18c-63b6-482f-a939-14fe3a6bec0b"), Type = TextBlockType.Text, Text = "You channel disruptive energies through the bond between you and your minion, causing it to violently explode. The target is immediately slain, and creatures within 20 feet of it take 6d6 fire damage (basic Reflex save)." };
-            yield return new TextBlock { Id = Guid.Parse("9c1a07c4-eb8b-4284-a8ce-508085ac37b1"), Type = TextBlockType.Text, Text = "If the target has the cold or water trait, the spell instead deals cold damage and gains the cold trait in place of the fire trait. If used on a creature that isn’t mindless, this spell has the evil trait. Attempting to cast this spell targeting a creature that you temporarily seized control of, such as an undead commanded by command undead, automatically fails and breaks the controlling effect." };
+            yield return new TextBlock { Id = Guid.Parse("9c1a07c4-eb8b-4284-a8ce-508085ac37b1"), Type = TextBlockType.Text, Text = "If the target has the cold or water trait, the spell instead deals cold damage and gains the cold trait in place of the fire trait. If used on a creature that isn't mindless, this spell has the evil trait. Attempting to cast this spell targeting a creature that you temporarily seized control of, such as an undead commanded by command undead, automatically fails and breaks the controlling effect." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

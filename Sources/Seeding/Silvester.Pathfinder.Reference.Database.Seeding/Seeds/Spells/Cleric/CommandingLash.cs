@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("91d21191-eee1-4700-b812-b716e84c5126"), Type = TextBlockType.Text, Text = "With the threat of more pain, you compel a creature you’ve recently harmed. You issue a command to the target, with the effects of the spell command." };
+            yield return new TextBlock { Id = Guid.Parse("91d21191-eee1-4700-b812-b716e84c5126"), Type = TextBlockType.Text, Text = "With the threat of more pain, you compel a creature you've recently harmed. You issue a command to the target, with the effects of the spell command." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

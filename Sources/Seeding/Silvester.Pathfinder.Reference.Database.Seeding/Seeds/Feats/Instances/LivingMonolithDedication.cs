@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("0a378743-da8c-47ac-8f63-7f13dfc518ad"), Type = TextBlockType.Text, Text = "~ Access: You are from the Golden Road region." };
-            yield return new TextBlock { Id = Guid.Parse("3135bfa2-1916-4756-95e6-a1a5963d3fbf"), Type = TextBlockType.Text, Text = "You’ve begun to inscribe a magical stone called a ka stone that you will someday tie to your soul. You gain knowledge of Ancient Osirion and a connection to your nascent ka stone. If you fail a recovery check while dying, your dying condition does not increase; if you critically fail, your dying condition increases by only 1. You become trained in Ancient Osirion Lore, or expert if you were already trained." };
+            yield return new TextBlock { Id = Guid.Parse("3135bfa2-1916-4756-95e6-a1a5963d3fbf"), Type = TextBlockType.Text, Text = "You've begun to inscribe a magical stone called a ka stone that you will someday tie to your soul. You gain knowledge of Ancient Osirion and a connection to your nascent ka stone. If you fail a recovery check while dying, your dying condition does not increase; if you critically fail, your dying condition increases by only 1. You become trained in Ancient Osirion Lore, or expert if you were already trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

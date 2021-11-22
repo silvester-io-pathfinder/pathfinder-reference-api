@@ -70,7 +70,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instance
             return new DivineIntercession
             {
                 Id = Guid.Parse("e201b27a-6d2e-4a3c-a7da-620e33bf1d9d"),
-                Description = "The Duke of Thunder’s intercessions are seen more commonly than other deities’ because of the god’s closeness to mortals, but also because of his tendency to dispense both boons and curses while in the depths of his drink.",
+                Description = "The Duke of Thunder's intercessions are seen more commonly than other deities' because of the god's closeness to mortals, but also because of his tendency to dispense both boons and curses while in the depths of his drink.",
                 MinorBoon = "The Heavenly Court's most boastful deity ensures your boasts hit home. Once, when you fail an Intimidation check, you critically succeed instead. Hei Feng grants this boon capriciously based on his mood, sometimes even for trivial or inconsequential boasts, and he sometimes grants it for other skill checks related to boasts.",
                 ModerateBoon = "Fair winds and currents speed your passage. Any vessel you use to travel over the sea gains a +10-foot status bonus to its Speeds.",
                 MajorBoon = "The instruments of the storm spare you from their fury. You ignore all effects and penalties caused by precipitation and winds, and you can see normally through fog, rain, and other weather conditions.",

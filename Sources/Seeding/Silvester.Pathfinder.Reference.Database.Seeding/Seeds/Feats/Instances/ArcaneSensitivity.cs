@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd6b2317-bfe4-4313-bb64-3cc4c2bcc6de"), Type = TextBlockType.Text, Text = "You can sense the presence of the supernatural, even if you don&#39;t have any magical ability yourself. You can spend a single action (this action has the (trait: concentrate) trait) to determine if any magical auras are present in the area. This has the effects of a 1st-level (spell: detect magic) spell but isn&#39;t magical. By straining, you can also discover the source of the magic and its school (with the effect of a 4th-level (spell: detect magic) spell), but doing so prevents you from using this ability again until you&#39;ve rested for 8 hours." };
+            yield return new TextBlock { Id = Guid.Parse("cd6b2317-bfe4-4313-bb64-3cc4c2bcc6de"), Type = TextBlockType.Text, Text = "You can sense the presence of the supernatural, even if you don't have any magical ability yourself. You can spend a single action (this action has the (trait: concentrate) trait) to determine if any magical auras are present in the area. This has the effects of a 1st-level (spell: detect magic) spell but isn't magical. By straining, you can also discover the source of the magic and its school (with the effect of a 4th-level (spell: detect magic) spell), but doing so prevents you from using this ability again until you've rested for 8 hours." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -70,7 +70,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instance
             return new DivineIntercession
             {
                 Id = Guid.Parse("6826dd52-a892-4881-b6d6-f2f000cef9b8"),
-                Description = "The Seventh Veil abhors the use of illusion to cause harm and detests anyone who discourages or corrupts the process of truth-seeking. The goddess works actively against the faith of Zon-Kuthon and his clerics’ use of shadow. ",
+                Description = "The Seventh Veil abhors the use of illusion to cause harm and detests anyone who discourages or corrupts the process of truth-seeking. The goddess works actively against the faith of Zon-Kuthon and his clerics' use of shadow. ",
                 MinorBoon = "Sivanah prevents your enemies from pulling off your veil. Once, when a foe rolls a success on a Perception check to disbelieve your illusion, it gets a critical failure instead. Sivanah typically grants this benefit to protect an elaborate or consequential illusory deception, and she never uses it to improve the effect of a harmful illusion.",
                 ModerateBoon = "You wear a veil of illusion wherever you go. You can cast illusory disguise at will as an innate divine spell.",
                 MajorBoon = "You spread your illusions over a larger area. You can designate an area to permanently gain the effects of hallucinatory terrain. All creatures within this area gain the effects of illusory disguise, changing their forms as you wish. You can designate a new area as a 1-minute activity, but doing so dismisses any previously designated areas.",

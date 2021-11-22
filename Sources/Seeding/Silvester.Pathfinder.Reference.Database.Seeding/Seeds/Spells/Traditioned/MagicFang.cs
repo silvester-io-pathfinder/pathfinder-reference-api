@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("216e6d5a-d147-4982-83b2-6fd711da9a9a"), Type = TextBlockType.Text, Text = "Choose one of the target’s unarmed attacks. You cause that unarmed attack to shine with primal energy. The unarmed attack becomes a +1 striking unarmed attack, gaining a +1 item bonus to attack rolls and increasing the number of damage dice to two if it had only one." };
+            yield return new TextBlock { Id = Guid.Parse("216e6d5a-d147-4982-83b2-6fd711da9a9a"), Type = TextBlockType.Text, Text = "Choose one of the target's unarmed attacks. You cause that unarmed attack to shine with primal energy. The unarmed attack becomes a +1 striking unarmed attack, gaining a +1 item bonus to attack rolls and increasing the number of damage dice to two if it had only one." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

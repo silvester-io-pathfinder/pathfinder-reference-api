@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4375f694-ac6e-458c-84e3-a92831afc22d"), Type = TextBlockType.Text, Text = "Your study of magic allows you to instinctively sense its presence. You can cast 1st-level (spell: detect magic) at will as an arcane innate spell. If you’re a master in Arcana, the spell is heightened to 3rd level; if you’re legendary, it is heightened to 4th level." };
+            yield return new TextBlock { Id = Guid.Parse("4375f694-ac6e-458c-84e3-a92831afc22d"), Type = TextBlockType.Text, Text = "Your study of magic allows you to instinctively sense its presence. You can cast 1st-level (spell: detect magic) at will as an arcane innate spell. If you're a master in Arcana, the spell is heightened to 3rd level; if you're legendary, it is heightened to 4th level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd1462a8-4ce3-495a-8240-67ba1966289e"), Type = TextBlockType.Text, Text = "Even in the worst circumstances, you can perform basic tasks. Choose a skill you’re trained in. You can forgo rolling a skill check for that skill to instead receive a result of 10 + your proficiency bonus (do not apply any other bonuses, penalties, or modifiers)." };
+            yield return new TextBlock { Id = Guid.Parse("cd1462a8-4ce3-495a-8240-67ba1966289e"), Type = TextBlockType.Text, Text = "Even in the worst circumstances, you can perform basic tasks. Choose a skill you're trained in. You can forgo rolling a skill check for that skill to instead receive a result of 10 + your proficiency bonus (do not apply any other bonuses, penalties, or modifiers)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

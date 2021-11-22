@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("0c2bc833-8c75-4c09-85bb-ddf9e44a0bc7"), Type = TextBlockType.Text, Text = "You replace your initial bloodline spell with the initial air elemental focus spell ((spell: updraft)), and your advanced bloodline spell (if you get it) with the advanced air elemental focus spell ((spell: powerful inhalation))." };
-            yield return new TextBlock { Id = Guid.Parse("a06c6e1f-6c4d-4cf1-976b-87fe3965a683"), Type = TextBlockType.Text, Text = "You can only select this option if your bloodline&#39;s elemental type is air." };
+            yield return new TextBlock { Id = Guid.Parse("a06c6e1f-6c4d-4cf1-976b-87fe3965a683"), Type = TextBlockType.Text, Text = "You can only select this option if your bloodline's elemental type is air." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

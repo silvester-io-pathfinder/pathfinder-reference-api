@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("030f5233-6fe7-443f-9f6c-8de0f7e6e87f"), Type = TextBlockType.Text, Text = "You’re particularly skilled at wielding traditional pirate weapons. You become trained with the following weapons: (item: hatchet), (item: rapier), (item: scimitar), and (item: whip). Whenever you gain a class feature that grants you expert or greater proficiency with a given weapon or weapons, you also gain that proficiency rank for these weapons." };
+            yield return new TextBlock { Id = Guid.Parse("030f5233-6fe7-443f-9f6c-8de0f7e6e87f"), Type = TextBlockType.Text, Text = "You're particularly skilled at wielding traditional pirate weapons. You become trained with the following weapons: (item: hatchet), (item: rapier), (item: scimitar), and (item: whip). Whenever you gain a class feature that grants you expert or greater proficiency with a given weapon or weapons, you also gain that proficiency rank for these weapons." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

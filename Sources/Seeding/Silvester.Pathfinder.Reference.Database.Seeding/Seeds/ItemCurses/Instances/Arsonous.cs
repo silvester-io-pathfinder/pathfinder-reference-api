@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ItemCurses.Insta
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("44a99ce1-b79a-4110-963d-fabbe80784d1"), Type = TextBlockType.Text, Text = "An arsonous curse creates flaws in the mystic pathways that channel magic through an item, allowing excess power to escape as sparks. Whenever you activate the magic item, a random ally within 30 feet takes 1d10 persistent fire damage. If no ally is in range, you take the damage instead. At the GM’s discretion, this curse might ignite an unattended object or the surrounding environment instead." };
+            yield return new TextBlock { Id = Guid.Parse("44a99ce1-b79a-4110-963d-fabbe80784d1"), Type = TextBlockType.Text, Text = "An arsonous curse creates flaws in the mystic pathways that channel magic through an item, allowing excess power to escape as sparks. Whenever you activate the magic item, a random ally within 30 feet takes 1d10 persistent fire damage. If no ally is in range, you take the damage instead. At the GM's discretion, this curse might ignite an unattended object or the surrounding environment instead." };
         }
 
         public override SourcePage GetSourcePage()

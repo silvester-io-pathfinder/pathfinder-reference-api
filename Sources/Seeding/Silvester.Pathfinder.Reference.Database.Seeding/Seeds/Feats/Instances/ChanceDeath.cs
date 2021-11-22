@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("037fbc26-5c64-4012-8904-7bab29a230b7"), Type = TextBlockType.Text, Text = "Your previous life ended due to sheer poor luck, struck by lightning or choking on a fish bone. You can reroll the triggering recovery check or saving throw, but you must use the new result, even if it’s worse than the first roll." };
+            yield return new TextBlock { Id = Guid.Parse("037fbc26-5c64-4012-8904-7bab29a230b7"), Type = TextBlockType.Text, Text = "Your previous life ended due to sheer poor luck, struck by lightning or choking on a fish bone. You can reroll the triggering recovery check or saving throw, but you must use the new result, even if it's worse than the first roll." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalPoison
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("765ca329-35c6-4f20-8d10-000b35ce1a78"), Text = "Mindfog mist can be used to undermine spellcasters, as its effect on a victim’s mental faculties are swift and powerful." };
+            yield return new TextBlock { Id = Guid.Parse("765ca329-35c6-4f20-8d10-000b35ce1a78"), Text = "Mindfog mist can be used to undermine spellcasters, as its effect on a victim's mental faculties are swift and powerful." };
         }
 
         protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9423a7ba-44b7-4d85-ab17-9970575e188f"), Type = TextBlockType.Text, Text = "Your eidolon&#39;s Constitution ability score increases by 2, or by 1 if it&#39;s already 18 or above." };
+            yield return new TextBlock { Id = Guid.Parse("9423a7ba-44b7-4d85-ab17-9970575e188f"), Type = TextBlockType.Text, Text = "Your eidolon's Constitution ability score increases by 2, or by 1 if it's already 18 or above." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

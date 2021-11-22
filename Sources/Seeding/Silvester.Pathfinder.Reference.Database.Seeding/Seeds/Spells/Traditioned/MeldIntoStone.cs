@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("54e609fa-82d3-4e0c-a712-be22fc1ecbde"), Type = TextBlockType.Text, Text = "You merge with an adjacent block of stone with enough volume to fit you and your worn and held possessions. You must touch the stone when you Cast the Spell. You can hear, but not see, what’s going on outside the stone, and you can cast spells while in the stone as long as they don’t require line of effect beyond the stone." };
+            yield return new TextBlock { Id = Guid.Parse("54e609fa-82d3-4e0c-a712-be22fc1ecbde"), Type = TextBlockType.Text, Text = "You merge with an adjacent block of stone with enough volume to fit you and your worn and held possessions. You must touch the stone when you Cast the Spell. You can hear, but not see, what's going on outside the stone, and you can cast spells while in the stone as long as they don't require line of effect beyond the stone." };
             yield return new TextBlock { Id = Guid.Parse("a13e2fdb-9934-44a3-b316-2be6b08dca4d"), Type = TextBlockType.Text, Text = "Significant physical damage to the stone while you are inside it expels you and deals 10d6 damage to you. Passwall expels you without dealing damage and ends meld into stone. You can Dismiss this spell." };
         }
 

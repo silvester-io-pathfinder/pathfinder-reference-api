@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Gnome Hooked Hammer",
-                Description = "This gnome tool and weapon features a hammer at one end and a curved pick on the other. It’s such a strange and awkward weapon that others think the gnomes are slightly erratic for using it.",
+                Description = "This gnome tool and weapon features a hammer at one end and a curved pick on the other. It's such a strange and awkward weapon that others think the gnomes are slightly erratic for using it.",
                 Price = 200,
                 Damage = "1d6",
                 Hands = "1",

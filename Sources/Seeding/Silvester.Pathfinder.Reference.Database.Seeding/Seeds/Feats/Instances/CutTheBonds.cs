@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ddcaf719-ca9c-4b69-9608-386ac435e7ea"), Type = TextBlockType.Text, Text = "Select a magical effect that has made an adjacent member of your crop clumsy, grabbed, paralyzed, restrained, or slowed. Attempt a counteract check using your attack modifier (including your multiple attack penalty) with a melee weapon with which you have expert proficiency. Your counteract level is half your level rounded up. On a success, you free that member from the effect; on a failure, you can’t attempt to use Cut the Bonds on that effect on that crop member until 24 hours have passed." };
+            yield return new TextBlock { Id = Guid.Parse("ddcaf719-ca9c-4b69-9608-386ac435e7ea"), Type = TextBlockType.Text, Text = "Select a magical effect that has made an adjacent member of your crop clumsy, grabbed, paralyzed, restrained, or slowed. Attempt a counteract check using your attack modifier (including your multiple attack penalty) with a melee weapon with which you have expert proficiency. Your counteract level is half your level rounded up. On a success, you free that member from the effect; on a failure, you can't attempt to use Cut the Bonds on that effect on that crop member until 24 hours have passed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c0e76554-a6d6-499b-a719-117d97f36f2e"), Type = TextBlockType.Text, Text = "You’ve learned to create a limited number of snares at no cost. Each day during your daily preparations, you can prepare four snares from your (item: formula book) for quick deployment; if they normally take 1 minute to (action: Craft), you can (action: Craft) them with 3 (action: Interact) actions. The number of snares increases to six if you’re a master in Crafting and eight if you’re legendary. Snares prepared in this way don’t cost you any resources to (action: Craft)." };
+            yield return new TextBlock { Id = Guid.Parse("c0e76554-a6d6-499b-a719-117d97f36f2e"), Type = TextBlockType.Text, Text = "You've learned to create a limited number of snares at no cost. Each day during your daily preparations, you can prepare four snares from your (item: formula book) for quick deployment; if they normally take 1 minute to (action: Craft), you can (action: Craft) them with 3 (action: Interact) actions. The number of snares increases to six if you're a master in Crafting and eight if you're legendary. Snares prepared in this way don't cost you any resources to (action: Craft)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

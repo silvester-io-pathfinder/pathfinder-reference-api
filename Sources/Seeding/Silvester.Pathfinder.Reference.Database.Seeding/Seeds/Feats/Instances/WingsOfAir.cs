@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("68ad4a92-317b-49f9-a129-02616e2e25bf"), Type = TextBlockType.Text, Text = "You can strain to call forth feathered or cloudy wings from your back. Once manifested, these wings remain for 10 minutes. You gain a fly Speed equal to your land Speed while you’ve manifested your wings." };
+            yield return new TextBlock { Id = Guid.Parse("68ad4a92-317b-49f9-a129-02616e2e25bf"), Type = TextBlockType.Text, Text = "You can strain to call forth feathered or cloudy wings from your back. Once manifested, these wings remain for 10 minutes. You gain a fly Speed equal to your land Speed while you've manifested your wings." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

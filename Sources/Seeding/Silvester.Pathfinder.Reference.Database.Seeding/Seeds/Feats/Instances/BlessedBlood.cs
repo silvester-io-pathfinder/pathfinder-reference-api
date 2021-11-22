@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8bb808c-26ce-4b55-a3a1-1f1a97741a22"), Type = TextBlockType.Text, Text = "Your deity’s blessings manifest in your blood-borne power. Add up to three of your deity’s spells (spells your deity grants to clerics) to your spell list. They are not automatically added to your repertoire, but you can select them just as you would spells normally on the divine spell list." };
+            yield return new TextBlock { Id = Guid.Parse("b8bb808c-26ce-4b55-a3a1-1f1a97741a22"), Type = TextBlockType.Text, Text = "Your deity's blessings manifest in your blood-borne power. Add up to three of your deity's spells (spells your deity grants to clerics) to your spell list. They are not automatically added to your repertoire, but you can select them just as you would spells normally on the divine spell list." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

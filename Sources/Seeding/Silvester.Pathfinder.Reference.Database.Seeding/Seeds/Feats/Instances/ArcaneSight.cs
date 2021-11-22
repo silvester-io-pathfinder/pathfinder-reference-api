@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("529e4415-a4cf-4b53-829a-778d2fb8aada"), Type = TextBlockType.Text, Text = "You’ve trained yourself to constantly be on the lookout for magical effects, even when focusing on looking out for other things. When you are (activity: Searching | Search), you also gain the benefits of (spell: Detect Magic) unless you choose not to." };
+            yield return new TextBlock { Id = Guid.Parse("529e4415-a4cf-4b53-829a-778d2fb8aada"), Type = TextBlockType.Text, Text = "You've trained yourself to constantly be on the lookout for magical effects, even when focusing on looking out for other things. When you are (activity: Searching | Search), you also gain the benefits of (spell: Detect Magic) unless you choose not to." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

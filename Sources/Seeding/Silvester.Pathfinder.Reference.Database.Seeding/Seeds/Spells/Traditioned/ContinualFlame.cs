@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("105c17e6-07ad-43f7-9868-476bb1f9d1c0"), Type = Utilities.Text.TextBlockType.Text, Text = "A magical flame springs up from the object, as bright as a torch. It doesn’t need oxygen, react to water, or generate heat." };
+            yield return new TextBlock { Id = Guid.Parse("105c17e6-07ad-43f7-9868-476bb1f9d1c0"), Type = Utilities.Text.TextBlockType.Text, Text = "A magical flame springs up from the object, as bright as a torch. It doesn't need oxygen, react to water, or generate heat." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

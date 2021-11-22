@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9b033722-04e9-4b62-b6d5-87f3d078cd28"), Type = TextBlockType.Text, Text = "~ Access: Have earnt Mialari Docur’s trust and have proven their worth by defeating the Scarlet Triad." };
-            yield return new TextBlock { Id = Guid.Parse("5947fcc3-75d2-4412-a052-001113f1eb4d"), Type = TextBlockType.Text, Text = "You spend 1 minute making quick adjustments to someone’s clothing and appearance, causing their words to carry more weight with an audience of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("9b033722-04e9-4b62-b6d5-87f3d078cd28"), Type = TextBlockType.Text, Text = "~ Access: Have earnt Mialari Docur's trust and have proven their worth by defeating the Scarlet Triad." };
+            yield return new TextBlock { Id = Guid.Parse("5947fcc3-75d2-4412-a052-001113f1eb4d"), Type = TextBlockType.Text, Text = "You spend 1 minute making quick adjustments to someone's clothing and appearance, causing their words to carry more weight with an audience of your choice." };
             yield return new TextBlock { Id = Guid.Parse("20f8bfdf-f226-4c12-91e2-e628cc1be190"), Type = TextBlockType.Text, Text = "While speaking to that audience, the target gains a +1 item bonus to Diplomacy and Performance checks. If you have master proficiency in Crafting, the bonus increases to +2; if you have legendary proficiency in Crafting, the bonus increases to +3. This bonus lasts until this ability is used on the target again, the situation they were prepared for ends, or they next change their outfit." };
         }
 

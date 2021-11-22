@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8bdeb20-938d-4e88-b020-1f18578ca5e3"), Type = TextBlockType.Text, Text = "Wings of pure light spread out from your back, granting you a fly Speed equal to your Speed. Your wings cast bright light in a 30-foot radius. When this spell’s duration would end, if you’re still flying, you float to the ground, as feather fall." };
+            yield return new TextBlock { Id = Guid.Parse("f8bdeb20-938d-4e88-b020-1f18578ca5e3"), Type = TextBlockType.Text, Text = "Wings of pure light spread out from your back, granting you a fly Speed equal to your Speed. Your wings cast bright light in a 30-foot radius. When this spell's duration would end, if you're still flying, you float to the ground, as feather fall." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

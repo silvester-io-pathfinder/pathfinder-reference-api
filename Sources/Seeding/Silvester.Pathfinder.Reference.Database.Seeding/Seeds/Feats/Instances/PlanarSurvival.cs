@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd5ef0d9-56a1-4c2a-b8cd-8e86f776cbdf"), Type = TextBlockType.Text, Text = "You can (Action: Subsist) using Survival on different planes, even those without resources or natural phenomena you normally need. For instance, you can forage for food even if the plane lacks food that could normally sustain you. A success on your check to (Action: Subsist) can also reduce the damage dealt by the plane, at the GM’s discretion." };
+            yield return new TextBlock { Id = Guid.Parse("cd5ef0d9-56a1-4c2a-b8cd-8e86f776cbdf"), Type = TextBlockType.Text, Text = "You can (Action: Subsist) using Survival on different planes, even those without resources or natural phenomena you normally need. For instance, you can forage for food even if the plane lacks food that could normally sustain you. A success on your check to (Action: Subsist) can also reduce the damage dealt by the plane, at the GM's discretion." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

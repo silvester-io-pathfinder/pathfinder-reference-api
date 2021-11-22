@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c585a1d4-72f2-464e-afea-ecc366488594"), Type = TextBlockType.Text, Text = "You’ve learned how to land daring blows when you have panache. You gain the precise strike class feature but you deal 1 additional damage on a hit and 1d6 damage on a finisher. This damage doesn’t increase as you gain levels. In addition, you gain the (feat: Basic Finisher) action." };
+            yield return new TextBlock { Id = Guid.Parse("c585a1d4-72f2-464e-afea-ecc366488594"), Type = TextBlockType.Text, Text = "You've learned how to land daring blows when you have panache. You gain the precise strike class feature but you deal 1 additional damage on a hit and 1d6 damage on a finisher. This damage doesn't increase as you gain levels. In addition, you gain the (feat: Basic Finisher) action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

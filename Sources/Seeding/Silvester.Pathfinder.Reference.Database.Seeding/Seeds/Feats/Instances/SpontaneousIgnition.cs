@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1cfbe094-7cc3-40e7-aacd-be2a60e24874"), Type = TextBlockType.Text, Text = "The sheer intensity of your mental focus causes spontaneous combustion. Use this amp in place of the psi cantrip’s normal amp entry. The amped psi cantrip must be one that deals damage and doesn’t have a duration." };
+            yield return new TextBlock { Id = Guid.Parse("1cfbe094-7cc3-40e7-aacd-be2a60e24874"), Type = TextBlockType.Text, Text = "The sheer intensity of your mental focus causes spontaneous combustion. Use this amp in place of the psi cantrip's normal amp entry. The amped psi cantrip must be one that deals damage and doesn't have a duration." };
             yield return new TextBlock { Id = Guid.Parse("51ea03d0-1dfb-48ab-8688-b801baa2b6b6"), Type = TextBlockType.Text, Text = "----" };
             yield return new TextBlock { Id = Guid.Parse("1b2bcf26-44d6-417d-a104-aaa642bf74f1"), Type = TextBlockType.Text, Text = "~ Amp: Half of any damage dealt by the amped psi cantrip is instead fire damage, and the spell also deals an additional 1 fire damage per spell level. The spell gains the (trait: fire) trait. If the spell deals more than one type of damage, change half the damage of each type to fire." };
         }

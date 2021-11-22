@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("07c5c32a-d433-475c-840f-f00b5c9d050f"), Type = TextBlockType.Text, Text = "Your construct unleashes a broad swath of devastation by separating its limbs, deploying hidden armaments, or using a similar technique to wreak havoc. You Command your innovation. Instead of its normal actions, it (action: Strides | Stride) once, then makes a (action: Strike) against each foe within 30 feet of it with a +2 circumstance bonus to its attack rolls. The multiple attack penalty doesn’t increase until after the construct makes all the attacks." };
+            yield return new TextBlock { Id = Guid.Parse("07c5c32a-d433-475c-840f-f00b5c9d050f"), Type = TextBlockType.Text, Text = "Your construct unleashes a broad swath of devastation by separating its limbs, deploying hidden armaments, or using a similar technique to wreak havoc. You Command your innovation. Instead of its normal actions, it (action: Strides | Stride) once, then makes a (action: Strike) against each foe within 30 feet of it with a +2 circumstance bonus to its attack rolls. The multiple attack penalty doesn't increase until after the construct makes all the attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

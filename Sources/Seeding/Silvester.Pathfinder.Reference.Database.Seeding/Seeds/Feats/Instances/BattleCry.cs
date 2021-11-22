@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("848ea824-d73b-4bdf-9a14-c1689f25a2bd"), Type = TextBlockType.Text, Text = "When you roll initiative, you can yell a mighty battle cry and (action: Demoralize) an observed foe as a free action. If you’re legendary in Intimidation, you can use a reaction to (action: Demoralize) your foe when you critically succeed at an attack roll." };
+            yield return new TextBlock { Id = Guid.Parse("848ea824-d73b-4bdf-9a14-c1689f25a2bd"), Type = TextBlockType.Text, Text = "When you roll initiative, you can yell a mighty battle cry and (action: Demoralize) an observed foe as a free action. If you're legendary in Intimidation, you can use a reaction to (action: Demoralize) your foe when you critically succeed at an attack roll." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

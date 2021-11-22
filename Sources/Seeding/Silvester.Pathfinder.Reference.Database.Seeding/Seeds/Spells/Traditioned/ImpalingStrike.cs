@@ -52,8 +52,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("a31094d0-f8ed-4c86-b16d-ff4875cd7cff"),
                 CriticalSuccess = "The target dodges the spike and is unaffected.",
                 Success = "The target is struck by the spike and takes half damage.",
-                Failure = "The target is impaled through a leg or another non-vital body part. The creature takes full damage and, if it’s standing on solid ground, becomes immobilized. It can attempt to Escape (the DC is your spell DC). While it remains impaled, it takes damage from any weakness to cold iron it has at the end of each of its turns.",
-                CriticalFailure = "As failure, but the creature is impaled through a vital organ or its center of mass, taking double damage, and it is flat-footed as long as it’s impaled."
+                Failure = "The target is impaled through a leg or another non-vital body part. The creature takes full damage and, if it's standing on solid ground, becomes immobilized. It can attempt to Escape (the DC is your spell DC). While it remains impaled, it takes damage from any weakness to cold iron it has at the end of each of its turns.",
+                CriticalFailure = "As failure, but the creature is impaled through a vital organ or its center of mass, taking double damage, and it is flat-footed as long as it's impaled."
             };
         }
 

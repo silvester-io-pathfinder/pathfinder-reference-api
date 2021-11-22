@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d3ae46cb-a9e4-46ad-a039-3e2e4eb63a43"), Type = TextBlockType.Text, Text = "You’re always ready to use your off-hand weapon to interfere with attacks against you. While you are in this stance, you constantly gain the benefits of the (feat: Twin Parry) action." };
+            yield return new TextBlock { Id = Guid.Parse("d3ae46cb-a9e4-46ad-a039-3e2e4eb63a43"), Type = TextBlockType.Text, Text = "You're always ready to use your off-hand weapon to interfere with attacks against you. While you are in this stance, you constantly gain the benefits of the (feat: Twin Parry) action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

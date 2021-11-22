@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("60d85086-9a46-45dc-aefe-e8df01fc2ad7"), Type = TextBlockType.Text, Text = "You conjure uncanny orbs of spiritual flame that float above or below the water’s surface. You can cast the (spell: produce flame) cantrip as a primal innate spell at will, heightened to a spell level equal to half your level rounded up. You can cast this cantrip underwater." };
+            yield return new TextBlock { Id = Guid.Parse("60d85086-9a46-45dc-aefe-e8df01fc2ad7"), Type = TextBlockType.Text, Text = "You conjure uncanny orbs of spiritual flame that float above or below the water's surface. You can cast the (spell: produce flame) cantrip as a primal innate spell at will, heightened to a spell level equal to half your level rounded up. You can cast this cantrip underwater." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

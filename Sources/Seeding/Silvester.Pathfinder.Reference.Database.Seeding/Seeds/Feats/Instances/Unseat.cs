@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ffe861a-0fbe-48ab-9132-b8fca4ead8ef"), Type = TextBlockType.Text, Text = "You attempt to knock an opponent off their mount. Make a melee (action: Strike) against a mounted opponent. If your attack hits, attempt an Athletics check against the opponent’s Fortitude DC. If you succeed, the foe is knocked off its mount into a space of its choice adjacent to its mount. If you critically succeed, it lands prone." };
+            yield return new TextBlock { Id = Guid.Parse("0ffe861a-0fbe-48ab-9132-b8fca4ead8ef"), Type = TextBlockType.Text, Text = "You attempt to knock an opponent off their mount. Make a melee (action: Strike) against a mounted opponent. If your attack hits, attempt an Athletics check against the opponent's Fortitude DC. If you succeed, the foe is knocked off its mount into a space of its choice adjacent to its mount. If you critically succeed, it lands prone." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

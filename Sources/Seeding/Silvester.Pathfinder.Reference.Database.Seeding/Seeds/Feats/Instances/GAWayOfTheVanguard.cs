@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("ab99418b-93e3-4a30-a514-b3e67d95ebec"), Type = TextBlockType.Text, Text = "You practice a style of shooting that seeks to ensure that your first shot is perfectly placed. You keep hidden or at a distance, staying out of the fray and bringing unseen death to your foes." };
-            yield return new TextBlock { Id = Guid.Parse("2bb9f7ac-63fa-460a-a5a1-b7e3583d4fa5"), Type = TextBlockType.Text, Text = "~ Slinger&#39;s Reload: (feat: Clear a Path)" };
+            yield return new TextBlock { Id = Guid.Parse("2bb9f7ac-63fa-460a-a5a1-b7e3583d4fa5"), Type = TextBlockType.Text, Text = "~ Slinger's Reload: (feat: Clear a Path)" };
             yield return new TextBlock { Id = Guid.Parse("432ff57f-c6d2-4159-a305-af9bba056978"), Type = TextBlockType.Text, Text = "~ Deeds: __Initial__ (feat: Living Fortification); __Advanced__ (feat: Spinning Crush); __Greater__ (feat: Siegebreaker)" };
             yield return new TextBlock { Id = Guid.Parse("30bbd042-2f83-4b02-b7d5-640e5e8e3548"), Type = TextBlockType.Text, Text = "~ Way Skill: Athletics" };
         }

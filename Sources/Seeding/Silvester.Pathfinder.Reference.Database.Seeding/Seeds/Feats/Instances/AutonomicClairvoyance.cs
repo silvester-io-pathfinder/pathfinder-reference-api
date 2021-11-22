@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2fae33d-3ebf-467c-ae5f-283b7ed44180"), Type = TextBlockType.Text, Text = "Your mind constantly scans and observes your surroundings. You gain a +1 status bonus to initiative rolls. You aren’t flat-footed to hidden, undetected, or flanking creatures of your level or lower, or creatures of your level or lower using surprise attack. However, they can still help their allies flank." };
+            yield return new TextBlock { Id = Guid.Parse("e2fae33d-3ebf-467c-ae5f-283b7ed44180"), Type = TextBlockType.Text, Text = "Your mind constantly scans and observes your surroundings. You gain a +1 status bonus to initiative rolls. You aren't flat-footed to hidden, undetected, or flanking creatures of your level or lower, or creatures of your level or lower using surprise attack. However, they can still help their allies flank." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

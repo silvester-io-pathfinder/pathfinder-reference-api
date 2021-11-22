@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 PotencyId = Potencies.Instances.Greater.ID,
                 Benefits = new[]
                 {
-                    new TextBlock {Id = Guid.Parse("0f90f3f7-66ed-43ac-bc3d-c28968b5fbec"), Type = TextBlockType.Text, Text = "Increase the persistent damage on a critical hit to 2d10. Fire damage dealt by this weapon (including the persistent fire damage) ignores the target’s fire resistance."},
+                    new TextBlock {Id = Guid.Parse("0f90f3f7-66ed-43ac-bc3d-c28968b5fbec"), Type = TextBlockType.Text, Text = "Increase the persistent damage on a critical hit to 2d10. Fire damage dealt by this weapon (including the persistent fire damage) ignores the target's fire resistance."},
                 },
             };
         }

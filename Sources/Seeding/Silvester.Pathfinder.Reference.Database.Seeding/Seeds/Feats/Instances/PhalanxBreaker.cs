@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a72f2e8-0972-46c9-b211-1ffc5573defb"), Type = TextBlockType.Text, Text = "You know that to take out an enemy formation, you must punch a hole through its center. Make a ranged (action: Strike) with the required weapon against a target within the weapon’s first range increment. The target is pushed directly back 10 feet (20 feet on a critical hit), and if this pushes the target into an obstacle, the target takes bludgeoning damage equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("5a72f2e8-0972-46c9-b211-1ffc5573defb"), Type = TextBlockType.Text, Text = "You know that to take out an enemy formation, you must punch a hole through its center. Make a ranged (action: Strike) with the required weapon against a target within the weapon's first range increment. The target is pushed directly back 10 feet (20 feet on a critical hit), and if this pushes the target into an obstacle, the target takes bludgeoning damage equal to half your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

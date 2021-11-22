@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("69561e62-d28d-4f22-a2ba-4ab99277242e"), Type = TextBlockType.Text, Text = "You abruptly dismiss your eidolon to reduce the damage it takes, though this makes summoning it again more difficult. Reduce the triggering damage to your eidolon by double your level, and your eidolon unmanifests. You can’t (action: Manifest your Eidolon | Manifest Eidolon) again until after the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("69561e62-d28d-4f22-a2ba-4ab99277242e"), Type = TextBlockType.Text, Text = "You abruptly dismiss your eidolon to reduce the damage it takes, though this makes summoning it again more difficult. Reduce the triggering damage to your eidolon by double your level, and your eidolon unmanifests. You can't (action: Manifest your Eidolon | Manifest Eidolon) again until after the end of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

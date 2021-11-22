@@ -43,9 +43,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             {
                 Id = Guid.Parse("b0161b02-f9cb-4e17-af42-1467d7035892"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target can’t use reactions.",
-                Failure = "The target is slowed 1 and can’t use reactions.",
-                CriticalFailure = "As failure, and the target is also confused for 1 round. The confusion can’t be extended, but the other effects can.", 
+                Success = "The target can't use reactions.",
+                Failure = "The target is slowed 1 and can't use reactions.",
+                CriticalFailure = "As failure, and the target is also confused for 1 round. The confusion can't be extended, but the other effects can.", 
             };
         }
             

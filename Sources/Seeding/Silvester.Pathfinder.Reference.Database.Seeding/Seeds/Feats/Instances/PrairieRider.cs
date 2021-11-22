@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e712ebc3-e118-44c5-86fd-efc85c913f3b"), Type = TextBlockType.Text, Text = "You grew up riding your clan’s shaggy ponies and riding dogs. You become trained in Nature. If you would automatically become trained in Nature (from your background or class, for example), you instead become trained in a skill of your choice. You also get a +1 circumstance bonus to (action: Command an Animal) if the target is a traditional halfling mount, such as a pony or riding dog." };
+            yield return new TextBlock { Id = Guid.Parse("e712ebc3-e118-44c5-86fd-efc85c913f3b"), Type = TextBlockType.Text, Text = "You grew up riding your clan's shaggy ponies and riding dogs. You become trained in Nature. If you would automatically become trained in Nature (from your background or class, for example), you instead become trained in a skill of your choice. You also get a +1 circumstance bonus to (action: Command an Animal) if the target is a traditional halfling mount, such as a pony or riding dog." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

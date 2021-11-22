@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("7fe11efc-379b-47af-b0d0-2a6f625f30cc"), Type = TextBlockType.Text, Text = "You call forth positive energy from within to help you destroy undead. Your weapon and unarmed (action: Strikes | Strike) gain the effects of a (item: disrupting property rune | Disrupting Runestone) until the start of your next turn." };
-            yield return new TextBlock { Id = Guid.Parse("f890775a-835f-4eec-95df-38d368854cdb"), Type = TextBlockType.Text, Text = "If you&#39;re 14th level or higher, your (action: Strikes | Strike) instead gain the effects of a (item: greater disrupting property rune | Greater Disrupting Runestone). The DC for the rune&#39;s effect is equal to your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("f890775a-835f-4eec-95df-38d368854cdb"), Type = TextBlockType.Text, Text = "If you're 14th level or higher, your (action: Strikes | Strike) instead gain the effects of a (item: greater disrupting property rune | Greater Disrupting Runestone). The DC for the rune's effect is equal to your class DC or spell DC, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fd28e3c9-288b-45e7-b396-371a4cf49b1d"), Type = TextBlockType.Text, Text = "You maximize the effectiveness of your explosives by controlling every possible parameter of the blast meticulously. If you have the (feat: Directional Bombs) feats, you can use it with (feat: Set Explosives) or (feat: Demolition Charge), even though you didn’t throw the bombs. If you have the (feat: Calculated Splash) or (feat: Expanded Splash) feats, you can apply the additional splash damage to one of the bombs when you (feat: Set Explosives) or use (feat: Demolition Charge), and you can apply the increased splash area from (feat: Expanded Splash) to all the bombs." };
+            yield return new TextBlock { Id = Guid.Parse("fd28e3c9-288b-45e7-b396-371a4cf49b1d"), Type = TextBlockType.Text, Text = "You maximize the effectiveness of your explosives by controlling every possible parameter of the blast meticulously. If you have the (feat: Directional Bombs) feats, you can use it with (feat: Set Explosives) or (feat: Demolition Charge), even though you didn't throw the bombs. If you have the (feat: Calculated Splash) or (feat: Expanded Splash) feats, you can apply the additional splash damage to one of the bombs when you (feat: Set Explosives) or use (feat: Demolition Charge), and you can apply the increased splash area from (feat: Expanded Splash) to all the bombs." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7e80ad7b-a0fc-4e8c-b84f-e77f14e424a5"), Type = TextBlockType.Text, Text = "You’ve explored enough dusty tombs and hidden vaults to gain a sixth sense about traps, and you sometimes notice them even when you’re not trying to. Even if you aren’t (action: Searching | Search) in exploration mode, you get a check to find traps that normally require you to (action: Search) for them. You still need to meet any other requirements to find the trap." };
+            yield return new TextBlock { Id = Guid.Parse("7e80ad7b-a0fc-4e8c-b84f-e77f14e424a5"), Type = TextBlockType.Text, Text = "You've explored enough dusty tombs and hidden vaults to gain a sixth sense about traps, and you sometimes notice them even when you're not trying to. Even if you aren't (action: Searching | Search) in exploration mode, you get a check to find traps that normally require you to (action: Search) for them. You still need to meet any other requirements to find the trap." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

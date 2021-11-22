@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c3d3ded-1e39-4cc3-84cc-2ea010a68e30"), Type = TextBlockType.Text, Text = "You aren’t satisfied with keeping to just one kind of boost from your constant tinkering, so you’ve learned to modulate between several possibilities at once. Choose two additional offensive boosts (G&amp;G pg. 22). You can use an (action: Interact) action to change the offensive boost currently affecting your weapon, choosing between the one you chose for the class feature and the two you chose for this modification. If your weapon has the (trait: modular) trait, you can swap the offensive boost as part of the (action: Interact) action you take to use that trait." };
+            yield return new TextBlock { Id = Guid.Parse("7c3d3ded-1e39-4cc3-84cc-2ea010a68e30"), Type = TextBlockType.Text, Text = "You aren't satisfied with keeping to just one kind of boost from your constant tinkering, so you've learned to modulate between several possibilities at once. Choose two additional offensive boosts (G&amp;G pg. 22). You can use an (action: Interact) action to change the offensive boost currently affecting your weapon, choosing between the one you chose for the class feature and the two you chose for this modification. If your weapon has the (trait: modular) trait, you can swap the offensive boost as part of the (action: Interact) action you take to use that trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

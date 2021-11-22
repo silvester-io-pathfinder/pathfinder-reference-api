@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8a2d05ff-9755-4af9-8e2d-c4004568aeb8"), Type = TextBlockType.Text, Text = "Your large black nose isn’t just for show. You gain imprecise scent with a range of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("8a2d05ff-9755-4af9-8e2d-c4004568aeb8"), Type = TextBlockType.Text, Text = "Your large black nose isn't just for show. You gain imprecise scent with a range of 30 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e026d7f0-818f-45c3-a68f-c98b59e7c6e6"), Type = TextBlockType.Text, Text = "You know how to efficiently utilize the weapons soldiers use in close quarters. Whenever you score a critical hit using a weapon of the polearm, spear, or sword group, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("e026d7f0-818f-45c3-a68f-c98b59e7c6e6"), Type = TextBlockType.Text, Text = "You know how to efficiently utilize the weapons soldiers use in close quarters. Whenever you score a critical hit using a weapon of the polearm, spear, or sword group, you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

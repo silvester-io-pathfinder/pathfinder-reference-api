@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b3136e42-301c-479f-aaca-9e751dcd9118"), Type = TextBlockType.Text, Text = "The magic of your spell floods into you, overriding your connection to the land around you. You alter your terrain attunement to a terrain that matches a trait of the spell you just cast. You thereby gain your terrain attunement benefit when you cast further spells with the same descriptor, instead of using the terrain you’re actually in. For instance, if you cast (spell: tanglefoot), your terrain attunement switches to your choice of forest or swamp, and your terrain attunement applies when you cast another plant spell." };
-            yield return new TextBlock { Id = Guid.Parse("a9865903-6828-413c-9c9f-9167dcc2fc52"), Type = TextBlockType.Text, Text = "Your terrain attunement reverts to that of the terrain you’re in 1 minute after you use Attunement Shift." };
+            yield return new TextBlock { Id = Guid.Parse("b3136e42-301c-479f-aaca-9e751dcd9118"), Type = TextBlockType.Text, Text = "The magic of your spell floods into you, overriding your connection to the land around you. You alter your terrain attunement to a terrain that matches a trait of the spell you just cast. You thereby gain your terrain attunement benefit when you cast further spells with the same descriptor, instead of using the terrain you're actually in. For instance, if you cast (spell: tanglefoot), your terrain attunement switches to your choice of forest or swamp, and your terrain attunement applies when you cast another plant spell." };
+            yield return new TextBlock { Id = Guid.Parse("a9865903-6828-413c-9c9f-9167dcc2fc52"), Type = TextBlockType.Text, Text = "Your terrain attunement reverts to that of the terrain you're in 1 minute after you use Attunement Shift." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

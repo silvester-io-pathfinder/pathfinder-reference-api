@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("67ce3858-4860-4366-8ba7-9140cb36e280"), Type = TextBlockType.Text, Text = "Positive energy shuts death’s door. The target loses the dying condition, though it remains unconscious at 0 Hit Points." };
+            yield return new TextBlock { Id = Guid.Parse("67ce3858-4860-4366-8ba7-9140cb36e280"), Type = TextBlockType.Text, Text = "Positive energy shuts death's door. The target loses the dying condition, though it remains unconscious at 0 Hit Points." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

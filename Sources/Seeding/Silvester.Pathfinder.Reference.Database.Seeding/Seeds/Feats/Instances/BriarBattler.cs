@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ce92491e-f9c4-4cf0-ad2d-ca830c397a01"), Type = TextBlockType.Text, Text = "You’ve learned to use roots, crevices, uneven ground, and dense underbrush to your advantage. When you’re in difficult terrain from an environmental feature, you can (action: Take Cover), even if the feature wouldn’t ordinarily be large enough for you to (action: Take Cover)." };
+            yield return new TextBlock { Id = Guid.Parse("ce92491e-f9c4-4cf0-ad2d-ca830c397a01"), Type = TextBlockType.Text, Text = "You've learned to use roots, crevices, uneven ground, and dense underbrush to your advantage. When you're in difficult terrain from an environmental feature, you can (action: Take Cover), even if the feature wouldn't ordinarily be large enough for you to (action: Take Cover)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

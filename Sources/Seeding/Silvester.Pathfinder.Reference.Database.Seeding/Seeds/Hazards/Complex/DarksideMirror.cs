@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
                 ArmorClass = 34,
                 Fortitude = 25,
                 Reflex = 20,
-                Reset = "The mirror is always ready to absorb creatures into the other dimension. Ten minutes after a creature is sucked into the mirror, if an ally doesn’t rescue the creature with Thievery, it reaches the other dimension, where it might be captured or killed. In the mirror dimension, it counts as a mirror duplicate, so the denizens of the other dimension can’t destroy the mirror on their side while the absorbed creature is there. These dimensions are alternate realities, not planes, so even spells like plane shift can’t reach them.",
+                Reset = "The mirror is always ready to absorb creatures into the other dimension. Ten minutes after a creature is sucked into the mirror, if an ally doesn't rescue the creature with Thievery, it reaches the other dimension, where it might be captured or killed. In the mirror dimension, it counts as a mirror duplicate, so the denizens of the other dimension can't destroy the mirror on their side while the absorbed creature is there. These dimensions are alternate realities, not planes, so even spells like plane shift can't reach them.",
                 CanBeDetectedMagically = false,
                 TypeId = HazardTypes.Instances.Traps.ID,
                 ComplexityId = HazardComplexities.Instances.Complex.ID,

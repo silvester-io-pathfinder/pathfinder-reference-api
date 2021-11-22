@@ -58,7 +58,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Complex
 
         protected override IEnumerable<TextBlock> GetRoutineDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("85e4e3c2-a458-4da2-851e-16f694b880cc"), Type = TextBlockType.Text, Text = "The trap launches one dart against every creature in the gallery as 1 action. Because it launches darts continuously, the trap can also use the Continuous Barrage free action (see below) to launch darts at each creature during that creature’s turn." };
+            yield return new TextBlock { Id = Guid.Parse("85e4e3c2-a458-4da2-851e-16f694b880cc"), Type = TextBlockType.Text, Text = "The trap launches one dart against every creature in the gallery as 1 action. Because it launches darts continuously, the trap can also use the Continuous Barrage free action (see below) to launch darts at each creature during that creature's turn." };
         }
 
         protected override IEnumerable<HazardAction> GetActions()

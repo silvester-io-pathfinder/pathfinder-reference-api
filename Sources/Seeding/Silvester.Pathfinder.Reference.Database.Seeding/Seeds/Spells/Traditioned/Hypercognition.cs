@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3d027236-8796-4bc2-aef2-d251d4076bbc"), Type = TextBlockType.Text, Text = "You rapidly catalog and collate information relevant to your current situation. You can instantly use up to 6 Recall Knowledge actions as part of Casting this Spell. For these actions, you can’t use any special abilities, reactions, or free actions that trigger when you Recall Knowledge." };
+            yield return new TextBlock { Id = Guid.Parse("3d027236-8796-4bc2-aef2-d251d4076bbc"), Type = TextBlockType.Text, Text = "You rapidly catalog and collate information relevant to your current situation. You can instantly use up to 6 Recall Knowledge actions as part of Casting this Spell. For these actions, you can't use any special abilities, reactions, or free actions that trigger when you Recall Knowledge." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

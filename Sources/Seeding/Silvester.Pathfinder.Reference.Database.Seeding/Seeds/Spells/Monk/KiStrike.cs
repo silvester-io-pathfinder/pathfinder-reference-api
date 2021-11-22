@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aa193a73-1625-432c-a26a-201458cd89a1"), Type = TextBlockType.Text, Text = "You focus your ki into magical attacks. Make an unarmed Strike or Flurry of Blows (this doesn’t change the limit on using only one flourish per turn). You gain a +1 status bonus to your attack rolls with the Strikes, and the Strikes deal 1d6 extra damage. This damage can be any of the following types of your choice, chosen each time you Strike: force, lawful (only if you’re lawful), negative, or positive." };
+            yield return new TextBlock { Id = Guid.Parse("aa193a73-1625-432c-a26a-201458cd89a1"), Type = TextBlockType.Text, Text = "You focus your ki into magical attacks. Make an unarmed Strike or Flurry of Blows (this doesn't change the limit on using only one flourish per turn). You gain a +1 status bonus to your attack rolls with the Strikes, and the Strikes deal 1d6 extra damage. This damage can be any of the following types of your choice, chosen each time you Strike: force, lawful (only if you're lawful), negative, or positive." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

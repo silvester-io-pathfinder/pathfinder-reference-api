@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7bf3e595-85f4-4f91-b432-29a271d57532"), Type = TextBlockType.Text, Text = "You’ve learned how to provide for your community, be it through hard-earned sustenance or useful crafts. You gain the trained proficiency rank in Crafting and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you become trained in a skill of your choice. You also become trained in Anadi Lore." };
+            yield return new TextBlock { Id = Guid.Parse("7bf3e595-85f4-4f91-b432-29a271d57532"), Type = TextBlockType.Text, Text = "You've learned how to provide for your community, be it through hard-earned sustenance or useful crafts. You gain the trained proficiency rank in Crafting and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you become trained in a skill of your choice. You also become trained in Anadi Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

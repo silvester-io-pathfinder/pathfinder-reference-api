@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("91c9bf69-f9cc-4f17-b496-a6a230fc69ee"), Type = TextBlockType.Text, Text = "You&#39;ve become comfortable in using weapons that you might not have picked up before training with the Swords. Choose one weapon group, such as hammer or sword. Whenever your proficiency rank in any weapon increases to expert or beyond, you also gain that new proficiency rank with both simple and martial weapons of your chosen weapon group." };
+            yield return new TextBlock { Id = Guid.Parse("91c9bf69-f9cc-4f17-b496-a6a230fc69ee"), Type = TextBlockType.Text, Text = "You've become comfortable in using weapons that you might not have picked up before training with the Swords. Choose one weapon group, such as hammer or sword. Whenever your proficiency rank in any weapon increases to expert or beyond, you also gain that new proficiency rank with both simple and martial weapons of your chosen weapon group." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

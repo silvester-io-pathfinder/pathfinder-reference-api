@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("96d61a8f-633f-4c79-a633-b648a422e7c4"), Type = TextBlockType.Text, Text = "You’ve trained with your shield to defend both yourself and your mount. When you (action: Raise a Shield) while mounted, both you and your mount gain the shield’s circumstance bonus to AC. If you have the (feat: Shield Block) reaction, you can use it in response to your mount taking damage, as long as you’re riding your mount. If you do, the shield prevents your mount from taking damage instead of preventing you from taking damage, following the normal rules for (feat: Shield Block)." };
+            yield return new TextBlock { Id = Guid.Parse("96d61a8f-633f-4c79-a633-b648a422e7c4"), Type = TextBlockType.Text, Text = "You've trained with your shield to defend both yourself and your mount. When you (action: Raise a Shield) while mounted, both you and your mount gain the shield's circumstance bonus to AC. If you have the (feat: Shield Block) reaction, you can use it in response to your mount taking damage, as long as you're riding your mount. If you do, the shield prevents your mount from taking damage instead of preventing you from taking damage, following the normal rules for (feat: Shield Block)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

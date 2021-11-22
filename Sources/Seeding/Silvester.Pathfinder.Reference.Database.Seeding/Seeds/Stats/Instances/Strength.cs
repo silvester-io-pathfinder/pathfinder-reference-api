@@ -14,7 +14,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Stats.Instances
                 Id = ID, 
                 Name = "Strength", 
                 Abbreviation = "STR", 
-                Description = "Strength measures your character’s physical power.  Strength is important if your character plans to engage in hand - to - hand combat.Your Strength modifier gets added to melee damage rolls and determines how much your character can carry." 
+                Description = "Strength measures your character's physical power.  Strength is important if your character plans to engage in hand - to - hand combat.Your Strength modifier gets added to melee damage rolls and determines how much your character can carry." 
             };
         }
     }

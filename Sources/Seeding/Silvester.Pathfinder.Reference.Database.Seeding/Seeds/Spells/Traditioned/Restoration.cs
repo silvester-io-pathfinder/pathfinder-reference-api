@@ -27,9 +27,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("918f29e5-879a-44eb-88d8-57521d2bff77"), Type = TextBlockType.Text, Text = "Restorative magic counters the effects of toxins or conditions that prevent a creature from functioning at its best. When you cast restoration, choose to either reduce a condition or lessen the effect of a toxin. A creature can benefit from only one restoration spell each day, and it can’t benefit from restoration more than once to reduce the stage of the same exposure to a given toxin." };
-            yield return new TextBlock { Id = Guid.Parse("ed640758-61af-4c49-90b7-ba3a1bb6ee63"), Type = TextBlockType.Enumeration, Text = "Reduce a Condition - Reduce the value of the target’s clumsy, enfeebled, or stupefied condition by 2. You can instead reduce two of the listed conditions by 1 each." };
-            yield return new TextBlock { Id = Guid.Parse("9dcb0a12-39a5-4269-baa6-51b58ebe8421"), Type = TextBlockType.Enumeration, Text = "Lessen a Toxin - Reduce the stage of one toxin the target suffers from by one stage. This can’t reduce the stage below stage 1 or cure the affliction." };
+            yield return new TextBlock { Id = Guid.Parse("918f29e5-879a-44eb-88d8-57521d2bff77"), Type = TextBlockType.Text, Text = "Restorative magic counters the effects of toxins or conditions that prevent a creature from functioning at its best. When you cast restoration, choose to either reduce a condition or lessen the effect of a toxin. A creature can benefit from only one restoration spell each day, and it can't benefit from restoration more than once to reduce the stage of the same exposure to a given toxin." };
+            yield return new TextBlock { Id = Guid.Parse("ed640758-61af-4c49-90b7-ba3a1bb6ee63"), Type = TextBlockType.Enumeration, Text = "Reduce a Condition - Reduce the value of the target's clumsy, enfeebled, or stupefied condition by 2. You can instead reduce two of the listed conditions by 1 each." };
+            yield return new TextBlock { Id = Guid.Parse("9dcb0a12-39a5-4269-baa6-51b58ebe8421"), Type = TextBlockType.Enumeration, Text = "Lessen a Toxin - Reduce the stage of one toxin the target suffers from by one stage. This can't reduce the stage below stage 1 or cure the affliction." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "4th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("502b90e5-e003-43c5-82be-f380289b31f8"), Type = TextBlockType.Text, Text = "Add drained to the list of conditions you can reduce. When you lessen a toxin, reduce the stage by two. You also gain a third option that allows you to reduce the target’s doomed value by 1. You can’t use this to reduce a permanent doomed condition." }
+                    new TextBlock { Id = Guid.Parse("502b90e5-e003-43c5-82be-f380289b31f8"), Type = TextBlockType.Text, Text = "Add drained to the list of conditions you can reduce. When you lessen a toxin, reduce the stage by two. You also gain a third option that allows you to reduce the target's doomed value by 1. You can't use this to reduce a permanent doomed condition." }
                 }
             };
 

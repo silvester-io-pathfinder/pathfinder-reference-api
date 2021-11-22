@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e0a069e8-bc6b-4341-be56-ea2f826916bf"), Type = TextBlockType.Text, Text = "You capitalize on the distraction provided by an ally. You (action: Sneak) up to a foe adjacent to one of your allies. You can roll against the foe you’re (action: Sneaking | Sneak) up on, even if it’s currently observing you, as though you were hidden. You take a –2 penalty on your Stealth check. If your Stealth check against the chosen foe succeeds, you can make a melee (action: Strike) against that foe at the end of your (action: Sneak)." };
+            yield return new TextBlock { Id = Guid.Parse("e0a069e8-bc6b-4341-be56-ea2f826916bf"), Type = TextBlockType.Text, Text = "You capitalize on the distraction provided by an ally. You (action: Sneak) up to a foe adjacent to one of your allies. You can roll against the foe you're (action: Sneaking | Sneak) up on, even if it's currently observing you, as though you were hidden. You take a –2 penalty on your Stealth check. If your Stealth check against the chosen foe succeeds, you can make a melee (action: Strike) against that foe at the end of your (action: Sneak)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

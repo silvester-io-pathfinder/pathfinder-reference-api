@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b160b526-89ab-45ee-ba25-f7095838dbd2"), Type = TextBlockType.Text, Text = "Every chance you get, you practice with the hand crossbow to increase your draw speed and accuracy. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the (item: hand crossbow). If you&#39;re at least an expert in a (item: hand crossbow) you&#39;re using, you gain access to its critical specialization effect. You also gain the (feat: Shootist&#39;s Draw) action." };
+            yield return new TextBlock { Id = Guid.Parse("b160b526-89ab-45ee-ba25-f7095838dbd2"), Type = TextBlockType.Text, Text = "Every chance you get, you practice with the hand crossbow to increase your draw speed and accuracy. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the (item: hand crossbow). If you're at least an expert in a (item: hand crossbow) you're using, you gain access to its critical specialization effect. You also gain the (feat: Shootist's Draw) action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

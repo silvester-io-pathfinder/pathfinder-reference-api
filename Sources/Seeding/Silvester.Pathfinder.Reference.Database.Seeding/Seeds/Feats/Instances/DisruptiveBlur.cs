@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0780ae5d-135a-4a65-b351-cd00e232d4ca"), Type = TextBlockType.Text, Text = "You use cacophonous blasts from your gun or distracting shots from your crossbow to cause momentary diversions, letting you move about the battlefield with impunity. After you make a (action: Strike) with a firearm or crossbow, creatures can’t take reactions that would be triggered by your movement for the rest of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("0780ae5d-135a-4a65-b351-cd00e232d4ca"), Type = TextBlockType.Text, Text = "You use cacophonous blasts from your gun or distracting shots from your crossbow to cause momentary diversions, letting you move about the battlefield with impunity. After you make a (action: Strike) with a firearm or crossbow, creatures can't take reactions that would be triggered by your movement for the rest of your turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

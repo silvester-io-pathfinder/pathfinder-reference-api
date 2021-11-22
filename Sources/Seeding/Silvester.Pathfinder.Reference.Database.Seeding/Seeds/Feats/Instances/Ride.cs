@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f182f3b2-0039-4d26-af52-924ace07e0b3"), Type = TextBlockType.Text, Text = "When you (Action: Command an Animal) you’re mounted on to take a move action (such as (Action: Stride)), you automatically succeed instead of needing to attempt a check. Any animal you’re mounted on acts on your turn, like a minion. If you (Action: Mount | Mount / Dismount) an animal in the middle of an encounter, it skips its next turn and then acts on your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("f182f3b2-0039-4d26-af52-924ace07e0b3"), Type = TextBlockType.Text, Text = "When you (Action: Command an Animal) you're mounted on to take a move action (such as (Action: Stride)), you automatically succeed instead of needing to attempt a check. Any animal you're mounted on acts on your turn, like a minion. If you (Action: Mount | Mount / Dismount) an animal in the middle of an encounter, it skips its next turn and then acts on your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

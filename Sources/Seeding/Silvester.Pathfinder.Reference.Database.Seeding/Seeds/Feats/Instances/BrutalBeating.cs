@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8c9a3234-4d6e-4c7c-a6a7-cbfea508f447"), Type = TextBlockType.Text, Text = "The brutality of your critical hits shakes your foes’ confidence. Whenever your (action: Strike) is a critical hit and deals damage, the target is frightened 1." };
+            yield return new TextBlock { Id = Guid.Parse("8c9a3234-4d6e-4c7c-a6a7-cbfea508f447"), Type = TextBlockType.Text, Text = "The brutality of your critical hits shakes your foes' confidence. Whenever your (action: Strike) is a critical hit and deals damage, the target is frightened 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

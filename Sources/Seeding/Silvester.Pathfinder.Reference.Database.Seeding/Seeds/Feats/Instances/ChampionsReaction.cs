@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1dcecd9a-bf57-44ae-9c6b-4a94f659004f"), Type = TextBlockType.Text, Text = "You can use the champion’s reaction associated with your cause." };
+            yield return new TextBlock { Id = Guid.Parse("1dcecd9a-bf57-44ae-9c6b-4a94f659004f"), Type = TextBlockType.Text, Text = "You can use the champion's reaction associated with your cause." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

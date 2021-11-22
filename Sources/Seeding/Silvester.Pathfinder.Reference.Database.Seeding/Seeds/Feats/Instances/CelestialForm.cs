@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5d76b80a-53b9-4955-ae97-97e3e242ba28"), Type = TextBlockType.Text, Text = "You take on a celestial countenance, appearing like a type of celestial who serves your deity; for example, as an angel, you would gain a halo and feathery wings. You gain a fly Speed equal to your Speed. You gain darkvision if you don’t already have it, and you gain the (trait: celestial) trait and the trait appropriate to the type of servitor you’ve become (archon, angel, or azata, for example)." };
+            yield return new TextBlock { Id = Guid.Parse("5d76b80a-53b9-4955-ae97-97e3e242ba28"), Type = TextBlockType.Text, Text = "You take on a celestial countenance, appearing like a type of celestial who serves your deity; for example, as an angel, you would gain a halo and feathery wings. You gain a fly Speed equal to your Speed. You gain darkvision if you don't already have it, and you gain the (trait: celestial) trait and the trait appropriate to the type of servitor you've become (archon, angel, or azata, for example)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

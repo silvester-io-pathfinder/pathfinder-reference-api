@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a9acfb2b-66fd-4c50-9a79-347b89b53e0e"), Type = TextBlockType.Text, Text = "One of your parents has a human life span and another an elven life span, with your own somewhere between. As a result, you have an unusual perspective on time, which you’ve learned to manifest to aid yourself in moments of stress. You gain (spell: haste) as a 3rd-level arcane innate spell, though you can target only yourself. You can (activity: Cast this Spell | Cast a Spell) once per day." };
+            yield return new TextBlock { Id = Guid.Parse("a9acfb2b-66fd-4c50-9a79-347b89b53e0e"), Type = TextBlockType.Text, Text = "One of your parents has a human life span and another an elven life span, with your own somewhere between. As a result, you have an unusual perspective on time, which you've learned to manifest to aid yourself in moments of stress. You gain (spell: haste) as a 3rd-level arcane innate spell, though you can target only yourself. You can (activity: Cast this Spell | Cast a Spell) once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

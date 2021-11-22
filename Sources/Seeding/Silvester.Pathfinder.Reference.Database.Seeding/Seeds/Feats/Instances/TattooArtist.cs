@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eb707252-27f6-4bf0-a565-699e4436db61"), Type = TextBlockType.Text, Text = "You can craft tattoos, including magical tattoos. When you select this feat, you gain the formulas for four common magical tattoos of 2nd level or lower. You gain a +1 circumstance bonus to Crafting checks to (action: Craft) tattoos. If you’re a master in Crafting, this bonus increases to +2." };
+            yield return new TextBlock { Id = Guid.Parse("eb707252-27f6-4bf0-a565-699e4436db61"), Type = TextBlockType.Text, Text = "You can craft tattoos, including magical tattoos. When you select this feat, you gain the formulas for four common magical tattoos of 2nd level or lower. You gain a +1 circumstance bonus to Crafting checks to (action: Craft) tattoos. If you're a master in Crafting, this bonus increases to +2." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

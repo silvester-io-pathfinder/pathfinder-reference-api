@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9445740-80de-4b5c-bb43-0ff4df7e988f"), Type = TextBlockType.Text, Text = "You have cultivated your exoskeleton’s form for close combat, using knots, whorls, and reinforced branches. When you select this feat, you gain a claws unarmed attack that deals 1d4 slashing damage and has the (trait: agile) and (trait: finesse) traits or a branch unarmed attack that deals 1d6 bludgeoning damage and has the (trait: backswing) trait. Each of these unarmed attacks is in the brawling weapon group and uses one of your hands." };
+            yield return new TextBlock { Id = Guid.Parse("b9445740-80de-4b5c-bb43-0ff4df7e988f"), Type = TextBlockType.Text, Text = "You have cultivated your exoskeleton's form for close combat, using knots, whorls, and reinforced branches. When you select this feat, you gain a claws unarmed attack that deals 1d4 slashing damage and has the (trait: agile) and (trait: finesse) traits or a branch unarmed attack that deals 1d6 bludgeoning damage and has the (trait: backswing) trait. Each of these unarmed attacks is in the brawling weapon group and uses one of your hands." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bc66f243-805d-4d6f-93c2-8e9c12d6cf52"), Type = Utilities.Text.TextBlockType.Text, Text = "Opening a door that bypasses normal space, you instantly transport yourself and any items you’re wearing and holding from your current space to a clear space within range you can see.If this would bring another creature with you—even if you’re carrying it in an extradimensional container—the spell is lost." };
+            yield return new TextBlock { Id = Guid.Parse("bc66f243-805d-4d6f-93c2-8e9c12d6cf52"), Type = Utilities.Text.TextBlockType.Text, Text = "Opening a door that bypasses normal space, you instantly transport yourself and any items you're wearing and holding from your current space to a clear space within range you can see.If this would bring another creature with you—even if you're carrying it in an extradimensional container—the spell is lost." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("730ac659-7199-4a9f-a784-76fa50311b10"), Type = Utilities.Text.TextBlockType.Text, Text = "The range increases to 1 mile. You don’t need to be able to see your destination, as long as you have been there in the past and know its relative location and distance from you. You are temporarily immune for 1 hour." }
+                    new TextBlock { Id = Guid.Parse("730ac659-7199-4a9f-a784-76fa50311b10"), Type = Utilities.Text.TextBlockType.Text, Text = "The range increases to 1 mile. You don't need to be able to see your destination, as long as you have been there in the past and know its relative location and distance from you. You are temporarily immune for 1 hour." }
                 }
             };
         }

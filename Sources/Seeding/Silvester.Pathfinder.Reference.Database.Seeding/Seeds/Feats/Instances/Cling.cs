@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("449200ce-d55f-46a0-9057-823049179403"), Type = TextBlockType.Text, Text = "You hang onto a foe to harry them into submission. If your target moves while you’re hanging onto it, you can choose to move with the target. The target is released if you choose not to move with it, at the start of your next turn, or if the target (action: Escapes | Escape). Attempts to (action: Escape) from a Cling follow the rules for (action: Escape), but use your Acrobatics DC and end the Cling instead of the conditions normally ended by the (action: Escape) action." };
+            yield return new TextBlock { Id = Guid.Parse("449200ce-d55f-46a0-9057-823049179403"), Type = TextBlockType.Text, Text = "You hang onto a foe to harry them into submission. If your target moves while you're hanging onto it, you can choose to move with the target. The target is released if you choose not to move with it, at the start of your next turn, or if the target (action: Escapes | Escape). Attempts to (action: Escape) from a Cling follow the rules for (action: Escape), but use your Acrobatics DC and end the Cling instead of the conditions normally ended by the (action: Escape) action." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

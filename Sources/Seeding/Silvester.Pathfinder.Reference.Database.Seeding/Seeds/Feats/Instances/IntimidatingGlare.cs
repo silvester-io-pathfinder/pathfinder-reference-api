@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("adf2e878-abe3-4092-a9d2-f6de10427a60"), Type = TextBlockType.Text, Text = "You can (action: Demoralize) with a mere glare. When you do, (action: Demoralize) loses the (trait: auditory) trait and gains the (trait: visual) trait, and you don’t take a penalty if the creature doesn’t understand your language." };
+            yield return new TextBlock { Id = Guid.Parse("adf2e878-abe3-4092-a9d2-f6de10427a60"), Type = TextBlockType.Text, Text = "You can (action: Demoralize) with a mere glare. When you do, (action: Demoralize) loses the (trait: auditory) trait and gains the (trait: visual) trait, and you don't take a penalty if the creature doesn't understand your language." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

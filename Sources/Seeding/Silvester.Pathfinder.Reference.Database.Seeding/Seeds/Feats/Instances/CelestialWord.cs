@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("33327637-0661-4b8b-81e6-11e0e504887b"), Type = TextBlockType.Text, Text = "You can call forth a holy word from the celestial realms to punish your foes. Once per day, you can cast (spell: divine decree) as a 7th-level divine innate spell. You must choose good for the spell&#39;s alignment, and you can (activity: Cast the Spell | Cast a Spell) regardless of whether you worship a deity or what their alignment is." };
+            yield return new TextBlock { Id = Guid.Parse("33327637-0661-4b8b-81e6-11e0e504887b"), Type = TextBlockType.Text, Text = "You can call forth a holy word from the celestial realms to punish your foes. Once per day, you can cast (spell: divine decree) as a 7th-level divine innate spell. You must choose good for the spell's alignment, and you can (activity: Cast the Spell | Cast a Spell) regardless of whether you worship a deity or what their alignment is." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

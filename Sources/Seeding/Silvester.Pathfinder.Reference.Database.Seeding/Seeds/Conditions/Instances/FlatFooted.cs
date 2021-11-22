@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Conditions.Insta
 
         public override IEnumerable<TextBlock> GetConditionDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e1d864f8-5b68-4c68-b26a-b615fcddef91"), Type = Utilities.Text.TextBlockType.Text, Text = "You’re distracted or otherwise unable to focus your full attention on defense. You take a –2 circumstance penalty to AC. Some effects give you the flat-footed condition only to certain creatures or against certain attacks. Others— especially conditions—can make you universally flatfooted against everything. If a rule doesn’t specify that the condition applies only to certain circumstances, it applies to all of them; for example, many effects simply say “The target is flat-footed.”" };
+            yield return new TextBlock { Id = Guid.Parse("e1d864f8-5b68-4c68-b26a-b615fcddef91"), Type = Utilities.Text.TextBlockType.Text, Text = "You're distracted or otherwise unable to focus your full attention on defense. You take a –2 circumstance penalty to AC. Some effects give you the flat-footed condition only to certain creatures or against certain attacks. Others— especially conditions—can make you universally flatfooted against everything. If a rule doesn't specify that the condition applies only to certain circumstances, it applies to all of them; for example, many effects simply say “The target is flat-footed.”" };
         }
 
         public override SourcePage? GetSourcePage()

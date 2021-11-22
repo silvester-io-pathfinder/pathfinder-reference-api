@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("48a3785a-a84b-4290-9316-b41d51744c0a"),
                 CriticalSuccess = "The creature is unaffected.",
-                Success = "For 1 round, the creature can’t use reactions and must attempt another save at the start of its turn; on a failure, it is slowed 1 for that turn as it sobs uncontrollably.",
+                Success = "For 1 round, the creature can't use reactions and must attempt another save at the start of its turn; on a failure, it is slowed 1 for that turn as it sobs uncontrollably.",
                 Failure = "As success, but the duration is 1 minute.",
                 CriticalFailure = "As failure, and the creature is automatically slowed 1 for 1 minute."
             };

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a00e279-909e-427d-a695-406491fc5d40"), Type = TextBlockType.Text, Text = "Thanks to the time you&#39;ve spent wandering through wild and untamed environments, you&#39;ve gained an intuitive sense about creatures. You sometimes notice them before they attack, or spot them nearby even if they weren&#39;t planning on attacking. You can attempt a check to notice hidden creatures attempting to (action: Avoid Notice) nearby even if you aren&#39;t actively (action: Searching | Search) for them. You still need to meet any other requirements to notice a particular creature." };
+            yield return new TextBlock { Id = Guid.Parse("5a00e279-909e-427d-a695-406491fc5d40"), Type = TextBlockType.Text, Text = "Thanks to the time you've spent wandering through wild and untamed environments, you've gained an intuitive sense about creatures. You sometimes notice them before they attack, or spot them nearby even if they weren't planning on attacking. You can attempt a check to notice hidden creatures attempting to (action: Avoid Notice) nearby even if you aren't actively (action: Searching | Search) for them. You still need to meet any other requirements to notice a particular creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

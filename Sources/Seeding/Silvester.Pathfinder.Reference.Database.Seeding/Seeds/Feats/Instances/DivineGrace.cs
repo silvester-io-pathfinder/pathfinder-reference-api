@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("621c8397-60dc-4c01-be11-7e075bd8ef8e"), Type = TextBlockType.Text, Text = "You call upon your deity’s grace, gaining a +2 circumstance bonus to the save." };
+            yield return new TextBlock { Id = Guid.Parse("621c8397-60dc-4c01-be11-7e075bd8ef8e"), Type = TextBlockType.Text, Text = "You call upon your deity's grace, gaining a +2 circumstance bonus to the save." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("adfa432c-5abe-4ba3-86eb-5ade7bb625c8"), Type = TextBlockType.Text, Text = "You’ve internalized the hopping gait of your vampiric forebear. (action: Stride) up to a distance equal to your Speed – 10 feet. During this (action: Stride), instead of moving through each space normally, you hop over every other square between your starting space and your ending space. These hops aren’t high enough to jump over a creature or other significant obstacle in your way, but they avoid difficult terrain, hazardous terrain, pressure plates, or hazards on the ground or up to a foot above it in the spaces you hopped over." };
+            yield return new TextBlock { Id = Guid.Parse("adfa432c-5abe-4ba3-86eb-5ade7bb625c8"), Type = TextBlockType.Text, Text = "You've internalized the hopping gait of your vampiric forebear. (action: Stride) up to a distance equal to your Speed – 10 feet. During this (action: Stride), instead of moving through each space normally, you hop over every other square between your starting space and your ending space. These hops aren't high enough to jump over a creature or other significant obstacle in your way, but they avoid difficult terrain, hazardous terrain, pressure plates, or hazards on the ground or up to a foot above it in the spaces you hopped over." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d1b85ca-b824-431a-a0ea-a29fb9a55b35"), Type = TextBlockType.Text, Text = "You shrink the target to roughly the size of a coin. This reducesit to negligible Bulk. You can Dismiss the spell, and the spell ends if you toss the object onto a solid surface. The object can’t be used to attack or cause damage during the process of it returning to normal size. If there isn’t room for the object to return to normal size when the spell ends, the spell’s duration continues until the object is in a location large enough to accommodate its normal size." };
+            yield return new TextBlock { Id = Guid.Parse("4d1b85ca-b824-431a-a0ea-a29fb9a55b35"), Type = TextBlockType.Text, Text = "You shrink the target to roughly the size of a coin. This reducesit to negligible Bulk. You can Dismiss the spell, and the spell ends if you toss the object onto a solid surface. The object can't be used to attack or cause damage during the process of it returning to normal size. If there isn't room for the object to return to normal size when the spell ends, the spell's duration continues until the object is in a location large enough to accommodate its normal size." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

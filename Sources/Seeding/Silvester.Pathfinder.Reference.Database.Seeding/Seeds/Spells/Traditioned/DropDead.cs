@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec852bcb-fe33-43d3-8de8-e07b8d889f7c"), Type = TextBlockType.Text, Text = "The target appears to fall down dead, though it actually turns invisible. Its illusory corpse remains where it fell, complete with a believable fatal wound. This illusion looks and feels like a dead body. If the target’s death seems absurd—for instance, a barbarian at full health appears to be slain by 2 damage—the GM can grant the attacker an immediate Perception check to disbelieve the illusion. If the target uses hostile actions, the spell ends. This ends the entire spell, so the illusory corpse disappears too." };
+            yield return new TextBlock { Id = Guid.Parse("ec852bcb-fe33-43d3-8de8-e07b8d889f7c"), Type = TextBlockType.Text, Text = "The target appears to fall down dead, though it actually turns invisible. Its illusory corpse remains where it fell, complete with a believable fatal wound. This illusion looks and feels like a dead body. If the target's death seems absurd—for instance, a barbarian at full health appears to be slain by 2 damage—the GM can grant the attacker an immediate Perception check to disbelieve the illusion. If the target uses hostile actions, the spell ends. This ends the entire spell, so the illusory corpse disappears too." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "tth",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("b799f023-a21c-4c0c-8b97-7f5207234770"), Type = TextBlockType.Text, Text = "The spell doesn’t end if the target uses hostile actions." }
+                    new TextBlock { Id = Guid.Parse("b799f023-a21c-4c0c-8b97-7f5207234770"), Type = TextBlockType.Text, Text = "The spell doesn't end if the target uses hostile actions." }
                 }
             };
         }

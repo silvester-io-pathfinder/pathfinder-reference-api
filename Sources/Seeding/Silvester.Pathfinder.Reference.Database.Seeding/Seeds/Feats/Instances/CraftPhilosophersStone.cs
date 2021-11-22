@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("753e15bc-a2f2-4c67-9e22-942ecd1fa55c"), Type = TextBlockType.Text, Text = "Your research has paid off, culminating in the legendary philosopher’s stone. You learn the formula for the (item: philosopher&#39;s stone) and can add it to your formula book." };
+            yield return new TextBlock { Id = Guid.Parse("753e15bc-a2f2-4c67-9e22-942ecd1fa55c"), Type = TextBlockType.Text, Text = "Your research has paid off, culminating in the legendary philosopher's stone. You learn the formula for the (item: philosopher's stone) and can add it to your formula book." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

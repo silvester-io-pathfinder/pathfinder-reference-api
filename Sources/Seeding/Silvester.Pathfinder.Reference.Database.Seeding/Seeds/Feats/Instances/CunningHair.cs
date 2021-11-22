@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f774909f-30f1-487b-86a1-c5afa9a93703"), Type = TextBlockType.Text, Text = "Your hair moves under your control. You can perform simple (action: Interact) actions with your hair, such as opening an unlocked door. Your hair can’t perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can’t use it to hold items." };
+            yield return new TextBlock { Id = Guid.Parse("f774909f-30f1-487b-86a1-c5afa9a93703"), Type = TextBlockType.Text, Text = "Your hair moves under your control. You can perform simple (action: Interact) actions with your hair, such as opening an unlocked door. Your hair can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

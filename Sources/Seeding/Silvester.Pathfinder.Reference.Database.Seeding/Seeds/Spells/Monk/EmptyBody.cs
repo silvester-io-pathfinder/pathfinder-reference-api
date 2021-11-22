@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("065d97d9-9db4-4b7a-9c06-34704fe09c8c"), Type = TextBlockType.Text, Text = "You turn ethereal, with the effects of ethereal jaunt, but you don’t need to concentrate." };
+            yield return new TextBlock { Id = Guid.Parse("065d97d9-9db4-4b7a-9c06-34704fe09c8c"), Type = TextBlockType.Text, Text = "You turn ethereal, with the effects of ethereal jaunt, but you don't need to concentrate." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("12cb4fb9-456c-4281-a505-8f48cea5cdb2"), Type = TextBlockType.Text, Text = "You can quickly fire multiple shots with greater control. When you use (feat: Double Shot), you can make the attacks against the same target. You can add an additional action to (feat: Double Shot) to make three ranged (action: Strikes | Strike) instead of two. If you do, the penalty is -4. All attacks count toward your multiple attack penalty, but the penalty doesn’t increase until after you’ve made all of them." };
+            yield return new TextBlock { Id = Guid.Parse("12cb4fb9-456c-4281-a505-8f48cea5cdb2"), Type = TextBlockType.Text, Text = "You can quickly fire multiple shots with greater control. When you use (feat: Double Shot), you can make the attacks against the same target. You can add an additional action to (feat: Double Shot) to make three ranged (action: Strikes | Strike) instead of two. If you do, the penalty is -4. All attacks count toward your multiple attack penalty, but the penalty doesn't increase until after you've made all of them." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
             {
                 Id = ID,
                 Name = "Hidden Pit",
-                Description = "A wooden trapdoor covers a pit that’s 10 feet square and 20 feet deep.",
+                Description = "A wooden trapdoor covers a pit that's 10 feet square and 20 feet deep.",
                 Level = 0,
                 ArmorClass = 10,
                 Fortitude = 1,

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c2da22f8-00ee-4116-9bf5-0ec7f5f8beef"), Type = TextBlockType.Text, Text = "When you Cast this Spell, any targets (including you) can choose to immediately fall asleep. The spell ends for any creatures that don’t choose to fall asleep. Sleepers join a shared dream, where they can communicate with one another as though they were in the same room. Individual targets leave this shared dream upon awakening, and if all the targets awaken, the spell ends." };
+            yield return new TextBlock { Id = Guid.Parse("c2da22f8-00ee-4116-9bf5-0ec7f5f8beef"), Type = TextBlockType.Text, Text = "When you Cast this Spell, any targets (including you) can choose to immediately fall asleep. The spell ends for any creatures that don't choose to fall asleep. Sleepers join a shared dream, where they can communicate with one another as though they were in the same room. Individual targets leave this shared dream upon awakening, and if all the targets awaken, the spell ends." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

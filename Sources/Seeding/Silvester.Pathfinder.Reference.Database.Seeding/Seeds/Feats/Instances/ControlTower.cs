@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ffa693f3-c1c0-4080-94eb-49a7d9055e29"), Type = TextBlockType.Text, Text = "Your keen senses and ability to process battlefield information have dramatically improved, allowing you to drastically reduce the advantage of unseen foes. You and allies in your overwatch field gain a +2 circumstance bonus when using the (action: Seek) action to find hidden or undetected creatures within the overwatch field. You and your allies don’t have to succeed at a flat check to target a concealed creature within your overwatch field. When you or an ally targets a hidden creature in your overwatch field, reduce the DC of the flat check to 5." };
+            yield return new TextBlock { Id = Guid.Parse("ffa693f3-c1c0-4080-94eb-49a7d9055e29"), Type = TextBlockType.Text, Text = "Your keen senses and ability to process battlefield information have dramatically improved, allowing you to drastically reduce the advantage of unseen foes. You and allies in your overwatch field gain a +2 circumstance bonus when using the (action: Seek) action to find hidden or undetected creatures within the overwatch field. You and your allies don't have to succeed at a flat check to target a concealed creature within your overwatch field. When you or an ally targets a hidden creature in your overwatch field, reduce the DC of the flat check to 5." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fe688355-a855-421f-bb33-20b2fd2b25d1"), Type = Utilities.Text.TextBlockType.Text, Text = "You create an invisible floating eye at a location within range (even if it’s outside your line of sight or line of effect). The eye can’t move, but you can see in all directions from that point as if using your normal visual senses." };
+            yield return new TextBlock { Id = Guid.Parse("fe688355-a855-421f-bb33-20b2fd2b25d1"), Type = Utilities.Text.TextBlockType.Text, Text = "You create an invisible floating eye at a location within range (even if it's outside your line of sight or line of effect). The eye can't move, but you can see in all directions from that point as if using your normal visual senses." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04c5d18b-53ee-43b5-9a8f-aae7b3380398"), Type = TextBlockType.Text, Text = "You transform reflexively when in danger. You cast (spell: wild shape) to transform into one form granted by one of the prerequisite feats you have, depending on the trigger. Your form’s resistances and weaknesses apply against the triggering damage." };
+            yield return new TextBlock { Id = Guid.Parse("04c5d18b-53ee-43b5-9a8f-aae7b3380398"), Type = TextBlockType.Text, Text = "You transform reflexively when in danger. You cast (spell: wild shape) to transform into one form granted by one of the prerequisite feats you have, depending on the trigger. Your form's resistances and weaknesses apply against the triggering damage." };
             yield return new TextBlock { Id = Guid.Parse("5e3f7fe9-5592-42a6-8c9d-78bfa46cc465"), Type = TextBlockType.Enumeration, Text = " Trigger: You fall 10 feet or more; Effect: Choose a form from (spell: aerial form)." };
             yield return new TextBlock { Id = Guid.Parse("9cbe79dd-0010-4fce-a1de-0065bef06193"), Type = TextBlockType.Enumeration, Text = " Trigger: You take acid, cold, electricity, fire, or poison damage; Effect: Choose a form from (spell: dragon form) that resists the triggering damage." };
             yield return new TextBlock { Id = Guid.Parse("f19a2d4d-6c9d-4d94-91c0-c615c80b3f43"), Type = TextBlockType.Enumeration, Text = " Trigger: You take fire damage; Effect: Choose a fire elemental form from (spell: elemental form)." };

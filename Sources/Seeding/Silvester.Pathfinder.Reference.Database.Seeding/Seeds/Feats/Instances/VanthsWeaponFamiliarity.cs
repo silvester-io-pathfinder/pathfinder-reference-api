@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1bbb7c1d-c1b8-474b-8b8f-0c27fb32f85f"), Type = TextBlockType.Text, Text = "You seek to emulate vanth reapers’ fighting styles. You are trained with (item: bo staves | bo staff), (item: longbows | longbow), (item: composite longbows | composite longbow), (item: scythes | scythe), and (item: staves | staff)." };
+            yield return new TextBlock { Id = Guid.Parse("1bbb7c1d-c1b8-474b-8b8f-0c27fb32f85f"), Type = TextBlockType.Text, Text = "You seek to emulate vanth reapers' fighting styles. You are trained with (item: bo staves | bo staff), (item: longbows | longbow), (item: composite longbows | composite longbow), (item: scythes | scythe), and (item: staves | staff)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

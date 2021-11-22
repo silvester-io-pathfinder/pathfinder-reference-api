@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "War Flail",
-                Description = "This large flail has a long shaft connected to a shorter piece of stout wood or metal that’s sometimes inlaid with spikes.",
+                Description = "This large flail has a long shaft connected to a shorter piece of stout wood or metal that's sometimes inlaid with spikes.",
                 Price = 200,
                 Damage = "1d10",
                 Hands = "2",

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("062e69ff-671b-4c15-9f6b-d11232cc2990"), Type = TextBlockType.Text, Text = "You harness positive energy to heal your animal companion’s wounds. You restore 1d10 Hit Points to your animal companion. The number of actions you spend Casting this Spell determines range and other parameters." };
+            yield return new TextBlock { Id = Guid.Parse("062e69ff-671b-4c15-9f6b-d11232cc2990"), Type = TextBlockType.Text, Text = "You harness positive energy to heal your animal companion's wounds. You restore 1d10 Hit Points to your animal companion. The number of actions you spend Casting this Spell determines range and other parameters." };
             yield return new TextBlock { Id = Guid.Parse("34002694-962c-4aa6-a3e0-565b6f3ffad8"), Type = TextBlockType.Enumeration, Text = "[one-action] Somatic - The spell has a range of touch." };
             yield return new TextBlock { Id = Guid.Parse("2bc41f04-e8e2-4212-afef-4f1fb3e47645"), Type = TextBlockType.Enumeration, Text = "[two-actions] Verbal - The spell has a range of 30 feet and restores an additional 8 Hit Points to the target." };
         }

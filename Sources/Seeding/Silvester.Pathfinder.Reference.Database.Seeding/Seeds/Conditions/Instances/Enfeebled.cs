@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Conditions.Insta
 
         public override IEnumerable<TextBlock> GetConditionDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d07b32ec-d323-4126-a929-b8205acfdbb8"), Type = Utilities.Text.TextBlockType.Text, Text = "You’re physically weakened. Enfeebled always includes a value. When you are enfeebled, you take a status penalty equal to the condition value to Strength-based rolls and DCs, including Strength-based melee attack rolls, Strength-based damage rolls, and Athletics checks." };
+            yield return new TextBlock { Id = Guid.Parse("d07b32ec-d323-4126-a929-b8205acfdbb8"), Type = Utilities.Text.TextBlockType.Text, Text = "You're physically weakened. Enfeebled always includes a value. When you are enfeebled, you take a status penalty equal to the condition value to Strength-based rolls and DCs, including Strength-based melee attack rolls, Strength-based damage rolls, and Athletics checks." };
         }
 
         public override SourcePage? GetSourcePage()

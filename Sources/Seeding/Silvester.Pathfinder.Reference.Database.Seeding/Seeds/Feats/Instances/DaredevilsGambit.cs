@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b063c371-aeae-4af5-8b25-56804e5c67b8"), Type = TextBlockType.Text, Text = "If you critically succeed at your (feat: Daring Act), you can enter the target’s space and remain there until the beginning of your next turn or until the target moves, whichever comes first. You gain a +2 circumstance bonus to AC, and your target is flat-footed against your attacks while you are sharing its space in this way." };
-            yield return new TextBlock { Id = Guid.Parse("c904c958-9d77-41b6-9022-ad73490f399f"), Type = TextBlockType.Text, Text = "If any creature other than your target hits you with an attack roll while you are sharing your target’s space, attempt a DC 15 flat check. On a success, resolve the attack against the target instead of you, using the same attack roll result that hit you." };
+            yield return new TextBlock { Id = Guid.Parse("b063c371-aeae-4af5-8b25-56804e5c67b8"), Type = TextBlockType.Text, Text = "If you critically succeed at your (feat: Daring Act), you can enter the target's space and remain there until the beginning of your next turn or until the target moves, whichever comes first. You gain a +2 circumstance bonus to AC, and your target is flat-footed against your attacks while you are sharing its space in this way." };
+            yield return new TextBlock { Id = Guid.Parse("c904c958-9d77-41b6-9022-ad73490f399f"), Type = TextBlockType.Text, Text = "If any creature other than your target hits you with an attack roll while you are sharing your target's space, attempt a DC 15 flat check. On a success, resolve the attack against the target instead of you, using the same attack roll result that hit you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

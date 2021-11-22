@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("26f97a43-da68-4bc4-bd66-26b9464d9fe5"), Type = TextBlockType.Text, Text = "You are skilled at making quick fixes to damaged equipment, but your fixes aren’t meant to last forever. You make a quick repair to a broken non-magical item in your possession. Until the item takes damage again, you can still use it as a shoddy item of its type. This repair restores no Hit Points, so the item is easy to destroy. Once the item is (action: Repaired | Repair) normally such that it is no longer broken, it is also no longer shoddy." };
+            yield return new TextBlock { Id = Guid.Parse("26f97a43-da68-4bc4-bd66-26b9464d9fe5"), Type = TextBlockType.Text, Text = "You are skilled at making quick fixes to damaged equipment, but your fixes aren't meant to last forever. You make a quick repair to a broken non-magical item in your possession. Until the item takes damage again, you can still use it as a shoddy item of its type. This repair restores no Hit Points, so the item is easy to destroy. Once the item is (action: Repaired | Repair) normally such that it is no longer broken, it is also no longer shoddy." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

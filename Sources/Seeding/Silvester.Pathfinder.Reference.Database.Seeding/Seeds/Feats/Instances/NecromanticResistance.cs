@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0622d4f5-6a39-4a04-8349-d28b68641cd5"), Type = TextBlockType.Text, Text = "As part of your training, you’ve inured yourself against necromancy through repeated exposure. You gain a +1 circumstance bonus to saves against (trait: necromancy) effects and gain resistance to negative damage equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("0622d4f5-6a39-4a04-8349-d28b68641cd5"), Type = TextBlockType.Text, Text = "As part of your training, you've inured yourself against necromancy through repeated exposure. You gain a +1 circumstance bonus to saves against (trait: necromancy) effects and gain resistance to negative damage equal to half your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

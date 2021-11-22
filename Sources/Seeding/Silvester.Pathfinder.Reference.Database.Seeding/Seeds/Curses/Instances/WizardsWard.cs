@@ -23,13 +23,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Curses.Instances
                 Name = "Wizard's Ward",
                 DifficultyCheck = 22,
                 SavingThrowStatId = Will.ID,
-                Effect = "You take 5d6 damage of the same damage type as the damage you dealt to the book, and the damage can’t be healed as long as the curse lasts. Repairing the book, including replacing any missing text, ends this curse."
+                Effect = "You take 5d6 damage of the same damage type as the damage you dealt to the book, and the damage can't be healed as long as the curse lasts. Repairing the book, including replacing any missing text, ends this curse."
             };
         }
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9f951938-a7f4-4070-bd17-24a449a8675a"), Type = TextBlockType.Text, Text = "A wizard’s ward is placed upon a single book, usually a spellbook. If you damage the book, you must attempt a save against the curse’s effect." };
+            yield return new TextBlock { Id = Guid.Parse("9f951938-a7f4-4070-bd17-24a449a8675a"), Type = TextBlockType.Text, Text = "A wizard's ward is placed upon a single book, usually a spellbook. If you damage the book, you must attempt a save against the curse's effect." };
         }
 
         public override SourcePage GetSourcePage()

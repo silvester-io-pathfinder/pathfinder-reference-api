@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b3057131-bfbc-455e-8275-d6272a845dc5"), Type = TextBlockType.Text, Text = "You are subtle in your efforts to learn the things you need to know. When (action: Gathering Information | Gather Information), you can hide the true subject of your inquiry among other topics of little interest to you without increasing the difficulty of the check or taking more time to (action: Gather Information). Anyone trying to (action: Gather Information) to determine if someone else was asking around about the topic in question must exceed your Deception DC or the normal DC to (action: Gather Information) about your inquiries, whichever is higher, or else they don’t learn of your efforts." };
+            yield return new TextBlock { Id = Guid.Parse("b3057131-bfbc-455e-8275-d6272a845dc5"), Type = TextBlockType.Text, Text = "You are subtle in your efforts to learn the things you need to know. When (action: Gathering Information | Gather Information), you can hide the true subject of your inquiry among other topics of little interest to you without increasing the difficulty of the check or taking more time to (action: Gather Information). Anyone trying to (action: Gather Information) to determine if someone else was asking around about the topic in question must exceed your Deception DC or the normal DC to (action: Gather Information) about your inquiries, whichever is higher, or else they don't learn of your efforts." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

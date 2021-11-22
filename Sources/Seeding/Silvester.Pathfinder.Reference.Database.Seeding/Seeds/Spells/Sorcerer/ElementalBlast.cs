@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bb056b7c-7bab-4b7a-9e2d-836a0305385e"), Type = TextBlockType.Text, Text = "You gather elemental energy and blast your foes in one of the various listed shapes of your choosing, dealing 8d6 bludgeoning damage (or fire damage if your element is fire). This spell has your element’s trait." };
+            yield return new TextBlock { Id = Guid.Parse("bb056b7c-7bab-4b7a-9e2d-836a0305385e"), Type = TextBlockType.Text, Text = "You gather elemental energy and blast your foes in one of the various listed shapes of your choosing, dealing 8d6 bludgeoning damage (or fire damage if your element is fire). This spell has your element's trait." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
             {
                 Id = ID,
                 Name = "Armageddon Orb",
-                Description = "A roiling red orb, forged from a drop of the god Rovagug’s blood, rains fire from the sky when a specified condition is met.",
+                Description = "A roiling red orb, forged from a drop of the god Rovagug's blood, rains fire from the sky when a specified condition is met.",
                 Level = 23,
                 CanBeDetectedMagically = true,
                 TypeId = HazardTypes.Instances.Traps.ID,
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("ea62e9d7-f1ba-4f23-abb7-0f76ec9dbaeb"),
                 Name = "Burn it All",
                 Traits = FilterTraits("Death", "Divine", "Evocation", "Fire"),
-                Trigger = "special condition set by the trap’s creator occurs; this is typically the event of their death;",
+                Trigger = "special condition set by the trap's creator occurs; this is typically the event of their death;",
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = new List<TextBlock>
                 {
@@ -74,7 +74,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
                 Id = Guid.Parse("0e1b3b3d-aa2d-4963-8bb4-3485e14be099"),
                 SkillId = Skills.Instances.Thievery.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Legendary.ID,
-                Description = "to imbue thieves’ tools with aspects representing Asmodeus and Sarenrae and use them to drain away the orb’s power over 10 minutes; the character attempting this check takes 5 fire damage each round until the orb is depleted",
+                Description = "to imbue thieves' tools with aspects representing Asmodeus and Sarenrae and use them to drain away the orb's power over 10 minutes; the character attempting this check takes 5 fire damage each round until the orb is depleted",
                 DifficultyCheck = 48
             };
         }

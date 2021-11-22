@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5ee9dc52-8989-428f-80a2-22b486faf018"), Type = TextBlockType.Text, Text = "You grasp the animating force within an undead creature and bend it to your will. If the next action you use is to cast (spell: harm) targeting one undead creature, you transform the effects of that (spell: harm) spell. Instead of harm’s normal effects, the target becomes controlled by you if its level is equal to or lower than your level – 3. It can attempt a Will saving throw to resist being controlled by you. If the target is already under someone else’s command, the controlling creature also rolls a saving throw, and the undead uses the better result." };
+            yield return new TextBlock { Id = Guid.Parse("5ee9dc52-8989-428f-80a2-22b486faf018"), Type = TextBlockType.Text, Text = "You grasp the animating force within an undead creature and bend it to your will. If the next action you use is to cast (spell: harm) targeting one undead creature, you transform the effects of that (spell: harm) spell. Instead of harm's normal effects, the target becomes controlled by you if its level is equal to or lower than your level – 3. It can attempt a Will saving throw to resist being controlled by you. If the target is already under someone else's command, the controlling creature also rolls a saving throw, and the undead uses the better result." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

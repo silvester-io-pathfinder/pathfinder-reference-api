@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("223c7897-a90d-4a22-8755-810c9232769a"), Type = TextBlockType.Text, Text = "You learn to take advantage of every shot, flying across the battlefield with the help of your weapon’s recoil. (action: Stride) and use (feat: Black Powder Boost). Make a ranged (action: Strike) with the required weapon at any point during the (feat: Black Powder Boost)." };
+            yield return new TextBlock { Id = Guid.Parse("223c7897-a90d-4a22-8755-810c9232769a"), Type = TextBlockType.Text, Text = "You learn to take advantage of every shot, flying across the battlefield with the help of your weapon's recoil. (action: Stride) and use (feat: Black Powder Boost). Make a ranged (action: Strike) with the required weapon at any point during the (feat: Black Powder Boost)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

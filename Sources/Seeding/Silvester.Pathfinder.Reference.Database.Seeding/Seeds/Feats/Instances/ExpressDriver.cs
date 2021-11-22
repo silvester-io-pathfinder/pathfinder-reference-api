@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("569033b6-ecac-4f73-a04a-f5a1d2a8a99a"), Type = TextBlockType.Text, Text = "You can optimize your vehicle’s performance, coaxing extra speed and choosing paths to avoid slowdowns. When calculating your travel speed for the day while piloting a vehicle, you can attempt a Driving Lore check to increase your vehicle’s travel speed. The DC is determined by the GM but is typically based on the vehicle’s piloting DC or a difficulty based on the environment, whichever is harder. On a success, increase your vehicle’s travel speed by half. This has no effect on your vehicle’s movement in encounters." };
+            yield return new TextBlock { Id = Guid.Parse("569033b6-ecac-4f73-a04a-f5a1d2a8a99a"), Type = TextBlockType.Text, Text = "You can optimize your vehicle's performance, coaxing extra speed and choosing paths to avoid slowdowns. When calculating your travel speed for the day while piloting a vehicle, you can attempt a Driving Lore check to increase your vehicle's travel speed. The DC is determined by the GM but is typically based on the vehicle's piloting DC or a difficulty based on the environment, whichever is harder. On a success, increase your vehicle's travel speed by half. This has no effect on your vehicle's movement in encounters." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

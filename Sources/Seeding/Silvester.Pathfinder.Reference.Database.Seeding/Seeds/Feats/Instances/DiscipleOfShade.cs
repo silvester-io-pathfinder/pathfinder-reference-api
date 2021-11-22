@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("204175ba-81a2-4b4e-b8b6-e211ad398bbd"), Type = TextBlockType.Text, Text = "You’ve delved deeper into the mysteries of shadow and become blessed with magical power that increases your skills in the arts of deception and persuasion. You gain the (spell: inscrutable mask) domain spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("204175ba-81a2-4b4e-b8b6-e211ad398bbd"), Type = TextBlockType.Text, Text = "You've delved deeper into the mysteries of shadow and become blessed with magical power that increases your skills in the arts of deception and persuasion. You gain the (spell: inscrutable mask) domain spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8395d0ff-d1a0-4d42-ae19-05d0e898c612"), Type = TextBlockType.Text, Text = "~ Access: Have earnt Mialari Docur’s trust and have proven their worth by defeating the Scarlet Triad." };
-            yield return new TextBlock { Id = Guid.Parse("0be8893c-c5a0-4e69-8702-4ea4596f5ec3"), Type = TextBlockType.Text, Text = "You learn the (spell: silver’s refrain) composition cantrip, which aids you when fighting devils." };
+            yield return new TextBlock { Id = Guid.Parse("8395d0ff-d1a0-4d42-ae19-05d0e898c612"), Type = TextBlockType.Text, Text = "~ Access: Have earnt Mialari Docur's trust and have proven their worth by defeating the Scarlet Triad." };
+            yield return new TextBlock { Id = Guid.Parse("0be8893c-c5a0-4e69-8702-4ea4596f5ec3"), Type = TextBlockType.Text, Text = "You learn the (spell: silver's refrain) composition cantrip, which aids you when fighting devils." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

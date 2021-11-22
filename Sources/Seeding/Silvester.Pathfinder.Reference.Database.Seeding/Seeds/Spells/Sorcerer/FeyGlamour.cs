@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eb3e1387-aa64-433c-9f52-59ee3bcdfa90"), Type = TextBlockType.Text, Text = "You call upon fey glamours to cloak an area or the targets in illusion. This has the effect of either illusory scene on the area or veil on the creatures, as if heightened to a level 1 level lower than fey glamour, using fey glamour’s range and duration." };
+            yield return new TextBlock { Id = Guid.Parse("eb3e1387-aa64-433c-9f52-59ee3bcdfa90"), Type = TextBlockType.Text, Text = "You call upon fey glamours to cloak an area or the targets in illusion. This has the effect of either illusory scene on the area or veil on the creatures, as if heightened to a level 1 level lower than fey glamour, using fey glamour's range and duration." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

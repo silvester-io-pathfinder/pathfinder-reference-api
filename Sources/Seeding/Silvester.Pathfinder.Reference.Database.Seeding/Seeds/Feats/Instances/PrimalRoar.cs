@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c8ec537a-fbbc-4352-8f9b-7da5d8b1256b"), Type = TextBlockType.Text, Text = "Your eidolon unleashes a primal roar or other such terrifying noise that fits your eidolon’s form. Your eidolon attempts Intimidation checks to (action: Demoralize) each enemy that can hear the roar; these (action: Demoralize) attempts don’t take any penalty for not sharing a language." };
+            yield return new TextBlock { Id = Guid.Parse("c8ec537a-fbbc-4352-8f9b-7da5d8b1256b"), Type = TextBlockType.Text, Text = "Your eidolon unleashes a primal roar or other such terrifying noise that fits your eidolon's form. Your eidolon attempts Intimidation checks to (action: Demoralize) each enemy that can hear the roar; these (action: Demoralize) attempts don't take any penalty for not sharing a language." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

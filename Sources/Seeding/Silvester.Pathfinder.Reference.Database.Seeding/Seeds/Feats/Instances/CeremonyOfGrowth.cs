@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8b5d61a-358e-476e-ad63-8affe39ef498"), Type = TextBlockType.Text, Text = "You can alter your exoskeleton’s size. You constantly gain the effects of (spell: enlarge). You can dismiss or resume these effects as an action, which has the (trait: concentrate) trait." };
+            yield return new TextBlock { Id = Guid.Parse("b8b5d61a-358e-476e-ad63-8affe39ef498"), Type = TextBlockType.Text, Text = "You can alter your exoskeleton's size. You constantly gain the effects of (spell: enlarge). You can dismiss or resume these effects as an action, which has the (trait: concentrate) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

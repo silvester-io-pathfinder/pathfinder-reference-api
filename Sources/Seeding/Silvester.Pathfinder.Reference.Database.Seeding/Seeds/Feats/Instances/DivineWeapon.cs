@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("467a737f-abef-4d2c-bf98-850829dd8594"), Type = TextBlockType.Text, Text = "You siphon residual spell energy into a weapon you’re wielding. Until the end of your turn, the weapon deals an additional 1d4 force damage. You can instead deal an additional 1d6 damage of an alignment type that matches one of your deity’s alignment components. As usual for aligned damage, this can damage only creatures of the opposite alignment." };
+            yield return new TextBlock { Id = Guid.Parse("467a737f-abef-4d2c-bf98-850829dd8594"), Type = TextBlockType.Text, Text = "You siphon residual spell energy into a weapon you're wielding. Until the end of your turn, the weapon deals an additional 1d4 force damage. You can instead deal an additional 1d6 damage of an alignment type that matches one of your deity's alignment components. As usual for aligned damage, this can damage only creatures of the opposite alignment." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -35,7 +35,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalBombs.
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7ea74824-5235-4b72-bc3e-813400c45c57"), Text = "Alchemist’s fire is a combination of volatile liquids that ignite when exposed to air. Alchemist’s fire deals the listed fire damage, persistent fire damage, and splash damage. Many types grant an item bonus to attack rolls." };
+            yield return new TextBlock { Id = Guid.Parse("7ea74824-5235-4b72-bc3e-813400c45c57"), Text = "Alchemist's fire is a combination of volatile liquids that ignite when exposed to air. Alchemist's fire deals the listed fire damage, persistent fire damage, and splash damage. Many types grant an item bonus to attack rolls." };
         }
 
         protected override IEnumerable<AlchemicalBombPotencyBinding> GetPotencies()

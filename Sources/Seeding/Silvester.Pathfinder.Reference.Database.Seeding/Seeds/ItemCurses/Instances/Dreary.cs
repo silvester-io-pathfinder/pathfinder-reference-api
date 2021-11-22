@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ItemCurses.Insta
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("df529fb2-6e29-4350-b747-012e2d9400b8"), Type = TextBlockType.Text, Text = "When you invest this armor, a personal-sized cloud appears over your head and begins to rain on you, and the armor fuses to you. This extinguishes uncovered flames and soaks other objects you are carrying or holding, potentially ruining them. Cold conditions are one step worse under the cloud, and at the GM’s discretion it might cause other problems, such as interfering with sleep." };
+            yield return new TextBlock { Id = Guid.Parse("df529fb2-6e29-4350-b747-012e2d9400b8"), Type = TextBlockType.Text, Text = "When you invest this armor, a personal-sized cloud appears over your head and begins to rain on you, and the armor fuses to you. This extinguishes uncovered flames and soaks other objects you are carrying or holding, potentially ruining them. Cold conditions are one step worse under the cloud, and at the GM's discretion it might cause other problems, such as interfering with sleep." };
         }
 
         public override SourcePage GetSourcePage()

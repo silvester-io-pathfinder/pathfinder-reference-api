@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bfcba6b7-e85e-4f6f-908e-e55de7702298"), Type = TextBlockType.Text, Text = "You’re adept at making contact with other ysoki. When you arrive at a new settlement, you automatically find the nearest ratfolk enclave by spending 1 day of downtime searching, provided one exists and its members aren’t actively hiding from you. Once you’ve made contact, you gain a +1 circumstance bonus to (action: Gather Information) and (action: Earn Income) in the settlement." };
+            yield return new TextBlock { Id = Guid.Parse("bfcba6b7-e85e-4f6f-908e-e55de7702298"), Type = TextBlockType.Text, Text = "You're adept at making contact with other ysoki. When you arrive at a new settlement, you automatically find the nearest ratfolk enclave by spending 1 day of downtime searching, provided one exists and its members aren't actively hiding from you. Once you've made contact, you gain a +1 circumstance bonus to (action: Gather Information) and (action: Earn Income) in the settlement." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

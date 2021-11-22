@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0658d3fc-3660-4736-8df4-7ebb4d16b6b6"), Type = TextBlockType.Text, Text = "You execute a maneuver that defies possibility. If the triggering effect was an enemy’s attack hitting you, the enemy rerolls the attack roll and uses the lower result. If the triggering effect was you failing a saving throw, you reroll the saving throw and use the higher result." };
+            yield return new TextBlock { Id = Guid.Parse("0658d3fc-3660-4736-8df4-7ebb4d16b6b6"), Type = TextBlockType.Text, Text = "You execute a maneuver that defies possibility. If the triggering effect was an enemy's attack hitting you, the enemy rerolls the attack roll and uses the lower result. If the triggering effect was you failing a saving throw, you reroll the saving throw and use the higher result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

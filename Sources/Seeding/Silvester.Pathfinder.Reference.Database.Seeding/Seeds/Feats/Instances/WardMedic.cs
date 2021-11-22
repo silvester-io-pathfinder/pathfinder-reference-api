@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bf2d306c-e31a-4f9a-8d79-8e62a093f7dc"), Type = TextBlockType.Text, Text = "You’ve studied in large medical wards, treating several patients at once and tending to all their needs. When you use (Action: Treat Disease) or (Action: Treat Wounds), you can treat up to two targets. If you’re a master in Medicine, you can treat up to four targets, and if you’re legendary, you can treat up to eight targets." };
+            yield return new TextBlock { Id = Guid.Parse("bf2d306c-e31a-4f9a-8d79-8e62a093f7dc"), Type = TextBlockType.Text, Text = "You've studied in large medical wards, treating several patients at once and tending to all their needs. When you use (Action: Treat Disease) or (Action: Treat Wounds), you can treat up to two targets. If you're a master in Medicine, you can treat up to four targets, and if you're legendary, you can treat up to eight targets." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

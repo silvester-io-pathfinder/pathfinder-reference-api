@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3c3b8e98-a33b-440b-8b62-6545d6d4d943"), Type = TextBlockType.Text, Text = "You make the target object look and feel as though it were in much better or worse physical condition. When you cast this spell, decide whether you want to make the object look decrepit or perfect. An item made to look decrepit appears broken and shoddy. An intact item made to look better appears as though it’s brand new and highly polished or well maintained. A broken item appears to be intact and functional. Destroyed items can’t be affected by this spell. A creature that Interacts with the item can attempt to disbelieve the illusion." };
+            yield return new TextBlock { Id = Guid.Parse("3c3b8e98-a33b-440b-8b62-6545d6d4d943"), Type = TextBlockType.Text, Text = "You make the target object look and feel as though it were in much better or worse physical condition. When you cast this spell, decide whether you want to make the object look decrepit or perfect. An item made to look decrepit appears broken and shoddy. An intact item made to look better appears as though it's brand new and highly polished or well maintained. A broken item appears to be intact and functional. Destroyed items can't be affected by this spell. A creature that Interacts with the item can attempt to disbelieve the illusion." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

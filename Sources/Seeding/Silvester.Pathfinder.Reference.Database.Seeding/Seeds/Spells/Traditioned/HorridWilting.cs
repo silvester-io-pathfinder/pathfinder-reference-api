@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("28c84572-505d-475d-9a38-4c74c8fe0ebd"), Type = TextBlockType.Text, Text = "You pull the moisture from the targets’ bodies, dealing 10d10 negative damage. Creatures made of water (such as water elementals) and plant creatures use the outcome for one degree of success worse than the result of their saving throw. Creatures whose bodies contain no significant moisture (such as earth elementals) are immune to horrid wilting." };
+            yield return new TextBlock { Id = Guid.Parse("28c84572-505d-475d-9a38-4c74c8fe0ebd"), Type = TextBlockType.Text, Text = "You pull the moisture from the targets' bodies, dealing 10d10 negative damage. Creatures made of water (such as water elementals) and plant creatures use the outcome for one degree of success worse than the result of their saving throw. Creatures whose bodies contain no significant moisture (such as earth elementals) are immune to horrid wilting." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

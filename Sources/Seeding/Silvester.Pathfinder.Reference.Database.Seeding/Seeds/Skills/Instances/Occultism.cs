@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances
                 HasArmorCheckPenalty = false,
                 HasRecallKnowledgeAction = true,
                 StatModifierId = Intelligence.ID,
-                Description = "You know a great deal about ancient philosophies, esoteric lore, obscure mysticism, and supernatural creatures. Even if you’re untrained in Occultism, you can use it to Recall Knowledge (page 238)."
+                Description = "You know a great deal about ancient philosophies, esoteric lore, obscure mysticism, and supernatural creatures. Even if you're untrained in Occultism, you can use it to Recall Knowledge (page 238)."
             };
         }
     }

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2293a30f-f7f0-4619-8843-63489bfbc18c"), Type = TextBlockType.Text, Text = "Your final blow can make an impact even if it rebounds off a foe’s defenses. Make a (action: Strike) with the required weapon. After the (action: Strike), your turn ends. The (action: Strike) deals one extra weapon damage die, or two extra weapon damage dice if you’re at least 18th level. The (action: Strike) also gains the following failure effect." };
+            yield return new TextBlock { Id = Guid.Parse("2293a30f-f7f0-4619-8843-63489bfbc18c"), Type = TextBlockType.Text, Text = "Your final blow can make an impact even if it rebounds off a foe's defenses. Make a (action: Strike) with the required weapon. After the (action: Strike), your turn ends. The (action: Strike) deals one extra weapon damage die, or two extra weapon damage dice if you're at least 18th level. The (action: Strike) also gains the following failure effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
                 Id = Guid.Parse("73339d55-38bf-4c03-b725-1f43937788ef"),
                 
                 
-                Failure = "You deal damage equal to one weapon damage die of the required weapon. Increase this to two dice if you’re at least 18th level.",
+                Failure = "You deal damage equal to one weapon damage die of the required weapon. Increase this to two dice if you're at least 18th level.",
                  
             };
         }

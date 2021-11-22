@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("580f35ad-b234-451b-9e38-6dc073500e78"), Type = TextBlockType.Text, Text = "Your graceful attacks are especially powerful. When you score a critical hit with an (trait: agile) or (trait: finesse) melee weapon that has the (trait: deadly) trait, you double the number of dice from that trait. When you wield an (trait: agile) or (trait: finesse) melee weapon that doesn’t have the (trait: deadly) trait, it gains the (trait: deadly d8) trait instead." };
+            yield return new TextBlock { Id = Guid.Parse("580f35ad-b234-451b-9e38-6dc073500e78"), Type = TextBlockType.Text, Text = "Your graceful attacks are especially powerful. When you score a critical hit with an (trait: agile) or (trait: finesse) melee weapon that has the (trait: deadly) trait, you double the number of dice from that trait. When you wield an (trait: agile) or (trait: finesse) melee weapon that doesn't have the (trait: deadly) trait, it gains the (trait: deadly d8) trait instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

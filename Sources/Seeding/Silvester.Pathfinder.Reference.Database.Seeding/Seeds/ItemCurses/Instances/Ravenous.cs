@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ItemCurses.Insta
 
         public override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("72bbc67f-8a60-42ed-bf86-820ee0f80fae"), Type = TextBlockType.Text, Text = "A ravenous curse draws power from the wielder’s body. Whenever you activate the item, you become incredibly hungry and immediately begin to starve. You require 10 times as much food as normal for the next day." };
+            yield return new TextBlock { Id = Guid.Parse("72bbc67f-8a60-42ed-bf86-820ee0f80fae"), Type = TextBlockType.Text, Text = "A ravenous curse draws power from the wielder's body. Whenever you activate the item, you become incredibly hungry and immediately begin to starve. You require 10 times as much food as normal for the next day." };
         }
 
         public override SourcePage GetSourcePage()

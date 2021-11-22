@@ -43,9 +43,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             {
                 Id = Guid.Parse("f0ceabbf-2da1-4dff-a49e-d432b66d5be1"),
                 CriticalSuccess = "The creature is unaffected.",
-                Success = "You are concealed to the creature for 1 round by the shining light, but can’t use this concealment to (action: Hide), as normal for when your location is obvious.",
+                Success = "You are concealed to the creature for 1 round by the shining light, but can't use this concealment to (action: Hide), as normal for when your location is obvious.",
                 Failure = "As success, except you are concealed to the creature while your glory radiates.",
-                CriticalFailure = "You are hidden to the creature while your glory radiates, lost amid the radiant corona of your presence. Your general position is still obvious, so you can’t use this to (action: Sneak).", 
+                CriticalFailure = "You are hidden to the creature while your glory radiates, lost amid the radiant corona of your presence. Your general position is still obvious, so you can't use this to (action: Sneak).", 
             };
         }
             

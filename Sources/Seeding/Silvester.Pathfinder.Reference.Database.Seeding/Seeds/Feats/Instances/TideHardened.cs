@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("968896d8-2364-4d6c-ae5d-39909c16d702"), Type = TextBlockType.Text, Text = "You’re at home in the unpredictable tides. You gain a +1 circumstance bonus to saves against (trait: cold) and (trait: water) effects. If you roll a success on a save against a (trait: cold) or (trait: water) effect, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("968896d8-2364-4d6c-ae5d-39909c16d702"), Type = TextBlockType.Text, Text = "You're at home in the unpredictable tides. You gain a +1 circumstance bonus to saves against (trait: cold) and (trait: water) effects. If you roll a success on a save against a (trait: cold) or (trait: water) effect, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

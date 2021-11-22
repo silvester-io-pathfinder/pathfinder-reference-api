@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b2113d7e-3d6d-401b-8b26-5bd5c193fb8c"), Type = TextBlockType.Text, Text = "Living underground, you have learned to find your way without landmarks or even solid ground. If you roll a success on an Survival check to (action: Sense Direction) or an Athletics check to (action: Climb), you get a critical success instead. You’re not flat-footed when you attempt to (action: Climb)." };
+            yield return new TextBlock { Id = Guid.Parse("b2113d7e-3d6d-401b-8b26-5bd5c193fb8c"), Type = TextBlockType.Text, Text = "Living underground, you have learned to find your way without landmarks or even solid ground. If you roll a success on an Survival check to (action: Sense Direction) or an Athletics check to (action: Climb), you get a critical success instead. You're not flat-footed when you attempt to (action: Climb)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

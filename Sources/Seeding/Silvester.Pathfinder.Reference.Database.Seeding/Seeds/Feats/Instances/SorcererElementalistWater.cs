@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("a3e9e9fa-30d2-4a55-ab60-0a6dbebdbf4b"), Type = TextBlockType.Text, Text = "You replace your initial bloodline spell with the initial water elemental focus spell ((spell: rising surf)), and your advanced bloodline spell (if you get it) with the advanced water elemental focus spell ((spell: pulverizing cascade))." };
-            yield return new TextBlock { Id = Guid.Parse("2ce49c2a-f41e-488a-8978-d083d7414c6c"), Type = TextBlockType.Text, Text = "You can only select this option if your bloodline&#39;s elemental type is water." };
+            yield return new TextBlock { Id = Guid.Parse("2ce49c2a-f41e-488a-8978-d083d7414c6c"), Type = TextBlockType.Text, Text = "You can only select this option if your bloodline's elemental type is water." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

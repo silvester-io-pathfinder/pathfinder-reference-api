@@ -28,8 +28,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("873c4345-0752-45a5-9997-31fab58fc356"), Type = TextBlockType.Text, Text = "You alter the appearance of an item’s magic aura. You can choose to have the target’s aura appear as that of a common magic item of twice magic aura’s level or lower, or to have it register as being under the effects of a spell of your choice of magic aura’s level or lower. If the target is magical, you can instead choose to have it appear as entirely non-magical." };
-            yield return new TextBlock { Id = Guid.Parse("be5f5b34-6542-4ae3-8a17-18b3735f9d3a"), Type = TextBlockType.Text, Text = "A caster using detect magic or read aura of an equal or higher spell level can attempt to disbelieve the illusion from magic aura. Magic aura doesn’t mask the aura of spells that are 9th level or higher or of items that are 19th level or higher." };
+            yield return new TextBlock { Id = Guid.Parse("873c4345-0752-45a5-9997-31fab58fc356"), Type = TextBlockType.Text, Text = "You alter the appearance of an item's magic aura. You can choose to have the target's aura appear as that of a common magic item of twice magic aura's level or lower, or to have it register as being under the effects of a spell of your choice of magic aura's level or lower. If the target is magical, you can instead choose to have it appear as entirely non-magical." };
+            yield return new TextBlock { Id = Guid.Parse("be5f5b34-6542-4ae3-8a17-18b3735f9d3a"), Type = TextBlockType.Text, Text = "A caster using detect magic or read aura of an equal or higher spell level can attempt to disbelieve the illusion from magic aura. Magic aura doesn't mask the aura of spells that are 9th level or higher or of items that are 19th level or higher." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "3rd",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("8a9dccfd-23cc-48d4-902d-f2a8e9187a39"), Type = TextBlockType.Text, Text = "You can target a creature instead of an object. When you do, you can either conceal the auras of all magic items it has or have that creature’s aura appear as if it were under the effect of a spell you know." }
+                    new TextBlock { Id = Guid.Parse("8a9dccfd-23cc-48d4-902d-f2a8e9187a39"), Type = TextBlockType.Text, Text = "You can target a creature instead of an object. When you do, you can either conceal the auras of all magic items it has or have that creature's aura appear as if it were under the effect of a spell you know." }
                 }
             };
         }

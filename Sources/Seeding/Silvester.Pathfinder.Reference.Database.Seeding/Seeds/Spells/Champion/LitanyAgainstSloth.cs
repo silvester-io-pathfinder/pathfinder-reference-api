@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c108a13-0b1e-4bce-9655-fb15a599553a"), Type = TextBlockType.Text, Text = "Your litany rails against the sin of sloth, interfering with the target’s ability to react. The target must attempt a Will save. A particularly slothful creature, such as a sloth demon, uses the outcome one degree of success worse than the result of its saving throw. The target becomes temporarily immune to all of your litanies for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("4c108a13-0b1e-4bce-9655-fb15a599553a"), Type = TextBlockType.Text, Text = "Your litany rails against the sin of sloth, interfering with the target's ability to react. The target must attempt a Will save. A particularly slothful creature, such as a sloth demon, uses the outcome one degree of success worse than the result of its saving throw. The target becomes temporarily immune to all of your litanies for 1 minute." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -38,9 +38,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("8f4531ff-e507-44b7-8e9c-e2e2d08de426"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target can’t use reactions.",
-                Failure = "The target can’t use reactions and is slowed 1.",
-                CriticalFailure = "The target can’t use reactions and is slowed 2."
+                Success = "The target can't use reactions.",
+                Failure = "The target can't use reactions and is slowed 1.",
+                CriticalFailure = "The target can't use reactions and is slowed 2."
             };
         }
 

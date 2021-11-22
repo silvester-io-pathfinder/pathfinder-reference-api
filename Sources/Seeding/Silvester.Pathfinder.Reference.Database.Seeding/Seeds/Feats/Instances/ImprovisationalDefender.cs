@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3c514dc4-25c5-4837-9ad9-d87735d5027e"), Type = TextBlockType.Text, Text = "You are always prepared for fights that frequently disrupt seemingly peaceful times. When you use an improvised weapon or a shoddy weapon, you don’t take the -2 item penalty to attack rolls." };
+            yield return new TextBlock { Id = Guid.Parse("3c514dc4-25c5-4837-9ad9-d87735d5027e"), Type = TextBlockType.Text, Text = "You are always prepared for fights that frequently disrupt seemingly peaceful times. When you use an improvised weapon or a shoddy weapon, you don't take the -2 item penalty to attack rolls." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8b7151ea-93ba-4c44-9a50-d932abd121ba"), Type = TextBlockType.Text, Text = "You gain the catharsis activation effects listed for your catharsis emotion. You gain that emotion’s emotional fervor benefits for 3 rounds. When your emotional fervor ends, you suffer the listed emotional fallout. After using Catharsis, you can’t use it again until you use the (feat: Settle Emotions) activity." };
+            yield return new TextBlock { Id = Guid.Parse("8b7151ea-93ba-4c44-9a50-d932abd121ba"), Type = TextBlockType.Text, Text = "You gain the catharsis activation effects listed for your catharsis emotion. You gain that emotion's emotional fervor benefits for 3 rounds. When your emotional fervor ends, you suffer the listed emotional fallout. After using Catharsis, you can't use it again until you use the (feat: Settle Emotions) activity." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

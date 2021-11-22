@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("0390d36a-cce7-4616-a177-867fea818690"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target believes you’re in the designated location and can’t see you in your actual location. The target automatically disbelieves the illusion when you use an action that doesn’t make sense in the illusion’s position, or if the target attacks, touches, Seeks, or otherwise engages with the illusion. If you use a hostile action against the target, the spell ends.",
+                Success = "The target believes you're in the designated location and can't see you in your actual location. The target automatically disbelieves the illusion when you use an action that doesn't make sense in the illusion's position, or if the target attacks, touches, Seeks, or otherwise engages with the illusion. If you use a hostile action against the target, the spell ends.",
                 Failure = "As success, but the target must succeed at a Will save to disbelieve the illusion when one of the listed events occurs.",
                 CriticalFailure = "As success, but the target must critically succeed at a Will save to disbelieve when one of the listed events occurs."
             };

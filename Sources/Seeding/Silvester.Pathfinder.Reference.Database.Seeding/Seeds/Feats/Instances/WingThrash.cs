@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("00e203ee-e4da-4c70-9770-0f49cf3ffefa"), Type = TextBlockType.Text, Text = "The bat thrashes wildly with its wings, making wing (action: Strikes | Strike) against up to three adjacent foes. Each attack counts toward the bat’s multiple attack penalty, but the penalty only increases after all the attacks have been made." };
+            yield return new TextBlock { Id = Guid.Parse("00e203ee-e4da-4c70-9770-0f49cf3ffefa"), Type = TextBlockType.Text, Text = "The bat thrashes wildly with its wings, making wing (action: Strikes | Strike) against up to three adjacent foes. Each attack counts toward the bat's multiple attack penalty, but the penalty only increases after all the attacks have been made." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

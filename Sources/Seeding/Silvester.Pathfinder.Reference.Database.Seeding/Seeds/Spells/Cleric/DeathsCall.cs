@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("07eddc65-7da8-45f3-b294-72069a9abbea"), Type = TextBlockType.Text, Text = "Seeing another pass from this world to the next invigorates you. You gain temporary Hit Points equal to the triggering creature’s level plus your spellcasting ability modifier. If the triggering creature was undead, double the number of temporary Hit Points you gain . These last for the duration of the spell, and the spell ends if all the temporary Hit Points are depleted earlier." };
+            yield return new TextBlock { Id = Guid.Parse("07eddc65-7da8-45f3-b294-72069a9abbea"), Type = TextBlockType.Text, Text = "Seeing another pass from this world to the next invigorates you. You gain temporary Hit Points equal to the triggering creature's level plus your spellcasting ability modifier. If the triggering creature was undead, double the number of temporary Hit Points you gain . These last for the duration of the spell, and the spell ends if all the temporary Hit Points are depleted earlier." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

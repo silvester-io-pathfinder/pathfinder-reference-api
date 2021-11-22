@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("267b0a28-8640-4674-bc36-137ffbc5b33e"), Type = TextBlockType.Text, Text = "Whether keeping your balance or scrambling up a tricky climb, your hairy, calloused feet easily find purchase. If you roll a success on an Acrobatics check to (Action: Balance) or an Athletics check to (Action: Climb), you get a critical success instead. You’re not flat-footed when you attempt to (Action: Balance) or (Action: Climb)." };
+            yield return new TextBlock { Id = Guid.Parse("267b0a28-8640-4674-bc36-137ffbc5b33e"), Type = TextBlockType.Text, Text = "Whether keeping your balance or scrambling up a tricky climb, your hairy, calloused feet easily find purchase. If you roll a success on an Acrobatics check to (Action: Balance) or an Athletics check to (Action: Climb), you get a critical success instead. You're not flat-footed when you attempt to (Action: Balance) or (Action: Climb)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

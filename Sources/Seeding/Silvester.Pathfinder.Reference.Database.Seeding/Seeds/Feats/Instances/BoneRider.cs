@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3205b4bc-d639-4d50-b648-629cc4b5baec"), Type = TextBlockType.Text, Text = "Using your ancestors’ bones, you manifest their spirits around you in a fossilized form, terrifying your foes. You can cast (spell: mask of terror) on yourself as a primal innate spell once per day. When you do, you appear as a skeletal lizardfolk ancestor, twisted in a way that inspires the deepest fears of those who observe you." };
+            yield return new TextBlock { Id = Guid.Parse("3205b4bc-d639-4d50-b648-629cc4b5baec"), Type = TextBlockType.Text, Text = "Using your ancestors' bones, you manifest their spirits around you in a fossilized form, terrifying your foes. You can cast (spell: mask of terror) on yourself as a primal innate spell once per day. When you do, you appear as a skeletal lizardfolk ancestor, twisted in a way that inspires the deepest fears of those who observe you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

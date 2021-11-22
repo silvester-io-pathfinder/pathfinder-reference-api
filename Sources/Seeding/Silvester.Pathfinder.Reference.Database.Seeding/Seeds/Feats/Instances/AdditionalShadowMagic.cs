@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ded760d2-0c5e-4505-97b0-6123f88ff80a"), Type = TextBlockType.Text, Text = "Choose an additional shadowcaster focus spell you haven’t already selected from (feat: Shadow Magic). Increase the number of Focus Points in your pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("ded760d2-0c5e-4505-97b0-6123f88ff80a"), Type = TextBlockType.Text, Text = "Choose an additional shadowcaster focus spell you haven't already selected from (feat: Shadow Magic). Increase the number of Focus Points in your pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

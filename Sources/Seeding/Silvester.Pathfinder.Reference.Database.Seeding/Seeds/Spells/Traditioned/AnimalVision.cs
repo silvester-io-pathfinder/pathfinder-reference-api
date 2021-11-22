@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c34b4717-1df9-49f9-9da9-2f91e2891167"), Type = Utilities.Text.TextBlockType.Text, Text = "You tap into the target’s senses, allowing you to see, hear, and otherwise sense whatever it senses for the spell’s duration.If the target wishes to prevent you from doing so, it can attempt a Will save, negating the spell on a success, but most animals don’t bother to do so.While tapping into the target’s senses, you can’t use your own body’s senses, but you can change back and forth from your body’s senses to the target’s senses using a single action, which has the concentrate trait." };
+            yield return new TextBlock { Id = Guid.Parse("c34b4717-1df9-49f9-9da9-2f91e2891167"), Type = Utilities.Text.TextBlockType.Text, Text = "You tap into the target's senses, allowing you to see, hear, and otherwise sense whatever it senses for the spell's duration.If the target wishes to prevent you from doing so, it can attempt a Will save, negating the spell on a success, but most animals don't bother to do so.While tapping into the target's senses, you can't use your own body's senses, but you can change back and forth from your body's senses to the target's senses using a single action, which has the concentrate trait." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

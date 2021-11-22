@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0cb91f4b-39b3-4eff-bbca-bf304ea89a20"), Type = TextBlockType.Text, Text = "You create a single magical hand, either invisible or ghostlike, that grasps the target object and moves it slowly up to 20 feet. Because you’re levitating the object, you can move it in any direction. When you Sustain the Spell, you can move the object an additional 20 feet. If the object is in the air when the spell ends, the object falls." };
+            yield return new TextBlock { Id = Guid.Parse("0cb91f4b-39b3-4eff-bbca-bf304ea89a20"), Type = TextBlockType.Text, Text = "You create a single magical hand, either invisible or ghostlike, that grasps the target object and moves it slowly up to 20 feet. Because you're levitating the object, you can move it in any direction. When you Sustain the Spell, you can move the object an additional 20 feet. If the object is in the air when the spell ends, the object falls." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

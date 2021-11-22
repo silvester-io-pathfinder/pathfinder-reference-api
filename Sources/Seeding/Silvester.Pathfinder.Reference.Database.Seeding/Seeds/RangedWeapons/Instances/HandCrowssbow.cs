@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.RangedWeapons.In
             {
                 Id = ID,
                 Name = "Hand Crowssbow",
-                Description = "Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It’s small enough to be shot one-handed, but it still requires two hands to load.",
+                Description = "Sometimes referred to as an alley bow by rogues or ruffians, this small crossbow fires small bolts that are sometimes used to deliver poison to the target. It's small enough to be shot one-handed, but it still requires two hands to load.",
                 Range = 60,
                 Reload = 1,
                 Price = 300,

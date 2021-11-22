@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("11ed00bf-2905-47ca-906b-3fa1e22af94b"), Type = TextBlockType.Text, Text = "You mix flecks of precious materials you’ve gathered on your journeys into your custom bullets to bring out those properties in your temporary ammunition. You can use advanced alchemy to create standard-grade adamantine, cold iron, or silver ammunition, spending 1 batch of reagents per piece of ammunition. At 15th level, you can create high-grade adamantine, cold iron, or silver ammunition." };
+            yield return new TextBlock { Id = Guid.Parse("11ed00bf-2905-47ca-906b-3fa1e22af94b"), Type = TextBlockType.Text, Text = "You mix flecks of precious materials you've gathered on your journeys into your custom bullets to bring out those properties in your temporary ammunition. You can use advanced alchemy to create standard-grade adamantine, cold iron, or silver ammunition, spending 1 batch of reagents per piece of ammunition. At 15th level, you can create high-grade adamantine, cold iron, or silver ammunition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f65d68b8-a385-4b6b-8f8d-07f313e4daf6"), Type = TextBlockType.Text, Text = "Once you’ve had a moment to set your stance, you always have your shield ready without a thought. While you are in this stance, you constantly have your shield raised as if you’d used the (Action: Raise a Shield) action, as long as you meet that action’s requirements." };
+            yield return new TextBlock { Id = Guid.Parse("f65d68b8-a385-4b6b-8f8d-07f313e4daf6"), Type = TextBlockType.Text, Text = "Once you've had a moment to set your stance, you always have your shield ready without a thought. While you are in this stance, you constantly have your shield raised as if you'd used the (Action: Raise a Shield) action, as long as you meet that action's requirements." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

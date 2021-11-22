@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cb98efea-6850-4234-857e-8599797d33a8"), Type = TextBlockType.Text, Text = "~ Access: elite member of the Poison Maker’s Guild" };
+            yield return new TextBlock { Id = Guid.Parse("cb98efea-6850-4234-857e-8599797d33a8"), Type = TextBlockType.Text, Text = "~ Access: elite member of the Poison Maker's Guild" };
             yield return new TextBlock { Id = Guid.Parse("422bee14-f500-4c03-a12f-0e6ee1f900b4"), Type = TextBlockType.Text, Text = "Your poisons are devastatingly potent. When you apply a simple poison with (feat: Poison Weapon), the poison deals 4d4 poison damage instead of 1d4 poison damage. When you apply an injury poison to your weapon, the DC to resist that poison increases by 2, to a maximum of your class DC." };
         }
 

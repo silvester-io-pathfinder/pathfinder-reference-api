@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = ID,
                 Name = "Battlefield Persistence",
                 Level = 3,
-                Trigger = "You are about to attempt a saving throw, but you haven’t rolled yet.",
+                Trigger = "You are about to attempt a saving throw, but you haven't rolled yet.",
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 ClassId = Classes.Instances.Oracle.ID,
                 SpellTypeId = SpellTypes.Instances.Focus.ID,
@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e235e8e0-1909-4c19-83bb-42345cc9b8a6"), Type = TextBlockType.Text, Text = "You’re difficult to remove from battle. You gain a +2 status bonus to the triggering save, and if the triggering save is against an incapacitation effect, it treats you as if you were 2 levels higher." };
+            yield return new TextBlock { Id = Guid.Parse("e235e8e0-1909-4c19-83bb-42345cc9b8a6"), Type = TextBlockType.Text, Text = "You're difficult to remove from battle. You gain a +2 status bonus to the triggering save, and if the triggering save is against an incapacitation effect, it treats you as if you were 2 levels higher." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

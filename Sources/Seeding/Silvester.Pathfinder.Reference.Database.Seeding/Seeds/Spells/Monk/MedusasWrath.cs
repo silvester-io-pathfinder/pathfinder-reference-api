@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dd628605-b20e-4f1a-8e3b-eeae23e07f95"), Type = TextBlockType.Text, Text = "You make an attack filled with a medusa’s petrifying power. Make an unarmed Strike with the following additional effects." };
+            yield return new TextBlock { Id = Guid.Parse("dd628605-b20e-4f1a-8e3b-eeae23e07f95"), Type = TextBlockType.Text, Text = "You make an attack filled with a medusa's petrifying power. Make an unarmed Strike with the following additional effects." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -33,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new RollableEffect
             {
                 Id = Guid.Parse("17932042-701a-4d9e-a3f9-951982d7c114"),
-                CriticalSuccess = "The target is slowed 2 and must attempt a Fortitude save at the end of each of its turns; this ongoing save has the incapacitation trait. On a failed save, the slowed condition increases by 1 (2 on a critical failure). A successful save reduces the slowed condition by 1. When a creature is unable to act due to the slowed condition from medusa’s wrath, it is petrified permanently. The spell ends if the creature is petrified or the slowed condition is removed.",
+                CriticalSuccess = "The target is slowed 2 and must attempt a Fortitude save at the end of each of its turns; this ongoing save has the incapacitation trait. On a failed save, the slowed condition increases by 1 (2 on a critical failure). A successful save reduces the slowed condition by 1. When a creature is unable to act due to the slowed condition from medusa's wrath, it is petrified permanently. The spell ends if the creature is petrified or the slowed condition is removed.",
                 Success = "As critical success, but the target is initially slowed 1.",
             };
         }

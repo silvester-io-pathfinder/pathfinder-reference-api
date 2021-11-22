@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("500a614e-f72b-4e99-a90a-1252f34979a5"), Type = TextBlockType.Text, Text = "Your unwavering soul brings up your defenses as soon as you’re in danger. You (feat: Manifest your Soulforged Armament |Manifest Soulforged Armament)." };
+            yield return new TextBlock { Id = Guid.Parse("500a614e-f72b-4e99-a90a-1252f34979a5"), Type = TextBlockType.Text, Text = "Your unwavering soul brings up your defenses as soon as you're in danger. You (feat: Manifest your Soulforged Armament |Manifest Soulforged Armament)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

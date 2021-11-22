@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("b345a297-fc5b-4f60-bc6d-d9131d20ff79"), Type = TextBlockType.Text, Text = "You’re able to bounce back from injuries easily due to an exceptionally thick skull, cartilaginous bones, or some other mixed blessing. You gain 10 Hit Points from your ancestry instead of 6. When you fall, reduce the falling damage you take as though you had fallen half the distance." };
+            yield return new TextBlock { Id = Guid.Parse("b345a297-fc5b-4f60-bc6d-d9131d20ff79"), Type = TextBlockType.Text, Text = "You're able to bounce back from injuries easily due to an exceptionally thick skull, cartilaginous bones, or some other mixed blessing. You gain 10 Hit Points from your ancestry instead of 6. When you fall, reduce the falling damage you take as though you had fallen half the distance." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Artifacts.Instan
             {
                 Id = ID,
                 Name = "Horns of Naraga",
-                Destruction = "The helm is utterly obliterated if crushed between the jaws of an ancient black dragon’s skull located in a desert while the sun is at its zenith.",
+                Destruction = "The helm is utterly obliterated if crushed between the jaws of an ancient black dragon's skull located in a desert while the sun is at its zenith.",
                 Usage = "Worn headwear.",
                 ItemLevel = 26,
                 BulkId = Bulks.Instances.TwoBulk.ID
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Artifacts.Instan
                 ActionTypeId = ActionTypes.Instances.ThreeActions.ID,
                 Effects = new[]
                 {
-                    new TextBlock { Id = Guid.Parse("97a22ccf-affe-470e-ab0b-2c373d3dff8e"), Type = TextBlockType.Text, Text = "The Horns of Naraga transform into Naraga, an ancient black dragon. Naraga appears in an adjacent appropriate space, and if no such space is available, she does not appear. Naraga follows your commands without question. She remains for up to 1 hour or until you use an Interact action to dismiss her, after which she reverts back to the helm. If Naraga is slain, she immediately reverts back to the helm and can’t be summoned for 1 week. You don’t receive any of the helm’s other benefits while it is transformed." }
+                    new TextBlock { Id = Guid.Parse("97a22ccf-affe-470e-ab0b-2c373d3dff8e"), Type = TextBlockType.Text, Text = "The Horns of Naraga transform into Naraga, an ancient black dragon. Naraga appears in an adjacent appropriate space, and if no such space is available, she does not appear. Naraga follows your commands without question. She remains for up to 1 hour or until you use an Interact action to dismiss her, after which she reverts back to the helm. If Naraga is slain, she immediately reverts back to the helm and can't be summoned for 1 week. You don't receive any of the helm's other benefits while it is transformed." }
                 }
             };
         }

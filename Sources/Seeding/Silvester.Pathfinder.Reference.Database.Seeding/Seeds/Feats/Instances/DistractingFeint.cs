@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5b44e6b0-f772-4c69-a7f3-a8a6c8979404"), Type = TextBlockType.Text, Text = "Your (action: Feints | Feint) are far more distracting than normal, drawing your foes’ attention and allowing you and your allies to take greater advantage. While a creature is flat-footed by your (action: Feint), it also takes a -2 circumstance penalty to Perception checks and Reflex saves." };
+            yield return new TextBlock { Id = Guid.Parse("5b44e6b0-f772-4c69-a7f3-a8a6c8979404"), Type = TextBlockType.Text, Text = "Your (action: Feints | Feint) are far more distracting than normal, drawing your foes' attention and allowing you and your allies to take greater advantage. While a creature is flat-footed by your (action: Feint), it also takes a -2 circumstance penalty to Perception checks and Reflex saves." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

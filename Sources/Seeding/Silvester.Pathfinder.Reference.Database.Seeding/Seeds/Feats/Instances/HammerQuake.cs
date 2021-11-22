@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("69dbe357-6aa9-4594-b69b-bb7542a47c87"), Type = TextBlockType.Text, Text = "You smash the ground with your weapon, knocking nearby creatures to the ground. Choose a square within your reach, including your own space. If there’s a foe in the chosen square, (action: Strike) that foe with the required weapon. Then attempt to (action: Trip) every foe in the chosen square plus each square adjacent to that square, ignoring (action: Trip)’s requirement that you have a hand free. This counts as three attacks toward your multiple attack penalty, but the penalty doesn’t increase until after you’ve made the (action: Strike), if any, and all the (action: Trip) attempts." };
+            yield return new TextBlock { Id = Guid.Parse("69dbe357-6aa9-4594-b69b-bb7542a47c87"), Type = TextBlockType.Text, Text = "You smash the ground with your weapon, knocking nearby creatures to the ground. Choose a square within your reach, including your own space. If there's a foe in the chosen square, (action: Strike) that foe with the required weapon. Then attempt to (action: Trip) every foe in the chosen square plus each square adjacent to that square, ignoring (action: Trip)'s requirement that you have a hand free. This counts as three attacks toward your multiple attack penalty, but the penalty doesn't increase until after you've made the (action: Strike), if any, and all the (action: Trip) attempts." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

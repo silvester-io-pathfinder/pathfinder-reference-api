@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13fbb39b-77d5-41bd-bdba-9bbcd8dc4308"), Type = TextBlockType.Text, Text = "You attempt to get a creature to do as you wish by threatening them with your knowledge of their true name. You must know and speak the creature’s true name and say what you want the creature to do. Attempt an Intimidation check against the target’s Will DC." };
+            yield return new TextBlock { Id = Guid.Parse("13fbb39b-77d5-41bd-bdba-9bbcd8dc4308"), Type = TextBlockType.Text, Text = "You attempt to get a creature to do as you wish by threatening them with your knowledge of their true name. You must know and speak the creature's true name and say what you want the creature to do. Attempt an Intimidation check against the target's Will DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
@@ -55,10 +55,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("858514e0-b99f-4ed4-9dcf-c7c772de973f"),
-                CriticalSuccess = "The target does as you say out of a sense of self-preservation, and will not harm itself in any way. It becomes unfriendly (if it wasn’t already unfriendly or hostile) but continues to comply for up to 1 day. The target is too scared of you to retaliate or flee, certain you would find them wherever they might go.",
+                CriticalSuccess = "The target does as you say out of a sense of self-preservation, and will not harm itself in any way. It becomes unfriendly (if it wasn't already unfriendly or hostile) but continues to comply for up to 1 day. The target is too scared of you to retaliate or flee, certain you would find them wherever they might go.",
                 Success = "As critical success, but once the target becomes unfriendly, they avoid you and might act against you in an indirect manner, such as alerting your enemies to your location.",
                 Failure = "The target refuses to comply and typically flees your presence to avoid your further use of their true name. If they were not already unfriendly or hostile, they become unfriendly. They avoid you in the future and are likely to take indirect action against you.",
-                CriticalFailure = "The target refuses to comply and becomes hostile, if it wasn’t already. If they perceive you as weak, they might attack you; otherwise, they likely flee to avoid your further use of their true name.", 
+                CriticalFailure = "The target refuses to comply and becomes hostile, if it wasn't already. If they perceive you as weak, they might attack you; otherwise, they likely flee to avoid your further use of their true name.", 
             };
         }
             

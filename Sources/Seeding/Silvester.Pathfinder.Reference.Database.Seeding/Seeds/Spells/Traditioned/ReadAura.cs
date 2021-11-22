@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("3733aa65-fc2f-4a07-838f-ea693b534ff7"), Type = TextBlockType.Text, Text = "You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is magical, and if it is, you learn the school of magic (pages 297–298 of the Core Rulebook)." };
-            yield return new TextBlock { Id = Guid.Parse("d9e2d969-2f03-429e-aa39-73e198a8e0e2"), Type = TextBlockType.Text, Text = "If the object is illusory, you detect this only if the effect’s level is lower than the level of your read aura spell." };
+            yield return new TextBlock { Id = Guid.Parse("d9e2d969-2f03-429e-aa39-73e198a8e0e2"), Type = TextBlockType.Text, Text = "If the object is illusory, you detect this only if the effect's level is lower than the level of your read aura spell." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

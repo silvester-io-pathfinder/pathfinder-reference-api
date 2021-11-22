@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("61a6665c-cd23-443c-ad31-33cd2512c026"), Type = TextBlockType.Text, Text = "~ Access: Vahird ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("9a698d56-42b5-4d79-8a5c-084ada144110"), Type = TextBlockType.Text, Text = "Your ancestors’ defiance of magic and your people’s strictly egalitarian mindset mean that certain forms of magic have little effect on you. When you use your (action: Call on Ancient Blood) reaction against a divine spell and roll a critical failure on the saving throw against that spell, you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("9a698d56-42b5-4d79-8a5c-084ada144110"), Type = TextBlockType.Text, Text = "Your ancestors' defiance of magic and your people's strictly egalitarian mindset mean that certain forms of magic have little effect on you. When you use your (action: Call on Ancient Blood) reaction against a divine spell and roll a critical failure on the saving throw against that spell, you get a failure instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

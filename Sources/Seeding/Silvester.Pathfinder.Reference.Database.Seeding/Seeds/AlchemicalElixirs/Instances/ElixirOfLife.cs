@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalElixir
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("150dac7f-5e0c-461a-91ea-1d6b6cb5fda9"), Text = "Elixirs of life accelerate a living creature’s natural healing processes and immune system. Upon drinking this elixir, you regain the listed number of Hit Points and gain an item bonus to saving throws against diseases and poisons for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("150dac7f-5e0c-461a-91ea-1d6b6cb5fda9"), Text = "Elixirs of life accelerate a living creature's natural healing processes and immune system. Upon drinking this elixir, you regain the listed number of Hit Points and gain an item bonus to saving throws against diseases and poisons for 10 minutes." };
         }
 
         protected override IEnumerable<AlchemicalElixirPotencyBinding> GetPotencies()

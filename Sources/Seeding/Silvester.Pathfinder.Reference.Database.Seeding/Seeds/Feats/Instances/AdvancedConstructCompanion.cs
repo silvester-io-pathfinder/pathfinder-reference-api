@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("257ec1d0-eab6-42df-9511-d58cc4f473f3"), Type = TextBlockType.Text, Text = "You’ve upgraded your construct companion’s power and decision-making ability. It becomes an advanced construct companion (G&amp;G pg. 33). During an encounter, even if you don’t use the (action: Command a Minion | Command an Animal) action, your construct companion can still use 1 action on your turn that round to (action: Stride) or (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("257ec1d0-eab6-42df-9511-d58cc4f473f3"), Type = TextBlockType.Text, Text = "You've upgraded your construct companion's power and decision-making ability. It becomes an advanced construct companion (G&amp;G pg. 33). During an encounter, even if you don't use the (action: Command a Minion | Command an Animal) action, your construct companion can still use 1 action on your turn that round to (action: Stride) or (action: Strike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

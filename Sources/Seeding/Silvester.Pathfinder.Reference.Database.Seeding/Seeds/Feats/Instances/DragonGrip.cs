@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5de44fb5-545e-4178-bed3-c545b58c1b2d"), Type = TextBlockType.Text, Text = "Your hold has a unique draconic connection. You gain a +2 circumstance bonus when you attempt to (action: Make an Impression) on a creature with the (trait: dragon) trait. You gain access to the Riding Drake animal companion (Advanced Player’s Guide 145)." };
+            yield return new TextBlock { Id = Guid.Parse("5de44fb5-545e-4178-bed3-c545b58c1b2d"), Type = TextBlockType.Text, Text = "Your hold has a unique draconic connection. You gain a +2 circumstance bonus when you attempt to (action: Make an Impression) on a creature with the (trait: dragon) trait. You gain access to the Riding Drake animal companion (Advanced Player's Guide 145)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

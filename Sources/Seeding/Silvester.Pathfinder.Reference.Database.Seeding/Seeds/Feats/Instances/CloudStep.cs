@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8f7e362b-8a30-406d-9ddd-84f3e1e2ac07"), Type = TextBlockType.Text, Text = "Using fantastic acrobatic skill, you can walk for brief stretches across insubstantial surfaces. When you (action: Stride), you can move across water, air, and solid surfaces that can hold only limited weight as if they were normal ground. If you (action: Stride) over a trap with a weight-sensitive pressure plate, you don’t trigger it. At the end of your turn, you sink, fall, break fragile surfaces, or trigger traps as normal for your current location." };
+            yield return new TextBlock { Id = Guid.Parse("8f7e362b-8a30-406d-9ddd-84f3e1e2ac07"), Type = TextBlockType.Text, Text = "Using fantastic acrobatic skill, you can walk for brief stretches across insubstantial surfaces. When you (action: Stride), you can move across water, air, and solid surfaces that can hold only limited weight as if they were normal ground. If you (action: Stride) over a trap with a weight-sensitive pressure plate, you don't trigger it. At the end of your turn, you sink, fall, break fragile surfaces, or trigger traps as normal for your current location." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

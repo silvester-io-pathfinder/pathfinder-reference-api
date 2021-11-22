@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5db808de-5a39-423b-ba71-00081a7c77b4"), Type = TextBlockType.Text, Text = "You have learned to remain hidden by using larger folk as a distraction to avoid drawing attention to yourself. You can use creatures that are at least one size larger than you (usually Medium or larger) as cover for the (Action: Hide) and (Action: Sneak) actions, though you still can’t use such creatures as cover for other uses, such as the (Action: Take Cover) action." };
+            yield return new TextBlock { Id = Guid.Parse("5db808de-5a39-423b-ba71-00081a7c77b4"), Type = TextBlockType.Text, Text = "You have learned to remain hidden by using larger folk as a distraction to avoid drawing attention to yourself. You can use creatures that are at least one size larger than you (usually Medium or larger) as cover for the (Action: Hide) and (Action: Sneak) actions, though you still can't use such creatures as cover for other uses, such as the (Action: Take Cover) action." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

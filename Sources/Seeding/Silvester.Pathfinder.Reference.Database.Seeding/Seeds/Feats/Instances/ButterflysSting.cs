@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("49f3b266-9e64-4590-b8f2-d9860082b6a9"), Type = TextBlockType.Text, Text = "You gain the sneak attack class feature. You don&#39;t increase the number of dice as you gain levels." };
+            yield return new TextBlock { Id = Guid.Parse("49f3b266-9e64-4590-b8f2-d9860082b6a9"), Type = TextBlockType.Text, Text = "You gain the sneak attack class feature. You don't increase the number of dice as you gain levels." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

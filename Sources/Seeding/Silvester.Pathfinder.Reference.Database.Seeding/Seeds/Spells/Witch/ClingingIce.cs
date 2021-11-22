@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d8dbc57-75cb-43cd-b439-c103928f601d"), Type = TextBlockType.Text, Text = "Freezing sleet and heavy snowfall collect on the target’s feet and legs, dealing 1d4 cold damage and other effects depending on its Reflex save. Once this spell ends, the target becomes temporarily immune for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("1d8dbc57-75cb-43cd-b439-c103928f601d"), Type = TextBlockType.Text, Text = "Freezing sleet and heavy snowfall collect on the target's feet and legs, dealing 1d4 cold damage and other effects depending on its Reflex save. Once this spell ends, the target becomes temporarily immune for 1 minute." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

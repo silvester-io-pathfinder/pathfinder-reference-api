@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("09ff458f-92b0-4891-8903-99d80e8f0142"), Type = TextBlockType.Text, Text = "Select one foe that you can see and proclaim a challenge. That foe is your dueling opponent until they are defeated, flee, or the encounter ends. Any time you hit that enemy using a single one-handed melee weapon while your other hand or hands are free, you gain a circumstance bonus to the (action: Strike)’s damage equal to the number of damage dice your weapon deals." };
+            yield return new TextBlock { Id = Guid.Parse("09ff458f-92b0-4891-8903-99d80e8f0142"), Type = TextBlockType.Text, Text = "Select one foe that you can see and proclaim a challenge. That foe is your dueling opponent until they are defeated, flee, or the encounter ends. Any time you hit that enemy using a single one-handed melee weapon while your other hand or hands are free, you gain a circumstance bonus to the (action: Strike)'s damage equal to the number of damage dice your weapon deals." };
             yield return new TextBlock { Id = Guid.Parse("1422ea38-2d36-479f-9cda-cf9ca4b524f0"), Type = TextBlockType.Text, Text = "If you attack a creature other than your dueling opponent, you take a circumstance penalty to damage equal to the number of damage dice your weapon deals." };
         }
 

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9d5a323e-a807-42d1-835d-d70cafbbb5ff"), Type = TextBlockType.Text, Text = "You can move your demesne from place to place, bringing it along wherever your journey takes you. Once per day, you can invoke your demesne and call it forth, in a process that takes 1 minute. This has the effects of (spell: resplendent mansion), except that it conjures forth your demesne from its previous location, with all the benefits of Thaumaturge’s Demesne in addition to the benefits of the spell. You must be able to claim the new area as your demesne, with the same restrictions as Thaumaturge’s Demesne." };
+            yield return new TextBlock { Id = Guid.Parse("9d5a323e-a807-42d1-835d-d70cafbbb5ff"), Type = TextBlockType.Text, Text = "You can move your demesne from place to place, bringing it along wherever your journey takes you. Once per day, you can invoke your demesne and call it forth, in a process that takes 1 minute. This has the effects of (spell: resplendent mansion), except that it conjures forth your demesne from its previous location, with all the benefits of Thaumaturge's Demesne in addition to the benefits of the spell. You must be able to claim the new area as your demesne, with the same restrictions as Thaumaturge's Demesne." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

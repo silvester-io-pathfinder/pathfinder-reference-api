@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("fadaca36-cc55-45ed-871b-ef100f909f2c"), Type = TextBlockType.Text, Text = "~ Access: You are from the Eye of Dread region." };
-            yield return new TextBlock { Id = Guid.Parse("7583f3e0-f2f5-4495-8075-0d84d0a5f318"), Type = TextBlockType.Text, Text = "You’ve sworn yourself as a sentry for the Knights of Lastwall, the first line of defense against incursions by the Whispering Tyrant throughout Golarion. You become trained in Athletics and in Undead Lore; if you were already trained, you become an expert instead. Finally, you gain the (feat: Reactive Shield) feat." };
+            yield return new TextBlock { Id = Guid.Parse("7583f3e0-f2f5-4495-8075-0d84d0a5f318"), Type = TextBlockType.Text, Text = "You've sworn yourself as a sentry for the Knights of Lastwall, the first line of defense against incursions by the Whispering Tyrant throughout Golarion. You become trained in Athletics and in Undead Lore; if you were already trained, you become an expert instead. Finally, you gain the (feat: Reactive Shield) feat." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

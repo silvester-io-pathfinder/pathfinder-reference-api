@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("749c4798-3cb1-405b-b32b-50681b52b0ea"), Type = TextBlockType.Text, Text = "When you successfully (action: Coerce) someone, the maximum time they comply increases to a week, still determined by the GM. If you’re legendary, the maximum increases to a month." };
+            yield return new TextBlock { Id = Guid.Parse("749c4798-3cb1-405b-b32b-50681b52b0ea"), Type = TextBlockType.Text, Text = "When you successfully (action: Coerce) someone, the maximum time they comply increases to a week, still determined by the GM. If you're legendary, the maximum increases to a month." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

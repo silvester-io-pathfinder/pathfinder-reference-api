@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Conditions.Insta
 
         public override IEnumerable<TextBlock> GetConditionDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("672f53e9-c341-4d76-befe-8f2f97c3d693"), Type = Utilities.Text.TextBlockType.Text, Text = "Someone else is making your decisions for you, usually because you’re being commanded or magically dominated. The controller dictates how you act and can make you use any of your actions, including attacks, reactions, or even Delay. The controller usually does not have to spend their own actions when controlling you." };
+            yield return new TextBlock { Id = Guid.Parse("672f53e9-c341-4d76-befe-8f2f97c3d693"), Type = Utilities.Text.TextBlockType.Text, Text = "Someone else is making your decisions for you, usually because you're being commanded or magically dominated. The controller dictates how you act and can make you use any of your actions, including attacks, reactions, or even Delay. The controller usually does not have to spend their own actions when controlling you." };
         }
 
         public override SourcePage? GetSourcePage()

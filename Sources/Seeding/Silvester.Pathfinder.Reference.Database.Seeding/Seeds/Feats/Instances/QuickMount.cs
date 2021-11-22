@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27c346a9-7939-4cd7-af67-dd26e335813d"), Type = TextBlockType.Text, Text = "You and your mount can spring into action at a moment’s notice. You (action: Mount | Mount / Dismount) the creature and (action: Command an Animal) to issue it an order of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("27c346a9-7939-4cd7-af67-dd26e335813d"), Type = TextBlockType.Text, Text = "You and your mount can spring into action at a moment's notice. You (action: Mount | Mount / Dismount) the creature and (action: Command an Animal) to issue it an order of your choice." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("d02a0806-c4e3-49a4-bc01-46da394429e4"), Type = TextBlockType.Text, Text = "~ Access: Mihrini ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("a4f3d524-ca61-461b-9e64-8d4bd828a498"), Type = TextBlockType.Text, Text = "You’ve fiddled with knots, locks, and blacksmith’s puzzles since you were a child to give your hands something to do. You gain the trained proficiency rank in Thievery (or another skill of your choice, if you’re already trained in Thievery). If you roll a success on a Thievery check to (action: Pick a Lock), you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("a4f3d524-ca61-461b-9e64-8d4bd828a498"), Type = TextBlockType.Text, Text = "You've fiddled with knots, locks, and blacksmith's puzzles since you were a child to give your hands something to do. You gain the trained proficiency rank in Thievery (or another skill of your choice, if you're already trained in Thievery). If you roll a success on a Thievery check to (action: Pick a Lock), you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

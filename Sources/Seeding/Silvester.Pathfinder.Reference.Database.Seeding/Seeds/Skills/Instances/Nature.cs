@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances
                 HasArmorCheckPenalty = false,
                 HasRecallKnowledgeAction = true,
                 StatModifierId = Wisdom.ID,
-                Description = "You know about the natural world, and you command and train animals and magical beasts. Even if you’re untrained in Nature, you can use it to Recall Knowledge (page 238)."
+                Description = "You know about the natural world, and you command and train animals and magical beasts. Even if you're untrained in Nature, you can use it to Recall Knowledge (page 238)."
             };
         }
     }

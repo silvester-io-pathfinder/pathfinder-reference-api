@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c40b46bc-9b6c-40dc-9058-04c2e7d9494f"), Type = TextBlockType.Text, Text = "You can put more effort into your (feat: Kobold Breath) to channel greater draconic power, though it takes more out of you. When you use (feat: Kobold Breath), you can increase the damage dice to d8s and increase the area to 60 feet for a line breath weapon or 30 feet for a cone. If you do, you can&#39;t use (feat: Kobold Breath) again for 1 hour." };
+            yield return new TextBlock { Id = Guid.Parse("c40b46bc-9b6c-40dc-9058-04c2e7d9494f"), Type = TextBlockType.Text, Text = "You can put more effort into your (feat: Kobold Breath) to channel greater draconic power, though it takes more out of you. When you use (feat: Kobold Breath), you can increase the damage dice to d8s and increase the area to 60 feet for a line breath weapon or 30 feet for a cone. If you do, you can't use (feat: Kobold Breath) again for 1 hour." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

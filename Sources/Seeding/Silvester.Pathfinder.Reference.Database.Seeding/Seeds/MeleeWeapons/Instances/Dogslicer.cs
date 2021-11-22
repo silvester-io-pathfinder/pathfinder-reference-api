@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Dogslicer",
-                Description = "This short, curved, and crude makeshift blade often has holes drilled into it to reduce its weight. It’s a favored weapon of goblins.",
+                Description = "This short, curved, and crude makeshift blade often has holes drilled into it to reduce its weight. It's a favored weapon of goblins.",
                 Price = 10,
                 Damage = "1d6",
                 Hands = "1",

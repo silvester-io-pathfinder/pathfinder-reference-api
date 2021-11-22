@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e0c6eca0-85f0-4c6d-a1dc-8bdc36c4e7e8"), Type = TextBlockType.Text, Text = "You are so connected with the animal world that you can grant yourself an animal’s features and abilities. You gain the (spell: animal feature) warden spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("e0c6eca0-85f0-4c6d-a1dc-8bdc36c4e7e8"), Type = TextBlockType.Text, Text = "You are so connected with the animal world that you can grant yourself an animal's features and abilities. You gain the (spell: animal feature) warden spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

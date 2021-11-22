@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e9d1e327-da70-4918-9dfa-dab8eff2dfb2"), Type = TextBlockType.Text, Text = "You’ve learned to disperse the crystalline motes coating your body as a haze. You become concealed, though you can’t use this concealment to (action: Hide) or (action: Sneak), as normal for concealment where your position is still obvious. The motes stay within an inch of your skin, move with you, and last for a number of rounds equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("e9d1e327-da70-4918-9dfa-dab8eff2dfb2"), Type = TextBlockType.Text, Text = "You've learned to disperse the crystalline motes coating your body as a haze. You become concealed, though you can't use this concealment to (action: Hide) or (action: Sneak), as normal for concealment where your position is still obvious. The motes stay within an inch of your skin, move with you, and last for a number of rounds equal to half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("66e2d9bc-e155-4b21-9f70-45abe4b69923"), Type = TextBlockType.Text, Text = "Unlike most of your kind, who dismiss goblins as embarrassments or expendable annoyances, you have studied the methodology behind their irresponsible and incomprehensible actions. You gain the (feat: Adopted Ancestry) general feat and must select goblin as the feat’s chosen ancestry. You also gain one 1st-level goblin ancestry feat." };
+            yield return new TextBlock { Id = Guid.Parse("66e2d9bc-e155-4b21-9f70-45abe4b69923"), Type = TextBlockType.Text, Text = "Unlike most of your kind, who dismiss goblins as embarrassments or expendable annoyances, you have studied the methodology behind their irresponsible and incomprehensible actions. You gain the (feat: Adopted Ancestry) general feat and must select goblin as the feat's chosen ancestry. You also gain one 1st-level goblin ancestry feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

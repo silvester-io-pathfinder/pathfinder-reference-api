@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d705015-a469-469f-83b2-9df8795955eb"), Type = TextBlockType.Text, Text = "You dart under the legs of your enemies in combat. You can end a successful (action: Tumble Through) action in a Large or larger enemy’s space. Also, when using the (feat: Step Lively) feat, you can (action: Step) into the triggering enemy’s space. The enemy must have limbs or otherwise leave you enough room for this maneuver, as determined by the GM. For instance, you could share space with a giant or dragon, but not an ooze." };
+            yield return new TextBlock { Id = Guid.Parse("2d705015-a469-469f-83b2-9df8795955eb"), Type = TextBlockType.Text, Text = "You dart under the legs of your enemies in combat. You can end a successful (action: Tumble Through) action in a Large or larger enemy's space. Also, when using the (feat: Step Lively) feat, you can (action: Step) into the triggering enemy's space. The enemy must have limbs or otherwise leave you enough room for this maneuver, as determined by the GM. For instance, you could share space with a giant or dragon, but not an ooze." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

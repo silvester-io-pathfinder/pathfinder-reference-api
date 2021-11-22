@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("35fe1678-79e1-4724-8ea6-9426d6dee58a"), Type = TextBlockType.Text, Text = "~ Access: trained by a current or former member of a House of Perfection" };
-            yield return new TextBlock { Id = Guid.Parse("9d159c45-c27f-42e1-ae3a-ad28594b7c53"), Type = TextBlockType.Text, Text = "Your skill and dedication have set you on a path to master the techniques of Jalmeray&#39;s greatest martial artists: victors of the Challenge of Sky and Heaven. You become trained in either Acrobatics or Occultism. You gain either the (feat: Ki Rush) or (feat: Ki Strike) monk feat, which grants you a ki spell and a focus pool of 1 Focus Point that you can recover using the (action: Refocus) activity as a monk does. If you already have both these feats, you can instead choose a single 1st-level monk feat." };
+            yield return new TextBlock { Id = Guid.Parse("9d159c45-c27f-42e1-ae3a-ad28594b7c53"), Type = TextBlockType.Text, Text = "Your skill and dedication have set you on a path to master the techniques of Jalmeray's greatest martial artists: victors of the Challenge of Sky and Heaven. You become trained in either Acrobatics or Occultism. You gain either the (feat: Ki Rush) or (feat: Ki Strike) monk feat, which grants you a ki spell and a focus pool of 1 Focus Point that you can recover using the (action: Refocus) activity as a monk does. If you already have both these feats, you can instead choose a single 1st-level monk feat." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

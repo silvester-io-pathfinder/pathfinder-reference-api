@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bffb09c1-3b3e-4227-a769-df553bf4ac71"), Type = TextBlockType.Text, Text = "You have a particular elasticity that makes it easy for you to bounce and squish. You gain the trained proficiency rank in Acrobatics (or another skill of your choice, if you were already trained in Acrobatics). You also gain a +2 circumstance bonus to Acrobatics checks to (action: Tumble Through) a foe’s space." };
+            yield return new TextBlock { Id = Guid.Parse("bffb09c1-3b3e-4227-a769-df553bf4ac71"), Type = TextBlockType.Text, Text = "You have a particular elasticity that makes it easy for you to bounce and squish. You gain the trained proficiency rank in Acrobatics (or another skill of your choice, if you were already trained in Acrobatics). You also gain a +2 circumstance bonus to Acrobatics checks to (action: Tumble Through) a foe's space." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

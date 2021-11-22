@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("da084f3a-b3cc-4eb2-896f-ba27001247cc"), Type = TextBlockType.Text, Text = "You use your movements and disguises to make yourself a flickering blur. You become concealed until your next turn. As usual for becoming concealed involving an obvious visual manifestation, you can’t use this concealment to (action: Hide)." };
+            yield return new TextBlock { Id = Guid.Parse("da084f3a-b3cc-4eb2-896f-ba27001247cc"), Type = TextBlockType.Text, Text = "You use your movements and disguises to make yourself a flickering blur. You become concealed until your next turn. As usual for becoming concealed involving an obvious visual manifestation, you can't use this concealment to (action: Hide)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

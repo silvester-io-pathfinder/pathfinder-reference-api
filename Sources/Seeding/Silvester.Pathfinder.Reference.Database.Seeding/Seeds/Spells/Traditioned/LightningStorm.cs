@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("41794c01-bc1b-480f-9b54-6b852bdf60d1"), Type = TextBlockType.Text, Text = "You create a black, rumbling storm cloud and call down one lightning bolt. The bolt is a vertical line from the storm cloud to the ground below, dealing 4d12 electricity damage to creatures in the spell’s area (basic Reflex save). The first time you Sustain the Spell each round, you can call another lightning bolt within the area. If you Cast this Spell outdoors, you can create two non-overlapping clouds instead of one, though you can still call down only one bolt per turn." };
+            yield return new TextBlock { Id = Guid.Parse("41794c01-bc1b-480f-9b54-6b852bdf60d1"), Type = TextBlockType.Text, Text = "You create a black, rumbling storm cloud and call down one lightning bolt. The bolt is a vertical line from the storm cloud to the ground below, dealing 4d12 electricity damage to creatures in the spell's area (basic Reflex save). The first time you Sustain the Spell each round, you can call another lightning bolt within the area. If you Cast this Spell outdoors, you can create two non-overlapping clouds instead of one, though you can still call down only one bolt per turn." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

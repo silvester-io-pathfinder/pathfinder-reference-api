@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a380f87-24ff-4741-a530-4a3d9215ac38"), Type = TextBlockType.Text, Text = "Your spell unwinds the structure of your staff to make it exceptionally long, or even separate it into shards held together by magical power. Make a (feat: Spellstrike) with a staff, with a spell that isn’t a cantrip or focus spell. Increase the staff’s reach by 5 feet &#215; the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("6a380f87-24ff-4741-a530-4a3d9215ac38"), Type = TextBlockType.Text, Text = "Your spell unwinds the structure of your staff to make it exceptionally long, or even separate it into shards held together by magical power. Make a (feat: Spellstrike) with a staff, with a spell that isn't a cantrip or focus spell. Increase the staff's reach by 5 feet &#215; the spell's level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

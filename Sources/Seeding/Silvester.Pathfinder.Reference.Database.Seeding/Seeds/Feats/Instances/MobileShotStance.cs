@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a654703e-ebca-4ac0-95fe-c2a1bf8a8eae"), Type = TextBlockType.Text, Text = "Your shots become nimble and deadly. While you’re in this stance, your ranged (action: Strikes | Strike) don’t trigger (feat: Attacks of Opportunity | Attack of Opportunity) or other reactions that are triggered by a ranged attack." };
-            yield return new TextBlock { Id = Guid.Parse("1654811d-b3bd-4728-b57b-0c0028196b23"), Type = TextBlockType.Text, Text = "If you have (feat: Attack of Opportunity), you can use it with a loaded ranged weapon you’re wielding. The triggering creature must be within 5 feet of you for you to do so." };
+            yield return new TextBlock { Id = Guid.Parse("a654703e-ebca-4ac0-95fe-c2a1bf8a8eae"), Type = TextBlockType.Text, Text = "Your shots become nimble and deadly. While you're in this stance, your ranged (action: Strikes | Strike) don't trigger (feat: Attacks of Opportunity | Attack of Opportunity) or other reactions that are triggered by a ranged attack." };
+            yield return new TextBlock { Id = Guid.Parse("1654811d-b3bd-4728-b57b-0c0028196b23"), Type = TextBlockType.Text, Text = "If you have (feat: Attack of Opportunity), you can use it with a loaded ranged weapon you're wielding. The triggering creature must be within 5 feet of you for you to do so." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

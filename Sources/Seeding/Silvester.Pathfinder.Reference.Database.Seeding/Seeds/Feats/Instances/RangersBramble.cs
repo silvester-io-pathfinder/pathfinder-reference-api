@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("38ad45aa-c57c-4b2b-a39a-207dc2374ffa"), Type = TextBlockType.Text, Text = "You can cause plants to grow and trap your foes with thorns. You gain the (spell: ranger’s bramble) warden spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("38ad45aa-c57c-4b2b-a39a-207dc2374ffa"), Type = TextBlockType.Text, Text = "You can cause plants to grow and trap your foes with thorns. You gain the (spell: ranger's bramble) warden spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

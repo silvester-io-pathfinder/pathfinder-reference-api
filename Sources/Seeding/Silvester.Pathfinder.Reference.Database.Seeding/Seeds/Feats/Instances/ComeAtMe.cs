@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec2dc299-470c-4f93-810f-58f80da0c779"), Type = TextBlockType.Text, Text = "You’re a legendary duelist, welcoming all challengers, enabling you to challenge many foes even while other challenges are active. There is no longer a limit to the number of (feat: Pistolero’s Challenges|Pistolero’s Challenge) you can have in effect at one time." };
+            yield return new TextBlock { Id = Guid.Parse("ec2dc299-470c-4f93-810f-58f80da0c779"), Type = TextBlockType.Text, Text = "You're a legendary duelist, welcoming all challengers, enabling you to challenge many foes even while other challenges are active. There is no longer a limit to the number of (feat: Pistolero's Challenges|Pistolero's Challenge) you can have in effect at one time." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

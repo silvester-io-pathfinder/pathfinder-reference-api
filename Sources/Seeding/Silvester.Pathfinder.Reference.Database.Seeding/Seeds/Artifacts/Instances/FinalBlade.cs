@@ -35,7 +35,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Artifacts.Instan
                 ActionTypeId = ActionTypes.Instances.NoAction.ID,
                 Effects = new[]
                 {
-                    new TextBlock { Id = Guid.Parse("b19c23a3-c7ef-4675-a962-33ea95e0e9dd"), Type = TextBlockType.Text, Text = "You execute a creature restrained beneath the blade. The executed creature takes 11d10 slashing damage and must succeed at a DC 45 Fortitude save or be decapitated as though it suffered a critical hit with a natural 20 from a +3 major striking vorpal scythe. The soul of a creature executed with a final blade is trapped, and the creature can’t be returned to life through any means, even a miracle or similar magic. A final blade can hold any number of souls in this way, and they can be released only through a complex ritual known only to the Gray Gardeners or through the destruction of the final blade." }
+                    new TextBlock { Id = Guid.Parse("b19c23a3-c7ef-4675-a962-33ea95e0e9dd"), Type = TextBlockType.Text, Text = "You execute a creature restrained beneath the blade. The executed creature takes 11d10 slashing damage and must succeed at a DC 45 Fortitude save or be decapitated as though it suffered a critical hit with a natural 20 from a +3 major striking vorpal scythe. The soul of a creature executed with a final blade is trapped, and the creature can't be returned to life through any means, even a miracle or similar magic. A final blade can hold any number of souls in this way, and they can be released only through a complex ritual known only to the Gray Gardeners or through the destruction of the final blade." }
                 }
             };
         }

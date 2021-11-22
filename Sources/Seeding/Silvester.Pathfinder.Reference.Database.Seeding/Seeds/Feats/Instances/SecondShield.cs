@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f0f2bf06-bcdc-4ecd-adc0-b863ccf72cb5"), Type = TextBlockType.Text, Text = "You’re used to your shield breaking in the middle of battle, and you’re prepared to use a backup or any convenient nearby object to defend yourself. You can (action: Interact) to draw a shield on your person or an unattended shield within your reach. If there is an object within your reach that could serve as an improvised shield – for example, a table or chair – you can (action: Interact) to draw it with this feat. The GM determines if something can be used as an improvised shield. Your new shield isn’t raised until you use the (action: Raise a Shield) action, as normal." };
+            yield return new TextBlock { Id = Guid.Parse("f0f2bf06-bcdc-4ecd-adc0-b863ccf72cb5"), Type = TextBlockType.Text, Text = "You're used to your shield breaking in the middle of battle, and you're prepared to use a backup or any convenient nearby object to defend yourself. You can (action: Interact) to draw a shield on your person or an unattended shield within your reach. If there is an object within your reach that could serve as an improvised shield – for example, a table or chair – you can (action: Interact) to draw it with this feat. The GM determines if something can be used as an improvised shield. Your new shield isn't raised until you use the (action: Raise a Shield) action, as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

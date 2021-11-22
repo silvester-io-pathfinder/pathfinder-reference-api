@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ca61ddbe-42bf-4bb8-b481-52f708ef5638"), Type = TextBlockType.Text, Text = "You’ve studied in traditional elven arts, learning about arcane magic and the world around you. You gain the trained proficiency rank in Arcana and Nature. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Elven Lore." };
+            yield return new TextBlock { Id = Guid.Parse("ca61ddbe-42bf-4bb8-b481-52f708ef5638"), Type = TextBlockType.Text, Text = "You've studied in traditional elven arts, learning about arcane magic and the world around you. You gain the trained proficiency rank in Arcana and Nature. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Elven Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

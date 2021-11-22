@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e802702-8eb3-4811-8057-d761573d602b"), Type = TextBlockType.Text, Text = "With a complex gesture, you call upon the primal power of your spell to overcome enemies’ resistances. If the next action you use is to (activity: Cast a Spell), the spell ignores an amount of the target’s resistance to acid, cold, electricity, fire, or sonic damage equal to your level. This applies to all damage the spell deals, including persistent damage and damage caused by an ongoing effect of the spell, such as the wall created by (Spell: wall of fire). A creature’s immunities are unaffected." };
+            yield return new TextBlock { Id = Guid.Parse("1e802702-8eb3-4811-8057-d761573d602b"), Type = TextBlockType.Text, Text = "With a complex gesture, you call upon the primal power of your spell to overcome enemies' resistances. If the next action you use is to (activity: Cast a Spell), the spell ignores an amount of the target's resistance to acid, cold, electricity, fire, or sonic damage equal to your level. This applies to all damage the spell deals, including persistent damage and damage caused by an ongoing effect of the spell, such as the wall created by (Spell: wall of fire). A creature's immunities are unaffected." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

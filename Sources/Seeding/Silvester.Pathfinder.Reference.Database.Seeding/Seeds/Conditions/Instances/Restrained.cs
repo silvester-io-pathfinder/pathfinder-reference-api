@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Conditions.Insta
 
         public override IEnumerable<TextBlock> GetConditionDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("39067593-a781-4b58-a74a-175b8458e81e"), Type = Utilities.Text.TextBlockType.Text, Text = "You’re tied up and can barely move, or a creature has you pinned. You have the flat-footed and immobilized conditions, and you can’t use any actions with the attack or manipulate traits except to attempt to Escape or Force Open your bonds. Restrained overrides grabbed." };
+            yield return new TextBlock { Id = Guid.Parse("39067593-a781-4b58-a74a-175b8458e81e"), Type = Utilities.Text.TextBlockType.Text, Text = "You're tied up and can barely move, or a creature has you pinned. You have the flat-footed and immobilized conditions, and you can't use any actions with the attack or manipulate traits except to attempt to Escape or Force Open your bonds. Restrained overrides grabbed." };
         }
 
         public override SourcePage? GetSourcePage()

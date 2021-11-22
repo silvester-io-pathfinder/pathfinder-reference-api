@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79a70ed8-d693-4c9b-8cbb-bc5bf75b8003"), Type = TextBlockType.Text, Text = "Your tongue darts out faster than the eye can see to retrieve loose objects. You (action: Interact) to pick up a single unattended object of light Bulk or less within 10 feet of you. If you don’t have enough hands free to hold the object, it falls to the ground in your space." };
+            yield return new TextBlock { Id = Guid.Parse("79a70ed8-d693-4c9b-8cbb-bc5bf75b8003"), Type = TextBlockType.Text, Text = "Your tongue darts out faster than the eye can see to retrieve loose objects. You (action: Interact) to pick up a single unattended object of light Bulk or less within 10 feet of you. If you don't have enough hands free to hold the object, it falls to the ground in your space." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

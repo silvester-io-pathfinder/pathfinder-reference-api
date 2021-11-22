@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("01636420-c987-4812-a1fb-b13d84b277d8"), Type = TextBlockType.Text, Text = "Natural obstacles pose no obstacle to you. You gain the ranger’s wild stride class feature. This allows you to ignore the effects of all non-magical difficult terrain, treat greater difficult terrain as merely difficult terrain, and gives you an additional benefit from (feat: Favored Terrain) based on the terrain." };
+            yield return new TextBlock { Id = Guid.Parse("01636420-c987-4812-a1fb-b13d84b277d8"), Type = TextBlockType.Text, Text = "Natural obstacles pose no obstacle to you. You gain the ranger's wild stride class feature. This allows you to ignore the effects of all non-magical difficult terrain, treat greater difficult terrain as merely difficult terrain, and gives you an additional benefit from (feat: Favored Terrain) based on the terrain." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

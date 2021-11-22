@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fca60b0c-b2da-4cda-9a08-ef18aee3bafe"), Type = TextBlockType.Text, Text = "You&#39;ve trained yourself to maintain a strong sense of direction at all times, even when you can&#39;t use a (item: compass) or see the sky above. You immediately intuit which direction is north (assuming the concept of north exists at your current location)." };
+            yield return new TextBlock { Id = Guid.Parse("fca60b0c-b2da-4cda-9a08-ef18aee3bafe"), Type = TextBlockType.Text, Text = "You've trained yourself to maintain a strong sense of direction at all times, even when you can't use a (item: compass) or see the sky above. You immediately intuit which direction is north (assuming the concept of north exists at your current location)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

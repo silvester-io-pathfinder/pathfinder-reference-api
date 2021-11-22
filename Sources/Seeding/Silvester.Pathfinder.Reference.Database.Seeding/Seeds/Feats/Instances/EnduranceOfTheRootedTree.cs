@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fcce4234-610d-4f51-b82c-5b4ef39e81a7"), Type = TextBlockType.Text, Text = "Just as the Vale of Aroden retains light and life despite inhospitable surroundings, you can sustain yourself regardless of your environment. You don’t need to eat, drink, or breathe. In addition, you can cast the (spell: wholeness of body) ki spell almost effortlessly. You can cast it as a free action that triggers at the start of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("fcce4234-610d-4f51-b82c-5b4ef39e81a7"), Type = TextBlockType.Text, Text = "Just as the Vale of Aroden retains light and life despite inhospitable surroundings, you can sustain yourself regardless of your environment. You don't need to eat, drink, or breathe. In addition, you can cast the (spell: wholeness of body) ki spell almost effortlessly. You can cast it as a free action that triggers at the start of your turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

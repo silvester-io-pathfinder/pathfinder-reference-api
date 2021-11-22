@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7b24b35b-a0a9-4033-a01a-bc6e4aa331d7"), Type = TextBlockType.Text, Text = "You’ve steeped yourself in magic and gunplay to the extent that you can conjure bullets from thin air, using a rudimentary knowledge of arcane theory to create a temporary piece of ammunition. You gain the (feat: Conjure Bullet) action." };
+            yield return new TextBlock { Id = Guid.Parse("7b24b35b-a0a9-4033-a01a-bc6e4aa331d7"), Type = TextBlockType.Text, Text = "You've steeped yourself in magic and gunplay to the extent that you can conjure bullets from thin air, using a rudimentary knowledge of arcane theory to create a temporary piece of ammunition. You gain the (feat: Conjure Bullet) action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

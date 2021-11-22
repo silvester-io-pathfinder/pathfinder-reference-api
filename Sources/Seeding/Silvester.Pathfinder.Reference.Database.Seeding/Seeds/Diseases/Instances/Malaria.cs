@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
             {
                 Id = ID,
                 Name = "Malaria",
-                Description = "A pernicious disease spread by bloodsucking insects, malaria sometimes enters long periods of dormancy. If you succumb to malaria, you may continue to be periodically affected by the disease, even if you’re cured. You can’t reduce your sickened condition while affected with malaria.",
+                Description = "A pernicious disease spread by bloodsucking insects, malaria sometimes enters long periods of dormancy. If you succumb to malaria, you may continue to be periodically affected by the disease, even if you're cured. You can't reduce your sickened condition while affected with malaria.",
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = 16,
                 Onset = "10 Days"

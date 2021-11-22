@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.WeaponPropertyRu
                 PotencyId = Potencies.Instances.Unclassified.ID,
                 Benefits = new[]
                 {
-                    new TextBlock {Id = Guid.Parse("ba1bd5b1-7d85-499c-9c30-9f4bb7e6a8e4"), Type = TextBlockType.Text, Text = "A spell-storing rune creates a reservoir of eldritch energy within the etched weapon. A spellcaster can spend 1 minute to cast a spell of 3rd level or lower into the weapon. The spell must have a casting of 2 actions or fewer and must be able to target a creature other than the caster. The spell has no immediate effect—it is instead stored for later. When you wield a spell-storing weapon, you immediately know the name and level of the stored spell. A spell-storing weapon found as treasure has a 50% chance of having a spell of the GM’s choice stored in it."},
+                    new TextBlock {Id = Guid.Parse("ba1bd5b1-7d85-499c-9c30-9f4bb7e6a8e4"), Type = TextBlockType.Text, Text = "A spell-storing rune creates a reservoir of eldritch energy within the etched weapon. A spellcaster can spend 1 minute to cast a spell of 3rd level or lower into the weapon. The spell must have a casting of 2 actions or fewer and must be able to target a creature other than the caster. The spell has no immediate effect—it is instead stored for later. When you wield a spell-storing weapon, you immediately know the name and level of the stored spell. A spell-storing weapon found as treasure has a 50% chance of having a spell of the GM's choice stored in it."},
                 },
             };
         }

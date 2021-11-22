@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aa179a5b-34d9-47cf-92f8-b65838d7a178"), Type = TextBlockType.Text, Text = "You steel yourself, preparing to resist oncoming attacks and using your muscles to absorb the impact. You gain the benefits of your iron sweep’s (trait: parry) trait (a +1 circumstance bonus to AC until the start of your next turn) and your resistance from (feat: Ironblood Stance) increases to your Strength modifier (if it’s higher) for the same duration." };
+            yield return new TextBlock { Id = Guid.Parse("aa179a5b-34d9-47cf-92f8-b65838d7a178"), Type = TextBlockType.Text, Text = "You steel yourself, preparing to resist oncoming attacks and using your muscles to absorb the impact. You gain the benefits of your iron sweep's (trait: parry) trait (a +1 circumstance bonus to AC until the start of your next turn) and your resistance from (feat: Ironblood Stance) increases to your Strength modifier (if it's higher) for the same duration." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

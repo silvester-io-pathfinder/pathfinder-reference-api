@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("317d519e-75c2-4cb2-96a3-3ab65926c0af"), Type = TextBlockType.Text, Text = "You create an illusion that causes natural terrain to look, sound, feel, and smell like a different kind of terrain. This doesn’t disguise any structures or creatures in the area." };
+            yield return new TextBlock { Id = Guid.Parse("317d519e-75c2-4cb2-96a3-3ab65926c0af"), Type = TextBlockType.Text, Text = "You create an illusion that causes natural terrain to look, sound, feel, and smell like a different kind of terrain. This doesn't disguise any structures or creatures in the area." };
             yield return new TextBlock { Id = Guid.Parse("74f79956-e3fa-46f2-a76f-61ed5c54d1d6"), Type = TextBlockType.Text, Text = "Any creature that touches the illusion or uses the Seek action to examine it can attempt to disbelieve your illusion." };
         }
 
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "5th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("85192c26-f57a-44f8-b5e8-b2d0eb0906d9"), Type = TextBlockType.Text, Text = "Your image can also disguise structures or create illusory structures (but still doesn’t disguise creatures)." }
+                    new TextBlock { Id = Guid.Parse("85192c26-f57a-44f8-b5e8-b2d0eb0906d9"), Type = TextBlockType.Text, Text = "Your image can also disguise structures or create illusory structures (but still doesn't disguise creatures)." }
                 }
             };
         }

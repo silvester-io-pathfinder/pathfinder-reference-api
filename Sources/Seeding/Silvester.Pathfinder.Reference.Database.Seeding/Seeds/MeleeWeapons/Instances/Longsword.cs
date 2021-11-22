@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Longsword",
-                Description = "Longswords can be one-edged or two‑edged swords. Their blades are heavy and they’re between 3 and 4 feet in length.",
+                Description = "Longswords can be one-edged or two‑edged swords. Their blades are heavy and they're between 3 and 4 feet in length.",
                 Price = 100,
                 Damage = "1d8",
                 Hands = "1",

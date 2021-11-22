@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dc32dcab-bc02-4574-ad05-30a0840eae05"), Type = TextBlockType.Text, Text = "You’ve learned to modify your innovation in order to enhance its capabilities beyond what an ordinary piece of equipment can accomplish. You gain a basic modification of your choice for your innovation. Your innovation must meet any requirements for the modification you choose, as normal." };
+            yield return new TextBlock { Id = Guid.Parse("dc32dcab-bc02-4574-ad05-30a0840eae05"), Type = TextBlockType.Text, Text = "You've learned to modify your innovation in order to enhance its capabilities beyond what an ordinary piece of equipment can accomplish. You gain a basic modification of your choice for your innovation. Your innovation must meet any requirements for the modification you choose, as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

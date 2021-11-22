@@ -38,9 +38,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("ca435a76-e666-4d33-8087-ca973e4cd537"),
                 CriticalSuccess = "The creature is unaffected.",
-                Success = "Calming urges impose a –1 status penalty to the creature’s attack rolls.",
-                Failure = "Any emotion effects that would affect the creature are suppressed and the creature can’t use hostile actions. If the target is subject to hostility from any other creature, it ceases to be affected by calm emotions.",
-                CriticalFailure = "As failure, but hostility doesn’t end the effect."
+                Success = "Calming urges impose a –1 status penalty to the creature's attack rolls.",
+                Failure = "Any emotion effects that would affect the creature are suppressed and the creature can't use hostile actions. If the target is subject to hostility from any other creature, it ceases to be affected by calm emotions.",
+                CriticalFailure = "As failure, but hostility doesn't end the effect."
             };
         }
 

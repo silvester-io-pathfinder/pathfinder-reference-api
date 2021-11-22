@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("720d9cb0-369b-4ba8-b46a-662a5739b59d"), Type = TextBlockType.Text, Text = "You have a powerful connection to the Boneyard and its courts, granting you the ability to travel to and from the Boneyard. You gain (spell: plane shift) as a divine innate spell. You can cast it twice per week. This can be used only to travel to the Boneyard or from the Boneyard to the Material Plane. Due to your unique connection to the Boneyard, your body serves as the focus, and you don&#39;t require a tuning fork." };
+            yield return new TextBlock { Id = Guid.Parse("720d9cb0-369b-4ba8-b46a-662a5739b59d"), Type = TextBlockType.Text, Text = "You have a powerful connection to the Boneyard and its courts, granting you the ability to travel to and from the Boneyard. You gain (spell: plane shift) as a divine innate spell. You can cast it twice per week. This can be used only to travel to the Boneyard or from the Boneyard to the Material Plane. Due to your unique connection to the Boneyard, your body serves as the focus, and you don't require a tuning fork." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

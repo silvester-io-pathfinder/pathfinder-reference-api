@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("21c9d5a8-d2db-415b-9a8f-9634dbc2c0ba"), Type = TextBlockType.Text, Text = "You utter a liberating word of power that frees a creature. You suppress one of the following conditions of your choice: confused, frightened, grabbed, or paralyzed. The target isn’t affected by the chosen condition, and if you suppress the grabbed condition, the target automatically breaks free from any grab affecting it when you Cast the Spell." };
-            yield return new TextBlock { Id = Guid.Parse("0bb480e3-2efa-43f9-87e3-d1d5ab1552a3"), Type = TextBlockType.Text, Text = "If you don’t remove the effect that provided the condition, the condition returns after the spell ends. For example, if a spell was making the target confused for 1 minute, word of freedom would let the target act normally for a round, but the confused condition would return afterward." };
+            yield return new TextBlock { Id = Guid.Parse("21c9d5a8-d2db-415b-9a8f-9634dbc2c0ba"), Type = TextBlockType.Text, Text = "You utter a liberating word of power that frees a creature. You suppress one of the following conditions of your choice: confused, frightened, grabbed, or paralyzed. The target isn't affected by the chosen condition, and if you suppress the grabbed condition, the target automatically breaks free from any grab affecting it when you Cast the Spell." };
+            yield return new TextBlock { Id = Guid.Parse("0bb480e3-2efa-43f9-87e3-d1d5ab1552a3"), Type = TextBlockType.Text, Text = "If you don't remove the effect that provided the condition, the condition returns after the spell ends. For example, if a spell was making the target confused for 1 minute, word of freedom would let the target act normally for a round, but the confused condition would return afterward." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

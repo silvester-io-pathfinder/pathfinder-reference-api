@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d2c4bb75-40b9-4f79-929d-d8e8704b3a9b"), Type = TextBlockType.Text, Text = "You make an assessment informed by your knowledge of how a creature fights. Attempt a check to (action: Recall Knowledge) about a creature. You gain a +1 circumstance bonus to your check if you previously hit the creature with a (action: Strike) this turn. If your check is successful, recharge your (feat: Spellstrike). The subject of your check is temporarily immune to Magus’s Analysis for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("d2c4bb75-40b9-4f79-929d-d8e8704b3a9b"), Type = TextBlockType.Text, Text = "You make an assessment informed by your knowledge of how a creature fights. Attempt a check to (action: Recall Knowledge) about a creature. You gain a +1 circumstance bonus to your check if you previously hit the creature with a (action: Strike) this turn. If your check is successful, recharge your (feat: Spellstrike). The subject of your check is temporarily immune to Magus's Analysis for 1 day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

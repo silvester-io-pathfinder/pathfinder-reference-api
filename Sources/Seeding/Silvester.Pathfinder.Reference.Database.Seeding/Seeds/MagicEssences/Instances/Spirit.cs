@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MagicEssences.In
             {
                 Id = ID,
                 Name = "Spirit",
-                Description = "Also called soul, ethereal essence, or spiritual essence, spirit is an otherworldly building block that makes up a being’s immaterial and immortal self. The spirit travels through the Ethereal Plane and into the Great Beyond after the death of the physical body. The spirit is most easily affected by divine and occult spells. Spirit spells are usually of the divination or necromancy schools."
+                Description = "Also called soul, ethereal essence, or spiritual essence, spirit is an otherworldly building block that makes up a being's immaterial and immortal self. The spirit travels through the Ethereal Plane and into the Great Beyond after the death of the physical body. The spirit is most easily affected by divine and occult spells. Spirit spells are usually of the divination or necromancy schools."
             };
         }
     }

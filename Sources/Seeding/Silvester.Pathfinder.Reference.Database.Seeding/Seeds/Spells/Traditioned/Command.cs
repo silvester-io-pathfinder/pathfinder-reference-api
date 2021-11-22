@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = 1,
                 Range = "30 feet.",
                 Targets = "1 creature.",
-                Duration = "Until the end of the target’s next turn.",
+                Duration = "Until the end of the target's next turn.",
                 IsSavingThrowBasic = false,
                 SavingThrowStatId = SavingThrowStats.Instances.Will.ID,
                 SpellTypeId = SpellTypes.Instances.Spell.ID,
@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eecbd562-747c-437b-8fb7-ede447f95cb2"), Type = Utilities.Text.TextBlockType.Text, Text = "You shout a command that’s hard to ignore. You can command the target to approach you, run away (as if it had the fleeing condition), release what it’s holding, drop prone, or stand in place. It can’t Delay or take any reactions until it has obeyed your command. The effects depend on the target’s Will save." };
+            yield return new TextBlock { Id = Guid.Parse("eecbd562-747c-437b-8fb7-ede447f95cb2"), Type = Utilities.Text.TextBlockType.Text, Text = "You shout a command that's hard to ignore. You can command the target to approach you, run away (as if it had the fleeing condition), release what it's holding, drop prone, or stand in place. It can't Delay or take any reactions until it has obeyed your command. The effects depend on the target's Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

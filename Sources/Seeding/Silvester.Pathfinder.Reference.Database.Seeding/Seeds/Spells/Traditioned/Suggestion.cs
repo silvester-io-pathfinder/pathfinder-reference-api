@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4f31c4c5-2c3a-4b83-b6e8-8c60d9219756"), Type = TextBlockType.Text, Text = "Your honeyed words are difficult for creatures to resist. You suggest a course of action to the target, which must be phrased in such a way as to seem like a logical course of action to the target and can’t be self-destructive or obviously against the target’s self-interest. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("4f31c4c5-2c3a-4b83-b6e8-8c60d9219756"), Type = TextBlockType.Text, Text = "Your honeyed words are difficult for creatures to resist. You suggest a course of action to the target, which must be phrased in such a way as to seem like a logical course of action to the target and can't be self-destructive or obviously against the target's self-interest. The target must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

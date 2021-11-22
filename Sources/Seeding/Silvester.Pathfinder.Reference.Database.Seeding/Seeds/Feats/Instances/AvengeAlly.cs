@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2616b115-2960-4810-a8ab-5e0853aa08ae"), Type = TextBlockType.Text, Text = "Though you know that you will eventually outlive your companions, seeing them at death&#39;s door brings clarity to your attacks. Make a (action: Strike). Roll twice on the attack roll and use the higher result." };
+            yield return new TextBlock { Id = Guid.Parse("2616b115-2960-4810-a8ab-5e0853aa08ae"), Type = TextBlockType.Text, Text = "Though you know that you will eventually outlive your companions, seeing them at death's door brings clarity to your attacks. Make a (action: Strike). Roll twice on the attack roll and use the higher result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

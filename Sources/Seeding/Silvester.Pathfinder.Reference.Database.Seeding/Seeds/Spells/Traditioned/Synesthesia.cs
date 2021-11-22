@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ea9d9b8-8527-4510-8c0e-7bcd8f780ed7"), Type = TextBlockType.Text, Text = "The target’s senses are suddenly rewired in unexpected ways, causing them to process noises as bursts of color, smells as sounds, and so on. This has three effects, and the target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("3ea9d9b8-8527-4510-8c0e-7bcd8f780ed7"), Type = TextBlockType.Text, Text = "The target's senses are suddenly rewired in unexpected ways, causing them to process noises as bursts of color, smells as sounds, and so on. This has three effects, and the target must attempt a Will save." };
             yield return new TextBlock { Id = Guid.Parse("7326260c-2f75-485e-a481-806208e86856"), Type = TextBlockType.Enumeration, Text = "Due to the distraction, the target must succeed at a DC 5 flat check each time it uses a concentrate action, or the action fails and is wasted." };
-            yield return new TextBlock { Id = Guid.Parse("4132f993-15c9-46a8-990a-d258f6e23986"), Type = TextBlockType.Enumeration, Text = "The target’s difficulty processing visual input makes all creatures and objects concealed from it." };
+            yield return new TextBlock { Id = Guid.Parse("4132f993-15c9-46a8-990a-d258f6e23986"), Type = TextBlockType.Enumeration, Text = "The target's difficulty processing visual input makes all creatures and objects concealed from it." };
             yield return new TextBlock { Id = Guid.Parse("85832a0e-4d20-48ac-9b98-9baee0063141"), Type = TextBlockType.Enumeration, Text = "The creature has trouble moving, making it clumsy 3 and giving it a –10-foot status penalty to its Speeds." };
         }
 

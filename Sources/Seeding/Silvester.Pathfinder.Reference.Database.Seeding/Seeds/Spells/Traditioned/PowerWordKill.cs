@@ -27,9 +27,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d6bc5ff8-b0cc-4f79-9186-cf7e5f759bd1"), Type = TextBlockType.Text, Text = "You utter the most powerful arcane word of power. Once targeted, the target is then temporarily immune for 10 minutes. The effect of the spell depends on the target’s level." };
+            yield return new TextBlock { Id = Guid.Parse("d6bc5ff8-b0cc-4f79-9186-cf7e5f759bd1"), Type = TextBlockType.Text, Text = "You utter the most powerful arcane word of power. Once targeted, the target is then temporarily immune for 10 minutes. The effect of the spell depends on the target's level." };
             yield return new TextBlock { Id = Guid.Parse("b25f8da9-db2d-4305-acf9-3b7f0eb81e84"), Type = TextBlockType.Enumeration, Text = "14th or lower - The target dies instantly." };
-            yield return new TextBlock { Id = Guid.Parse("a03b2257-35fd-46f8-b877-092e329dc828"), Type = TextBlockType.Enumeration, Text = "15th - If the target has 50 Hit Points or fewer, it dies instantly; otherwise, it drops to 0 Hit Points and becomes dying 1, or increases its dying condition by 1 if it’s already dying." };
+            yield return new TextBlock { Id = Guid.Parse("a03b2257-35fd-46f8-b877-092e329dc828"), Type = TextBlockType.Enumeration, Text = "15th - If the target has 50 Hit Points or fewer, it dies instantly; otherwise, it drops to 0 Hit Points and becomes dying 1, or increases its dying condition by 1 if it's already dying." };
             yield return new TextBlock { Id = Guid.Parse("94ee3100-fddb-4574-b5bf-a34ba59260c4"), Type = TextBlockType.Enumeration, Text = "16th or higher - The target takes 50 damage; if this brings the target to 0 Hit Points, the target dies instantly." };
         }
 

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c6ccf362-9985-45bb-aa0e-36a73a4dca8a"), Type = TextBlockType.Text, Text = "The erratic teleportation magic you experienced in the Kortos Mounts has taught you a few tricks. You attempt an Athletics check to (action: Shove) the fiend that triggered your champion’s reaction; on a success, the target can’t teleport or summon creatures for 1 minute. On a critical success, the target is also stunned 1 and can’t teleport or summon creatures for 1 hour, and if you are on your home plane and the target is a fiend of level 18 or lower from another plane, it is also banished to its home plane. Your multiple attack penalty doesn’t apply to this attack." };
+            yield return new TextBlock { Id = Guid.Parse("c6ccf362-9985-45bb-aa0e-36a73a4dca8a"), Type = TextBlockType.Text, Text = "The erratic teleportation magic you experienced in the Kortos Mounts has taught you a few tricks. You attempt an Athletics check to (action: Shove) the fiend that triggered your champion's reaction; on a success, the target can't teleport or summon creatures for 1 minute. On a critical success, the target is also stunned 1 and can't teleport or summon creatures for 1 hour, and if you are on your home plane and the target is a fiend of level 18 or lower from another plane, it is also banished to its home plane. Your multiple attack penalty doesn't apply to this attack." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

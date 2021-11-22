@@ -29,12 +29,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dd042479-fe5b-4e9e-82c1-173e2f600023"), Type = TextBlockType.Text, Text = "You’ve sworn to slay evil dragons. Add the following tenet to your code after the others:" };
+            yield return new TextBlock { Id = Guid.Parse("dd042479-fe5b-4e9e-82c1-173e2f600023"), Type = TextBlockType.Text, Text = "You've sworn to slay evil dragons. Add the following tenet to your code after the others:" };
             yield return new TextBlock { Id = Guid.Parse("7a9c2a9a-0ab5-41f2-ac64-553744933661"), Type = TextBlockType.Enumeration, Text = " : You must slay evil dragons you encounter as long as you have a reasonable chance of success." };
             yield return new TextBlock { Id = Guid.Parse("cdcdbf4c-6d03-413b-9555-b1f573c3b309"), Type = TextBlockType.Text, Text = "Your (feat: Retributive Strike) gains a +4 circumstance bonus to damage against an evil dragon, or +6 if you have master proficiency with the weapon you used." };
-            yield return new TextBlock { Id = Guid.Parse("f20b1795-364c-43d4-a342-c79103be437d"), Type = TextBlockType.Text, Text = "Your (feat: Glimpse of Redemption)’s resistance against damage from an evil dragon is 7 + your level." };
+            yield return new TextBlock { Id = Guid.Parse("f20b1795-364c-43d4-a342-c79103be437d"), Type = TextBlockType.Text, Text = "Your (feat: Glimpse of Redemption)'s resistance against damage from an evil dragon is 7 + your level." };
             yield return new TextBlock { Id = Guid.Parse("0d25b02b-fe8f-4fc6-80ae-599569aec6fa"), Type = TextBlockType.Text, Text = "If you use (feat: Liberating Step) triggered by an evil dragon, your ally gains a +4 circumstance bonus to checks granted by your (feat: Liberating Step), and the ally can (action: Step) twice afterward." };
-            yield return new TextBlock { Id = Guid.Parse("2d5d82da-b3a1-42ad-a49f-b6dc30664461"), Type = TextBlockType.Text, Text = "You don’t consider evil dragons to be legitimate authorities, even in nations they rule." };
+            yield return new TextBlock { Id = Guid.Parse("2d5d82da-b3a1-42ad-a49f-b6dc30664461"), Type = TextBlockType.Text, Text = "You don't consider evil dragons to be legitimate authorities, even in nations they rule." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

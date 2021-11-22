@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8180da6b-0c6f-4da5-a819-d11356e95cf4"), Type = TextBlockType.Text, Text = "Your ancestor protects you against those who would bend your will. You roll the triggering save twice and use the better result. If you’re in an encounter when you cast this spell, you immediately roll to change your predominant ancestor." };
+            yield return new TextBlock { Id = Guid.Parse("8180da6b-0c6f-4da5-a819-d11356e95cf4"), Type = TextBlockType.Text, Text = "Your ancestor protects you against those who would bend your will. You roll the triggering save twice and use the better result. If you're in an encounter when you cast this spell, you immediately roll to change your predominant ancestor." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a90611dd-3cf2-4b0c-9fda-a74cc8db8f99"), Type = TextBlockType.Text, Text = "You mime an invisible 10-foot-by-10-foot wall adjacent to you and within your reach. The wall is solid to those creatures that don’t disbelieve it, even incorporeal creatures. You and your allies can voluntarily believe the wall exists to continue to treat it as solid, for instance to climb onto it. A creature that disbelieves the illusion is temporarily immune to your house of imaginary walls for 1 minute. The wall doesn’t block creatures that didn’t see your visual performance, nor does it block objects. The wall has AC 10, Hardness equal to double the spell’s level, and HP equal to quadruple the spell’s level." };
+            yield return new TextBlock { Id = Guid.Parse("a90611dd-3cf2-4b0c-9fda-a74cc8db8f99"), Type = TextBlockType.Text, Text = "You mime an invisible 10-foot-by-10-foot wall adjacent to you and within your reach. The wall is solid to those creatures that don't disbelieve it, even incorporeal creatures. You and your allies can voluntarily believe the wall exists to continue to treat it as solid, for instance to climb onto it. A creature that disbelieves the illusion is temporarily immune to your house of imaginary walls for 1 minute. The wall doesn't block creatures that didn't see your visual performance, nor does it block objects. The wall has AC 10, Hardness equal to double the spell's level, and HP equal to quadruple the spell's level." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

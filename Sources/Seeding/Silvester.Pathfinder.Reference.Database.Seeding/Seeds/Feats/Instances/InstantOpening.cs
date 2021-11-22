@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db037c0b-4c51-4675-a81f-a8e136c77dae"), Type = TextBlockType.Text, Text = "You distract your opponent with a few choice words or a rude gesture. Choose a target within 30 feet. It’s flat-footed against your attacks until the end of your next turn. Depending on the way you describe your distraction, this action gains either the (trait: auditory) or (trait: visual) trait." };
+            yield return new TextBlock { Id = Guid.Parse("db037c0b-4c51-4675-a81f-a8e136c77dae"), Type = TextBlockType.Text, Text = "You distract your opponent with a few choice words or a rude gesture. Choose a target within 30 feet. It's flat-footed against your attacks until the end of your next turn. Depending on the way you describe your distraction, this action gains either the (trait: auditory) or (trait: visual) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

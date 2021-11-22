@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0f977185-d28f-4a73-9004-105f9b710f2a"), Type = TextBlockType.Text, Text = "You enchant a piece of ammunition with the magical essence of a precious material, allowing you to leverage certain creatures’ weaknesses. Choose cold iron or silver; if you shoot the arrow before the end of your turn, it counts as that material. At 14th level, add adamantine to the list of materials you can choose from." };
+            yield return new TextBlock { Id = Guid.Parse("0f977185-d28f-4a73-9004-105f9b710f2a"), Type = TextBlockType.Text, Text = "You enchant a piece of ammunition with the magical essence of a precious material, allowing you to leverage certain creatures' weaknesses. Choose cold iron or silver; if you shoot the arrow before the end of your turn, it counts as that material. At 14th level, add adamantine to the list of materials you can choose from." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

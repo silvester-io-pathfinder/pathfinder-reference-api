@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c974f1b-c9b3-4c29-8652-42229a9b7ea9"), Type = TextBlockType.Text, Text = "You call down four meteors that explode in a fiery blast. Each meteor deals 6d10 bludgeoning damage to any creatures in the 10-foot burst at the center of its area of effect before exploding, dealing 14d6 fire damage to any creatures in its 40-foot burst. The meteors’ central 10-foot bursts can’t overlap, and a creature takes the same amount of fire damage no matter how many overlapping explosions it’s caught in. The saving throw applies to both the bludgeoning and the fire damage." };
+            yield return new TextBlock { Id = Guid.Parse("2c974f1b-c9b3-4c29-8652-42229a9b7ea9"), Type = TextBlockType.Text, Text = "You call down four meteors that explode in a fiery blast. Each meteor deals 6d10 bludgeoning damage to any creatures in the 10-foot burst at the center of its area of effect before exploding, dealing 14d6 fire damage to any creatures in its 40-foot burst. The meteors' central 10-foot bursts can't overlap, and a creature takes the same amount of fire damage no matter how many overlapping explosions it's caught in. The saving throw applies to both the bludgeoning and the fire damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

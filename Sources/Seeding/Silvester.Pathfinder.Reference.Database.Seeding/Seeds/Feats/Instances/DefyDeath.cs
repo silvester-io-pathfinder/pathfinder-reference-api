@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6747a396-d15f-406f-af35-970c56338c95"), Type = TextBlockType.Text, Text = "You’re exceptionally difficult to kill. The DC of your recovery checks is equal to 9 + your dying value, or 8 + your dying value if you have the (feat: Toughness) general feat. In addition, whenever someone returns you to life using magic that would normally leave you debilitated for a week (such as (spell: raise dead) or the resurrect ritual), you don’t suffer that condition." };
+            yield return new TextBlock { Id = Guid.Parse("6747a396-d15f-406f-af35-970c56338c95"), Type = TextBlockType.Text, Text = "You're exceptionally difficult to kill. The DC of your recovery checks is equal to 9 + your dying value, or 8 + your dying value if you have the (feat: Toughness) general feat. In addition, whenever someone returns you to life using magic that would normally leave you debilitated for a week (such as (spell: raise dead) or the resurrect ritual), you don't suffer that condition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

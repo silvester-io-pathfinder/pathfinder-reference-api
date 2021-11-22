@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6e41eee9-1c95-44a6-b1be-7841e8342bba"), Type = TextBlockType.Text, Text = "You use clever tactics to mislead your foes as you sneak away. You (action: Sneak) while leaving a decoy behind. The decoy acts as the spell (spell: mislead), though you aren’t invisible, just undetected. You can continue to concentrate to move your decoy, as with the spell, whether or not you remain hidden throughout the duration. Once you use Perfect Distraction, you need to spend 10 minutes to set up another decoy before you can use it again." };
+            yield return new TextBlock { Id = Guid.Parse("6e41eee9-1c95-44a6-b1be-7841e8342bba"), Type = TextBlockType.Text, Text = "You use clever tactics to mislead your foes as you sneak away. You (action: Sneak) while leaving a decoy behind. The decoy acts as the spell (spell: mislead), though you aren't invisible, just undetected. You can continue to concentrate to move your decoy, as with the spell, whether or not you remain hidden throughout the duration. Once you use Perfect Distraction, you need to spend 10 minutes to set up another decoy before you can use it again." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

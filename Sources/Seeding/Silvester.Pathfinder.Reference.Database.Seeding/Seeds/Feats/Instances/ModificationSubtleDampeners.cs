@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("4e78d8bc-91e8-44d9-9fee-5676f15ae98f"), Type = TextBlockType.Enumeration, Text = "*Subterfuge Suit Only**" };
-            yield return new TextBlock { Id = Guid.Parse("bd302b12-1bba-4207-b512-842b31a27095"), Type = TextBlockType.Text, Text = "You’ve designed your armor to help you blend in and dampen noise slightly. When you send your armor into overdrive, the dampeners increase their effect, improving your Stealth. When under the effects of (action: Overdrive), you gain a +1 circumstance bonus to Stealth checks. If you’re a master in Crafting, this increases to a +2 circumstance bonus." };
+            yield return new TextBlock { Id = Guid.Parse("bd302b12-1bba-4207-b512-842b31a27095"), Type = TextBlockType.Text, Text = "You've designed your armor to help you blend in and dampen noise slightly. When you send your armor into overdrive, the dampeners increase their effect, improving your Stealth. When under the effects of (action: Overdrive), you gain a +1 circumstance bonus to Stealth checks. If you're a master in Crafting, this increases to a +2 circumstance bonus." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

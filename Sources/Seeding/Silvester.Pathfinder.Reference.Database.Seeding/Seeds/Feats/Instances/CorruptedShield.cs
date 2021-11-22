@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d7d4f7e-a19b-4e3f-8bee-1ac179c7a60b"), Type = TextBlockType.Text, Text = "Your shield ally is more than just a spirit of protection— it’s a conduit for deadly divine magic. When you use your shield ally to (feat: Shield Block) a melee unarmed attack or a melee weapon (action: Strike) from an adjacent creature, the attacker takes 1d6 evil or negative damage (your choice). If the attack or (action: Strike) breaks or destroys your shield, double this additional damage." };
+            yield return new TextBlock { Id = Guid.Parse("4d7d4f7e-a19b-4e3f-8bee-1ac179c7a60b"), Type = TextBlockType.Text, Text = "Your shield ally is more than just a spirit of protection— it's a conduit for deadly divine magic. When you use your shield ally to (feat: Shield Block) a melee unarmed attack or a melee weapon (action: Strike) from an adjacent creature, the attacker takes 1d6 evil or negative damage (your choice). If the attack or (action: Strike) breaks or destroys your shield, double this additional damage." };
             yield return new TextBlock { Id = Guid.Parse("16c90dca-5029-4893-9961-b7f9673581dc"), Type = TextBlockType.Text, Text = "The damage the attacker takes increases to 2d6 at 11th level and 3d6 at 16th level." };
         }
 

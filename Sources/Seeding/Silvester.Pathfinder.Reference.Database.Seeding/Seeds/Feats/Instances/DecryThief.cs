@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("463134ea-7f62-43c6-b24c-7a00f5dad066"), Type = TextBlockType.Text, Text = "When you attempt to (action: Demoralize), you can make it harder for the target to flee, in place of the action’s normal effects." };
+            yield return new TextBlock { Id = Guid.Parse("463134ea-7f62-43c6-b24c-7a00f5dad066"), Type = TextBlockType.Text, Text = "When you attempt to (action: Demoralize), you can make it harder for the target to flee, in place of the action's normal effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

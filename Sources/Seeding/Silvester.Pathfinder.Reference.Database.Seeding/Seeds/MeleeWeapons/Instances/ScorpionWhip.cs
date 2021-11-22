@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Scorpion Whip",
-                Description = "A scorpion whip has a series of razor-sharp blades set along its tip. Unlike ordinary whips, a scorpion whip doesn’t have the nonlethal trait, making it deadlier in combat but less effective when the wielder seeks to bring in foes alive.",
+                Description = "A scorpion whip has a series of razor-sharp blades set along its tip. Unlike ordinary whips, a scorpion whip doesn't have the nonlethal trait, making it deadlier in combat but less effective when the wielder seeks to bring in foes alive.",
                 Price = 50,
                 Damage = "1d4",
                 Hands = "1",

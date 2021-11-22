@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("de95fe4c-a212-41aa-8b81-bd18458a0d39"), Type = TextBlockType.Text, Text = "In your mind’s eye, you see a path northward. You immediately know which direction is north (if it exists at your current location)." };
+            yield return new TextBlock { Id = Guid.Parse("de95fe4c-a212-41aa-8b81-bd18458a0d39"), Type = TextBlockType.Text, Text = "In your mind's eye, you see a path northward. You immediately know which direction is north (if it exists at your current location)." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

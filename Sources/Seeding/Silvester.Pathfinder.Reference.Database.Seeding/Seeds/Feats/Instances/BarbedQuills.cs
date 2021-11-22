@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8ccf7d3-5c89-4355-ab8f-d3db302d427d"), Type = TextBlockType.Text, Text = "You break off quills in your attacker’s flesh. You deal 1d8 piercing damage to the triggering creature (basic Reflex save using your class DC or spell DC, whichever is higher.) On a critical failure, the creature also takes 1d4 persistent bleed damage as your quills hook into its flesh. At 3rd level, and every 2 levels thereafter, this damage increases by 1d8 and the persistent piercing damage increases by 1." };
+            yield return new TextBlock { Id = Guid.Parse("f8ccf7d3-5c89-4355-ab8f-d3db302d427d"), Type = TextBlockType.Text, Text = "You break off quills in your attacker's flesh. You deal 1d8 piercing damage to the triggering creature (basic Reflex save using your class DC or spell DC, whichever is higher.) On a critical failure, the creature also takes 1d4 persistent bleed damage as your quills hook into its flesh. At 3rd level, and every 2 levels thereafter, this damage increases by 1d8 and the persistent piercing damage increases by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

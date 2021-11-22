@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b66cd4cc-edc8-4cc1-8b9f-fd3ef4d77139"), Type = TextBlockType.Text, Text = "You launch an insightful quip at a foe, distracting them. Choose a foe within 30 feet and roll a Diplomacy check against the target’s Will DC." };
+            yield return new TextBlock { Id = Guid.Parse("b66cd4cc-edc8-4cc1-8b9f-fd3ef4d77139"), Type = TextBlockType.Text, Text = "You launch an insightful quip at a foe, distracting them. Choose a foe within 30 feet and roll a Diplomacy check against the target's Will DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

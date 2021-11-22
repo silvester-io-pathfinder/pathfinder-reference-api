@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5bb5643e-40c1-4e79-b972-3c67e389620f"), Type = TextBlockType.Text, Text = "You can communicate telepathically with your animal companions within 100 feet. If you’re legendary in Nature, you can communicate telepathically with your animal companions anywhere on the planet." };
+            yield return new TextBlock { Id = Guid.Parse("5bb5643e-40c1-4e79-b972-3c67e389620f"), Type = TextBlockType.Text, Text = "You can communicate telepathically with your animal companions within 100 feet. If you're legendary in Nature, you can communicate telepathically with your animal companions anywhere on the planet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

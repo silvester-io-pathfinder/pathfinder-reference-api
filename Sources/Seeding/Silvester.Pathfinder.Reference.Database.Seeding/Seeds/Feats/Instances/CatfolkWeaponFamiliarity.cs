@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7b0e9a38-a551-4458-a8c6-ffa7ccd5dfbf"), Type = TextBlockType.Text, Text = "You favor weapons that you can use with quick, darting slashes like a cat&#39;s claws. You are trained with the hatchet, kama, kukri, scimitar, and sickle. In addition, you gain access to kama, kukris, and all uncommon catfolk weapons. For you, martial catfolk weapons are simple weapons and advanced catfolk weapons are martial weapons." };
+            yield return new TextBlock { Id = Guid.Parse("7b0e9a38-a551-4458-a8c6-ffa7ccd5dfbf"), Type = TextBlockType.Text, Text = "You favor weapons that you can use with quick, darting slashes like a cat's claws. You are trained with the hatchet, kama, kukri, scimitar, and sickle. In addition, you gain access to kama, kukris, and all uncommon catfolk weapons. For you, martial catfolk weapons are simple weapons and advanced catfolk weapons are martial weapons." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

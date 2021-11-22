@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("166ee52d-3ca8-4599-a304-fdfb71167105"), Type = TextBlockType.Text, Text = "You can attach a talisman using only a bit of glue and some string. You gain the (feat: Rapid Affixture) skill feat, even if you don’t meet the prerequisites. When you use it, you can affix or remove up to four talismans in 1 minute instead of just one." };
+            yield return new TextBlock { Id = Guid.Parse("166ee52d-3ca8-4599-a304-fdfb71167105"), Type = TextBlockType.Text, Text = "You can attach a talisman using only a bit of glue and some string. You gain the (feat: Rapid Affixture) skill feat, even if you don't meet the prerequisites. When you use it, you can affix or remove up to four talismans in 1 minute instead of just one." };
             yield return new TextBlock { Id = Guid.Parse("905c2edf-c54d-48c5-ad77-1f14324c0217"), Type = TextBlockType.Text, Text = "You gain the ability to (action: Affix a Talisman) as a 3-action activity from that feat at 12th level, regardless of your Crafting proficiency." };
         }
 

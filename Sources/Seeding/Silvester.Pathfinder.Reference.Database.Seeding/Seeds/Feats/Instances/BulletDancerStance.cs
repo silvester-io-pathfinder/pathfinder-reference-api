@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("da992990-02ff-471f-8e80-a9685103d509"), Type = TextBlockType.Text, Text = "You enter a specialized stance for a unique martial art centered around the use of simple firearms. While in this stance, the only (action: Strikes|Strike) you can make are those using bayonets, reinforced stocks, and simple firearms. You can use (feat: Flurry of Blows) with these weapons. You can use your other monk feats or monk abilities that normally require unarmed attacks with bayonets and reinforced stocks, so long as the feat or ability doesn’t require a single, specific (action: Strike). You can also use them with simple firearms when attacking within half the first range increment." };
+            yield return new TextBlock { Id = Guid.Parse("da992990-02ff-471f-8e80-a9685103d509"), Type = TextBlockType.Text, Text = "You enter a specialized stance for a unique martial art centered around the use of simple firearms. While in this stance, the only (action: Strikes|Strike) you can make are those using bayonets, reinforced stocks, and simple firearms. You can use (feat: Flurry of Blows) with these weapons. You can use your other monk feats or monk abilities that normally require unarmed attacks with bayonets and reinforced stocks, so long as the feat or ability doesn't require a single, specific (action: Strike). You can also use them with simple firearms when attacking within half the first range increment." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a213e9f6-a6f3-4134-9889-b0a71e6da2ca"), Type = TextBlockType.Text, Text = "When you are climbing a wooden surface and have a (item: hatchet) or (item: battle axe) in each hand, you have a climb Speed equal to half your normal Speed. You must still have both legs available to climb and can’t use either of the axes in combat while climbing. This feat can also be used to climb a surface of ice if you have a (item: light pick) in each hand." };
+            yield return new TextBlock { Id = Guid.Parse("a213e9f6-a6f3-4134-9889-b0a71e6da2ca"), Type = TextBlockType.Text, Text = "When you are climbing a wooden surface and have a (item: hatchet) or (item: battle axe) in each hand, you have a climb Speed equal to half your normal Speed. You must still have both legs available to climb and can't use either of the axes in combat while climbing. This feat can also be used to climb a surface of ice if you have a (item: light pick) in each hand." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

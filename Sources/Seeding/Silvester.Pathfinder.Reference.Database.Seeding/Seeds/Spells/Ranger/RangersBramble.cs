@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ade21048-8486-494e-9484-a769e6747031"), Type = TextBlockType.Text, Text = "You cause plants in the area to entangle your foes, with the effects of entangle. A creature that critically fails the save takes 2d4 persistent bleed damage in addition to being immobilized. Escaping your bramble doesn’t end the bleed damage." };
+            yield return new TextBlock { Id = Guid.Parse("ade21048-8486-494e-9484-a769e6747031"), Type = TextBlockType.Text, Text = "You cause plants in the area to entangle your foes, with the effects of entangle. A creature that critically fails the save takes 2d4 persistent bleed damage in addition to being immobilized. Escaping your bramble doesn't end the bleed damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

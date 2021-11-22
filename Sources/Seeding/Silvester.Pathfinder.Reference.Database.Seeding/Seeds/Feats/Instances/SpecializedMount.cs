@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9e407c58-5eaf-4c56-9451-7a36b82621a8"), Type = TextBlockType.Text, Text = "You’ve trained your mount to perform in unusual or even extreme circumstances, granting it abilities far beyond others of its kind. Your mount gains one specialization of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("9e407c58-5eaf-4c56-9451-7a36b82621a8"), Type = TextBlockType.Text, Text = "You've trained your mount to perform in unusual or even extreme circumstances, granting it abilities far beyond others of its kind. Your mount gains one specialization of your choice." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

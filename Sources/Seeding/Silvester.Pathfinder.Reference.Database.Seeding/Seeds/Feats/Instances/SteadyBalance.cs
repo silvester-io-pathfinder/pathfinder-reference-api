@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6f2d8c1c-d193-48a8-ac83-7ae2d4004e90"), Type = TextBlockType.Text, Text = "You can keep your balance easily, even in adverse conditions. Whenever you roll a success using the (action: Balance) action, you get a critical success instead. You’re not flat-footed while attempting to (action: Balance) on narrow surfaces and uneven ground. Thanks to your incredible balance, you can attempt an Acrobatics check instead of a Reflex save to (action: Grab an Edge)." };
+            yield return new TextBlock { Id = Guid.Parse("6f2d8c1c-d193-48a8-ac83-7ae2d4004e90"), Type = TextBlockType.Text, Text = "You can keep your balance easily, even in adverse conditions. Whenever you roll a success using the (action: Balance) action, you get a critical success instead. You're not flat-footed while attempting to (action: Balance) on narrow surfaces and uneven ground. Thanks to your incredible balance, you can attempt an Acrobatics check instead of a Reflex save to (action: Grab an Edge)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3f2fa96a-468d-4cfb-bf74-00840253e620"), Type = TextBlockType.Text, Text = "When you (action: Change Shape | Change Shape - Kitsune), you retain elements of your kitsune form, allowing you to speak in a fox form, use kitsune unarmed attacks in a tailless form, or gain a tail in your tailless form to use abilities that require one. You can (action: Change Shape | Change Shape - Kitsune) to alter the details of your hybrid form without fully changing into your true form or your alternate form. While in hybrid form, your foxlike features make it obvious that you aren’t a normal humanoid." };
+            yield return new TextBlock { Id = Guid.Parse("3f2fa96a-468d-4cfb-bf74-00840253e620"), Type = TextBlockType.Text, Text = "When you (action: Change Shape | Change Shape - Kitsune), you retain elements of your kitsune form, allowing you to speak in a fox form, use kitsune unarmed attacks in a tailless form, or gain a tail in your tailless form to use abilities that require one. You can (action: Change Shape | Change Shape - Kitsune) to alter the details of your hybrid form without fully changing into your true form or your alternate form. While in hybrid form, your foxlike features make it obvious that you aren't a normal humanoid." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

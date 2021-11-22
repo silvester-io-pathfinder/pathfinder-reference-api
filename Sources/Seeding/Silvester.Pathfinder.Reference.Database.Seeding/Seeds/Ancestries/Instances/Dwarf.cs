@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
         {
             yield return new TextBlock { Id = Guid.Parse("cd8c671f-d8e0-45b0-8d86-1299b02bf212"), Type = TextBlockType.Enumeration, Text = "Strive to uphold your personal honor, no matter the situation. " };
             yield return new TextBlock { Id = Guid.Parse("6f733777-6b28-40e0-baa2-069f5f79cdd4"), Type = TextBlockType.Enumeration, Text = "Appreciate quality craftsmanship in all forms and insist upon it for all your gear. " };
-            yield return new TextBlock { Id = Guid.Parse("89039469-5434-4fcf-b564-a91463ae8d0a"), Type = TextBlockType.Enumeration, Text = "Don’t waver or back down once you’ve set your mind to something." };
+            yield return new TextBlock { Id = Guid.Parse("89039469-5434-4fcf-b564-a91463ae8d0a"), Type = TextBlockType.Enumeration, Text = "Don't waver or back down once you've set your mind to something." };
         }
     
         protected override IEnumerable<TextBlock> GetOthersProbably()
@@ -81,7 +81,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
     
         protected override IEnumerable<TextBlock> GetNames()
         {
-            yield return new TextBlock { Id = Guid.Parse("e3a9414b-57b3-4598-af9a-fbba4e39e094"), Type = TextBlockType.Text, Text = "Dwarves honor their children with names taken from ancestors or dwarven heroes, and it’s quite rare to invent a new name or to borrow a name from another culture for a child. When introducing themselves, dwarves tend to list their family and clan, plus any number of other familial connections and honorifics. Dwarven names usually contain hard consonants and are rarely more or fewer than two syllables." };
+            yield return new TextBlock { Id = Guid.Parse("e3a9414b-57b3-4598-af9a-fbba4e39e094"), Type = TextBlockType.Text, Text = "Dwarves honor their children with names taken from ancestors or dwarven heroes, and it's quite rare to invent a new name or to borrow a name from another culture for a child. When introducing themselves, dwarves tend to list their family and clan, plus any number of other familial connections and honorifics. Dwarven names usually contain hard consonants and are rarely more or fewer than two syllables." };
         }
     
         protected override IEnumerable<TextBlock> GetOtherInformation()

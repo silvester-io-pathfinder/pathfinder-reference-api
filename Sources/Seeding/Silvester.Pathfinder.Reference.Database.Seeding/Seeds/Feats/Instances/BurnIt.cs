@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b4fa4e1-d48b-4d02-a1e9-a9c1ece75cb9"), Type = TextBlockType.Text, Text = "Fire fascinates you. Your spells and alchemical items that deal fire damage gain a status bonus to damage equal to half the spell’s level or one-quarter the item’s level (minimum 1). You also gain a +1 status bonus to any persistent fire damage you deal." };
+            yield return new TextBlock { Id = Guid.Parse("0b4fa4e1-d48b-4d02-a1e9-a9c1ece75cb9"), Type = TextBlockType.Text, Text = "Fire fascinates you. Your spells and alchemical items that deal fire damage gain a status bonus to damage equal to half the spell's level or one-quarter the item's level (minimum 1). You also gain a +1 status bonus to any persistent fire damage you deal." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

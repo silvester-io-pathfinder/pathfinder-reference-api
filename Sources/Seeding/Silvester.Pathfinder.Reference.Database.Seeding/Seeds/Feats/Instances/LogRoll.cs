@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b4542532-ae25-409a-9d97-afd83e2f375a"), Type = TextBlockType.Text, Text = "You shuffle your feet to dislodge the surface beneath you or otherwise cause your opponent to become unsteady. Attempt an Acrobatics check against the adjacent creature’s Reflex saving throw DC. On a success, the creature falls. On a critical failure, you fall." };
+            yield return new TextBlock { Id = Guid.Parse("b4542532-ae25-409a-9d97-afd83e2f375a"), Type = TextBlockType.Text, Text = "You shuffle your feet to dislodge the surface beneath you or otherwise cause your opponent to become unsteady. Attempt an Acrobatics check against the adjacent creature's Reflex saving throw DC. On a success, the creature falls. On a critical failure, you fall." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

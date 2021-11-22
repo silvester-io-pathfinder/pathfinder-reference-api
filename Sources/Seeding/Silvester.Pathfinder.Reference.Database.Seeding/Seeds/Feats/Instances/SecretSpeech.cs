@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("90e7927b-c866-4103-ab38-3be48562a80b"), Type = TextBlockType.Text, Text = "~ Access: Have earnt Mialari Docur’s trust and have proven their worth by defeating the Scarlet Triad." };
-            yield return new TextBlock { Id = Guid.Parse("6a65fdd2-91b3-4187-acce-2bfc547e2217"), Type = TextBlockType.Text, Text = "Choose a secret society (such as the Lacunafex or the Bellflower Network). You’ve learned that society’s secret cant or jargon, enabling you to share hidden messages when signing or speaking with others who’ve also learned it. If an observer succeeds at a Perception check against your Deception DC when you do this, they realize you are passing a message but fail to discern its content, unless they subsequently succeed at a Society check against your Deception DC. On a critical success, they learn not only the message, but also who you’re passing the message to." };
+            yield return new TextBlock { Id = Guid.Parse("90e7927b-c866-4103-ab38-3be48562a80b"), Type = TextBlockType.Text, Text = "~ Access: Have earnt Mialari Docur's trust and have proven their worth by defeating the Scarlet Triad." };
+            yield return new TextBlock { Id = Guid.Parse("6a65fdd2-91b3-4187-acce-2bfc547e2217"), Type = TextBlockType.Text, Text = "Choose a secret society (such as the Lacunafex or the Bellflower Network). You've learned that society's secret cant or jargon, enabling you to share hidden messages when signing or speaking with others who've also learned it. If an observer succeeds at a Perception check against your Deception DC when you do this, they realize you are passing a message but fail to discern its content, unless they subsequently succeed at a Society check against your Deception DC. On a critical success, they learn not only the message, but also who you're passing the message to." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

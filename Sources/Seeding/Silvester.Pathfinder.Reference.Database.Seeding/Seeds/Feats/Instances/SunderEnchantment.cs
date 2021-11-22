@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a5aad233-1a62-4f18-ab78-44ecf60d1707"), Type = TextBlockType.Text, Text = "You can focus your superstition to break the magic of an item, in addition to destroying freestanding spells and those active on creatures. When you (feat: Sunder a Spell | Sunder Spell), you can instead attempt to counteract either an unattended magic item or one of your target’s magic items. If your counteract attempt succeeds, the item becomes a mundane item of its type for 10 minutes. If you target an artifact, an intelligent item, or a particularly powerful item, your counteract attempt automatically fails." };
+            yield return new TextBlock { Id = Guid.Parse("a5aad233-1a62-4f18-ab78-44ecf60d1707"), Type = TextBlockType.Text, Text = "You can focus your superstition to break the magic of an item, in addition to destroying freestanding spells and those active on creatures. When you (feat: Sunder a Spell | Sunder Spell), you can instead attempt to counteract either an unattended magic item or one of your target's magic items. If your counteract attempt succeeds, the item becomes a mundane item of its type for 10 minutes. If you target an artifact, an intelligent item, or a particularly powerful item, your counteract attempt automatically fails." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

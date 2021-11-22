@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("64dc4e62-b333-47bf-ac62-17f3a2fda41e"), Type = TextBlockType.Text, Text = "You’ve learned a few magical techniques for getting yourself both into and out of trouble unnoticed. You gain (spell: misdirection) and (spell: silence) as 2nd-level arcane or occult innate spells. The tradition of these spells must match the tradition you use for your gnome ancestry options. You can cast each spell once per day and can target only yourself." };
+            yield return new TextBlock { Id = Guid.Parse("64dc4e62-b333-47bf-ac62-17f3a2fda41e"), Type = TextBlockType.Text, Text = "You've learned a few magical techniques for getting yourself both into and out of trouble unnoticed. You gain (spell: misdirection) and (spell: silence) as 2nd-level arcane or occult innate spells. The tradition of these spells must match the tradition you use for your gnome ancestry options. You can cast each spell once per day and can target only yourself." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

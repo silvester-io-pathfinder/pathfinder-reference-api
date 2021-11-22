@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("feb6ca01-9f29-4b6a-8737-5131a55bcce8"), Type = TextBlockType.Text, Text = "You call upon your element to propel you, improving your Speed depending on your element. This spell has your element’s trait." };
+            yield return new TextBlock { Id = Guid.Parse("feb6ca01-9f29-4b6a-8737-5131a55bcce8"), Type = TextBlockType.Text, Text = "You call upon your element to propel you, improving your Speed depending on your element. This spell has your element's trait." };
             yield return new TextBlock { Id = Guid.Parse("c03e0350-dc8e-4eba-8650-a3e96a70e474"), Type = TextBlockType.Enumeration, Text = "Air - You gain a fly Speed equal to your Speed." };
             yield return new TextBlock { Id = Guid.Parse("2088ca38-c9ec-441d-9a4f-33cf6ff4a448"), Type = TextBlockType.Enumeration, Text = "Earth - You gain a burrow Speed of 10 feet." };
             yield return new TextBlock { Id = Guid.Parse("15f5126b-6a91-4296-9048-2dccf58020c8"), Type = TextBlockType.Enumeration, Text = "Fire - You gain a fly Speed equal to your Speed." };

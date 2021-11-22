@@ -16,7 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Diseases.Instanc
             {
                 Id = ID,
                 Name = "Choking Death",
-                Description = "This disease is capable of wiping out nations or even entire continents. A few pockets of the disease still remain in Iobaria, keeping that region’s population sparse.",
+                Description = "This disease is capable of wiping out nations or even entire continents. A few pockets of the disease still remain in Iobaria, keeping that region's population sparse.",
                 SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
                 DifficultyCheck = 22,
                 Onset = "1 Day"

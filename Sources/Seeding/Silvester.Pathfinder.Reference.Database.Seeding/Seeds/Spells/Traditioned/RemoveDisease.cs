@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ee5be692-8ab3-4ab7-b7b6-d810796a6af1"), Type = TextBlockType.Text, Text = "Healing magic purges disease from a creature’s body. You attempt to counteract one disease afflicting the target." };
+            yield return new TextBlock { Id = Guid.Parse("ee5be692-8ab3-4ab7-b7b6-d810796a6af1"), Type = TextBlockType.Text, Text = "Healing magic purges disease from a creature's body. You attempt to counteract one disease afflicting the target." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

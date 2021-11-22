@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("04601c20-087a-4227-9950-5262666db4e9"), Type = TextBlockType.Text, Text = "Your eidolon appears in an open space adjacent to you, and can then take a single action. If your eidolon was already manifested, you unmanifest it instead." };
-            yield return new TextBlock { Id = Guid.Parse("e2b94a41-e048-4cba-9acf-3b321bb0bed0"), Type = TextBlockType.Text, Text = "The conduit that allows your eidolon to manifest is also a tether between you. Your eidolon must remain within 100 feet of you at all times and can’t willingly go beyond that limit. If forced beyond this distance, or if you are reduced to 0 Hit Points, your eidolon’s physical form dissolves: your eidolon unmanifests, and you need to use Manifest Eidolon to manifest it again." };
+            yield return new TextBlock { Id = Guid.Parse("e2b94a41-e048-4cba-9acf-3b321bb0bed0"), Type = TextBlockType.Text, Text = "The conduit that allows your eidolon to manifest is also a tether between you. Your eidolon must remain within 100 feet of you at all times and can't willingly go beyond that limit. If forced beyond this distance, or if you are reduced to 0 Hit Points, your eidolon's physical form dissolves: your eidolon unmanifests, and you need to use Manifest Eidolon to manifest it again." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

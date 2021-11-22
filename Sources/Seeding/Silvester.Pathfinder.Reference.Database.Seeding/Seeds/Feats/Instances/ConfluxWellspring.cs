@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1f8afc3a-920c-4bbb-a6d4-4ea32d7ee7a7"), Type = TextBlockType.Text, Text = "You’ve achieved perfect magical and physical balance, allowing magic to flow into and through you more easily. You can recover 3 Focus Points when you (action: Refocus) instead of 1 if you have spent at least 3 Focus Points since the last time you (action: Refocused | Refocus)." };
+            yield return new TextBlock { Id = Guid.Parse("1f8afc3a-920c-4bbb-a6d4-4ea32d7ee7a7"), Type = TextBlockType.Text, Text = "You've achieved perfect magical and physical balance, allowing magic to flow into and through you more easily. You can recover 3 Focus Points when you (action: Refocus) instead of 1 if you have spent at least 3 Focus Points since the last time you (action: Refocused | Refocus)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

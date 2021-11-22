@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("91ab668f-ccdb-46d8-b39f-ef3ebaed90d1"), Type = TextBlockType.Text, Text = "You can demonstrate how to quickly twist out of the way of dangerous effects. You can use the (action: Aid) reaction to grant a bonus to an ally’s Reflex save. As usual for (action: Aid), you need to prepare by using an action on your turn to encourage the ally." };
+            yield return new TextBlock { Id = Guid.Parse("91ab668f-ccdb-46d8-b39f-ef3ebaed90d1"), Type = TextBlockType.Text, Text = "You can demonstrate how to quickly twist out of the way of dangerous effects. You can use the (action: Aid) reaction to grant a bonus to an ally's Reflex save. As usual for (action: Aid), you need to prepare by using an action on your turn to encourage the ally." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

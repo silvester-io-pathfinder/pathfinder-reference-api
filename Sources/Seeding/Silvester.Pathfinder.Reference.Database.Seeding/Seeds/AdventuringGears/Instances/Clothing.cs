@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AdventuringGears
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("167bcff2-2a0d-4a34-acce-b5597857fc87"), Type = TextBlockType.Text, Text = "Ordinary clothing is functional with basic tailoring, such as peasant garb, monk’s robes, or work clothes." };
+            yield return new TextBlock { Id = Guid.Parse("167bcff2-2a0d-4a34-acce-b5597857fc87"), Type = TextBlockType.Text, Text = "Ordinary clothing is functional with basic tailoring, such as peasant garb, monk's robes, or work clothes." };
         }
 
         protected override IEnumerable<AdventuringGearVariant> GetVariants()
@@ -34,7 +34,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AdventuringGears
             {
                 Id = Guid.Parse("049b9e51-c47c-4c19-a731-5f9870b6bbd3"),
                 NameAddendum = "Explorer's",
-                DescriptionAddendum = "Explorer’s clothing is sturdy enough that it can be reinforced to protect you, even though it isn’t a suit of armor. It comes in many forms, though the most common sorts look like clerical vestments, monk’s garments, or wizard’s robes, as members of all three classes are likely to avoid wearing armor. For more information on explorer’s clothing, see its entry in the armor category.",
+                DescriptionAddendum = "Explorer's clothing is sturdy enough that it can be reinforced to protect you, even though it isn't a suit of armor. It comes in many forms, though the most common sorts look like clerical vestments, monk's garments, or wizard's robes, as members of all three classes are likely to avoid wearing armor. For more information on explorer's clothing, see its entry in the armor category.",
                 ItemLevel = 0,
                 Price = 10,
                 Hands = 0,

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6b5dde78-57f3-4c8c-9f5a-1098036b8939"), Type = TextBlockType.Text, Text = "You take advantage of teleportation to better hide your position. When you cast (spell: dimensional assault), you’re affected by an (spell: invisibility) spell at the end of the teleport. You can choose not to make the (action: Strike) that is normally part of (spell: dimensional assault). If you do make the (action: Strike), your (spell: invisibility) ends after the (action: Strike), as normal for (spell: invisibility)." };
+            yield return new TextBlock { Id = Guid.Parse("6b5dde78-57f3-4c8c-9f5a-1098036b8939"), Type = TextBlockType.Text, Text = "You take advantage of teleportation to better hide your position. When you cast (spell: dimensional assault), you're affected by an (spell: invisibility) spell at the end of the teleport. You can choose not to make the (action: Strike) that is normally part of (spell: dimensional assault). If you do make the (action: Strike), your (spell: invisibility) ends after the (action: Strike), as normal for (spell: invisibility)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

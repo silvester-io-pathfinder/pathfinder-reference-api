@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("37e16b0e-851d-4055-a423-f94204f3aa18"), Type = TextBlockType.Text, Text = "Your power has unbound you from the earth below, letting you float harmlessly over traps and unstable terrain. You’re affected by a constant (spell: air walk), except the highest you can walk is 5 feet above the ground. While your psyche is unleashed, you’re also affected by a (spell: fly) spell." };
+            yield return new TextBlock { Id = Guid.Parse("37e16b0e-851d-4055-a423-f94204f3aa18"), Type = TextBlockType.Text, Text = "Your power has unbound you from the earth below, letting you float harmlessly over traps and unstable terrain. You're affected by a constant (spell: air walk), except the highest you can walk is 5 feet above the ground. While your psyche is unleashed, you're also affected by a (spell: fly) spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

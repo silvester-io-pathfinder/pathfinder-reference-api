@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2a8a1bca-0979-4aca-938b-90e51bc656a6"), Type = TextBlockType.Text, Text = "When you resist a spell, you capture some of its magic for your own use. You enter your (feat: Arcane Cascade) stance, using the triggering spell to determine what damage type your (feat: Arcane Cascade) deals. Alternatively, if you’re already in (feat: Arcane Cascade), you can instead amplify its effects temporarily. Until the end of your next turn, you gain a +2 status bonus to the damage from your (feat: Arcane Cascade)." };
+            yield return new TextBlock { Id = Guid.Parse("2a8a1bca-0979-4aca-938b-90e51bc656a6"), Type = TextBlockType.Text, Text = "When you resist a spell, you capture some of its magic for your own use. You enter your (feat: Arcane Cascade) stance, using the triggering spell to determine what damage type your (feat: Arcane Cascade) deals. Alternatively, if you're already in (feat: Arcane Cascade), you can instead amplify its effects temporarily. Until the end of your next turn, you gain a +2 status bonus to the damage from your (feat: Arcane Cascade)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

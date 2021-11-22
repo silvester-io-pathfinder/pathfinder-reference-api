@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e7d2181-60f0-4f85-a71d-7897df378e61"), Type = TextBlockType.Text, Text = "You spin your buckler defensively toward every attack. While you are in this stance, you constantly have your (item: buckler) raised as if you’d used (action: Raise a Shield), as long as you meet that action’s requirements." };
+            yield return new TextBlock { Id = Guid.Parse("3e7d2181-60f0-4f85-a71d-7897df378e61"), Type = TextBlockType.Text, Text = "You spin your buckler defensively toward every attack. While you are in this stance, you constantly have your (item: buckler) raised as if you'd used (action: Raise a Shield), as long as you meet that action's requirements." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

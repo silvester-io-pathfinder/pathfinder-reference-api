@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9001610f-b018-4ef8-8b90-3f67bdadf0ab"), Type = TextBlockType.Text, Text = "When a foe (action: Casts a Spell | Cast a Spell) that has the (trait: mental) trait and you can see its manifestations, you can use your own mental magic to disrupt it. You expend one of your spell slots to counter the triggering creature’s casting of a spell with the (trait: mental) trait. You lose your spell slot as if you had cast the triggering spell; this spell slot must be one for which you could cast a spell with the (trait: mental) trait. You then attempt to counteract the triggering spell." };
+            yield return new TextBlock { Id = Guid.Parse("9001610f-b018-4ef8-8b90-3f67bdadf0ab"), Type = TextBlockType.Text, Text = "When a foe (action: Casts a Spell | Cast a Spell) that has the (trait: mental) trait and you can see its manifestations, you can use your own mental magic to disrupt it. You expend one of your spell slots to counter the triggering creature's casting of a spell with the (trait: mental) trait. You lose your spell slot as if you had cast the triggering spell; this spell slot must be one for which you could cast a spell with the (trait: mental) trait. You then attempt to counteract the triggering spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

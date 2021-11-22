@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("30ec13d7-e710-4c1d-87fd-1fff984eb312"), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, and you can target up to 10 creatures." }
+                    new TextBlock { Id = Guid.Parse("30ec13d7-e710-4c1d-87fd-1fff984eb312"), Type = TextBlockType.Text, Text = "The spell's range increases to 30 feet, and you can target up to 10 creatures." }
                 }
             };
         }

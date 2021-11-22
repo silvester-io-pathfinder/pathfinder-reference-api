@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("89a99564-6b60-4ee9-b4c3-8fbdfebaffe2"), Type = TextBlockType.Text, Text = "You are trained to capture deserters, or “leeches.” If you critically hit a foe with a weapon from the flail weapon group, you can wrap the weapon around the target’s legs and then drop it, causing the foe to take a -10-foot circumstance penalty to their Speeds until they or their allies disentangle the weapon, which takes a total of 2 (Action: Interact) actions." };
+            yield return new TextBlock { Id = Guid.Parse("89a99564-6b60-4ee9-b4c3-8fbdfebaffe2"), Type = TextBlockType.Text, Text = "You are trained to capture deserters, or “leeches.” If you critically hit a foe with a weapon from the flail weapon group, you can wrap the weapon around the target's legs and then drop it, causing the foe to take a -10-foot circumstance penalty to their Speeds until they or their allies disentangle the weapon, which takes a total of 2 (Action: Interact) actions." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

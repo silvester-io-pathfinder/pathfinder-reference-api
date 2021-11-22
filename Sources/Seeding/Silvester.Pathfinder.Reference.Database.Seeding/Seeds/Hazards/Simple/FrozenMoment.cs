@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = new List<TextBlock>
                 {
-                    new TextBlock { Id = Guid.Parse("806735c8-382d-4647-a8fd-b33e379cebad"), Type = TextBlockType.Text, Text = "The triggering creature and all creatures within 30 feet are trapped in a disrupted time flow (DC 38 Fortitude negates). The creatures’ minds move so quickly that each round seems to last a century, but their bodies and magical energies move so slowly that they can’t use any actions except Recall Knowledge. An affected creature must attempt a DC 36 Will saving throw against a warp mind spell immediately and again for every minute of real time that passes while the creature is trapped in the frozen moment. This effect has an unlimited duration but can be counteracted." },
+                    new TextBlock { Id = Guid.Parse("806735c8-382d-4647-a8fd-b33e379cebad"), Type = TextBlockType.Text, Text = "The triggering creature and all creatures within 30 feet are trapped in a disrupted time flow (DC 38 Fortitude negates). The creatures' minds move so quickly that each round seems to last a century, but their bodies and magical energies move so slowly that they can't use any actions except Recall Knowledge. An affected creature must attempt a DC 36 Will saving throw against a warp mind spell immediately and again for every minute of real time that passes while the creature is trapped in the frozen moment. This effect has an unlimited duration but can be counteracted." },
                 }
             };
         }

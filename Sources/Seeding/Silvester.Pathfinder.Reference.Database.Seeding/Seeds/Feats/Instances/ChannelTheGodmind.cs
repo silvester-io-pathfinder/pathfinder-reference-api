@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d3c22feb-fa3a-4309-8618-bc9cdbc42d76"), Type = TextBlockType.Text, Text = "You tap into the Godmind’s collective cognitive well, rapidly parsing near-infinite variables to read your surroundings. For 1 minute, you gain precise motion sense out to 60 feet, you can see invisible creatures and objects, and you gain the effects of a 9th-level (spell: true seeing)." };
+            yield return new TextBlock { Id = Guid.Parse("d3c22feb-fa3a-4309-8618-bc9cdbc42d76"), Type = TextBlockType.Text, Text = "You tap into the Godmind's collective cognitive well, rapidly parsing near-infinite variables to read your surroundings. For 1 minute, you gain precise motion sense out to 60 feet, you can see invisible creatures and objects, and you gain the effects of a 9th-level (spell: true seeing)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

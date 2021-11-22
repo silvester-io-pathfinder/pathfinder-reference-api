@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ab43d22e-3a5d-4a2c-a1f5-4603a64b39cd"), Type = TextBlockType.Text, Text = "You’re the child of a winter hag, with one blue-white eye and an affinity for rime and snow. When moving over ice or snow in arctic terrain, you always gain the benefits of the (action: Cover Tracks) action without needing to use the activity or having to move half your Speed. You don’t treat icy terrain as uneven ground (though it’s still difficult terrain for you), and you ignore difficult terrain caused by snow. Cold precipitation and environmental cold effects don’t alter the time it takes for you to become fatigued." };
+            yield return new TextBlock { Id = Guid.Parse("ab43d22e-3a5d-4a2c-a1f5-4603a64b39cd"), Type = TextBlockType.Text, Text = "You're the child of a winter hag, with one blue-white eye and an affinity for rime and snow. When moving over ice or snow in arctic terrain, you always gain the benefits of the (action: Cover Tracks) action without needing to use the activity or having to move half your Speed. You don't treat icy terrain as uneven ground (though it's still difficult terrain for you), and you ignore difficult terrain caused by snow. Cold precipitation and environmental cold effects don't alter the time it takes for you to become fatigued." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

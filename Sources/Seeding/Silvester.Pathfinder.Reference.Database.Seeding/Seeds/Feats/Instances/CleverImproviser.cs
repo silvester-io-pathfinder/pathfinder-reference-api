@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c9db81b5-13c3-442f-95cb-8ff9a4ed5479"), Type = TextBlockType.Text, Text = "You’ve learned how to handle situations when you’re out of your depth. You gain the (feat: Untrained Improvisation) general feat. In addition, you can attempt skill actions that normally require you to be trained, even if you are untrained." };
+            yield return new TextBlock { Id = Guid.Parse("c9db81b5-13c3-442f-95cb-8ff9a4ed5479"), Type = TextBlockType.Text, Text = "You've learned how to handle situations when you're out of your depth. You gain the (feat: Untrained Improvisation) general feat. In addition, you can attempt skill actions that normally require you to be trained, even if you are untrained." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8bca2147-27ca-4e2c-9470-4bdd9f4446a1"), Type = TextBlockType.Text, Text = "You sift through the multiverse’s divine knowledge, seeking out tidbits related to a particular subject. Choose one Lore skill. You temporarily gain the same proficiency rank in that Lore skill as your proficiency rank for your oracle spellcasting." };
+            yield return new TextBlock { Id = Guid.Parse("8bca2147-27ca-4e2c-9470-4bdd9f4446a1"), Type = TextBlockType.Text, Text = "You sift through the multiverse's divine knowledge, seeking out tidbits related to a particular subject. Choose one Lore skill. You temporarily gain the same proficiency rank in that Lore skill as your proficiency rank for your oracle spellcasting." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

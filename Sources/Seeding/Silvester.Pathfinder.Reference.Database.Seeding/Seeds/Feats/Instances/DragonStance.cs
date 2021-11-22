@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("415002cc-47d8-4e5b-8814-a4f7f7ee52b9"), Type = TextBlockType.Text, Text = "You enter the stance of a dragon and make powerful leg strikes like a lashing dragon’s tail. You can make dragon tail attacks that deal 1d10 bludgeoning damage. They are in the brawling group and have the (trait: backswing), (trait: nonlethal), and (trait: unarmed) traits." };
+            yield return new TextBlock { Id = Guid.Parse("415002cc-47d8-4e5b-8814-a4f7f7ee52b9"), Type = TextBlockType.Text, Text = "You enter the stance of a dragon and make powerful leg strikes like a lashing dragon's tail. You can make dragon tail attacks that deal 1d10 bludgeoning damage. They are in the brawling group and have the (trait: backswing), (trait: nonlethal), and (trait: unarmed) traits." };
             yield return new TextBlock { Id = Guid.Parse("86d21fc4-35a7-46e1-bbc3-a16bfdc670d9"), Type = TextBlockType.Text, Text = "While in Dragon Stance, you can ignore the first square of difficult terrain while (action: Striding | Stride)." };
         }
 

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9204855a-fcf2-4b25-9216-d0db8d371580"), Type = TextBlockType.Text, Text = "You can (action: Crawl) incredibly swiftly – up to half your Speed, rather than 5 feet. If you’re a master in Acrobatics, you can (action: Crawl) at full Speed, and if you’re legendary, you aren’t flat-footed while prone." };
+            yield return new TextBlock { Id = Guid.Parse("9204855a-fcf2-4b25-9216-d0db8d371580"), Type = TextBlockType.Text, Text = "You can (action: Crawl) incredibly swiftly – up to half your Speed, rather than 5 feet. If you're a master in Acrobatics, you can (action: Crawl) at full Speed, and if you're legendary, you aren't flat-footed while prone." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

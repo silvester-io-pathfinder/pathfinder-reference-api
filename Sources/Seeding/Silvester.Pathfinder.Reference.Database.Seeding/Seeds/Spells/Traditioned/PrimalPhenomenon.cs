@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("78eb7243-2497-4d8c-9b10-5150bfdb0b2d"), Type = TextBlockType.Enumeration, Text = "Duplicate any non-primal spell of 7th level or lower." };
             yield return new TextBlock { Id = Guid.Parse("09339164-3ddb-4d0f-8425-a99dbbcabef9"), Type = TextBlockType.Enumeration, Text = "Produce any effect whose power level is in line with the above effects." };
             yield return new TextBlock { Id = Guid.Parse("3adeabd6-c190-4b1e-b6b0-f0038c7b4540"), Type = TextBlockType.Enumeration, Text = "Reverse certain effects that refer to the wish spell." };
-            yield return new TextBlock { Id = Guid.Parse("36dedd30-17e9-417a-b451-e2d3b1047d05"), Type = TextBlockType.Text, Text = "At the GM’s discretion, you can try to use primal phenomenon to produce greater effects than these, but doing so may be dangerous, or the spell may have only a partial effect." };
+            yield return new TextBlock { Id = Guid.Parse("36dedd30-17e9-417a-b451-e2d3b1047d05"), Type = TextBlockType.Text, Text = "At the GM's discretion, you can try to use primal phenomenon to produce greater effects than these, but doing so may be dangerous, or the spell may have only a partial effect." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

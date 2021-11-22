@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f562a2f5-5a26-422d-b37e-693829743704"), Type = TextBlockType.Text, Text = "Your keen eyes catch signs of passage even when you’re moving. You can move at your full Speed while you (action: Track). If you have master proficiency in Survival, you don’t need to attempt a new Survival check every hour while (action: Tracking | Track). If you have legendary proficiency in Survival, you can use another exploration activity while (action: Tracking | Track)." };
+            yield return new TextBlock { Id = Guid.Parse("f562a2f5-5a26-422d-b37e-693829743704"), Type = TextBlockType.Text, Text = "Your keen eyes catch signs of passage even when you're moving. You can move at your full Speed while you (action: Track). If you have master proficiency in Survival, you don't need to attempt a new Survival check every hour while (action: Tracking | Track). If you have legendary proficiency in Survival, you can use another exploration activity while (action: Tracking | Track)." };
             yield return new TextBlock { Id = Guid.Parse("cdaf9c8f-8099-4d01-a040-e0e66371bc8d"), Type = TextBlockType.Text, Text = "If you roll Survival for initiative while (action: Tracking | Track) your hunted prey, when you start your first turn of the encounter, you can (action: Stride) toward your hunted prey as a free action." };
         }
 

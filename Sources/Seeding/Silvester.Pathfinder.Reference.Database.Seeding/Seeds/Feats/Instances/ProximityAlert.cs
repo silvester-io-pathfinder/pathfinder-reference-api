@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb02fafa-286f-4359-9d80-558f1ce8d1f7"), Type = TextBlockType.Text, Text = "You’re unnaturally in tune with your surroundings and react instinctively to danger. You gain a +2 circumstance bonus to Perception checks made as initiative rolls." };
+            yield return new TextBlock { Id = Guid.Parse("fb02fafa-286f-4359-9d80-558f1ce8d1f7"), Type = TextBlockType.Text, Text = "You're unnaturally in tune with your surroundings and react instinctively to danger. You gain a +2 circumstance bonus to Perception checks made as initiative rolls." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

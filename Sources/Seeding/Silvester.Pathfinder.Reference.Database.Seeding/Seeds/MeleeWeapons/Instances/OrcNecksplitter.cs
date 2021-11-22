@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Orc Necksplitter",
-                Description = "This single-bladed bearded axe has a jagged blade that’s perfect for separating bone from tendon and cartilage.",
+                Description = "This single-bladed bearded axe has a jagged blade that's perfect for separating bone from tendon and cartilage.",
                 Price = 200,
                 Damage = "1d8",
                 Hands = "1",

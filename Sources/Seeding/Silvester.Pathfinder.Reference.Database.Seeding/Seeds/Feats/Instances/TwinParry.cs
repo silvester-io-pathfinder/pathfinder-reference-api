@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("315c358a-c9ca-4b29-9fb6-93e121f6dd46"), Type = TextBlockType.Text, Text = "You use your two weapons to parry attacks. You gain a +1 circumstance bonus to AC until the start of your next turn, or a +2 circumstance bonus if either weapon has the (trait: parry) trait. You lose this circumstance bonus if you no longer meet this feat’s requirement." };
+            yield return new TextBlock { Id = Guid.Parse("315c358a-c9ca-4b29-9fb6-93e121f6dd46"), Type = TextBlockType.Text, Text = "You use your two weapons to parry attacks. You gain a +1 circumstance bonus to AC until the start of your next turn, or a +2 circumstance bonus if either weapon has the (trait: parry) trait. You lose this circumstance bonus if you no longer meet this feat's requirement." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

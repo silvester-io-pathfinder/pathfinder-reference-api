@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c4e1ab1-f3b1-475b-87f5-950ed3a8b723"), Type = TextBlockType.Text, Text = "Since ancient times, the mightiest orc beast tamers would draw out the true fighting spirit of their companion beasts by feeding the creatures a draft incorporating the orc&#39;s own blood. Animal companions or bonded animals you have gain the (feat: Orc Ferocity) feat, and they gain a reaction they can use only for (feat: Orc Ferocity). If you have the (feat: Undying Ferocity) ancestry feat, all animal companions or bonded animals you have also gain the benefits of that feat when using the (feat: Orc Ferocity) reaction." };
+            yield return new TextBlock { Id = Guid.Parse("2c4e1ab1-f3b1-475b-87f5-950ed3a8b723"), Type = TextBlockType.Text, Text = "Since ancient times, the mightiest orc beast tamers would draw out the true fighting spirit of their companion beasts by feeding the creatures a draft incorporating the orc's own blood. Animal companions or bonded animals you have gain the (feat: Orc Ferocity) feat, and they gain a reaction they can use only for (feat: Orc Ferocity). If you have the (feat: Undying Ferocity) ancestry feat, all animal companions or bonded animals you have also gain the benefits of that feat when using the (feat: Orc Ferocity) reaction." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6693f7dd-046e-40b4-a98c-7069b8257cec"), Type = TextBlockType.Text, Text = "Merging minds with the target, you swap disorienting visions from one another’s nightmares. One of you will become confused, but which it’ll be depends on the target’s Will save." };
+            yield return new TextBlock { Id = Guid.Parse("6693f7dd-046e-40b4-a98c-7069b8257cec"), Type = TextBlockType.Text, Text = "Merging minds with the target, you swap disorienting visions from one another's nightmares. One of you will become confused, but which it'll be depends on the target's Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

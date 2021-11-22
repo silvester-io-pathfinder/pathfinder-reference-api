@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7a46fed6-33e9-4369-85ba-8e334e33f548"), Type = TextBlockType.Text, Text = "From outside, the area looks like a bank of impenetrable black fog. Sensory stimuli (such as sounds, smells, and light) don’t pass from inside the area to outside the area. Scrying spells can’t perceive any stimuli from the area, and mind-reading effects don’t work in the area." };
+            yield return new TextBlock { Id = Guid.Parse("7a46fed6-33e9-4369-85ba-8e334e33f548"), Type = TextBlockType.Text, Text = "From outside, the area looks like a bank of impenetrable black fog. Sensory stimuli (such as sounds, smells, and light) don't pass from inside the area to outside the area. Scrying spells can't perceive any stimuli from the area, and mind-reading effects don't work in the area." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

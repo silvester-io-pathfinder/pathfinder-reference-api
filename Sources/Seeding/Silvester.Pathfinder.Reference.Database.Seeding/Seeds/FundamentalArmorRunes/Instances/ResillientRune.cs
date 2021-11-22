@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.FundamentalArmor
         protected override IEnumerable<TextBlock> GetDetails()
         {
             yield return new TextBlock { Id = Guid.Parse("1aa8fb59-3d43-49d3-b5e0-e85a02b66419"), Type = TextBlockType.Text, Text = "Resilient runes imbue armor with additional protective magic." };
-            yield return new TextBlock { Id = Guid.Parse("81c79bd9-a634-4de6-98e8-5e7c621becb2"), Type = TextBlockType.Text, Text = "You can upgrade the resilient rune already etched on a suit of armor to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes’ Prices." };
+            yield return new TextBlock { Id = Guid.Parse("81c79bd9-a634-4de6-98e8-5e7c621becb2"), Type = TextBlockType.Text, Text = "You can upgrade the resilient rune already etched on a suit of armor to a stronger version, increasing the values of the existing rune to those of the new rune. You must have the formula of the stronger rune to do so, and the Price of the upgrade is the difference between the two runes' Prices." };
         }
 
         protected override IEnumerable<FundamentalArmorRuneVariant> GetLevels()

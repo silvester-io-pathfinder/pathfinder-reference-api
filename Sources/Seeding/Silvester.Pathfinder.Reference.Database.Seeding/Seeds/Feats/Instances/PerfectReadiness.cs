@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("31579d65-0451-47fe-809f-910d163bb9b1"), Type = TextBlockType.Text, Text = "You prepare to fire with an instinctive speed and muscle memory that go beyond your conscious thoughts. You’re permanently quickened. You can use your extra action only to (action: Step) or (action: Interact) to reload." };
+            yield return new TextBlock { Id = Guid.Parse("31579d65-0451-47fe-809f-910d163bb9b1"), Type = TextBlockType.Text, Text = "You prepare to fire with an instinctive speed and muscle memory that go beyond your conscious thoughts. You're permanently quickened. You can use your extra action only to (action: Step) or (action: Interact) to reload." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

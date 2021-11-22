@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5270ee1c-1e5f-4006-8272-871c37076332"), Type = TextBlockType.Text, Text = "Your happy-go-lucky nature makes it seem like misfortune avoids you, and to an extent, that might even be true. You can reroll the triggering check, but you must use the new result, even if it’s worse than your first roll." };
+            yield return new TextBlock { Id = Guid.Parse("5270ee1c-1e5f-4006-8272-871c37076332"), Type = TextBlockType.Text, Text = "Your happy-go-lucky nature makes it seem like misfortune avoids you, and to an extent, that might even be true. You can reroll the triggering check, but you must use the new result, even if it's worse than your first roll." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

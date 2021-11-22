@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("68a30ca4-98ea-4f04-8d62-593c953a6cb8"), Type = TextBlockType.Text, Text = "You make an impressive leap and swing while you soar. Make a (Action: Leap), (Action: High Jump), or (Action: Long Jump) and attempt one melee (Action: Strike) at any point during your jump. Immediately after the (Action: Strike), you fall to the ground if you’re in the air, even if you haven’t reached the maximum distance of your jump. If the distance you fall is no more than the height of your jump, you take no damage and land upright." };
+            yield return new TextBlock { Id = Guid.Parse("68a30ca4-98ea-4f04-8d62-593c953a6cb8"), Type = TextBlockType.Text, Text = "You make an impressive leap and swing while you soar. Make a (Action: Leap), (Action: High Jump), or (Action: Long Jump) and attempt one melee (Action: Strike) at any point during your jump. Immediately after the (Action: Strike), you fall to the ground if you're in the air, even if you haven't reached the maximum distance of your jump. If the distance you fall is no more than the height of your jump, you take no damage and land upright." };
             yield return new TextBlock { Id = Guid.Parse("6d3e837d-4ec4-44b9-b3db-81ecaea60573"), Type = TextBlockType.Text, Text = "When attempting a (Action: High Jump) or (Action: Long Jump) during a Sudden Leap, determine the DC using the (Action: Long Jump) DCs, and increase your maximum distance to double your Speed." };
         }
 

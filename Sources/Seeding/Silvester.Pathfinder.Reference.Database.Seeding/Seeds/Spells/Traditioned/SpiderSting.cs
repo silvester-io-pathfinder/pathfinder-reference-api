@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("29ad5637-e0d6-42fe-80ca-9847989751b9"), Type = TextBlockType.Text, Text = "You magically duplicate a spider’s venomous sting. You deal 1d4 piercing damage to the touched creature and afflict it with spider venom. The target must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("29ad5637-e0d6-42fe-80ca-9847989751b9"), Type = TextBlockType.Text, Text = "You magically duplicate a spider's venomous sting. You deal 1d4 piercing damage to the touched creature and afflict it with spider venom. The target must attempt a Fortitude save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

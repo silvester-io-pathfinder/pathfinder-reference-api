@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6631b3a1-a8ce-4a71-bb19-0e72a87ce3c9"), Type = TextBlockType.Text, Text = "You’ve dedicated your training to the most complex and weird weapons of your favorite group. Choose firearms or crossbows. You gain proficiency with all advanced firearms as if they were martial firearms or with all advanced crossbows as if they were martial crossbows." };
+            yield return new TextBlock { Id = Guid.Parse("6631b3a1-a8ce-4a71-bb19-0e72a87ce3c9"), Type = TextBlockType.Text, Text = "You've dedicated your training to the most complex and weird weapons of your favorite group. Choose firearms or crossbows. You gain proficiency with all advanced firearms as if they were martial firearms or with all advanced crossbows as if they were martial crossbows." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

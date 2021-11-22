@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6e6c12d7-bd68-4c3e-baeb-d0694991b992"), Type = TextBlockType.Text, Text = "You strengthen a target’s ambition, increase its resentment of allies, and make its allegiances more susceptible to change. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("6e6c12d7-bd68-4c3e-baeb-d0694991b992"), Type = TextBlockType.Text, Text = "You strengthen a target's ambition, increase its resentment of allies, and make its allegiances more susceptible to change. The target must attempt a Will save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

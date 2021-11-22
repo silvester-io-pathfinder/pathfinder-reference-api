@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("945bb075-229d-4249-8eb7-5be0f89be6ca"), Type = TextBlockType.Text, Text = "You provide emotional and spiritual care. Add frightened, stupefied, and stunned to the list of conditions you can reduce with (feat: Treat Condition). If the stunned condition has a duration instead of a value, you can’t use (feat: Treat Condition) to reduce it." };
+            yield return new TextBlock { Id = Guid.Parse("945bb075-229d-4249-8eb7-5be0f89be6ca"), Type = TextBlockType.Text, Text = "You provide emotional and spiritual care. Add frightened, stupefied, and stunned to the list of conditions you can reduce with (feat: Treat Condition). If the stunned condition has a duration instead of a value, you can't use (feat: Treat Condition) to reduce it." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

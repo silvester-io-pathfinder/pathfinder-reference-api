@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("48cdd021-2c7c-4dfc-87ba-0f50ce63e956"), Type = TextBlockType.Text, Text = "You harmlessly place your unique magical sigil, which is about 1 square inch in size, on the targeted creature or object. The mark can be visible or invisible, and you can change it from one state to another by using an Interact action to touch the target. The mark can be scrubbed or scraped off with 5 minutes of work. If it’s on a creature, it fades naturally over the course of a week. The time before the mark fades increases depending on your heightened level." };
+            yield return new TextBlock { Id = Guid.Parse("48cdd021-2c7c-4dfc-87ba-0f50ce63e956"), Type = TextBlockType.Text, Text = "You harmlessly place your unique magical sigil, which is about 1 square inch in size, on the targeted creature or object. The mark can be visible or invisible, and you can change it from one state to another by using an Interact action to touch the target. The mark can be scrubbed or scraped off with 5 minutes of work. If it's on a creature, it fades naturally over the course of a week. The time before the mark fades increases depending on your heightened level." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e9d3392d-696b-4ea4-b87a-69dc6847621b"), Type = TextBlockType.Text, Text = "You grant an ally a token of favor. You create a token, such as a lock of your hair or a flower, that persists for the spell’s duration; as part of Casting the Spell, you can Interact to pass the token to an ally within your reach. As long as the ally has the token on their person, they gain a +1 status bonus to Performance checks and Will saves. You can Dismiss the spell as a free action." };
+            yield return new TextBlock { Id = Guid.Parse("e9d3392d-696b-4ea4-b87a-69dc6847621b"), Type = TextBlockType.Text, Text = "You grant an ally a token of favor. You create a token, such as a lock of your hair or a flower, that persists for the spell's duration; as part of Casting the Spell, you can Interact to pass the token to an ally within your reach. As long as the ally has the token on their person, they gain a +1 status bonus to Performance checks and Will saves. You can Dismiss the spell as a free action." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

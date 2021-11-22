@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dfefb6bc-72a9-4cb6-bb80-b6e19d1730aa"), Type = TextBlockType.Text, Text = "You&#39;ve slept many nights in your armor and gotten used to it. You can sleep in armor overnight without being fatigued the next day. If you were already fatigued before sleeping, the armor doesn&#39;t prevent you from recovering from being fatigued." };
+            yield return new TextBlock { Id = Guid.Parse("dfefb6bc-72a9-4cb6-bb80-b6e19d1730aa"), Type = TextBlockType.Text, Text = "You've slept many nights in your armor and gotten used to it. You can sleep in armor overnight without being fatigued the next day. If you were already fatigued before sleeping, the armor doesn't prevent you from recovering from being fatigued." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("8719530e-f8f8-4718-b721-c369e02f1500"), Type = TextBlockType.Text, Text = "Whether through a connection to Torag’s forge, the azers of the Plane of Fire, or another source, you can exude a burst of energy. Mbe’ke and Taralu dwarves of the Mwangi Expanse believe this heritage is a gift from dragons or elemental spirits. Choose one of the following damage types: acid, cold, electricity, or fire. Once chosen, this can’t be changed. You gain the Energy Emanation activity." };
+            yield return new TextBlock { Id = Guid.Parse("8719530e-f8f8-4718-b721-c369e02f1500"), Type = TextBlockType.Text, Text = "Whether through a connection to Torag's forge, the azers of the Plane of Fire, or another source, you can exude a burst of energy. Mbe'ke and Taralu dwarves of the Mwangi Expanse believe this heritage is a gift from dragons or elemental spirits. Choose one of the following damage types: acid, cold, electricity, or fire. Once chosen, this can't be changed. You gain the Energy Emanation activity." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

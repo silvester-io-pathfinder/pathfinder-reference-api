@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c1e058af-c91d-4d5b-8bfa-d2815a3c2629"), Type = TextBlockType.Text, Text = "You appeal to your construct companion’s bond with its creator to have it break free of a controlling effect. Attempt to counteract the effect that confused or controlled your construct companion, using your Crafting modifier for the counteract check and half your level rounded up for the counteract level." };
+            yield return new TextBlock { Id = Guid.Parse("c1e058af-c91d-4d5b-8bfa-d2815a3c2629"), Type = TextBlockType.Text, Text = "You appeal to your construct companion's bond with its creator to have it break free of a controlling effect. Attempt to counteract the effect that confused or controlled your construct companion, using your Crafting modifier for the counteract check and half your level rounded up for the counteract level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

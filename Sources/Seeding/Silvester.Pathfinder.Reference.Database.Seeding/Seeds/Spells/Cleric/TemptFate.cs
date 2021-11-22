@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9265abd3-63c0-4d11-98cc-2688433b9f94"), Type = TextBlockType.Text, Text = "You twist the forces of fate to make a moment dire or uneventful, with no in-between. The target gains a +1 status bonus to the triggering saving throw. If the saving throw’s result is a success, it becomes a critical success. If it’s a failure, it becomes a critical failure, and the critical failure can’t be reduced by abilities that usually reduce critical failure, such as improved evasion." };
-            yield return new TextBlock { Id = Guid.Parse("8fb0157e-39c5-40ee-9c33-c534d6bd2a46"), Type = TextBlockType.Text, Text = "If the triggering ability did not have both a critical success and critical failure condition, tempt fate fails, but you don’t expend the Focus Point for Casting this Spell." };
+            yield return new TextBlock { Id = Guid.Parse("9265abd3-63c0-4d11-98cc-2688433b9f94"), Type = TextBlockType.Text, Text = "You twist the forces of fate to make a moment dire or uneventful, with no in-between. The target gains a +1 status bonus to the triggering saving throw. If the saving throw's result is a success, it becomes a critical success. If it's a failure, it becomes a critical failure, and the critical failure can't be reduced by abilities that usually reduce critical failure, such as improved evasion." };
+            yield return new TextBlock { Id = Guid.Parse("8fb0157e-39c5-40ee-9c33-c534d6bd2a46"), Type = TextBlockType.Text, Text = "If the triggering ability did not have both a critical success and critical failure condition, tempt fate fails, but you don't expend the Focus Point for Casting this Spell." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

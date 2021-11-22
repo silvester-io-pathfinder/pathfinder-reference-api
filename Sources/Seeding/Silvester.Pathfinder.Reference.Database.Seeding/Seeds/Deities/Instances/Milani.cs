@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instance
             return new DivineIntercession
             {
                 Id = Guid.Parse("779744b8-53f7-4904-bccc-49250d186cab"),
-                Description = "The Everbloom rewards those who put the needs of others first, especially when combating oppressive forces, and she doesn’t hesitate to impede any who enslave others or persecute the defenseless. ",
+                Description = "The Everbloom rewards those who put the needs of others first, especially when combating oppressive forces, and she doesn't hesitate to impede any who enslave others or persecute the defenseless. ",
                 MinorBoon = "Once, when you roll a failure on a Deception or Stealth check to protect an uprising from discovery, you critically succeed instead. Milani typically grants this boon for extremely significant checks on which the uprising's survival hinges.",
                 ModerateBoon = "When you use it to protect others, your shield blooms with roses brimming with razor-sharp thorns. You gain the Shield Warden feat, even if you don't meet its prerequisites. If you already had that feat, if your shield takes damage from a melee Strike in defense of your ally, the attacker takes piercing damage equal to half the shield's Hardness.",
                 MajorBoon = "You gain +4 status bonus to checks to Request during attempts to satisfy one of Milani's edicts. Once per day, you can sound a battle cry that grants creatures within a 30-foot emanation the effects of freedom of movement and affects all doors, locks, containers, and other bindings used to restrain or imprison others with the effects of the knock spell.",

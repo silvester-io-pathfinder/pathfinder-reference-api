@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("27a4f96c-a263-4af9-bf7c-855e696010f4"), Type = TextBlockType.Text, Text = "~ Access: You are from Dongun Hold or Alkenstar." };
-            yield return new TextBlock { Id = Guid.Parse("e3979b95-140d-48ea-9aff-ea579bb4d352"), Type = TextBlockType.Text, Text = "You know how to destroy objects with a well-placed explosion. Whenever you hit with a bomb (action: Strike) against a trap or an unattended object, you ignore the first 5 points of the object’s Hardness." };
+            yield return new TextBlock { Id = Guid.Parse("e3979b95-140d-48ea-9aff-ea579bb4d352"), Type = TextBlockType.Text, Text = "You know how to destroy objects with a well-placed explosion. Whenever you hit with a bomb (action: Strike) against a trap or an unattended object, you ignore the first 5 points of the object's Hardness." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

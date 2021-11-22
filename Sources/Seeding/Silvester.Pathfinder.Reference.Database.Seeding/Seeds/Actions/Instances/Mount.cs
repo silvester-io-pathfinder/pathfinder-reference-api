@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Actions.Instance
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("37cbf292-bc7b-46d3-909a-0bf344afe97b"), Text = "You move onto the creature and ride it. If you’re already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it." };
+            yield return new TextBlock { Id = Guid.Parse("37cbf292-bc7b-46d3-909a-0bf344afe97b"), Text = "You move onto the creature and ride it. If you're already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d6be0dc9-468f-4cc2-8186-94777e2d1232"), Type = TextBlockType.Text, Text = "You link your mind to the target’s mind and mentally impart to that target an amount of information in an instant that could otherwise be communicated in 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("d6be0dc9-468f-4cc2-8186-94777e2d1232"), Type = TextBlockType.Text, Text = "You link your mind to the target's mind and mentally impart to that target an amount of information in an instant that could otherwise be communicated in 10 minutes." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ef17e68-d60d-4e4b-a1d8-59f2078fa113"), Type = TextBlockType.Text, Text = "You resist death&#39;s clutches with supernatural vigor. When you use (feat: Orc Ferocity), you gain temporary Hit Points equal to your level." };
+            yield return new TextBlock { Id = Guid.Parse("8ef17e68-d60d-4e4b-a1d8-59f2078fa113"), Type = TextBlockType.Text, Text = "You resist death's clutches with supernatural vigor. When you use (feat: Orc Ferocity), you gain temporary Hit Points equal to your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

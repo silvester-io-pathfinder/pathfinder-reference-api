@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f4d1e162-c72d-43cc-a20c-177e18f3ca7c"), Type = TextBlockType.Text, Text = "You’ve trained to fight with allies in tunnel warrens, dense undergrowth, or similarly cramped terrain. If you are Small or smaller, you can end your movement in the same square as a Small or smaller ally. No more than two creatures can share the same space when using this ability or a similar one." };
+            yield return new TextBlock { Id = Guid.Parse("f4d1e162-c72d-43cc-a20c-177e18f3ca7c"), Type = TextBlockType.Text, Text = "You've trained to fight with allies in tunnel warrens, dense undergrowth, or similarly cramped terrain. If you are Small or smaller, you can end your movement in the same square as a Small or smaller ally. No more than two creatures can share the same space when using this ability or a similar one." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

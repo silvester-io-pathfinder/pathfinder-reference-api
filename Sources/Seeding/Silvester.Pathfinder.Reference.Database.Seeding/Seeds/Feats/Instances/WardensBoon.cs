@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9dc0c956-3ec5-4f8e-a807-532b0813a89b"), Type = TextBlockType.Text, Text = "By pointing out vulnerabilities, you grant the benefits listed in (feat: Hunt Prey) and your hunter’s edge benefit to an ally until the end of their next turn. Depending on whether you call out or use gestures, this action gains either the (trait: auditory) or (trait: visual) trait." };
+            yield return new TextBlock { Id = Guid.Parse("9dc0c956-3ec5-4f8e-a807-532b0813a89b"), Type = TextBlockType.Text, Text = "By pointing out vulnerabilities, you grant the benefits listed in (feat: Hunt Prey) and your hunter's edge benefit to an ally until the end of their next turn. Depending on whether you call out or use gestures, this action gains either the (trait: auditory) or (trait: visual) trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

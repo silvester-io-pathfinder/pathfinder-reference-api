@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9e38954b-5e53-44d9-b8d0-5917b4dd6012"), Type = TextBlockType.Text, Text = "You can use Medicine to resuscitate the dead. Attempt a DC 40 Medicine check to revive a dead creature that has been dead for no more than 3 rounds. If you succeed, the target returns to life with the effects of (spell: raise dead), except it still has the wounded condition it had before dying, increased by 1 (or wounded 1 if it wasn’t wounded before dying). Whether you succeed or fail, the target is temporarily immune to Resuscitate for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("9e38954b-5e53-44d9-b8d0-5917b4dd6012"), Type = TextBlockType.Text, Text = "You can use Medicine to resuscitate the dead. Attempt a DC 40 Medicine check to revive a dead creature that has been dead for no more than 3 rounds. If you succeed, the target returns to life with the effects of (spell: raise dead), except it still has the wounded condition it had before dying, increased by 1 (or wounded 1 if it wasn't wounded before dying). Whether you succeed or fail, the target is temporarily immune to Resuscitate for 1 day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

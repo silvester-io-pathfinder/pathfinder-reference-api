@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("64e3e5c1-ba7d-45de-9182-f57c56dff030"), Type = TextBlockType.Text, Text = "You have exceptional talent with one type of performance. You gain a +1 circumstance bonus when making a certain type of performance. If you are a master in Performance, this bonus increases to +2. Select one of the following specialties and apply the bonus when attempting Performance checks of that type. If it’s unclear whether the specialty applies, the GM decides." };
+            yield return new TextBlock { Id = Guid.Parse("64e3e5c1-ba7d-45de-9182-f57c56dff030"), Type = TextBlockType.Text, Text = "You have exceptional talent with one type of performance. You gain a +1 circumstance bonus when making a certain type of performance. If you are a master in Performance, this bonus increases to +2. Select one of the following specialties and apply the bonus when attempting Performance checks of that type. If it's unclear whether the specialty applies, the GM decides." };
             yield return new TextBlock { Id = Guid.Parse("f6961b41-bac5-45a5-bbf5-bf6c5c71af51"), Type = TextBlockType.Enumeration, Text = "**Specialties***" };
             yield return new TextBlock { Id = Guid.Parse("41cb2cb7-70c2-49d5-9dbb-639c4165060f"), Type = TextBlockType.Enumeration, Text = " Acting: Drama, pantomime, puppetry" };
             yield return new TextBlock { Id = Guid.Parse("d665262b-d402-42de-bf53-0de0ecd8d3a0"), Type = TextBlockType.Enumeration, Text = " Comedy: Buffoonery, joke telling, limericks" };

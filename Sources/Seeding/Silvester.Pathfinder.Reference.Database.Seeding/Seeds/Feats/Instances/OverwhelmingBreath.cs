@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f595364-3ea3-49b3-abca-4d5dd7f09d3a"), Type = TextBlockType.Text, Text = "You control your breathing and align it with your ki, exhaling with controlled force in order to overcome your opponent’s resistance. If you use your next action to (activity: Cast a Spell) that has the (trait: monk | Monk - Item) trait and no duration, the spell and any (action: Strikes | Strike) you make as a result of casting it ignore an amount of the target’s resistance to physical damage equal to your level." };
+            yield return new TextBlock { Id = Guid.Parse("5f595364-3ea3-49b3-abca-4d5dd7f09d3a"), Type = TextBlockType.Text, Text = "You control your breathing and align it with your ki, exhaling with controlled force in order to overcome your opponent's resistance. If you use your next action to (activity: Cast a Spell) that has the (trait: monk | Monk - Item) trait and no duration, the spell and any (action: Strikes | Strike) you make as a result of casting it ignore an amount of the target's resistance to physical damage equal to your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

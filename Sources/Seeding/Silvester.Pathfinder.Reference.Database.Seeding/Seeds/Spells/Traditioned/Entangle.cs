@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b72ecf42-66d3-4d4e-a854-9f26a2ecafdc"), Type = TextBlockType.Text, Text = "Plants in the area entangle creatures. The area counts as difficult terrain. Each round that a creature starts its turn in the area, it must attempt a Reflex save. On a failure, it takes a –10-foot circumstance penalty to its Speeds until it leaves the area, and on a critical failure, it is also immobilized for 1 round. Creatures can attempt to Escape at entangle’s DC to remove these effects." };
+            yield return new TextBlock { Id = Guid.Parse("b72ecf42-66d3-4d4e-a854-9f26a2ecafdc"), Type = TextBlockType.Text, Text = "Plants in the area entangle creatures. The area counts as difficult terrain. Each round that a creature starts its turn in the area, it must attempt a Reflex save. On a failure, it takes a –10-foot circumstance penalty to its Speeds until it leaves the area, and on a critical failure, it is also immobilized for 1 round. Creatures can attempt to Escape at entangle's DC to remove these effects." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

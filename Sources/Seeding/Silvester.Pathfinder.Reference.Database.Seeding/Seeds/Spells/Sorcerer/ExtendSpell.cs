@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5aefd9cf-d729-4b9a-a992-04a8dcdf4593"), Type = TextBlockType.Text, Text = "You call upon your blood’s knowledge of the ancients to extend your magic. If your next action is to Cast a Spell with a duration of 1 minute and a single target, the spell instead lasts 10 minutes. You can extend a spell only if you cast it from a spell slot lower than your highest spell slot, and you can have only one active spell at a time extended in this way." };
+            yield return new TextBlock { Id = Guid.Parse("5aefd9cf-d729-4b9a-a992-04a8dcdf4593"), Type = TextBlockType.Text, Text = "You call upon your blood's knowledge of the ancients to extend your magic. If your next action is to Cast a Spell with a duration of 1 minute and a single target, the spell instead lasts 10 minutes. You can extend a spell only if you cast it from a spell slot lower than your highest spell slot, and you can have only one active spell at a time extended in this way." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

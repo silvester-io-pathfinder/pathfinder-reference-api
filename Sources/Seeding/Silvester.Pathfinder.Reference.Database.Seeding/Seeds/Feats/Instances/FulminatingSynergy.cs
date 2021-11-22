@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ba21016e-1f1a-4cec-953a-4940aacbcaee"), Type = TextBlockType.Text, Text = "When you draw upon your spells’ synergy, you create a physical manifestation of their magical resonance and invoke it to harm a foe. When you use (feat: Dualistic Synergy), choose a damage type: acid, cold, electricity, or fire. In addition to (feat: Dualistic Synergy)’s normal effect, a foe within 30 feet of you takes an amount of damage of the chosen type equal to the spell’s level. If the spell already deals damage of the chosen type, combine the damage before applying weaknesses and resistances." };
+            yield return new TextBlock { Id = Guid.Parse("ba21016e-1f1a-4cec-953a-4940aacbcaee"), Type = TextBlockType.Text, Text = "When you draw upon your spells' synergy, you create a physical manifestation of their magical resonance and invoke it to harm a foe. When you use (feat: Dualistic Synergy), choose a damage type: acid, cold, electricity, or fire. In addition to (feat: Dualistic Synergy)'s normal effect, a foe within 30 feet of you takes an amount of damage of the chosen type equal to the spell's level. If the spell already deals damage of the chosen type, combine the damage before applying weaknesses and resistances." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("96e576d7-bde0-48a4-a46d-91fa6f6b253c"), Type = TextBlockType.Text, Text = "Select one arcane school of magic. You gain the school’s initial school spell. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by studying. (For more on arcane schools, see page 204.)" };
+            yield return new TextBlock { Id = Guid.Parse("96e576d7-bde0-48a4-a46d-91fa6f6b253c"), Type = TextBlockType.Text, Text = "Select one arcane school of magic. You gain the school's initial school spell. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by studying. (For more on arcane schools, see page 204.)" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

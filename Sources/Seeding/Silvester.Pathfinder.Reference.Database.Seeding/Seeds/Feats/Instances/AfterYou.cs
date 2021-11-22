@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("69a3c11e-ba1d-48c2-8521-d83fcb8c109f"), Type = TextBlockType.Text, Text = "You allow your foes to make the first move in a show of incredible confidence. You don’t roll initiative; instead you voluntarily go last. You gain panache. If more than one character uses this ability or another ability to go last, use the normal rules for resolving a tie: NPCs and monsters act before PCs, and within those groups, the creatures can choose whichever order they want." };
+            yield return new TextBlock { Id = Guid.Parse("69a3c11e-ba1d-48c2-8521-d83fcb8c109f"), Type = TextBlockType.Text, Text = "You allow your foes to make the first move in a show of incredible confidence. You don't roll initiative; instead you voluntarily go last. You gain panache. If more than one character uses this ability or another ability to go last, use the normal rules for resolving a tie: NPCs and monsters act before PCs, and within those groups, the creatures can choose whichever order they want." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

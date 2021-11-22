@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("18d1c98c-7936-4fad-9b83-46da3adeadf0"), Type = TextBlockType.Text, Text = "You have come to know conrasu weapons as you know yourself. Whenever you critically hit using a (item: composite shortbow), (item: glaive), (item: longspear), (item: longsword), (item: shortbow), (item: spear), or a conrasu weapon, you apply the weapon’s critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("18d1c98c-7936-4fad-9b83-46da3adeadf0"), Type = TextBlockType.Text, Text = "You have come to know conrasu weapons as you know yourself. Whenever you critically hit using a (item: composite shortbow), (item: glaive), (item: longspear), (item: longsword), (item: shortbow), (item: spear), or a conrasu weapon, you apply the weapon's critical specialization effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

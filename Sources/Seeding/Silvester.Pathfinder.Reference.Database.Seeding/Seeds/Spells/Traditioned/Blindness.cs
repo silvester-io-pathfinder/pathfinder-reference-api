@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dd9e4d1c-d272-4b15-9eac-77518d6af7ab"), Type = Utilities.Text.TextBlockType.Text, Text = "You blind the target. The effect is determined by the target’s Fortitude save. The target then becomes temporarily immune for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("dd9e4d1c-d272-4b15-9eac-77518d6af7ab"), Type = Utilities.Text.TextBlockType.Text, Text = "You blind the target. The effect is determined by the target's Fortitude save. The target then becomes temporarily immune for 1 minute." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

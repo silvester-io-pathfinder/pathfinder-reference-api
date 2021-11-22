@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aacb03c4-5f66-4411-877c-a1916e933dc5"), Type = TextBlockType.Text, Text = "You gain the initial order spell from your order. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by being one with nature. (For more on order spells, see page 131.)" };
+            yield return new TextBlock { Id = Guid.Parse("aacb03c4-5f66-4411-877c-a1916e933dc5"), Type = TextBlockType.Text, Text = "You gain the initial order spell from your order. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by being one with nature. (For more on order spells, see page 131.)" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Main-Gauche",
-                Description = "This parrying dagger features a robust guard to protect the wielder’s hand.",
+                Description = "This parrying dagger features a robust guard to protect the wielder's hand.",
                 Price = 50,
                 Damage = "1d4",
                 Hands = "1",

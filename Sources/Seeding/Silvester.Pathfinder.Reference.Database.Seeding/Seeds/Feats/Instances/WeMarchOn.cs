@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f4d288dc-e84d-4708-8506-94f2ed7989db"), Type = TextBlockType.Text, Text = "You make sure that your allies push themselves while traveling. You gain the (feat: Caravan Leader) and (feat: Pick Up the Pace) general feats, even if you don’t meet the prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("f4d288dc-e84d-4708-8506-94f2ed7989db"), Type = TextBlockType.Text, Text = "You make sure that your allies push themselves while traveling. You gain the (feat: Caravan Leader) and (feat: Pick Up the Pace) general feats, even if you don't meet the prerequisites." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

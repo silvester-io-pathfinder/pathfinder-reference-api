@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MeleeWeapons.Ins
             {
                 Id = ID,
                 Name = "Sai",
-                Description = "This piercing dagger is a metal spike flanked by a pair of prongs that can be used to trap an enemy’s weapon.",
+                Description = "This piercing dagger is a metal spike flanked by a pair of prongs that can be used to trap an enemy's weapon.",
                 Price = 60,
                 Damage = "1d4",
                 Hands = "1",

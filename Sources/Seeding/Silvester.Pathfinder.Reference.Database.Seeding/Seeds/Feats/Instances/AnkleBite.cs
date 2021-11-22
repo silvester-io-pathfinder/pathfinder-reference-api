@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad4b29db-da66-4304-8e71-9d9059ad3e06"), Type = TextBlockType.Text, Text = "Whenever someone grabs onto you, you instinctively bite down hard. Sometimes that makes them let go, and sometimes it just makes them angrier, but either way, it’s both satisfying and tasty. Make a jaws (action: Strike) against the triggering foe. On a critical hit, you are no longer grabbed. This (action: Strike) doesn’t count toward your multiple attack penalty, and your multiple attack penalty doesn’t apply to this (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("ad4b29db-da66-4304-8e71-9d9059ad3e06"), Type = TextBlockType.Text, Text = "Whenever someone grabs onto you, you instinctively bite down hard. Sometimes that makes them let go, and sometimes it just makes them angrier, but either way, it's both satisfying and tasty. Make a jaws (action: Strike) against the triggering foe. On a critical hit, you are no longer grabbed. This (action: Strike) doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this (action: Strike)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

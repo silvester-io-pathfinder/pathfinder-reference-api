@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9617bd0e-dbc3-48c1-af5b-aa2e3971086e"), Type = TextBlockType.Text, Text = "You utter phrases in an unknown tongue, assaulting the minds of those nearby. Each target must attempt a Will save. Regardless of the result of its save, each target is then temporarily immune for 1 minute. You can increase the number of actions it takes to Cast the Spell (to a maximum of 3 actions total). For each additional action, increase the emanation’s radius by 5 feet, to a maximum of 10 extra feet for 3 actions." };
+            yield return new TextBlock { Id = Guid.Parse("9617bd0e-dbc3-48c1-af5b-aa2e3971086e"), Type = TextBlockType.Text, Text = "You utter phrases in an unknown tongue, assaulting the minds of those nearby. Each target must attempt a Will save. Regardless of the result of its save, each target is then temporarily immune for 1 minute. You can increase the number of actions it takes to Cast the Spell (to a maximum of 3 actions total). For each additional action, increase the emanation's radius by 5 feet, to a maximum of 10 extra feet for 3 actions." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

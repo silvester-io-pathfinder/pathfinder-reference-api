@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.AlchemicalPoison
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ab9af6c8-886c-4cc4-8347-d5d5b6c520e5"), Text = "This toxin is a compound of arsenic and other substances. You can’t reduce your sickened condition while affected." };
+            yield return new TextBlock { Id = Guid.Parse("ab9af6c8-886c-4cc4-8347-d5d5b6c520e5"), Text = "This toxin is a compound of arsenic and other substances. You can't reduce your sickened condition while affected." };
         }
 
         protected override IEnumerable<StaggeredEffectStage> GetAlchemicalPoisonStages()

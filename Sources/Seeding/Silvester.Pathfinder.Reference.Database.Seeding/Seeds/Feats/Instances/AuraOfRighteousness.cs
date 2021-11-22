@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6ddc95a4-da90-429a-b2bc-71a18ca5c89a"), Type = TextBlockType.Text, Text = "Your righteous aura dampens evil’s might. You and all allies within 15 feet gain evil resistance 5." };
+            yield return new TextBlock { Id = Guid.Parse("6ddc95a4-da90-429a-b2bc-71a18ca5c89a"), Type = TextBlockType.Text, Text = "Your righteous aura dampens evil's might. You and all allies within 15 feet gain evil resistance 5." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

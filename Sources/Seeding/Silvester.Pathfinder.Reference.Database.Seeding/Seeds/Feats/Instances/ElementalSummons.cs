@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea83ef50-515e-4122-91de-e3d4643cf183"), Type = TextBlockType.Text, Text = "You can call the four elements to you. You can spend 10 minutes in concert with nature to replace one of the spells you’ve prepared in one of your druid spell slots with a (spell: summon elemental) spell of the same level." };
+            yield return new TextBlock { Id = Guid.Parse("ea83ef50-515e-4122-91de-e3d4643cf183"), Type = TextBlockType.Text, Text = "You can call the four elements to you. You can spend 10 minutes in concert with nature to replace one of the spells you've prepared in one of your druid spell slots with a (spell: summon elemental) spell of the same level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

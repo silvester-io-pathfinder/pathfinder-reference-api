@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e662240c-5916-4536-aa79-b28b9f02eac1"), Type = TextBlockType.Text, Text = "You’ve continued to refine the knowledge and skills you’ve gained through your life. When you choose a skill in which to become trained with (Feat: Ancestral Longevity), you can also choose a skill in which you are already trained and become an expert in that skill. This lasts until your (Feat: Ancestral Longevity) expires." };
+            yield return new TextBlock { Id = Guid.Parse("e662240c-5916-4536-aa79-b28b9f02eac1"), Type = TextBlockType.Text, Text = "You've continued to refine the knowledge and skills you've gained through your life. When you choose a skill in which to become trained with (Feat: Ancestral Longevity), you can also choose a skill in which you are already trained and become an expert in that skill. This lasts until your (Feat: Ancestral Longevity) expires." };
             yield return new TextBlock { Id = Guid.Parse("a3ee99ed-beed-4de2-9f4c-58a1700e9441"), Type = TextBlockType.Text, Text = "When the effects of (Feat: Ancestral Longevity) and Expert Longevity expire, you can retrain one of your skill increases. The skill increase you gain from this retraining must either make you trained in the skill you chose with (Feat: Ancestral Longevity) or make you an expert in the skill you chose with Expert Longevity." };
         }
 

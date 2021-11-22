@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5cbb6c7-2ef0-400a-b50d-904b4a06cee5"), Type = TextBlockType.Text, Text = "Imitating animal threat displays, you make yourself appear larger and more imposing. Roll one Intimidation check to (action: Demoralize) and compare the result to the Will DC of each animal, fungus, and plant creature in a 15-foot cone. When you do, (action: Demoralize) gains the (trait: visual) trait, and creatures are affected if they can see you. You don’t take a penalty if the creature doesn’t understand your language." };
+            yield return new TextBlock { Id = Guid.Parse("d5cbb6c7-2ef0-400a-b50d-904b4a06cee5"), Type = TextBlockType.Text, Text = "Imitating animal threat displays, you make yourself appear larger and more imposing. Roll one Intimidation check to (action: Demoralize) and compare the result to the Will DC of each animal, fungus, and plant creature in a 15-foot cone. When you do, (action: Demoralize) gains the (trait: visual) trait, and creatures are affected if they can see you. You don't take a penalty if the creature doesn't understand your language." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

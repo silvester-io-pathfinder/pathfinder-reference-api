@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e597cfbb-fdff-4a7c-8bd9-66d9fcdf55ae"), Type = TextBlockType.Text, Text = "You slow down, focus, and take a careful shot. Make a ranged (action: Strike) with a weapon in the bow weapon group. You gain a +2 circumstance bonus to the attack roll and ignore the target’s concealed condition. If the target is hidden, reduce the flat check from being hidden from 11 to 5." };
+            yield return new TextBlock { Id = Guid.Parse("e597cfbb-fdff-4a7c-8bd9-66d9fcdf55ae"), Type = TextBlockType.Text, Text = "You slow down, focus, and take a careful shot. Make a ranged (action: Strike) with a weapon in the bow weapon group. You gain a +2 circumstance bonus to the attack roll and ignore the target's concealed condition. If the target is hidden, reduce the flat check from being hidden from 11 to 5." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

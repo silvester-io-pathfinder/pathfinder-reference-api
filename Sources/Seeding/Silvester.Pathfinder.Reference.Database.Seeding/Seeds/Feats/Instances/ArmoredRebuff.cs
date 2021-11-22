@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("99896d37-4405-4828-9201-a2e08eeda0ae"), Type = TextBlockType.Text, Text = "You rebuff puny attacks with your armor, knocking back your foe. Attempt an Athletics check to (action: Shove) the triggering foe, even if you don’t have a hand free. If you succeed, you can’t (action: Stride) to follow the foe, as you’re knocking the foe back with the rebounded attack, not by physically moving towards them." };
+            yield return new TextBlock { Id = Guid.Parse("99896d37-4405-4828-9201-a2e08eeda0ae"), Type = TextBlockType.Text, Text = "You rebuff puny attacks with your armor, knocking back your foe. Attempt an Athletics check to (action: Shove) the triggering foe, even if you don't have a hand free. If you succeed, you can't (action: Stride) to follow the foe, as you're knocking the foe back with the rebounded attack, not by physically moving towards them." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

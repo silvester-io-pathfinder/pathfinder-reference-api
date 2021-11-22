@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Conditions.Insta
 
         public override IEnumerable<TextBlock> GetConditionDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("02af347c-1d15-459a-88ce-3bd53bfcebdd"), Type = Utilities.Text.TextBlockType.Text, Text = "If you are unnoticed by a creature, that creature has no idea you are present at all. When you’re unnoticed, you’re also undetected by the creature. This condition matters for abilities that can be used only against targets totally unaware of your presence." };
+            yield return new TextBlock { Id = Guid.Parse("02af347c-1d15-459a-88ce-3bd53bfcebdd"), Type = Utilities.Text.TextBlockType.Text, Text = "If you are unnoticed by a creature, that creature has no idea you are present at all. When you're unnoticed, you're also undetected by the creature. This condition matters for abilities that can be used only against targets totally unaware of your presence." };
         }
 
         public override SourcePage? GetSourcePage()

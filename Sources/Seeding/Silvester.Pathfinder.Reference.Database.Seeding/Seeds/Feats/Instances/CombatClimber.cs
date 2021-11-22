@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e4985896-cfb7-4498-8645-d637bdab4770"), Type = TextBlockType.Text, Text = "Your techniques allow you to fight as you climb. You’re not flat-footed while (action: Climbing | Climb) and can (action: Climb) with a hand occupied. You must still use another hand and both legs to (action: Climb)." };
+            yield return new TextBlock { Id = Guid.Parse("e4985896-cfb7-4498-8645-d637bdab4770"), Type = TextBlockType.Text, Text = "Your techniques allow you to fight as you climb. You're not flat-footed while (action: Climbing | Climb) and can (action: Climb) with a hand occupied. You must still use another hand and both legs to (action: Climb)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

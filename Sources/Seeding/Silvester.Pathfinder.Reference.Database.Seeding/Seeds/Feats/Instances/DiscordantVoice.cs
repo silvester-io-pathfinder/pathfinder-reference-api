@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("18d693e1-6a05-4dea-bf64-a69a763c6e2f"), Type = TextBlockType.Text, Text = "Your (spell: inspire courage) lets loose a discordant shriek that imbues your allies’ attacks with powerful sonic reverberations. While your allies are affected by your (spell: inspire courage), their weapon (action: Strikes | strike) and unarmed attacks deal an additional 1d6 sonic damage." };
+            yield return new TextBlock { Id = Guid.Parse("18d693e1-6a05-4dea-bf64-a69a763c6e2f"), Type = TextBlockType.Text, Text = "Your (spell: inspire courage) lets loose a discordant shriek that imbues your allies' attacks with powerful sonic reverberations. While your allies are affected by your (spell: inspire courage), their weapon (action: Strikes | strike) and unarmed attacks deal an additional 1d6 sonic damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

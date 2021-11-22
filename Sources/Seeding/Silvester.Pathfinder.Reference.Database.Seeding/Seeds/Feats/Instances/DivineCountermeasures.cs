@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c910689e-bbe1-44d4-a65a-00836041bd08"), Type = TextBlockType.Text, Text = "You&#39;ve studied your celestial heritage with the intent of better defending yourself, and you&#39;ve found that your techniques are equally powerful against celestials, fiends, and other divine entities. You gain a +1 circumstance bonus to all saving throws against (trait: divine) effects." };
+            yield return new TextBlock { Id = Guid.Parse("c910689e-bbe1-44d4-a65a-00836041bd08"), Type = TextBlockType.Text, Text = "You've studied your celestial heritage with the intent of better defending yourself, and you've found that your techniques are equally powerful against celestials, fiends, and other divine entities. You gain a +1 circumstance bonus to all saving throws against (trait: divine) effects." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

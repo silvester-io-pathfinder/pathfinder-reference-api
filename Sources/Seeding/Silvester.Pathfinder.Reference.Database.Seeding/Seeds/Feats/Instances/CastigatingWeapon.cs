@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2172138-9669-42fe-9276-f410fb860ff3"), Type = TextBlockType.Text, Text = "The force of your deity’s castigation strengthens your body so you can strike down the wicked. After you damage a fiend using a (spell: heal) spell, your weapon or unarmed Strikes deal extra good damage to fiends equal to half the level of the heal spell until the end of your next turn. This is cumulative with any good damage the weapon already deals (such as from a holy rune)." };
+            yield return new TextBlock { Id = Guid.Parse("e2172138-9669-42fe-9276-f410fb860ff3"), Type = TextBlockType.Text, Text = "The force of your deity's castigation strengthens your body so you can strike down the wicked. After you damage a fiend using a (spell: heal) spell, your weapon or unarmed Strikes deal extra good damage to fiends equal to half the level of the heal spell until the end of your next turn. This is cumulative with any good damage the weapon already deals (such as from a holy rune)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

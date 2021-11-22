@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("b0627230-1b6f-41fa-b385-e9315448ce04"), Type = Utilities.Text.TextBlockType.Text, Text = "To the target, your words are honey and your visage seems bathed in a dreamy haze. It must attempt a Will save, with a +4 circumstance bonus if you or your allies recently threatened it or used hostile actions against it." };
-            yield return new TextBlock { Id = Guid.Parse("1d038912-70a4-45ee-aa4b-c9b2cae4f931"), Type = Utilities.Text.TextBlockType.Text, Text = "You can Dismiss the spell. If you use hostile actions against the target, the spell ends. When the spell ends, the target doesn’t necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, meaning you could potentially convince the target to continue being your friend via mundane means." };
+            yield return new TextBlock { Id = Guid.Parse("1d038912-70a4-45ee-aa4b-c9b2cae4f931"), Type = Utilities.Text.TextBlockType.Text, Text = "You can Dismiss the spell. If you use hostile actions against the target, the spell ends. When the spell ends, the target doesn't necessarily realize it was charmed unless its friendship with you or the actions you convinced it to take clash with its expectations, meaning you could potentially convince the target to continue being your friend via mundane means." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -39,8 +39,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("ace65902-0a3b-4cec-acb6-6f8282687977"),
                 CriticalSuccess = "The target is unaffected and aware you tried to charm it.",
                 Success = "The target is unaffected but thinks your spell was something harmless instead of charm, unless it identifies the spell (see Identifying Spells on page 305).",
-                Failure = "The target’s attitude becomes friendly toward you. If it was friendly, it becomes helpful. It can’t use hostile actions against you.",
-                CriticalFailure = "The target’s attitude becomes helpful toward you, and it can’t use hostile actions against you."
+                Failure = "The target's attitude becomes friendly toward you. If it was friendly, it becomes helpful. It can't use hostile actions against you.",
+                CriticalFailure = "The target's attitude becomes helpful toward you, and it can't use hostile actions against you."
             };
         }
 

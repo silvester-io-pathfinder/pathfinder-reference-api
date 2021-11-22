@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("629e6bc8-2c82-41d1-a7fc-2f0bab24bb9a"), Type = TextBlockType.Text, Text = "You tap into the target’s inner heroism, granting it a +1 status bonus to attack rolls, Perception checks, saving throws, and skill checks." };
+            yield return new TextBlock { Id = Guid.Parse("629e6bc8-2c82-41d1-a7fc-2f0bab24bb9a"), Type = TextBlockType.Text, Text = "You tap into the target's inner heroism, granting it a +1 status bonus to attack rolls, Perception checks, saving throws, and skill checks." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

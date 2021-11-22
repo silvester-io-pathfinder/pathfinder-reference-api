@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "+2",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("547920c3-d1c3-4648-874a-5f521ddba013"), Type = TextBlockType.Text, Text = "Increase the mental damage by 2d4 and the emanation’s radius by 5 feet." }
+                    new TextBlock { Id = Guid.Parse("547920c3-d1c3-4648-874a-5f521ddba013"), Type = TextBlockType.Text, Text = "Increase the mental damage by 2d4 and the emanation's radius by 5 feet." }
                 }
             };
         }

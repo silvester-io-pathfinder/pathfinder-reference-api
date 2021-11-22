@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea985b49-150e-4d0b-b458-e1b404f67f81"), Type = TextBlockType.Text, Text = "Your eidolon gains a bevy of lower-level spells. Choose an innate spell of your eidolon’s tradition of each of the spell levels from 1 to 7 in which your eidolon doesn’t currently have an innate spell from (feat: Magical Adept). Your eidolon can cast each once per day as innate spells. You can swap these spells at every even level, but your eidolon can never know more than one spell of each spell level 1 through 7." };
+            yield return new TextBlock { Id = Guid.Parse("ea985b49-150e-4d0b-b458-e1b404f67f81"), Type = TextBlockType.Text, Text = "Your eidolon gains a bevy of lower-level spells. Choose an innate spell of your eidolon's tradition of each of the spell levels from 1 to 7 in which your eidolon doesn't currently have an innate spell from (feat: Magical Adept). Your eidolon can cast each once per day as innate spells. You can swap these spells at every even level, but your eidolon can never know more than one spell of each spell level 1 through 7." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

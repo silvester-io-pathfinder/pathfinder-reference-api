@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e639fb66-bf75-46ed-8d33-669e99b96acc"), Type = TextBlockType.Text, Text = "You gain the (spell: shall not rout, shall not falter) focus spell. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can regain using the (action: Refocus) activity to recite the Crimson Oath and meditate on its teachings. If you already have a focus pool, increase the number of Focus Points in your focus pool by 1. Your knight reclaimant focus spells are divine spells; when you gain this feat, you become trained in divine spell attacks and spell DCs and your spellcasting ability is Charisma." };
+            yield return new TextBlock { Id = Guid.Parse("e639fb66-bf75-46ed-8d33-669e99b96acc"), Type = TextBlockType.Text, Text = "You gain the (spell: shall not rout, shall not falter) focus spell. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can regain using the (action: Refocus) activity to recite the Crimson Oath and meditate on its teachings. If you already have a focus pool, increase the number of Focus Points in your focus pool by 1. Your knight reclaimant focus spells are divine spells; when you gain this feat, you become trained in divine spell attacks and spell DCs and your spellcasting ability is Charisma." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

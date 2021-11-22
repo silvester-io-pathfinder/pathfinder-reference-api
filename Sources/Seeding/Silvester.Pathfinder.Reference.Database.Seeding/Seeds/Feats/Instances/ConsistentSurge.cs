@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e041ee2f-928f-40dd-8535-c01854313359"), Type = TextBlockType.Text, Text = "Your nanites are incredibly effective, capable of improving your body’s efficiency regularly. You can use (feat: Nanite Surge) with a frequency of once per 10 minutes, rather than once per hour." };
+            yield return new TextBlock { Id = Guid.Parse("e041ee2f-928f-40dd-8535-c01854313359"), Type = TextBlockType.Text, Text = "Your nanites are incredibly effective, capable of improving your body's efficiency regularly. You can use (feat: Nanite Surge) with a frequency of once per 10 minutes, rather than once per hour." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

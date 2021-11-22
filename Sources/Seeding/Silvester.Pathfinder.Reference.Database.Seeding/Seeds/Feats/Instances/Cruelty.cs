@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c55adac-ceed-474f-995a-5de4a0822251"), Type = TextBlockType.Text, Text = "The harm you deal with your corrupting touch saps the strength from your enemy’s body. If your next action is to cast (spell: touch of corruption) on a living creature, the target is also enfeebled 1 for 1 minute if it fails its save (enfeebled 2 if it critically fails)." };
+            yield return new TextBlock { Id = Guid.Parse("4c55adac-ceed-474f-995a-5de4a0822251"), Type = TextBlockType.Text, Text = "The harm you deal with your corrupting touch saps the strength from your enemy's body. If your next action is to cast (spell: touch of corruption) on a living creature, the target is also enfeebled 1 for 1 minute if it fails its save (enfeebled 2 if it critically fails)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

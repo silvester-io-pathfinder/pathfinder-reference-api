@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3b3dbd84-5cf8-4757-9329-2e8be3ffa507"), Type = TextBlockType.Text, Text = "You call upon the creatures of nature to come to your aid. You can spend 10 minutes in concert with nature to replace one of the spells you’ve prepared in one of your druid spell slots with a (spell: summon animal) or (spell: summon plant or fungus) spell of the same level." };
+            yield return new TextBlock { Id = Guid.Parse("3b3dbd84-5cf8-4757-9329-2e8be3ffa507"), Type = TextBlockType.Text, Text = "You call upon the creatures of nature to come to your aid. You can spend 10 minutes in concert with nature to replace one of the spells you've prepared in one of your druid spell slots with a (spell: summon animal) or (spell: summon plant or fungus) spell of the same level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

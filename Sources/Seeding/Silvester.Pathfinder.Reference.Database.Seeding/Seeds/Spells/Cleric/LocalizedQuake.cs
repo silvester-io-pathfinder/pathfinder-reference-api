@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("96942c90-ad6d-474f-93bf-faaecaafae58"), Type = TextBlockType.Text, Text = "You shake the earth, toppling nearby creatures. Choose whether the spell’s area is a 15-foot emanation or a 15-foot cone when you cast it. Each creature in the area standing on solid ground may take 4d6 bludgeoning damage and must attempt a Reflex saving throw." };
+            yield return new TextBlock { Id = Guid.Parse("96942c90-ad6d-474f-93bf-faaecaafae58"), Type = TextBlockType.Text, Text = "You shake the earth, toppling nearby creatures. Choose whether the spell's area is a 15-foot emanation or a 15-foot cone when you cast it. Each creature in the area standing on solid ground may take 4d6 bludgeoning damage and must attempt a Reflex saving throw." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

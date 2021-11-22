@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8e2ec9ce-e885-417f-bea2-481967732e6d"), Type = TextBlockType.Text, Text = "You’re well-versed in weapons that allow you to bring bounties in alive. You are trained with the following weapons: (item: bola), (item: sap), and (item: whip). You gain access to bolas. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the weapons listed." };
+            yield return new TextBlock { Id = Guid.Parse("8e2ec9ce-e885-417f-bea2-481967732e6d"), Type = TextBlockType.Text, Text = "You're well-versed in weapons that allow you to bring bounties in alive. You are trained with the following weapons: (item: bola), (item: sap), and (item: whip). You gain access to bolas. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the weapons listed." };
             yield return new TextBlock { Id = Guid.Parse("d953d1f9-d2d5-4ab4-904c-14daf7e40e18"), Type = TextBlockType.Text, Text = "In addition, you take no penalty when making a nonlethal attack with a weapon without the (trait: nonlethal) trait." };
         }
 

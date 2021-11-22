@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eb0d66c5-2890-4643-936a-0229c8a13040"), Type = TextBlockType.Text, Text = "Your divine ally radiates power, enhancing your chosen weapon. When you choose the weapon for your blade ally during your daily preparations, add the following property runes to the list of effects you can choose from: (item: flaming | Flaming Runestone) and any aligned properties ((item: anarchic | Anarchic Runestone), (item: axiomatic | Axiomatic Runestone), (item: holy | Holy Runestone), or (item: unholy | Unholy Runestone)) that match your cause’s alignment." };
+            yield return new TextBlock { Id = Guid.Parse("eb0d66c5-2890-4643-936a-0229c8a13040"), Type = TextBlockType.Text, Text = "Your divine ally radiates power, enhancing your chosen weapon. When you choose the weapon for your blade ally during your daily preparations, add the following property runes to the list of effects you can choose from: (item: flaming | Flaming Runestone) and any aligned properties ((item: anarchic | Anarchic Runestone), (item: axiomatic | Axiomatic Runestone), (item: holy | Holy Runestone), or (item: unholy | Unholy Runestone)) that match your cause's alignment." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

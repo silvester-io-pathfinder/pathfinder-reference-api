@@ -37,8 +37,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("450c7565-cdd5-43e5-8684-556be2933a2a"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes a –2 status penalty to Deception checks.",
-                Failure = "The target can’t speak any deliberate and intentional lies, and it takes a –2 status penalty to Deception checks.",
-                CriticalFailure = "The target can’t speak any deliberate and intentional lies and takes a –4 status penalty to Deception checks."
+                Failure = "The target can't speak any deliberate and intentional lies, and it takes a –2 status penalty to Deception checks.",
+                CriticalFailure = "The target can't speak any deliberate and intentional lies and takes a –4 status penalty to Deception checks."
             };
         }
 

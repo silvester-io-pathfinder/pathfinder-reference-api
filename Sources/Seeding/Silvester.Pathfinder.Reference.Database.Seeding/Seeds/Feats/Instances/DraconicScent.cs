@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5958837e-83e7-49d2-8d1f-8b5ff083db00"), Type = TextBlockType.Text, Text = "Your sense of smell is uncanny, much like a dragon’s. You gain imprecise scent with a range of 30 feet. The GM might double the range if you’re downwind from the creature or halve the range if you’re upwind, at their discretion." };
+            yield return new TextBlock { Id = Guid.Parse("5958837e-83e7-49d2-8d1f-8b5ff083db00"), Type = TextBlockType.Text, Text = "Your sense of smell is uncanny, much like a dragon's. You gain imprecise scent with a range of 30 feet. The GM might double the range if you're downwind from the creature or halve the range if you're upwind, at their discretion." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

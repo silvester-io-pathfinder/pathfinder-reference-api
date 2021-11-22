@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("68ae6389-9c30-4688-ab66-a71baf38a53b"), Type = TextBlockType.Text, Text = "You rail against the sin of sloth, turning a foe’s laziness against it. You can cast the (spell: litany against sloth) devotion spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("68ae6389-9c30-4688-ab66-a71baf38a53b"), Type = TextBlockType.Text, Text = "You rail against the sin of sloth, turning a foe's laziness against it. You can cast the (spell: litany against sloth) devotion spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

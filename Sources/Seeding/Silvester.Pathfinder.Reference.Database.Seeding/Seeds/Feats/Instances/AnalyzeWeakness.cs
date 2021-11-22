@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0fb06338-e2a7-477b-87f2-2c7c3122bef9"), Type = TextBlockType.Text, Text = "Your knowledge of a creature’s physiology and understanding of tactics helps you attack with pinpoint accuracy. You carefully study a creature that you’ve identified to scope out particularly weak points in its positioning or physical form. The next time you deal sneak attack damage to the chosen creature with a (action: Strike) before the end of your turn, add an additional 2d6 precision damage. At 11th and 17th levels, if your additional damage from sneak attack increases, increase the additional damage from Analyze Weakness to 3d6 at 11th level and 4d6 at 17th level." };
+            yield return new TextBlock { Id = Guid.Parse("0fb06338-e2a7-477b-87f2-2c7c3122bef9"), Type = TextBlockType.Text, Text = "Your knowledge of a creature's physiology and understanding of tactics helps you attack with pinpoint accuracy. You carefully study a creature that you've identified to scope out particularly weak points in its positioning or physical form. The next time you deal sneak attack damage to the chosen creature with a (action: Strike) before the end of your turn, add an additional 2d6 precision damage. At 11th and 17th levels, if your additional damage from sneak attack increases, increase the additional damage from Analyze Weakness to 3d6 at 11th level and 4d6 at 17th level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -69,7 +69,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Deities.Instance
             return new DivineIntercession
             {
                 Id = Guid.Parse("4ef7ffbd-6c85-49ad-a050-153fada5875e"),
-                Description = "He Who Walks in Blood detests oathbreakers and bears a particular prejudice against mortals seeking to ascend into divinity, but the Mantis God believes in compensation for selfless duties and rewards the rare individual for their murderous deeds. Violation of his tenets and, occasionally, slights against Grandmother Spider may provoke Achaekek’s wrath. ",
+                Description = "He Who Walks in Blood detests oathbreakers and bears a particular prejudice against mortals seeking to ascend into divinity, but the Mantis God believes in compensation for selfless duties and rewards the rare individual for their murderous deeds. Violation of his tenets and, occasionally, slights against Grandmother Spider may provoke Achaekek's wrath. ",
                 MinorBoon = "You hide among the shadows of death. Once, when you would fail a Stealth check, you critically succeed instead. Achaekek typically grants this boon for an extremely consequential Stealth check that could lead to an assassination, such as one that could get you into position to kill an important target, but rarely on a Stealth check to help you escape.",
                 ModerateBoon = "You gain the god's approval to take a life. You can cast death knell once per day as an innate divine spell.",
                 MajorBoon = "Death lives in your very blade. You gain the sneak attack rogue class feature, dealing 3d6 precision damage. if you already have that class feature, you increase your sneak attack damage by 3d6.",

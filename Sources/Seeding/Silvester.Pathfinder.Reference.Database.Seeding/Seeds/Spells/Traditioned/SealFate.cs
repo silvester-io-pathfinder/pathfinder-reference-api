@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8c87372-0ec1-4724-9863-c697a6376a34"), Type = TextBlockType.Text, Text = "You utter a curse that a creature will meet a certain end—a death by freezing, stabbing, or another means you devise. Choose one type of damage from the following list: acid, bludgeoning, cold, electricity, fire, negative, piercing, slashing, or sonic. The effect is based on the target’s Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("b8c87372-0ec1-4724-9863-c697a6376a34"), Type = TextBlockType.Text, Text = "You utter a curse that a creature will meet a certain end—a death by freezing, stabbing, or another means you devise. Choose one type of damage from the following list: acid, bludgeoning, cold, electricity, fire, negative, piercing, slashing, or sonic. The effect is based on the target's Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

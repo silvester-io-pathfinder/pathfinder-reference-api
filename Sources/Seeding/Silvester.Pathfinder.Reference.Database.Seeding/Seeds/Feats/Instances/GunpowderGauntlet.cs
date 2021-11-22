@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e85826ba-a8f0-4956-848f-a81cea4ff646"), Type = TextBlockType.Text, Text = "Your flair keeps foes’ attention, as your motions with your gun draw your foes into a deadly game. As you toy with them and performatively brandish your weapon, you build their tunnel vision, leaving them trapped in a perceptual gauntlet of your own making. Attempt a Performance check against the Will DC of a single target within your one-handed firearm’s first range increment." };
+            yield return new TextBlock { Id = Guid.Parse("e85826ba-a8f0-4956-848f-a81cea4ff646"), Type = TextBlockType.Text, Text = "Your flair keeps foes' attention, as your motions with your gun draw your foes into a deadly game. As you toy with them and performatively brandish your weapon, you build their tunnel vision, leaving them trapped in a perceptual gauntlet of your own making. Attempt a Performance check against the Will DC of a single target within your one-handed firearm's first range increment." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

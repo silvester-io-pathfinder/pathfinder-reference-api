@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("32c0997d-0f9b-4683-ae81-59697a59d1d8"), Type = TextBlockType.Text, Text = "Your charm allows you to win over those you lie to. When you get a critical success using the (action: Lie) action, the target’s attitude toward you improves by one step, as though you’d succeeded at using Diplomacy to (action: Make an Impression). This works only once per conversation, and if you critically succeed against multiple targets using the same result, you choose one creature’s attitude to improve. You must be lying to impart seemingly important information, inflate your status, or ingratiate yourself, which trivial or irrelevant lies can’t achieve." };
+            yield return new TextBlock { Id = Guid.Parse("32c0997d-0f9b-4683-ae81-59697a59d1d8"), Type = TextBlockType.Text, Text = "Your charm allows you to win over those you lie to. When you get a critical success using the (action: Lie) action, the target's attitude toward you improves by one step, as though you'd succeeded at using Diplomacy to (action: Make an Impression). This works only once per conversation, and if you critically succeed against multiple targets using the same result, you choose one creature's attitude to improve. You must be lying to impart seemingly important information, inflate your status, or ingratiate yourself, which trivial or irrelevant lies can't achieve." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

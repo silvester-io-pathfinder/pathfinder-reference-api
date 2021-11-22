@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6ab68780-051e-4e86-9254-d980b69195c4"), Type = TextBlockType.Text, Text = "You meditate, pray, or otherwise try to reinforce your soul’s connection to your soulforged armament. This takes 10 minutes. Attempt a counteract check against your soulforged corruption. The counteract level is half your level rounded up, and the counteract check modifier is your Religion modifier. If successful, reduce the stage of your soulforged corruption by 1 (to a minimum of Stage 1)." };
+            yield return new TextBlock { Id = Guid.Parse("6ab68780-051e-4e86-9254-d980b69195c4"), Type = TextBlockType.Text, Text = "You meditate, pray, or otherwise try to reinforce your soul's connection to your soulforged armament. This takes 10 minutes. Attempt a counteract check against your soulforged corruption. The counteract level is half your level rounded up, and the counteract check modifier is your Religion modifier. If successful, reduce the stage of your soulforged corruption by 1 (to a minimum of Stage 1)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

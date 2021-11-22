@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d6afe2d9-e2c9-4be5-80ae-eb093faf3904"), Type = TextBlockType.Text, Text = "You can protect yourself more effectively, at the expense of your shield. When you (feat: Shield Block), you can reduce the damage to yourself by double the shield’s Hardness, but if you do, the shield takes double the normal amount of damage it would have taken (before applying its Hardness). You can’t use Destructive Block if your shield can’t be broken or destroyed, such as if you’re using an (item: indestructible shield)." };
+            yield return new TextBlock { Id = Guid.Parse("d6afe2d9-e2c9-4be5-80ae-eb093faf3904"), Type = TextBlockType.Text, Text = "You can protect yourself more effectively, at the expense of your shield. When you (feat: Shield Block), you can reduce the damage to yourself by double the shield's Hardness, but if you do, the shield takes double the normal amount of damage it would have taken (before applying its Hardness). You can't use Destructive Block if your shield can't be broken or destroyed, such as if you're using an (item: indestructible shield)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

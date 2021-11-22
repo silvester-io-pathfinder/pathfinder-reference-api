@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("38800ae7-19a7-4b76-a746-90dda42c520c"), Type = TextBlockType.Text, Text = "You’re always ready to take a quick shot to deflect a weapon or distract a foe enough to render them off target. The ally gains a +2 circumstance bonus to their AC against the triggering attack. You use this reaction after the result of the attack roll is revealed, so you know whether the +2 will make a sufficient difference." };
+            yield return new TextBlock { Id = Guid.Parse("38800ae7-19a7-4b76-a746-90dda42c520c"), Type = TextBlockType.Text, Text = "You're always ready to take a quick shot to deflect a weapon or distract a foe enough to render them off target. The ally gains a +2 circumstance bonus to their AC against the triggering attack. You use this reaction after the result of the attack roll is revealed, so you know whether the +2 will make a sufficient difference." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

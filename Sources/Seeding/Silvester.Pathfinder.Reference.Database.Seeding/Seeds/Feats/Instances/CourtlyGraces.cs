@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ae3b494d-7641-4abf-84e0-aa12986889cd"), Type = TextBlockType.Text, Text = "You were raised among the nobility or have learned proper etiquette and bearing, allowing you to present yourself as a noble and play games of influence and politics. You can use Society to (Action: Make an Impression) on a noble, as well as with (Action: Impersonate) to pretend to be a noble if you aren’t one. If you want to impersonate a specific noble, you still need to use Deception to (Action: Impersonate) normally, and to (Action: Lie) when necessary." };
+            yield return new TextBlock { Id = Guid.Parse("ae3b494d-7641-4abf-84e0-aa12986889cd"), Type = TextBlockType.Text, Text = "You were raised among the nobility or have learned proper etiquette and bearing, allowing you to present yourself as a noble and play games of influence and politics. You can use Society to (Action: Make an Impression) on a noble, as well as with (Action: Impersonate) to pretend to be a noble if you aren't one. If you want to impersonate a specific noble, you still need to use Deception to (Action: Impersonate) normally, and to (Action: Lie) when necessary." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

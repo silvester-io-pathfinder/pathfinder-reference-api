@@ -48,8 +48,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("7d0755d5-0c67-4a95-b3c8-5e590ab8e4ea"),
-                CriticalSuccess = "You move through the enemy’s space to an unoccupied space on the other side of the enemy from your starting position. This movement doesn’t trigger reactions. You can’t move farther than your Speed, and you must end your movement adjacent to the enemy whose space you moved through. After moving, you make a melee (action: Strike) against the enemy whose space you moved through, and the enemy is flat-footed against that (action: Strike).",
-                Success = "As critical success, but the enemy isn’t flat-footed against the (action: Strike).",
+                CriticalSuccess = "You move through the enemy's space to an unoccupied space on the other side of the enemy from your starting position. This movement doesn't trigger reactions. You can't move farther than your Speed, and you must end your movement adjacent to the enemy whose space you moved through. After moving, you make a melee (action: Strike) against the enemy whose space you moved through, and the enemy is flat-footed against that (action: Strike).",
+                Success = "As critical success, but the enemy isn't flat-footed against the (action: Strike).",
                 Failure = "You remain in your original space but can still (action: Strike).",
                 CriticalFailure = "No effect.", 
             };

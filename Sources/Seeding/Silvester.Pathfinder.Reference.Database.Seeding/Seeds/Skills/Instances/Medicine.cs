@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Skills.Instances
                 HasArmorCheckPenalty = false,
                 HasRecallKnowledgeAction = true,
                 StatModifierId = Wisdom.ID,
-                Description = "You can patch up wounds and help people recover from diseases and poisons. Even if you’re untrained in Medicine, you can use it to Recall Knowledge (page 238)."
+                Description = "You can patch up wounds and help people recover from diseases and poisons. Even if you're untrained in Medicine, you can use it to Recall Knowledge (page 238)."
             };
         }
     }

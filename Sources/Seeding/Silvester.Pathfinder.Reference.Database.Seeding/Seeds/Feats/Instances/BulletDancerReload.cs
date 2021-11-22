@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8296977f-45ec-4a8c-b729-a66d0646730c"), Type = TextBlockType.Text, Text = "You’ve learned to reload your simple firearms with uncanny grace, the ammunition simply falling into place as though part of a well-practiced kata. You (action: Strike) with a simple firearm, and then (action: Interact) to reload that same firearm. You don’t need a free hand to reload your simple firearm in this way" };
+            yield return new TextBlock { Id = Guid.Parse("8296977f-45ec-4a8c-b729-a66d0646730c"), Type = TextBlockType.Text, Text = "You've learned to reload your simple firearms with uncanny grace, the ammunition simply falling into place as though part of a well-practiced kata. You (action: Strike) with a simple firearm, and then (action: Interact) to reload that same firearm. You don't need a free hand to reload your simple firearm in this way" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

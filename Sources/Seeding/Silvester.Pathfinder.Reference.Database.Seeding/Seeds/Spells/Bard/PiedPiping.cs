@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("30d1976d-17a2-48a9-a820-5af8b70f906e"), Type = TextBlockType.Text, Text = "Your performance enraptures those who hear it, compelling them to follow you about in admiration. Each creature within the emanation must attempt a Will save when you Cast the Spell or the first time they enter the area, after which they become temporarily immune for 1 day. Once per turn, you can spend a single action, which has the concentrate trait, to increase the emanation’s radius by 5 feet. You can Dismiss the spell." };
+            yield return new TextBlock { Id = Guid.Parse("30d1976d-17a2-48a9-a820-5af8b70f906e"), Type = TextBlockType.Text, Text = "Your performance enraptures those who hear it, compelling them to follow you about in admiration. Each creature within the emanation must attempt a Will save when you Cast the Spell or the first time they enter the area, after which they become temporarily immune for 1 day. Once per turn, you can spend a single action, which has the concentrate trait, to increase the emanation's radius by 5 feet. You can Dismiss the spell." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

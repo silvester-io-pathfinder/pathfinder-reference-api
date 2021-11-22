@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("574152a6-a88f-4f70-a15a-4b1b8447655f"), Type = TextBlockType.Text, Text = "You can use your mind to communicate at all times. You can communicate mentally with any creatures within a 15-foot aura as long as you share a language. This doesn’t give any special access to their thoughts and communicates no more information than normal speech would. The communication is two-way." };
+            yield return new TextBlock { Id = Guid.Parse("574152a6-a88f-4f70-a15a-4b1b8447655f"), Type = TextBlockType.Text, Text = "You can use your mind to communicate at all times. You can communicate mentally with any creatures within a 15-foot aura as long as you share a language. This doesn't give any special access to their thoughts and communicates no more information than normal speech would. The communication is two-way." };
             yield return new TextBlock { Id = Guid.Parse("2c49afba-fc0f-412b-ab50-c5143f145fec"), Type = TextBlockType.Text, Text = "In addition, when communicating via any form of telepathy, you gain a +1 circumstance bonus to Perception when attempting to (action: Sense Motive) or detect a (action: Lie)." };
         }
 

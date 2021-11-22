@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("30880815-db7a-4ff9-8027-dccab14f8654"), Type = TextBlockType.Text, Text = "Choose a deity and cause as you would if you were a champion. You become trained in light, medium, and heavy armor. You become trained in Religion and your deity’s associated skill; for each of these skills in which you were already trained, you instead become trained in a skill of your choice. You become trained in champion class DC." };
-            yield return new TextBlock { Id = Guid.Parse("e9b430cf-bff6-4b13-893c-6262aac6082c"), Type = TextBlockType.Text, Text = "You are bound by your deity’s anathema and must follow the champion’s code and alignment requirements for your cause. You don’t gain any other abilities from your choice of deity or cause." };
+            yield return new TextBlock { Id = Guid.Parse("30880815-db7a-4ff9-8027-dccab14f8654"), Type = TextBlockType.Text, Text = "Choose a deity and cause as you would if you were a champion. You become trained in light, medium, and heavy armor. You become trained in Religion and your deity's associated skill; for each of these skills in which you were already trained, you instead become trained in a skill of your choice. You become trained in champion class DC." };
+            yield return new TextBlock { Id = Guid.Parse("e9b430cf-bff6-4b13-893c-6262aac6082c"), Type = TextBlockType.Text, Text = "You are bound by your deity's anathema and must follow the champion's code and alignment requirements for your cause. You don't gain any other abilities from your choice of deity or cause." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

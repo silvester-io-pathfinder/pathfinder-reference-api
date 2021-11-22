@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("71bed422-4dcd-4443-a9f4-9ab968aed5ad"), Type = TextBlockType.Text, Text = "You shoot a blazing ray of light tinged with holy energy. Make a ranged spell attack. The ray deals 5d6 fire damage. If the target is a fiend or undead, you deal an extra 5d6 good damage." };
-            yield return new TextBlock { Id = Guid.Parse("50d699d6-13f6-4c9c-a24c-0e07fb56485c"), Type = TextBlockType.Text, Text = "If the light passes through an area of magical darkness or targets a creature affected by magical darkness, searing light attempts to counteract the darkness. If you need to determine whether the light passes through an area of darkness, draw a line between yourself and the spell’s target." };
+            yield return new TextBlock { Id = Guid.Parse("50d699d6-13f6-4c9c-a24c-0e07fb56485c"), Type = TextBlockType.Text, Text = "If the light passes through an area of magical darkness or targets a creature affected by magical darkness, searing light attempts to counteract the darkness. If you need to determine whether the light passes through an area of darkness, draw a line between yourself and the spell's target." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("edae13a9-f15e-4c79-885c-e6f44b3b9211"), Type = TextBlockType.Text, Text = "By applying the best of multiple traditions of magic, you’ve found a more efficient way for your familiar to store its energy. You can select four familiar or master abilities each day, instead of two." };
+            yield return new TextBlock { Id = Guid.Parse("edae13a9-f15e-4c79-885c-e6f44b3b9211"), Type = TextBlockType.Text, Text = "By applying the best of multiple traditions of magic, you've found a more efficient way for your familiar to store its energy. You can select four familiar or master abilities each day, instead of two." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

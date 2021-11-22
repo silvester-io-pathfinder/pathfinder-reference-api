@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d8cfd11-33f7-426c-a350-15e68e4ab609"), Type = TextBlockType.Text, Text = "You’ve studied scrolls in depth. This might have been a comprehensive education in formal setting, or the sort of education where you somehow obtain a number of scrolls and try not to explode anything you didn’t mean to explode. You gain the (feat: Trick Magic Item) feat, and you gain a +2 circumstance bonus to skill checks to (feat: Trick | Trick Magic Item) scrolls. If you roll a critical failure to (feat: Trick a Magic Item | Trick Magic Item) that’s a scroll, you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("1d8cfd11-33f7-426c-a350-15e68e4ab609"), Type = TextBlockType.Text, Text = "You've studied scrolls in depth. This might have been a comprehensive education in formal setting, or the sort of education where you somehow obtain a number of scrolls and try not to explode anything you didn't mean to explode. You gain the (feat: Trick Magic Item) feat, and you gain a +2 circumstance bonus to skill checks to (feat: Trick | Trick Magic Item) scrolls. If you roll a critical failure to (feat: Trick a Magic Item | Trick Magic Item) that's a scroll, you get a failure instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

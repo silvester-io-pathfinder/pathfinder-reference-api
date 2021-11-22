@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6875ad1f-90f6-4ce4-9cd8-e222beb0b256"), Type = TextBlockType.Text, Text = "You attempt to counteract a single effect imposing the blinded or deafened conditions on the target, restoring its vision or hearing. This can counteract both temporary magic and permanent consequences of magic, but it doesn’t cure someone who does not have the sense due to some natural state or effect, such as from birth or from a non-magical wound or toxin." };
+            yield return new TextBlock { Id = Guid.Parse("6875ad1f-90f6-4ce4-9cd8-e222beb0b256"), Type = TextBlockType.Text, Text = "You attempt to counteract a single effect imposing the blinded or deafened conditions on the target, restoring its vision or hearing. This can counteract both temporary magic and permanent consequences of magic, but it doesn't cure someone who does not have the sense due to some natural state or effect, such as from birth or from a non-magical wound or toxin." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "6th",
                 Details =
                 {
-                    new TextBlock { Id = Guid.Parse("4d3ba751-f0e5-4a0f-903e-94f5f2eb61b7"), Type = TextBlockType.Text, Text = "The spell’s range increases to 30 feet, and you can target up to 10 creatures. You can choose the effect to counteract separately for each selected creature." }
+                    new TextBlock { Id = Guid.Parse("4d3ba751-f0e5-4a0f-903e-94f5f2eb61b7"), Type = TextBlockType.Text, Text = "The spell's range increases to 30 feet, and you can target up to 10 creatures. You can choose the effect to counteract separately for each selected creature." }
                 }
             };
         }

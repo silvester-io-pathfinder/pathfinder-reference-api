@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("36981fed-4069-4289-96ef-597f5e2e9268"), Type = TextBlockType.Text, Text = "You carefully take aim before making your attack in order to avoid your foe’s concealment and cover. On your next Strike with a (trait: thrown) weapon before the end of your turn, you gain a +1 circumstance bonus to your attack roll and ignore your target’s concealed condition, as well as the target’s lesser cover or standard cover; if the target had greater cover, they instead have only standard cover against the Strike." };
+            yield return new TextBlock { Id = Guid.Parse("36981fed-4069-4289-96ef-597f5e2e9268"), Type = TextBlockType.Text, Text = "You carefully take aim before making your attack in order to avoid your foe's concealment and cover. On your next Strike with a (trait: thrown) weapon before the end of your turn, you gain a +1 circumstance bonus to your attack roll and ignore your target's concealed condition, as well as the target's lesser cover or standard cover; if the target had greater cover, they instead have only standard cover against the Strike." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

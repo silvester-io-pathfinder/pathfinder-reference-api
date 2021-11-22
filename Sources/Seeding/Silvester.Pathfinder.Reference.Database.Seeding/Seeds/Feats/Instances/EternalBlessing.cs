@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4f2b5896-53a8-49ea-8af3-bf7c20adc58f"), Type = TextBlockType.Text, Text = "Your good deeds have brought your deity’s grace to you for all of eternity. You’re continuously surrounded by a (spell: bless) spell with a spell level equal to half your level (rounded up). The radius is 15 feet, and you can’t increase it. You can (action: Dismiss) the spell; if you do, it returns automatically after 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("4f2b5896-53a8-49ea-8af3-bf7c20adc58f"), Type = TextBlockType.Text, Text = "Your good deeds have brought your deity's grace to you for all of eternity. You're continuously surrounded by a (spell: bless) spell with a spell level equal to half your level (rounded up). The radius is 15 feet, and you can't increase it. You can (action: Dismiss) the spell; if you do, it returns automatically after 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

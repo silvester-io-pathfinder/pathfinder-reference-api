@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8a8a8f7-36bc-4e28-b964-03db88f2dd3b"), Type = TextBlockType.Text, Text = "You’ve traveled to the furthest depths of your subconscious, granting you even more focus. Increase the number of Focus Points in your focus pool by 1. If you’ve spent at least 3 Focus Points since the last time you (action: Refocused | Refocus), you recover 3 Focus Points when you (action: Refocus) instead of 1." };
+            yield return new TextBlock { Id = Guid.Parse("f8a8a8f7-36bc-4e28-b964-03db88f2dd3b"), Type = TextBlockType.Text, Text = "You've traveled to the furthest depths of your subconscious, granting you even more focus. Increase the number of Focus Points in your focus pool by 1. If you've spent at least 3 Focus Points since the last time you (action: Refocused | Refocus), you recover 3 Focus Points when you (action: Refocus) instead of 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

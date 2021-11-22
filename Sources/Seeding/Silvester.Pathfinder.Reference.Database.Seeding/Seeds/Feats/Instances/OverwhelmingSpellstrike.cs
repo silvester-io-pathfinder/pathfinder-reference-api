@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a3aa24ed-d071-47b1-9c11-699e585510f8"), Type = TextBlockType.Text, Text = "You pierce through your foe’s resistance. Make a (feat: Spellstrike). The spell you cast as part of the (feat: Spellstrike) ignores an amount of the target’s resistance to acid, cold, electricity, fire, or sonic damage equal to your level. This applies to all damage the spell deals, including persistent damage and damage caused by an ongoing effect of the spell. A creature’s immunities are unaffected." };
+            yield return new TextBlock { Id = Guid.Parse("a3aa24ed-d071-47b1-9c11-699e585510f8"), Type = TextBlockType.Text, Text = "You pierce through your foe's resistance. Make a (feat: Spellstrike). The spell you cast as part of the (feat: Spellstrike) ignores an amount of the target's resistance to acid, cold, electricity, fire, or sonic damage equal to your level. This applies to all damage the spell deals, including persistent damage and damage caused by an ongoing effect of the spell. A creature's immunities are unaffected." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

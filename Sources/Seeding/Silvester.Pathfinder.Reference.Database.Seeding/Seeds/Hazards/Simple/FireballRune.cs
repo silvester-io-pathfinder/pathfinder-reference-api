@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Hazards.Simple
                 ActionTypeId = ActionTypes.Instances.Reaction.ID,
                 Details = new List<TextBlock>
                 {
-                    new TextBlock { Id = Guid.Parse("a93c5058-494c-4df1-988e-f0dc6dee552c"), Type = TextBlockType.Text, Text = "The rune detonates a fireball centered on the triggering creature’s square. This is a 3rd level fireball spell that deals 6d6 fire damage (DC 22 basic Reflex save)." },
+                    new TextBlock { Id = Guid.Parse("a93c5058-494c-4df1-988e-f0dc6dee552c"), Type = TextBlockType.Text, Text = "The rune detonates a fireball centered on the triggering creature's square. This is a 3rd level fireball spell that deals 6d6 fire damage (DC 22 basic Reflex save)." },
                 },
                 Effects =
                 {

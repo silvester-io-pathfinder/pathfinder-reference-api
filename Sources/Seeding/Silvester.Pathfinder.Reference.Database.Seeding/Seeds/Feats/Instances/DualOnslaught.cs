@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9da24e83-e179-4fc2-bdd3-84d44c84d93c"), Type = TextBlockType.Text, Text = "When you lash out with both weapons, you leave no room for the target to escape your attack. When you use (feat: Double Slice), if you miss with both (action: Strikes | Strike), choose one of the two weapons and apply the effects of a hit with that weapon. You can’t choose a weapon if your attack roll with that weapon was a critical failure, meaning you still miss entirely if both attack rolls were critical failures." };
+            yield return new TextBlock { Id = Guid.Parse("9da24e83-e179-4fc2-bdd3-84d44c84d93c"), Type = TextBlockType.Text, Text = "When you lash out with both weapons, you leave no room for the target to escape your attack. When you use (feat: Double Slice), if you miss with both (action: Strikes | Strike), choose one of the two weapons and apply the effects of a hit with that weapon. You can't choose a weapon if your attack roll with that weapon was a critical failure, meaning you still miss entirely if both attack rolls were critical failures." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

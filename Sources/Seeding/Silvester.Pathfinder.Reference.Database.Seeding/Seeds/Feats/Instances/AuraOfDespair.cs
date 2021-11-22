@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("53ed81f7-f553-47c1-aba8-9029f836ece8"), Type = TextBlockType.Text, Text = "Your presence as an avatar of evil makes your foes more susceptible to terror and makes it almost impossible for them to shake off fear when you are near. Enemies within 15 feet of you take a –1 circumstance penalty to saving throws against fear. In addition, an enemy that ends its turn within 15 feet of you can’t reduce the value of its frightened condition below 1." };
+            yield return new TextBlock { Id = Guid.Parse("53ed81f7-f553-47c1-aba8-9029f836ece8"), Type = TextBlockType.Text, Text = "Your presence as an avatar of evil makes your foes more susceptible to terror and makes it almost impossible for them to shake off fear when you are near. Enemies within 15 feet of you take a –1 circumstance penalty to saving throws against fear. In addition, an enemy that ends its turn within 15 feet of you can't reduce the value of its frightened condition below 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

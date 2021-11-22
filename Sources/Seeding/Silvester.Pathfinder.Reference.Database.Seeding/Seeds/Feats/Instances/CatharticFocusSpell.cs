@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("207071dd-122c-4c00-a24b-8e57584b04c4"), Type = TextBlockType.Text, Text = "You learn the focus spell listed under your emotion’s entry. You can cast it only while in emotional fervor. If you don’t already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) while you use (feat: Settle Emotions)." };
+            yield return new TextBlock { Id = Guid.Parse("207071dd-122c-4c00-a24b-8e57584b04c4"), Type = TextBlockType.Text, Text = "You learn the focus spell listed under your emotion's entry. You can cast it only while in emotional fervor. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) while you use (feat: Settle Emotions)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

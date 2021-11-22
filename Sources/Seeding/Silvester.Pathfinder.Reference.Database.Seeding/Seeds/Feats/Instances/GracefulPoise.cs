@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("24de9de0-5f80-48c8-b970-dc4aabd6ddc8"), Type = TextBlockType.Text, Text = "With the right positioning, your off-hand weapon can strike like a scorpion’s stinger. While you are in this stance, if you make your second (Action: Strike) from (Feat: Double Slice) with an agile weapon, (Feat: Double Slice) counts as one attack when calculating your multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("24de9de0-5f80-48c8-b970-dc4aabd6ddc8"), Type = TextBlockType.Text, Text = "With the right positioning, your off-hand weapon can strike like a scorpion's stinger. While you are in this stance, if you make your second (Action: Strike) from (Feat: Double Slice) with an agile weapon, (Feat: Double Slice) counts as one attack when calculating your multiple attack penalty." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

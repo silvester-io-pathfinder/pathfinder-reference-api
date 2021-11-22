@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("9ec1d4cd-8a50-47e5-973f-de47804bfacb"), Type = TextBlockType.Text, Text = "Your ancestors spent their days cloaked and cradled in illusions, and as a result, sensing illusion magic is second nature to you. You gain a +1 circumstance bonus to both Perception checks and Will saves against illusions." };
-            yield return new TextBlock { Id = Guid.Parse("3a33dcb6-8943-43da-81c2-a5a0654bbbcf"), Type = TextBlockType.Text, Text = "When you come within 10 feet of an illusion that can be disbelieved, the GM rolls a secret check for you to disbelieve it, even if you didn’t spend an action to (action: Interact) with the illusion." };
+            yield return new TextBlock { Id = Guid.Parse("3a33dcb6-8943-43da-81c2-a5a0654bbbcf"), Type = TextBlockType.Text, Text = "When you come within 10 feet of an illusion that can be disbelieved, the GM rolls a secret check for you to disbelieve it, even if you didn't spend an action to (action: Interact) with the illusion." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

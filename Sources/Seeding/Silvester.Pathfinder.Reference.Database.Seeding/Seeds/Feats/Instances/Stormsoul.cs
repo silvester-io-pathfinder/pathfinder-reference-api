@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1bcc99c3-d0f7-4794-9e10-df913e21edcb"), Type = TextBlockType.Text, Text = "Your elemental ancestor’s influence manifests in you as tumultuous, thundering storms, with dark clouds and bolts of lightning. You gain resistance to electricity equal to half your level (minimum 1)." };
+            yield return new TextBlock { Id = Guid.Parse("1bcc99c3-d0f7-4794-9e10-df913e21edcb"), Type = TextBlockType.Text, Text = "Your elemental ancestor's influence manifests in you as tumultuous, thundering storms, with dark clouds and bolts of lightning. You gain resistance to electricity equal to half your level (minimum 1)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

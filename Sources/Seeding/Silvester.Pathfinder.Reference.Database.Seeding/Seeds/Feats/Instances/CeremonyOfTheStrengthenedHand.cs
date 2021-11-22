@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("618c94b7-3b12-4668-afa5-57c4718e9b47"), Type = TextBlockType.Text, Text = "Your exoskeleton’s weapons are even more potent. If you have a claws unarmed attack, it gains the (trait: deadly d8) trait. If you have a branch unarmed attack, it gains the (trait: shove) and (trait: trip) traits." };
+            yield return new TextBlock { Id = Guid.Parse("618c94b7-3b12-4668-afa5-57c4718e9b47"), Type = TextBlockType.Text, Text = "Your exoskeleton's weapons are even more potent. If you have a claws unarmed attack, it gains the (trait: deadly d8) trait. If you have a branch unarmed attack, it gains the (trait: shove) and (trait: trip) traits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

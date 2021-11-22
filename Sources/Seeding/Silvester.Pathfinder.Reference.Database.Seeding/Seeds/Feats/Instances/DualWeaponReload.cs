@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7e4ca79e-3aaf-4407-aeb6-5f3c4f093f43"), Type = TextBlockType.Text, Text = "You carry your ammunition in a way that allows you to reload while holding two weapons. You (action: Interact) to reload a one-handed ranged weapon you’re holding. Unlike most (action: Interact) actions, you don’t need a free hand to reload your ranged weapon in this way." };
+            yield return new TextBlock { Id = Guid.Parse("7e4ca79e-3aaf-4407-aeb6-5f3c4f093f43"), Type = TextBlockType.Text, Text = "You carry your ammunition in a way that allows you to reload while holding two weapons. You (action: Interact) to reload a one-handed ranged weapon you're holding. Unlike most (action: Interact) actions, you don't need a free hand to reload your ranged weapon in this way." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

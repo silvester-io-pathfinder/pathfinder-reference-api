@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5ca6f904-17b8-4d3f-b9b8-95e50e72bdd2"), Type = TextBlockType.Text, Text = "You embellish your spellcasting with entrancing flourishes and grand pronouncements, making it harder to identify or counter. If the next action you use is to (activity: Cast a Spell), creatures with the ability to (activity: Cast that Spell | Cast a Spell) don’t automatically know what the spell is. In addition, creatures that witness your spellcasting take a -2 circumstance penalty to checks to identify the spell with (action: Recall Knowledge) and checks to counteract the spell during its casting (such as with (feat: Counterspell))." };
+            yield return new TextBlock { Id = Guid.Parse("5ca6f904-17b8-4d3f-b9b8-95e50e72bdd2"), Type = TextBlockType.Text, Text = "You embellish your spellcasting with entrancing flourishes and grand pronouncements, making it harder to identify or counter. If the next action you use is to (activity: Cast a Spell), creatures with the ability to (activity: Cast that Spell | Cast a Spell) don't automatically know what the spell is. In addition, creatures that witness your spellcasting take a -2 circumstance penalty to checks to identify the spell with (action: Recall Knowledge) and checks to counteract the spell during its casting (such as with (feat: Counterspell))." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

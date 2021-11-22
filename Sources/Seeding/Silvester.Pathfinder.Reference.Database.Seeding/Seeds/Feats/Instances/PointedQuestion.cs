@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc06a627-3e46-4829-89dd-05b1256be0cb"), Type = TextBlockType.Text, Text = "You ask a question that charms or needles someone in just the right way. Ask a question of a non-allied creature that you can see and have been conversing with. Attempt a Diplomacy check against the creature’s Will DC. The creature is then temporarily immune for 1 hour." };
+            yield return new TextBlock { Id = Guid.Parse("fc06a627-3e46-4829-89dd-05b1256be0cb"), Type = TextBlockType.Text, Text = "You ask a question that charms or needles someone in just the right way. Ask a question of a non-allied creature that you can see and have been conversing with. Attempt a Diplomacy check against the creature's Will DC. The creature is then temporarily immune for 1 hour." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             return new RollableEffect
             {
                 Id = Guid.Parse("565f3f05-7e1b-4331-88af-18d5d4cf7f91"),
-                CriticalSuccess = "The target must directly answer your question. It doesn’t have to answer truthfully, but you gain a +4 circumstance bonus to your Perception DC if the creature attempts to (action: Lie) to you.",
+                CriticalSuccess = "The target must directly answer your question. It doesn't have to answer truthfully, but you gain a +4 circumstance bonus to your Perception DC if the creature attempts to (action: Lie) to you.",
                 Success = "As critical success, but the circumstance bonus is +2.",
                 Failure = "The target can refuse to answer you as normal.",
                 CriticalFailure = "The target can refuse to answer you as normal, and its attitude toward you decreases by one step due to your aggravating attention.", 
