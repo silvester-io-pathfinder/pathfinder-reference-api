@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ff7fb80e-d096-48be-b170-e6e7372615f8"), Type = TextBlockType.Text, Text = "You load an extra dose of powder into your shot, causing it to belch a cloud of smoke. You make a (action: Strike) with your firearm and create a cloud of smoke in a 20-foot emanation centered on your location. Creatures are concealed while within the smoke, and creatures outside the area are concealed to creatures within the smoke. The smoke dissipates at the start of your next turn. If your (action: Strike) is a critical failure, your firearm (trait: misfires|misfire)." };
+            yield return new TextBlock { Id = Guid.Parse("ff7fb80e-d096-48be-b170-e6e7372615f8"), Type = TextBlockType.Text, Text = "You load an extra dose of powder into your shot, causing it to belch a cloud of smoke. You make a (action: Strike) with your firearm and create a cloud of smoke in a 20-foot emanation centered on your location. Creatures are concealed while within the smoke, and creatures outside the area are concealed to creatures within the smoke. The smoke dissipates at the start of your next turn. If your (action: Strike) is a critical failure, your firearm misfires." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7e0a503c-2ec7-4a4c-9693-a334047e3c28"), Type = TextBlockType.Text, Text = "Even as your firearm misfires, you quickly draw a backup weapon. (action: Release) the (trait: misfired|misfire) weapon if you so choose, and (action: Interact) to draw a one-handed weapon." };
+            yield return new TextBlock { Id = Guid.Parse("7e0a503c-2ec7-4a4c-9693-a334047e3c28"), Type = TextBlockType.Text, Text = "Even as your firearm misfires, you quickly draw a backup weapon. (action: Release) the misfired weapon if you so choose, and (action: Interact) to draw a one-handed weapon." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5daefb4b-3580-4804-9c0a-1bdd241bf04a"), Type = TextBlockType.Text, Text = "You jam a triple charge of black powder into your weapon to unleash a devastating but risky and inaccurate attack. (action: Interact) to reload, expending three doses of black powder in addition to your normal black powder or ammunition, then (action: Strike) with your firearm against a creature within the weapon's first range increment. If you roll a success, the attack is instead a critical success, but if you roll a failure, the weapon (trait: misfires|misfire). Regardless of your roll, after the attack you're flat-footed until the start of your next turn and stunned 1." };
+            yield return new TextBlock { Id = Guid.Parse("5daefb4b-3580-4804-9c0a-1bdd241bf04a"), Type = TextBlockType.Text, Text = "You jam a triple charge of black powder into your weapon to unleash a devastating but risky and inaccurate attack. (action: Interact) to reload, expending three doses of black powder in addition to your normal black powder or ammunition, then (action: Strike) with your firearm against a creature within the weapon's first range increment. If you roll a success, the attack is instead a critical success, but if you roll a failure, the weapon misfires. Regardless of your roll, after the attack you're flat-footed until the start of your next turn and stunned 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

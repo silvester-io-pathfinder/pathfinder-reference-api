@@ -44,8 +44,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
                 Id = Guid.Parse("04c86fc0-0166-4029-82dc-16e0b2ed2843"),
                 
                 
-                Failure = "The firearm (trait: misfires|misfire), but it doesn't cause the other critical failure effects listed below.",
-                CriticalFailure = "The firearm (trait: misfires|misfire) and also explodes. It becomes broken, and it deals its normal weapon damage to all creatures in a 20-foot burst centered on the firearm, with a basic Reflex save against your class DC. This damage includes any from the weapon's fundamental and property runes.", 
+                Failure = "The firearm misfires, but it doesn't cause the other critical failure effects listed below.",
+                CriticalFailure = "The firearm misfires and also explodes. It becomes broken, and it deals its normal weapon damage to all creatures in a 20-foot burst centered on the firearm, with a basic Reflex save against your class DC. This damage includes any from the weapon's fundamental and property runes.", 
             };
         }
             
