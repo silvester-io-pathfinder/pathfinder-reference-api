@@ -51,43 +51,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        public override IEnumerable<RollableEffect> GetRollableEffects()
-        {
-            yield return new RollableEffect
-            {
-                Id = Guid.Parse(""),
-                CriticalSuccess = "The creature is unaffected.",
-                Success = "",
-                Failure = "",
-                CriticalFailure = ""
-            };
-        }
-
-        protected override StaggeredEffect? GetStaggeredEffect()
-        {
-            return new StaggeredEffect
-            {
-                Id = Guid.Parse(""),
-                DifficultyCheck = ,
-                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
-                MaximumDuration = "2 days.",
-                Onset = "",
-                Level = 9,
-                Stages =
-                {
-                    new StaggeredEffectStage
-                    {
-                        Id = Guid.Parse(""),
-                        Duration = "1 day",
-                        Effects =
-                        {
-                            new ConditionEffect { Id = Guid.Parse(""), ConditionId = Conditions.Instances.Drained.ID, Severity = 1}
-                        }
-                    },
-                }
-            };
-        }
-
         public override IEnumerable<Guid> GetSpellComponents()
         {
             yield return SpellComponents.Instances.Material.ID;
@@ -109,7 +72,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse(""),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
-                Page = 
+                Page = 227
             };
         }
     }
