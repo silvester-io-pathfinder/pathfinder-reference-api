@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
     public class Updraft : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("fb9682b5-6076-45cd-9b01-237b1254a972");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "A powerful blast of wind erupts from the ground, launching the target into the air and sending it crashing back down. The collision deals 2d6 bludgeoning damage with a basic Reflex save. On a failure, the target is knocked prone." };
+            yield return new TextBlock { Id = Guid.Parse("5b4476ad-41fb-4d04-8ed4-9cbed7b1e21b"), Type = TextBlockType.Text, Text = "A powerful blast of wind erupts from the ground, launching the target into the air and sending it crashing back down. The collision deals 2d6 bludgeoning damage with a basic Reflex save. On a failure, the target is knocked prone." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("39c5aeb9-9bad-45b2-9edc-a399a8e46cd5"),
                 Level = "+1",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Increase the damage by 2d6." }
+                    new TextBlock {Id = Guid.Parse("ab8f9bc9-ac74-4ff7-bfbe-c5f8329651a8"), Type = TextBlockType.Text, Text = "Increase the damage by 2d6." }
                 }
             };
         }
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("f7a43478-23fd-4a0e-ac05-0e52979965f6"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = 201
             };

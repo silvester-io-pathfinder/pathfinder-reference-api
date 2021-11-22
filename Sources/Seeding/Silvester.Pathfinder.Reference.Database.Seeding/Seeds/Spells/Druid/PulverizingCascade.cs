@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
     public class PulverizingCascade : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("e610f3ec-d5a7-497d-8bf9-f8623550f22a");
 
         public override Spell GetSpell()
         {
@@ -28,18 +28,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You raise a pair of towering waves and slam them into each other, crushing creatures caught between them. Creatures in the area take 5d6 bludgeoning damage with a basic Reflex save." };
+            yield return new TextBlock { Id = Guid.Parse("40ba7e7a-1bad-4fb3-9977-8df7ec08728b"), Type = TextBlockType.Text, Text = "You raise a pair of towering waves and slam them into each other, crushing creatures caught between them. Creatures in the area take 5d6 bludgeoning damage with a basic Reflex save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("616087b0-d6ff-4a9c-a50e-fae93fadef37"),
                 Level = "+1",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Increase the damage by 2d6." }
+                    new TextBlock {Id = Guid.Parse("867860dd-1932-4729-bcb8-7888f5746733"), Type = TextBlockType.Text, Text = "Increase the damage by 2d6." }
                 }
             };
         }
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("dbe0467e-0205-4db8-8862-7acdee1b33ea"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = 201
             };

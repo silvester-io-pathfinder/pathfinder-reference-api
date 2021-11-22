@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
     public class InvokeTrueName : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("92a86d32-e88c-4b33-9f3b-6c684c119461");
 
         public override Spell GetSpell()
         {
@@ -26,18 +26,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You speak the true name of a creature to more surely affect it with your magic. Until the end of the current turn, the target is flat-footed against your spells and takes a –2 circumstance penalty to saving throws against your spells. In addition, the first time this turn the target takes damage from one of your spells, it has weakness to that damage equal to double the level of invoke true name." };
+            yield return new TextBlock { Id = Guid.Parse("19025ba6-816d-471b-a489-84e75f616ce4"), Type = TextBlockType.Text, Text = "You speak the true name of a creature to more surely affect it with your magic. Until the end of the current turn, the target is flat-footed against your spells and takes a ï¿½2 circumstance penalty to saving throws against your spells. In addition, the first time this turn the target takes damage from one of your spells, it has weakness to that damage equal to double the level of invoke true name." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("1c63d104-b12f-4ff5-9773-1365093891ac"),
                 Level = "+1",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "" }
+                    new TextBlock {Id = Guid.Parse("6737fa56-b3df-4782-89a0-25d0769436e9"), Type = TextBlockType.Text, Text = "" }
                 }
             };
         }
@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("051fe3ec-359a-4aa6-8b15-e51ef67d812c"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = 247
             };

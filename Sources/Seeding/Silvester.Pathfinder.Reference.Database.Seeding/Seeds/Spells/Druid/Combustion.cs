@@ -7,7 +7,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
     public class Combustion : Template
     {
-        public static readonly Guid ID = Guid.Parse("");
+        public static readonly Guid ID = Guid.Parse("51fb1636-7b04-4443-b4f4-3ff579c7731d");
 
         public override Spell GetSpell()
         {
@@ -27,18 +27,18 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "You ignite a creature in lasting flames. The fire deals 4d8 fire damage and 2d6 persistent fire damage to the creature, which must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("0cfd5977-acfa-489f-954e-ce14facf2080"), Type = TextBlockType.Text, Text = "You ignite a creature in lasting flames. The fire deals 4d8 fire damage and 2d6 persistent fire damage to the creature, which must attempt a Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
         {
             yield return new SpellHeightening
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("8c20e553-8fe4-4857-9a47-0ac562683a9d"),
                 Level = "+1",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse(""), Type = TextBlockType.Text, Text = "Increase the initial damage by 1d8 and the persistent damage by 1d6." }
+                    new TextBlock {Id = Guid.Parse("2047c8c6-4e31-4c72-a1b1-7f505ee60c2f"), Type = TextBlockType.Text, Text = "Increase the initial damage by 1d8 and the persistent damage by 1d6." }
                 }
             };
         }
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         {
             yield return new RollableEffect
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("4312e843-cb6b-42eb-941f-2393d05e799e"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes half damage and takes no persistent damage.",
                 Failure = "The creature takes full damage, as well as full persistent damage.",
@@ -72,7 +72,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         {
             return new SourcePage
             {
-                Id = Guid.Parse(""),
+                Id = Guid.Parse("c23c7bf6-5a41-4618-9983-0339a7d6758a"),
                 SourceId = Sources.Instances.SecretsOfMagic.ID,
                 Page = 200
             };
