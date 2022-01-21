@@ -1,13 +1,7 @@
-using Microsoft.EntityFrameworkCore;
-using Silvester.Pathfinder.Reference.Database.Extensions;
-
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
 
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Effects.Builders
 {

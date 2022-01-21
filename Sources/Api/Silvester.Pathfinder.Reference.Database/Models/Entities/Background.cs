@@ -5,11 +5,8 @@ using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using Silvester.Pathfinder.Reference.Database.Seeding;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {
@@ -35,11 +32,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class BackgroundSearchConfigurator : SearchableEntityConfigurator<Background>
-    {
-        public override Expression<Func<Background, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class BackgroundConfigurator : EntityConfigurator<Background>
+	{
+		public BackgroundConfigurator()
+		{
+			ConfigureEntitySearch<Background>(e => new {e.Name});
+		}
+	}
 }

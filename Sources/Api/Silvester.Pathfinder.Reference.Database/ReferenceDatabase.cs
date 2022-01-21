@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Models.Items;
+using Silvester.Pathfinder.Reference.Database.Models.Items.Instances;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -31,19 +33,24 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Ammunition> Ammunitions { get; set; } = default!;
         public DbSet<Armor> Armors { get; set; } = default!;
         public DbSet<Ancestry> Ancestries { get; set; } = default!;
-        public DbSet<Archetype> Archetypes{ get; set; } = default!;
+        public DbSet<Archetype> Archetypes { get; set; } = default!;
         public DbSet<Artifact> Artifacts { get; set; } = default!;
         public DbSet<ArmorPropertyRune> ArmorPropertyRunes { get; set; } = default!;
+        public DbSet<WeaponPropertyRune> WeaponPropertyRunes { get; set; } = default!;
+        public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
+        public DbSet<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = default!;
         public DbSet<ArmorCategory> ArmorCategories { get; set; } = default!;
         public DbSet<ArmorGroup> ArmorGroups { get; set; } = default!;
         public DbSet<AttackType> AttackTypes { get; set; } = default!;
         public DbSet<Background> Backgrounds { get; set; } = default!;
+        public DbSet<BeastGun> BeastGuns { get; set; } = default!;
         public DbSet<BenefitType> BenefitTypes { get; set; } = default!;
         public DbSet<Bulk> Bulks { get; set; } = default!;
         public DbSet<Bloodline> Bloodlines { get; set; } = default!;
         public DbSet<Cause> Causes { get; set; } = default!;
         public DbSet<Class> Classes { get; set; } = default!;
         public DbSet<ClassFeature> ClassFeatures { get; set; } = default!;
+        public DbSet<CombinationWeapon> CombinationWeapons { get; set; } = default!;
         public DbSet<ConditionCategory> ConditionCategories { get; set; } = default!;
         public DbSet<Condition> Conditions { get; set; } = default!;
         public DbSet<Curse> Curses { get; set; } = default!;
@@ -60,8 +67,6 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Eidolon> Eidolons { get; set; } = default!;
         public DbSet<FamiliarAbility> FamiliarAbilities { get; set; } = default!;
         public DbSet<Feat> Feats { get; set; } = default!;
-        public DbSet<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = default!;
-        public DbSet<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = default!;
         public DbSet<GunslingersWay> GunslingersWays { get; set; } = default!;
         public DbSet<HarrowCard> HarrowCards { get; set; } = default!;
         public DbSet<HarrowCategory> HarrowCategories { get; set; } = default!;
@@ -78,14 +83,13 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<InnovationModification> InnovationModifications { get; set; } = default!;
         public DbSet<InnovationModificationType> InnovationModificationTypes { get; set; } = default!;
         public DbSet<InstinctAbility> InstinctAbilities { get; set; } = default!;
-        public DbSet<Item> Items { get; set; } = default!;
         public DbSet<ItemCategory> ItemCategories { get; set; } = default!;
         public DbSet<ItemCurse> ItemCurses { get; set; } = default!;
         public DbSet<Language> Languages { get; set; } = default!;
         public DbSet<LanguageType> LanguageTypes { get; set; } = default!;
         public DbSet<Lore> Lores { get; set; } = default!;
         public DbSet<LoreCategory> LoreCategories { get; set; } = default!;
-        public DbSet<MasterAbility> MasterAbilities{ get; set; } = default!;
+        public DbSet<MasterAbility> MasterAbilities { get; set; } = default!;
         public DbSet<MagicEssence> MagicEssences { get; set; } = default!;
         public DbSet<MagicSchool> MagicSchools { get; set; } = default!;
         public DbSet<MagicTradition> MagicTraditions { get; set; } = default!;
@@ -100,8 +104,8 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Potency> Potencies { get; set; } = default!;
         public DbSet<PreciousMaterial> PreciousMaterials { get; set; } = default!;
         public DbSet<PreciousMaterialArmor> PreciousMaterialArmors { get; set; } = default!;
-        public DbSet<PreciousMaterialItemCategory> PreciousMaterialItemCategories { get; set; } = default!;
-        public DbSet<PreciousMaterialShield> PreciousMaterialShields{ get; set; } = default!;
+        public DbSet<PreciousMaterialObjectCategory> PreciousMaterialItemCategories { get; set; } = default!;
+        public DbSet<PreciousMaterialShield> PreciousMaterialShields { get; set; } = default!;
         public DbSet<PreciousMaterialWeapon> PreciousMaterialWeapons { get; set; } = default!;
         public DbSet<Proficiency> Proficiencies { get; set; } = default!;
         public DbSet<AncestrySize> AncestrySizes { get; set; } = default!;
@@ -109,6 +113,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Racket> Rackets { get; set; } = default!;
         public DbSet<Rarity> Rarities { get; set; } = default!;
         public DbSet<ResearchField> ResearchFields { get; set; } = default!;
+        public DbSet<Rule> Rules { get; set; } = default!;
         public DbSet<RuneMagic> RuneMagics { get; set; } = default!;
         public DbSet<SavingThrowStat> SavingThrowStats { get; set; } = default!;
         public DbSet<Shield> Shields { get; set; } = default!;
@@ -125,29 +130,30 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<Trait> Traits { get; set; } = default!;
         public DbSet<UnarmedWeapon> UnarmedWeapons { get; set; } = default!;
         public DbSet<MeleeWeapon> MeleeWeapons { get; set; } = default!;
-        public DbSet<WeaponPropertyRune> WeaponPropertyRunes { get; set; } = default!;
         public DbSet<WeaponGroup> WeaponGroups { get; set; } = default!;
         public DbSet<WeaponCategory> WeaponCategories { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            //Debugger.Launch();
-
             ConfigureEntities(builder);
         }
 
         private void ConfigureEntities(ModelBuilder builder)
         {
-            foreach (Type entityType in GetType().Assembly.GetTypes().Where(e => e.BaseType != null && e.BaseType == (typeof(BaseEntity))))
+            foreach (Type entityType in GetApplicableConcreteTypesToConfigure())
             {
                 Configure(builder, entityType);
             }
+        }
 
-            foreach(Type entityType in GetType().Assembly.GetTypes().Where(e => e != typeof(BaseEntity) && typeof(BaseEntity).IsAssignableFrom(e) && e.GetInterfaces().Contains(typeof(IOwnedEntity)) == false))
-            {
-                Console.WriteLine($"Preprocessing: '{entityType.Name}'.");
-                builder.Entity(entityType);
-            }
+        private IEnumerable<Type> GetApplicableConcreteTypesToConfigure()
+        {
+            return GetType()
+                .Assembly
+                .GetTypes()
+                .Where(e => e.IsAssignableTo(typeof(BaseEntity)))
+                .Where(e => e != typeof(BaseEntity))
+                .Where(e => e.IsGenericType == false);
         }
 
         private void Configure(ModelBuilder builder, Type entityType)
@@ -155,17 +161,17 @@ namespace Silvester.Pathfinder.Reference.Database
             Console.WriteLine($"Preprocessing: '{entityType.Name}'.");
 
             GetType()
-                .GetMethod(nameof(ConfigureEntity), BindingFlags.NonPublic | BindingFlags.Static)!
+                .GetMethod(nameof(Configure), BindingFlags.NonPublic | BindingFlags.Static)!
                 .MakeGenericMethod(entityType)!
                 .Invoke(this, new object[] { builder });
         }
 
-        private static void ConfigureEntity<TEntity>(ModelBuilder builder)
+        private static void Configure<TEntity>(ModelBuilder builder)
             where TEntity : BaseEntity
         {
-            new EntityConfiguratorProvider<TEntity>()
-                .GetConfigurator()
-                .Configure(builder);
+            EntityConfiguratorProvider<TEntity> provider = new EntityConfiguratorProvider<TEntity>();
+            provider.GetDefaultConfigurator().Configure(builder);
+            provider.GetCustomConfigurator()?.Configure(builder);
         }
     }
 }

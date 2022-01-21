@@ -113,7 +113,12 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
     }
 
     public class CreatureConfigurator : EntityConfigurator<Creature>
-    {
+	{
+		public CreatureConfigurator()
+		{
+			ConfigureEntitySearch<Creature>(e => new {e.Name});
+        }
+
         public override void Configure(ModelBuilder builder)
         {
             base.Configure(builder);
@@ -123,14 +128,6 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
                 .HasOne(e => e.RecallKnowledge)
                 .WithOne(e => e!.Creature)
                 .HasForeignKey<Creature>(e => e.RecallKnowledgeId);
-        }
-    }
-
-    public class CreatureSearchConfigurator : SearchableEntityConfigurator<Creature>
-    {
-        public override Expression<Func<Creature, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
         }
     }
 }

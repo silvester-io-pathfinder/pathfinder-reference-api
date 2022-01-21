@@ -15,11 +15,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class MagicEssenceSearchConfigurator : SearchableEntityConfigurator<MagicEssence>
-    {
-        public override Expression<Func<MagicEssence, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class MagicEssenceConfigurator : EntityConfigurator<MagicEssence>
+	{
+		public MagicEssenceConfigurator()
+		{
+			ConfigureEntitySearch<MagicEssence>(e => new {e.Name, e.Description});
+		}
+	}
 }

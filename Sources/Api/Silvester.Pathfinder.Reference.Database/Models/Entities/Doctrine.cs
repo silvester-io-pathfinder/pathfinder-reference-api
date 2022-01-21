@@ -2,7 +2,6 @@ using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
 
 using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 
@@ -22,11 +21,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class DoctrineConfigurator : SearchableEntityConfigurator<Doctrine>
-    {
-        public override Expression<Func<Doctrine, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class DoctrineConfigurator : EntityConfigurator<Doctrine>
+	{
+		public DoctrineConfigurator()
+		{
+			ConfigureEntitySearch<Doctrine>(e => new {e.Name, e.Description});
+		}
+	}
 }

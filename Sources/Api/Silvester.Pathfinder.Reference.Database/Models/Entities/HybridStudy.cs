@@ -36,11 +36,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class HybridStudySearchConfigurator : SearchableEntityConfigurator<HybridStudy>
-    {
-        public override Expression<Func<HybridStudy, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class HybridStudyConfigurator : EntityConfigurator<HybridStudy>
+	{
+		public HybridStudyConfigurator()
+		{
+			ConfigureEntitySearch<HybridStudy>(e => new {e.Name});
+		}
+	}
 }

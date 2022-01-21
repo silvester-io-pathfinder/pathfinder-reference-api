@@ -24,11 +24,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class ArcaneThesisSearchConfigurator : SearchableEntityConfigurator<ArcaneThesis>
-    {
-        public override Expression<Func<ArcaneThesis, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class ArcaneThesisConfigurator : EntityConfigurator<ArcaneThesis>
+	{
+		public ArcaneThesisConfigurator()
+		{
+			ConfigureEntitySearch<ArcaneThesis>(e => new {e.Name});
+		}
+	}
 }

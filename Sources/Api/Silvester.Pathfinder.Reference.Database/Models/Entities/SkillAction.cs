@@ -42,11 +42,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class SkillActionSearchConfigurator : SearchableEntityConfigurator<SkillAction>
-    {
-        public override Expression<Func<SkillAction, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class SkillActionConfigurator : EntityConfigurator<SkillAction>
+	{
+		public SkillActionConfigurator()
+		{
+			ConfigureEntitySearch<SkillAction>(e => new {e.Name});
+		}
+	}
 }

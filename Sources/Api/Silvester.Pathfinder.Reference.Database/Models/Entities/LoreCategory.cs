@@ -17,11 +17,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class LoreCategorySearchConfigurator : SearchableEntityConfigurator<LoreCategory>
-    {
-        public override Expression<Func<LoreCategory, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class LoreCategoryConfigurator : EntityConfigurator<LoreCategory>
+	{
+		public LoreCategoryConfigurator()
+		{
+			ConfigureEntitySearch<LoreCategory>(e => new {e.Name});
+		}
+	}
 }

@@ -21,11 +21,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class InstinctAbilitySearchConfigurator : SearchableEntityConfigurator<InstinctAbility>
-    {
-        public override Expression<Func<InstinctAbility, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class InstinctAbilityConfigurator : EntityConfigurator<InstinctAbility>
+	{
+		public InstinctAbilityConfigurator()
+		{
+			ConfigureEntitySearch<InstinctAbility>(e => new {e.Name, e.Description});
+		}
+	}
 }

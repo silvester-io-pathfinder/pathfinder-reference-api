@@ -17,11 +17,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class SavingThrowStatSearchConfigurator : SearchableEntityConfigurator<SavingThrowStat>
-    {
-        public override Expression<Func<SavingThrowStat, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class SavingThrowStatConfigurator : EntityConfigurator<SavingThrowStat>
+	{
+		public SavingThrowStatConfigurator()
+		{
+			ConfigureEntitySearch<SavingThrowStat>(e => new {e.Name});
+		}
+	}
 }

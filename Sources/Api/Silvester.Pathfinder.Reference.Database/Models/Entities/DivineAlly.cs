@@ -17,11 +17,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class DivineAllySearchConfigurator : SearchableEntityConfigurator<DivineAlly>
-    {
-        public override Expression<Func<DivineAlly, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class DivineAllyConfigurator : EntityConfigurator<DivineAlly>
+	{
+		public DivineAllyConfigurator()
+		{
+			ConfigureEntitySearch<DivineAlly>(e => new {e.Name, e.Description});
+		}
+	}
 }

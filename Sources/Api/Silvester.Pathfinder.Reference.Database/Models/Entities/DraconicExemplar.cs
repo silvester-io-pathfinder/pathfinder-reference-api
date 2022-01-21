@@ -9,8 +9,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
     {
         public string Dragon { get; set; } = default!;
 
-        public Guid EffectAreaId { get; set; }
-        public EffectArea EffectArea { get; set; } = default!;
+        public Guid EffectShapeId { get; set; }
+        public EffectShape EffectShape { get; set; } = default!;
 
         public Guid DamageTypeId { get; set; }
         public DamageType DamageType { get; set; } = default!;
@@ -24,11 +24,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class DraconicExemplarSearchConfigurator : SearchableEntityConfigurator<DraconicExemplar>
-    {
-        public override Expression<Func<DraconicExemplar, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Dragon };
-        }
-    }
+    public class DraconicExemplarConfigurator : EntityConfigurator<DraconicExemplar>
+	{
+		public DraconicExemplarConfigurator()
+		{
+			ConfigureEntitySearch<DraconicExemplar>(e => new {e.Dragon});
+		}
+	}
 }

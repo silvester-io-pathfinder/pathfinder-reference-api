@@ -1,5 +1,4 @@
 using NpgsqlTypes;
-using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
@@ -24,11 +23,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class PhilosophySearchConfigurator : SearchableEntityConfigurator<Philosophy>
-    {
-        public override Expression<Func<Philosophy, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Anathema, e.AreasOfConcern, e.Edicts };
-        }
-    }
+    public class PhilosophyConfigurator : EntityConfigurator<Philosophy>
+	{
+		public PhilosophyConfigurator()
+		{
+			ConfigureEntitySearch<Philosophy>(e => new {e.Name, e.Anathema, e.AreasOfConcern, e.Edicts});
+		}
+	}
 }

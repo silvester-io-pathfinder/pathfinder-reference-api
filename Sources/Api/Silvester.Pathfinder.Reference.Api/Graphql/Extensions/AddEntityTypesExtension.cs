@@ -1,7 +1,6 @@
 ﻿using HotChocolate.Data.Filters;
 using HotChocolate.Data.Sorting;
 using HotChocolate.Execution.Configuration;
-using HotChocolate.Types;
 using Microsoft.Extensions.DependencyInjection;
 using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database;
@@ -21,11 +20,14 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql.Extensions
             IDictionary<Type, bool> visitor = new Dictionary<Type, bool>();
 
             IEnumerable<Type> allBaseEntities = typeof(BaseEntity).Assembly.GetTypes().Where(e => e.IsAssignableTo(typeof(BaseEntity)));
+            
+            //First do all the interface definitions.
             foreach (Type interfaceType in allBaseEntities.Where(e => e.IsAbstract))
             {
                 VisitInterface(graphql, visitor, interfaceType);
             }
 
+            //Then all the concrete types.
             foreach (Type objectType in allBaseEntities.Where(e => e.IsAbstract == false))
             {
                 VisitObject(graphql, visitor, objectType);
@@ -39,11 +41,18 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql.Extensions
             if (visitor.ContainsKey(interfaceType) == false)
             {
                 visitor.Add(interfaceType, true);
+                if(interfaceType.IsGenericType)
+                {
+                    return;
+                }
 
                 typeof(SchemaRequestExecutorBuilderExtensions)
                     .GetMethod(nameof(SchemaRequestExecutorBuilderExtensions.AddInterfaceType), 1, BindingFlags.Static | BindingFlags.Public, null, new Type[] { typeof(IRequestExecutorBuilder) }, null)!
                     .MakeGenericMethod(interfaceType)
                     .Invoke(null, new object[] { graphql });
+
+                graphql.AddType(typeof(SortInputType<>).MakeGenericType(interfaceType));
+                graphql.AddType(typeof(FilterInputType<>).MakeGenericType(interfaceType));
                 
                 Console.WriteLine("Injected: InterfaceType<" + interfaceType.Name + ">");
             }

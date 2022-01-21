@@ -38,6 +38,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Consol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Reference.Database.Seeding.Cli", "Seeding\Silvester.Pathfinder.Reference.Database.Seeding.Cli\Silvester.Pathfinder.Reference.Database.Seeding.Cli.csproj", "{01F68A91-0045-4D09-9F9B-67C8606621D8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Reference.Database.Seeding.Builders", "Seeding\Silvester.Pathfinder.Reference.Database.Seeding.Builders\Silvester.Pathfinder.Reference.Database.Seeding.Builders.csproj", "{2875EF9F-6EE6-47D7-9EF2-6A80AE4278D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Silvester.Pathfinder.Reference.Database.Seeding.Seeds", "Seeding\Silvester.Pathfinder.Reference.Database.Seeding.Seeds\Silvester.Pathfinder.Reference.Database.Seeding.Seeds.csproj", "{DDAC66F7-6DC3-4C80-A240-117B122BD029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +88,14 @@ Global
 		{01F68A91-0045-4D09-9F9B-67C8606621D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01F68A91-0045-4D09-9F9B-67C8606621D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01F68A91-0045-4D09-9F9B-67C8606621D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2875EF9F-6EE6-47D7-9EF2-6A80AE4278D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2875EF9F-6EE6-47D7-9EF2-6A80AE4278D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2875EF9F-6EE6-47D7-9EF2-6A80AE4278D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2875EF9F-6EE6-47D7-9EF2-6A80AE4278D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDAC66F7-6DC3-4C80-A240-117B122BD029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDAC66F7-6DC3-4C80-A240-117B122BD029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDAC66F7-6DC3-4C80-A240-117B122BD029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDAC66F7-6DC3-4C80-A240-117B122BD029}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +111,8 @@ Global
 		{69061D19-E6E9-408F-827C-9D0C7E43E17B} = {FAE23D9F-EA48-4FFD-BF8D-705D404EBAFF}
 		{D89E7C5B-ACA9-4EA4-A923-76EF453D551E} = {BE37F407-2BAE-4447-8DCB-376814234EE4}
 		{01F68A91-0045-4D09-9F9B-67C8606621D8} = {FAE23D9F-EA48-4FFD-BF8D-705D404EBAFF}
+		{2875EF9F-6EE6-47D7-9EF2-6A80AE4278D8} = {FAE23D9F-EA48-4FFD-BF8D-705D404EBAFF}
+		{DDAC66F7-6DC3-4C80-A240-117B122BD029} = {FAE23D9F-EA48-4FFD-BF8D-705D404EBAFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {022489C1-A8F0-4D11-B41D-A9BFF1D59335}

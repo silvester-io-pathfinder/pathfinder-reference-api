@@ -89,11 +89,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public ClassFeature ClassFeature { get; set; } = default!;
     }
 
-    public class ClassSearchConfigurator : SearchableEntityConfigurator<Class>
-    {
-        public override Expression<Func<Class, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description, e.WhileExploring };
-        }
-    }
+    public class ClassConfigurator : EntityConfigurator<Class>
+	{
+		public ClassConfigurator()
+		{
+			ConfigureEntitySearch<Class>(e => new {e.Name, e.Description, e.WhileExploring});
+		}
+	}
 }

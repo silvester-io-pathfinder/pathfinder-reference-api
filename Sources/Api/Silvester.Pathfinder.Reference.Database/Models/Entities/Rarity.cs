@@ -16,11 +16,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class RaritySearchConfigurator : SearchableEntityConfigurator<Rarity>
-    {
-        public override Expression<Func<Rarity, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class RarityConfigurator : EntityConfigurator<Rarity>
+	{
+		public RarityConfigurator()
+		{
+			ConfigureEntitySearch<Rarity>(e => new {e.Name});
+		}
+	}
 }

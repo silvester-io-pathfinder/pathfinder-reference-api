@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
-using Microsoft.EntityFrameworkCore;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {
@@ -26,11 +25,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class ClassFeatureSearchConfigurator : SearchableEntityConfigurator<ClassFeature>
-    {
-        public override Expression<Func<ClassFeature, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class ClassFeatureConfigurator : EntityConfigurator<ClassFeature>
+	{
+		public ClassFeatureConfigurator()
+		{
+			ConfigureEntitySearch<ClassFeature>(e => new {e.Name});
+		}
+	}
 }

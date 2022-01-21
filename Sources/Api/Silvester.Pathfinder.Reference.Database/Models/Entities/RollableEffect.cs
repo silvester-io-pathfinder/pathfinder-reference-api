@@ -33,11 +33,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class RollableEffectSearchConfigurator : SearchableEntityConfigurator<RollableEffect>
-    {
-        public override Expression<Func<RollableEffect, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.CriticalFailure, e.CriticalSuccess, e.Failure, e.Success };
-        }
-    }
+    public class RollableEffectConfigurator : EntityConfigurator<RollableEffect>
+	{
+		public RollableEffectConfigurator()
+		{
+			ConfigureEntitySearch<RollableEffect>(e => new {e.Name, e.CriticalFailure, e.CriticalSuccess, e.Failure, e.Success});
+		}
+	}
 }

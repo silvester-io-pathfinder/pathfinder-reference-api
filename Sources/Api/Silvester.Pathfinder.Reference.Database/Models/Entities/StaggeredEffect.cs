@@ -11,6 +11,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 
         public string Onset { get; set; } = default!;
 
+        public string Name { get; set; } = default!;
+
         public int? DifficultyCheck { get; set; }
 
         public string MaximumDuration { get; set; } = default!;
@@ -19,6 +21,13 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public SavingThrowStat SavingThrowStat { get; set; } = default!;
 
         public ICollection<StaggeredEffectStage> Stages { get; set; } = new List<StaggeredEffectStage>();
-        public ICollection<Trait> Traits { get; set; } = new List<Trait>();
+        public ICollection<StaggeredEffectTraitBinding> Traits { get; set; } = new List<StaggeredEffectTraitBinding>();
+
+        public Guid OwnerId { get; set; }
+    }
+
+    public class StaggeredEffectTraitBinding : TraitBinding<StaggeredEffect>
+    {
+
     }
 }

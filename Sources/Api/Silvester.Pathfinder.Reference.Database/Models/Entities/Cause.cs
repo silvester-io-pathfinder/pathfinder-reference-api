@@ -31,11 +31,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class CauseSearchConfigurator : SearchableEntityConfigurator<Cause>
-    {
-        public override Expression<Func<Cause, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class CauseConfigurator : EntityConfigurator<Cause>
+	{
+		public CauseConfigurator()
+		{
+			ConfigureEntitySearch<Cause>(e => new {e.Name});
+		}
+	}
 }

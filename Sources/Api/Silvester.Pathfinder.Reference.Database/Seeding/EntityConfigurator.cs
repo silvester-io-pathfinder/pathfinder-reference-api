@@ -1,18 +1,69 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database.Extensions;
+using Silvester.Pathfinder.Reference.Database.Models.Effects;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Models.Items;
+using Silvester.Pathfinder.Reference.Database.Models.Items.Instances;
+using Silvester.Pathfinder.Reference.Database.Seeding.Configurations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Reflection;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding
 {
+    public interface IEntityConfiguration<out TEntity>
+        where TEntity : BaseEntity
+    {
+        void Configure(ModelBuilder builder);
+    }
+
     public class EntityConfigurator<TEntity>
+        where TEntity : BaseEntity
+    {
+        private IList<IEntityConfiguration<TEntity>> Decorators { get; }
+
+        public EntityConfigurator()
+        {
+            Decorators = new List<IEntityConfiguration<TEntity>>();
+
+            if(typeof(TEntity).IsOwnedEntity())
+            {
+                Decorators.Add(new OwnedEntityConfiguration<TEntity>());
+            }
+            else
+            {
+                Decorators.Add(new BaseEntityConfiguration<TEntity>());
+                Decorators.Add(new OwnedPropertyConfiguration<TEntity>());
+            }
+        }
+
+        public virtual void Configure(ModelBuilder builder)
+        {
+            foreach(IEntityConfiguration<TEntity> decorator in Decorators)
+            {
+                decorator.Configure(builder);
+            }
+        }
+
+        protected void ConfigureEntitySearch<TSearchableEntity>(Expression<Func<TSearchableEntity, object>> propertiesIncludedInSearch)
+            where TSearchableEntity : TEntity, ISearchableEntity
+        {
+            Decorators.Add(new BaseEntitySearchConfiguration<TSearchableEntity>(propertiesIncludedInSearch));
+        }
+
+        protected void ConfigureOwnedSearch<TSearchableEntity>(Expression<Func<TSearchableEntity, object>> propertiesIncludedInSearch)
+            where TSearchableEntity : TEntity, ISearchableEntity, IOwnedEntity
+        {
+            Decorators.Add(new OwnedEntitySearchConfiguration<TSearchableEntity>(propertiesIncludedInSearch));
+        }
+    }
+
+    /*
+    public class EntityConfiguratorr<TEntity>
         where TEntity : BaseEntity
     {
         public virtual void Configure(ModelBuilder builder)
@@ -30,7 +81,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
                 if (typeof(TEntity).GetInterfaces().Contains(typeof(ISearchableEntity)))
                 {
                     //After checking at run time whether the TEntity is searchable, it will comply with all of the generic type parameter constraints.
-                    MethodInfo method = typeof(EntityConfigurator<TEntity>).GetMethod(nameof(ConfigureEntitySearch), BindingFlags.Static | BindingFlags.NonPublic)!;
+                    MethodInfo method = typeof(EntityConfiguratorr<TEntity>).GetMethod(nameof(ConfigureEntitySearch), BindingFlags.Static | BindingFlags.NonPublic)!;
                     method.MakeGenericMethod(typeof(TEntity)).Invoke(null, new object[] { entity });
                 }
 
@@ -86,7 +137,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
         {
             if (ownedEntityType.GetInterfaces().Contains(typeof(ISearchableEntity)))
             {
-                MethodInfo method = typeof(EntityConfigurator<>).MakeGenericType(typeof(TEntity)).GetMethod(nameof(ConfigureOwnedEntitySearch), BindingFlags.Static | BindingFlags.NonPublic)!;
+                MethodInfo method = typeof(EntityConfiguratorr<>).MakeGenericType(typeof(TEntity)).GetMethod(nameof(ConfigureOwnedEntitySearch), BindingFlags.Static | BindingFlags.NonPublic)!;
                 method.MakeGenericMethod(typeof(TEntity), ownedEntityType).Invoke(null, new object[] { accessor });
             }
         }
@@ -94,7 +145,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
         private static void ConfigureEntitySearch<TSearchableEntity>(EntityTypeBuilder<TSearchableEntity> entity)
             where TSearchableEntity : BaseEntity, ISearchableEntity
         {
-            SearchableEntityConfigurator<TSearchableEntity> configurator = SearchableEntityConfigurator<TSearchableEntity>.ForEntity();
+            SearchableEntityConfiguratorr<TSearchableEntity> configurator = SearchableEntityConfiguratorr<TSearchableEntity>.ForEntity();
             configurator.ConfigureSearch(entity);
         }
 
@@ -102,24 +153,24 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
            where TOwner : BaseEntity
            where TOwned : BaseEntity, IOwnedEntity, ISearchableEntity
         {
-            SearchableEntityConfigurator<TOwned> configurator = SearchableEntityConfigurator<TOwned>.ForEntity();
+            SearchableEntityConfiguratorr<TOwned> configurator = SearchableEntityConfiguratorr<TOwned>.ForEntity();
             configurator.ConfigureSearch<TOwner, TOwned>(accessor);
         }
     }
 
-    public abstract class SearchableEntityConfigurator<TEntity> 
+    public abstract class SearchableEntityConfiguratorr<TEntity> 
         where TEntity : BaseEntity, ISearchableEntity
     {
-        public static SearchableEntityConfigurator<TEntity> ForEntity()
+        public static SearchableEntityConfiguratorr<TEntity> ForEntity()
         {
-            Type? type = typeof(SearchableEntityConfigurator<>).Assembly.GetTypes().FirstOrDefault(e => e.BaseType != null && e.BaseType == typeof(SearchableEntityConfigurator<TEntity>));
+            Type? type = typeof(SearchableEntityConfiguratorr<>).Assembly.GetTypes().FirstOrDefault(e => e.BaseType != null && e.BaseType == typeof(SearchableEntityConfiguratorr<TEntity>));
 
             if (type == null)
             {
                 throw new InvalidOperationException($"No searchable entity configurator could be found for entity '{typeof(TEntity).Name}'.");
             }
 
-            return (SearchableEntityConfigurator<TEntity>) Activator.CreateInstance(type)!;
+            return (SearchableEntityConfiguratorr<TEntity>) Activator.CreateInstance(type)!;
         }
 
         public void ConfigureSearch(EntityTypeBuilder<TEntity> entity)
@@ -144,5 +195,5 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
         }
 
         public abstract Expression<Func<TEntity, object?>> GetSearchProperties();
-    }
+    }*/
 }

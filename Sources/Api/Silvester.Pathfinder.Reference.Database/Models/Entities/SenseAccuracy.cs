@@ -1,7 +1,5 @@
 using NpgsqlTypes;
-using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 
@@ -18,11 +16,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class SenseAccuracySearchConfigurator : SearchableEntityConfigurator<SenseAccuracy>
-    {
-        public override Expression<Func<SenseAccuracy, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class SenseAccuracyConfigurator : EntityConfigurator<SenseAccuracy>
+	{
+		public SenseAccuracyConfigurator()
+		{
+			ConfigureEntitySearch<SenseAccuracy>(e => new {e.Name});
+		}
+	}
 }

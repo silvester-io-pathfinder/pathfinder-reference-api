@@ -1,6 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NpgsqlTypes;
+using Silvester.Pathfinder.Reference.Database.Seeding;
 using System;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Silvester.Pathfinder.Reference.Database
 {

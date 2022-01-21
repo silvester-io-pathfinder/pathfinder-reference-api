@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="../../Properties.proj" />
+
+	<PropertyGroup>
+	  <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+	  <EnableNETAnalyzers>False</EnableNETAnalyzers>
+	  <Nullable>enable</Nullable>
+	  <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+	  <EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Api\Silvester.Pathfinder.Reference.Database\Silvester.Pathfinder.Reference.Database.csproj" />
+	  <ProjectReference Include="..\Silvester.Pathfinder.Reference.Database.Seeding.Builders\Silvester.Pathfinder.Reference.Database.Seeding.Builders.csproj" />
+	  <ProjectReference Include="..\Silvester.Pathfinder.Reference.Database.Seeding\Silvester.Pathfinder.Reference.Database.Seeding.csproj" />
+	</ItemGroup>
+</Project>

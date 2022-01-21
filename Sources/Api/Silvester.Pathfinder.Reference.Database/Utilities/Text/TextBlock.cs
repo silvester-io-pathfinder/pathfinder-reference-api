@@ -18,11 +18,11 @@ namespace Silvester.Pathfinder.Reference.Database.Utilities.Text
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class TextBlockConfigurator : SearchableEntityConfigurator<TextBlock>
-    {
-        public override Expression<Func<TextBlock, object?>> GetSearchProperties()
-        {
-            return e => new { e.Text };
-        }
-    }
+    public class TextBlockConfigurator : EntityConfigurator<TextBlock>
+	{
+		public TextBlockConfigurator()
+		{
+			ConfigureOwnedSearch<TextBlock>(e => new {e.Text});
+		}
+	}
 }

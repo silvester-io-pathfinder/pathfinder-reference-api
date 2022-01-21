@@ -21,11 +21,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class SenseConfigurator : SearchableEntityConfigurator<Sense>
-    {
-        public override Expression<Func<Sense, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class SenseConfigurator : EntityConfigurator<Sense>
+	{
+		public SenseConfigurator()
+		{
+			ConfigureEntitySearch<Sense>(e => new {e.Name});
+		}
+	}
 }

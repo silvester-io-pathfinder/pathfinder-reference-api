@@ -3,9 +3,6 @@ using Silvester.Pathfinder.Reference.Database.Models.Choices;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Effects
 {

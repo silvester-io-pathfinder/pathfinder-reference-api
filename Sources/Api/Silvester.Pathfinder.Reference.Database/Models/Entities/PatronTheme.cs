@@ -32,11 +32,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class PatronThemeSearchConfigurator : SearchableEntityConfigurator<PatronTheme>
-    {
-        public override Expression<Func<PatronTheme, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class PatronThemeConfigurator : EntityConfigurator<PatronTheme>
+	{
+		public PatronThemeConfigurator()
+		{
+			ConfigureEntitySearch<PatronTheme>(e => new {e.Name, e.Description});
+		}
+	}
 }

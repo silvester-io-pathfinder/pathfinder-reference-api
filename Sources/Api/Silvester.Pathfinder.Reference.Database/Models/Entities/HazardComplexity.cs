@@ -16,11 +16,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class HazardComplexitySearchConfigurator : SearchableEntityConfigurator<HazardComplexity>
-    {
-        public override Expression<Func<HazardComplexity, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class HazardComplexityConfigurator : EntityConfigurator<HazardComplexity>
+	{
+		public HazardComplexityConfigurator()
+		{
+			ConfigureEntitySearch<HazardComplexity>(e => new {e.Name});
+		}
+	}
 }

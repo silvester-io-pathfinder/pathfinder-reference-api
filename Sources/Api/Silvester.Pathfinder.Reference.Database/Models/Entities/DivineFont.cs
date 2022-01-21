@@ -18,11 +18,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class DivineFontSearchConfigurator : SearchableEntityConfigurator<DivineFont>
-    {
-        public override Expression<Func<DivineFont, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class DivineFontConfigurator : EntityConfigurator<DivineFont>
+	{
+		public DivineFontConfigurator()
+		{
+			ConfigureEntitySearch<DivineFont>(e => new {e.Name, e.Description});
+		}
+	}
 }

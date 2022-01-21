@@ -17,11 +17,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class FamiliarAbilitySearchConfigurator : SearchableEntityConfigurator<FamiliarAbility>
-    {
-        public override Expression<Func<FamiliarAbility, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class FamiliarAbilityConfigurator : EntityConfigurator<FamiliarAbility>
+	{
+		public FamiliarAbilityConfigurator()
+		{
+			ConfigureEntitySearch<FamiliarAbility>(e => new {e.Name, e.Description});
+		}
+	}
 }

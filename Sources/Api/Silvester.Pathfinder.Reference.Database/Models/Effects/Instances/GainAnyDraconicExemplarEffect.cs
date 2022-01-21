@@ -1,7 +1,5 @@
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
-using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using System;
 
 namespace Silvester.Pathfinder.Reference.Database.Effects.Instances

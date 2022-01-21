@@ -1,16 +1,6 @@
-﻿using HotChocolate.Data.Filters;
-using HotChocolate.Data.Sorting;
-using HotChocolate.Execution.Configuration;
-using HotChocolate.Types;
+﻿using HotChocolate.Execution.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NpgsqlTypes;
-using Silvester.Pathfinder.Reference.Database;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 
 namespace Silvester.Pathfinder.Reference.Api.Graphql.Extensions
 {

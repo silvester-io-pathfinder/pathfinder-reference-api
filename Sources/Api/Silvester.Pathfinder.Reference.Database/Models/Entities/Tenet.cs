@@ -19,11 +19,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class TenetSearchConfigurator : SearchableEntityConfigurator<Tenet>
-    {
-        public override Expression<Func<Tenet, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class TenetConfigurator : EntityConfigurator<Tenet>
+	{
+		public TenetConfigurator()
+		{
+			ConfigureEntitySearch<Tenet>(e => new {e.Name});
+		}
+	}
 }

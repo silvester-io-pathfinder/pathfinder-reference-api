@@ -49,15 +49,15 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public Bulk Bulk { get; set; } = default!;
 
         public Guid GradeId { get; set; }
-        public ItemGrade Grade { get; set; } = default!;
+        public ObjectGrade Grade { get; set; } = default!;
     }
 
-    public class PreciousMaterialShieldSearchConfigurator : SearchableEntityConfigurator<PreciousMaterialShield>
-    {
-        public override Expression<Func<PreciousMaterialShield, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class PreciousMaterialShieldConfigurator : EntityConfigurator<PreciousMaterialShield>
+	{
+		public PreciousMaterialShieldConfigurator()
+		{
+			ConfigureEntitySearch<PreciousMaterialShield>(e => new {e.Name});
+		}
+	}
 }
  

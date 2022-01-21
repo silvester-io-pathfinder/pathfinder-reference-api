@@ -26,11 +26,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class ArchetypeSearchConfigurator : SearchableEntityConfigurator<Archetype>
-    {
-        public override Expression<Func<Archetype, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class ArchetypeConfigurator : EntityConfigurator<Archetype>
+	{
+		public ArchetypeConfigurator()
+		{
+			ConfigureEntitySearch<Archetype>(e => new {e.Name});
+		}
+	}
 }

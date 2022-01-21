@@ -6,7 +6,6 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 
@@ -65,28 +64,28 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class InnovatioSearchConfigurator : SearchableEntityConfigurator<Innovation>
-    {
-        public override Expression<Func<Innovation, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class InnovationConfigurator : EntityConfigurator<Innovation>
+	{
+		public InnovationConfigurator()
+		{
+			ConfigureEntitySearch<Innovation>(e => new {e.Name});
+		}
+	}
 
-    public class InnovationModificationSearchConfigurator : SearchableEntityConfigurator<InnovationModification>
-    {
-        public override Expression<Func<InnovationModification, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class InnovationModificationConfigurator : EntityConfigurator<InnovationModification>
+	{
+		public InnovationModificationConfigurator()
+		{
+			ConfigureEntitySearch<InnovationModification>(e => new {e.Name, e.Description});
+		}
+	}
 
-    public class InnovationModificationTypeSearchConfigurator : SearchableEntityConfigurator<InnovationModificationType>
-    {
-        public override Expression<Func<InnovationModificationType, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class InnovationModificationTypeConfigurator : EntityConfigurator<InnovationModificationType>
+	{
+		public InnovationModificationTypeConfigurator()
+		{
+			ConfigureEntitySearch<InnovationModificationType>(e => new {e.Name});
+		}
+	}
 }
  

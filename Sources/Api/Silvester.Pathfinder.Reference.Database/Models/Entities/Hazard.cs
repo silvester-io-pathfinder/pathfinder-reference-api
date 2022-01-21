@@ -48,18 +48,20 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
      
         public ICollection<HazardDispellRequirement> DispellRequirements { get; set; } = new List<HazardDispellRequirement>();
             
-        public ICollection<HazardAction> Actions{ get; set; } = new List<HazardAction>();
-     
+        public ICollection<InlineAction> Actions { get; set; } = new List<InlineAction>();
+
+        public ICollection<InlineAttack> Attacks { get; set; } = new List<InlineAttack>();
+
         public ICollection<TextBlock> RoutineDetails { get; set; } = new List<TextBlock>();
      
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class HazardSearchConfigurator : SearchableEntityConfigurator<Hazard>
-    {
-        public override Expression<Func<Hazard, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class HazardConfigurator : EntityConfigurator<Hazard>
+	{
+		public HazardConfigurator()
+		{
+			ConfigureEntitySearch<Hazard>(e => new {e.Name, e.Description});
+		}
+	}
 }

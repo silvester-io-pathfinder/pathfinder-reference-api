@@ -24,11 +24,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class RacketSearchConfigurator : SearchableEntityConfigurator<Racket>
-    {
-        public override Expression<Func<Racket, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class RacketConfigurator : EntityConfigurator<Racket>
+	{
+		public RacketConfigurator()
+		{
+			ConfigureEntitySearch<Racket>(e => new {e.Name});
+		}
+	}
 }

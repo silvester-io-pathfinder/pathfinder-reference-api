@@ -3,7 +3,6 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 using System;
-using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {
@@ -21,11 +20,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class DruidicOrderSearchConfigurator : SearchableEntityConfigurator<DruidicOrder>
-    {
-        public override Expression<Func<DruidicOrder, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class DruidicOrderConfigurator : EntityConfigurator<DruidicOrder>
+	{
+		public DruidicOrderConfigurator()
+		{
+			ConfigureEntitySearch<DruidicOrder>(e => new {e.Name, e.Description});
+		}
+	}
 }

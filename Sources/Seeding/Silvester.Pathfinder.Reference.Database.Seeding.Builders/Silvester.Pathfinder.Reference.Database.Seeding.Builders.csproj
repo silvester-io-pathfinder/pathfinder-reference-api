@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+	  <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Api\Silvester.Pathfinder.Reference.Database\Silvester.Pathfinder.Reference.Database.csproj" />
+    <ProjectReference Include="..\Silvester.Pathfinder.Reference.Database.Seeding\Silvester.Pathfinder.Reference.Database.Seeding.csproj" />
+  </ItemGroup>
+
+</Project>

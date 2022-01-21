@@ -4,10 +4,6 @@ using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {
@@ -36,11 +32,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class InstinctSearchConfigurator : SearchableEntityConfigurator<Instinct>
-    {
-        public override Expression<Func<Instinct, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class InstinctConfigurator : EntityConfigurator<Instinct>
+	{
+		public InstinctConfigurator()
+		{
+			ConfigureEntitySearch<Instinct>(e => new {e.Name, e.Description});
+		}
+	}
 }

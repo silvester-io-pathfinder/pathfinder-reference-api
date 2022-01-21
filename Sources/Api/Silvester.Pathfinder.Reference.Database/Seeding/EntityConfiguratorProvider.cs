@@ -6,12 +6,17 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding
     public class EntityConfiguratorProvider<TEntity>
        where TEntity : BaseEntity
     {
-        public EntityConfigurator<TEntity> GetConfigurator()
+        public EntityConfigurator<TEntity> GetDefaultConfigurator()
         {
-            Type configuratorType = GetType().Assembly.GetTypes().FirstOrDefault(e => e.BaseType != null && e.IsAssignableTo(typeof(EntityConfigurator<TEntity>))) 
-                ?? typeof(EntityConfigurator<TEntity>);
+            return (EntityConfigurator<TEntity>)Activator.CreateInstance(typeof(EntityConfigurator<TEntity>))!;
+        }
 
-            return (EntityConfigurator<TEntity>) Activator.CreateInstance(configuratorType)!;
+        public EntityConfigurator<TEntity>? GetCustomConfigurator()
+        {
+            Type? configuratorType = GetType().Assembly.GetTypes().SingleOrDefault(e => e.BaseType != null && e.IsAssignableTo(typeof(EntityConfigurator<TEntity>)));
+            return configuratorType == null 
+                ? null 
+                : (EntityConfigurator<TEntity>) Activator.CreateInstance(configuratorType)!;
         }
     }
 }

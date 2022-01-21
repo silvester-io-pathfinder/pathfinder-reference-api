@@ -1,12 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Silvester.Pathfinder.Reference.Database.Extensions;
 using System;
 using System.Linq;
-using System.Reflection;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding
 {
-    public interface IEntityTemplate<TEntity> 
+    public interface IEntityTemplate<out TEntity> 
         where TEntity : BaseEntity
     {
         TEntity Seed(ISeedBuilder builder);

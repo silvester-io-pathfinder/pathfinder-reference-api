@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Primitives;
 using Microsoft.OpenApi.Models;
 using Silvester.Pathfinder.Reference.Api.Graphql;
 using Silvester.Pathfinder.Reference.Api.Graphql.Extensions;
@@ -23,7 +22,6 @@ using Silvester.Pathfinder.Reference.Probes.Liveness;
 using Silvester.Pathfinder.Reference.Probes.Readiness;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 

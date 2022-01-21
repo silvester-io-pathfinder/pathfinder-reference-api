@@ -1,6 +1,5 @@
 using NpgsqlTypes;
 using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 
@@ -21,11 +20,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class HarrowCardSearchConfigurator : SearchableEntityConfigurator<HarrowCard>
-    {
-        public override Expression<Func<HarrowCard, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class HarrowCardConfigurator : EntityConfigurator<HarrowCard>
+	{
+		public HarrowCardConfigurator()
+		{
+			ConfigureEntitySearch<HarrowCard>(e => new {e.Name, e.Description});
+		}
+	}
 }

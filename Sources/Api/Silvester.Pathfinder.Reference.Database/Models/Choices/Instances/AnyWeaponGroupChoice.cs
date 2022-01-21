@@ -1,4 +1,3 @@
-using Silvester.Pathfinder.Reference.Database.Models.Choices;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using System;

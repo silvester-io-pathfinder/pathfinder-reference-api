@@ -1,10 +1,7 @@
 using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 using System.Linq.Expressions;
-using Silvester.Pathfinder.Reference.Database.Seeding;
 using System;
-using Silvester.Pathfinder.Reference.Database.Seeding;
-using Microsoft.EntityFrameworkCore;
 
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
@@ -18,11 +15,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class DamageTypeSearchConfigurator : SearchableEntityConfigurator<DamageType>
-    {
-        public override Expression<Func<DamageType, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class DamageTypeConfigurator : EntityConfigurator<DamageType>
+	{
+		public DamageTypeConfigurator()
+		{
+			ConfigureEntitySearch<DamageType>(e => new {e.Name});
+		}
+	}
 }

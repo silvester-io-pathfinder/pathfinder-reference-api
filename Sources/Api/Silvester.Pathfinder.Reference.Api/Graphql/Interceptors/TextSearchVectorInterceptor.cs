@@ -1,11 +1,9 @@
 ﻿using HotChocolate.Configuration;
 using HotChocolate.Types;
-using HotChocolate.Types.Descriptors;
 using HotChocolate.Types.Descriptors.Definitions;
 using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;

@@ -1,9 +1,7 @@
-﻿using McMaster.Extensions.CommandLineUtils;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
 using Silvester.Pathfinder.Console.Core.Executors;
 using Silvester.Pathfinder.Reference.Database.Seeding.Cli.Commands;
 using Silvester.Pathfinder.Reference.Database.Seeding.DependencyInjection;
@@ -28,11 +26,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Cli
         {
             if(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "ci")
             {
-                builder.AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.ci.json"), optional: false);
+                builder.AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "appsettings.ci.json"), optional: false);
             }
             else
             {
-                builder.AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "appsettings.json"), optional: false);
+                builder.AddJsonFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!, "appsettings.json"), optional: false);
             }
         }
 

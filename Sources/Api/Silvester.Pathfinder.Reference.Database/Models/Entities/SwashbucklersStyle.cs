@@ -21,11 +21,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class SwashbucklersStyleSearchConfigurator : SearchableEntityConfigurator<SwashbucklersStyle>
-    {
-        public override Expression<Func<SwashbucklersStyle, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class SwashbucklersStyleConfigurator : EntityConfigurator<SwashbucklersStyle>
+	{
+		public SwashbucklersStyleConfigurator()
+		{
+			ConfigureEntitySearch<SwashbucklersStyle>(e => new {e.Name, e.Description});
+		}
+	}
 }

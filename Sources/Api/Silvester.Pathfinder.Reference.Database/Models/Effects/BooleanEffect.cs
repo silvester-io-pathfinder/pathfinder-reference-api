@@ -1,9 +1,5 @@
-using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Effects
 {

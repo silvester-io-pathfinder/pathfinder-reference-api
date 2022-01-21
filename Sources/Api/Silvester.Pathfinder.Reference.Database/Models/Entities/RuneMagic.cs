@@ -1,6 +1,5 @@
 using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
-using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -44,7 +43,12 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
     }
 
     public class RuneMagicConfigurator : EntityConfigurator<RuneMagic>
-    {
+	{
+		public RuneMagicConfigurator()
+		{
+			ConfigureEntitySearch<RuneMagic>(e => new {e.Name, e.Description});
+        }
+
         public override void Configure(ModelBuilder builder)
         {
             base.Configure(builder);
@@ -58,16 +62,8 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
             builder
                 .Entity<RuneMagic>()
                 .HasOne(e => e.MagicSchool)
-                .WithOne(e => e!.RuneMagicSchool)
+                .WithOne(e => e!.RuneMagicSchool!)
                 .HasForeignKey<RuneMagic>(e => e!.MagicSchoolId);
-        }
-    }
-
-    public class RuneMagicSearchConfigurator : SearchableEntityConfigurator<RuneMagic>
-    {
-        public override Expression<Func<RuneMagic, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
         }
     }
 }

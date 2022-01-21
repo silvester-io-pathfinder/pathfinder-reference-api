@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
+using Silvester.Pathfinder.Reference.Database.Models.Items.Instances;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {
@@ -21,11 +22,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class WeaponGroupSearchConfigurator : SearchableEntityConfigurator<WeaponGroup>
-    {
-        public override Expression<Func<WeaponGroup, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.CriticalEffect };
-        }
-    }
+    public class WeaponGroupConfigurator : EntityConfigurator<WeaponGroup>
+	{
+		public WeaponGroupConfigurator()
+		{
+			ConfigureEntitySearch<WeaponGroup>(e => new {e.Name, e.CriticalEffect});
+		}
+	}
 }

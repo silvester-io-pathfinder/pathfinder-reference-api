@@ -4,6 +4,7 @@ using HotChocolate.Types.Descriptors;
 using HotChocolate.Types.Descriptors.Definitions;
 using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,7 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql.Interceptors
                 return;
             }
 
-            //TODO: Add support for navigation properties on 
-            if (definition.RuntimeType.IsSubclassOf(typeof(BaseEntity)))
+            if (definition.RuntimeType.IsAssignableTo(typeof(BaseEntity)) && definition.RuntimeType.IsAbstract == false)
             {
                 foreach(PropertyInfo property in definition.RuntimeType.GetProperties())
                 {
@@ -29,6 +29,8 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql.Interceptors
                     {
                         ObjectFieldDefinition fieldDefinition = definition.Fields.First(e => e.Name == context.DescriptorContext.Naming.GetMemberName(property, MemberKind.ObjectField));
                         ObjectFieldDescriptor fieldDescriptor = ObjectFieldDescriptor.From(context.DescriptorContext, fieldDefinition);
+
+                        Console.WriteLine("Addding sorting and filtering for: " + definition.RuntimeType.Name + ":" + context.DescriptorContext.Naming.GetMemberName(property, MemberKind.ObjectField));
 
                         fieldDescriptor
                             .UseSorting()

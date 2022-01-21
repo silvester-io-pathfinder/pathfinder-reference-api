@@ -1,15 +1,10 @@
 ﻿using HotChocolate;
 using HotChocolate.Data;
-using HotChocolate.Data.Filters.Expressions;
-using HotChocolate.Data.Projections.Expressions;
-using HotChocolate.Data.Sorting.Expressions;
-using HotChocolate.Resolvers;
 using HotChocolate.Types;
 using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Reference.Api.Graphql.Searching;
 using Silvester.Pathfinder.Reference.Api.Graphql.Searching.Models;
 using Silvester.Pathfinder.Reference.Database;
-using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

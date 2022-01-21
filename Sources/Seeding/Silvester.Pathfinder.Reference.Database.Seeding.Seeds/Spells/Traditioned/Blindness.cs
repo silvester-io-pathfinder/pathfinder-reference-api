@@ -1,0 +1,77 @@
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Utilities.Text;
+using System;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
+using System.Collections.Generic;
+
+namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
+{
+    public class Blindness : Template
+    {
+        public static readonly Guid ID = Guid.Parse("3a320d74-73e9-40ab-a972-eb6b571f21fd");
+
+        public override Spell GetSpell()
+        {
+            return new Spell
+            {
+                Id = ID,
+                Name = "Blindness",
+                Level = 3,
+                Range = "30 feet.",
+                Targets = "1 creature.",
+                IsSavingThrowBasic = false,
+                SavingThrowStatId = SavingThrowStats.Instances.Fortitude.ID,
+                SpellTypeId = SpellTypes.Instances.Spell.ID,
+                ActionTypeId = ActionTypes.Instances.TwoActions.ID,
+                MagicSchoolId = MagicSchools.Instances.Necromancy.ID,
+            };
+        }
+
+        public override IEnumerable<TextBlock> GetSpellDetailBlocks()
+        {
+            yield return new TextBlock { Id = Guid.Parse("dd9e4d1c-d272-4b15-9eac-77518d6af7ab"), Type = Utilities.Text.TextBlockType.Text, Text = "You blind the target. The effect is determined by the target's Fortitude save. The target then becomes temporarily immune for 1 minute." };
+        }
+
+        public override IEnumerable<RollableEffect> GetRollableEffects()
+        {
+            yield return new RollableEffect 
+            { 
+                Id = Guid.Parse("2130dd1b-4239-4b15-9565-f962a6bf3cee"),
+                CriticalSuccess = "The target is unaffected.",
+                Success = "The target is blinded until its next turn begins.",
+                Failure = "The target is blinded for 1 minute.",
+                CriticalFailure = "The target is blinded permanently."
+            };
+        }
+
+        public override IEnumerable<Guid> GetSpellComponents()
+        {
+            yield return SpellComponents.Instances.Somatic.ID;
+            yield return SpellComponents.Instances.Verbal.ID;
+        }
+
+        public override IEnumerable<Guid> GetMagicTraditions()
+        {
+            yield return MagicTraditions.Instances.Arcane.ID;
+            yield return MagicTraditions.Instances.Divine.ID;
+            yield return MagicTraditions.Instances.Occult.ID;
+            yield return MagicTraditions.Instances.Primal.ID;
+        }
+
+        public override void GetTraits(ITraitBindingBuilder<SpellTraitBinding, Spell> builder)
+        {
+            builder.Add(Guid.Parse("05e2deac-e7a2-4986-92d4-65676d5ff756"), Traits.Instances.Incapacitation.ID);
+            builder.Add(Guid.Parse("aa53ac9d-8ce6-43b9-b8b0-2a436f6240c0"), Traits.Instances.Necromancy.ID);
+        }
+
+        protected override SourcePage GetSourcePage()
+        {
+            return new SourcePage
+            {
+                Id = Guid.Parse("2f294480-bfa5-4933-a716-2e30d770606a"),
+                SourceId = Sources.Instances.CoreRulebook.ID,
+                Page = 321
+            };
+        }
+    }
+}

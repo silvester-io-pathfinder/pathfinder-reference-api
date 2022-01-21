@@ -1,13 +1,8 @@
-using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements;
 
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
-
-using Silvester.Pathfinder.Reference.Database.Seeding;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Effects
 {

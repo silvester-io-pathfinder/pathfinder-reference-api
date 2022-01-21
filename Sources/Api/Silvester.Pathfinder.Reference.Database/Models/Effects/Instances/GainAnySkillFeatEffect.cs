@@ -1,4 +1,3 @@
-using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
 using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;

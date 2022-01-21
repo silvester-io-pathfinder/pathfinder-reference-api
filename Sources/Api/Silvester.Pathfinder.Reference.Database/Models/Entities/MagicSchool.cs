@@ -24,11 +24,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class MagicSchoolSearchConfigurator : SearchableEntityConfigurator<MagicSchool>
-    {
-        public override Expression<Func<MagicSchool, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description, e.Abbreviation };
-        }
-    }
+    public class MagicSchoolConfigurator : EntityConfigurator<MagicSchool>
+	{
+		public MagicSchoolConfigurator()
+		{
+			ConfigureEntitySearch<MagicSchool>(e => new {e.Name, e.Description, e.Abbreviation});
+		}
+	}
 }

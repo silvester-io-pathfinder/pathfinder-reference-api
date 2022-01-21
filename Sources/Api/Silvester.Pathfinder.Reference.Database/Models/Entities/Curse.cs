@@ -2,7 +2,6 @@ using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 
@@ -30,11 +29,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class CurseSearchConfigurator : SearchableEntityConfigurator<Curse>
-    {
-        public override Expression<Func<Curse, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Effect };
-        }
-    }
+    public class CurseConfigurator : EntityConfigurator<Curse>
+	{
+		public CurseConfigurator()
+		{
+			ConfigureEntitySearch<Curse>(e => new {e.Name, e.Effect});
+		}
+	}
 }

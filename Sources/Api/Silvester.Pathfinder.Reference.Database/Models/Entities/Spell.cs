@@ -81,11 +81,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 
         public ICollection<SpellComponent> Components { get; set; } = new List<SpellComponent>();
 
-        public ICollection<Trait> Traits { get; set; } = new List<Trait>();
+        public ICollection<SpellTraitBinding> Traits { get; set; } = new List<SpellTraitBinding>();
 
         public ICollection<SpellHeightening> Heightenings { get; set; } = new List<SpellHeightening>();
 
-        public ICollection<ActionEffect> ActionEffects { get; set; } = new List<ActionEffect>();
+        public ICollection<InlineAction> InlineActions { get; set; } = new List<InlineAction>();
      
         public ICollection<Creature> CreatureEffects { get; set; } = new List<Creature>();
 
@@ -94,6 +94,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public ICollection<PatronTheme> PatronThemes { get; set; } = new List<PatronTheme>();
 
         public NpgsqlTsVector SearchVector { get; set; } = default!;
+    }
+
+    public class SpellTraitBinding : TraitBinding<Spell>
+    {
+
     }
 
     public class SpellHeightening : BaseEntity
@@ -106,11 +111,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public Spell Spell { get; set; } = default!;
     }
 
-    public class SpellSearchConfigurator : SearchableEntityConfigurator<Spell>
-    {
-        public override Expression<Func<Spell, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Addendum, e.Area, e.CastTime, e.Cost, e.Duration, e.Requirements, e.Targets, e.Trigger };
-        }
-    }
+    public class SpellConfigurator : EntityConfigurator<Spell>
+	{
+		public SpellConfigurator()
+		{
+			ConfigureEntitySearch<Spell>(e => new {e.Name, e.Addendum, e.Area, e.CastTime, e.Cost, e.Duration, e.Requirements, e.Targets, e.Trigger});
+		}
+	}
 }

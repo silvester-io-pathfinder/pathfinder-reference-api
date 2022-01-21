@@ -4,7 +4,6 @@ using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 
@@ -96,27 +95,27 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public BooleanPrerequisite? Prerequisite { get; set; }
     }
 
-    public class EidolonSearchConfigurator : SearchableEntityConfigurator<Eidolon>
-    {
-        public override Expression<Func<Eidolon, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Description };
-        }
-    }
+    public class EidolonConfigurator : EntityConfigurator<Eidolon>
+	{
+		public EidolonConfigurator()
+		{
+			ConfigureEntitySearch<Eidolon>(e => new {e.Name, e.Description});
+		}
+	}
 
-    public class EidolonAbilitySearchConfigurator : SearchableEntityConfigurator<EidolonAbility>
-    {
-        public override Expression<Func<EidolonAbility, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class EidolonAbilityConfigurator : EntityConfigurator<EidolonAbility>
+	{
+		public EidolonAbilityConfigurator()
+		{
+			ConfigureEntitySearch<EidolonAbility>(e => new {e.Name});
+		}
+	}
 
-    public class EidolonVariantSearchConfigurator : SearchableEntityConfigurator<EidolonVariant>
-    {
-        public override Expression<Func<EidolonVariant, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class EidolonVariantConfigurator : EntityConfigurator<EidolonVariant>
+	{
+		public EidolonVariantConfigurator()
+		{
+			ConfigureEntitySearch<EidolonVariant>(e => new {e.Name});
+		}
+	}
 }

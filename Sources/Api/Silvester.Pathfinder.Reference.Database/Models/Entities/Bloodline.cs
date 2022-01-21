@@ -5,8 +5,6 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using Silvester.Pathfinder.Reference.Database.Seeding;
-using Microsoft.EntityFrameworkCore;
 
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
@@ -47,11 +45,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class BloodlineSearchConfigurator : SearchableEntityConfigurator<Bloodline>
-    {
-        public override Expression<Func<Bloodline, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.BloodMagic };
-        }
-    }
+    public class BloodlineConfigurator : EntityConfigurator<Bloodline>
+	{
+		public BloodlineConfigurator()
+		{
+			ConfigureEntitySearch<Bloodline>(e => new {e.Name, e.BloodMagic});
+		}
+	}
 }

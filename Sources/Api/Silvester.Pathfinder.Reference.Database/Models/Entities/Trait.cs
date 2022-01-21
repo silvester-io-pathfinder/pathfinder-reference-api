@@ -4,9 +4,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
+using Silvester.Pathfinder.Reference.Database.Models.Items.Instances;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {
+    public abstract class TraitBinding<TOwner> : BaseEntity
+        where TOwner : BaseEntity
+    {
+        public string? Specifier { get; set; }
+
+        public Guid OwnerId { get; set; }
+        public TOwner Owner { get; set; } = default!;
+
+        public Guid TraitId { get; set; }
+        public Trait Trait { get; set; } = default!;
+    }
+
     public class Trait : BaseEntity, ISearchableEntity, INamedEntity
     {
         public string Name { get; set; } = default!;
@@ -42,10 +55,6 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 
         public ICollection<Hazard> Hazards { get; set; } = new List<Hazard>();
 
-        public ICollection<HazardAction> HazardActions { get; set; } = new List<HazardAction>();
-
-        public ICollection<HazardActionEffect> HazardActionEffects { get; set; } = new List<HazardActionEffect>();
-
         public ICollection<AlchemicalBomb> AlchemicalBombs { get; set; } = new List<AlchemicalBomb>();
      
         public ICollection<AlchemicalElixir> AlchemicalElixirs{ get; set; } = new List<AlchemicalElixir>();
@@ -61,7 +70,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public ICollection<MeleeWeapon> MeleeWeapons { get; set; } = new List<MeleeWeapon>();
 
         public ICollection<RangedWeapon> RangedWeapons { get; set; } = new List<RangedWeapon>();
-        
+
+        public ICollection<BeastGun> BeastGuns { get; set; } = new List<BeastGun>();
+
         public ICollection<PreciousMaterial> PreciousMaterials { get; set; } = new List<PreciousMaterial>();
 
         public ICollection<PreciousMaterialArmor> PreciousMaterialArmors { get; set; } = new List<PreciousMaterialArmor>();
@@ -69,40 +80,32 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public ICollection<PreciousMaterialShield> PreciousMaterialShields { get; set; } = new List<PreciousMaterialShield>();
 
         public ICollection<PreciousMaterialWeapon> PreciousMaterialWeapons { get; set; } = new List<PreciousMaterialWeapon>();
-        
+
         public ICollection<ArmorPropertyRune> ArmorPropertyRunes { get; set; } = new List<ArmorPropertyRune>();
-
-        public ICollection<FundamentalArmorRune> FundamentalArmorPropertyRunes { get; set; } = new List<FundamentalArmorRune>();
         
-        public ICollection<FundamentalWeaponRune> FundamentalWeaponPropertyRunes { get; set; } = new List<FundamentalWeaponRune>();
-
-        public ICollection<WeaponPropertyRunePotencyBinding> WeaponPropertyRunePotencies { get; set; } = new List<WeaponPropertyRunePotencyBinding>();
-     
         public ICollection<WeaponPropertyRune> WeaponPropertyRunes { get; set; } = new List<WeaponPropertyRune>();
+        
+        public ICollection<FundamentalArmorRune> FundamentalArmorRunes { get; set; } = new List<FundamentalArmorRune>();
 
-        public ICollection<WeaponPropertyRuneAction> WeaponPropertyRuneActions { get; set; } = new List<WeaponPropertyRuneAction>();
-     
+        public ICollection<FundamentalWeaponRune> FundamentalWeaponRunes { get; set; } = new List<FundamentalWeaponRune>();
+
         public ICollection<Artifact> Artifacts { get; set; } = new List<Artifact>();
-
-        public ICollection<ArtifactAction> ArtifactActions { get; set; } = new List<ArtifactAction>();
-
-        public ICollection<ArtifactDestructionEffect> ArtifactDestructionEffects { get; set; } = new List<ArtifactDestructionEffect>();
 
         public ICollection<Creature> Creatures { get; set; } = new List<Creature>();
 
         public ICollection<Stave> Staves { get; set; } = new List<Stave>();
 
-        public ICollection<StavePotencyBinding> StavePotencyBindings { get; set; } = new List<StavePotencyBinding>();
-
+        public ICollection<CombinationWeapon> CombinationWeapons { get; set; } = new List<CombinationWeapon>();
+        
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class TraitSearchConfigurator : SearchableEntityConfigurator<Trait>
-    {
-        public override Expression<Func<Trait, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class TraitConfigurator : EntityConfigurator<Trait>
+	{
+		public TraitConfigurator()
+		{
+			ConfigureEntitySearch<Trait>(e => new {e.Name});
+		}
+	}
 }
 

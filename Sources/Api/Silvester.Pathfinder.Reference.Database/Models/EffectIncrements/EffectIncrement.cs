@@ -1,9 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models.EffectIncrements.Triggers;
 using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.EffectIncrements
 {

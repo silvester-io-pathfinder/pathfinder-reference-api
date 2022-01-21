@@ -40,15 +40,15 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public PreciousMaterialWeapon Weapon { get; set; } = default!;
 
         public Guid GradeId { get; set; }
-        public ItemGrade Grade { get; set; } = default!;
+        public ObjectGrade Grade { get; set; } = default!;
     }
 
-    public class PreciousMaterialWeaponSearchConfigurator : SearchableEntityConfigurator<PreciousMaterialWeapon>
-    {
-        public override Expression<Func<PreciousMaterialWeapon, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class PreciousMaterialWeaponConfigurator : EntityConfigurator<PreciousMaterialWeapon>
+	{
+		public PreciousMaterialWeaponConfigurator()
+		{
+			ConfigureEntitySearch<PreciousMaterialWeapon>(e => new {e.Name});
+		}
+	}
 }
  

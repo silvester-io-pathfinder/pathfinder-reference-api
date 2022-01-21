@@ -6,6 +6,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System.Linq.Expressions;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Models.Items.Instances;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Entities
 {
@@ -62,7 +63,12 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
     }
 
     public class DeityConfigurator : EntityConfigurator<Deity>
-    {
+	{
+		public DeityConfigurator()
+		{
+			ConfigureEntitySearch<Deity>(e => new {e.Name, e.Anathema, e.Edicts, e.AreasOfConcern});
+        }
+
         public override void Configure(ModelBuilder builder)
         {
             base.Configure(builder);
@@ -70,20 +76,17 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
             builder
                 .Entity<Deity>()
                 .HasOne(e => e.Alignment)
-                .WithMany(e => e.Deities);
+                .WithMany(e => e!.Deities);
 
             builder
                 .Entity<Deity>()
                 .HasMany(e => e.FollowerAlignments)
                 .WithMany(e => e.DeityFollowerAlignments);
-        }
-    }
 
-    public class DeitySearchConfigurator : SearchableEntityConfigurator<Deity>
-    {
-        public override Expression<Func<Deity, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.Anathema, e.Edicts, e.AreasOfConcern };
+            builder
+                .Entity<Deity>()
+                .HasMany(e => e.FavoredMeleeWeapons)
+                .WithMany(e => e.FavoredBy);
         }
     }
 }

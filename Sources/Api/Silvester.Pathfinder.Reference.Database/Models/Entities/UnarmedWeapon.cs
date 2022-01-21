@@ -15,11 +15,11 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class UnarmedWeaponSearchConfigurator : SearchableEntityConfigurator<UnarmedWeapon>
-    {
-        public override Expression<Func<UnarmedWeapon, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name };
-        }
-    }
+    public class UnarmedWeaponConfigurator : EntityConfigurator<UnarmedWeapon>
+	{
+		public UnarmedWeaponConfigurator()
+		{
+			ConfigureEntitySearch<UnarmedWeapon>(e => new {e.Name});
+		}
+	}
 }

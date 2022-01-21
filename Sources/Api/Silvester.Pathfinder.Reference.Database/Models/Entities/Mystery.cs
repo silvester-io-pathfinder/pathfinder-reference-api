@@ -78,7 +78,12 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
     }
 
     public class MysteryConfigurator : EntityConfigurator<Mystery>
-    {
+	{
+		public MysteryConfigurator()
+		{
+			ConfigureEntitySearch<Mystery>(e => new {e.Name, e.TrainedSkillAddendum});
+        }
+
         public override void Configure(ModelBuilder builder)
         {
             base.Configure(builder);
@@ -113,14 +118,6 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
                 .WithOne(e => e.Mystery)
                 .HasForeignKey<Mystery>(e => e.MysteryCurseId);
 
-        }
-    }
-
-    public class MysterySearchConfigurator : SearchableEntityConfigurator<Mystery>
-    {
-        public override Expression<Func<Mystery, object?>> GetSearchProperties()
-        {
-            return (e) => new { e.Name, e.TrainedSkillAddendum };
         }
     }
 }
