@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("51617d35-a9fe-4ec6-b6b7-9472bf2fac00"), Type = TextBlockType.Text, Text = "When you (action: Strike) a flat-footed foe with a weapon that has the (trait: backstabber) weapon trait, you deal 2 extra precision damage instead of 1. If the weapon is a (item: +3 | +3 Weapon Potency Runestone) weapon, you deal 4 extra precision damage instead of 2." };
+            yield return new TextBlock { Id = Guid.Parse("51617d35-a9fe-4ec6-b6b7-9472bf2fac00"), Type = TextBlockType.Text, Text = $"When you {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} a flat-footed foe with a weapon that has the {ToMarkdownLink<Models.Entities.Trait>("backstabber", Traits.Instances.Backstabber.ID)} weapon trait, you deal 2 extra precision damage instead of 1. If the weapon is a {ToMarkdownLink<Models.Items.Instances.FundamentalWeaponRune>("+3", Items.FundamentalWeaponRunes.Instances.Potency.ID)} weapon, you deal 4 extra precision damage instead of 2." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

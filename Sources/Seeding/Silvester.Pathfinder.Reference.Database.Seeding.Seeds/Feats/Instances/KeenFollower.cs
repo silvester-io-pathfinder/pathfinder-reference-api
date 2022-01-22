@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fa1cc9f7-5d12-449d-8a3b-3a68d6661b04"), Type = TextBlockType.Text, Text = "Your keen observation of your allies has made you better at following their lead. When using the (action: Follow the Expert) activity in exploration mode, you gain a +3 circumstance bonus if the ally you are following is an expert and a +4 circumstance bonus if your ally is a master." };
+            yield return new TextBlock { Id = Guid.Parse("fa1cc9f7-5d12-449d-8a3b-3a68d6661b04"), Type = TextBlockType.Text, Text = $"Your keen observation of your allies has made you better at following their lead. When using the {ToMarkdownLink<Models.Entities.Activity>("Follow the Expert", Activities.Instances.FollowTheExpert.ID)} activity in exploration mode, you gain a +3 circumstance bonus if the ally you are following is an expert and a +4 circumstance bonus if your ally is a master." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

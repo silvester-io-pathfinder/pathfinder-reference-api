@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1cfa8dfe-37b7-41c3-b0e1-913439e603be"), Type = TextBlockType.Text, Text = "You have studied languages and their development. You become trained in Society; if you were already trained in Society, you instead become an expert in Society. You gain the (feat: Multilingual) skill feat twice." };
+            yield return new TextBlock { Id = Guid.Parse("1cfa8dfe-37b7-41c3-b0e1-913439e603be"), Type = TextBlockType.Text, Text = $"You have studied languages and their development. You become trained in Society; if you were already trained in Society, you instead become an expert in Society. You gain the {ToMarkdownLink<Models.Entities.Feat>("Multilingual", Feats.Instances.Multilingual.ID)} skill feat twice." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

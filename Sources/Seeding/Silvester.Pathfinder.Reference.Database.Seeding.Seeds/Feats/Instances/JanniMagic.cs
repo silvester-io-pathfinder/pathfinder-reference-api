@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("03dfaf35-e9ba-43ef-9aa7-21ce2c9b1cae"), Type = TextBlockType.Text, Text = "The magic of jann runs through your blood. You can cast (spell: enlarge) and (spell: speak with animals) once per day each as 2nd-level arcane innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("03dfaf35-e9ba-43ef-9aa7-21ce2c9b1cae"), Type = TextBlockType.Text, Text = $"The magic of jann runs through your blood. You can cast {ToMarkdownLink<Models.Entities.Spell>("enlarge", Spells.Instances.Enlarge.ID)} and {ToMarkdownLink<Models.Entities.Spell>("speak with animals", Spells.Instances.SpeakWithAnimals.ID)} once per day each as 2nd-level arcane innate spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

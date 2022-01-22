@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13721b90-3834-4446-9b5d-bb81e88e0e7e"), Type = TextBlockType.Text, Text = "You have a limited ability to sense life force, like your psychopomp forebears. You gain lifesense as an imprecise sense with a range of 10 feet. This allows you to sense the life force within living creatures and its counterforce that animates the undead, though you can't distinguish between the two." };
+            yield return new TextBlock { Id = Guid.Parse("13721b90-3834-4446-9b5d-bb81e88e0e7e"), Type = TextBlockType.Text, Text = $"You have a limited ability to sense life force, like your psychopomp forebears. You gain lifesense as an imprecise sense with a range of 10 feet. This allows you to sense the life force within living creatures and its counterforce that animates the undead, though you can't distinguish between the two." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

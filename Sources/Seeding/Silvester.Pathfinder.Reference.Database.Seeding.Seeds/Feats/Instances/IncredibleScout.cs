@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5dfc3206-6cbf-46fe-a219-b3bb59830d8d"), Type = TextBlockType.Text, Text = "When you scout, you are particularly alert for danger, granting your allies precious moments to prepare to fight. When using the (action: Scout) exploration activity, you grant your allies a +2 circumstance bonus to their initiative rolls instead of a +1 circumstance bonus." };
+            yield return new TextBlock { Id = Guid.Parse("5dfc3206-6cbf-46fe-a219-b3bb59830d8d"), Type = TextBlockType.Text, Text = $"When you scout, you are particularly alert for danger, granting your allies precious moments to prepare to fight. When using the {ToMarkdownLink<Models.Entities.Activity>("Scout", Activities.Instances.Scout.ID)} exploration activity, you grant your allies a +2 circumstance bonus to their initiative rolls instead of a +1 circumstance bonus." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

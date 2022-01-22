@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("54e8f6e4-c085-486d-828c-3c5b956150f8"), Type = TextBlockType.Text, Text = "You fortify your skin with minerals drawn from earth and stone. You gain resistance 3 to physical damage, except adamantine, until the beginning of your next turn. At 12th level, and every 4 levels thereafter, the resistance increases by 1, to a maximum of resistance 6 at 20th level." };
+            yield return new TextBlock { Id = Guid.Parse("54e8f6e4-c085-486d-828c-3c5b956150f8"), Type = TextBlockType.Text, Text = $"You fortify your skin with minerals drawn from earth and stone. You gain resistance 3 to physical damage, except adamantine, until the beginning of your next turn. At 12th level, and every 4 levels thereafter, the resistance increases by 1, to a maximum of resistance 6 at 20th level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

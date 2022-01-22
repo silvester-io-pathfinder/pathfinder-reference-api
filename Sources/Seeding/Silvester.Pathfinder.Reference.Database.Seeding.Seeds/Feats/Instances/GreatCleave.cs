@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("01f6b518-03c7-42b6-9f06-7a6fff1cc6bb"), Type = TextBlockType.Text, Text = "Your fury carries your weapon through multiple foes. When you (feat: Cleave), if your (action: Strike) also kills or knocks the target unconscious, you can continue to make melee (action: Strikes | Strike) until you make a (action: Strike) that doesn't kill or knock a creature unconscious, or until there are no creatures adjacent to the most recent creature you attacked while (feat: Cleaving | Cleave), whichever comes first." };
+            yield return new TextBlock { Id = Guid.Parse("01f6b518-03c7-42b6-9f06-7a6fff1cc6bb"), Type = TextBlockType.Text, Text = $"Your fury carries your weapon through multiple foes. When you {ToMarkdownLink<Models.Entities.Feat>("Cleave", Feats.Instances.Cleave.ID)}, if your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} also kills or knocks the target unconscious, you can continue to make melee {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} until you make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} that doesn't kill or knock a creature unconscious, or until there are no creatures adjacent to the most recent creature you attacked while {ToMarkdownLink<Models.Entities.Feat>("Cleaving", Feats.Instances.Cleave.ID)}, whichever comes first." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

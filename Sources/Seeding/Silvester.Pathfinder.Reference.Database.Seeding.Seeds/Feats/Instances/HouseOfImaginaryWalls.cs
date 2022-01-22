@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27bdf05d-3ffd-4830-9456-1a435253746d"), Type = TextBlockType.Text, Text = "You erect an imaginary barrier others believe to be real. You learn the (spell: house of imaginary walls) composition cantrip." };
+            yield return new TextBlock { Id = Guid.Parse("27bdf05d-3ffd-4830-9456-1a435253746d"), Type = TextBlockType.Text, Text = $"You erect an imaginary barrier others believe to be real. You learn the {ToMarkdownLink<Models.Entities.Spell>("house of imaginary walls", Spells.Instances.HouseOfImaginaryWalls.ID)} composition cantrip." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

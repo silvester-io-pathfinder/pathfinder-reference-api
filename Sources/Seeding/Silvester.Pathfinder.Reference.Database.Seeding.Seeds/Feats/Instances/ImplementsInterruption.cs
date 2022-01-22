@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9bdd778a-79b0-4cb9-8110-a266444b87d6"), Type = TextBlockType.Text, Text = "Charged with power inimical to your foe, your weapon lashes out to attack it. Make a (action: Strike) against the triggering creature with your weapon implement. If your attack is a critical hit, you disrupt that action. This (action: Strike) doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("9bdd778a-79b0-4cb9-8110-a266444b87d6"), Type = TextBlockType.Text, Text = $"Charged with power inimical to your foe, your weapon lashes out to attack it. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against the triggering creature with your weapon implement. If your attack is a critical hit, you disrupt that action. This {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

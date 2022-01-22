@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3f605613-2cba-4410-aec6-b3957b7f4469"), Type = TextBlockType.Text, Text = "You become trained in Crafting and inventor class DC. You gain the (feat: Inventor) skill feat, even if you don't meet the skill feat's requirements. Choose an innovation. You gain that innovation, though you don't gain any other abilities that modify or use that innovation, such as modifications or (feat: Explode)." };
+            yield return new TextBlock { Id = Guid.Parse("3f605613-2cba-4410-aec6-b3957b7f4469"), Type = TextBlockType.Text, Text = $"You become trained in Crafting and inventor class DC. You gain the {ToMarkdownLink<Models.Entities.Feat>("Inventor", Feats.Instances.Inventor.ID)} skill feat, even if you don't meet the skill feat's requirements. Choose an innovation. You gain that innovation, though you don't gain any other abilities that modify or use that innovation, such as modifications or {ToMarkdownLink<Models.Entities.Feat>("Explode", Feats.Instances.Explode.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

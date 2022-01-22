@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1aa71785-c07e-4455-87be-564cecdc9986"), Type = TextBlockType.Text, Text = "You have forged a mystical bond with a creature. This might have involved complex rituals and invocations, such as meditating under the moon until something crept out of the forest. Or maybe you just did each other a good turn, such as rescuing the beast from a trap or a foe, and then being rescued in turn. Whatever the details, you are now comrades until the end. You gain a familiar (page 198). If you already have a familiar, you gain the (feat: Enhanced Familiar) feat." };
+            yield return new TextBlock { Id = Guid.Parse("1aa71785-c07e-4455-87be-564cecdc9986"), Type = TextBlockType.Text, Text = $"You have forged a mystical bond with a creature. This might have involved complex rituals and invocations, such as meditating under the moon until something crept out of the forest. Or maybe you just did each other a good turn, such as rescuing the beast from a trap or a foe, and then being rescued in turn. Whatever the details, you are now comrades until the end. You gain a familiar (page 198). If you already have a familiar, you gain the {ToMarkdownLink<Models.Entities.Feat>("Enhanced Familiar", Feats.Instances.EnhancedFamiliar.ID)} feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

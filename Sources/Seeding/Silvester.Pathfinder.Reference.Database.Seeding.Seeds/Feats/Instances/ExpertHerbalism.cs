@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a0ce2657-1523-4659-9fba-17765c936312"), Type = TextBlockType.Text, Text = "Your advanced alchemy level for herbalism increases to your level – 3. You gain the formulas for elixirs of life as soon as your advanced alchemy level is high enough to create them: lesser at 8th level, moderate at 12th level, greater at 16th level, and major at 18th level." };
+            yield return new TextBlock { Id = Guid.Parse("a0ce2657-1523-4659-9fba-17765c936312"), Type = TextBlockType.Text, Text = $"Your advanced alchemy level for herbalism increases to your level – 3. You gain the formulas for elixirs of life as soon as your advanced alchemy level is high enough to create them: lesser at 8th level, moderate at 12th level, greater at 16th level, and major at 18th level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8864b202-4819-463f-bbea-a26309062a1d"), Type = TextBlockType.Text, Text = "Your unarmed attacks blend tradition and training. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency in the claw and unarmed attacks you gained from lizardfolk ancestry feats." };
+            yield return new TextBlock { Id = Guid.Parse("8864b202-4819-463f-bbea-a26309062a1d"), Type = TextBlockType.Text, Text = $"Your unarmed attacks blend tradition and training. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency in the claw and unarmed attacks you gained from lizardfolk ancestry feats." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

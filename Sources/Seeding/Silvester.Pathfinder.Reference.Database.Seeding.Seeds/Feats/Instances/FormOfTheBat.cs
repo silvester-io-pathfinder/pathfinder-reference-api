@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ce936a37-7b71-4ea7-adfb-22cb07b6cb9a"), Type = TextBlockType.Text, Text = "You can transform into a harmless bat. You gain the effects of a 4th-level (spell: pest form), except you always transform into a bat." };
+            yield return new TextBlock { Id = Guid.Parse("ce936a37-7b71-4ea7-adfb-22cb07b6cb9a"), Type = TextBlockType.Text, Text = $"You can transform into a harmless bat. You gain the effects of a 4th-level {ToMarkdownLink<Models.Entities.Spell>("pest form", Spells.Instances.PestForm.ID)}, except you always transform into a bat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

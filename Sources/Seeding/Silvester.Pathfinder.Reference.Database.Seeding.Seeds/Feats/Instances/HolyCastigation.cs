@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e16568f5-20c7-46d0-a203-e7f5ceb3cd8e"), Type = TextBlockType.Text, Text = "You combine holy energy with positive energy to damage demons, devils, and their evil ilk. (spell: Heal) spells you cast damage fiends as though they were undead." };
+            yield return new TextBlock { Id = Guid.Parse("e16568f5-20c7-46d0-a203-e7f5ceb3cd8e"), Type = TextBlockType.Text, Text = $"You combine holy energy with positive energy to damage demons, devils, and their evil ilk. {ToMarkdownLink<Models.Entities.Spell>("Heal", Spells.Instances.Heal.ID)} spells you cast damage fiends as though they were undead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

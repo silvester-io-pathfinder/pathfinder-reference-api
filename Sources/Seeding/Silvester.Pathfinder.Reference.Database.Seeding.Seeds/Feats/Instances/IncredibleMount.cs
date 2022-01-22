@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0cc37735-a33e-4c9c-933e-ae95b44936c7"), Type = TextBlockType.Text, Text = "Under your care and training, your mount has realized its innate potential. The mount you gained through the (feat: Cavalier Dedication) feat becomes a nimble or savage animal companion (your choice), gaining additional capabilities determined by the type of companion." };
+            yield return new TextBlock { Id = Guid.Parse("0cc37735-a33e-4c9c-933e-ae95b44936c7"), Type = TextBlockType.Text, Text = $"Under your care and training, your mount has realized its innate potential. The mount you gained through the {ToMarkdownLink<Models.Entities.Feat>("Cavalier Dedication", Feats.Instances.CavalierDedication.ID)} feat becomes a nimble or savage animal companion (your choice), gaining additional capabilities determined by the type of companion." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

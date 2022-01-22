@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0032f4f8-c668-451e-b493-e33b2106f56e"), Type = TextBlockType.Text, Text = "During your daily preparations, you can magically fuse your arcane bonded weapon and a magical staff together into one item, with the staff making up the haft of the weapon. You prepare the staff at the same time you do this, and you can do this only with a staff you're able to prepare. This fusion lasts until the next time you make your daily preparations." };
-            yield return new TextBlock { Id = Guid.Parse("5a30657d-1200-4c0c-b049-50d1369479e6"), Type = TextBlockType.Text, Text = "While the two are fused, the weapon's haft takes on aesthetic aspects of the staff." };
+            yield return new TextBlock { Id = Guid.Parse("0032f4f8-c668-451e-b493-e33b2106f56e"), Type = TextBlockType.Text, Text = $"During your daily preparations, you can magically fuse your arcane bonded weapon and a magical staff together into one item, with the staff making up the haft of the weapon. You prepare the staff at the same time you do this, and you can do this only with a staff you're able to prepare. This fusion lasts until the next time you make your daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("5a30657d-1200-4c0c-b049-50d1369479e6"), Type = TextBlockType.Text, Text = $"While the two are fused, the weapon's haft takes on aesthetic aspects of the staff." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

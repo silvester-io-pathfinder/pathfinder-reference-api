@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e301a34-44bb-40e1-984a-b1f4478d8918"), Type = TextBlockType.Text, Text = "Your flesh takes on the hardness of stone. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the Living Monolith archetype." };
+            yield return new TextBlock { Id = Guid.Parse("1e301a34-44bb-40e1-984a-b1f4478d8918"), Type = TextBlockType.Text, Text = $"Your flesh takes on the hardness of stone. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the Living Monolith archetype." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

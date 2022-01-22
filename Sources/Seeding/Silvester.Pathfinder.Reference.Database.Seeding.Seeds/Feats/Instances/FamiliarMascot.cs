@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79e5d23f-ac63-45db-b75c-30c299610ddd"), Type = TextBlockType.Text, Text = "Your familiar is the heart and soul of your adventuring team. When selecting master abilities, you can choose an ally to benefit from any specific master ability. Each master ability can benefit only a single character, and you can select a specific master ability only once unless the ability says otherwise." };
+            yield return new TextBlock { Id = Guid.Parse("79e5d23f-ac63-45db-b75c-30c299610ddd"), Type = TextBlockType.Text, Text = $"Your familiar is the heart and soul of your adventuring team. When selecting master abilities, you can choose an ally to benefit from any specific master ability. Each master ability can benefit only a single character, and you can select a specific master ability only once unless the ability says otherwise." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

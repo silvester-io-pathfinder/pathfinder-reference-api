@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("317ca2d6-129d-4fc6-aa74-555208c21d49"), Type = TextBlockType.Text, Text = "You increase your training in battlefield weapons. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency rank in all weapons you are trained in from (Feat: Hobgoblin Weapon Familiarity)." };
+            yield return new TextBlock { Id = Guid.Parse("317ca2d6-129d-4fc6-aa74-555208c21d49"), Type = TextBlockType.Text, Text = $"You increase your training in battlefield weapons. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency rank in all weapons you are trained in from {ToMarkdownLink<Models.Entities.Feat>("Hobgoblin Weapon Familiarity", Feats.Instances.HobgoblinWeaponFamiliarity.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

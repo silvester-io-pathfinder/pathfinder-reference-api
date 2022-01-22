@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ecb4f74d-b01c-4507-8f52-ac6870de4d6c"), Type = TextBlockType.Text, Text = "Your advanced alchemy level for poison increases to your level – 3." };
+            yield return new TextBlock { Id = Guid.Parse("ecb4f74d-b01c-4507-8f52-ac6870de4d6c"), Type = TextBlockType.Text, Text = $"Your advanced alchemy level for poison increases to your level – 3." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

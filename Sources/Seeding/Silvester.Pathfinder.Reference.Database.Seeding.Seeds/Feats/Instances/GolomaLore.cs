@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad2b00b1-751b-4c44-b3ce-e039c5519473"), Type = TextBlockType.Text, Text = "You lived an insulated life focused on avoiding danger. You gain the trained proficiency rank in Stealth and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Goloma Lore." };
+            yield return new TextBlock { Id = Guid.Parse("ad2b00b1-751b-4c44-b3ce-e039c5519473"), Type = TextBlockType.Text, Text = $"You lived an insulated life focused on avoiding danger. You gain the trained proficiency rank in Stealth and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Goloma Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

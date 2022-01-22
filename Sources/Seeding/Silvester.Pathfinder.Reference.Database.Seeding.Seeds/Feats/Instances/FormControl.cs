@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cec57547-7cca-4a9b-8bd4-184519635d85"), Type = TextBlockType.Text, Text = "With additional care and effort, you can take on an alternate form for a longer period of time. If your next action is to cast (Spell: wild shape), wild shape's spell level is 2 lower than normal (minimum 1st level), but you can remain transformed for up to 1 hour or the listed duration (whichever is longer). You can still (Activity: Dismiss) the form at any time, as permitted by the spell." };
+            yield return new TextBlock { Id = Guid.Parse("cec57547-7cca-4a9b-8bd4-184519635d85"), Type = TextBlockType.Text, Text = $"With additional care and effort, you can take on an alternate form for a longer period of time. If your next action is to cast {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)}, wild shape's spell level is 2 lower than normal (minimum 1st level), but you can remain transformed for up to 1 hour or the listed duration (whichever is longer). You can still {ToMarkdownLink<Models.Entities.Action>("Dismiss", Actions.Instances.Dismiss.ID)} the form at any time, as permitted by the spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aa2d2122-2070-4890-b15e-c095d0fe6246"), Type = TextBlockType.Text, Text = "Choose either (spell: lightning bolt) or (spell: gust of wind). You (action: Cast the chosen Spell | Cast a Spell) as a 6th-level primal innate spell in the direction of the target of the triggering action." };
+            yield return new TextBlock { Id = Guid.Parse("aa2d2122-2070-4890-b15e-c095d0fe6246"), Type = TextBlockType.Text, Text = $"Choose either {ToMarkdownLink<Models.Entities.Spell>("lightning bolt", Spells.Instances.LightningBolt.ID)} or {ToMarkdownLink<Models.Entities.Spell>("gust of wind", Spells.Instances.GustOfWind.ID)}. You {ToMarkdownLink<Models.Entities.Rule>("Cast the chosen Spell", Rules.Instances.CastASpell.ID)} as a 6th-level primal innate spell in the direction of the target of the triggering action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

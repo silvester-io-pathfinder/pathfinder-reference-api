@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c59e97b-f0b0-4d0d-8184-b1647715d1e4"), Type = TextBlockType.Text, Text = "You are well versed in grippli culture and tactics. You gain the trained proficiency in Nature and Stealth. If you would automatically become trained in one of those skills, you instead become trained in a skill of your choice. You also become trained in Grippli Lore." };
+            yield return new TextBlock { Id = Guid.Parse("9c59e97b-f0b0-4d0d-8184-b1647715d1e4"), Type = TextBlockType.Text, Text = $"You are well versed in grippli culture and tactics. You gain the trained proficiency in Nature and Stealth. If you would automatically become trained in one of those skills, you instead become trained in a skill of your choice. You also become trained in Grippli Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

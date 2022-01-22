@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f2a01b4-3ee0-4753-91a2-9967f1c5b442"), Type = TextBlockType.Text, Text = "Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in (item: flails | Flail), (item: khopeshes | Khopesh), (item: mambeles | Mambele), (item: spears | Spear), and (item: war flails | War Flail)." };
+            yield return new TextBlock { Id = Guid.Parse("5f2a01b4-3ee0-4753-91a2-9967f1c5b442"), Type = TextBlockType.Text, Text = $"Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("flails", Items.MeleeWeapons.Instances.Flail.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("khopeshes", Items.MeleeWeapons.Instances.Khopesh.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("mambeles", Items.MeleeWeapons.Instances.Mambele.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("spears", Items.MeleeWeapons.Instances.Spear.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("war flails", Items.MeleeWeapons.Instances.WarFlail.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

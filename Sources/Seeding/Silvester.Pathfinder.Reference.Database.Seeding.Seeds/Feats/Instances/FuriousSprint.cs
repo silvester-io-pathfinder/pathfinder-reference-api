@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1ed1599b-e1ca-4ce6-9810-69f33568d0a8"), Type = TextBlockType.Text, Text = "You rush forward. (action: Stride) up to five times your Speed in a straight line. You can increase the number of actions this activity takes to 3 to (action: Stride) up to eight times your Speed in a straight line instead." };
+            yield return new TextBlock { Id = Guid.Parse("1ed1599b-e1ca-4ce6-9810-69f33568d0a8"), Type = TextBlockType.Text, Text = $"You rush forward. {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} up to five times your Speed in a straight line. You can increase the number of actions this activity takes to 3 to {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} up to eight times your Speed in a straight line instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cc93a83c-ede0-417d-a899-ba34de96626b"), Type = TextBlockType.Text, Text = "Your have a love for extreme heat. You gain resistance 4 to fire. You treat environmental heat effects as if they were one step less extreme (incredible heat becomes extreme, extreme heat becomes severe, and so on)." };
+            yield return new TextBlock { Id = Guid.Parse("cc93a83c-ede0-417d-a899-ba34de96626b"), Type = TextBlockType.Text, Text = $"Your have a love for extreme heat. You gain resistance 4 to fire. You treat environmental heat effects as if they were one step less extreme (incredible heat becomes extreme, extreme heat becomes severe, and so on)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

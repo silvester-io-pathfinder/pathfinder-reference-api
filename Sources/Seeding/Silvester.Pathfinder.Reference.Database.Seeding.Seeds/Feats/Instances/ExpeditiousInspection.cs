@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("85640290-60bc-407a-a5f4-35ba59b7c9d1"), Type = TextBlockType.Text, Text = "You observe and assess your surroundings with great speed. You (action: Recall Knowledge), (action: Seek), or (action: Sense Motive)." };
+            yield return new TextBlock { Id = Guid.Parse("85640290-60bc-407a-a5f4-35ba59b7c9d1"), Type = TextBlockType.Text, Text = $"You observe and assess your surroundings with great speed. You {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)}, {ToMarkdownLink<Models.Entities.Action>("Seek", Actions.Instances.Seek.ID)}, or {ToMarkdownLink<Models.Entities.Action>("Sense Motive", Actions.Instances.SenseMotive.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

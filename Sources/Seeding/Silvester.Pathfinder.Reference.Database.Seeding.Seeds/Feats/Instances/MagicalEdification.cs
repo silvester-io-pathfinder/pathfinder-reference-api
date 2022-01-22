@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("14a4e219-25be-4e6b-986f-be9ba12ab318"), Type = TextBlockType.Text, Text = "You've learned those tidbits of magic that are most conducive to furthering your acquisition and transmission of knowledge. You gain (spell: guidance), (spell: message), and (spell: sigil) as innate occult cantrips." };
+            yield return new TextBlock { Id = Guid.Parse("14a4e219-25be-4e6b-986f-be9ba12ab318"), Type = TextBlockType.Text, Text = $"You've learned those tidbits of magic that are most conducive to furthering your acquisition and transmission of knowledge. You gain {ToMarkdownLink<Models.Entities.Spell>("guidance", Spells.Instances.Guidance.ID)}, {ToMarkdownLink<Models.Entities.Spell>("message", Spells.Instances.Message.ID)}, and {ToMarkdownLink<Models.Entities.Spell>("sigil", Spells.Instances.Sigil.ID)} as innate occult cantrips." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

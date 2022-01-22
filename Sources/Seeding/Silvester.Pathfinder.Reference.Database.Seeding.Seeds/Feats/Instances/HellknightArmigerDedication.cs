@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("05ccc0f1-156c-4ac2-a580-722ab5f71058"), Type = TextBlockType.Text, Text = "~ Access: You are from Old Cheliax." };
-            yield return new TextBlock { Id = Guid.Parse("f7eaedc9-a550-4a16-acb0-a12cacdefd09"), Type = TextBlockType.Text, Text = "Your Hellknight training teaches you to terrorize others into compliance, but you also study the structure and hierarchy of Hell. You must survive painful tests of your body and mind called reckonings, which steady your mind against all sorts of trauma. You gain resistance to mental damage equal to 1 + your number of class feats from the Hellknight Armiger archetype and other Hellknight archetypes. You become trained in Intimidation and Hell Lore; if you were already trained, you become an expert instead." };
+            yield return new TextBlock { Id = Guid.Parse("05ccc0f1-156c-4ac2-a580-722ab5f71058"), Type = TextBlockType.Text, Text = $"~ Access: You are from Old Cheliax." };
+            yield return new TextBlock { Id = Guid.Parse("f7eaedc9-a550-4a16-acb0-a12cacdefd09"), Type = TextBlockType.Text, Text = $"Your Hellknight training teaches you to terrorize others into compliance, but you also study the structure and hierarchy of Hell. You must survive painful tests of your body and mind called reckonings, which steady your mind against all sorts of trauma. You gain resistance to mental damage equal to 1 + your number of class feats from the Hellknight Armiger archetype and other Hellknight archetypes. You become trained in Intimidation and Hell Lore; if you were already trained, you become an expert instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

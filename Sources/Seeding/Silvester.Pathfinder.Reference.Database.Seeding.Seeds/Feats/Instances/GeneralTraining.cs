@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9a4ef4a4-e173-46a4-a2c7-326054171a18"), Type = TextBlockType.Text, Text = "Your adaptability manifests in your mastery of a range of useful abilities. You gain a 1st-level general feat. You must meet the feat's prerequisites, but if you select this feat during character creation, you can select the feat later in the process in order to determine which prerequisites you meet." };
+            yield return new TextBlock { Id = Guid.Parse("9a4ef4a4-e173-46a4-a2c7-326054171a18"), Type = TextBlockType.Text, Text = $"Your adaptability manifests in your mastery of a range of useful abilities. You gain a 1st-level general feat. You must meet the feat's prerequisites, but if you select this feat during character creation, you can select the feat later in the process in order to determine which prerequisites you meet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

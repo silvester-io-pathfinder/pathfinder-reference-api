@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e4900f77-0165-4493-be44-b1dc1969cf60"), Type = TextBlockType.Text, Text = "Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency in (item: falchions | falchion), (item: ranseurs | ranseur), (item: scimitars | scimitar), (item: tridents | trident), and all (trait: geniekin | Geniekin - Item) weapons in which you are trained." };
+            yield return new TextBlock { Id = Guid.Parse("e4900f77-0165-4493-be44-b1dc1969cf60"), Type = TextBlockType.Text, Text = $"Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency in {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("falchions", Items.MeleeWeapons.Instances.Falchion.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("ranseurs", Items.MeleeWeapons.Instances.Ranseur.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("scimitars", Items.MeleeWeapons.Instances.Scimitar.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("tridents", Items.MeleeWeapons.Instances.Trident.ID)}, and all {ToMarkdownLink<Models.Entities.Trait>("geniekin", Traits.Instances.Geniekin.ID)} weapons in which you are trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

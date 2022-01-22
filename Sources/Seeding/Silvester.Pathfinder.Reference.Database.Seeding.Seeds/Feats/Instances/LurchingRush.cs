@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7325e2f9-b93d-4dc5-bb01-e236076f5fdf"), Type = TextBlockType.Text, Text = "The monitor lizard (action: Strides | Stride) and then makes a jaws (action: Strike). If it moved at least 20 feet away from its starting position, it gains a +2 circumstance bonus to this attack roll." };
+            yield return new TextBlock { Id = Guid.Parse("7325e2f9-b93d-4dc5-bb01-e236076f5fdf"), Type = TextBlockType.Text, Text = $"The monitor lizard {ToMarkdownLink<Models.Entities.Action>("Strides", Actions.Instances.Stride.ID)} and then makes a jaws {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If it moved at least 20 feet away from its starting position, it gains a +2 circumstance bonus to this attack roll." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

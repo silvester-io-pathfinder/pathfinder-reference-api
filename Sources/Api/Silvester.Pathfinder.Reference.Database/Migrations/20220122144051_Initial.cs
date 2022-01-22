@@ -3707,6 +3707,30 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "AmmunitionMagicAmmunition",
+                columns: table => new
+                {
+                    CraftableAsId = table.Column<Guid>(type: "uuid", nullable: false),
+                    MagicConsumablesId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AmmunitionMagicAmmunition", x => new { x.CraftableAsId, x.MagicConsumablesId });
+                    table.ForeignKey(
+                        name: "FK_AmmunitionMagicAmmunition_Items_CraftableAsId",
+                        column: x => x.CraftableAsId,
+                        principalTable: "Items",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_AmmunitionMagicAmmunition_Items_MagicConsumablesId",
+                        column: x => x.MagicConsumablesId,
+                        principalTable: "Items",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "BaseItemTraitBinding",
                 columns: table => new
                 {
@@ -3970,6 +3994,11 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     HeldItemVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
                         .Annotation("Npgsql:TsVectorConfig", "english")
                         .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "HeldItemVariant_Usage" }),
+                    MagicAmmunitionVariant_Price = table.Column<int>(type: "integer", nullable: true),
+                    MagicAmmunitionVariant_Level = table.Column<int>(type: "integer", nullable: true),
+                    MagicAmmunitionVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name" }),
                     MeleeWeaponVariant_Price = table.Column<int>(type: "integer", nullable: true),
                     MeleeWeaponVariant_Damage = table.Column<string>(type: "text", nullable: true),
                     MeleeWeaponVariant_Hands = table.Column<string>(type: "text", nullable: true),
@@ -3977,6 +4006,20 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     MeleeWeaponVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
                         .Annotation("Npgsql:TsVectorConfig", "english")
                         .Annotation("Npgsql:TsVectorProperties", new[] { "Name" }),
+                    OilVariant_Price = table.Column<int>(type: "integer", nullable: true),
+                    OilVariant_Level = table.Column<int>(type: "integer", nullable: true),
+                    OilVariant_Usage = table.Column<string>(type: "text", nullable: true),
+                    OilVariant_Hands = table.Column<string>(type: "text", nullable: true),
+                    OilVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "OilVariant_Usage" }),
+                    PotionVariant_Price = table.Column<int>(type: "integer", nullable: true),
+                    PotionVariant_Level = table.Column<int>(type: "integer", nullable: true),
+                    PotionVariant_Usage = table.Column<string>(type: "text", nullable: true),
+                    PotionVariant_Hands = table.Column<string>(type: "text", nullable: true),
+                    PotionVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "PotionVariant_Usage" }),
                     PreciousMaterialItemVariant_Level = table.Column<int>(type: "integer", nullable: true),
                     PreciousMaterialItemVariant_Price = table.Column<int>(type: "integer", nullable: true),
                     PreciousMaterialItemVariant_Usage = table.Column<string>(type: "text", nullable: true),
@@ -4009,6 +4052,13 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     WeaponPropertyRuneVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
                         .Annotation("Npgsql:TsVectorConfig", "english")
                         .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "RuneVariant_Usage" }),
+                    ScrollVariant_Price = table.Column<int>(type: "integer", nullable: true),
+                    ScrollVariant_Level = table.Column<int>(type: "integer", nullable: true),
+                    ScrollVariant_Usage = table.Column<string>(type: "text", nullable: true),
+                    ScrollVariant_Hands = table.Column<string>(type: "text", nullable: true),
+                    ScrollVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "ScrollVariant_Usage" }),
                     ShieldVariant_Price = table.Column<int>(type: "integer", nullable: true),
                     ShieldVariant_ArmorClassBonus = table.Column<int>(type: "integer", nullable: true),
                     ShieldVariant_SpeedPenalty = table.Column<int>(type: "integer", nullable: true),
@@ -9194,6 +9244,11 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 .Annotation("Npgsql:IndexMethod", "GIN");
 
             migrationBuilder.CreateIndex(
+                name: "IX_AmmunitionMagicAmmunition_MagicConsumablesId",
+                table: "AmmunitionMagicAmmunition",
+                column: "MagicConsumablesId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Ancestries_EffectId",
                 table: "Ancestries",
                 column: "EffectId");
@@ -10234,6 +10289,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 column: "ItemId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BaseItemVariant_MagicAmmunitionVariant_SearchVector",
+                table: "BaseItemVariant",
+                column: "MagicAmmunitionVariant_SearchVector")
+                .Annotation("Npgsql:IndexMethod", "GIN");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_BaseItemVariant_MeleeComponentId",
                 table: "BaseItemVariant",
                 column: "MeleeComponentId");
@@ -10250,6 +10311,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 .Annotation("Npgsql:IndexMethod", "GIN");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BaseItemVariant_OilVariant_SearchVector",
+                table: "BaseItemVariant",
+                column: "OilVariant_SearchVector")
+                .Annotation("Npgsql:IndexMethod", "GIN");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_BaseItemVariant_PoisonEffectId",
                 table: "BaseItemVariant",
                 column: "PoisonEffectId",
@@ -10259,6 +10326,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "IX_BaseItemVariant_PotencyId",
                 table: "BaseItemVariant",
                 column: "PotencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BaseItemVariant_PotionVariant_SearchVector",
+                table: "BaseItemVariant",
+                column: "PotionVariant_SearchVector")
+                .Annotation("Npgsql:IndexMethod", "GIN");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BaseItemVariant_PreciousMaterialItemVariant_SearchVector",
@@ -10296,6 +10369,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "IX_BaseItemVariant_RuneVariant_PotencyId",
                 table: "BaseItemVariant",
                 column: "RuneVariant_PotencyId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BaseItemVariant_ScrollVariant_SearchVector",
+                table: "BaseItemVariant",
+                column: "ScrollVariant_SearchVector")
+                .Annotation("Npgsql:IndexMethod", "GIN");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BaseItemVariant_SearchVector",
@@ -13861,6 +13940,34 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 table: "BasePrerequisite");
 
             migrationBuilder.DropForeignKey(
+                name: "FK_BaseEffect_Items_AlchemicalElixirId",
+                table: "BaseEffect");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_BaseEffect_Items_ArmorId",
+                table: "BaseEffect");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_BaseEffect_Items_GainSpecificMeleeWeaponEffect_MeleeWeaponId",
+                table: "BaseEffect");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_BaseEffect_Items_MeleeWeaponId",
+                table: "BaseEffect");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_BaseEffect_Items_RangedWeaponId",
+                table: "BaseEffect");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_BasePrerequisite_Items_RequiredMeleeWeaponId",
+                table: "BasePrerequisite");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_BasePrerequisite_Items_RequiredRangedWeaponId",
+                table: "BasePrerequisite");
+
+            migrationBuilder.DropForeignKey(
                 name: "FK_Ancestries_BaseEffect_EffectId",
                 table: "Ancestries");
 
@@ -13999,6 +14106,9 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "AlignmentEidolon");
+
+            migrationBuilder.DropTable(
+                name: "AmmunitionMagicAmmunition");
 
             migrationBuilder.DropTable(
                 name: "Ancestries_AdditionalMechanics");
@@ -14613,6 +14723,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "Philosophies");
 
             migrationBuilder.DropTable(
+                name: "Items");
+
+            migrationBuilder.DropTable(
+                name: "ArmorGroups");
+
+            migrationBuilder.DropTable(
                 name: "BaseEffect");
 
             migrationBuilder.DropTable(
@@ -14664,6 +14780,9 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "BasePrerequisite");
 
             migrationBuilder.DropTable(
+                name: "ArmorCategories");
+
+            migrationBuilder.DropTable(
                 name: "Bloodlines");
 
             migrationBuilder.DropTable(
@@ -14697,9 +14816,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "Instincts");
 
             migrationBuilder.DropTable(
-                name: "Items");
-
-            migrationBuilder.DropTable(
                 name: "Languages");
 
             migrationBuilder.DropTable(
@@ -14730,6 +14846,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "UnarmedWeapons");
 
             migrationBuilder.DropTable(
+                name: "WeaponCategories");
+
+            migrationBuilder.DropTable(
+                name: "WeaponGroups");
+
+            migrationBuilder.DropTable(
                 name: "DamageTypes");
 
             migrationBuilder.DropTable(
@@ -14737,18 +14859,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "Spells");
-
-            migrationBuilder.DropTable(
-                name: "ArmorCategories");
-
-            migrationBuilder.DropTable(
-                name: "ArmorGroups");
-
-            migrationBuilder.DropTable(
-                name: "WeaponCategories");
-
-            migrationBuilder.DropTable(
-                name: "WeaponGroups");
 
             migrationBuilder.DropTable(
                 name: "LanguageTypes");

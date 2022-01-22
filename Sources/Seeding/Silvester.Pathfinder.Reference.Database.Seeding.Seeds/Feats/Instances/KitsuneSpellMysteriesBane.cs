@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a2bed566-5409-4404-b2c6-c1155da032bb"), Type = TextBlockType.Text, Text = "You can cast (spell: bane) as a 1st-level divine innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("a2bed566-5409-4404-b2c6-c1155da032bb"), Type = TextBlockType.Text, Text = $"You can cast {ToMarkdownLink<Models.Entities.Spell>("bane", Spells.Instances.Bane.ID)} as a 1st-level divine innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

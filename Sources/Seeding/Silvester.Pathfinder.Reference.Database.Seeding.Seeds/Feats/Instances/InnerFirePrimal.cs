@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2cb32aed-84ef-485a-843d-85614f3a2883"), Type = TextBlockType.Text, Text = "You can cast the (spell: produce flame) cantrip as an innate primal spell at will." };
+            yield return new TextBlock { Id = Guid.Parse("2cb32aed-84ef-485a-843d-85614f3a2883"), Type = TextBlockType.Text, Text = $"You can cast the {ToMarkdownLink<Models.Entities.Spell>("produce flame", Spells.Instances.ProduceFlame.ID)} cantrip as an innate primal spell at will." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

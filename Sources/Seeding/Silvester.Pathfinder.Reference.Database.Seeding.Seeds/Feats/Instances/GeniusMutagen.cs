@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f54b00e3-c926-4669-832c-d4c8b41abf3f"), Type = TextBlockType.Text, Text = "Specialized tweaks to your formula that supplements your genius considerably broaden the benefits you gain from cognitive mutagens. When you're affected by a cognitive mutagen, you also gain the mutagen's item bonus to Deception, Diplomacy, Intimidation, Medicine, Nature, Performance, Religion, and Survival checks. In addition, you can communicate telepathically with creatures within 60 feet with whom you share a language. The communication is two-way once you establish it, so a creature you contact can also communicate with you." };
+            yield return new TextBlock { Id = Guid.Parse("f54b00e3-c926-4669-832c-d4c8b41abf3f"), Type = TextBlockType.Text, Text = $"Specialized tweaks to your formula that supplements your genius considerably broaden the benefits you gain from cognitive mutagens. When you're affected by a cognitive mutagen, you also gain the mutagen's item bonus to Deception, Diplomacy, Intimidation, Medicine, Nature, Performance, Religion, and Survival checks. In addition, you can communicate telepathically with creatures within 60 feet with whom you share a language. The communication is two-way once you establish it, so a creature you contact can also communicate with you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

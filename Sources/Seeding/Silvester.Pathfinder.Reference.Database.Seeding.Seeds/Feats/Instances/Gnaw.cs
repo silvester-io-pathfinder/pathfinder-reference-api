@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b987b9b1-aae9-46cf-813f-ea66df68a220"), Type = TextBlockType.Text, Text = "The (action: Strike)'s target takes 1d6 persistent bleed damage and takes a –10-foot status penalty to its Speed until it removes the bleed damage. If the hyena is a specialized animal companion, the persistent bleed damage increases to 2d6." };
+            yield return new TextBlock { Id = Guid.Parse("b987b9b1-aae9-46cf-813f-ea66df68a220"), Type = TextBlockType.Text, Text = $"The {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}'s target takes 1d6 persistent bleed damage and takes a –10-foot status penalty to its Speed until it removes the bleed damage. If the hyena is a specialized animal companion, the persistent bleed damage increases to 2d6." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

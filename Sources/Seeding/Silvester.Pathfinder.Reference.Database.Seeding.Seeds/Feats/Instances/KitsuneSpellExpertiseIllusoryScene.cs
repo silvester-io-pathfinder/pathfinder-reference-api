@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f654da66-ac8a-40f3-9ea2-8806be11f285"), Type = TextBlockType.Text, Text = "You can cast (spell: illusory scene) as a 5th-level divine innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("f654da66-ac8a-40f3-9ea2-8806be11f285"), Type = TextBlockType.Text, Text = $"You can cast {ToMarkdownLink<Models.Entities.Spell>("illusory scene", Spells.Instances.IllusoryScene.ID)} as a 5th-level divine innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

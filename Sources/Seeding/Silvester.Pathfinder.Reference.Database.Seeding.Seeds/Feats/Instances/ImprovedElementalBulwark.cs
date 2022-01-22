@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2f11a2c8-5951-44af-a423-417115504d64"), Type = TextBlockType.Text, Text = "You gain resistance 10 from (feat: Elemental Bulwark) instead of 5." };
+            yield return new TextBlock { Id = Guid.Parse("2f11a2c8-5951-44af-a423-417115504d64"), Type = TextBlockType.Text, Text = $"You gain resistance 10 from {ToMarkdownLink<Models.Entities.Feat>("Elemental Bulwark", Feats.Instances.ElementalBulwark.ID)} instead of 5." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

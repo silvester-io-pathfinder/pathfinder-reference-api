@@ -29,10 +29,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6b33711a-55b1-47db-9a88-9a65f93febb3"), Type = TextBlockType.Text, Text = "You've focused on enhancing yourself and have received an improvement to one of your existing abilities. You gain the enhancement benefits of one of your 1st- or 5th-level automaton ancestry feats." };
-            yield return new TextBlock { Id = Guid.Parse("8ff6c1ee-504d-4690-abe2-ce5579b04e33"), Type = TextBlockType.Text, Text = "You are also capable of reconfiguring your augmentations to meet your needs. You can spend one week of downtime to change the enhancement you gain with this feat." };
-            yield return new TextBlock { Id = Guid.Parse("40f18c07-e9df-4cd3-b126-032fc33d51c3"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("6f8a2a22-14de-44e5-ba3d-782cefe967cd"), Type = TextBlockType.Text, Text = "~ Enhancement: You gain the enhancement benefits of another 1st- or 5th-level automaton ancestry feat. Also, your reconfigurations take less time. You only need to spend 1 day of downtime to change any of your enhancements. If you have multiple enhancements, changing each one requires a separate day." };
+            yield return new TextBlock { Id = Guid.Parse("6b33711a-55b1-47db-9a88-9a65f93febb3"), Type = TextBlockType.Text, Text = $"You've focused on enhancing yourself and have received an improvement to one of your existing abilities. You gain the enhancement benefits of one of your 1st- or 5th-level automaton ancestry feats." };
+            yield return new TextBlock { Id = Guid.Parse("8ff6c1ee-504d-4690-abe2-ce5579b04e33"), Type = TextBlockType.Text, Text = $"You are also capable of reconfiguring your augmentations to meet your needs. You can spend one week of downtime to change the enhancement you gain with this feat." };
+            yield return new TextBlock { Id = Guid.Parse("40f18c07-e9df-4cd3-b126-032fc33d51c3"), Type = TextBlockType.Text, Text = $"----" };
+            yield return new TextBlock { Id = Guid.Parse("6f8a2a22-14de-44e5-ba3d-782cefe967cd"), Type = TextBlockType.Text, Text = $"~ Enhancement: You gain the enhancement benefits of another 1st- or 5th-level automaton ancestry feat. Also, your reconfigurations take less time. You only need to spend 1 day of downtime to change any of your enhancements. If you have multiple enhancements, changing each one requires a separate day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("733265ff-db1d-4c3d-83da-09762777e4f0"), Type = TextBlockType.Text, Text = "Your halfling affinity blends with your class training, granting you great skill with halfling weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the sling, halfling sling staff, shortsword, and all halfling weapons in which you are trained." };
+            yield return new TextBlock { Id = Guid.Parse("733265ff-db1d-4c3d-83da-09762777e4f0"), Type = TextBlockType.Text, Text = $"Your halfling affinity blends with your class training, granting you great skill with halfling weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the sling, halfling sling staff, shortsword, and all halfling weapons in which you are trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

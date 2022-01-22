@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd059bfa-251a-4e03-b9ec-394c6ca687df"), Type = TextBlockType.Text, Text = "The world is a stage upon which you are always playing. You are permanently quickened; you can use your extra action only to cast a composition cantrip that requires 1 action to cast." };
-            yield return new TextBlock { Id = Guid.Parse("18223b42-c527-44be-be4f-956975d0701d"), Type = TextBlockType.Text, Text = "While in exploration mode, you can declare that you are performing an eligible composition cantrip while using any exploration tactic. Even before your first turn in a combat encounter, that cantrip is active as if you had cast it on your previous turn." };
+            yield return new TextBlock { Id = Guid.Parse("cd059bfa-251a-4e03-b9ec-394c6ca687df"), Type = TextBlockType.Text, Text = $"The world is a stage upon which you are always playing. You are permanently quickened; you can use your extra action only to cast a composition cantrip that requires 1 action to cast." };
+            yield return new TextBlock { Id = Guid.Parse("18223b42-c527-44be-be4f-956975d0701d"), Type = TextBlockType.Text, Text = $"While in exploration mode, you can declare that you are performing an eligible composition cantrip while using any exploration tactic. Even before your first turn in a combat encounter, that cantrip is active as if you had cast it on your previous turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

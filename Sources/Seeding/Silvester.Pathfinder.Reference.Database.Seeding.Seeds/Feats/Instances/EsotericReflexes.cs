@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("923861bf-b740-4960-9375-26cf30ae15d6"), Type = TextBlockType.Text, Text = "Your connection to your implements is so strong that you can use their reactive abilities almost by instinct. At the start of your turn, you gain an additional reaction, which you can use only for the reactions granted by your implements." };
+            yield return new TextBlock { Id = Guid.Parse("923861bf-b740-4960-9375-26cf30ae15d6"), Type = TextBlockType.Text, Text = $"Your connection to your implements is so strong that you can use their reactive abilities almost by instinct. At the start of your turn, you gain an additional reaction, which you can use only for the reactions granted by your implements." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

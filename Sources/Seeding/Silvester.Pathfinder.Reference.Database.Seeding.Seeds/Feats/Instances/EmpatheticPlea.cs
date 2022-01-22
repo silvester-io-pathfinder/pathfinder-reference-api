@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c5bcd51-b6aa-4691-a6ce-a44c27360cf0"), Type = TextBlockType.Text, Text = "The way you cringe or use those puppy-dog eyes you've been practicing elicits an empathetic response in the attacker. Attempt a Diplomacy check against your attacker's Will DC." };
+            yield return new TextBlock { Id = Guid.Parse("9c5bcd51-b6aa-4691-a6ce-a44c27360cf0"), Type = TextBlockType.Text, Text = $"The way you cringe or use those puppy-dog eyes you've been practicing elicits an empathetic response in the attacker. Attempt a Diplomacy check against your attacker's Will DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

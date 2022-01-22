@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("60073257-414e-4004-b550-9bf6a6ea26a9"), Type = TextBlockType.Text, Text = "Make an unarmed melee attack against a prone target. On a hit, the target becomes flat-footed to all attacks until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("60073257-414e-4004-b550-9bf6a6ea26a9"), Type = TextBlockType.Text, Text = $"Make an unarmed melee attack against a prone target. On a hit, the target becomes flat-footed to all attacks until the end of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

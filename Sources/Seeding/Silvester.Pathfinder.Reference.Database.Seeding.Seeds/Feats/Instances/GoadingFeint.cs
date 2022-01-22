@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3632c121-3083-4583-8f34-0849e9148b4c"), Type = TextBlockType.Text, Text = "When you trick a foe, you can goad them into overextending their next attack. On a (action: Feint), you can use the following success and critical success effects instead of any other effects you would gain when you (action: Feint); if you do, other abilities that adjust the normal effects of your (action: Feint) no longer apply. You can choose whether to use the Goading Feint benefits or the normal benefits each time you (action: Feint) a given foe." };
+            yield return new TextBlock { Id = Guid.Parse("3632c121-3083-4583-8f34-0849e9148b4c"), Type = TextBlockType.Text, Text = $"When you trick a foe, you can goad them into overextending their next attack. On a {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)}, you can use the following success and critical success effects instead of any other effects you would gain when you {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)}; if you do, other abilities that adjust the normal effects of your {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)} no longer apply. You can choose whether to use the Goading Feint benefits or the normal benefits each time you {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)} a given foe." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

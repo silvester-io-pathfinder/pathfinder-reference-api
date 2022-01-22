@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5d705d82-cdb3-48f6-8166-f284288b8af5"), Type = TextBlockType.Text, Text = "Your fame has spread throughout the lands (for instance, if you have Warfare Lore, you might be a legendary general or tactician). This works as (feat: Legendary Performer), except you gain higher-level jobs when you (action: Earn Income) with Lore." };
+            yield return new TextBlock { Id = Guid.Parse("5d705d82-cdb3-48f6-8166-f284288b8af5"), Type = TextBlockType.Text, Text = $"Your fame has spread throughout the lands (for instance, if you have Warfare Lore, you might be a legendary general or tactician). This works as {ToMarkdownLink<Models.Entities.Feat>("Legendary Performer", Feats.Instances.LegendaryPerformer.ID)}, except you gain higher-level jobs when you {ToMarkdownLink<Models.Entities.SkillAction>("Earn Income", SkillActions.Instances.EarnIncome.ID)} with Lore." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

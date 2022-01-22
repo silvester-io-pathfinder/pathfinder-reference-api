@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d66d5578-c517-46d4-929a-359994e35f43"), Type = TextBlockType.Text, Text = "You can apply critical specialization effects to improvised weapons you wield. For any given improvised weapon, the GM determines which critical specialization effect is most applicable, based on the type of object it is." };
+            yield return new TextBlock { Id = Guid.Parse("d66d5578-c517-46d4-929a-359994e35f43"), Type = TextBlockType.Text, Text = $"You can apply critical specialization effects to improvised weapons you wield. For any given improvised weapon, the GM determines which critical specialization effect is most applicable, based on the type of object it is." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dba09ba8-ffe2-46b7-b93a-75e713c031e1"), Type = TextBlockType.Text, Text = "A stroke of brilliance gives you a major advantage with a skill despite your inexperience. Gain a +4 circumstance bonus to the triggering skill check." };
+            yield return new TextBlock { Id = Guid.Parse("dba09ba8-ffe2-46b7-b93a-75e713c031e1"), Type = TextBlockType.Text, Text = $"A stroke of brilliance gives you a major advantage with a skill despite your inexperience. Gain a +4 circumstance bonus to the triggering skill check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f0573edf-31f8-472d-86ef-7b86dc908ba9"), Type = TextBlockType.Text, Text = "You gain the effects of (feat: Juvenile Flight) at all times, rather than just once per day for 10 minutes. This includes the status bonus to your Speed if you have (feat: Fledgling Flight)." };
+            yield return new TextBlock { Id = Guid.Parse("f0573edf-31f8-472d-86ef-7b86dc908ba9"), Type = TextBlockType.Text, Text = $"You gain the effects of {ToMarkdownLink<Models.Entities.Feat>("Juvenile Flight", Feats.Instances.JuvenileFlight.ID)} at all times, rather than just once per day for 10 minutes. This includes the status bonus to your Speed if you have {ToMarkdownLink<Models.Entities.Feat>("Fledgling Flight", Feats.Instances.FledglingFlight.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

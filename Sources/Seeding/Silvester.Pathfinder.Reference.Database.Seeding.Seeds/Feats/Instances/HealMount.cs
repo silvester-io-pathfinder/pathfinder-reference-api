@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2b6590e-6659-4792-9ab1-cd4dda6d3bd6"), Type = TextBlockType.Text, Text = "Your devotion to your mount manifests as a surge of positive energy. When you cast (spell: lay on hands) on your mount, you can restore 10 Hit Points, plus 10 for each heightened level." };
+            yield return new TextBlock { Id = Guid.Parse("e2b6590e-6659-4792-9ab1-cd4dda6d3bd6"), Type = TextBlockType.Text, Text = $"Your devotion to your mount manifests as a surge of positive energy. When you cast {ToMarkdownLink<Models.Entities.Spell>("lay on hands", Spells.Instances.LayOnHands.ID)} on your mount, you can restore 10 Hit Points, plus 10 for each heightened level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

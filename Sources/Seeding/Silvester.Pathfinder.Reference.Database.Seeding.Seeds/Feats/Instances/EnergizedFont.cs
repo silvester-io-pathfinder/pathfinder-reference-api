@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a25642ef-4765-4ee8-9d3d-fecec750429a"), Type = TextBlockType.Text, Text = "The magic within you provides increased energy you can use to focus. You regain 1 Focus Point, up to your usual maximum." };
+            yield return new TextBlock { Id = Guid.Parse("a25642ef-4765-4ee8-9d3d-fecec750429a"), Type = TextBlockType.Text, Text = $"The magic within you provides increased energy you can use to focus. You regain 1 Focus Point, up to your usual maximum." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

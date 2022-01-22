@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ac77b31-381d-4c4f-b51c-751ad4510933"), Type = TextBlockType.Text, Text = "The experiments rendered your skin tougher and resilient to a particular type of damage. You gain resistance equal to half your level (minimum resistance 1) against two of the following types of energy damage, one chosen by you and the other chosen by the GM: acid, cold, electricity, fire, or sonic." };
+            yield return new TextBlock { Id = Guid.Parse("3ac77b31-381d-4c4f-b51c-751ad4510933"), Type = TextBlockType.Text, Text = $"The experiments rendered your skin tougher and resilient to a particular type of damage. You gain resistance equal to half your level (minimum resistance 1) against two of the following types of energy damage, one chosen by you and the other chosen by the GM: acid, cold, electricity, fire, or sonic." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e376207e-8e3f-4261-b29c-532fb97abfe1"), Type = TextBlockType.Text, Text = "When you put your mind to slipping out of sight, you disappear completely. You become invisible for 1 minute, even if you use a hostile action. Not even (spell: glitterdust), (spell: see invisibility), or similar effects can reveal you, though creatures can still use the (action: Seek) action to locate you as normal." };
+            yield return new TextBlock { Id = Guid.Parse("e376207e-8e3f-4261-b29c-532fb97abfe1"), Type = TextBlockType.Text, Text = $"When you put your mind to slipping out of sight, you disappear completely. You become invisible for 1 minute, even if you use a hostile action. Not even {ToMarkdownLink<Models.Entities.Spell>("glitterdust", Spells.Instances.Glitterdust.ID)}, {ToMarkdownLink<Models.Entities.Spell>("see invisibility", Spells.Instances.SeeInvisibility.ID)}, or similar effects can reveal you, though creatures can still use the {ToMarkdownLink<Models.Entities.Action>("Seek", Actions.Instances.Seek.ID)} action to locate you as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

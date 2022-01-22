@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4fdbce81-adb9-4a47-9314-94ec8b4b32e8"), Type = TextBlockType.Text, Text = "You have a system that lets you search at great speed, finding details and secrets twice as quickly as others can. When (Activity: Searching | Search), you take half as long as usual to (Activity: Search) a given area. This means that while exploring, you double the Speed you can move while ensuring you've (Activity: Searched | Search) an area before walking into it (up to half your Speed). If you're legendary in Perception, you instead (Action: Search) areas four times as quickly." };
+            yield return new TextBlock { Id = Guid.Parse("4fdbce81-adb9-4a47-9314-94ec8b4b32e8"), Type = TextBlockType.Text, Text = $"You have a system that lets you search at great speed, finding details and secrets twice as quickly as others can. When {ToMarkdownLink<Models.Entities.Activity>("Searching", Activities.Instances.Search.ID)}, you take half as long as usual to {ToMarkdownLink<Models.Entities.Activity>("Search", Activities.Instances.Search.ID)} a given area. This means that while exploring, you double the Speed you can move while ensuring you've {ToMarkdownLink<Models.Entities.Activity>("Searched", Activities.Instances.Search.ID)} an area before walking into it (up to half your Speed). If you're legendary in Perception, you instead {ToMarkdownLink<Models.Entities.Activity>("Search", Activities.Instances.Search.ID)} areas four times as quickly." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

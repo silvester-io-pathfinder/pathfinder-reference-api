@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3267b59e-3cb5-45d3-aa9c-dfca12426cd5"), Type = TextBlockType.Text, Text = "When you apply antithetical material against a creature successfully, you also ward yourself against its next attacks. When you (feat: Find Flaws) and succeed at your (action: Recall Knowledge) check, in addition to the normal effects, you gain a +1 status bonus to your AC against the creature's next attack and a +1 status bonus to your next saving throw against the creature. These bonuses increase to +2 on a critical success. You can gain these bonuses only once per day against a particular creature." };
+            yield return new TextBlock { Id = Guid.Parse("3267b59e-3cb5-45d3-aa9c-dfca12426cd5"), Type = TextBlockType.Text, Text = $"When you apply antithetical material against a creature successfully, you also ward yourself against its next attacks. When you {ToMarkdownLink<Models.Entities.Feat>("Find Flaws", Feats.Instances.FindFlaws.ID)} and succeed at your {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} check, in addition to the normal effects, you gain a +1 status bonus to your AC against the creature's next attack and a +1 status bonus to your next saving throw against the creature. These bonuses increase to +2 on a critical success. You can gain these bonuses only once per day against a particular creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

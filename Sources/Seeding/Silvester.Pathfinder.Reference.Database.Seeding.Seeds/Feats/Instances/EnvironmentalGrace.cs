@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("85f85fe7-7f81-44b0-afc4-cb0ef4c1dd4c"), Type = TextBlockType.Text, Text = "You rapidly adapt to environments through a combination of skill, meditation, and divine grace. After spending an hour in an environment of severe cold or colder, you are protected from the effects of severe cold until you leave that environment. After spending an hour in an environment of severe heat or hotter, you are protected from the effects of severe heat until you leave that environment." };
+            yield return new TextBlock { Id = Guid.Parse("85f85fe7-7f81-44b0-afc4-cb0ef4c1dd4c"), Type = TextBlockType.Text, Text = $"You rapidly adapt to environments through a combination of skill, meditation, and divine grace. After spending an hour in an environment of severe cold or colder, you are protected from the effects of severe cold until you leave that environment. After spending an hour in an environment of severe heat or hotter, you are protected from the effects of severe heat until you leave that environment." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

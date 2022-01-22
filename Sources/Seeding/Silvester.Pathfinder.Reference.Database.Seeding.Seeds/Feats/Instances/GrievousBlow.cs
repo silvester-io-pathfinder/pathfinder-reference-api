@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4b3518a5-68e0-4cb4-945e-a7daf7c9ad26"), Type = TextBlockType.Text, Text = "You know how to deliver focused, powerful blows that bypass your enemies' resistances. Make an unarmed melee (action: Strike). This counts as two attacks when calculating your multiple attack penalty. If this (action: Strike) hits, you deal two extra weapon damage dice. If you are at least 18th level, increase this to three extra weapon damage dice." };
-            yield return new TextBlock { Id = Guid.Parse("6b2a440d-a692-4bb2-95b6-154c1f5d438d"), Type = TextBlockType.Text, Text = "This attack also ignores an amount of resistance to physical damage, or to a specific physical damage type, equal to your level." };
+            yield return new TextBlock { Id = Guid.Parse("4b3518a5-68e0-4cb4-945e-a7daf7c9ad26"), Type = TextBlockType.Text, Text = $"You know how to deliver focused, powerful blows that bypass your enemies' resistances. Make an unarmed melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. This counts as two attacks when calculating your multiple attack penalty. If this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits, you deal two extra weapon damage dice. If you are at least 18th level, increase this to three extra weapon damage dice." };
+            yield return new TextBlock { Id = Guid.Parse("6b2a440d-a692-4bb2-95b6-154c1f5d438d"), Type = TextBlockType.Text, Text = $"This attack also ignores an amount of resistance to physical damage, or to a specific physical damage type, equal to your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

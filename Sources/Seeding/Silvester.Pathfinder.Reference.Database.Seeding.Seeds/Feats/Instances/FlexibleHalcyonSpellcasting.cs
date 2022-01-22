@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("293cf43e-3a63-4bba-a59c-461ecf110e51"), Type = TextBlockType.Text, Text = "You broaden your ability to channel your power into halcyon magic. You gain one more common halcyon spell of each level of halcyon spell you can cast other than your highest (you do not gain an additional cantrip). You also gain one additional halcyon spell slot for each level of halcyon spell you can cast, other than the highest." };
+            yield return new TextBlock { Id = Guid.Parse("293cf43e-3a63-4bba-a59c-461ecf110e51"), Type = TextBlockType.Text, Text = $"You broaden your ability to channel your power into halcyon magic. You gain one more common halcyon spell of each level of halcyon spell you can cast other than your highest (you do not gain an additional cantrip). You also gain one additional halcyon spell slot for each level of halcyon spell you can cast, other than the highest." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8454c4c0-c02b-425c-ab58-1e0bcbfceee6"), Type = TextBlockType.Text, Text = "When climbing, you can prepare routes for others to follow, and you can pull your allies up to avoid disaster. When your allies attempt to (action: Climb) a route you set using the (action: Follow the Expert) exploration activity, if any of them critically fail their checks to (action: Climb), you can attempt an Athletics check against the same DC. If you succeed, your ally fails instead of critically failing. If you also critically fail, you both experience the consequences of the critical failure." };
+            yield return new TextBlock { Id = Guid.Parse("8454c4c0-c02b-425c-ab58-1e0bcbfceee6"), Type = TextBlockType.Text, Text = $"When climbing, you can prepare routes for others to follow, and you can pull your allies up to avoid disaster. When your allies attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Climb", SkillActions.Instances.Climb.ID)} a route you set using the {ToMarkdownLink<Models.Entities.Activity>("Follow the Expert", Activities.Instances.FollowTheExpert.ID)} exploration activity, if any of them critically fail their checks to {ToMarkdownLink<Models.Entities.SkillAction>("Climb", SkillActions.Instances.Climb.ID)}, you can attempt an Athletics check against the same DC. If you succeed, your ally fails instead of critically failing. If you also critically fail, you both experience the consequences of the critical failure." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

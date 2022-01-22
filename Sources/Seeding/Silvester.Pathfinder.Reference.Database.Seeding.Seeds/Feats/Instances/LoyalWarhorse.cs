@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("37a9b609-9cc1-4745-82a3-b79f55e65c26"), Type = TextBlockType.Text, Text = "You and your mount have grown closer, and your loyalty to each other is unbreakable. The mount you gained through the divine ally class feature is now a mature animal companion (page 214). In addition, your mount never attacks you, even if it is magically compelled to do so." };
+            yield return new TextBlock { Id = Guid.Parse("37a9b609-9cc1-4745-82a3-b79f55e65c26"), Type = TextBlockType.Text, Text = $"You and your mount have grown closer, and your loyalty to each other is unbreakable. The mount you gained through the divine ally class feature is now a mature animal companion (page 214). In addition, your mount never attacks you, even if it is magically compelled to do so." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

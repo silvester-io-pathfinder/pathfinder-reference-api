@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c79bb55b-488a-422c-b09d-4f51d1dbac6a"), Type = TextBlockType.Text, Text = "You devote much of your study to halcyon magic. You gain access to two common Halcyon cantrips and two common 1st-level halcyon spells (see halcyon spells on Lost Omens Character Guide pg 100). In addition to being able to cast your halcyon spells via your arcane or primal spell slots, you also gain a 1st-level halcyon spell slot. You can use your halcyon spell slots to spontaneously cast your halcyon spells." };
+            yield return new TextBlock { Id = Guid.Parse("c79bb55b-488a-422c-b09d-4f51d1dbac6a"), Type = TextBlockType.Text, Text = $"You devote much of your study to halcyon magic. You gain access to two common Halcyon cantrips and two common 1st-level halcyon spells (see halcyon spells on Lost Omens Character Guide pg 100). In addition to being able to cast your halcyon spells via your arcane or primal spell slots, you also gain a 1st-level halcyon spell slot. You can use your halcyon spell slots to spontaneously cast your halcyon spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c6ea3230-2cd3-498e-92fe-5e68a7d1ee8e"), Type = TextBlockType.Text, Text = "Your scroll collection is more powerful. In addition to your daily scrolls from (feat: Basic Scroll Cache), add a scroll with a 3rd-level spell. At 14th level, add a scroll with a 4th-level spell. At 16th level, add a scroll with a 5th-level spell." };
+            yield return new TextBlock { Id = Guid.Parse("c6ea3230-2cd3-498e-92fe-5e68a7d1ee8e"), Type = TextBlockType.Text, Text = $"Your scroll collection is more powerful. In addition to your daily scrolls from {ToMarkdownLink<Models.Entities.Feat>("Basic Scroll Cache", Feats.Instances.BasicScrollCache.ID)}, add a scroll with a 3rd-level spell. At 14th level, add a scroll with a 4th-level spell. At 16th level, add a scroll with a 5th-level spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

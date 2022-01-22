@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("251841f0-f717-421e-a288-06141f0f8b38"), Type = TextBlockType.Text, Text = "You can use magic to show others desert hospitality. You can cast 2nd-level (spell: create food) once per day and (spell: create water) twice per day as arcane innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("251841f0-f717-421e-a288-06141f0f8b38"), Type = TextBlockType.Text, Text = $"You can use magic to show others desert hospitality. You can cast 2nd-level {ToMarkdownLink<Models.Entities.Spell>("create food", Spells.Instances.CreateFood.ID)} once per day and {ToMarkdownLink<Models.Entities.Spell>("create water", Spells.Instances.CreateWater.ID)} twice per day as arcane innate spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ae27f046-b946-4d60-8932-459d3768ce35"), Type = TextBlockType.Text, Text = "Given time to collect yourself after a near-death scrape, you can rebuild your ferocity and withstand additional finishing blows. You can use (feat: Orc Ferocity) with a frequency of once per hour, rather than once per day." };
+            yield return new TextBlock { Id = Guid.Parse("ae27f046-b946-4d60-8932-459d3768ce35"), Type = TextBlockType.Text, Text = $"Given time to collect yourself after a near-death scrape, you can rebuild your ferocity and withstand additional finishing blows. You can use {ToMarkdownLink<Models.Entities.Feat>("Orc Ferocity", Feats.Instances.OrcFerocity.ID)} with a frequency of once per hour, rather than once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

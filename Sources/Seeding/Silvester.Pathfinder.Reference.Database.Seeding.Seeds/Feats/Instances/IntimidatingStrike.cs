@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9927b3a0-fd64-4bd3-b104-aa01f3db83b7"), Type = TextBlockType.Text, Text = "Your blow not only wounds creatures but also shatters their confidence. Make a melee (Action: Strike). If you hit and deal damage, the target is frightened 1, or frightened 2 on a critical hit." };
+            yield return new TextBlock { Id = Guid.Parse("9927b3a0-fd64-4bd3-b104-aa01f3db83b7"), Type = TextBlockType.Text, Text = $"Your blow not only wounds creatures but also shatters their confidence. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If you hit and deal damage, the target is frightened 1, or frightened 2 on a critical hit." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

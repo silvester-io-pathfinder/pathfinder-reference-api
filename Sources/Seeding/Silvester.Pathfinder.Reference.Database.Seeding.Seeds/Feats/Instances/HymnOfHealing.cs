@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7f38e29c-adeb-4e56-b8ff-ae3c7c8e9d05"), Type = TextBlockType.Text, Text = "You learn the (spell: hymn of healing) composition spell, which imbues your music with rich melodies that help your allies recover from harm." };
+            yield return new TextBlock { Id = Guid.Parse("7f38e29c-adeb-4e56-b8ff-ae3c7c8e9d05"), Type = TextBlockType.Text, Text = $"You learn the {ToMarkdownLink<Models.Entities.Spell>("hymn of healing", Spells.Instances.HymnOfHealing.ID)} composition spell, which imbues your music with rich melodies that help your allies recover from harm." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

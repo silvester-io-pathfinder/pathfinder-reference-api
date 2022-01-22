@@ -29,10 +29,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9cf84afc-9440-435a-b1e4-2571f04b5ddb"), Type = TextBlockType.Text, Text = "You practice a style of shooting that seeks to ensure that your first shot is perfectly placed. You keep hidden or at a distance, staying out of the fray and bringing unseen death to your foes." };
-            yield return new TextBlock { Id = Guid.Parse("93a2f524-b816-4e1c-a7f8-c29577e964fe"), Type = TextBlockType.Text, Text = "~ Slinger's Reload: (feat: Covered Reload)" };
-            yield return new TextBlock { Id = Guid.Parse("3a96f3ae-3755-4e6a-98b0-d4a8702aaa76"), Type = TextBlockType.Text, Text = "~ Deeds: __Initial__ (feat: One Shot, One Kill); __Advanced__ (feat: Vital Shot); __Greater__ (feat: Ghost Shot)" };
-            yield return new TextBlock { Id = Guid.Parse("88ff781d-055c-4189-9240-cb7f9efe1c8e"), Type = TextBlockType.Text, Text = "~ Way Skill: Stealth" };
+            yield return new TextBlock { Id = Guid.Parse("9cf84afc-9440-435a-b1e4-2571f04b5ddb"), Type = TextBlockType.Text, Text = $"You practice a style of shooting that seeks to ensure that your first shot is perfectly placed. You keep hidden or at a distance, staying out of the fray and bringing unseen death to your foes." };
+            yield return new TextBlock { Id = Guid.Parse("93a2f524-b816-4e1c-a7f8-c29577e964fe"), Type = TextBlockType.Text, Text = $"~ Slinger's Reload: {ToMarkdownLink<Models.Entities.Feat>("Covered Reload", Feats.Instances.CoveredReload.ID)}" };
+            yield return new TextBlock { Id = Guid.Parse("3a96f3ae-3755-4e6a-98b0-d4a8702aaa76"), Type = TextBlockType.Text, Text = $"~ Deeds: __Initial__ {ToMarkdownLink<Models.Entities.Feat>("One Shot, One Kill", Feats.Instances.OneShotOneKill.ID)}; __Advanced__ {ToMarkdownLink<Models.Entities.Feat>("Vital Shot", Feats.Instances.VitalShot.ID)}; __Greater__ {ToMarkdownLink<Models.Entities.Feat>("Ghost Shot", Feats.Instances.GhostShot.ID)}" };
+            yield return new TextBlock { Id = Guid.Parse("88ff781d-055c-4189-9240-cb7f9efe1c8e"), Type = TextBlockType.Text, Text = $"~ Way Skill: Stealth" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

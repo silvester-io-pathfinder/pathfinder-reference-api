@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9b0ae57f-d3f8-4d1b-8824-8efdfaf66c3c"), Type = TextBlockType.Text, Text = "While your willingness to dig into a task you know little about might get you into trouble, your incredible luck often saves you from danger. You can attempt skill actions that normally require you to be trained even if you aren't trained in that skill. If you use (Feat: Halfling Luck) when you fail a check for a skill with which you are untrained, you can add a proficiency bonus equal to your level, rather than 0, when you reroll the triggering skill check. You gain a +4 circumstance bonus to this rerolled skill check." };
+            yield return new TextBlock { Id = Guid.Parse("9b0ae57f-d3f8-4d1b-8824-8efdfaf66c3c"), Type = TextBlockType.Text, Text = $"While your willingness to dig into a task you know little about might get you into trouble, your incredible luck often saves you from danger. You can attempt skill actions that normally require you to be trained even if you aren't trained in that skill. If you use {ToMarkdownLink<Models.Entities.Feat>("Halfling Luck", Feats.Instances.HalflingLuck.ID)} when you fail a check for a skill with which you are untrained, you can add a proficiency bonus equal to your level, rather than 0, when you reroll the triggering skill check. You gain a +4 circumstance bonus to this rerolled skill check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

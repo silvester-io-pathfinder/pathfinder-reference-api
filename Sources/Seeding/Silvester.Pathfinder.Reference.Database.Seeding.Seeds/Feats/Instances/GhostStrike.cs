@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b16b7fe6-1603-496d-be54-09742bbe5faa"), Type = TextBlockType.Text, Text = "Once per day, you can infuse a weapon you are carrying with magical energies that allow it to strike true against incorporeal undead. The weapon gains the effects of the (item: ghost touch | Ghost Touch Runestone) property rune for 10 minutes." };
-            yield return new TextBlock { Id = Guid.Parse("b4541691-8984-4344-a37b-f62131dc70b9"), Type = TextBlockType.Text, Text = "At 10th level, you can apply this effect to two weapons instead of one." };
+            yield return new TextBlock { Id = Guid.Parse("b16b7fe6-1603-496d-be54-09742bbe5faa"), Type = TextBlockType.Text, Text = $"Once per day, you can infuse a weapon you are carrying with magical energies that allow it to strike true against incorporeal undead. The weapon gains the effects of the {ToMarkdownLink<Models.Items.Instances.WeaponPropertyRune>("ghost touch", Items.WeaponPropertyRunes.Instances.GhostTouch.ID)} property rune for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("b4541691-8984-4344-a37b-f62131dc70b9"), Type = TextBlockType.Text, Text = $"At 10th level, you can apply this effect to two weapons instead of one." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

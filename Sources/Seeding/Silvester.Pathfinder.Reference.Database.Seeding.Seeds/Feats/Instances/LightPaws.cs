@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("95ef6cdb-b4e6-4fd7-8e6c-6c78b92f95a3"), Type = TextBlockType.Text, Text = "You can balance on your toes to step carefully over obstructions. You (action: Stride) and then (action: Step), or (action: Step) and then (action: Stride), ignoring difficult terrain during this movement." };
+            yield return new TextBlock { Id = Guid.Parse("95ef6cdb-b4e6-4fd7-8e6c-6c78b92f95a3"), Type = TextBlockType.Text, Text = $"You can balance on your toes to step carefully over obstructions. You {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} and then {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)}, or {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} and then {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}, ignoring difficult terrain during this movement." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

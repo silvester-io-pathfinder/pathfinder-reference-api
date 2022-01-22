@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("82e38892-bb40-452a-91a7-533c1cf26a42"), Type = TextBlockType.Text, Text = "Drawing moisture from the atmosphere, you create a disc of hovering water that deflects attacks. You gain a +1 circumstance bonus to AC until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("82e38892-bb40-452a-91a7-533c1cf26a42"), Type = TextBlockType.Text, Text = $"Drawing moisture from the atmosphere, you create a disc of hovering water that deflects attacks. You gain a +1 circumstance bonus to AC until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

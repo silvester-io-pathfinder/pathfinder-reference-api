@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f31b0c04-4059-4877-be0d-59939400a90c"), Type = TextBlockType.Text, Text = "You become trained in simple weapons and martial weapons. You become trained in your choice of Acrobatics or Athletics; if you are already trained in both of these skills, you instead become trained in a skill of your choice. You become trained in fighter class DC." };
+            yield return new TextBlock { Id = Guid.Parse("f31b0c04-4059-4877-be0d-59939400a90c"), Type = TextBlockType.Text, Text = $"You become trained in simple weapons and martial weapons. You become trained in your choice of Acrobatics or Athletics; if you are already trained in both of these skills, you instead become trained in a skill of your choice. You become trained in fighter class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

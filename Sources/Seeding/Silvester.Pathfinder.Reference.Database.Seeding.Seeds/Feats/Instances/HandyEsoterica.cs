@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6b311d0e-e57d-4e72-bff2-17fd4bf1634e"), Type = TextBlockType.Text, Text = "You include just about anything you might need amid all your esoterica. You gain the (feat: Prescient Planner) and (feat: Prescient Consumable) feats. When using (feat: Prescient Planner), you can pull out the item as a 2-action activity to remove your backpack (or a similar container) and draw the item, rather than taking 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("6b311d0e-e57d-4e72-bff2-17fd4bf1634e"), Type = TextBlockType.Text, Text = $"You include just about anything you might need amid all your esoterica. You gain the {ToMarkdownLink<Models.Entities.Feat>("Prescient Planner", Feats.Instances.PrescientPlanner.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Prescient Consumable", Feats.Instances.PrescientConsumable.ID)} feats. When using {ToMarkdownLink<Models.Entities.Feat>("Prescient Planner", Feats.Instances.PrescientPlanner.ID)}, you can pull out the item as a 2-action activity to remove your backpack (or a similar container) and draw the item, rather than taking 1 minute." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

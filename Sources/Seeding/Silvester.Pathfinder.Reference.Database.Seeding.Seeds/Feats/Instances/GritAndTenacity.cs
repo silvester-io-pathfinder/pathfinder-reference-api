@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b185b60e-614a-4181-948e-ee7b348bf710"), Type = TextBlockType.Text, Text = "You call upon deep reserves of toughness and mental fortitude to power through an otherwise debilitating effect. Reroll the triggering save with a +2 circumstance bonus; you must use the second result." };
+            yield return new TextBlock { Id = Guid.Parse("b185b60e-614a-4181-948e-ee7b348bf710"), Type = TextBlockType.Text, Text = $"You call upon deep reserves of toughness and mental fortitude to power through an otherwise debilitating effect. Reroll the triggering save with a +2 circumstance bonus; you must use the second result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

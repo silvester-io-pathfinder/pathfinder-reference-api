@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c308317-9127-4b78-b85f-ba1b3df4646b"), Type = TextBlockType.Text, Text = "You can cast (spell: entangle) once per day as a 4th-level occult innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("4c308317-9127-4b78-b85f-ba1b3df4646b"), Type = TextBlockType.Text, Text = $"You can cast {ToMarkdownLink<Models.Entities.Spell>("entangle", Spells.Instances.Entangle.ID)} once per day as a 4th-level occult innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

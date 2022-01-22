@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3967cf1f-2bf2-4952-ae36-02bb891c40b2"), Type = TextBlockType.Text, Text = "Your connection to your fiendish forebears has granted you one of their resistances as well. Choose one of the following energy damage types: acid, cold, electricity, fire, or sonic. You gain resistance 5 to that damage type." };
-            yield return new TextBlock { Id = Guid.Parse("afdf651c-e01a-47de-916a-29e93625fa70"), Type = TextBlockType.Text, Text = "Though you can choose any of these, the damage type typically matches a fiend associated with your bloodline. For instance, a hellspawn might choose resistance to fire, or a pitborn with a vrock ancestor might choose resistance to electricity." };
+            yield return new TextBlock { Id = Guid.Parse("3967cf1f-2bf2-4952-ae36-02bb891c40b2"), Type = TextBlockType.Text, Text = $"Your connection to your fiendish forebears has granted you one of their resistances as well. Choose one of the following energy damage types: acid, cold, electricity, fire, or sonic. You gain resistance 5 to that damage type." };
+            yield return new TextBlock { Id = Guid.Parse("afdf651c-e01a-47de-916a-29e93625fa70"), Type = TextBlockType.Text, Text = $"Though you can choose any of these, the damage type typically matches a fiend associated with your bloodline. For instance, a hellspawn might choose resistance to fire, or a pitborn with a vrock ancestor might choose resistance to electricity." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

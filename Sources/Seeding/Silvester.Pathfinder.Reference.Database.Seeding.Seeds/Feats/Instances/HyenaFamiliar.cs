@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("707c2fce-90cb-4ea7-a953-ad907bb38d83"), Type = TextBlockType.Text, Text = "Hyenas serve gnolls as pets, trackers, and in your case, vessels for spirits. You gain a Tiny hyena as a familiar." };
+            yield return new TextBlock { Id = Guid.Parse("707c2fce-90cb-4ea7-a953-ad907bb38d83"), Type = TextBlockType.Text, Text = $"Hyenas serve gnolls as pets, trackers, and in your case, vessels for spirits. You gain a Tiny hyena as a familiar." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

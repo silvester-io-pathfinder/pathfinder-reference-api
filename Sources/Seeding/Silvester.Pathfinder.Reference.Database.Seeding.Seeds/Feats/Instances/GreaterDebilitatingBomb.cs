@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("67eff699-1292-48aa-9a09-a3320cf7f3f8"), Type = TextBlockType.Text, Text = "You have learned enhanced techniques and alchemical secrets that allow you to expand the range of effects you can impose with your bombs. When you use (feat: Debilitating Bomb), add the following to the list you can choose from: clumsy 1, enfeebled 1, stupefied 1, or -10-foot status penalty to Speeds." };
+            yield return new TextBlock { Id = Guid.Parse("67eff699-1292-48aa-9a09-a3320cf7f3f8"), Type = TextBlockType.Text, Text = $"You have learned enhanced techniques and alchemical secrets that allow you to expand the range of effects you can impose with your bombs. When you use {ToMarkdownLink<Models.Entities.Feat>("Debilitating Bomb", Feats.Instances.DebilitatingBomb.ID)}, add the following to the list you can choose from: clumsy 1, enfeebled 1, stupefied 1, or -10-foot status penalty to Speeds." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

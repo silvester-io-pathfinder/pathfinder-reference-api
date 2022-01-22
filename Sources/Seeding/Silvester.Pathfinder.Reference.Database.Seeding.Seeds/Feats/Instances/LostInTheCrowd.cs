@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d3522f09-d48d-49ca-8739-88577c74912c"), Type = TextBlockType.Text, Text = "You've learned how to move as one with crowds and hide among them, vanishing into a busy street in the blink of an eye. You move at full Speed in crowds and can use cover from crowds to (action: Hide) and (action: Sneak), gaining a +2 circumstance bonus on your Stealth checks when in a crowd of at least 10 creatures and a +4 circumstance bonus on your Stealth checks when in a crowd of at least 100 creatures." };
+            yield return new TextBlock { Id = Guid.Parse("d3522f09-d48d-49ca-8739-88577c74912c"), Type = TextBlockType.Text, Text = $"You've learned how to move as one with crowds and hide among them, vanishing into a busy street in the blink of an eye. You move at full Speed in crowds and can use cover from crowds to {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)} and {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)}, gaining a +2 circumstance bonus on your Stealth checks when in a crowd of at least 10 creatures and a +4 circumstance bonus on your Stealth checks when in a crowd of at least 100 creatures." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

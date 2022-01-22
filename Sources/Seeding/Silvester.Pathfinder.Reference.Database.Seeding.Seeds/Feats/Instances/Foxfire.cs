@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2e5e23b1-c052-4b1a-b191-3cf615add840"), Type = TextBlockType.Text, Text = "A crack of your tail sparks wisps of blue energy. Choose either electricity or fire when you gain this feat. You gain a foxfire ranged unarmed attack with a maximum range of 20 feet. The attack deals 1d4 damage of the chosen type (no ability modifier is added to the damage roll). Your foxfire attack is in the sling weapon group. Like other unarmed attacks, you can improve this attack with (item: handwraps of mighty blows)." };
+            yield return new TextBlock { Id = Guid.Parse("2e5e23b1-c052-4b1a-b191-3cf615add840"), Type = TextBlockType.Text, Text = $"A crack of your tail sparks wisps of blue energy. Choose either electricity or fire when you gain this feat. You gain a foxfire ranged unarmed attack with a maximum range of 20 feet. The attack deals 1d4 damage of the chosen type (no ability modifier is added to the damage roll). Your foxfire attack is in the sling weapon group. Like other unarmed attacks, you can improve this attack with {ToMarkdownLink<Models.Items.Instances.WornItem>("handwraps of mighty blows", Items.WornItems.Instances.HandwrapsOfMightyBlows.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

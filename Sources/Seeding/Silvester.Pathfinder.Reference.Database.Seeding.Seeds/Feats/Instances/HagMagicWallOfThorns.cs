@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04cdb380-242c-408a-939c-b62082acbccb"), Type = TextBlockType.Text, Text = "You can cast (spell: wall of thorns) once per day as a 4th-level occult innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("04cdb380-242c-408a-939c-b62082acbccb"), Type = TextBlockType.Text, Text = $"You can cast {ToMarkdownLink<Models.Entities.Spell>("wall of thorns", Spells.Instances.WallOfThorns.ID)} once per day as a 4th-level occult innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

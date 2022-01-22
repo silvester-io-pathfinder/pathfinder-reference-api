@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("130a4eb4-5627-489d-9f72-05ee975b9961"), Type = TextBlockType.Text, Text = "You have mastered a potent technique for using your ki to reinforce your physical form and propel yourself through the air. You gain the (spell: ki form) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("130a4eb4-5627-489d-9f72-05ee975b9961"), Type = TextBlockType.Text, Text = $"You have mastered a potent technique for using your ki to reinforce your physical form and propel yourself through the air. You gain the {ToMarkdownLink<Models.Entities.Spell>("ki form", Spells.Instances.KiForm.ID)} ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

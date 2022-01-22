@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("19ead337-c8b4-4fe8-8fc4-d2f386ba1c84"), Type = TextBlockType.Text, Text = "You center yourself with the universe and draw upon its vast power. You cast a single action ki spell with the stance trait, without spending a Focus Point." };
+            yield return new TextBlock { Id = Guid.Parse("19ead337-c8b4-4fe8-8fc4-d2f386ba1c84"), Type = TextBlockType.Text, Text = $"You center yourself with the universe and draw upon its vast power. You cast a single action ki spell with the stance trait, without spending a Focus Point." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

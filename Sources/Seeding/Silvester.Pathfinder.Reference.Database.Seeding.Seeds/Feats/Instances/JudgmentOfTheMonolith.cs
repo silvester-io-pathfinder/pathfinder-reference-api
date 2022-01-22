@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7513979d-5d3d-4d69-b45f-ffaff6725135"), Type = TextBlockType.Text, Text = "You can use the oaths bound in your ka stone to compel the truth from the living and the dead. You can activate your ka stone to target a single living creature, causing that creature to experience the effects of being in a (spell: zone of truth). You can also activate it with a 10-minute activation (envision) to cast (spell: talking corpse)." };
+            yield return new TextBlock { Id = Guid.Parse("7513979d-5d3d-4d69-b45f-ffaff6725135"), Type = TextBlockType.Text, Text = $"You can use the oaths bound in your ka stone to compel the truth from the living and the dead. You can activate your ka stone to target a single living creature, causing that creature to experience the effects of being in a {ToMarkdownLink<Models.Entities.Spell>("zone of truth", Spells.Instances.ZoneOfTruth.ID)}. You can also activate it with a 10-minute activation (envision) to cast {ToMarkdownLink<Models.Entities.Spell>("talking corpse", Spells.Instances.TalkingCorpse.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

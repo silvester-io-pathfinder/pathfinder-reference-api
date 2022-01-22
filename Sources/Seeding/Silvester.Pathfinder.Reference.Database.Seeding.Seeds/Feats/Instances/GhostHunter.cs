@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fd184d8e-0933-4dda-abc9-647374640906"), Type = TextBlockType.Text, Text = "Your connection to the Boneyard ensures that your blows strike true against spectral beings. Your weapon and unarmed attack (action: Strikes | Strike) against incorporeal creatures become magical. If they are already magical, they instead gain the effects of a (item: ghost touch | Ghost Touch Runestone) property rune." };
+            yield return new TextBlock { Id = Guid.Parse("fd184d8e-0933-4dda-abc9-647374640906"), Type = TextBlockType.Text, Text = $"Your connection to the Boneyard ensures that your blows strike true against spectral beings. Your weapon and unarmed attack {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} against incorporeal creatures become magical. If they are already magical, they instead gain the effects of a {ToMarkdownLink<Models.Items.Instances.WeaponPropertyRune>("ghost touch", Items.WeaponPropertyRunes.Instances.GhostTouch.ID)} property rune." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9d89b40b-96b9-45d3-b000-a8201f71bc0a"), Type = TextBlockType.Text, Text = "When you successfully (action: Shove) a creature, increase both the distance you can push the creature and the distance you can move to follow along with the target by 5 feet on a success or 10 feet on a critical success. If you push the target into an obstacle, it takes bludgeoning damage equal to 6 plus your Strength modifier, or 8 plus your Strength modifier if you're legendary in Athletics." };
+            yield return new TextBlock { Id = Guid.Parse("9d89b40b-96b9-45d3-b000-a8201f71bc0a"), Type = TextBlockType.Text, Text = $"When you successfully {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} a creature, increase both the distance you can push the creature and the distance you can move to follow along with the target by 5 feet on a success or 10 feet on a critical success. If you push the target into an obstacle, it takes bludgeoning damage equal to 6 plus your Strength modifier, or 8 plus your Strength modifier if you're legendary in Athletics." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

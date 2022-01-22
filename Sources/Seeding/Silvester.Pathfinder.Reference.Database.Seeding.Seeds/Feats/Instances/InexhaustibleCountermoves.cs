@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("585ad20f-e3bf-4efb-92b4-5cd161fab665"), Type = TextBlockType.Text, Text = "You can react whenever a foe leaves a gap in their defenses. At the start of each enemy's turn, you gain an extra reaction you can use only during that turn to perform an (feat: Opportune Riposte), or an (feat: Attack of Opportunity) if you have that reaction." };
+            yield return new TextBlock { Id = Guid.Parse("585ad20f-e3bf-4efb-92b4-5cd161fab665"), Type = TextBlockType.Text, Text = $"You can react whenever a foe leaves a gap in their defenses. At the start of each enemy's turn, you gain an extra reaction you can use only during that turn to perform an {ToMarkdownLink<Models.Entities.Feat>("Opportune Riposte", Feats.Instances.OpportuneRiposte.ID)}, or an {ToMarkdownLink<Models.Entities.Feat>("Attack of Opportunity", Feats.Instances.AttackOfOpportunity.ID)} if you have that reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7f0d9c7a-a012-4ca8-8c62-fc9bff34bb8b"), Type = TextBlockType.Text, Text = "You are able to track your quarry through impossible places. You gain the (spell: ephemeral tracking) warden spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("7f0d9c7a-a012-4ca8-8c62-fc9bff34bb8b"), Type = TextBlockType.Text, Text = $"You are able to track your quarry through impossible places. You gain the {ToMarkdownLink<Models.Entities.Spell>("ephemeral tracking", Spells.Instances.EphemeralTracking.ID)} warden spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

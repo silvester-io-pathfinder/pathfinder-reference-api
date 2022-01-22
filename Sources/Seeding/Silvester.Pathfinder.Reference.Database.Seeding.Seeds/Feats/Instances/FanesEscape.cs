@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("945acf3b-6dfa-4cad-a823-1ba6971f485c"), Type = TextBlockType.Text, Text = "~ Access: Member of the Pathfinder Society." };
-            yield return new TextBlock { Id = Guid.Parse("5b694a04-aca4-4a3c-827d-d24ae03861b9"), Type = TextBlockType.Text, Text = "A good getaway requires a good distraction. You (action: Interact) to draw a deck of cards and flip it in a fluttering explosion, causing you to become briefly hidden to all other creatures using vision as their precise sense, and then you (action: Sneak). You have enough cover to (action: Sneak) until the end of your turn. This leaves all of the cards from the deck scattered about the room; collecting them into a deck again takes several minutes." };
+            yield return new TextBlock { Id = Guid.Parse("945acf3b-6dfa-4cad-a823-1ba6971f485c"), Type = TextBlockType.Text, Text = $"~ Access: Member of the Pathfinder Society." };
+            yield return new TextBlock { Id = Guid.Parse("5b694a04-aca4-4a3c-827d-d24ae03861b9"), Type = TextBlockType.Text, Text = $"A good getaway requires a good distraction. You {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw a deck of cards and flip it in a fluttering explosion, causing you to become briefly hidden to all other creatures using vision as their precise sense, and then you {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)}. You have enough cover to {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} until the end of your turn. This leaves all of the cards from the deck scattered about the room; collecting them into a deck again takes several minutes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,12 +29,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fcc62edd-f35f-4a08-8e3a-3d8b71c1fc63"), Type = TextBlockType.Text, Text = "Your unbridled enthusiasm and positive attitude can lead you to success, but you might expend more energy than you planned." };
-            yield return new TextBlock { Id = Guid.Parse("020d2521-48ae-45dc-9d52-a56aa1aa2ac7"), Type = TextBlockType.Text, Text = "~ Catharsis Trigger: You critically succeed on an attack roll or save, or an enemy critically fails on a save against you." };
-            yield return new TextBlock { Id = Guid.Parse("9e4a77c7-380a-45f5-ba62-788e87ab404a"), Type = TextBlockType.Text, Text = "~ Catharsis Activation: Reduce the value of any frightened or stupefied condition you have by 1 and end any persistent mental damage you have." };
-            yield return new TextBlock { Id = Guid.Parse("e92b535d-1dc0-4a69-9dde-026c555ccda3"), Type = TextBlockType.Text, Text = "~ Emotional Fervor: You gain a +1 status bonus to Performance checks and to the spell attack rolls of emotion spells, and enemies take a –1 status penalty to saves against your emotion spells. Spell: (spell: hideous laughter)" };
-            yield return new TextBlock { Id = Guid.Parse("88e7985d-724a-4bab-9f12-b516e4d1692a"), Type = TextBlockType.Text, Text = "~ Emotional Fallout: You become fatigued until you (feat: Settle your Emotions| Settle Emotions)." };
-            yield return new TextBlock { Id = Guid.Parse("e94263cd-7718-41e7-9521-f6f3a26634b8"), Type = TextBlockType.Text, Text = "~ Focus Spell: (spell: unimpeded stride)" };
+            yield return new TextBlock { Id = Guid.Parse("fcc62edd-f35f-4a08-8e3a-3d8b71c1fc63"), Type = TextBlockType.Text, Text = $"Your unbridled enthusiasm and positive attitude can lead you to success, but you might expend more energy than you planned." };
+            yield return new TextBlock { Id = Guid.Parse("020d2521-48ae-45dc-9d52-a56aa1aa2ac7"), Type = TextBlockType.Text, Text = $"~ Catharsis Trigger: You critically succeed on an attack roll or save, or an enemy critically fails on a save against you." };
+            yield return new TextBlock { Id = Guid.Parse("9e4a77c7-380a-45f5-ba62-788e87ab404a"), Type = TextBlockType.Text, Text = $"~ Catharsis Activation: Reduce the value of any frightened or stupefied condition you have by 1 and end any persistent mental damage you have." };
+            yield return new TextBlock { Id = Guid.Parse("e92b535d-1dc0-4a69-9dde-026c555ccda3"), Type = TextBlockType.Text, Text = $"~ Emotional Fervor: You gain a +1 status bonus to Performance checks and to the spell attack rolls of emotion spells, and enemies take a –1 status penalty to saves against your emotion spells. Spell: {ToMarkdownLink<Models.Entities.Spell>("hideous laughter", Spells.Instances.HideousLaughter.ID)}" };
+            yield return new TextBlock { Id = Guid.Parse("88e7985d-724a-4bab-9f12-b516e4d1692a"), Type = TextBlockType.Text, Text = $"~ Emotional Fallout: You become fatigued until you {ToMarkdownLink<Models.Entities.Feat>("Settle your Emotions", Feats.Instances.SettleEmotions.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("e94263cd-7718-41e7-9521-f6f3a26634b8"), Type = TextBlockType.Text, Text = $"~ Focus Spell: {ToMarkdownLink<Models.Entities.Spell>("unimpeded stride", Spells.Instances.UnimpededStride.ID)}" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

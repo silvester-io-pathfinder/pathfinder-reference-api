@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea8cd3af-76ef-434f-86d4-ff7cb0e6d570"), Type = TextBlockType.Text, Text = "You're accustomed to seeing through shifting darkness and bewildering magic. You gain a +1 circumstance bonus on Perception checks against illusions as well as to Will saves against illusions and (trait: shadow) effects." };
+            yield return new TextBlock { Id = Guid.Parse("ea8cd3af-76ef-434f-86d4-ff7cb0e6d570"), Type = TextBlockType.Text, Text = $"You're accustomed to seeing through shifting darkness and bewildering magic. You gain a +1 circumstance bonus on Perception checks against illusions as well as to Will saves against illusions and {ToMarkdownLink<Models.Entities.Trait>("shadow", Traits.Instances.Shadow.ID)} effects." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

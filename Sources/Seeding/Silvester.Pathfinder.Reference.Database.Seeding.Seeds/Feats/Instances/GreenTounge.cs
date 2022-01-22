@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5b9623a2-167d-4994-b740-058d3ade8a6d"), Type = TextBlockType.Text, Text = "You share a special kinship with all things green and living. You (and your leshy familiar, if you have one) are constantly under the effects of (Spell: speak with plants). Most non-creature plants recognize you as a druid of the leaf order and are friendly to you." };
+            yield return new TextBlock { Id = Guid.Parse("5b9623a2-167d-4994-b740-058d3ade8a6d"), Type = TextBlockType.Text, Text = $"You share a special kinship with all things green and living. You (and your leshy familiar, if you have one) are constantly under the effects of {ToMarkdownLink<Models.Entities.Spell>("speak with plants", Spells.Instances.SpeakWithPlants.ID)}. Most non-creature plants recognize you as a druid of the leaf order and are friendly to you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

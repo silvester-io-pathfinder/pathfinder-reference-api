@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d390e71f-0ba6-4c6c-b3f4-5723489055b0"), Type = TextBlockType.Text, Text = "You call upon righteousness to expose an evil foe's weakness. You can cast the (spell: litany of righteousness) devotion spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("d390e71f-0ba6-4c6c-b3f4-5723489055b0"), Type = TextBlockType.Text, Text = $"You call upon righteousness to expose an evil foe's weakness. You can cast the {ToMarkdownLink<Models.Entities.Spell>("litany of righteousness", Spells.Instances.LitanyOfRighteousness.ID)} devotion spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

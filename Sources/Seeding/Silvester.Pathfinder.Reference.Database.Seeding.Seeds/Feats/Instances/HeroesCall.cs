@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("53410d61-2f3b-4a25-9997-96e1c063766e"), Type = TextBlockType.Text, Text = "The songs of ancient heroes echo through your mind and quicken your pulse, especially in dire straits. You gain (spell: heroism) as a 3rd-level innate occult spell that you can cast once per day. If you (activity: Cast the Spell | Cast a Spell) when you have half or fewer Hit Points, you also gain temporary Hit Points equal to twice your level." };
+            yield return new TextBlock { Id = Guid.Parse("53410d61-2f3b-4a25-9997-96e1c063766e"), Type = TextBlockType.Text, Text = $"The songs of ancient heroes echo through your mind and quicken your pulse, especially in dire straits. You gain {ToMarkdownLink<Models.Entities.Spell>("heroism", Spells.Instances.Heroism.ID)} as a 3rd-level innate occult spell that you can cast once per day. If you {ToMarkdownLink<Models.Entities.Rule>("Cast the Spell", Rules.Instances.CastASpell.ID)} when you have half or fewer Hit Points, you also gain temporary Hit Points equal to twice your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

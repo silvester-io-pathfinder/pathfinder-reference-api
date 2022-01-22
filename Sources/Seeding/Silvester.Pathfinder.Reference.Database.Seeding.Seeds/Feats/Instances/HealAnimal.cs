@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("46d787c0-2b16-428b-9ce2-536fe14f4cb5"), Type = TextBlockType.Text, Text = "You can heal your animal companion's wounds. You can cast (spell: heal animal) as a beastmaster focus spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("46d787c0-2b16-428b-9ce2-536fe14f4cb5"), Type = TextBlockType.Text, Text = $"You can heal your animal companion's wounds. You can cast {ToMarkdownLink<Models.Entities.Spell>("heal animal", Spells.Instances.HealAnimal.ID)} as a beastmaster focus spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

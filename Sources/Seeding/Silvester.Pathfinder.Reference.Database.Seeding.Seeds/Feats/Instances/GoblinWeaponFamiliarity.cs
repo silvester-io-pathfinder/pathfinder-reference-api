@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8f2be6f9-ecc0-4198-9a11-1dfb2db8e461"), Type = TextBlockType.Text, Text = "Others might look upon them with disdain, but you know that the weapons of your people are as effective as they are sharp. You are trained with the dogslicer and horsechopper." };
-            yield return new TextBlock { Id = Guid.Parse("92689bd0-af56-4be4-8496-d059e7227ea6"), Type = TextBlockType.Text, Text = "In addition, you gain access to all uncommon goblin weapons. For the purpose of determining your proficiency, martial goblin weapons are simple weapons and advanced goblin weapons are martial weapons." };
+            yield return new TextBlock { Id = Guid.Parse("8f2be6f9-ecc0-4198-9a11-1dfb2db8e461"), Type = TextBlockType.Text, Text = $"Others might look upon them with disdain, but you know that the weapons of your people are as effective as they are sharp. You are trained with the dogslicer and horsechopper." };
+            yield return new TextBlock { Id = Guid.Parse("92689bd0-af56-4be4-8496-d059e7227ea6"), Type = TextBlockType.Text, Text = $"In addition, you gain access to all uncommon goblin weapons. For the purpose of determining your proficiency, martial goblin weapons are simple weapons and advanced goblin weapons are martial weapons." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

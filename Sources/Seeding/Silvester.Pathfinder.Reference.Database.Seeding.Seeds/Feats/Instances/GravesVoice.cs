@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c00ab2ea-8acb-45d0-9b93-c1b01c46f70e"), Type = TextBlockType.Text, Text = "You can use your choice of Spirit Lore or Haunt Lore to (action: Make an Impression) or (action: Request) things of incorporeal creatures. At the GM's discretion, an incorporeal spirit might be willing to hear you out." };
+            yield return new TextBlock { Id = Guid.Parse("c00ab2ea-8acb-45d0-9b93-c1b01c46f70e"), Type = TextBlockType.Text, Text = $"You can use your choice of Spirit Lore or Haunt Lore to {ToMarkdownLink<Models.Entities.SkillAction>("Make an Impression", SkillActions.Instances.MakeAnImpression.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Request", SkillActions.Instances.Request.ID)} things of incorporeal creatures. At the GM's discretion, an incorporeal spirit might be willing to hear you out." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

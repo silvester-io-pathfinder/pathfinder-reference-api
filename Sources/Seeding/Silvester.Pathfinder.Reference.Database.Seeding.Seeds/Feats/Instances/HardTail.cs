@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ca9090a-b58f-4248-ab29-b40e1cd8e48f"), Type = TextBlockType.Text, Text = "Your tail is much stronger than most, and you can lash out with it with the strength of a whip. You gain a tail unarmed attack that deals 1d6 bludgeoning damage." };
+            yield return new TextBlock { Id = Guid.Parse("0ca9090a-b58f-4248-ab29-b40e1cd8e48f"), Type = TextBlockType.Text, Text = $"Your tail is much stronger than most, and you can lash out with it with the strength of a whip. You gain a tail unarmed attack that deals 1d6 bludgeoning damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

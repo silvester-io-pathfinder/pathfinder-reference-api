@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("016d2019-10ca-4704-b71b-5ed7756c3530"), Type = TextBlockType.Text, Text = "You gain a tail unarmed attack that deals 1d6 bludgeoning damage and has the (trait: backswing) trait." };
+            yield return new TextBlock { Id = Guid.Parse("016d2019-10ca-4704-b71b-5ed7756c3530"), Type = TextBlockType.Text, Text = $"You gain a tail unarmed attack that deals 1d6 bludgeoning damage and has the {ToMarkdownLink<Models.Entities.Trait>("backswing", Traits.Instances.Backswing.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

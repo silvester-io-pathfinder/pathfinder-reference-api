@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1ea87f25-0530-4420-9170-e1f8478e9577"), Type = TextBlockType.Text, Text = "With heavy wing beats, you whip up a furious gust and direct it at your opponents. This air blast has the effects of (spell: gust of wind) with a DC equal to your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("1ea87f25-0530-4420-9170-e1f8478e9577"), Type = TextBlockType.Text, Text = $"With heavy wing beats, you whip up a furious gust and direct it at your opponents. This air blast has the effects of {ToMarkdownLink<Models.Entities.Spell>("gust of wind", Spells.Instances.GustOfWind.ID)} with a DC equal to your class DC or spell DC, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

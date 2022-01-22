@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("87801676-5d4c-456b-b2b3-a593f1dcda2b"), Type = TextBlockType.Text, Text = "You have a deep devotion to your animal companion that enables you to magically heal their wounds. You gain the (spell: heal companion) warden spell and a focus pool of 1 Focus Point." };
+            yield return new TextBlock { Id = Guid.Parse("87801676-5d4c-456b-b2b3-a593f1dcda2b"), Type = TextBlockType.Text, Text = $"You have a deep devotion to your animal companion that enables you to magically heal their wounds. You gain the {ToMarkdownLink<Models.Entities.Spell>("heal companion", Spells.Instances.HealCompanion.ID)} warden spell and a focus pool of 1 Focus Point." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

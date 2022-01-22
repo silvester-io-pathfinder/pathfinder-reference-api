@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("707db766-99fb-4aad-b6dd-b07e87e66b77"), Type = TextBlockType.Text, Text = "Gloom holds few terrors for you, and the pall of darkness over Nidal has made you comfortable in dim light. You gain low-light vision." };
+            yield return new TextBlock { Id = Guid.Parse("707db766-99fb-4aad-b6dd-b07e87e66b77"), Type = TextBlockType.Text, Text = $"Gloom holds few terrors for you, and the pall of darkness over Nidal has made you comfortable in dim light. You gain low-light vision." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

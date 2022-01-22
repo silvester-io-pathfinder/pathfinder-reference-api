@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79cba7f7-42f0-4a27-89e7-da7dec66b267"), Type = TextBlockType.Text, Text = "Axis's order suffuses your body and helps it maintain coherency. You and your allies can (action: Treat your Wounds | Treat Wounds) without (item: healer's tools). Once per day, when someone rolls a failure or a critical failure on a check to (action: Treat your Wounds | Treat Wounds), you can focus on your internal cohesion to increase the degree of success by one step." };
+            yield return new TextBlock { Id = Guid.Parse("79cba7f7-42f0-4a27-89e7-da7dec66b267"), Type = TextBlockType.Text, Text = $"Axis's order suffuses your body and helps it maintain coherency. You and your allies can {ToMarkdownLink<Models.Entities.SkillAction>("Treat your Wounds", SkillActions.Instances.TreatWounds.ID)} without {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("healer's tools", Items.AdventuringGears.Instances.HealersTools.ID)}. Once per day, when someone rolls a failure or a critical failure on a check to {ToMarkdownLink<Models.Entities.SkillAction>("Treat your Wounds", SkillActions.Instances.TreatWounds.ID)}, you can focus on your internal cohesion to increase the degree of success by one step." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("895078cd-76e0-4b2b-8b72-1f6ec36c99d6"), Type = TextBlockType.Text, Text = "To rush after a criminal or reach someone in need, you ring a sprightly tone. You and all allies within 30 feet gain a +10-foot status bonus to all Speeds for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("895078cd-76e0-4b2b-8b72-1f6ec36c99d6"), Type = TextBlockType.Text, Text = $"To rush after a criminal or reach someone in need, you ring a sprightly tone. You and all allies within 30 feet gain a +10-foot status bonus to all Speeds for 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

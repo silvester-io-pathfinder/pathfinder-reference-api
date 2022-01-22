@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d49c143-3c88-421e-adb3-9df1d640edc0"), Type = TextBlockType.Text, Text = "You stoke your magic to energize your wings, temporarily transforming them into glowing, majestic forms. For 1 minute, you gain a fly Speed of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("1d49c143-3c88-421e-adb3-9df1d640edc0"), Type = TextBlockType.Text, Text = $"You stoke your magic to energize your wings, temporarily transforming them into glowing, majestic forms. For 1 minute, you gain a fly Speed of 30 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

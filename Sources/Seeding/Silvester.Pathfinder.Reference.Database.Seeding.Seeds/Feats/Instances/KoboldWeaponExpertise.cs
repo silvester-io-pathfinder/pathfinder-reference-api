@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("276917da-30ec-48bd-b9e9-9848bd968808"), Type = TextBlockType.Text, Text = "Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the (item: crossbow), (item: greatpick), (item: light pick), (item: pick), and (item: spear), as well as any kobold weapons in which you are trained." };
+            yield return new TextBlock { Id = Guid.Parse("276917da-30ec-48bd-b9e9-9848bd968808"), Type = TextBlockType.Text, Text = $"Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("crossbow", Items.RangedWeapons.Instances.Crossbow.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("greatpick", Items.MeleeWeapons.Instances.Greatpick.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("light pick", Items.MeleeWeapons.Instances.LightPick.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("pick", Items.MeleeWeapons.Instances.Pick.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("spear", Items.MeleeWeapons.Instances.Spear.ID)}, as well as any kobold weapons in which you are trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

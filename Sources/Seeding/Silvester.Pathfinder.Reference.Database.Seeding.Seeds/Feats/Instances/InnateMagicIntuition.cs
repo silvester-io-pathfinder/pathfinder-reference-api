@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f4ba3d01-815d-4df3-a961-f11740590dab"), Type = TextBlockType.Text, Text = "You've spent countless hours learning to recognize and predict a creature's innate magical abilities. The first time you successfully (action: Recall Knowledge) to identify a creature, in addition to any information you learn from your successful check, you learn the names of three of the highest-level innate spells it can cast, and you gain a +2 circumstance bonus on your next save against an innate spell cast by that creature." };
+            yield return new TextBlock { Id = Guid.Parse("f4ba3d01-815d-4df3-a961-f11740590dab"), Type = TextBlockType.Text, Text = $"You've spent countless hours learning to recognize and predict a creature's innate magical abilities. The first time you successfully {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} to identify a creature, in addition to any information you learn from your successful check, you learn the names of three of the highest-level innate spells it can cast, and you gain a +2 circumstance bonus on your next save against an innate spell cast by that creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

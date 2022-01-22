@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b3b18fa4-4e47-4524-84ec-909b07dcb711"), Type = TextBlockType.Text, Text = "When you roll a success to (action: Command an Animal), you get a critical success; if you roll a critical failure, you get a failure." };
+            yield return new TextBlock { Id = Guid.Parse("b3b18fa4-4e47-4524-84ec-909b07dcb711"), Type = TextBlockType.Text, Text = $"When you roll a success to {ToMarkdownLink<Models.Entities.SkillAction>("Command an Animal", SkillActions.Instances.CommandAnAnimal.ID)}, you get a critical success; if you roll a critical failure, you get a failure." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

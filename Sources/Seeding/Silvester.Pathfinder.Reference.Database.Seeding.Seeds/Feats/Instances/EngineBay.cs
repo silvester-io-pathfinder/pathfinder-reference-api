@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("88a68ca7-4206-48df-946b-43c347f3edb9"), Type = TextBlockType.Text, Text = "You are practiced at working in vast garages of vehicles and can work on many machines at a time. When (action: Repairing | Repair) and spending the full 10 minutes, you can fix up to two objects. If you are a master in Crafting, you can fix up to four targets. If you're legendary in Crafting, you can fix up to eight targets. This feat has no effect when using (feat: Quick Repair) or another ability to reduce the time spent (action: Repairing | Repair)." };
+            yield return new TextBlock { Id = Guid.Parse("88a68ca7-4206-48df-946b-43c347f3edb9"), Type = TextBlockType.Text, Text = $"You are practiced at working in vast garages of vehicles and can work on many machines at a time. When {ToMarkdownLink<Models.Entities.SkillAction>("Repairing", SkillActions.Instances.Repair.ID)} and spending the full 10 minutes, you can fix up to two objects. If you are a master in Crafting, you can fix up to four targets. If you're legendary in Crafting, you can fix up to eight targets. This feat has no effect when using {ToMarkdownLink<Models.Entities.Feat>("Quick Repair", Feats.Instances.QuickRepair.ID)} or another ability to reduce the time spent {ToMarkdownLink<Models.Entities.SkillAction>("Repairing", SkillActions.Instances.Repair.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a7e052ee-aeec-4bd2-9fe8-8f7ce60a2040"), Type = TextBlockType.Text, Text = "You never fail to strike down the ever-expanding reaches of chaos. All your weapon and unarmed (action: Strikes | Strike) deal 1 additional lawful damage and have the (trait: lawful) and (trait: magical) traits." };
+            yield return new TextBlock { Id = Guid.Parse("a7e052ee-aeec-4bd2-9fe8-8f7ce60a2040"), Type = TextBlockType.Text, Text = $"You never fail to strike down the ever-expanding reaches of chaos. All your weapon and unarmed {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} deal 1 additional lawful damage and have the {ToMarkdownLink<Models.Entities.Trait>("lawful", Traits.Instances.Lawful.ID)} and {ToMarkdownLink<Models.Entities.Trait>("magical", Traits.Instances.Magical.ID)} traits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7119a050-4d8b-4482-9309-cdbdc6e3da28"), Type = TextBlockType.Text, Text = "The restorative power of your healing invigorates the recipient. If the next action you use is to cast (spell: heal) targeting a single living creature and the target regains Hit Points from the spell, it also gains three bonuses until the end of its next turn: a +5-foot status bonus to its Speed, a +1 status bonus to attack rolls, and a +1 status bonus to damage rolls." };
+            yield return new TextBlock { Id = Guid.Parse("7119a050-4d8b-4482-9309-cdbdc6e3da28"), Type = TextBlockType.Text, Text = $"The restorative power of your healing invigorates the recipient. If the next action you use is to cast {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} targeting a single living creature and the target regains Hit Points from the spell, it also gains three bonuses until the end of its next turn: a +5-foot status bonus to its Speed, a +1 status bonus to attack rolls, and a +1 status bonus to damage rolls." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

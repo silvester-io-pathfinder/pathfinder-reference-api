@@ -29,12 +29,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5df2fdba-8c27-4103-93ce-4bd5dd82f69a"), Type = TextBlockType.Text, Text = "You have been exposed to powerful fey magic. You become trained in primal DCs and spell attack rolls. You gain the (trait: fey) trait and one of the following features which grant an innate primal spell that can be used once per day." };
-            yield return new TextBlock { Id = Guid.Parse("28bab903-8ecd-4df3-a214-67bd6111f0b3"), Type = TextBlockType.Enumeration, Text = " Anteater: You can launch your tongue forward as a deadly attack, gaining (spell: grim tendrils)." };
-            yield return new TextBlock { Id = Guid.Parse("51fd7366-9869-41ae-a810-3241b847be3a"), Type = TextBlockType.Enumeration, Text = " Dryad: Your body is covered in elegant vines, granting you (spell: summon plant or fungus)." };
-            yield return new TextBlock { Id = Guid.Parse("81f3fe7b-a68f-474f-84a4-4500a89bb50c"), Type = TextBlockType.Enumeration, Text = " Gremlin: You have long, bat-like ears and gain (spell: bane)." };
-            yield return new TextBlock { Id = Guid.Parse("7b2159fc-e3d2-440d-8122-64d13f6e00a9"), Type = TextBlockType.Enumeration, Text = " Monarch: You have vestigial, insectile features and gain (spell: spider sting)." };
-            yield return new TextBlock { Id = Guid.Parse("9e0db388-ae7a-4da5-81e7-df0086e8e1e5"), Type = TextBlockType.Text, Text = "This feat gains the trait appropriate for your ancestry (human for human, goblin for goblin, etc)." };
+            yield return new TextBlock { Id = Guid.Parse("5df2fdba-8c27-4103-93ce-4bd5dd82f69a"), Type = TextBlockType.Text, Text = $"You have been exposed to powerful fey magic. You become trained in primal DCs and spell attack rolls. You gain the {ToMarkdownLink<Models.Entities.Trait>("fey", Traits.Instances.Fey.ID)} trait and one of the following features which grant an innate primal spell that can be used once per day." };
+            yield return new TextBlock { Id = Guid.Parse("28bab903-8ecd-4df3-a214-67bd6111f0b3"), Type = TextBlockType.Enumeration, Text = $" Anteater: You can launch your tongue forward as a deadly attack, gaining {ToMarkdownLink<Models.Entities.Spell>("grim tendrils", Spells.Instances.GrimTendrils.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("51fd7366-9869-41ae-a810-3241b847be3a"), Type = TextBlockType.Enumeration, Text = $" Dryad: Your body is covered in elegant vines, granting you {ToMarkdownLink<Models.Entities.Spell>("summon plant or fungus", Spells.Instances.SummonPlantOrFungus.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("81f3fe7b-a68f-474f-84a4-4500a89bb50c"), Type = TextBlockType.Enumeration, Text = $" Gremlin: You have long, bat-like ears and gain {ToMarkdownLink<Models.Entities.Spell>("bane", Spells.Instances.Bane.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("7b2159fc-e3d2-440d-8122-64d13f6e00a9"), Type = TextBlockType.Enumeration, Text = $" Monarch: You have vestigial, insectile features and gain {ToMarkdownLink<Models.Entities.Spell>("spider sting", Spells.Instances.SpiderSting.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("9e0db388-ae7a-4da5-81e7-df0086e8e1e5"), Type = TextBlockType.Text, Text = $"This feat gains the trait appropriate for your ancestry (human for human, goblin for goblin, etc)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

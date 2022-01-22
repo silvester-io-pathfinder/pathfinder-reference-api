@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("82065e63-8349-4316-b1cc-a4d9ad70b6f1"), Type = TextBlockType.Text, Text = "You've spent more than your share of time in an alchemy lab. You might have been an alchemist yourself, an assistant, or perhaps even a test subject. Either way, you have been exposed to a wide variety of alchemical poisons and elixirs, leaving you with increased tolerance of their effects. You have a +1 circumstance bonus to saves against poison and harmful effects from elixirs. If you roll a success on your saving throw against an elixir or poison, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("82065e63-8349-4316-b1cc-a4d9ad70b6f1"), Type = TextBlockType.Text, Text = $"You've spent more than your share of time in an alchemy lab. You might have been an alchemist yourself, an assistant, or perhaps even a test subject. Either way, you have been exposed to a wide variety of alchemical poisons and elixirs, leaving you with increased tolerance of their effects. You have a +1 circumstance bonus to saves against poison and harmful effects from elixirs. If you roll a success on your saving throw against an elixir or poison, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

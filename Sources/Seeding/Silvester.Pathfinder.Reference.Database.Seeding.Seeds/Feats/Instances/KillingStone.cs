@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("193b04cc-fad6-42dd-80d6-910d8ab1a714"), Type = TextBlockType.Text, Text = "Your star orb hides a deadly miasma. You can cast 5th-level (spell: cloudkill) as a divine innate spell once per day. The spell's normal components are replaced with a focus component (your star orb) and a somatic component to aim the orb towards the location for the spell." };
+            yield return new TextBlock { Id = Guid.Parse("193b04cc-fad6-42dd-80d6-910d8ab1a714"), Type = TextBlockType.Text, Text = $"Your star orb hides a deadly miasma. You can cast 5th-level {ToMarkdownLink<Models.Entities.Spell>("cloudkill", Spells.Instances.Cloudkill.ID)} as a divine innate spell once per day. The spell's normal components are replaced with a focus component (your star orb) and a somatic component to aim the orb towards the location for the spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

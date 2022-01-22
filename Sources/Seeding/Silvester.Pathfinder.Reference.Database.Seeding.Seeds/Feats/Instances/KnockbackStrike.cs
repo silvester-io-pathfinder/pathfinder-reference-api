@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("10569106-cd1f-46bd-af9b-a3ef5deab800"), Type = TextBlockType.Text, Text = "You focus your strength into a blow powerful enough to push an enemy away from you. Make an unarmed (action: Strike)." };
-            yield return new TextBlock { Id = Guid.Parse("e45ae3cf-62c6-47ae-8aef-d96f2f6dac0b"), Type = TextBlockType.Text, Text = "If you hit, attempt an Athletics check to (action: Shove) the target. This attack uses the same multiple attack penalty as your (action: Strike), and doesn't count toward your multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("10569106-cd1f-46bd-af9b-a3ef5deab800"), Type = TextBlockType.Text, Text = $"You focus your strength into a blow powerful enough to push an enemy away from you. Make an unarmed {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("e45ae3cf-62c6-47ae-8aef-d96f2f6dac0b"), Type = TextBlockType.Text, Text = $"If you hit, attempt an Athletics check to {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} the target. This attack uses the same multiple attack penalty as your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, and doesn't count toward your multiple attack penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

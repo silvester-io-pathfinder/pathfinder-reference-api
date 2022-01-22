@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79e3be7a-0929-4802-9786-6cc6409e096b"), Type = TextBlockType.Text, Text = "~ Access: Member of the Pathfinder Society." };
-            yield return new TextBlock { Id = Guid.Parse("80d70be3-f76a-4f88-90f8-d294511fe240"), Type = TextBlockType.Text, Text = "Surprisingly agile even in a breastplate and carrying a full rucksack, Marcos Farabellus developed this evasive maneuver during one of his many adventures. Flinging your body into a twisting somersault, you gain a +2 circumstance bonus to your AC against the triggering attack. If the attack still hits you, you can (action: Step) to an open space that's still within the triggering enemy's reach, turning the impact of the blow into momentum." };
+            yield return new TextBlock { Id = Guid.Parse("79e3be7a-0929-4802-9786-6cc6409e096b"), Type = TextBlockType.Text, Text = $"~ Access: Member of the Pathfinder Society." };
+            yield return new TextBlock { Id = Guid.Parse("80d70be3-f76a-4f88-90f8-d294511fe240"), Type = TextBlockType.Text, Text = $"Surprisingly agile even in a breastplate and carrying a full rucksack, Marcos Farabellus developed this evasive maneuver during one of his many adventures. Flinging your body into a twisting somersault, you gain a +2 circumstance bonus to your AC against the triggering attack. If the attack still hits you, you can {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} to an open space that's still within the triggering enemy's reach, turning the impact of the blow into momentum." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

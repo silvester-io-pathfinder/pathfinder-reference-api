@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0cba1141-5441-4acd-9f98-821a67bc56ff"), Type = TextBlockType.Text, Text = "You are a xun for the Golden League, aiding the organization. You gain expert proficiency in two of the following skills (or in two other skills of your choice in which you're trained, if you were already an expert in the listed skills): Athletics, Deception, Intimidation, or Stealth. In addition, if you use Underworld Lore to (activity: Earn Income) or (action: Recall Knowledge), when you get a success, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("0cba1141-5441-4acd-9f98-821a67bc56ff"), Type = TextBlockType.Text, Text = $"You are a xun for the Golden League, aiding the organization. You gain expert proficiency in two of the following skills (or in two other skills of your choice in which you're trained, if you were already an expert in the listed skills): Athletics, Deception, Intimidation, or Stealth. In addition, if you use Underworld Lore to {ToMarkdownLink<Models.Entities.SkillAction>("Earn Income", SkillActions.Instances.EarnIncome.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)}, when you get a success, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

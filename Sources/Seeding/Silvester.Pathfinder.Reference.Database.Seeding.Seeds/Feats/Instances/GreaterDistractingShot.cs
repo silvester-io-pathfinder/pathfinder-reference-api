@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1b7e2b09-de00-4ba4-b638-a5212ba6f2e9"), Type = TextBlockType.Text, Text = "Even a single missile can throw off your enemy's balance, and more powerful attacks leave it flustered for longer. If you hit your hunted prey with a ranged weapon, it's flat-footed until the start of your next turn. If you critically hit your prey or hit it twice on the same turn with a ranged weapon, it's flat-footed until the end of your next turn instead." };
+            yield return new TextBlock { Id = Guid.Parse("1b7e2b09-de00-4ba4-b638-a5212ba6f2e9"), Type = TextBlockType.Text, Text = $"Even a single missile can throw off your enemy's balance, and more powerful attacks leave it flustered for longer. If you hit your hunted prey with a ranged weapon, it's flat-footed until the start of your next turn. If you critically hit your prey or hit it twice on the same turn with a ranged weapon, it's flat-footed until the end of your next turn instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

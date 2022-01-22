@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b1b9bc90-3214-4080-bb43-fd4e0633a458"), Type = TextBlockType.Text, Text = "You attempt to clear the room by promising a grim fate to anyone who doesn't do what you say, and quickly. Attempt a Deception or Intimidation check against the Will DCs of each creature within 30 feet, except for your allies. Regardless of whether you succeed or fail, each subject is temporarily immune to your Grim Swagger for 10 minutes." };
-            yield return new TextBlock { Id = Guid.Parse("840cde92-2280-453d-abd9-a31660300051"), Type = TextBlockType.Text, Text = "For example, if you attempt a Deception check, you lie and boast about your prowess or the large group of friends on their way to back you up. If you attempt an Intimidation check, you promise everyone in the room that you're going to be the last thing they see." };
+            yield return new TextBlock { Id = Guid.Parse("b1b9bc90-3214-4080-bb43-fd4e0633a458"), Type = TextBlockType.Text, Text = $"You attempt to clear the room by promising a grim fate to anyone who doesn't do what you say, and quickly. Attempt a Deception or Intimidation check against the Will DCs of each creature within 30 feet, except for your allies. Regardless of whether you succeed or fail, each subject is temporarily immune to your Grim Swagger for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("840cde92-2280-453d-abd9-a31660300051"), Type = TextBlockType.Text, Text = $"For example, if you attempt a Deception check, you lie and boast about your prowess or the large group of friends on their way to back you up. If you attempt an Intimidation check, you promise everyone in the room that you're going to be the last thing they see." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f82897aa-0de3-48fd-a8af-0bfc78d7d998"), Type = TextBlockType.Text, Text = "Your blade ally thirsts for the blood of your foes. Whenever you critically hit an enemy with the weapon inhabited by your blade ally while dealing extra damage from your champion's reaction, the target takes persistent bleed damage equal to two of the weapon's damage dice." };
+            yield return new TextBlock { Id = Guid.Parse("f82897aa-0de3-48fd-a8af-0bfc78d7d998"), Type = TextBlockType.Text, Text = $"Your blade ally thirsts for the blood of your foes. Whenever you critically hit an enemy with the weapon inhabited by your blade ally while dealing extra damage from your champion's reaction, the target takes persistent bleed damage equal to two of the weapon's damage dice." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

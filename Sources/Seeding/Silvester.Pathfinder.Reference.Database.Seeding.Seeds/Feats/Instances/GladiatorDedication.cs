@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9a00d674-645e-475b-b0fa-6287ba178a4a"), Type = TextBlockType.Text, Text = "You know how to turn combat into a form of entertainment. You become trained in Gladiatorial Lore; if already trained in Gladiatorial Lore, you instead become trained in another Lore skill of your choice." };
-            yield return new TextBlock { Id = Guid.Parse("828a6115-b7c4-4fbd-a259-3d2167d9edb5"), Type = TextBlockType.Text, Text = "At the start of a combat encounter, if you have spectators, you gain a number of temporary HP equal to your character level for 1 minute and you can roll Performance for your initiative." };
-            yield return new TextBlock { Id = Guid.Parse("ec0054f5-5331-450a-80df-7d2ec0406f53"), Type = TextBlockType.Text, Text = "If there are sapient creatures observing a combat encounter, and these onlookers are neither engaged in the combat themselves nor allied or affiliated with either side, the combatants have spectators. The GM is the final arbiter." };
+            yield return new TextBlock { Id = Guid.Parse("9a00d674-645e-475b-b0fa-6287ba178a4a"), Type = TextBlockType.Text, Text = $"You know how to turn combat into a form of entertainment. You become trained in Gladiatorial Lore; if already trained in Gladiatorial Lore, you instead become trained in another Lore skill of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("828a6115-b7c4-4fbd-a259-3d2167d9edb5"), Type = TextBlockType.Text, Text = $"At the start of a combat encounter, if you have spectators, you gain a number of temporary HP equal to your character level for 1 minute and you can roll Performance for your initiative." };
+            yield return new TextBlock { Id = Guid.Parse("ec0054f5-5331-450a-80df-7d2ec0406f53"), Type = TextBlockType.Text, Text = $"If there are sapient creatures observing a combat encounter, and these onlookers are neither engaged in the combat themselves nor allied or affiliated with either side, the combatants have spectators. The GM is the final arbiter." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

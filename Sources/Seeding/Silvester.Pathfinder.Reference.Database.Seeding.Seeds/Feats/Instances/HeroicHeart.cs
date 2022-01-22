@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9366eb8f-b3d2-430d-b37f-71a7e7e2d934"), Type = TextBlockType.Text, Text = "You gain a +1 status bonus to attack rolls, Perception checks, skill checks, and saves." };
-            yield return new TextBlock { Id = Guid.Parse("10a92901-cd30-4679-b774-988c26ed7da5"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ You take a –1 penalty to attack rolls." };
+            yield return new TextBlock { Id = Guid.Parse("9366eb8f-b3d2-430d-b37f-71a7e7e2d934"), Type = TextBlockType.Text, Text = $"You gain a +1 status bonus to attack rolls, Perception checks, skill checks, and saves." };
+            yield return new TextBlock { Id = Guid.Parse("10a92901-cd30-4679-b774-988c26ed7da5"), Type = TextBlockType.Text, Text = $"__Corruption Flaw__ You take a –1 penalty to attack rolls." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

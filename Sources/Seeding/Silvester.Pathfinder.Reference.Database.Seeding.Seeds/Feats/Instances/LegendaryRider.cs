@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("90c6965c-72e5-4872-936f-979bbd92b7c5"), Type = TextBlockType.Text, Text = "You and your mount move like one being, effortlessly reading each other's signals. Whenever you are riding your mount, you are quickened; you can use the extra action only to command your mount using the (action: Command an Animal) skill action." };
+            yield return new TextBlock { Id = Guid.Parse("90c6965c-72e5-4872-936f-979bbd92b7c5"), Type = TextBlockType.Text, Text = $"You and your mount move like one being, effortlessly reading each other's signals. Whenever you are riding your mount, you are quickened; you can use the extra action only to command your mount using the {ToMarkdownLink<Models.Entities.SkillAction>("Command an Animal", SkillActions.Instances.CommandAnAnimal.ID)} skill action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

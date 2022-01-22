@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7462c3b8-9b10-4420-b457-95f8f8522186"), Type = TextBlockType.Text, Text = "You slam into the ground, shattering it around you. Treat the fall as 10 feet shorter. You land on your feet. All adjacent spaces become difficult terrain, and creatures in those spaces when you land take 5 bludgeoning damage as the debris hits them and are flat-footed until the start of their next turn." };
+            yield return new TextBlock { Id = Guid.Parse("7462c3b8-9b10-4420-b457-95f8f8522186"), Type = TextBlockType.Text, Text = $"You slam into the ground, shattering it around you. Treat the fall as 10 feet shorter. You land on your feet. All adjacent spaces become difficult terrain, and creatures in those spaces when you land take 5 bludgeoning damage as the debris hits them and are flat-footed until the start of their next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

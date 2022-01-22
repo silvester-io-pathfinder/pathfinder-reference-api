@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b28597c-26d5-4099-8bcc-0a0b50dd6001"), Type = TextBlockType.Text, Text = "You make a ranged (action: Strike) with a thrown weapon you already have in your hand, (action: Stride), and then (action: Interact) to draw another weapon. If you are raging, you can add the additional damage with melee weapons you receive from raging to your damage with the thrown weapon." };
+            yield return new TextBlock { Id = Guid.Parse("0b28597c-26d5-4099-8bcc-0a0b50dd6001"), Type = TextBlockType.Text, Text = $"You make a ranged {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a thrown weapon you already have in your hand, {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}, and then {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw another weapon. If you are raging, you can add the additional damage with melee weapons you receive from raging to your damage with the thrown weapon." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

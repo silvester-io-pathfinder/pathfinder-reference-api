@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("60e12cd6-9826-4287-9c73-620b342992e3"), Type = TextBlockType.Text, Text = "Your peri lineage has opened your mind to fire's raw, purging essence. You can spend 1 minute in focused preparation, then enter a fire your size or larger to instantly teleport to any fire that is your size or larger up to 5 miles away. You take no damage from entering or exiting fires when using this ability. Once you enter the fire, you instantly know the rough locations of other large fires within range and can exit from the original fire, if you prefer. You can't carry (trait: extradimensional) spaces with you when you teleport; if you attempt to do so, the activity fails." };
+            yield return new TextBlock { Id = Guid.Parse("60e12cd6-9826-4287-9c73-620b342992e3"), Type = TextBlockType.Text, Text = $"Your peri lineage has opened your mind to fire's raw, purging essence. You can spend 1 minute in focused preparation, then enter a fire your size or larger to instantly teleport to any fire that is your size or larger up to 5 miles away. You take no damage from entering or exiting fires when using this ability. Once you enter the fire, you instantly know the rough locations of other large fires within range and can exit from the original fire, if you prefer. You can't carry {ToMarkdownLink<Models.Entities.Trait>("extradimensional", Traits.Instances.Extradimensional.ID)} spaces with you when you teleport; if you attempt to do so, the activity fails." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

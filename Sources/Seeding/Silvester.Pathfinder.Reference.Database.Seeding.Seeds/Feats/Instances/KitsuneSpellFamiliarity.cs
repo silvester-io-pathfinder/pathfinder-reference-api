@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0cd9d3a9-6156-4629-9c57-249c544ffb8b"), Type = TextBlockType.Text, Text = "You've picked up a few magical tricks. During your daily preparations, choose (spell: daze), (spell: forbidding ward), or (spell: ghost sound). Until your next daily preparations, you can cast this cantrip as a divine innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("0cd9d3a9-6156-4629-9c57-249c544ffb8b"), Type = TextBlockType.Text, Text = $"You've picked up a few magical tricks. During your daily preparations, choose {ToMarkdownLink<Models.Entities.Spell>("daze", Spells.Instances.Daze.ID)}, {ToMarkdownLink<Models.Entities.Spell>("forbidding ward", Spells.Instances.ForbiddingWard.ID)}, or {ToMarkdownLink<Models.Entities.Spell>("ghost sound", Spells.Instances.GhostSound.ID)}. Until your next daily preparations, you can cast this cantrip as a divine innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

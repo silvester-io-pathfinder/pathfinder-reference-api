@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81ebeced-369d-4325-9cbe-e51018288c7e"), Type = TextBlockType.Text, Text = "Make two unarmed (action: Strikes | Strike). If both hit the same creature, combine their damage for the purpose of resistances and weaknesses. Apply your multiple attack penalty to the (action: Strikes | Strike) normally. As it has the (trait: flourish) trait, you can use Flurry of Blows only once per turn." };
+            yield return new TextBlock { Id = Guid.Parse("81ebeced-369d-4325-9cbe-e51018288c7e"), Type = TextBlockType.Text, Text = $"Make two unarmed {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}. If both hit the same creature, combine their damage for the purpose of resistances and weaknesses. Apply your multiple attack penalty to the {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} normally. As it has the {ToMarkdownLink<Models.Entities.Trait>("flourish", Traits.Instances.Flourish.ID)} trait, you can use Flurry of Blows only once per turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

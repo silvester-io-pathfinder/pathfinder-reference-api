@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("856966fc-1861-4502-82ec-03cf23a72a92"), Type = TextBlockType.Text, Text = "You are adept at foiling creatures' special senses and cautious enough to safeguard against them at all times. Whenever you use the (Activity: Avoid Notice), (Action: Hide), or (Action: Sneak) actions, you are always considered to be taking precautions against special senses (see the Detecting with Other Senses sidebar on page 465)." };
+            yield return new TextBlock { Id = Guid.Parse("856966fc-1861-4502-82ec-03cf23a72a92"), Type = TextBlockType.Text, Text = $"You are adept at foiling creatures' special senses and cautious enough to safeguard against them at all times. Whenever you use the {ToMarkdownLink<Models.Entities.Activity>("Avoid Notice", Activities.Instances.AvoidNotice.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} actions, you are always considered to be taking precautions against special senses (see the Detecting with Other Senses sidebar on page 465)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6b66104a-1944-4f21-b110-e6abafc03c51"), Type = TextBlockType.Text, Text = "You broaden your magical studies, allowing you to find the right path, detect objects, and conceal those objects from unscrupulous rivals. You can cast (spell: augury), (spell: locate), and (spell: nondetection) as occult innate spells, each once per day. You can cast this (spell: nondetection) spell only on an object, and it is automatically heightened to the same spell level as your cantrips from (feat: Magical Scholastics)." };
+            yield return new TextBlock { Id = Guid.Parse("6b66104a-1944-4f21-b110-e6abafc03c51"), Type = TextBlockType.Text, Text = $"You broaden your magical studies, allowing you to find the right path, detect objects, and conceal those objects from unscrupulous rivals. You can cast {ToMarkdownLink<Models.Entities.Spell>("augury", Spells.Instances.Augury.ID)}, {ToMarkdownLink<Models.Entities.Spell>("locate", Spells.Instances.Locate.ID)}, and {ToMarkdownLink<Models.Entities.Spell>("nondetection", Spells.Instances.Nondetection.ID)} as occult innate spells, each once per day. You can cast this {ToMarkdownLink<Models.Entities.Spell>("nondetection", Spells.Instances.Nondetection.ID)} spell only on an object, and it is automatically heightened to the same spell level as your cantrips from {ToMarkdownLink<Models.Entities.Feat>("Magical Scholastics", Feats.Instances.MagicalScholastics.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

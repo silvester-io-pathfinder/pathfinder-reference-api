@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("77b09885-12e2-4483-9c98-22c9e097239c"), Type = TextBlockType.Text, Text = "You listened carefully to the tales passed down among your community. You gain the trained proficiency rank in Nature and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Iruxi Lore." };
+            yield return new TextBlock { Id = Guid.Parse("77b09885-12e2-4483-9c98-22c9e097239c"), Type = TextBlockType.Text, Text = $"You listened carefully to the tales passed down among your community. You gain the trained proficiency rank in Nature and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Iruxi Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

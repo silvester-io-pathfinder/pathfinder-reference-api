@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("35374ff7-5152-4f5d-9d75-9e4365c0951e"), Type = TextBlockType.Text, Text = "You gain more powerful spell runes. You gain a spell rune corresponding to a 4th-level arcane spell. At 12th level, you gain a spell rune corresponding to a 5th-level arcane spell, and at 14th level, you gain a spell rune corresponding to a 6th-level arcane spell." };
+            yield return new TextBlock { Id = Guid.Parse("35374ff7-5152-4f5d-9d75-9e4365c0951e"), Type = TextBlockType.Text, Text = $"You gain more powerful spell runes. You gain a spell rune corresponding to a 4th-level arcane spell. At 12th level, you gain a spell rune corresponding to a 5th-level arcane spell, and at 14th level, you gain a spell rune corresponding to a 6th-level arcane spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

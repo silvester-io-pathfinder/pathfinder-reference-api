@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4de8b937-8881-4f58-b88c-f7c0512b1ab2"), Type = TextBlockType.Text, Text = "Your nanites reject diseases with ease. Each time you succeed at a Fortitude save against an ongoing disease, you reduce its stage by 2, or by 1 against a (trait: virulent) disease. Each critical success you achieve against an ongoing disease reduces its stage by 3, or by 2 against a (trait: virulent) disease." };
+            yield return new TextBlock { Id = Guid.Parse("4de8b937-8881-4f58-b88c-f7c0512b1ab2"), Type = TextBlockType.Text, Text = $"Your nanites reject diseases with ease. Each time you succeed at a Fortitude save against an ongoing disease, you reduce its stage by 2, or by 1 against a {ToMarkdownLink<Models.Entities.Trait>("virulent", Traits.Instances.Virulent.ID)} disease. Each critical success you achieve against an ongoing disease reduces its stage by 3, or by 2 against a {ToMarkdownLink<Models.Entities.Trait>("virulent", Traits.Instances.Virulent.ID)} disease." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

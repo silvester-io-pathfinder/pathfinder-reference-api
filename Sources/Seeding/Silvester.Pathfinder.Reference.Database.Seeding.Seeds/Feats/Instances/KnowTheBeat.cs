@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("30f307f1-6b98-45e4-bd2b-d70cd8fbd0ee"), Type = TextBlockType.Text, Text = "You become trained in your choice of Guild Lore, Legal Lore, Mercantile Lore, or Underworld Lore. You gain a +1 circumstance bonus to Diplomacy checks to (action: Gather Information) and to checks made to investigate crimes." };
+            yield return new TextBlock { Id = Guid.Parse("30f307f1-6b98-45e4-bd2b-d70cd8fbd0ee"), Type = TextBlockType.Text, Text = $"You become trained in your choice of Guild Lore, Legal Lore, Mercantile Lore, or Underworld Lore. You gain a +1 circumstance bonus to Diplomacy checks to {ToMarkdownLink<Models.Entities.SkillAction>("Gather Information", SkillActions.Instances.GatherInformation.ID)} and to checks made to investigate crimes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4eb2bd8a-c25c-4ccf-893a-a97bb3c37e68"), Type = TextBlockType.Text, Text = "You caw ominously, cursing the creature with misfortune. The target creature must roll the triggering check twice and take the lower result." };
+            yield return new TextBlock { Id = Guid.Parse("4eb2bd8a-c25c-4ccf-893a-a97bb3c37e68"), Type = TextBlockType.Text, Text = $"You caw ominously, cursing the creature with misfortune. The target creature must roll the triggering check twice and take the lower result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

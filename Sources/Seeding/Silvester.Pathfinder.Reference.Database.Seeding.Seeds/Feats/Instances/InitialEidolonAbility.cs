@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("160c7673-9cf8-40f2-93f4-0ae703aeec6f"), Type = TextBlockType.Text, Text = "Your link to your eidolon becomes stronger, granting it a new ability. Your eidolon gains the initial ability for an eidolon of its type." };
+            yield return new TextBlock { Id = Guid.Parse("160c7673-9cf8-40f2-93f4-0ae703aeec6f"), Type = TextBlockType.Text, Text = $"Your link to your eidolon becomes stronger, granting it a new ability. Your eidolon gains the initial ability for an eidolon of its type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

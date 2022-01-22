@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cc1033ab-bcc8-4157-81af-b3ee5458b13a"), Type = TextBlockType.Text, Text = "Your fangs are exceptionally painful. Whenever you score a critical hit with your fangs unarmed attack, you apply the unarmed attack's critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("cc1033ab-bcc8-4157-81af-b3ee5458b13a"), Type = TextBlockType.Text, Text = $"Your fangs are exceptionally painful. Whenever you score a critical hit with your fangs unarmed attack, you apply the unarmed attack's critical specialization effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

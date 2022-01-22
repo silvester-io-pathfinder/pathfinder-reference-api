@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9c4789c-eff1-4234-aa0b-a20ac458444a"), Type = TextBlockType.Text, Text = "When you critically succeed to (action: Create a Diversion), you continue to remain hidden after the end of your turn. This effect lasts for an amount of time that depends on the diversion and situation, as determined by the GM (minimum 1 additional round)." };
+            yield return new TextBlock { Id = Guid.Parse("b9c4789c-eff1-4234-aa0b-a20ac458444a"), Type = TextBlockType.Text, Text = $"When you critically succeed to {ToMarkdownLink<Models.Entities.SkillAction>("Create a Diversion", SkillActions.Instances.CreateADiversion.ID)}, you continue to remain hidden after the end of your turn. This effect lasts for an amount of time that depends on the diversion and situation, as determined by the GM (minimum 1 additional round)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

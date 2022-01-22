@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("12a12fbb-8559-40fd-84eb-9ceb966e7946"), Type = TextBlockType.Text, Text = "Over time your fey magic has grown stronger. You gain (spell: faerie fire) and (spell: invisibility) as 2nd-level primal innate spells. You can cast each of these primal innate spells once per day." };
+            yield return new TextBlock { Id = Guid.Parse("12a12fbb-8559-40fd-84eb-9ceb966e7946"), Type = TextBlockType.Text, Text = $"Over time your fey magic has grown stronger. You gain {ToMarkdownLink<Models.Entities.Spell>("faerie fire", Spells.Instances.FaerieFire.ID)} and {ToMarkdownLink<Models.Entities.Spell>("invisibility", Spells.Instances.Invisibility.ID)} as 2nd-level primal innate spells. You can cast each of these primal innate spells once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

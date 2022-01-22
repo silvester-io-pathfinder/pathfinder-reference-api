@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1f5b3b8f-9279-4c1c-ab46-11aa8fbe3820"), Type = TextBlockType.Text, Text = "Part of your body has an obvious, fiendish appearance. Your hands end in razor-sharp claws." };
-            yield return new TextBlock { Id = Guid.Parse("c7332cc9-aaa8-40fe-961e-c4ef08cfb33c"), Type = TextBlockType.Enumeration, Text = " Claw: 1d4 slashing ((trait: agile), (trait: finesse), (trait: unarmed), (trait: versatile piercing | versatile p))" };
+            yield return new TextBlock { Id = Guid.Parse("1f5b3b8f-9279-4c1c-ab46-11aa8fbe3820"), Type = TextBlockType.Text, Text = $"Part of your body has an obvious, fiendish appearance. Your hands end in razor-sharp claws." };
+            yield return new TextBlock { Id = Guid.Parse("c7332cc9-aaa8-40fe-961e-c4ef08cfb33c"), Type = TextBlockType.Enumeration, Text = $" Claw: 1d4 slashing ({ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)}, {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)}, {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)}, {ToMarkdownLink<Models.Entities.Trait>("versatile piercing", Traits.Instances.Versatile.ID)})" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

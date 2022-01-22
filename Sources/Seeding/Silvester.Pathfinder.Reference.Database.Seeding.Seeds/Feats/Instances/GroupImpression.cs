@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("395cca72-530f-490e-95de-51892357049b"), Type = TextBlockType.Text, Text = "When you (action: Make an Impression), you can compare your Diplomacy check result to the Will DCs of two targets instead of one. It's possible to get a different degree of success for each target. The number of targets increases to four if you're an expert, 10 if you're a master, and 25 if you're legendary." };
+            yield return new TextBlock { Id = Guid.Parse("395cca72-530f-490e-95de-51892357049b"), Type = TextBlockType.Text, Text = $"When you {ToMarkdownLink<Models.Entities.SkillAction>("Make an Impression", SkillActions.Instances.MakeAnImpression.ID)}, you can compare your Diplomacy check result to the Will DCs of two targets instead of one. It's possible to get a different degree of success for each target. The number of targets increases to four if you're an expert, 10 if you're a master, and 25 if you're legendary." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

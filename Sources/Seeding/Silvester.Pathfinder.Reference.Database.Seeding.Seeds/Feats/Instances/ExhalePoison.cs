@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3d902ac8-2662-44e8-a89a-d378e05b5382"), Type = TextBlockType.Text, Text = "You sharply exhale the poison that previously surrounded you in a 15-foot cone. Creatures in the area are affected by the poison; the poison's DC and effects are unchanged." };
+            yield return new TextBlock { Id = Guid.Parse("3d902ac8-2662-44e8-a89a-d378e05b5382"), Type = TextBlockType.Text, Text = $"You sharply exhale the poison that previously surrounded you in a 15-foot cone. Creatures in the area are affected by the poison; the poison's DC and effects are unchanged." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

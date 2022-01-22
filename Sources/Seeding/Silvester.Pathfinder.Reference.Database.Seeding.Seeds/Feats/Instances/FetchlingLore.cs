@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0fd7be51-53ec-4c11-b7af-cade7ff0b855"), Type = TextBlockType.Text, Text = "You've learned obscure lessons about your fellow fetchlings. You're trained in Occultism and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Shadow Plane Lore." };
+            yield return new TextBlock { Id = Guid.Parse("0fd7be51-53ec-4c11-b7af-cade7ff0b855"), Type = TextBlockType.Text, Text = $"You've learned obscure lessons about your fellow fetchlings. You're trained in Occultism and Stealth. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Shadow Plane Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

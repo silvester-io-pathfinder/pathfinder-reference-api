@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("66fdc094-72fe-42c4-b951-535b536fe1b0"), Type = TextBlockType.Text, Text = "Thanks to your continual tinkering, your construct companion has advanced to an astounding new stage of engineering, enhancing all its attributes. Your construct companion becomes an incredible construct companion." };
+            yield return new TextBlock { Id = Guid.Parse("66fdc094-72fe-42c4-b951-535b536fe1b0"), Type = TextBlockType.Text, Text = $"Thanks to your continual tinkering, your construct companion has advanced to an astounding new stage of engineering, enhancing all its attributes. Your construct companion becomes an incredible construct companion." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2416e1d4-895b-4558-aa58-d78ab79dc4cd"), Type = TextBlockType.Text, Text = "Your polite manners and natural ability to comfort others make it easy for you to break down cultural barriers and earn strangers' trust. While you are in a settlement, when you roll a critical failure on a Diplomacy check to (Action: Gather Information) or (Action: Make an Impression), you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("2416e1d4-895b-4558-aa58-d78ab79dc4cd"), Type = TextBlockType.Text, Text = $"Your polite manners and natural ability to comfort others make it easy for you to break down cultural barriers and earn strangers' trust. While you are in a settlement, when you roll a critical failure on a Diplomacy check to {ToMarkdownLink<Models.Entities.SkillAction>("Gather Information", SkillActions.Instances.GatherInformation.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Make an Impression", SkillActions.Instances.MakeAnImpression.ID)}, you get a failure instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

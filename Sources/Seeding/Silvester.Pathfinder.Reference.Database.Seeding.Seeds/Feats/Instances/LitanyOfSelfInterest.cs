@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d32bd14a-81f4-4cac-823b-ef5c6fb93c7e"), Type = TextBlockType.Text, Text = "You compel a creature to act toward its own ends rather than consider others. You can cast the (spell: litany of self-interest) devotion spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("d32bd14a-81f4-4cac-823b-ef5c6fb93c7e"), Type = TextBlockType.Text, Text = $"You compel a creature to act toward its own ends rather than consider others. You can cast the {ToMarkdownLink<Models.Entities.Spell>("litany of self-interest", Spells.Instances.LitanyOfSelfInterest.ID)} devotion spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

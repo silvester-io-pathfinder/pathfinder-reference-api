@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a875939e-707b-4df2-bf2c-28aed63871dd"), Type = TextBlockType.Text, Text = "Your animating magic provides some defense. Choose one of the following energy damage types: cold, electricity, or sonic. You gain resistance 5 to that damage type." };
-            yield return new TextBlock { Id = Guid.Parse("646300e3-3dd2-426d-9fe1-b909e42de892"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("98962f14-21f5-43a2-a9fe-11d6b8fe50ed"), Type = TextBlockType.Text, Text = "~ Enhancement: You tap deeper into your animating magic, and your resistances improve. Choose one of the following benefits: you gain resistance 5 to the remaining two damage types from the above list, or your chosen resistance increases to a value equal to 1 + half your level." };
+            yield return new TextBlock { Id = Guid.Parse("a875939e-707b-4df2-bf2c-28aed63871dd"), Type = TextBlockType.Text, Text = $"Your animating magic provides some defense. Choose one of the following energy damage types: cold, electricity, or sonic. You gain resistance 5 to that damage type." };
+            yield return new TextBlock { Id = Guid.Parse("646300e3-3dd2-426d-9fe1-b909e42de892"), Type = TextBlockType.Text, Text = $"----" };
+            yield return new TextBlock { Id = Guid.Parse("98962f14-21f5-43a2-a9fe-11d6b8fe50ed"), Type = TextBlockType.Text, Text = $"~ Enhancement: You tap deeper into your animating magic, and your resistances improve. Choose one of the following benefits: you gain resistance 5 to the remaining two damage types from the above list, or your chosen resistance increases to a value equal to 1 + half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

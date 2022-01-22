@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("39467fdc-462f-455c-b9af-acba62468f24"), Type = TextBlockType.Text, Text = "You know the wilderness so well that you can help your party travel through it with ease. When you are setting the path for your party through wilderness terrain, your party gains a +10-foot circumstance bonus to its Speed for the purpose of calculating the party's travel speed, your party's travel speed doesn't decrease in difficult terrain, and greater difficult terrain halves your party's travel speed instead of reducing it to a third. This doesn't increase your party's Speed during an encounter or allow your party to ignore difficult terrain during an encounter." };
+            yield return new TextBlock { Id = Guid.Parse("39467fdc-462f-455c-b9af-acba62468f24"), Type = TextBlockType.Text, Text = $"You know the wilderness so well that you can help your party travel through it with ease. When you are setting the path for your party through wilderness terrain, your party gains a +10-foot circumstance bonus to its Speed for the purpose of calculating the party's travel speed, your party's travel speed doesn't decrease in difficult terrain, and greater difficult terrain halves your party's travel speed instead of reducing it to a third. This doesn't increase your party's Speed during an encounter or allow your party to ignore difficult terrain during an encounter." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("340704c5-58a3-4fda-a748-4f1fdf06e9e4"), Type = TextBlockType.Text, Text = "You tap into the collected lore of the divine, accessing a variety of potentially useful information. Attempt a Religion check to understand the information you gain. The GM sets the DC (similar to the DC to (action: Recall Knowledge)), potentially adjusting the DC of the check for topics far removed from your mystery." };
+            yield return new TextBlock { Id = Guid.Parse("340704c5-58a3-4fda-a748-4f1fdf06e9e4"), Type = TextBlockType.Text, Text = $"You tap into the collected lore of the divine, accessing a variety of potentially useful information. Attempt a Religion check to understand the information you gain. The GM sets the DC (similar to the DC to {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)}), potentially adjusting the DC of the check for topics far removed from your mystery." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ce0c32bf-52b6-4aef-ae0e-b7799ad18c2f"), Type = TextBlockType.Text, Text = "You have sworn the Crimson Oath and become a full member of the Crimson Reclaimers. You gain expert proficiency in Stealth and Survival. Whenever you roll a success on a saving throw against an undead's special ability, you get a critical success instead. This applies to any abilities that come from being undead, including an undead's innate spells (but not its prepared or spontaneous spells)." };
+            yield return new TextBlock { Id = Guid.Parse("ce0c32bf-52b6-4aef-ae0e-b7799ad18c2f"), Type = TextBlockType.Text, Text = $"You have sworn the Crimson Oath and become a full member of the Crimson Reclaimers. You gain expert proficiency in Stealth and Survival. Whenever you roll a success on a saving throw against an undead's special ability, you get a critical success instead. This applies to any abilities that come from being undead, including an undead's innate spells (but not its prepared or spontaneous spells)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

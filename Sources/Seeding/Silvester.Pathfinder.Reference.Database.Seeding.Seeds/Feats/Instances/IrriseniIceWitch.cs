@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5cb324aa-9d92-40e0-a658-4a0c37e64751"), Type = TextBlockType.Text, Text = "~ Access: Jadwiga ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("418c7126-11c1-4701-ae6e-0580ad2a040c"), Type = TextBlockType.Text, Text = "You can trace your direct descent from one of the Queens of Irrisen and thus from Baba Yaga herself. Your resistance to cold increases to 5 + half your level, and you can cast 5th-level (spell: wall of ice) as an innate arcane spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("5cb324aa-9d92-40e0-a658-4a0c37e64751"), Type = TextBlockType.Text, Text = $"~ Access: Jadwiga ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("418c7126-11c1-4701-ae6e-0580ad2a040c"), Type = TextBlockType.Text, Text = $"You can trace your direct descent from one of the Queens of Irrisen and thus from Baba Yaga herself. Your resistance to cold increases to 5 + half your level, and you can cast 5th-level {ToMarkdownLink<Models.Entities.Spell>("wall of ice", Spells.Instances.WallOfIce.ID)} as an innate arcane spell once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

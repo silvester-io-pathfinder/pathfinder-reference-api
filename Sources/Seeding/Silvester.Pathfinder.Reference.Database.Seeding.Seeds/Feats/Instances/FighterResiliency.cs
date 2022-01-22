@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bb17a895-5021-4ab8-ab0e-a458fd6013eb"), Type = TextBlockType.Text, Text = "You gain 3 additional Hit Points for each fighter archetype class feat you have. As you continue selecting fighter archetype class feats, you continue to gain additional Hit Points in this way." };
+            yield return new TextBlock { Id = Guid.Parse("bb17a895-5021-4ab8-ab0e-a458fd6013eb"), Type = TextBlockType.Text, Text = $"You gain 3 additional Hit Points for each fighter archetype class feat you have. As you continue selecting fighter archetype class feats, you continue to gain additional Hit Points in this way." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

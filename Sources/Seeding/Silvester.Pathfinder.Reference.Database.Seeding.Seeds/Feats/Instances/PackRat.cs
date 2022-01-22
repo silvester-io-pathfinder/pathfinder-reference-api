@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e698660e-1f19-4b91-85e0-4e7bc34a8e8a"), Type = TextBlockType.Text, Text = "Years of packing for travel have taught you how to cram vast quantities into small spaces. You can fit an additional 50% of the listed Bulk capacity into mundane storage containers or vehicles. For example, you can fit 6 Bulk in a (item: backpack), or 12 Bulk in a (item: chest | wooden chest). This doesn't alter the items' Bulk, nor does it change how much you can store in a (trait: magical) or (trait: extradimensional) storage space, such as a (item: bag of holding | Bag of Holding I)." };
+            yield return new TextBlock { Id = Guid.Parse("e698660e-1f19-4b91-85e0-4e7bc34a8e8a"), Type = TextBlockType.Text, Text = "Years of packing for travel have taught you how to cram vast quantities into small spaces. You can fit an additional 50% of the listed Bulk capacity into mundane storage containers or vehicles. For example, you can fit 6 Bulk in a (item: backpack), or 12 Bulk in a (item: chest | wooden chest). This doesn't alter the items' Bulk, nor does it change how much you can store in a (trait: magical) or (trait: extradimensional) storage space, such as a (item: bag of holding | Bag of Holding)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

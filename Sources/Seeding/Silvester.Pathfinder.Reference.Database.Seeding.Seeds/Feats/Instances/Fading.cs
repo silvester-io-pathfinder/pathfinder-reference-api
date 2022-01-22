@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ccfcdf7f-7c0b-4ecc-aa3f-dbed315ab6ed"), Type = TextBlockType.Text, Text = "You fade partially from reality. The attacker must attempt a DC 11 flat check; on a failure, the attack passes harmlessly through the image of your body that remains behind. An instant later you return to reality, and your (feat: Crimson Shroud) ends." };
+            yield return new TextBlock { Id = Guid.Parse("ccfcdf7f-7c0b-4ecc-aa3f-dbed315ab6ed"), Type = TextBlockType.Text, Text = $"You fade partially from reality. The attacker must attempt a DC 11 flat check; on a failure, the attack passes harmlessly through the image of your body that remains behind. An instant later you return to reality, and your {ToMarkdownLink<Models.Entities.Feat>("Crimson Shroud", Feats.Instances.CrimsonShroud.ID)} ends." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

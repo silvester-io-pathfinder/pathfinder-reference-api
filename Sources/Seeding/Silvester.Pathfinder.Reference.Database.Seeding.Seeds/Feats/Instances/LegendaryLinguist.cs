@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("70963df6-33e5-45ee-89ff-4e881850c859"), Type = TextBlockType.Text, Text = "You're so skilled with languages you can create a pidgin instantly. You can always talk to any creature that has a language – even a language you don't know – by creating a new pidgin language that uses simplified terms and conveys basic concepts. To do so, you must first understand at least what medium of communication the creature uses (speech, sign language, and so on)." };
+            yield return new TextBlock { Id = Guid.Parse("70963df6-33e5-45ee-89ff-4e881850c859"), Type = TextBlockType.Text, Text = $"You're so skilled with languages you can create a pidgin instantly. You can always talk to any creature that has a language – even a language you don't know – by creating a new pidgin language that uses simplified terms and conveys basic concepts. To do so, you must first understand at least what medium of communication the creature uses (speech, sign language, and so on)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

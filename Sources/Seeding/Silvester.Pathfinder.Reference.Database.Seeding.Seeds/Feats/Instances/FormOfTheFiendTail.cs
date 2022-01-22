@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("44595d3a-886b-4779-9d57-24bde27ed36f"), Type = TextBlockType.Text, Text = "Part of your body has an obvious, fiendish appearance. A whipping tail extends from your spine." };
-            yield return new TextBlock { Id = Guid.Parse("d88ec2c5-9de0-42cb-83de-24ed6590aa8f"), Type = TextBlockType.Enumeration, Text = " Tail: 1d4 bludgeoning ((trait: agile), (trait: finesse), (trait: unarmed))" };
+            yield return new TextBlock { Id = Guid.Parse("44595d3a-886b-4779-9d57-24bde27ed36f"), Type = TextBlockType.Text, Text = $"Part of your body has an obvious, fiendish appearance. A whipping tail extends from your spine." };
+            yield return new TextBlock { Id = Guid.Parse("d88ec2c5-9de0-42cb-83de-24ed6590aa8f"), Type = TextBlockType.Enumeration, Text = $" Tail: 1d4 bludgeoning ({ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)}, {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)}, {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)})" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

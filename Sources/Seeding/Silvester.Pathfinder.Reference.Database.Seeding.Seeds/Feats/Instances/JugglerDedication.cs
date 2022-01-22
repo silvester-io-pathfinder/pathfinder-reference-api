@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a8198d00-2073-4eca-be20-b7a42dd2f1b2"), Type = TextBlockType.Text, Text = "You become trained in Performance; if you were already trained in Performance, you instead become trained in a skill of your choice. You also gain the (feat: Juggle) skill feat, even if you don't meet its prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("a8198d00-2073-4eca-be20-b7a42dd2f1b2"), Type = TextBlockType.Text, Text = $"You become trained in Performance; if you were already trained in Performance, you instead become trained in a skill of your choice. You also gain the {ToMarkdownLink<Models.Entities.Feat>("Juggle", Feats.Instances.Juggle.ID)} skill feat, even if you don't meet its prerequisites." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

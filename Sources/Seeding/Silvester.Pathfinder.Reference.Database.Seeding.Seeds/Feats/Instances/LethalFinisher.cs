@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("07ae91b2-b63f-4866-bd6f-d0a6c37d50fb"), Type = TextBlockType.Text, Text = "You stab your foe in a vital organ, possibly killing them outright. Make a (action: Strike). On a success, you forego your precise strike damage from the finisher. Instead, your target takes additional precision damage based on a Fortitude save against your class DC. If your (action: Strike) was a critical hit, the target's saving throw outcome is one degree worse." };
+            yield return new TextBlock { Id = Guid.Parse("07ae91b2-b63f-4866-bd6f-d0a6c37d50fb"), Type = TextBlockType.Text, Text = $"You stab your foe in a vital organ, possibly killing them outright. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. On a success, you forego your precise strike damage from the finisher. Instead, your target takes additional precision damage based on a Fortitude save against your class DC. If your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} was a critical hit, the target's saving throw outcome is one degree worse." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

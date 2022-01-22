@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("12d5b65a-45cf-4473-b33f-a010d8f617ff"), Type = TextBlockType.Text, Text = "You can see through the haze of flame. You automatically succeed at the flat check to target a concealed creature if that creature is concealed only by smoke and fire." };
+            yield return new TextBlock { Id = Guid.Parse("12d5b65a-45cf-4473-b33f-a010d8f617ff"), Type = TextBlockType.Text, Text = $"You can see through the haze of flame. You automatically succeed at the flat check to target a concealed creature if that creature is concealed only by smoke and fire." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

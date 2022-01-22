@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04cd76d9-f241-4b92-aadd-cab8dff129f7"), Type = TextBlockType.Text, Text = "Your eidolon evolves to cast spells. It gains the (action: Cast a Spell) activity and learns two cantrips of its tradition, which it can cast as innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("04cd76d9-f241-4b92-aadd-cab8dff129f7"), Type = TextBlockType.Text, Text = $"Your eidolon evolves to cast spells. It gains the {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)} activity and learns two cantrips of its tradition, which it can cast as innate spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

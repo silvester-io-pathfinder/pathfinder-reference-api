@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ebac0548-57b3-4fd7-b17d-98fd73d42e90"), Type = TextBlockType.Text, Text = "You can cast (spell: water walk) once per day as a 4th-level occult innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("ebac0548-57b3-4fd7-b17d-98fd73d42e90"), Type = TextBlockType.Text, Text = $"You can cast {ToMarkdownLink<Models.Entities.Spell>("water walk", Spells.Instances.WaterWalk.ID)} once per day as a 4th-level occult innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("268ecfb5-7939-4fb6-9e10-113f3c04c826"), Type = TextBlockType.Text, Text = "You know more kitsune magic. During your daily preparations, choose (spell: bane), (spell: illusory object), or (spell: sanctuary). You can cast this as a 1st-level divine innate spell once that day." };
+            yield return new TextBlock { Id = Guid.Parse("268ecfb5-7939-4fb6-9e10-113f3c04c826"), Type = TextBlockType.Text, Text = $"You know more kitsune magic. During your daily preparations, choose {ToMarkdownLink<Models.Entities.Spell>("bane", Spells.Instances.Bane.ID)}, {ToMarkdownLink<Models.Entities.Spell>("illusory object", Spells.Instances.IllusoryObject.ID)}, or {ToMarkdownLink<Models.Entities.Spell>("sanctuary", Spells.Instances.Sanctuary.ID)}. You can cast this as a 1st-level divine innate spell once that day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

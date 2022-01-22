@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e9a3950-8ddb-4387-a6ee-b63a3bd221cb"), Type = TextBlockType.Text, Text = "~ Lesson Type: Basic" };
-            yield return new TextBlock { Id = Guid.Parse("393f774e-7e58-4394-a32b-98d286d3f7e9"), Type = TextBlockType.Text, Text = "You gain the (spell: blood ward) hex, and your familiar learns (spell: mage armor)." };
+            yield return new TextBlock { Id = Guid.Parse("3e9a3950-8ddb-4387-a6ee-b63a3bd221cb"), Type = TextBlockType.Text, Text = $"~ Lesson Type: Basic" };
+            yield return new TextBlock { Id = Guid.Parse("393f774e-7e58-4394-a32b-98d286d3f7e9"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Spell>("blood ward", Spells.Instances.BloodWard.ID)} hex, and your familiar learns {ToMarkdownLink<Models.Entities.Spell>("mage armor", Spells.Instances.MageArmor.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

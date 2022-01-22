@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ca0f1e6-3e0f-4903-8921-c7a26aee704a"), Type = TextBlockType.Text, Text = "You've learned to hide the magical auras of your gear. During your daily preparations, you carefully tweak any or all of your magic items to appear non-magical. Objects adjusted in this way remain so until your next preparations. A spellcaster using (spell: detect magic) or (spell: read aura) must succeed at a Perception check against your Deception DC to see through your obfuscations." };
+            yield return new TextBlock { Id = Guid.Parse("3ca0f1e6-3e0f-4903-8921-c7a26aee704a"), Type = TextBlockType.Text, Text = $"You've learned to hide the magical auras of your gear. During your daily preparations, you carefully tweak any or all of your magic items to appear non-magical. Objects adjusted in this way remain so until your next preparations. A spellcaster using {ToMarkdownLink<Models.Entities.Spell>("detect magic", Spells.Instances.DetectMagic.ID)} or {ToMarkdownLink<Models.Entities.Spell>("read aura", Spells.Instances.ReadAura.ID)} must succeed at a Perception check against your Deception DC to see through your obfuscations." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

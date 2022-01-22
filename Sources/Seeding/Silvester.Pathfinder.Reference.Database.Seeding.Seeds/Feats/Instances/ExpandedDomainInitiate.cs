@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f102d9e2-c342-424d-acb6-fff061176628"), Type = TextBlockType.Text, Text = "You have long venerated one of your deity's lesser-known aspects. Select one domain from your deity's alternate domains. You gain access to that domain and an initial domain spell for that domain." };
+            yield return new TextBlock { Id = Guid.Parse("f102d9e2-c342-424d-acb6-fff061176628"), Type = TextBlockType.Text, Text = $"You have long venerated one of your deity's lesser-known aspects. Select one domain from your deity's alternate domains. You gain access to that domain and an initial domain spell for that domain." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

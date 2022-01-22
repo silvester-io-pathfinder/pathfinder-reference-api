@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec0767e8-342e-4e45-97d8-8f81ad8e1070"), Type = TextBlockType.Text, Text = "Illusion magic comes to you so naturally that you can effortlessly sustain your magical ruses. You immediately gain the effects of a (action: Sustain a Spell) action to extend the duration of one of your active illusion spells." };
+            yield return new TextBlock { Id = Guid.Parse("ec0767e8-342e-4e45-97d8-8f81ad8e1070"), Type = TextBlockType.Text, Text = $"Illusion magic comes to you so naturally that you can effortlessly sustain your magical ruses. You immediately gain the effects of a {ToMarkdownLink<Models.Entities.Action>("Sustain a Spell", Actions.Instances.SustainASpell.ID)} action to extend the duration of one of your active illusion spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

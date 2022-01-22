@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("56930a49-70db-4cc9-b4f6-61b700d7edb3"), Type = TextBlockType.Text, Text = "You were raised by a tiefling or a fiendish relative, or you've devoted yourself to researching the secrets of the fiendish realms. You gain the trained proficiency rank in Intimidation and Religion. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in a Lore skill related to the fiendish plane from which you trace your lineage (usually Abaddon Lore, Abyss Lore, or Hell Lore)." };
+            yield return new TextBlock { Id = Guid.Parse("56930a49-70db-4cc9-b4f6-61b700d7edb3"), Type = TextBlockType.Text, Text = $"You were raised by a tiefling or a fiendish relative, or you've devoted yourself to researching the secrets of the fiendish realms. You gain the trained proficiency rank in Intimidation and Religion. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in a Lore skill related to the fiendish plane from which you trace your lineage (usually Abaddon Lore, Abyss Lore, or Hell Lore)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("efe93bbb-cab8-4054-95b0-15edf0b0e010"), Type = TextBlockType.Text, Text = "Using a carefully aimed shot, you make a creature “dance.” You shoot at the ground near a target's feet, causing them to react involuntarily; even mindless creatures have unconscious responses to dodge an attack, and you can capitalize off those uncontrollable reflexes to achieve your aim. As they dance to the sweet tune of your pistol's retort, you ensure your foe can't use whatever nasty surprise they had planned in store for you and your allies. Make an attack roll against the Reflex DC of a target creature within your firearm's first range increment." };
+            yield return new TextBlock { Id = Guid.Parse("efe93bbb-cab8-4054-95b0-15edf0b0e010"), Type = TextBlockType.Text, Text = $"Using a carefully aimed shot, you make a creature “dance.” You shoot at the ground near a target's feet, causing them to react involuntarily; even mindless creatures have unconscious responses to dodge an attack, and you can capitalize off those uncontrollable reflexes to achieve your aim. As they dance to the sweet tune of your pistol's retort, you ensure your foe can't use whatever nasty surprise they had planned in store for you and your allies. Make an attack roll against the Reflex DC of a target creature within your firearm's first range increment." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

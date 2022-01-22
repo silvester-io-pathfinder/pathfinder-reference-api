@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("47d9ad21-36bc-4cd5-9f87-d0effe500030"), Type = TextBlockType.Text, Text = "Your connection to heat and flame means that fire is reluctant to bring its full force to bear against you. You gain fire resistance equal to half your level, and you gain a +1 circumstance bonus to saving throws against fire effects." };
+            yield return new TextBlock { Id = Guid.Parse("47d9ad21-36bc-4cd5-9f87-d0effe500030"), Type = TextBlockType.Text, Text = $"Your connection to heat and flame means that fire is reluctant to bring its full force to bear against you. You gain fire resistance equal to half your level, and you gain a +1 circumstance bonus to saving throws against fire effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

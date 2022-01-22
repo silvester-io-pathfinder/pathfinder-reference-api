@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f9820d2d-f0d1-4916-89bd-075536a86250"), Type = TextBlockType.Text, Text = "You gain the instinct ability for the instinct you chose for (feat: Barbarian Dedication)." };
+            yield return new TextBlock { Id = Guid.Parse("f9820d2d-f0d1-4916-89bd-075536a86250"), Type = TextBlockType.Text, Text = $"You gain the instinct ability for the instinct you chose for {ToMarkdownLink<Models.Entities.Feat>("Barbarian Dedication", Feats.Instances.BarbarianDedication.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

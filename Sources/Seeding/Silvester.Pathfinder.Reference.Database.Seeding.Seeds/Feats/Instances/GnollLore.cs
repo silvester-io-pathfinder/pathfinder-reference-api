@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f9c35ace-a860-4634-af0b-f6d1857ee75f"), Type = TextBlockType.Text, Text = "You paid attention to your senior hunters to learn their tricks. You gain the trained proficiency rank in Stealth and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Gnoll Lore." };
+            yield return new TextBlock { Id = Guid.Parse("f9c35ace-a860-4634-af0b-f6d1857ee75f"), Type = TextBlockType.Text, Text = $"You paid attention to your senior hunters to learn their tricks. You gain the trained proficiency rank in Stealth and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Gnoll Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

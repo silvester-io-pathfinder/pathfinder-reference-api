@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9b25d1d-80c8-40a8-966b-41f43c34c11d"), Type = TextBlockType.Text, Text = "In the past, you would have been a proud initiate of the Saoc Brethren. Today, you carry on their legacy. When you use (feat: Saoc Astrology), roll 1d4 instead; on a 1, you take a -1 penalty to the skill check. On any other result, you gain a circumstance bonus of that value (for instance, a +3 circumstance bonus on a 3)." };
+            yield return new TextBlock { Id = Guid.Parse("b9b25d1d-80c8-40a8-966b-41f43c34c11d"), Type = TextBlockType.Text, Text = $"In the past, you would have been a proud initiate of the Saoc Brethren. Today, you carry on their legacy. When you use {ToMarkdownLink<Models.Entities.Feat>("Saoc Astrology", Feats.Instances.SaocAstrology.ID)}, roll 1d4 instead; on a 1, you take a -1 penalty to the skill check. On any other result, you gain a circumstance bonus of that value (for instance, a +3 circumstance bonus on a 3)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

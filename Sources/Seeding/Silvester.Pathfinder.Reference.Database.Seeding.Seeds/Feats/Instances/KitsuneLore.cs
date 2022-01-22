@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6f260bc8-27ca-4c2d-9e0f-36901b316b98"), Type = TextBlockType.Text, Text = "You excel at navigating social situations and keeping secrets. You gain the trained proficiency rank in Diplomacy and Deception. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Kitsune Lore." };
+            yield return new TextBlock { Id = Guid.Parse("6f260bc8-27ca-4c2d-9e0f-36901b316b98"), Type = TextBlockType.Text, Text = $"You excel at navigating social situations and keeping secrets. You gain the trained proficiency rank in Diplomacy and Deception. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Kitsune Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

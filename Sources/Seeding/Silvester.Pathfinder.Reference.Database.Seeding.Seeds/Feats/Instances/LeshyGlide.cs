@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("acc5924f-61b6-4c90-92c2-cd99890a7e6c"), Type = TextBlockType.Text, Text = "Using your own leaves, you can control your descent. You glide slowly toward the ground, 5 feet down and up to 25 feet forward through the air. As long as you spend at least 1 action gliding each round and have not yet reached the ground, you remain in the air at the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("acc5924f-61b6-4c90-92c2-cd99890a7e6c"), Type = TextBlockType.Text, Text = $"Using your own leaves, you can control your descent. You glide slowly toward the ground, 5 feet down and up to 25 feet forward through the air. As long as you spend at least 1 action gliding each round and have not yet reached the ground, you remain in the air at the end of your turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

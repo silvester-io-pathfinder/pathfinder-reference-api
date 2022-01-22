@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5c688721-e164-45c0-b0a1-b96427c5359a"), Type = TextBlockType.Text, Text = "You can guide your crop to move without notice. When you and any of your crop are (action: Avoiding Notice | Avoid Notice), you can choose one member of your crop to temporarily gain the benefits of the (feat: Quiet Allies) skill feat until the group is no longer (action: Avoiding Notice | Avoid Notice). The group rolls two checks instead of one, using the higher die roll. This is a (trait: fortune) effect." };
+            yield return new TextBlock { Id = Guid.Parse("5c688721-e164-45c0-b0a1-b96427c5359a"), Type = TextBlockType.Text, Text = $"You can guide your crop to move without notice. When you and any of your crop are {ToMarkdownLink<Models.Entities.Activity>("Avoiding Notice", Activities.Instances.AvoidNotice.ID)}, you can choose one member of your crop to temporarily gain the benefits of the {ToMarkdownLink<Models.Entities.Feat>("Quiet Allies", Feats.Instances.QuietAllies.ID)} skill feat until the group is no longer {ToMarkdownLink<Models.Entities.Activity>("Avoiding Notice", Activities.Instances.AvoidNotice.ID)}. The group rolls two checks instead of one, using the higher die roll. This is a {ToMarkdownLink<Models.Entities.Trait>("fortune", Traits.Instances.Fortune.ID)} effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

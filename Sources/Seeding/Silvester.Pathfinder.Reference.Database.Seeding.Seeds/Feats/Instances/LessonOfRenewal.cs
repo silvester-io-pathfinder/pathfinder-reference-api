@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c6d6a23-7553-426d-803d-19e95cd02d14"), Type = TextBlockType.Text, Text = "~ Lesson Type: Major" };
-            yield return new TextBlock { Id = Guid.Parse("a7029da0-65b7-47fb-a852-25f8484ea553"), Type = TextBlockType.Text, Text = "You gain the (spell: restorative moment) hex, and your familiar learns (spell: field of life)." };
+            yield return new TextBlock { Id = Guid.Parse("4c6d6a23-7553-426d-803d-19e95cd02d14"), Type = TextBlockType.Text, Text = $"~ Lesson Type: Major" };
+            yield return new TextBlock { Id = Guid.Parse("a7029da0-65b7-47fb-a852-25f8484ea553"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Spell>("restorative moment", Spells.Instances.RestorativeMoment.ID)} hex, and your familiar learns {ToMarkdownLink<Models.Entities.Spell>("field of life", Spells.Instances.FieldOfLife.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

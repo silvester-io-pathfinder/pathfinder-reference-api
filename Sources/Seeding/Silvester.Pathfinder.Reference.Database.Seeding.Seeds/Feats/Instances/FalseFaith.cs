@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4cf19063-49a2-41da-ba86-3b885946392b"), Type = TextBlockType.Text, Text = "Droskar knows you may need to disguise yourself in societies that oppose your faith. After spending 1 hour in prayer to Droskar, you can cast spells using the religious symbol of a different deity as your divine focus, and you can address verbal prayers to that deity. Droskar intercepts your prayers and answers them without the named god knowing." };
-            yield return new TextBlock { Id = Guid.Parse("7813fc64-b8e8-474a-a98e-3ae6993dc235"), Type = TextBlockType.Text, Text = "This ability applies to the religious symbol of only one god at a time – making a different religious symbol work in this fashion requires another hour of prayer and causes the old one to cease functioning. You can always use a religious symbol of Droskar without affecting this ability." };
+            yield return new TextBlock { Id = Guid.Parse("4cf19063-49a2-41da-ba86-3b885946392b"), Type = TextBlockType.Text, Text = $"Droskar knows you may need to disguise yourself in societies that oppose your faith. After spending 1 hour in prayer to Droskar, you can cast spells using the religious symbol of a different deity as your divine focus, and you can address verbal prayers to that deity. Droskar intercepts your prayers and answers them without the named god knowing." };
+            yield return new TextBlock { Id = Guid.Parse("7813fc64-b8e8-474a-a98e-3ae6993dc235"), Type = TextBlockType.Text, Text = $"This ability applies to the religious symbol of only one god at a time – making a different religious symbol work in this fashion requires another hour of prayer and causes the old one to cease functioning. You can always use a religious symbol of Droskar without affecting this ability." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

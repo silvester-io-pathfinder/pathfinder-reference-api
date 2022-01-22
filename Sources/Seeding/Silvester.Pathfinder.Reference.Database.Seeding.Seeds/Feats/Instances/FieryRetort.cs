@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a9d2b2f-bfe7-44e7-84d6-0af48deb9101"), Type = TextBlockType.Text, Text = "Ignoring your pain, you sear your attacker with a wave of flame. The triggering opponent takes fire damage equal to your level." };
+            yield return new TextBlock { Id = Guid.Parse("5a9d2b2f-bfe7-44e7-84d6-0af48deb9101"), Type = TextBlockType.Text, Text = $"Ignoring your pain, you sear your attacker with a wave of flame. The triggering opponent takes fire damage equal to your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

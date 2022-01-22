@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("acf46677-b940-4400-ad63-390f8500dfe5"), Type = TextBlockType.Text, Text = "Your eidolon evolves wings, a buoyant body, or some other means to control descent. It glides slowly toward the ground, 5 feet down and up to 25 feet forward through the air. As long as it spends at least 1 action gliding each round and has not yet reached the ground, it remains in the air at the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("acf46677-b940-4400-ad63-390f8500dfe5"), Type = TextBlockType.Text, Text = $"Your eidolon evolves wings, a buoyant body, or some other means to control descent. It glides slowly toward the ground, 5 feet down and up to 25 feet forward through the air. As long as it spends at least 1 action gliding each round and has not yet reached the ground, it remains in the air at the end of your turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -11,7 +11,7 @@ using Silvester.Pathfinder.Reference.Database;
 namespace Silvester.Pathfinder.Reference.Database.Migrations
 {
     [DbContext(typeof(ReferenceDatabase))]
-    [Migration("20220122000954_Initial")]
+    [Migration("20220122144051_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -95,6 +95,21 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasIndex("RequiredAlignmentsId");
 
                     b.ToTable("AlignmentEidolon");
+                });
+
+            modelBuilder.Entity("AmmunitionMagicAmmunition", b =>
+                {
+                    b.Property<Guid>("CraftableAsId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("MagicConsumablesId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("CraftableAsId", "MagicConsumablesId");
+
+                    b.HasIndex("MagicConsumablesId");
+
+                    b.ToTable("AmmunitionMagicAmmunition");
                 });
 
             modelBuilder.Entity("AncestryAncestrySize", b =>
@@ -9122,6 +9137,13 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasDiscriminator().HasValue("HeldItem");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.MagicAmmunition", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
+
+                    b.HasDiscriminator().HasValue("MagicAmmunition");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.MeleeWeapon", b =>
                 {
                     b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
@@ -9145,6 +9167,20 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasIndex("WeaponGroupId");
 
                     b.HasDiscriminator().HasValue("MeleeWeapon");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.Oil", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
+
+                    b.HasDiscriminator().HasValue("Oil");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.Potion", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
+
+                    b.HasDiscriminator().HasValue("Potion");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.PreciousMaterialItem", b =>
@@ -9184,6 +9220,13 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
 
                     b.HasDiscriminator().HasValue("Rune");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.Scroll", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
+
+                    b.HasDiscriminator().HasValue("Scroll");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.Shield", b =>
@@ -9622,6 +9665,32 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasDiscriminator().HasValue("HeldItemVariant");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.MagicAmmunitionVariant", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItemVariant");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer")
+                        .HasColumnName("MagicAmmunitionVariant_Level");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer")
+                        .HasColumnName("MagicAmmunitionVariant_Price");
+
+                    b.Property<NpgsqlTsVector>("SearchVector")
+                        .IsRequired()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("tsvector")
+                        .HasColumnName("MagicAmmunitionVariant_SearchVector")
+                        .HasAnnotation("Npgsql:TsVectorConfig", "english")
+                        .HasAnnotation("Npgsql:TsVectorProperties", new[] { "Name" });
+
+                    b.HasIndex("SearchVector")
+                        .HasMethod("GIN");
+
+                    b.HasDiscriminator().HasValue("MagicAmmunitionVariant");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.MeleeWeaponVariant", b =>
                 {
                     b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItemVariant");
@@ -9658,6 +9727,78 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         .HasMethod("GIN");
 
                     b.HasDiscriminator().HasValue("MeleeWeaponVariant");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.OilVariant", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItemVariant");
+
+                    b.Property<string>("Hands")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("OilVariant_Hands");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer")
+                        .HasColumnName("OilVariant_Level");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer")
+                        .HasColumnName("OilVariant_Price");
+
+                    b.Property<NpgsqlTsVector>("SearchVector")
+                        .IsRequired()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("tsvector")
+                        .HasColumnName("OilVariant_SearchVector")
+                        .HasAnnotation("Npgsql:TsVectorConfig", "english")
+                        .HasAnnotation("Npgsql:TsVectorProperties", new[] { "Name", "Usage" });
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("OilVariant_Usage");
+
+                    b.HasIndex("SearchVector")
+                        .HasMethod("GIN");
+
+                    b.HasDiscriminator().HasValue("OilVariant");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.PotionVariant", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItemVariant");
+
+                    b.Property<string>("Hands")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("PotionVariant_Hands");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer")
+                        .HasColumnName("PotionVariant_Level");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer")
+                        .HasColumnName("PotionVariant_Price");
+
+                    b.Property<NpgsqlTsVector>("SearchVector")
+                        .IsRequired()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("tsvector")
+                        .HasColumnName("PotionVariant_SearchVector")
+                        .HasAnnotation("Npgsql:TsVectorConfig", "english")
+                        .HasAnnotation("Npgsql:TsVectorProperties", new[] { "Name", "Usage" });
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("PotionVariant_Usage");
+
+                    b.HasIndex("SearchVector")
+                        .HasMethod("GIN");
+
+                    b.HasDiscriminator().HasValue("PotionVariant");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.PreciousMaterialItemVariant", b =>
@@ -9765,6 +9906,42 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasIndex("PotencyId");
 
                     b.HasDiscriminator().HasValue("RuneVariant");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.ScrollVariant", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItemVariant");
+
+                    b.Property<string>("Hands")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("ScrollVariant_Hands");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer")
+                        .HasColumnName("ScrollVariant_Level");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer")
+                        .HasColumnName("ScrollVariant_Price");
+
+                    b.Property<NpgsqlTsVector>("SearchVector")
+                        .IsRequired()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("tsvector")
+                        .HasColumnName("ScrollVariant_SearchVector")
+                        .HasAnnotation("Npgsql:TsVectorConfig", "english")
+                        .HasAnnotation("Npgsql:TsVectorProperties", new[] { "Name", "Usage" });
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("ScrollVariant_Usage");
+
+                    b.HasIndex("SearchVector")
+                        .HasMethod("GIN");
+
+                    b.HasDiscriminator().HasValue("ScrollVariant");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.ShieldVariant", b =>
@@ -11216,6 +11393,21 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasOne("Silvester.Pathfinder.Reference.Database.Models.Entities.Alignment", null)
                         .WithMany()
                         .HasForeignKey("RequiredAlignmentsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("AmmunitionMagicAmmunition", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.Ammunition", null)
+                        .WithMany()
+                        .HasForeignKey("CraftableAsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.MagicAmmunition", null)
+                        .WithMany()
+                        .HasForeignKey("MagicConsumablesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

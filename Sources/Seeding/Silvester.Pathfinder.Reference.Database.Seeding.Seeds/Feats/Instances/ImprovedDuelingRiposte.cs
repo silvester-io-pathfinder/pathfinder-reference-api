@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b5d8eb8f-7a7e-40b5-9563-4169090fea7a"), Type = TextBlockType.Text, Text = "Your weapon whirls and darts, striking foes whenever the opportunity presents itself. At the start of each of your turns, you gain an additional reaction that you can use only to make a (feat: Dueling Riposte). You can use this extra reaction even if you are not benefiting from (feat: Dueling Parry)." };
+            yield return new TextBlock { Id = Guid.Parse("b5d8eb8f-7a7e-40b5-9563-4169090fea7a"), Type = TextBlockType.Text, Text = $"Your weapon whirls and darts, striking foes whenever the opportunity presents itself. At the start of each of your turns, you gain an additional reaction that you can use only to make a {ToMarkdownLink<Models.Entities.Feat>("Dueling Riposte", Feats.Instances.DuelingRiposte.ID)}. You can use this extra reaction even if you are not benefiting from {ToMarkdownLink<Models.Entities.Feat>("Dueling Parry", Feats.Instances.DuelingParry.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3fe879a1-8f61-41bf-b8d1-ba1dfa478455"), Type = TextBlockType.Text, Text = "You recover an additional 5 Hit Points from a successful attempt to (action: Treat your Wounds | Treat Wounds) or use (feat: Battle Medicine) on you. After you or an ally use (feat: Battle Medicine) on you, you become temporarily immune to that (feat: Battle Medicine) for only 1 hour, instead of 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("3fe879a1-8f61-41bf-b8d1-ba1dfa478455"), Type = TextBlockType.Text, Text = $"You recover an additional 5 Hit Points from a successful attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Treat your Wounds", SkillActions.Instances.TreatWounds.ID)} or use {ToMarkdownLink<Models.Entities.Feat>("Battle Medicine", Feats.Instances.BattleMedicine.ID)} on you. After you or an ally use {ToMarkdownLink<Models.Entities.Feat>("Battle Medicine", Feats.Instances.BattleMedicine.ID)} on you, you become temporarily immune to that {ToMarkdownLink<Models.Entities.Feat>("Battle Medicine", Feats.Instances.BattleMedicine.ID)} for only 1 hour, instead of 1 day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

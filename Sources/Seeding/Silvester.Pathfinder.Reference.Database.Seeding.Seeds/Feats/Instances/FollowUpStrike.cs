@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3999c8f6-229a-4359-8269-54f8ae03d276"), Type = TextBlockType.Text, Text = "You have trained to use all parts of your body as a weapon, and when you miss with an attack, you can usually continue the attack with a different body part and still deal damage. Make another (action: Strike) with a melee unarmed attack, using the same multiple attack penalty as for the missed (action: Strike), if any." };
+            yield return new TextBlock { Id = Guid.Parse("3999c8f6-229a-4359-8269-54f8ae03d276"), Type = TextBlockType.Text, Text = $"You have trained to use all parts of your body as a weapon, and when you miss with an attack, you can usually continue the attack with a different body part and still deal damage. Make another {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a melee unarmed attack, using the same multiple attack penalty as for the missed {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, if any." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

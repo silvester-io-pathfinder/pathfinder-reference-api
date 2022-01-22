@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("089bf0e3-48c1-438e-819b-6d638a97312b"), Type = TextBlockType.Text, Text = "Even in the face of failure you press the attack, determined to succeed. Make a (action: Strike) with the same weapon, adding the effects of the (trait: backswing) and (trait: forceful) weapon traits." };
+            yield return new TextBlock { Id = Guid.Parse("089bf0e3-48c1-438e-819b-6d638a97312b"), Type = TextBlockType.Text, Text = $"Even in the face of failure you press the attack, determined to succeed. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with the same weapon, adding the effects of the {ToMarkdownLink<Models.Entities.Trait>("backswing", Traits.Instances.Backswing.ID)} and {ToMarkdownLink<Models.Entities.Trait>("forceful", Traits.Instances.Forceful.ID)} weapon traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

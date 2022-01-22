@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7b3ba0e2-796a-4d64-9e88-0bd150f3f82f"), Type = TextBlockType.Text, Text = "You fling yourself out of harm's way. You (action: Leap). Your movement gives you a +2 circumstance bonus to AC against the triggering attack. Regardless of whether or not the triggering attack hits, you land prone after completing your (action: Leap)." };
+            yield return new TextBlock { Id = Guid.Parse("7b3ba0e2-796a-4d64-9e88-0bd150f3f82f"), Type = TextBlockType.Text, Text = $"You fling yourself out of harm's way. You {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)}. Your movement gives you a +2 circumstance bonus to AC against the triggering attack. Regardless of whether or not the triggering attack hits, you land prone after completing your {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

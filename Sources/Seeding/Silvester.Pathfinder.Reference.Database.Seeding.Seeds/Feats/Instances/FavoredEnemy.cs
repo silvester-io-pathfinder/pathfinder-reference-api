@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2f7cd428-af52-455f-ac95-c48efa9f019b"), Type = TextBlockType.Text, Text = "You have studied a specific type of wild creature and can hunt it more easily. When you gain this feat, choose animals, beasts, dragons, or both fungi and plants as your favored enemy. When you roll initiative and can see an enemy that belongs to the chosen category, you can (action: Hunt Prey) as a free action, designating that enemy." };
-            yield return new TextBlock { Id = Guid.Parse("57c88f78-dfbd-4796-9079-6cebbf1a1185"), Type = TextBlockType.Text, Text = "You can use this free action even if you haven't identified the creature yet with (action: Recall Knowledge). The benefit doesn't apply against favored enemies disguised as other creatures, and the GM determines whether it applies against a creature disguised as a favored enemy." };
+            yield return new TextBlock { Id = Guid.Parse("2f7cd428-af52-455f-ac95-c48efa9f019b"), Type = TextBlockType.Text, Text = $"You have studied a specific type of wild creature and can hunt it more easily. When you gain this feat, choose animals, beasts, dragons, or both fungi and plants as your favored enemy. When you roll initiative and can see an enemy that belongs to the chosen category, you can {ToMarkdownLink<Models.Entities.Feat>("Hunt Prey", Feats.Instances.HuntPrey.ID)} as a free action, designating that enemy." };
+            yield return new TextBlock { Id = Guid.Parse("57c88f78-dfbd-4796-9079-6cebbf1a1185"), Type = TextBlockType.Text, Text = $"You can use this free action even if you haven't identified the creature yet with {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)}. The benefit doesn't apply against favored enemies disguised as other creatures, and the GM determines whether it applies against a creature disguised as a favored enemy." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

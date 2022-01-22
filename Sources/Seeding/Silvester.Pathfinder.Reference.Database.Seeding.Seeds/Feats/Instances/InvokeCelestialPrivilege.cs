@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("59425000-7c69-4bb6-a984-b41540bafadf"), Type = TextBlockType.Text, Text = "You rise above the triggering effect refusing to be harmed by it. You gain a +1 circumstance bonus to the triggering saving throw and to any other saving throws you attempt against (trait: divine) effects until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("59425000-7c69-4bb6-a984-b41540bafadf"), Type = TextBlockType.Text, Text = $"You rise above the triggering effect refusing to be harmed by it. You gain a +1 circumstance bonus to the triggering saving throw and to any other saving throws you attempt against {ToMarkdownLink<Models.Entities.Trait>("divine", Traits.Instances.Divine.ID)} effects until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

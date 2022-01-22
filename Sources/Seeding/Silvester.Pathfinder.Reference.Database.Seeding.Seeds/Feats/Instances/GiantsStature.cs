@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7b21fd1a-03eb-4316-a779-3e47b9630433"), Type = TextBlockType.Text, Text = "You grow to incredible size. You become Large, increasing your reach by 5 feet and gaining the clumsy 1 condition until you stop raging. Your equipment grows with you." };
+            yield return new TextBlock { Id = Guid.Parse("7b21fd1a-03eb-4316-a779-3e47b9630433"), Type = TextBlockType.Text, Text = $"You grow to incredible size. You become Large, increasing your reach by 5 feet and gaining the clumsy 1 condition until you stop raging. Your equipment grows with you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

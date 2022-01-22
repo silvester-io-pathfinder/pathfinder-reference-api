@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3641f007-a61b-463b-8f6b-08acd5691237"), Type = TextBlockType.Text, Text = "Your understanding of life expands, allowing you to mimic a wider range of creatures. Add the forms in insect form to your wild shape list. Whenever you use (Spell: wild shape) to polymorph into the non-flying insect form listed in (Spell: pest form), the duration is 24 hours instead of 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("3641f007-a61b-463b-8f6b-08acd5691237"), Type = TextBlockType.Text, Text = $"Your understanding of life expands, allowing you to mimic a wider range of creatures. Add the forms in insect form to your wild shape list. Whenever you use {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)} to polymorph into the non-flying insect form listed in {ToMarkdownLink<Models.Entities.Spell>("pest form", Spells.Instances.PestForm.ID)}, the duration is 24 hours instead of 10 minutes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

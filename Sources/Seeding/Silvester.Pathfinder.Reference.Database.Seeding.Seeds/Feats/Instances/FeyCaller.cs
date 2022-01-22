@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c1844c96-25df-4b12-97c9-da1dd6e6a2d9"), Type = TextBlockType.Text, Text = "You have learned some of the tricks the fey use to bend primal magic toward illusions and trickery. Add (Spell: illusory disguise), (Spell: illusory object), (Spell: illusory scene), and (Spell: veil) to your spell list as primal spells." };
+            yield return new TextBlock { Id = Guid.Parse("c1844c96-25df-4b12-97c9-da1dd6e6a2d9"), Type = TextBlockType.Text, Text = $"You have learned some of the tricks the fey use to bend primal magic toward illusions and trickery. Add {ToMarkdownLink<Models.Entities.Spell>("illusory disguise", Spells.Instances.IllusoryDisguise.ID)}, {ToMarkdownLink<Models.Entities.Spell>("illusory object", Spells.Instances.IllusoryObject.ID)}, {ToMarkdownLink<Models.Entities.Spell>("illusory scene", Spells.Instances.IllusoryScene.ID)}, and {ToMarkdownLink<Models.Entities.Spell>("veil", Spells.Instances.Veil.ID)} to your spell list as primal spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

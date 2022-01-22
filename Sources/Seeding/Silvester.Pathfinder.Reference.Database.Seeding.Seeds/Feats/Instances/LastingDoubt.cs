@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2b689cd0-81c2-4ecc-a719-a6e3535b8c8d"), Type = TextBlockType.Text, Text = "When you cast doubt upon your foes, the effect lasts longer than usual. After being enfeebled 2 by your (feat: Glimpse of Redemption), the foe is enfeebled 1 for 1 minute. If you have (feat: Weight of Guilt), after being stupefied 2 by your (feat: Glimpse of Redemption), the foe is stupefied 1 for 1 minute or until the flat check from stupefied causes it to lose a spell, whichever comes first." };
+            yield return new TextBlock { Id = Guid.Parse("2b689cd0-81c2-4ecc-a719-a6e3535b8c8d"), Type = TextBlockType.Text, Text = $"When you cast doubt upon your foes, the effect lasts longer than usual. After being enfeebled 2 by your {ToMarkdownLink<Models.Entities.Feat>("Glimpse of Redemption", Feats.Instances.GlimpseOfRedemption.ID)}, the foe is enfeebled 1 for 1 minute. If you have {ToMarkdownLink<Models.Entities.Feat>("Weight of Guilt", Feats.Instances.WeightOfGuilt.ID)}, after being stupefied 2 by your {ToMarkdownLink<Models.Entities.Feat>("Glimpse of Redemption", Feats.Instances.GlimpseOfRedemption.ID)}, the foe is stupefied 1 for 1 minute or until the flat check from stupefied causes it to lose a spell, whichever comes first." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

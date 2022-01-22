@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1ab61a33-6cec-497d-bd7b-e015df2ebe5c"), Type = TextBlockType.Text, Text = "Energy bursts forth from your body. You deal 1d6 damage of your chosen type to all adjacent creatures (basic Reflex save using your class DC or spell DC, whichever is higher). At 3rd level, and every 2 levels thereafter, this damage increases by 1d6." };
+            yield return new TextBlock { Id = Guid.Parse("1ab61a33-6cec-497d-bd7b-e015df2ebe5c"), Type = TextBlockType.Text, Text = $"Energy bursts forth from your body. You deal 1d6 damage of your chosen type to all adjacent creatures (basic Reflex save using your class DC or spell DC, whichever is higher). At 3rd level, and every 2 levels thereafter, this damage increases by 1d6." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

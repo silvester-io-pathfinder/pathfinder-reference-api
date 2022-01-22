@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("968eb159-9538-409f-ae13-795983373dab"), Type = TextBlockType.Text, Text = "Your performances inspire even greater deeds in your allies. You learn the (spell: inspire heroics) metamagic focus spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("968eb159-9538-409f-ae13-795983373dab"), Type = TextBlockType.Text, Text = $"Your performances inspire even greater deeds in your allies. You learn the {ToMarkdownLink<Models.Entities.Spell>("inspire heroics", Spells.Instances.InspireHeroics.ID)} metamagic focus spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

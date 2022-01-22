@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c515334-ec42-4f5a-8082-253d13178e8a"), Type = TextBlockType.Text, Text = "Something about your presence causes creatures of your bloodline to, consciously or not, recognize you as one of their own, and you become inured to their tricks. You gain a +1 circumstance bonus to Diplomacy, Deception, and Intimidation checks when interacting with creatures that have the trait corresponding to your bloodline, and you gain a +1 circumstance bonus to Perception and saving throws against such creatures. For example, an aberrant bloodline sorcerer would gain this benefit against creatures with the aberration trait. The GM is the final arbiter of which creatures match your bloodline." };
+            yield return new TextBlock { Id = Guid.Parse("9c515334-ec42-4f5a-8082-253d13178e8a"), Type = TextBlockType.Text, Text = $"Something about your presence causes creatures of your bloodline to, consciously or not, recognize you as one of their own, and you become inured to their tricks. You gain a +1 circumstance bonus to Diplomacy, Deception, and Intimidation checks when interacting with creatures that have the trait corresponding to your bloodline, and you gain a +1 circumstance bonus to Perception and saving throws against such creatures. For example, an aberrant bloodline sorcerer would gain this benefit against creatures with the aberration trait. The GM is the final arbiter of which creatures match your bloodline." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

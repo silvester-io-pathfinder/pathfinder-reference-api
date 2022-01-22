@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ecbbe807-a448-47e4-b2db-c4985673fd4e"), Type = TextBlockType.Text, Text = "You can call forth a benediction upon your allies, whether you pray to a deity of the celestial realms or just find the power within yourself. You can cast (spell: bless) once per day as a 1st-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("ecbbe807-a448-47e4-b2db-c4985673fd4e"), Type = TextBlockType.Text, Text = $"You can call forth a benediction upon your allies, whether you pray to a deity of the celestial realms or just find the power within yourself. You can cast {ToMarkdownLink<Models.Entities.Spell>("bless", Spells.Instances.Bless.ID)} once per day as a 1st-level divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

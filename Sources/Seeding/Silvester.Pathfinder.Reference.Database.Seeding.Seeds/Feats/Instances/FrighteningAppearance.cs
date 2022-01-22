@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("316cda1c-78c9-4be4-8557-67c9cb4d5f40"), Type = TextBlockType.Text, Text = "Your dramatic appearances can frighten bystanders. When you make a (feat: Startling Appearance), you can also attempt to (action: Demoralize) each opponent within 10 feet to whom you were unnoticed before your (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("316cda1c-78c9-4be4-8557-67c9cb4d5f40"), Type = TextBlockType.Text, Text = $"Your dramatic appearances can frighten bystanders. When you make a {ToMarkdownLink<Models.Entities.Feat>("Startling Appearance", Feats.Instances.StartlingAppearance.ID)}, you can also attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)} each opponent within 10 feet to whom you were unnoticed before your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

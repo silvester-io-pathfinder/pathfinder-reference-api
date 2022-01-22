@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6cdc4290-9872-4c2f-a53e-8070100f6f21"), Type = TextBlockType.Text, Text = "You can (feat: Eat Fortune) once per hour, rather than once per day." };
+            yield return new TextBlock { Id = Guid.Parse("6cdc4290-9872-4c2f-a53e-8070100f6f21"), Type = TextBlockType.Text, Text = $"You can {ToMarkdownLink<Models.Entities.Feat>("Eat Fortune", Feats.Instances.EatFortune.ID)} once per hour, rather than once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

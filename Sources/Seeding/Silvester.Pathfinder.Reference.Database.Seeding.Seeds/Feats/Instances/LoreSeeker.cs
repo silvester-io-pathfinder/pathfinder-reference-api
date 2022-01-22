@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cdc3c656-0872-47a9-8b0b-4b0c5e58e658"), Type = TextBlockType.Text, Text = "You see what others don't, and you've developed magical tricks to find hidden truth. You can cast (spell: comprehend language), (spell: restore senses), and (spell: see invisibility) as innate spells, each once per day. If you could already cast spells, these spells are of the same tradition. Otherwise, they are arcane spells, you use Intelligence as your spellcasting ability, and you become trained in spell attack rolls and spell DCs for arcane spells." };
+            yield return new TextBlock { Id = Guid.Parse("cdc3c656-0872-47a9-8b0b-4b0c5e58e658"), Type = TextBlockType.Text, Text = $"You see what others don't, and you've developed magical tricks to find hidden truth. You can cast {ToMarkdownLink<Models.Entities.Spell>("comprehend language", Spells.Instances.ComprehendLanguage.ID)}, {ToMarkdownLink<Models.Entities.Spell>("restore senses", Spells.Instances.RestoreSenses.ID)}, and {ToMarkdownLink<Models.Entities.Spell>("see invisibility", Spells.Instances.SeeInvisibility.ID)} as innate spells, each once per day. If you could already cast spells, these spells are of the same tradition. Otherwise, they are arcane spells, you use Intelligence as your spellcasting ability, and you become trained in spell attack rolls and spell DCs for arcane spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

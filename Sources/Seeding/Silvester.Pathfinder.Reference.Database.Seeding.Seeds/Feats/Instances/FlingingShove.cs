@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a71e340d-2150-452b-9433-5b7e5aa8036f"), Type = TextBlockType.Text, Text = "Increase the distance you (Action: Shove) your opponent with (Feat: Aggressive Block) or (Feat: Brutish Shove) to 10 feet on a success or 20 feet on a critical success. When you use (Feat: Aggressive Block), you can choose whether the target is flat-footed or (Action: Shoved | Shove)." };
-            yield return new TextBlock { Id = Guid.Parse("1d2c1cda-2392-4f75-9b54-76137edbc66d"), Type = TextBlockType.Text, Text = "When you make a (Feat: Brutish Shove), you also (Action: Shove) the target 5 feet on a failure." };
+            yield return new TextBlock { Id = Guid.Parse("a71e340d-2150-452b-9433-5b7e5aa8036f"), Type = TextBlockType.Text, Text = $"Increase the distance you {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} your opponent with {ToMarkdownLink<Models.Entities.Feat>("Aggressive Block", Feats.Instances.AggressiveBlock.ID)} or {ToMarkdownLink<Models.Entities.Feat>("Brutish Shove", Feats.Instances.BrutishShove.ID)} to 10 feet on a success or 20 feet on a critical success. When you use {ToMarkdownLink<Models.Entities.Feat>("Aggressive Block", Feats.Instances.AggressiveBlock.ID)}, you can choose whether the target is flat-footed or {ToMarkdownLink<Models.Entities.SkillAction>("Shoved", SkillActions.Instances.Shove.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("1d2c1cda-2392-4f75-9b54-76137edbc66d"), Type = TextBlockType.Text, Text = $"When you make a {ToMarkdownLink<Models.Entities.Feat>("Brutish Shove", Feats.Instances.BrutishShove.ID)}, you also {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} the target 5 feet on a failure." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

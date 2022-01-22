@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a7e63523-21a5-4e04-8b51-e9a2d90ca74b"), Type = TextBlockType.Text, Text = "When you came of age, your fingernails grew long and sharp. You gain a claw unarmed attack that deals 1d4 slashing damage. Your claws are in the brawling group and have the (trait: agile), (trait: finesse), and (trait: unarmed) traits." };
+            yield return new TextBlock { Id = Guid.Parse("a7e63523-21a5-4e04-8b51-e9a2d90ca74b"), Type = TextBlockType.Text, Text = $"When you came of age, your fingernails grew long and sharp. You gain a claw unarmed attack that deals 1d4 slashing damage. Your claws are in the brawling group and have the {ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)}, {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)}, and {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)} traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

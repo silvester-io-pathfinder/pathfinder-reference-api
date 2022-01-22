@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cdb751b1-2044-460f-a19d-c2fe985e1c07"), Type = TextBlockType.Text, Text = "You envenom your fangs. If the next fangs (Action: Strike) you make before the end of your next turn hits and deals damage, the (Action: Strike) deals an additional 1d6 poison damage. On a critical failure, the poison is wasted as normal." };
+            yield return new TextBlock { Id = Guid.Parse("cdb751b1-2044-460f-a19d-c2fe985e1c07"), Type = TextBlockType.Text, Text = $"You envenom your fangs. If the next fangs {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} you make before the end of your next turn hits and deals damage, the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} deals an additional 1d6 poison damage. On a critical failure, the poison is wasted as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

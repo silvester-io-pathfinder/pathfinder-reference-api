@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("30ff381b-9ba1-49d1-96f2-5e194ceff437"), Type = TextBlockType.Text, Text = "Your additives contain panaceas that can remedy a plethora of maladies. When you use (feat: Merciful Elixir), your elixir can instead attempt to counteract the blinded, deafened, sickened, or slowed condition." };
+            yield return new TextBlock { Id = Guid.Parse("30ff381b-9ba1-49d1-96f2-5e194ceff437"), Type = TextBlockType.Text, Text = $"Your additives contain panaceas that can remedy a plethora of maladies. When you use {ToMarkdownLink<Models.Entities.Feat>("Merciful Elixir", Feats.Instances.MercifulElixir.ID)}, your elixir can instead attempt to counteract the blinded, deafened, sickened, or slowed condition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

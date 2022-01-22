@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a62ccb0d-5a66-4967-8fe8-4ae0453f00e7"), Type = TextBlockType.Text, Text = "You weave dispelling energy into a spell, sending both effects at a foe. If your next action is to cast a single-target spell against a creature, and you either hit the foe with the spell attack roll or the foe fails its saving throw, you can cast (spell: dispel magic) on the foe as a free action, expending a spell slot as normal and targeting one spell effect affecting the foe." };
+            yield return new TextBlock { Id = Guid.Parse("a62ccb0d-5a66-4967-8fe8-4ae0453f00e7"), Type = TextBlockType.Text, Text = $"You weave dispelling energy into a spell, sending both effects at a foe. If your next action is to cast a single-target spell against a creature, and you either hit the foe with the spell attack roll or the foe fails its saving throw, you can cast {ToMarkdownLink<Models.Entities.Spell>("dispel magic", Spells.Instances.DispelMagic.ID)} on the foe as a free action, expending a spell slot as normal and targeting one spell effect affecting the foe." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

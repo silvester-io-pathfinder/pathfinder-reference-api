@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c3eaf9c4-4152-417d-8f9d-1a484db968ca"), Type = TextBlockType.Text, Text = "Your eidolon advances its capabilities in combat. Your eidolon becomes an expert in unarmed attacks. If you are an expert in unarmored defense, your eidolon also becomes an expert in unarmored defense. If you have weapon specialization, your eidolon also gains weapon specialization." };
+            yield return new TextBlock { Id = Guid.Parse("c3eaf9c4-4152-417d-8f9d-1a484db968ca"), Type = TextBlockType.Text, Text = $"Your eidolon advances its capabilities in combat. Your eidolon becomes an expert in unarmed attacks. If you are an expert in unarmored defense, your eidolon also becomes an expert in unarmored defense. If you have weapon specialization, your eidolon also gains weapon specialization." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

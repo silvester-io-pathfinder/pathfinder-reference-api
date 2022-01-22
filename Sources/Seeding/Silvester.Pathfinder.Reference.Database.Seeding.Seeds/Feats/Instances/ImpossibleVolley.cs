@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("60d4dac3-2014-4ca7-8690-980458397a9d"), Type = TextBlockType.Text, Text = "You fire a volley at all foes in an area. Make one (action: Strike) with a -2 penalty against each enemy within a 10-foot-radius burst centered at or beyond your weapon's volley range. Roll the damage only once for all targets." };
-            yield return new TextBlock { Id = Guid.Parse("7852894e-e2da-47b9-add5-1d0d7dc4a7b8"), Type = TextBlockType.Text, Text = "Each attack counts toward your multiple attack penalty, but do not increase your penalty until you have made all your attacks." };
+            yield return new TextBlock { Id = Guid.Parse("60d4dac3-2014-4ca7-8690-980458397a9d"), Type = TextBlockType.Text, Text = $"You fire a volley at all foes in an area. Make one {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a -2 penalty against each enemy within a 10-foot-radius burst centered at or beyond your weapon's volley range. Roll the damage only once for all targets." };
+            yield return new TextBlock { Id = Guid.Parse("7852894e-e2da-47b9-add5-1d0d7dc4a7b8"), Type = TextBlockType.Text, Text = $"Each attack counts toward your multiple attack penalty, but do not increase your penalty until you have made all your attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

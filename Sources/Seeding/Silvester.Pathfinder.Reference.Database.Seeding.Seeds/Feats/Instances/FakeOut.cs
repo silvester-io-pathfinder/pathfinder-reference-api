@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2b302bdc-1663-46db-99ef-dd9ddea91e17"), Type = TextBlockType.Text, Text = "With a skilled flourish of your weapon, you force an enemy to acknowledge you as a threat. Make an attack roll to (action: Aid) the triggering attack. If you dealt damage to that enemy with the same weapon since the start of your last turn, you gain a +1 circumstance bonus to this roll." };
+            yield return new TextBlock { Id = Guid.Parse("2b302bdc-1663-46db-99ef-dd9ddea91e17"), Type = TextBlockType.Text, Text = $"With a skilled flourish of your weapon, you force an enemy to acknowledge you as a threat. Make an attack roll to {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)} the triggering attack. If you dealt damage to that enemy with the same weapon since the start of your last turn, you gain a +1 circumstance bonus to this roll." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

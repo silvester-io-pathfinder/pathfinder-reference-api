@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aef9e19f-9874-4729-981b-d9895c032c87"), Type = TextBlockType.Text, Text = "You embody the link to your patron so completely that you can cast your hexes in rapid succession. You are no longer limited to casting only a single hex each turn. In addition, when you cast (spell: cackle) to sustain a hex, you gain the effects of (action: Sustain a Spell) for all your active hexes that have a duration of sustained." };
+            yield return new TextBlock { Id = Guid.Parse("aef9e19f-9874-4729-981b-d9895c032c87"), Type = TextBlockType.Text, Text = $"You embody the link to your patron so completely that you can cast your hexes in rapid succession. You are no longer limited to casting only a single hex each turn. In addition, when you cast {ToMarkdownLink<Models.Entities.Spell>("cackle", Spells.Instances.Cackle.ID)} to sustain a hex, you gain the effects of {ToMarkdownLink<Models.Entities.Action>("Sustain a Spell", Actions.Instances.SustainASpell.ID)} for all your active hexes that have a duration of sustained." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

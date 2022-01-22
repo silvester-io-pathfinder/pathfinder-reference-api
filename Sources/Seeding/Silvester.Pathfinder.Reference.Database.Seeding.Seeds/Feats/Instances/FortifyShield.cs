@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cbd407e8-ed60-425a-8a70-a8a68d44e4db"), Type = TextBlockType.Text, Text = "You reinforce your shield with a rocky outgrowth of metal and stone. You (action: Raise your Shield | Raise a Shield). If you use the (feat: Shield Block) reaction before your next turn, add your character level to your shield's Hardness when determining how much damage is blocked." };
+            yield return new TextBlock { Id = Guid.Parse("cbd407e8-ed60-425a-8a70-a8a68d44e4db"), Type = TextBlockType.Text, Text = $"You reinforce your shield with a rocky outgrowth of metal and stone. You {ToMarkdownLink<Models.Entities.Action>("Raise your Shield", Actions.Instances.RaiseAShield.ID)}. If you use the {ToMarkdownLink<Models.Entities.Feat>("Shield Block", Feats.Instances.ShieldBlock.ID)} reaction before your next turn, add your character level to your shield's Hardness when determining how much damage is blocked." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

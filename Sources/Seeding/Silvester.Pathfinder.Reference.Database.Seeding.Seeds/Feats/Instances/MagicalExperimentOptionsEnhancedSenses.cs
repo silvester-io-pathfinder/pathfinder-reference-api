@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a5b5a4c-d68a-4a18-a52a-410b45ea23ea"), Type = TextBlockType.Text, Text = "You gain low-light vision (or darkvision if you already had low-light vision) and an imprecise sense with a range of 30 feet, such as scent, thoughtsense, tremorsense, or wavesense." };
+            yield return new TextBlock { Id = Guid.Parse("6a5b5a4c-d68a-4a18-a52a-410b45ea23ea"), Type = TextBlockType.Text, Text = $"You gain low-light vision (or darkvision if you already had low-light vision) and an imprecise sense with a range of 30 feet, such as scent, thoughtsense, tremorsense, or wavesense." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eb275068-a229-48b3-92a0-594701d40d1a"), Type = TextBlockType.Text, Text = "Others' attempts to scare you often grant you insights about your would-be bullies that you can then exploit. If you roll a success on a saving throw against a (trait: fear) effect, you get a critical success instead, and the source of the (trait: fear) effect is flat-footed to you until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("eb275068-a229-48b3-92a0-594701d40d1a"), Type = TextBlockType.Text, Text = $"Others' attempts to scare you often grant you insights about your would-be bullies that you can then exploit. If you roll a success on a saving throw against a {ToMarkdownLink<Models.Entities.Trait>("fear", Traits.Instances.Fear.ID)} effect, you get a critical success instead, and the source of the {ToMarkdownLink<Models.Entities.Trait>("fear", Traits.Instances.Fear.ID)} effect is flat-footed to you until the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

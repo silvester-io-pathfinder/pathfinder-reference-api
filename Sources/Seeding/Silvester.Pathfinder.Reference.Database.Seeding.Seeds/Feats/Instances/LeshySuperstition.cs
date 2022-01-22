@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2ef87a03-c190-4822-9099-c177b9dda725"), Type = TextBlockType.Text, Text = "You notice spirits that inhabit objects, learning which bring good fortune and which are unlucky. You focus on the power of a lucky object, granting you a +1 circumstance bonus to your saving throw against the triggering effect." };
+            yield return new TextBlock { Id = Guid.Parse("2ef87a03-c190-4822-9099-c177b9dda725"), Type = TextBlockType.Text, Text = $"You notice spirits that inhabit objects, learning which bring good fortune and which are unlucky. You focus on the power of a lucky object, granting you a +1 circumstance bonus to your saving throw against the triggering effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

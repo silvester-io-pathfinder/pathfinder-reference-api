@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b7efe753-4113-4aac-8fa7-5091cbc26f1b"), Type = TextBlockType.Text, Text = "You can channel your mask's power to pierce through lies and see the truth in any situation. Increase the number of Focus Points in your focus pool by 1. While wearing your mask, you can cast the (spell: glimpse the truth) cleric domain spell as a divine focus spell." };
+            yield return new TextBlock { Id = Guid.Parse("b7efe753-4113-4aac-8fa7-5091cbc26f1b"), Type = TextBlockType.Text, Text = $"You can channel your mask's power to pierce through lies and see the truth in any situation. Increase the number of Focus Points in your focus pool by 1. While wearing your mask, you can cast the {ToMarkdownLink<Models.Entities.Spell>("glimpse the truth", Spells.Instances.GlimpseTheTruth.ID)} cleric domain spell as a divine focus spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

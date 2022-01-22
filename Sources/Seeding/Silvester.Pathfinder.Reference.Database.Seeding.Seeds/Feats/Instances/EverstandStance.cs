@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d409cad0-a67e-468d-a648-ad348b2a1bb4"), Type = TextBlockType.Text, Text = "~ Access: The following class feat is available to Knights of Lastwall." };
-            yield return new TextBlock { Id = Guid.Parse("d53ae76e-b8f3-4751-a350-fff1afd55a4c"), Type = TextBlockType.Text, Text = "You brace your shield with both hands, enhancing its potential for both offense and defense. When in this stance, you wield the shield with both hands. When wielding a shield this way, increase the weapon damage die of the shield's boss or spikes by one step, and increase the shield's Hardness by 2 when using the (feat: Shield Block) reaction." };
+            yield return new TextBlock { Id = Guid.Parse("d409cad0-a67e-468d-a648-ad348b2a1bb4"), Type = TextBlockType.Text, Text = $"~ Access: The following class feat is available to Knights of Lastwall." };
+            yield return new TextBlock { Id = Guid.Parse("d53ae76e-b8f3-4751-a350-fff1afd55a4c"), Type = TextBlockType.Text, Text = $"You brace your shield with both hands, enhancing its potential for both offense and defense. When in this stance, you wield the shield with both hands. When wielding a shield this way, increase the weapon damage die of the shield's boss or spikes by one step, and increase the shield's Hardness by 2 when using the {ToMarkdownLink<Models.Entities.Feat>("Shield Block", Feats.Instances.ShieldBlock.ID)} reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e709149d-0b55-42e9-8375-c350685ce33a"), Type = TextBlockType.Text, Text = "You are trained with composite longbows, composite shortbows, glaives, longbows, longswords, and shortbows. In addition, you gain access to all uncommon hobgoblin weapons. For the purpose of determining your proficiency, martial hobgoblin weapons are simple weapons and advanced hobgoblin weapons are martial weapons." };
+            yield return new TextBlock { Id = Guid.Parse("e709149d-0b55-42e9-8375-c350685ce33a"), Type = TextBlockType.Text, Text = $"You are trained with composite longbows, composite shortbows, glaives, longbows, longswords, and shortbows. In addition, you gain access to all uncommon hobgoblin weapons. For the purpose of determining your proficiency, martial hobgoblin weapons are simple weapons and advanced hobgoblin weapons are martial weapons." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("75f6af76-89e7-4bc6-b3ce-5aa4f9e74e4b"), Type = TextBlockType.Text, Text = "You can magically hurl your weapon at your foe. You gain the (Spell: hand of the apprentice) universalist spell. Universalist spells are a type of focus spell, much like school spells. You start with a focus pool of 1 Focus Point." };
+            yield return new TextBlock { Id = Guid.Parse("75f6af76-89e7-4bc6-b3ce-5aa4f9e74e4b"), Type = TextBlockType.Text, Text = $"You can magically hurl your weapon at your foe. You gain the {ToMarkdownLink<Models.Entities.Spell>("hand of the apprentice", Spells.Instances.HandOfTheApprentice.ID)} universalist spell. Universalist spells are a type of focus spell, much like school spells. You start with a focus pool of 1 Focus Point." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

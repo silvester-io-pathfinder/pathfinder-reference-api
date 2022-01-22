@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a37df5fe-cfaf-4a12-893c-095b4daf1a7d"), Type = TextBlockType.Text, Text = "You use your weapon to deflect the attack against your ally, granting a +2 circumstance bonus to their AC against the triggering attack. This turns the triggering critical hit into a hit, or the triggering hit into a miss." };
+            yield return new TextBlock { Id = Guid.Parse("a37df5fe-cfaf-4a12-893c-095b4daf1a7d"), Type = TextBlockType.Text, Text = $"You use your weapon to deflect the attack against your ally, granting a +2 circumstance bonus to their AC against the triggering attack. This turns the triggering critical hit into a hit, or the triggering hit into a miss." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("03ca5358-9ad5-4182-a4f0-2b2d87a87448"), Type = TextBlockType.Text, Text = "Your goblin affinity blends with your class training, granting you great skill with goblin weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the dogslicer, horsechopper, and all goblin weapons in which you are trained." };
+            yield return new TextBlock { Id = Guid.Parse("03ca5358-9ad5-4182-a4f0-2b2d87a87448"), Type = TextBlockType.Text, Text = $"Your goblin affinity blends with your class training, granting you great skill with goblin weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the dogslicer, horsechopper, and all goblin weapons in which you are trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("99525d59-5081-4a11-9930-8e0b1ee1f65f"), Type = TextBlockType.Text, Text = "When you (action: Strike) with a (trait: thrown) weapon, you take only a –1 penalty for each additional range increment between you and the target, rather than a –2 penalty." };
+            yield return new TextBlock { Id = Guid.Parse("99525d59-5081-4a11-9930-8e0b1ee1f65f"), Type = TextBlockType.Text, Text = $"When you {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a {ToMarkdownLink<Models.Entities.Trait>("thrown", Traits.Instances.Thrown.ID)} weapon, you take only a –1 penalty for each additional range increment between you and the target, rather than a –2 penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

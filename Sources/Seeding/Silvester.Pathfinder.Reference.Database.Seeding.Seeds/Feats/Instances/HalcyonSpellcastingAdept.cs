@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e7c9f12f-77fa-4040-81c5-be6183be6566"), Type = TextBlockType.Text, Text = "You refine your halcyon magic. You gain two common 4th-level halcyon spells and two 5th-level halcyon spells. You also gain a 4th-level halcyon spell slot and a 5th-level halcyon spell slot. Your proficiency rank in either arcane or primal spell DCs and spell attack rolls advances from trained to expert." };
+            yield return new TextBlock { Id = Guid.Parse("e7c9f12f-77fa-4040-81c5-be6183be6566"), Type = TextBlockType.Text, Text = $"You refine your halcyon magic. You gain two common 4th-level halcyon spells and two 5th-level halcyon spells. You also gain a 4th-level halcyon spell slot and a 5th-level halcyon spell slot. Your proficiency rank in either arcane or primal spell DCs and spell attack rolls advances from trained to expert." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

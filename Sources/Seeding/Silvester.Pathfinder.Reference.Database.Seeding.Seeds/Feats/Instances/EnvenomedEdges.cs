@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13c55185-a261-4a95-aaa8-1695f776f951"), Type = TextBlockType.Text, Text = "With a combination of your poison glands and herbal concoctions, you can consistently deliver venomous attacks when you hit an enemy's weak points. When you critically hit using a (action: Strike) with a weapon or unarmed attack and deal slashing or piercing damage with that (action: Strike), you deal an additional 1d4 persistent poison damage to your target." };
+            yield return new TextBlock { Id = Guid.Parse("13c55185-a261-4a95-aaa8-1695f776f951"), Type = TextBlockType.Text, Text = $"With a combination of your poison glands and herbal concoctions, you can consistently deliver venomous attacks when you hit an enemy's weak points. When you critically hit using a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a weapon or unarmed attack and deal slashing or piercing damage with that {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, you deal an additional 1d4 persistent poison damage to your target." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

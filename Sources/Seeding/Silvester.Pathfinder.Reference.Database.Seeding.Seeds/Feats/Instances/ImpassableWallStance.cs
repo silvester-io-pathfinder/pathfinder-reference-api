@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bcd00787-c1e5-4b25-ad25-5dcef8851d12"), Type = TextBlockType.Text, Text = "~ Access: The following class feat is available to Knights of Lastwall." };
-            yield return new TextBlock { Id = Guid.Parse("19a9e46e-0dea-4af9-90f1-fdb8924990f0"), Type = TextBlockType.Text, Text = "You refuse to let foes past your guard. As long as you are in this stance, when you critically hit with an (feat: Attack of Opportunity) triggered by a (trait: move) action, you disrupt that action." };
+            yield return new TextBlock { Id = Guid.Parse("bcd00787-c1e5-4b25-ad25-5dcef8851d12"), Type = TextBlockType.Text, Text = $"~ Access: The following class feat is available to Knights of Lastwall." };
+            yield return new TextBlock { Id = Guid.Parse("19a9e46e-0dea-4af9-90f1-fdb8924990f0"), Type = TextBlockType.Text, Text = $"You refuse to let foes past your guard. As long as you are in this stance, when you critically hit with an {ToMarkdownLink<Models.Entities.Feat>("Attack of Opportunity", Feats.Instances.AttackOfOpportunity.ID)} triggered by a {ToMarkdownLink<Models.Entities.Trait>("move", Traits.Instances.Move.ID)} action, you disrupt that action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

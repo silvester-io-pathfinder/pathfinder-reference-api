@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("be68e52f-3c3b-493b-847f-a2b35b2679da"), Type = TextBlockType.Text, Text = "You learn the (spell: lifelink surge) link spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("be68e52f-3c3b-493b-847f-a2b35b2679da"), Type = TextBlockType.Text, Text = $"You learn the {ToMarkdownLink<Models.Entities.Spell>("lifelink surge", Spells.Instances.LifelinkSurge.ID)} link spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

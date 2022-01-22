@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c689bc44-bd0b-47eb-8327-63cc670ba6b5"), Type = TextBlockType.Text, Text = "You exude an aura of resolve. You and allies within 15 feet of you gain a +2 status bonus to Will saving throws against mental effects." };
+            yield return new TextBlock { Id = Guid.Parse("c689bc44-bd0b-47eb-8327-63cc670ba6b5"), Type = TextBlockType.Text, Text = $"You exude an aura of resolve. You and allies within 15 feet of you gain a +2 status bonus to Will saving throws against mental effects." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

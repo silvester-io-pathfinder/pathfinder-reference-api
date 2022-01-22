@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c4dda853-98b8-4872-baa7-92615caa3836"), Type = TextBlockType.Text, Text = "The vulture consumes a piece of the defeated foe, regaining 18 Hit Points. If the vulture is a specialized animal companion, increase the Hit Points regained to 30." };
+            yield return new TextBlock { Id = Guid.Parse("c4dda853-98b8-4872-baa7-92615caa3836"), Type = TextBlockType.Text, Text = $"The vulture consumes a piece of the defeated foe, regaining 18 Hit Points. If the vulture is a specialized animal companion, increase the Hit Points regained to 30." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

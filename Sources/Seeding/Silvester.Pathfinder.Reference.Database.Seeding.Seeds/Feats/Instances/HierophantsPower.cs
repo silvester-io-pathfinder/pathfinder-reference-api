@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8a39885d-1cdf-450f-ba5a-f13b3cf1bd4e"), Type = TextBlockType.Text, Text = "You have entwined yourself with the natural world, and its full power flows through you. You gain an additional 10th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("8a39885d-1cdf-450f-ba5a-f13b3cf1bd4e"), Type = TextBlockType.Text, Text = $"You have entwined yourself with the natural world, and its full power flows through you. You gain an additional 10th-level spell slot." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

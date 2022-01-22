@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("55cd9e0f-974c-4e64-b1a2-1e21a165521f"), Type = TextBlockType.Text, Text = "By spending a moment to focus, you can ensure your attack strikes true. Make a ranged weapon (Action: Strike). On this (Action: Strike), you gain a +2 circumstance bonus to the attack roll and ignore the target's concealed condition." };
+            yield return new TextBlock { Id = Guid.Parse("55cd9e0f-974c-4e64-b1a2-1e21a165521f"), Type = TextBlockType.Text, Text = $"By spending a moment to focus, you can ensure your attack strikes true. Make a ranged weapon {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. On this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, you gain a +2 circumstance bonus to the attack roll and ignore the target's concealed condition." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

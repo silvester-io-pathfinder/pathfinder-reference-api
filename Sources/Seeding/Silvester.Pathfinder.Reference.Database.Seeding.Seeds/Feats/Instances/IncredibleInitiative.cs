@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("579be610-706b-46f9-ae13-d290dad98682"), Type = TextBlockType.Text, Text = "You react more quickly than others can. You gain a +2 circumstance bonus to initiative rolls." };
+            yield return new TextBlock { Id = Guid.Parse("579be610-706b-46f9-ae13-d290dad98682"), Type = TextBlockType.Text, Text = $"You react more quickly than others can. You gain a +2 circumstance bonus to initiative rolls." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("152a6bc0-15dc-43ad-abfa-24e4284140ce"), Type = TextBlockType.Text, Text = "You can unleash an impactful cone of force by channeling your ki. You gain the (spell: ki blast) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("152a6bc0-15dc-43ad-abfa-24e4284140ce"), Type = TextBlockType.Text, Text = $"You can unleash an impactful cone of force by channeling your ki. You gain the {ToMarkdownLink<Models.Entities.Spell>("ki blast", Spells.Instances.KiBlast.ID)} ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

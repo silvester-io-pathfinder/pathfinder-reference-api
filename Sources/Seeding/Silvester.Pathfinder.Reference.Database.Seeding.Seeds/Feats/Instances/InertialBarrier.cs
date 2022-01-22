@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8e0622d5-d1c6-44a6-8322-b90c1d255d3c"), Type = TextBlockType.Text, Text = "Your spell leaves behind barriers that reduce shock and motion. Use this amp in place of the psi cantrip's normal amp entry." };
-            yield return new TextBlock { Id = Guid.Parse("5e967067-08d6-4a78-8a97-2593dbdc736c"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("85a3b005-8358-47c0-8b70-91b3b890442e"), Type = TextBlockType.Text, Text = "~ Amp: You or one target of the spell gain resistance to physical damage equal to 2 + the spell's level until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("8e0622d5-d1c6-44a6-8322-b90c1d255d3c"), Type = TextBlockType.Text, Text = $"Your spell leaves behind barriers that reduce shock and motion. Use this amp in place of the psi cantrip's normal amp entry." };
+            yield return new TextBlock { Id = Guid.Parse("5e967067-08d6-4a78-8a97-2593dbdc736c"), Type = TextBlockType.Text, Text = $"----" };
+            yield return new TextBlock { Id = Guid.Parse("85a3b005-8358-47c0-8b70-91b3b890442e"), Type = TextBlockType.Text, Text = $"~ Amp: You or one target of the spell gain resistance to physical damage equal to 2 + the spell's level until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

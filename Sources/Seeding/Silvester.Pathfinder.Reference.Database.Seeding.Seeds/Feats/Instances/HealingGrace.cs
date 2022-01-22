@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("86c6b833-fded-4dd1-94ec-40aba9e83dbf"), Type = TextBlockType.Text, Text = "You gain fast healing equal to half your level. You can cast (spell: heal) once as an innate spell with a level equal to half your level rounded up." };
-            yield return new TextBlock { Id = Guid.Parse("10bf55eb-b262-486b-8041-8a568ab93921"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ Reduce all healing you would receive or grant with a spell by half your level." };
+            yield return new TextBlock { Id = Guid.Parse("86c6b833-fded-4dd1-94ec-40aba9e83dbf"), Type = TextBlockType.Text, Text = $"You gain fast healing equal to half your level. You can cast {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} once as an innate spell with a level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("10bf55eb-b262-486b-8041-8a568ab93921"), Type = TextBlockType.Text, Text = $"__Corruption Flaw__ Reduce all healing you would receive or grant with a spell by half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

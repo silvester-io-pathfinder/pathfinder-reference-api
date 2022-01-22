@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5e7a4fa7-18b9-4ced-a838-9ecd18f0e01d"), Type = TextBlockType.Text, Text = "Your eidolon evolves more acute senses. Your eidolon gains low-light vision and darkvision, as well as scent as an imprecise sense with a range of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("5e7a4fa7-18b9-4ced-a838-9ecd18f0e01d"), Type = TextBlockType.Text, Text = $"Your eidolon evolves more acute senses. Your eidolon gains low-light vision and darkvision, as well as scent as an imprecise sense with a range of 30 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

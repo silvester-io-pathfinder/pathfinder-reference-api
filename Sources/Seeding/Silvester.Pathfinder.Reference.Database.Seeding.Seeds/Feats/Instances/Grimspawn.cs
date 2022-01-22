@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("920c6391-6a82-4345-ba31-f68f9bab0930"), Type = TextBlockType.Text, Text = "Your lineage traces back to a daemon, one of the manifestations of horrific forms of death that devour souls within their foul home of Abaddon. As a result, you cling tenaciously to the last shreds of your own life force. You gain the (feat: Diehard) feat." };
+            yield return new TextBlock { Id = Guid.Parse("920c6391-6a82-4345-ba31-f68f9bab0930"), Type = TextBlockType.Text, Text = $"Your lineage traces back to a daemon, one of the manifestations of horrific forms of death that devour souls within their foul home of Abaddon. As a result, you cling tenaciously to the last shreds of your own life force. You gain the {ToMarkdownLink<Models.Entities.Feat>("Diehard", Feats.Instances.Diehard.ID)} feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

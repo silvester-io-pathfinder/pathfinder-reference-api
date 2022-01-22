@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81e7830f-9591-44a2-b72d-bd8d1edc1a92"), Type = TextBlockType.Text, Text = "You favor traditional halfling weapons, so you've learned how to use them more effectively. You have the trained proficiency with the sling, halfling sling staff, and shortsword." };
-            yield return new TextBlock { Id = Guid.Parse("4bc5f2bc-c26d-4a40-8ae9-ea75f0f0bd14"), Type = TextBlockType.Text, Text = "In addition, you gain access to all uncommon halfling weapons. For the purpose of determining your proficiency, martial halfling weapons are simple weapons and advanced halfling weapons are martial weapons." };
+            yield return new TextBlock { Id = Guid.Parse("81e7830f-9591-44a2-b72d-bd8d1edc1a92"), Type = TextBlockType.Text, Text = $"You favor traditional halfling weapons, so you've learned how to use them more effectively. You have the trained proficiency with the sling, halfling sling staff, and shortsword." };
+            yield return new TextBlock { Id = Guid.Parse("4bc5f2bc-c26d-4a40-8ae9-ea75f0f0bd14"), Type = TextBlockType.Text, Text = $"In addition, you gain access to all uncommon halfling weapons. For the purpose of determining your proficiency, martial halfling weapons are simple weapons and advanced halfling weapons are martial weapons." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

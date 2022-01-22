@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ee1e9c2a-a3e0-4f0a-8851-55e2637612d5"), Type = TextBlockType.Text, Text = "You have begun the final steps to reaching your full potential. Your wings are always in their majestic form without you needing to use (feat: Energize Wings), granting you a permanent fly Speed. Furthermore, sprites recognize you as a powerful hero (or villain) by your unique wings and are appropriately impressed. You gain a +2 circumstance bonus on all Diplomacy and Intimidation checks against sprites and gain the benefits of the (feat: Glad-Hand) skill feat against other sprites, without taking a -5 penalty to your Diplomacy check." };
+            yield return new TextBlock { Id = Guid.Parse("ee1e9c2a-a3e0-4f0a-8851-55e2637612d5"), Type = TextBlockType.Text, Text = $"You have begun the final steps to reaching your full potential. Your wings are always in their majestic form without you needing to use {ToMarkdownLink<Models.Entities.Feat>("Energize Wings", Feats.Instances.EnergizeWings.ID)}, granting you a permanent fly Speed. Furthermore, sprites recognize you as a powerful hero (or villain) by your unique wings and are appropriately impressed. You gain a +2 circumstance bonus on all Diplomacy and Intimidation checks against sprites and gain the benefits of the {ToMarkdownLink<Models.Entities.Feat>("Glad-Hand", Feats.Instances.GladHand.ID)} skill feat against other sprites, without taking a -5 penalty to your Diplomacy check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

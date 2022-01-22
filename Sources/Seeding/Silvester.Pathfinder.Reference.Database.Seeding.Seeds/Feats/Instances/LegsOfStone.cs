@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e045bdee-a675-4736-98e3-cceca960e4e7"), Type = TextBlockType.Text, Text = "You gain a +2 status bonus to your Fortitude and Reflex DCs against attempts to (action: Shove) or (action: Trip) you. You can (action: Shove) creatures even if you don't have a hand free. When you successfully (action: Shove) a foe, you can (action: Stride) away from your opponent (instead of toward it), but you must move the same distance in the opposite direction from where you (action: Shoved | Shove) it." };
+            yield return new TextBlock { Id = Guid.Parse("e045bdee-a675-4736-98e3-cceca960e4e7"), Type = TextBlockType.Text, Text = $"You gain a +2 status bonus to your Fortitude and Reflex DCs against attempts to {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} you. You can {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} creatures even if you don't have a hand free. When you successfully {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} a foe, you can {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} away from your opponent (instead of toward it), but you must move the same distance in the opposite direction from where you {ToMarkdownLink<Models.Entities.SkillAction>("Shoved", SkillActions.Instances.Shove.ID)} it." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

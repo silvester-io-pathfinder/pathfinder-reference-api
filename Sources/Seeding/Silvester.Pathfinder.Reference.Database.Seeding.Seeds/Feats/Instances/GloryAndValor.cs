@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9e7fb920-1971-4c3f-a569-b86dda68e157"), Type = TextBlockType.Text, Text = "You are descended from the einherji, the worthy warriors of chaos. You call upon your ascendant blood with a mighty cry that fills you with a revitalizing energy for 1 minute or until you critically fail a (action: Strike), whichever comes first. For the duration, the first time each round you successfully (action: Strike) a creature of your level or higher, you regain Hit Points equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("9e7fb920-1971-4c3f-a569-b86dda68e157"), Type = TextBlockType.Text, Text = $"You are descended from the einherji, the worthy warriors of chaos. You call upon your ascendant blood with a mighty cry that fills you with a revitalizing energy for 1 minute or until you critically fail a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, whichever comes first. For the duration, the first time each round you successfully {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} a creature of your level or higher, you regain Hit Points equal to half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

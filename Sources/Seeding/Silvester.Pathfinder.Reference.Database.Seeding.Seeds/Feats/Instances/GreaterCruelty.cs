@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d545130c-5fa8-4a51-878f-271f358a7d4d"), Type = TextBlockType.Text, Text = "The extent of the corruption within you does more than simply sap your foes' strength, it devastates their minds and reflexes. When you use (feat: Cruelty), choose whether you want to make the creature enfeebled as normal, to make it clumsy 1 on a failed save (clumsy 2 on a critical failure), or to make it stupefied 1 on a failed save (stupefied 2 on a critical failure)." };
+            yield return new TextBlock { Id = Guid.Parse("d545130c-5fa8-4a51-878f-271f358a7d4d"), Type = TextBlockType.Text, Text = $"The extent of the corruption within you does more than simply sap your foes' strength, it devastates their minds and reflexes. When you use {ToMarkdownLink<Models.Entities.Feat>("Cruelty", Feats.Instances.Cruelty.ID)}, choose whether you want to make the creature enfeebled as normal, to make it clumsy 1 on a failed save (clumsy 2 on a critical failure), or to make it stupefied 1 on a failed save (stupefied 2 on a critical failure)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

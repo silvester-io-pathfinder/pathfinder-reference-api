@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("829cffb2-7681-400f-a29e-3e77f416dd1c"), Type = TextBlockType.Text, Text = "You trap energy from the last spell you cast within your body, coating your flesh in a protective ward. Until the start of your next turn, you gain resistance 5 to one type of energy damage dealt by the spell you just cast." };
+            yield return new TextBlock { Id = Guid.Parse("829cffb2-7681-400f-a29e-3e77f416dd1c"), Type = TextBlockType.Text, Text = $"You trap energy from the last spell you cast within your body, coating your flesh in a protective ward. Until the start of your next turn, you gain resistance 5 to one type of energy damage dealt by the spell you just cast." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

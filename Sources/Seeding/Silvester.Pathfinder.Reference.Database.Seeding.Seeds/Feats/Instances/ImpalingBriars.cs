@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("289b5611-6aa2-43b6-a9c8-82503f3a828a"), Type = TextBlockType.Text, Text = "You can fill an area with devastating briars that impale and impede your foes. You gain the (Spell: impaling briars) order spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("289b5611-6aa2-43b6-a9c8-82503f3a828a"), Type = TextBlockType.Text, Text = $"You can fill an area with devastating briars that impale and impede your foes. You gain the {ToMarkdownLink<Models.Entities.Spell>("impaling briars", Spells.Instances.ImpalingBriars.ID)} order spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

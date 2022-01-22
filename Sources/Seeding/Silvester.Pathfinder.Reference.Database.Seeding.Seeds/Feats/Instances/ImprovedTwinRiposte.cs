@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("36242a7a-5ba4-4685-aec8-36dc0431ac3b"), Type = TextBlockType.Text, Text = "Your weapons are a blur, blocking and biting at your foes. At the start of each of your turns, you gain an additional reaction that you can use only to perform a (feat: Twin Riposte). You can use this extra reaction even if you are not benefiting from (feat: Twin Parry)." };
+            yield return new TextBlock { Id = Guid.Parse("36242a7a-5ba4-4685-aec8-36dc0431ac3b"), Type = TextBlockType.Text, Text = $"Your weapons are a blur, blocking and biting at your foes. At the start of each of your turns, you gain an additional reaction that you can use only to perform a {ToMarkdownLink<Models.Entities.Feat>("Twin Riposte", Feats.Instances.TwinRiposte.ID)}. You can use this extra reaction even if you are not benefiting from {ToMarkdownLink<Models.Entities.Feat>("Twin Parry", Feats.Instances.TwinParry.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

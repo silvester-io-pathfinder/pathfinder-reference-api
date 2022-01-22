@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("039d0bd1-3b90-47fb-ad33-45efb0b5192c"), Type = TextBlockType.Text, Text = "You learn a greater revelation spell associated with your mystery. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("039d0bd1-3b90-47fb-ad33-45efb0b5192c"), Type = TextBlockType.Text, Text = $"You learn a greater revelation spell associated with your mystery. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

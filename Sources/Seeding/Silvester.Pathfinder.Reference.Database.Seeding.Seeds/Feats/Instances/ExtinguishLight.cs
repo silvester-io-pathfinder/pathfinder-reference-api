@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f130d9da-3db1-421d-878e-0b9317f57180"), Type = TextBlockType.Text, Text = "You wrap shadow around a single unattended light source within 120 feet that's no larger than a (item: torch). Any non-magical light source you target is automatically extinguished. For magical light sources, attempt a counteract check using your Fortitude or Thievery modifier against the target's DC. Your counteract level is equal to half your level rounded up. Successfully counteracting the light source suppresses its ability to produce light for 1 minute, but not any other effects. If you're in dim light or darkness when you Extinguish Light, its range is 240 feet." };
+            yield return new TextBlock { Id = Guid.Parse("f130d9da-3db1-421d-878e-0b9317f57180"), Type = TextBlockType.Text, Text = $"You wrap shadow around a single unattended light source within 120 feet that's no larger than a {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("torch", Items.AdventuringGears.Instances.Torch.ID)}. Any non-magical light source you target is automatically extinguished. For magical light sources, attempt a counteract check using your Fortitude or Thievery modifier against the target's DC. Your counteract level is equal to half your level rounded up. Successfully counteracting the light source suppresses its ability to produce light for 1 minute, but not any other effects. If you're in dim light or darkness when you Extinguish Light, its range is 240 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

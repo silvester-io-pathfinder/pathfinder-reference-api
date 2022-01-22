@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("11a5ab39-e987-4495-90d2-86e9ddeaf4d4"), Type = TextBlockType.Text, Text = "You gain the appropriate devotion spell for your cause. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by praying or serving your deity. (For more on devotion spells, see page 107.)" };
+            yield return new TextBlock { Id = Guid.Parse("11a5ab39-e987-4495-90d2-86e9ddeaf4d4"), Type = TextBlockType.Text, Text = $"You gain the appropriate devotion spell for your cause. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can {ToMarkdownLink<Models.Entities.Activity>("Refocus", Activities.Instances.Refocus.ID)} by praying or serving your deity. (For more on devotion spells, see page 107.)" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

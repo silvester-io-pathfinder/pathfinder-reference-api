@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d553a629-2c11-43da-b00f-4a675bfa23b4"), Type = TextBlockType.Text, Text = "You are descended from the wondrous garudas, and their keen senses manifest in your magical prowess. You can cast (spell: blur) and (spell: see invisibility) each once per day as 2nd-level divine innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("d553a629-2c11-43da-b00f-4a675bfa23b4"), Type = TextBlockType.Text, Text = $"You are descended from the wondrous garudas, and their keen senses manifest in your magical prowess. You can cast {ToMarkdownLink<Models.Entities.Spell>("blur", Spells.Instances.Blur.ID)} and {ToMarkdownLink<Models.Entities.Spell>("see invisibility", Spells.Instances.SeeInvisibility.ID)} each once per day as 2nd-level divine innate spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

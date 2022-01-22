@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5fe6d117-d896-4dbc-9771-c06e5b81160a"), Type = TextBlockType.Text, Text = "You spend 1 minute briefing up to four allies about one lead you're pursuing. Those allies gain the same circumstance bonus you do from (feat: Pursue a Lead) to checks to investigate that lead. This bonus lasts until you cease pursing that lead or for 1 day, whichever comes first. This doesn't confer any other benefits of pursuing a lead, such as adding the circumstance bonus to your saves with (feat: Detective's Readiness)." };
+            yield return new TextBlock { Id = Guid.Parse("5fe6d117-d896-4dbc-9771-c06e5b81160a"), Type = TextBlockType.Text, Text = $"You spend 1 minute briefing up to four allies about one lead you're pursuing. Those allies gain the same circumstance bonus you do from {ToMarkdownLink<Models.Entities.Feat>("Pursue a Lead", Feats.Instances.PursueALead.ID)} to checks to investigate that lead. This bonus lasts until you cease pursing that lead or for 1 day, whichever comes first. This doesn't confer any other benefits of pursuing a lead, such as adding the circumstance bonus to your saves with {ToMarkdownLink<Models.Entities.Feat>("Detective's Readiness", Feats.Instances.DetectivesReadiness.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4be90446-a617-4847-b67c-1c7204214264"), Type = TextBlockType.Text, Text = "Like many fiends, you have the supernatural ability to teleport yourself to safety. Once per day, you can cast (spell: dimension door) as a 5th-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("4be90446-a617-4847-b67c-1c7204214264"), Type = TextBlockType.Text, Text = $"Like many fiends, you have the supernatural ability to teleport yourself to safety. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("dimension door", Spells.Instances.DimensionDoor.ID)} as a 5th-level divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

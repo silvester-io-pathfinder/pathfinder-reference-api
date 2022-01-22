@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("91f3717d-8d55-409c-88cc-2c8620710b20"), Type = TextBlockType.Text, Text = "You become trained in simple and martial crossbows and simple and martial firearms. You become trained in gunslinger class DC." };
-            yield return new TextBlock { Id = Guid.Parse("f99e5c98-cc87-4b16-b442-1489f38752b9"), Type = TextBlockType.Text, Text = "Choose a gunslinger way. You become trained in your way's associated skill; if you were already trained in this skill, you become trained in a skill of your choice. You don't gain any other abilities from your choice of way." };
+            yield return new TextBlock { Id = Guid.Parse("91f3717d-8d55-409c-88cc-2c8620710b20"), Type = TextBlockType.Text, Text = $"You become trained in simple and martial crossbows and simple and martial firearms. You become trained in gunslinger class DC." };
+            yield return new TextBlock { Id = Guid.Parse("f99e5c98-cc87-4b16-b442-1489f38752b9"), Type = TextBlockType.Text, Text = $"Choose a gunslinger way. You become trained in your way's associated skill; if you were already trained in this skill, you become trained in a skill of your choice. You don't gain any other abilities from your choice of way." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

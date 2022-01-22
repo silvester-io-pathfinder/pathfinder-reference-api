@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Ammunition
         {
             return new SourcePage
             {
-                Id = Guid.Parse("73692529-4560-47a6-988d-7e43046a44ba"),
+                Id = Guid.Parse("2ba8e8b9-b86e-4785-b6fe-f707b5f0d910"),
                 SourceId = Sources.Instances.CoreRulebook.ID,
                 Page = 281
             };

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("115366f5-288f-483b-ab8a-ccbac91f9079"), Type = TextBlockType.Text, Text = "You learn the (spell: inspire defense) composition cantrip, which protects you and allies." };
+            yield return new TextBlock { Id = Guid.Parse("115366f5-288f-483b-ab8a-ccbac91f9079"), Type = TextBlockType.Text, Text = $"You learn the {ToMarkdownLink<Models.Entities.Spell>("inspire defense", Spells.Instances.InspireDefense.ID)} composition cantrip, which protects you and allies." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

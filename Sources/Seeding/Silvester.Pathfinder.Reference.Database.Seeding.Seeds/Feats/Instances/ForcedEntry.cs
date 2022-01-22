@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("546f2391-ec1c-4c16-ae65-20b12fe1acd2"), Type = TextBlockType.Text, Text = "You are trained to preserve the archaeological value of your location when entering. You don't take a penalty to (action: Force Open) doors, windows, or containers without a (item: crowbar). If you roll a success on a check to (action: Force Open), you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("546f2391-ec1c-4c16-ae65-20b12fe1acd2"), Type = TextBlockType.Text, Text = $"You are trained to preserve the archaeological value of your location when entering. You don't take a penalty to {ToMarkdownLink<Models.Entities.SkillAction>("Force Open", SkillActions.Instances.ForceOpen.ID)} doors, windows, or containers without a {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("crowbar", Items.AdventuringGears.Instances.Crowbar.ID)}. If you roll a success on a check to {ToMarkdownLink<Models.Entities.SkillAction>("Force Open", SkillActions.Instances.ForceOpen.ID)}, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

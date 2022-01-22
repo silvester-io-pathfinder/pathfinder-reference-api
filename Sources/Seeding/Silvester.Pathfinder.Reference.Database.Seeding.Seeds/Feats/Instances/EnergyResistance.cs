@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f17d407b-fd79-4489-9471-a60c47c42332"), Type = TextBlockType.Text, Text = "Your eidolon has stronger resistance. Its resistance from (feat: Energy Heart) and (feat: Dual Energy Heart) increase to your level." };
+            yield return new TextBlock { Id = Guid.Parse("f17d407b-fd79-4489-9471-a60c47c42332"), Type = TextBlockType.Text, Text = $"Your eidolon has stronger resistance. Its resistance from {ToMarkdownLink<Models.Entities.Feat>("Energy Heart", Feats.Instances.EnergyHeart.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Dual Energy Heart", Feats.Instances.DualEnergyHeart.ID)} increase to your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

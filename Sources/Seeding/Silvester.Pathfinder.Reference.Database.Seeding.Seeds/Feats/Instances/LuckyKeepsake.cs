@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("14dfa08b-df02-47ef-a54d-935bace95ec0"), Type = TextBlockType.Text, Text = "You have a keepsake that grants you luck. You gain a +1 circumstance bonus to saves against spells and magical effects at all times, not just when you use (action: Leshy Superstition). If you lose the keepsake, you lose the bonus until you designate a new keepsake, typically over the course of a week." };
+            yield return new TextBlock { Id = Guid.Parse("14dfa08b-df02-47ef-a54d-935bace95ec0"), Type = TextBlockType.Text, Text = $"You have a keepsake that grants you luck. You gain a +1 circumstance bonus to saves against spells and magical effects at all times, not just when you use {ToMarkdownLink<Models.Entities.Feat>("Leshy Superstition", Feats.Instances.LeshySuperstition.ID)}. If you lose the keepsake, you lose the bonus until you designate a new keepsake, typically over the course of a week." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

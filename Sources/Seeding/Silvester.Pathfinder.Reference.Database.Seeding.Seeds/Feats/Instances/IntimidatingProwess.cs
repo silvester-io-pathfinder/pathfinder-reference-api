@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("decff526-1de4-431a-8b72-1e24883d7051"), Type = TextBlockType.Text, Text = "In situations where you can physically menace the target when you (action: Coerce) or (action: Demoralize), you gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty for not sharing a language. If your Strength score is 20 or higher and you are a master in Intimidation, this bonus increases to +2." };
+            yield return new TextBlock { Id = Guid.Parse("decff526-1de4-431a-8b72-1e24883d7051"), Type = TextBlockType.Text, Text = $"In situations where you can physically menace the target when you {ToMarkdownLink<Models.Entities.SkillAction>("Coerce", SkillActions.Instances.Coerce.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)}, you gain a +1 circumstance bonus to your Intimidation check and you ignore the penalty for not sharing a language. If your Strength score is 20 or higher and you are a master in Intimidation, this bonus increases to +2." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2de2cede-5f66-4641-ad7c-a45760e51bb6"), Type = TextBlockType.Text, Text = "Your luck guides you to look the right way and aim your blows unerringly. You can use (Feat: Halfling Luck) twice per day: once in response to its normal trigger, and once when you fail a Perception check or attack roll instead of the normal trigger." };
+            yield return new TextBlock { Id = Guid.Parse("2de2cede-5f66-4641-ad7c-a45760e51bb6"), Type = TextBlockType.Text, Text = $"Your luck guides you to look the right way and aim your blows unerringly. You can use {ToMarkdownLink<Models.Entities.Feat>("Halfling Luck", Feats.Instances.HalflingLuck.ID)} twice per day: once in response to its normal trigger, and once when you fail a Perception check or attack roll instead of the normal trigger." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

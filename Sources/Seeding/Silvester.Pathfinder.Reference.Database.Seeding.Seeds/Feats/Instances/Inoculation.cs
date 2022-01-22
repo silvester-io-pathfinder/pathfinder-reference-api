@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9bc309e4-d57d-441e-9648-6b12ed0a7b00"), Type = TextBlockType.Text, Text = "You have practice combating plague, and your patients are less likely to succumb to the same disease again for a time. When you successfully (action: Treat a Disease | Treat Disease) on someone and they fully recover from the disease, they gain a +2 circumstance bonus to saving throws against that same disease for 1 week." };
+            yield return new TextBlock { Id = Guid.Parse("9bc309e4-d57d-441e-9648-6b12ed0a7b00"), Type = TextBlockType.Text, Text = $"You have practice combating plague, and your patients are less likely to succumb to the same disease again for a time. When you successfully {ToMarkdownLink<Models.Entities.SkillAction>("Treat a Disease", SkillActions.Instances.TreatDisease.ID)} on someone and they fully recover from the disease, they gain a +2 circumstance bonus to saving throws against that same disease for 1 week." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4f1f4e68-2e46-4551-87d1-eea30e1b192c"), Type = TextBlockType.Text, Text = "Your recollection of monsters is magically enhanced by luck. You gain the monster (spell: hunter's luck) warden spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("4f1f4e68-2e46-4551-87d1-eea30e1b192c"), Type = TextBlockType.Text, Text = $"Your recollection of monsters is magically enhanced by luck. You gain the monster {ToMarkdownLink<Models.Entities.Spell>("hunter's luck", Spells.Instances.HuntersLuck.ID)} warden spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

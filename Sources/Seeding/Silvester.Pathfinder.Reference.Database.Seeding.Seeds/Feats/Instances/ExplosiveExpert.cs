@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("951bb3c2-65ed-4837-91ad-956f9dbfe319"), Type = TextBlockType.Text, Text = "~ Access: You are from Dongun Hold or Alkenstar." };
-            yield return new TextBlock { Id = Guid.Parse("2119e911-f4f9-4b57-a63e-97e8e9701c43"), Type = TextBlockType.Text, Text = "You have continued training in volatile weapons and gained a deeper understanding. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency for simple and martial bombs and firearms." };
+            yield return new TextBlock { Id = Guid.Parse("951bb3c2-65ed-4837-91ad-956f9dbfe319"), Type = TextBlockType.Text, Text = $"~ Access: You are from Dongun Hold or Alkenstar." };
+            yield return new TextBlock { Id = Guid.Parse("2119e911-f4f9-4b57-a63e-97e8e9701c43"), Type = TextBlockType.Text, Text = $"You have continued training in volatile weapons and gained a deeper understanding. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency for simple and martial bombs and firearms." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

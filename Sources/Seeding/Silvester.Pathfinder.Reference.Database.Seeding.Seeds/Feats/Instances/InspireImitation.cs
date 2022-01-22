@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5c5739e7-f7cc-4932-9860-1cde2a35fa44"), Type = TextBlockType.Text, Text = "Your own actions inspire your allies to great achievements. Whenever you critically succeed at a skill check, you automatically qualify to use the (action: Aid) reaction when attempting to help an ally using the same skill, even without spending an action to prepare to do so." };
+            yield return new TextBlock { Id = Guid.Parse("5c5739e7-f7cc-4932-9860-1cde2a35fa44"), Type = TextBlockType.Text, Text = $"Your own actions inspire your allies to great achievements. Whenever you critically succeed at a skill check, you automatically qualify to use the {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)} reaction when attempting to help an ally using the same skill, even without spending an action to prepare to do so." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

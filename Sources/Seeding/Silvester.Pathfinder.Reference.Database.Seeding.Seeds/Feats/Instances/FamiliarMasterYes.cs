@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("199db4bb-8c7e-490b-a61d-6e1a87425b4c"), Type = TextBlockType.Text, Text = "You already have a familiar, you gain the (feat: Enhanced Familiar) feat." };
+            yield return new TextBlock { Id = Guid.Parse("199db4bb-8c7e-490b-a61d-6e1a87425b4c"), Type = TextBlockType.Text, Text = $"You already have a familiar, you gain the {ToMarkdownLink<Models.Entities.Feat>("Enhanced Familiar", Feats.Instances.EnhancedFamiliar.ID)} feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

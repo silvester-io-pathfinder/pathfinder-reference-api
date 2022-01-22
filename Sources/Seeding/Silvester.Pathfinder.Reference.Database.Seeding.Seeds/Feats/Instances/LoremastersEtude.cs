@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("875082a1-7fd6-4a06-bcee-896c411b861e"), Type = TextBlockType.Text, Text = "You magically unlock memories, making them easier to recall. You learn the (spell: loremaster's etude) composition spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("875082a1-7fd6-4a06-bcee-896c411b861e"), Type = TextBlockType.Text, Text = $"You magically unlock memories, making them easier to recall. You learn the {ToMarkdownLink<Models.Entities.Spell>("loremaster's etude", Spells.Instances.LoremastersEtude.ID)} composition spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

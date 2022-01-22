@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dfa2f91e-e8fb-4f4d-bfac-8d88d664818d"), Type = TextBlockType.Text, Text = "You can cast (spell: death ward) as a 5th-level divine innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("dfa2f91e-e8fb-4f4d-bfac-8d88d664818d"), Type = TextBlockType.Text, Text = $"You can cast {ToMarkdownLink<Models.Entities.Spell>("death ward", Spells.Instances.DeathWard.ID)} as a 5th-level divine innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

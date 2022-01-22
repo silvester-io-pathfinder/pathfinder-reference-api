@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2756daab-b58e-4e5e-9131-0c3c63d3797e"), Type = TextBlockType.Text, Text = "You can use ki to move with extraordinary speed and make yourself harder to hit. You gain the (spell: ki rush) ki spell and a focus pool of 1 Focus Point." };
+            yield return new TextBlock { Id = Guid.Parse("2756daab-b58e-4e5e-9131-0c3c63d3797e"), Type = TextBlockType.Text, Text = $"You can use ki to move with extraordinary speed and make yourself harder to hit. You gain the {ToMarkdownLink<Models.Entities.Spell>("ki rush", Spells.Instances.KiRush.ID)} ki spell and a focus pool of 1 Focus Point." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

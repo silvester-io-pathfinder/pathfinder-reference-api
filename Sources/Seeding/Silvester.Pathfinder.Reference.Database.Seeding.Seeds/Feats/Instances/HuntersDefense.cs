@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b161997a-0b36-402d-822c-86a484605d73"), Type = TextBlockType.Text, Text = "Your canny understanding of natural and primal creatures helps you predict and dodge their attacks. The triggering attack roll targets your Nature DC instead of your AC. Though this allows you to avoid taking penalties to your AC, it doesn't remove any conditions or other effects causing such penalties. For example, an enemy with sneak attack would still deal extra damage to you for being flat-footed, even though you wouldn't take the –2 circumstance penalty against the attack." };
+            yield return new TextBlock { Id = Guid.Parse("b161997a-0b36-402d-822c-86a484605d73"), Type = TextBlockType.Text, Text = $"Your canny understanding of natural and primal creatures helps you predict and dodge their attacks. The triggering attack roll targets your Nature DC instead of your AC. Though this allows you to avoid taking penalties to your AC, it doesn't remove any conditions or other effects causing such penalties. For example, an enemy with sneak attack would still deal extra damage to you for being flat-footed, even though you wouldn't take the –2 circumstance penalty against the attack." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

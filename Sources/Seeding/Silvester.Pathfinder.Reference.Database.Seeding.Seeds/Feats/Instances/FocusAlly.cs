@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6f5910e-a513-4e28-83da-633c1b2aa49c"), Type = TextBlockType.Text, Text = "You're so focused on your allies that you can help them to recenter when something would take them out of the fight. Your ally rerolls the failed saving throw. That ally must take the second result." };
+            yield return new TextBlock { Id = Guid.Parse("a6f5910e-a513-4e28-83da-633c1b2aa49c"), Type = TextBlockType.Text, Text = $"You're so focused on your allies that you can help them to recenter when something would take them out of the fight. Your ally rerolls the failed saving throw. That ally must take the second result." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

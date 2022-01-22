@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e9871d8e-b2bc-4e8f-8940-1b352246964b"), Type = TextBlockType.Text, Text = "Your proficiency rank for Reflex saves increases to master." };
+            yield return new TextBlock { Id = Guid.Parse("e9871d8e-b2bc-4e8f-8940-1b352246964b"), Type = TextBlockType.Text, Text = $"Your proficiency rank for Reflex saves increases to master." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

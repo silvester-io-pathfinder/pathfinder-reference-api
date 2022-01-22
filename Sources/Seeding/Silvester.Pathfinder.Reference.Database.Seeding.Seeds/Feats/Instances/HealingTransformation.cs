@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9507b9a6-b8d7-4367-a89d-fc41e3832234"), Type = TextBlockType.Text, Text = "You can take advantage of shapechanging magic to close wounds and patch injuries. If your next action is to cast a non-cantrip (trait: polymorph) spell that targets only one creature, your polymorph spell also restores 1d6 Hit Points per spell level to that creature. This is a (trait: healing) effect." };
+            yield return new TextBlock { Id = Guid.Parse("9507b9a6-b8d7-4367-a89d-fc41e3832234"), Type = TextBlockType.Text, Text = $"You can take advantage of shapechanging magic to close wounds and patch injuries. If your next action is to cast a non-cantrip {ToMarkdownLink<Models.Entities.Trait>("polymorph", Traits.Instances.Polymorph.ID)} spell that targets only one creature, your polymorph spell also restores 1d6 Hit Points per spell level to that creature. This is a {ToMarkdownLink<Models.Entities.Trait>("healing", Traits.Instances.Healing.ID)} effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b73974d0-ca56-41d4-bb00-12e033174b54"), Type = TextBlockType.Text, Text = "You can (action: Craft) magic items, though some have other requirements, as listed under the item. When you select this feat, you add the formulas for four common magic items of 2nd level or lower to your (item: formula book)." };
+            yield return new TextBlock { Id = Guid.Parse("b73974d0-ca56-41d4-bb00-12e033174b54"), Type = TextBlockType.Text, Text = $"You can {ToMarkdownLink<Models.Entities.SkillAction>("Craft", SkillActions.Instances.Craft.ID)} magic items, though some have other requirements, as listed under the item. When you select this feat, you add the formulas for four common magic items of 2nd level or lower to your {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("formula book", Items.AdventuringGears.Instances.FormulaBook.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

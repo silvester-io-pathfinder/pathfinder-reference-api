@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7a595022-87e2-4f95-8d23-239e724fc162"), Type = TextBlockType.Text, Text = "You have an exceptional connection to one of your lesser implements, allowing you to tap into more of its power. You gain the adept benefit for one of your implements for which you have only the initiate benefit." };
+            yield return new TextBlock { Id = Guid.Parse("7a595022-87e2-4f95-8d23-239e724fc162"), Type = TextBlockType.Text, Text = $"You have an exceptional connection to one of your lesser implements, allowing you to tap into more of its power. You gain the adept benefit for one of your implements for which you have only the initiate benefit." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

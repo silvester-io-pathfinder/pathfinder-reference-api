@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("345fb126-7d32-4606-8a17-69b377f41f74"), Type = TextBlockType.Text, Text = "Your gnome affinity blends with your class training, granting you great skill with gnome weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the glaive, kukri, and all gnome weapons in which you are trained." };
+            yield return new TextBlock { Id = Guid.Parse("345fb126-7d32-4606-8a17-69b377f41f74"), Type = TextBlockType.Text, Text = $"Your gnome affinity blends with your class training, granting you great skill with gnome weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the glaive, kukri, and all gnome weapons in which you are trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

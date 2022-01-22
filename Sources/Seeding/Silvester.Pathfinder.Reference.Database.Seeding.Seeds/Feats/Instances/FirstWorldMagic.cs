@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("46488947-1d2a-4dc4-980d-ef6bf8cc7d85"), Type = TextBlockType.Text, Text = "Your connection to the First World grants you a primal innate spell, much like those of the fey. Choose one cantrip from the primal spell list. You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("46488947-1d2a-4dc4-980d-ef6bf8cc7d85"), Type = TextBlockType.Text, Text = $"Your connection to the First World grants you a primal innate spell, much like those of the fey. Choose one cantrip from the primal spell list. You can cast this spell as a primal innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0789e7a1-4df2-488b-afa2-07f6e2640674"), Type = TextBlockType.Text, Text = "Your iruxi unarmed attacks channel the spiritual energy of your ancestors. Any unarmed attacks you acquire from iruxi heritages or ancestry feats gain the effects of a (item: ghost touch | Ghost Touch Runestone) property rune." };
+            yield return new TextBlock { Id = Guid.Parse("0789e7a1-4df2-488b-afa2-07f6e2640674"), Type = TextBlockType.Text, Text = $"Your iruxi unarmed attacks channel the spiritual energy of your ancestors. Any unarmed attacks you acquire from iruxi heritages or ancestry feats gain the effects of a {ToMarkdownLink<Models.Items.Instances.WeaponPropertyRune>("ghost touch", Items.WeaponPropertyRunes.Instances.GhostTouch.ID)} property rune." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

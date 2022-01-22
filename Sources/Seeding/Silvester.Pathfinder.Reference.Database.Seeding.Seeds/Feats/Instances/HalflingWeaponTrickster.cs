@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8360bba6-c7d5-4e21-a2f7-3138ff557a41"), Type = TextBlockType.Text, Text = "You are particularly adept at fighting with your people's favored weapons. Whenever you critically succeed at an attack roll using a shortsword, a sling, or a halfling weapon, you apply the weapon's critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("8360bba6-c7d5-4e21-a2f7-3138ff557a41"), Type = TextBlockType.Text, Text = $"You are particularly adept at fighting with your people's favored weapons. Whenever you critically succeed at an attack roll using a shortsword, a sling, or a halfling weapon, you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

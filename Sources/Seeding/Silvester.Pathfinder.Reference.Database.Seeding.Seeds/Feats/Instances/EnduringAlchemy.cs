@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2254523a-cef6-41ad-8044-b9716039c310"), Type = TextBlockType.Text, Text = "You've learned how to make your personal energy last just a little bit longer when quickly brewing ad hoc concoctions. When using (feat:lvl--1: Quick Alchemy) to create an alchemical tool or elixir, that tool or elixir remains potent until the end of your next turn, instead of losing its potency at the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("2254523a-cef6-41ad-8044-b9716039c310"), Type = TextBlockType.Text, Text = $"You've learned how to make your personal energy last just a little bit longer when quickly brewing ad hoc concoctions. When using {ToMarkdownLink<Models.Entities.Feat>("Quick Alchemy", Feats.Instances.QuickAlchemy.ID)} to create an alchemical tool or elixir, that tool or elixir remains potent until the end of your next turn, instead of losing its potency at the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

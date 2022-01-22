@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b560bddf-f152-4199-aba7-94e6c7597171"), Type = TextBlockType.Text, Text = "You can apply the same techniques you use to reverse engineer objects to disable them. You can use Crafting instead of Thievery to (action: Disable a Device) or (action: Pick a Lock)." };
+            yield return new TextBlock { Id = Guid.Parse("b560bddf-f152-4199-aba7-94e6c7597171"), Type = TextBlockType.Text, Text = $"You can apply the same techniques you use to reverse engineer objects to disable them. You can use Crafting instead of Thievery to {ToMarkdownLink<Models.Entities.SkillAction>("Disable a Device", SkillActions.Instances.DisableADevice.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Pick a Lock", SkillActions.Instances.PickALock.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

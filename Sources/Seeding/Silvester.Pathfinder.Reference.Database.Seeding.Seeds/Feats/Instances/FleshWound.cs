@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3abe3580-270a-40c5-a090-e9f46db12d61"), Type = TextBlockType.Text, Text = "You fire to ensure that even if your shot doesn't land cleanly, it still lands close enough to deal some damage. Make a ranged (action: Strike). It gains the following effect on a failure (though not a critical failure)." };
+            yield return new TextBlock { Id = Guid.Parse("3abe3580-270a-40c5-a090-e9f46db12d61"), Type = TextBlockType.Text, Text = $"You fire to ensure that even if your shot doesn't land cleanly, it still lands close enough to deal some damage. Make a ranged {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. It gains the following effect on a failure (though not a critical failure)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

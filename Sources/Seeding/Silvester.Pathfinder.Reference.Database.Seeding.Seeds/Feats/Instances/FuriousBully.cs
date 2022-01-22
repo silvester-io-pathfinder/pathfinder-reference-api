@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f66a091-9813-48a3-a268-3667d598152a"), Type = TextBlockType.Text, Text = "You bully foes across the battlefield. While raging, you gain a +2 circumstance bonus to Athletics checks for (trait: attack) actions." };
+            yield return new TextBlock { Id = Guid.Parse("5f66a091-9813-48a3-a268-3667d598152a"), Type = TextBlockType.Text, Text = $"You bully foes across the battlefield. While raging, you gain a +2 circumstance bonus to Athletics checks for {ToMarkdownLink<Models.Entities.Trait>("attack", Traits.Instances.Attack.ID)} actions." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

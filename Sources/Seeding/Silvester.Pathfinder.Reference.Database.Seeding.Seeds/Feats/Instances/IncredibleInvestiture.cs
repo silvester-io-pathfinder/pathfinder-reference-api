@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8fcfb6e6-0f7e-44e5-b8d4-cf6c5ccfac4e"), Type = TextBlockType.Text, Text = "You have an incredible ability to invest more magic items. Increase your limit on invested items from 10 to 12." };
+            yield return new TextBlock { Id = Guid.Parse("8fcfb6e6-0f7e-44e5-b8d4-cf6c5ccfac4e"), Type = TextBlockType.Text, Text = $"You have an incredible ability to invest more magic items. Increase your limit on invested items from 10 to 12." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

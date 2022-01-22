@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7da274ff-2db0-4df0-a9b5-0302330d820f"), Type = TextBlockType.Text, Text = "When you critically succeed at a (action: Recall Knowledge) check about a creature, you gain a +1 circumstance bonus to your next attack roll against the creature, to your AC against its next attack roll, and to your save against its next effect requiring a save. If you share this information with your allies, they gain the benefits as well. If not used, these bonuses end after 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("7da274ff-2db0-4df0-a9b5-0302330d820f"), Type = TextBlockType.Text, Text = $"When you critically succeed at a {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} check about a creature, you gain a +1 circumstance bonus to your next attack roll against the creature, to your AC against its next attack roll, and to your save against its next effect requiring a save. If you share this information with your allies, they gain the benefits as well. If not used, these bonuses end after 1 minute." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

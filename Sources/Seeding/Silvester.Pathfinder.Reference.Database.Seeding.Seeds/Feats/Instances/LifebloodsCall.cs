@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("718df4fc-02fb-472e-b866-2816724dafa8"), Type = TextBlockType.Text, Text = "The impulse to survive and continue fighting resonates deep within you. You gain a circumstance bonus to damage rolls on your melee (action: Strikes | Strike) equal to twice the sum of your wounded and doomed conditions (to a maximum of a +8 circumstance bonus to damage) whenever you have one or both conditions." };
+            yield return new TextBlock { Id = Guid.Parse("718df4fc-02fb-472e-b866-2816724dafa8"), Type = TextBlockType.Text, Text = $"The impulse to survive and continue fighting resonates deep within you. You gain a circumstance bonus to damage rolls on your melee {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} equal to twice the sum of your wounded and doomed conditions (to a maximum of a +8 circumstance bonus to damage) whenever you have one or both conditions." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

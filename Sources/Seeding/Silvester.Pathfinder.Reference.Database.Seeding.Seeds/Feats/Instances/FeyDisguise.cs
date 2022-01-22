@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b1eb80ee-2b1f-48b1-b1ef-2dc0cd849b31"), Type = TextBlockType.Text, Text = "You can disguise yourself with magical illusions. You can cast (spell: illusory disguise) once per day as a 1st-level primal innate spell. At 7th level, the spell is heightened to 2nd level, and every 2 levels thereafter, the spell is heightened an additional spell level." };
+            yield return new TextBlock { Id = Guid.Parse("b1eb80ee-2b1f-48b1-b1ef-2dc0cd849b31"), Type = TextBlockType.Text, Text = $"You can disguise yourself with magical illusions. You can cast {ToMarkdownLink<Models.Entities.Spell>("illusory disguise", Spells.Instances.IllusoryDisguise.ID)} once per day as a 1st-level primal innate spell. At 7th level, the spell is heightened to 2nd level, and every 2 levels thereafter, the spell is heightened an additional spell level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

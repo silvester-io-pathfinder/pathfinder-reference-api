@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6281dc2e-f637-4a90-8a59-7e14faa8bb9a"), Type = TextBlockType.Text, Text = "Finishing a foe maintains your swagger. You gain panache if your (trait: finisher) brings the target to 0 HP (or brings the highest-level target to 0 HP, if your (trait: finisher) attacks multiple targets)." };
+            yield return new TextBlock { Id = Guid.Parse("6281dc2e-f637-4a90-8a59-7e14faa8bb9a"), Type = TextBlockType.Text, Text = $"Finishing a foe maintains your swagger. You gain panache if your {ToMarkdownLink<Models.Entities.Trait>("finisher", Traits.Instances.Finisher.ID)} brings the target to 0 HP (or brings the highest-level target to 0 HP, if your {ToMarkdownLink<Models.Entities.Trait>("finisher", Traits.Instances.Finisher.ID)} attacks multiple targets)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

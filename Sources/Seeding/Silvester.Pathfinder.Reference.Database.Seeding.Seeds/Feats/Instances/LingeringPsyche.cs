@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7d038012-b914-42d1-9dd2-30f61227967a"), Type = TextBlockType.Text, Text = "When you Unleash your psyche, you can remain in that state longer before leaving it. Increase the duration of your psyche to 5 rounds." };
+            yield return new TextBlock { Id = Guid.Parse("7d038012-b914-42d1-9dd2-30f61227967a"), Type = TextBlockType.Text, Text = $"When you Unleash your psyche, you can remain in that state longer before leaving it. Increase the duration of your psyche to 5 rounds." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

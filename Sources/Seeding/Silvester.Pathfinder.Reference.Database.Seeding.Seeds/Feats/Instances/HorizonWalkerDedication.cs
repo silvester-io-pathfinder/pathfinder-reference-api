@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d0ac7065-4084-471b-bd79-86727a475eb8"), Type = TextBlockType.Text, Text = "You've mastered travel within a specific type of terrain. You gain the (feat: Favored Terrain) feat. When in your favored terrain, you gain a +10-foot circumstance bonus to your travel Speed. When other creatures (action: Follow the Expert) with you as a guide in your favored terrain, they gain both the ability to ignore non-magical difficult terrain for the purpose of their travel Speed and the bonus to travel Speed." };
+            yield return new TextBlock { Id = Guid.Parse("d0ac7065-4084-471b-bd79-86727a475eb8"), Type = TextBlockType.Text, Text = $"You've mastered travel within a specific type of terrain. You gain the {ToMarkdownLink<Models.Entities.Feat>("Favored Terrain", Feats.Instances.FavoredTerrain.ID)} feat. When in your favored terrain, you gain a +10-foot circumstance bonus to your travel Speed. When other creatures {ToMarkdownLink<Models.Entities.Activity>("Follow the Expert", Activities.Instances.FollowTheExpert.ID)} with you as a guide in your favored terrain, they gain both the ability to ignore non-magical difficult terrain for the purpose of their travel Speed and the bonus to travel Speed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

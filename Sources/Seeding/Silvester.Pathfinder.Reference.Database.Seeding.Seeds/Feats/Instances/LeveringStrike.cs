@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a8c7216d-866f-496c-aa44-ca82d5540775"), Type = TextBlockType.Text, Text = "Make a (action: Strike) with your staff. As long as you don't critically fail, the target becomes flat-footed and takes a -2 circumstance penalty to its DC against (action: Shove), (action: Trip), and (action: Tumble Through) attempts until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("a8c7216d-866f-496c-aa44-ca82d5540775"), Type = TextBlockType.Text, Text = $"Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with your staff. As long as you don't critically fail, the target becomes flat-footed and takes a -2 circumstance penalty to its DC against {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)}, and {ToMarkdownLink<Models.Entities.SkillAction>("Tumble Through", SkillActions.Instances.TumbleThrough.ID)} attempts until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

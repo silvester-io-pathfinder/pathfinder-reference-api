@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c0e29dd-f017-403f-a3d2-cf51c07f75e7"), Type = TextBlockType.Text, Text = "Until your next daily preparations, you can cast (spell: forbidding ward) as a divine innate spell at will." };
+            yield return new TextBlock { Id = Guid.Parse("4c0e29dd-f017-403f-a3d2-cf51c07f75e7"), Type = TextBlockType.Text, Text = $"Until your next daily preparations, you can cast {ToMarkdownLink<Models.Entities.Spell>("forbidding ward", Spells.Instances.ForbiddingWard.ID)} as a divine innate spell at will." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

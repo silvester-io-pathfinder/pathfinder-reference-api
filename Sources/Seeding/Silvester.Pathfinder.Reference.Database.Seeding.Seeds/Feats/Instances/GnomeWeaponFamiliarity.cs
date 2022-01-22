@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("37d6be4d-2f6c-47bb-9b7a-3da04389047e"), Type = TextBlockType.Text, Text = "You favor unusual weapons tied to your people, such as blades with curved and peculiar shapes. You are trained with the glaive and kukri." };
-            yield return new TextBlock { Id = Guid.Parse("04abd352-4fc4-4975-914d-3e83dabe66b4"), Type = TextBlockType.Text, Text = "In addition, you gain access to all uncommon gnome weapons. For the purpose of determining your proficiency, martial gnome weapons are simple weapons and advanced gnome weapons are martial weapons." };
+            yield return new TextBlock { Id = Guid.Parse("37d6be4d-2f6c-47bb-9b7a-3da04389047e"), Type = TextBlockType.Text, Text = $"You favor unusual weapons tied to your people, such as blades with curved and peculiar shapes. You are trained with the glaive and kukri." };
+            yield return new TextBlock { Id = Guid.Parse("04abd352-4fc4-4975-914d-3e83dabe66b4"), Type = TextBlockType.Text, Text = $"In addition, you gain access to all uncommon gnome weapons. For the purpose of determining your proficiency, martial gnome weapons are simple weapons and advanced gnome weapons are martial weapons." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

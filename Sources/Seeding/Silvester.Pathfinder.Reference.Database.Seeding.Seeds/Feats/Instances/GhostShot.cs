@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("570a9715-2cfd-4bd4-92aa-8f4e4a4fe254"), Type = TextBlockType.Text, Text = "Make a firearm or crossbow (action: Strike). If you're hidden from or undetected by the target, the (action: Strike) adds the additional precision damage from (feat: One Shot, One Kill); if you would already receive that additional damage on the (action: Strike), the effects aren't cumulative. If you were undetected or unnoticed by any creatures, you're now hidden from them instead, as the origin of the attack is clear." };
+            yield return new TextBlock { Id = Guid.Parse("570a9715-2cfd-4bd4-92aa-8f4e4a4fe254"), Type = TextBlockType.Text, Text = $"Make a firearm or crossbow {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If you're hidden from or undetected by the target, the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} adds the additional precision damage from {ToMarkdownLink<Models.Entities.Feat>("One Shot, One Kill", Feats.Instances.OneShotOneKill.ID)}; if you would already receive that additional damage on the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, the effects aren't cumulative. If you were undetected or unnoticed by any creatures, you're now hidden from them instead, as the origin of the attack is clear." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

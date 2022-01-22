@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("62623a04-2016-4069-b96b-0e39ddc1fb0c"), Type = TextBlockType.Text, Text = "You've empowered your core to support a larger body, granting you size and additional reach. You gain the effects of (spell: enlarge) constantly." };
-            yield return new TextBlock { Id = Guid.Parse("a5212ea4-070b-422e-b07b-1bd423c48e76"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("f3f0dc79-2efa-4635-8e93-6ce79d1ce004"), Type = TextBlockType.Text, Text = "~ Enhancement: Your core's empowerment has stabilized, allowing for greater support. You are no longer clumsy due to the effects of (spell: enlarge)." };
+            yield return new TextBlock { Id = Guid.Parse("62623a04-2016-4069-b96b-0e39ddc1fb0c"), Type = TextBlockType.Text, Text = $"You've empowered your core to support a larger body, granting you size and additional reach. You gain the effects of {ToMarkdownLink<Models.Entities.Spell>("enlarge", Spells.Instances.Enlarge.ID)} constantly." };
+            yield return new TextBlock { Id = Guid.Parse("a5212ea4-070b-422e-b07b-1bd423c48e76"), Type = TextBlockType.Text, Text = $"----" };
+            yield return new TextBlock { Id = Guid.Parse("f3f0dc79-2efa-4635-8e93-6ce79d1ce004"), Type = TextBlockType.Text, Text = $"~ Enhancement: Your core's empowerment has stabilized, allowing for greater support. You are no longer clumsy due to the effects of {ToMarkdownLink<Models.Entities.Spell>("enlarge", Spells.Instances.Enlarge.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

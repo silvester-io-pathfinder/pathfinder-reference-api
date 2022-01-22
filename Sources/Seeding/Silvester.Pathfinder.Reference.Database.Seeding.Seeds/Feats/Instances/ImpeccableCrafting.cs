@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d4fe19b5-6352-44c9-9853-bcee43b7d565"), Type = TextBlockType.Text, Text = "You craft flawless creations with great efficiency. Whenever you roll a success at a Crafting check to make an item of the type you chose with (feat: Specialty Crafting), you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("d4fe19b5-6352-44c9-9853-bcee43b7d565"), Type = TextBlockType.Text, Text = $"You craft flawless creations with great efficiency. Whenever you roll a success at a Crafting check to make an item of the type you chose with {ToMarkdownLink<Models.Entities.Feat>("Specialty Crafting", Feats.Instances.SpecialtyCrafting.ID)}, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

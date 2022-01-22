@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db922418-d8ea-4162-87c0-030c4160de5b"), Type = TextBlockType.Text, Text = "~ Lesson Type: Basic" };
-            yield return new TextBlock { Id = Guid.Parse("4d654a24-2fd1-4858-ba42-0804dec98ccb"), Type = TextBlockType.Text, Text = "You gain the (spell: elemental betrayal) hex. Your familiar learns your choice of (spell: burning hands), (spell: air bubble), (spell: hydraulic push), or (spell: pummeling rubble)." };
+            yield return new TextBlock { Id = Guid.Parse("db922418-d8ea-4162-87c0-030c4160de5b"), Type = TextBlockType.Text, Text = $"~ Lesson Type: Basic" };
+            yield return new TextBlock { Id = Guid.Parse("4d654a24-2fd1-4858-ba42-0804dec98ccb"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Spell>("elemental betrayal", Spells.Instances.ElementalBetrayal.ID)} hex. Your familiar learns your choice of {ToMarkdownLink<Models.Entities.Spell>("burning hands", Spells.Instances.BurningHands.ID)}, {ToMarkdownLink<Models.Entities.Spell>("air bubble", Spells.Instances.AirBubble.ID)}, {ToMarkdownLink<Models.Entities.Spell>("hydraulic push", Spells.Instances.HydraulicPush.ID)}, or {ToMarkdownLink<Models.Entities.Spell>("pummeling rubble", Spells.Instances.PummelingRubble.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

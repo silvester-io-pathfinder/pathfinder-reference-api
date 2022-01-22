@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8e8a8fa0-4e48-4308-8d3c-221a8bc75aad"), Type = TextBlockType.Text, Text = "You focus your divine power to extend your influence. Select one aura you have from a champion feat or feature, such as (feat: Aura of Courage) or (feat: Aura of Life). The radius of the aura is doubled until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("8e8a8fa0-4e48-4308-8d3c-221a8bc75aad"), Type = TextBlockType.Text, Text = $"You focus your divine power to extend your influence. Select one aura you have from a champion feat or feature, such as {ToMarkdownLink<Models.Entities.Feat>("Aura of Courage", Feats.Instances.AuraOfCourage.ID)} or {ToMarkdownLink<Models.Entities.Feat>("Aura of Life", Feats.Instances.AuraOfLife.ID)}. The radius of the aura is doubled until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

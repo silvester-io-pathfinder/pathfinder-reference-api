@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e8730a49-a233-4ea3-90d0-c4cf3613bfc8"), Type = TextBlockType.Text, Text = "You can perform multiple compositions simultaneously. If your next action is to cast a composition, it becomes a harmonized composition. Unlike a normal composition, a harmonized composition doesn't end if you cast another composition, and you can cast another composition on the same turn as a harmonized one. Casting another harmonized composition ends any harmonized composition you have in effect." };
+            yield return new TextBlock { Id = Guid.Parse("e8730a49-a233-4ea3-90d0-c4cf3613bfc8"), Type = TextBlockType.Text, Text = $"You can perform multiple compositions simultaneously. If your next action is to cast a composition, it becomes a harmonized composition. Unlike a normal composition, a harmonized composition doesn't end if you cast another composition, and you can cast another composition on the same turn as a harmonized one. Casting another harmonized composition ends any harmonized composition you have in effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

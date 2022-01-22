@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3bf49d73-0c97-4faf-b2d7-c994d43c930c"), Type = TextBlockType.Text, Text = "Some emotional states, such as love or hatred, require the caster to focus on a specific individual called their emotional focus. Your emotional focus can change over time with you choosing a new focus after an important part of your story is resolved. Work with your GM to determine when this change happens. An emotional focus doesn't get a say in the matter; the cathartic spellcaster's emotions determine the bond. However, making another PC your emotional focus could result in an uncomfortable social dynamic. You should check with that PC's player in advance to see if such a link is acceptable." };
+            yield return new TextBlock { Id = Guid.Parse("3bf49d73-0c97-4faf-b2d7-c994d43c930c"), Type = TextBlockType.Text, Text = $"Some emotional states, such as love or hatred, require the caster to focus on a specific individual called their emotional focus. Your emotional focus can change over time with you choosing a new focus after an important part of your story is resolved. Work with your GM to determine when this change happens. An emotional focus doesn't get a say in the matter; the cathartic spellcaster's emotions determine the bond. However, making another PC your emotional focus could result in an uncomfortable social dynamic. You should check with that PC's player in advance to see if such a link is acceptable." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

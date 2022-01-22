@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9925e1e7-5a19-44f0-9a41-dc742b72f524"), Type = TextBlockType.Text, Text = "Your eidolon channels its anger into a furious attack. It makes a melee (action: Strike). This counts as two attacks when calculating your multiple attack penalty. If this (action: Strike) hits, your eidolon deals an extra die of weapon damage and gains a +1 circumstance bonus to the damage roll." };
-            yield return new TextBlock { Id = Guid.Parse("bad048bc-8049-4161-91d3-2216f589db12"), Type = TextBlockType.Text, Text = "If you're at least 10th level, increase this to two extra dice with a +2 circumstance bonus, and if you're at least 18th level, increase it to three extra dice with a +3 circumstance bonus." };
+            yield return new TextBlock { Id = Guid.Parse("9925e1e7-5a19-44f0-9a41-dc742b72f524"), Type = TextBlockType.Text, Text = $"Your eidolon channels its anger into a furious attack. It makes a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. This counts as two attacks when calculating your multiple attack penalty. If this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits, your eidolon deals an extra die of weapon damage and gains a +1 circumstance bonus to the damage roll." };
+            yield return new TextBlock { Id = Guid.Parse("bad048bc-8049-4161-91d3-2216f589db12"), Type = TextBlockType.Text, Text = $"If you're at least 10th level, increase this to two extra dice with a +2 circumstance bonus, and if you're at least 18th level, increase it to three extra dice with a +3 circumstance bonus." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

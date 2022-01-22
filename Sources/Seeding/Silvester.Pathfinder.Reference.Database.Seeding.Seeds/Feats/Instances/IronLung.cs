@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6dbcf317-2497-4a22-8fc8-574089c32cf8"), Type = TextBlockType.Text, Text = "Your lungs are infused with the resilience of iron. Treat the result of your save against an (trait: inhaled) poison as one degree of success better than you rolled. Additionally, you gain the (feat: Exhale Poison) ability." };
+            yield return new TextBlock { Id = Guid.Parse("6dbcf317-2497-4a22-8fc8-574089c32cf8"), Type = TextBlockType.Text, Text = $"Your lungs are infused with the resilience of iron. Treat the result of your save against an {ToMarkdownLink<Models.Entities.Trait>("inhaled", Traits.Instances.Inhaled.ID)} poison as one degree of success better than you rolled. Additionally, you gain the {ToMarkdownLink<Models.Entities.Feat>("Exhale Poison", Feats.Instances.ExhalePoison.ID)} ability." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("16ab30be-7382-4839-915a-dccf069a4d0e"), Type = TextBlockType.Text, Text = "~ Access: Member of the Pathfinder Society." };
-            yield return new TextBlock { Id = Guid.Parse("1e47d992-6c6b-4574-8967-c711fb823645"), Type = TextBlockType.Text, Text = "Kreighton teaches his students that an agile mind can glean clues leading to the truth, even from the most unlikely of sources. You immediately reattempt the triggering check using the other chosen skill." };
+            yield return new TextBlock { Id = Guid.Parse("16ab30be-7382-4839-915a-dccf069a4d0e"), Type = TextBlockType.Text, Text = $"~ Access: Member of the Pathfinder Society." };
+            yield return new TextBlock { Id = Guid.Parse("1e47d992-6c6b-4574-8967-c711fb823645"), Type = TextBlockType.Text, Text = $"Kreighton teaches his students that an agile mind can glean clues leading to the truth, even from the most unlikely of sources. You immediately reattempt the triggering check using the other chosen skill." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

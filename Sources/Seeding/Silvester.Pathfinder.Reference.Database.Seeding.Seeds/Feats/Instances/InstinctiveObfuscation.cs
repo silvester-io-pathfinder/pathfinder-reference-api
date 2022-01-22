@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0f814793-1949-41c4-9005-8f4e982319fc"), Type = TextBlockType.Text, Text = "The magic within you manifests as a natural reaction to threats. You gain the effects of (spell: mirror image) but with two images instead of three. The tradition of this action matches the tradition of your gnome ancestry options." };
+            yield return new TextBlock { Id = Guid.Parse("0f814793-1949-41c4-9005-8f4e982319fc"), Type = TextBlockType.Text, Text = $"The magic within you manifests as a natural reaction to threats. You gain the effects of {ToMarkdownLink<Models.Entities.Spell>("mirror image", Spells.Instances.MirrorImage.ID)} but with two images instead of three. The tradition of this action matches the tradition of your gnome ancestry options." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

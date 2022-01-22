@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8b96ce72-295a-4f81-9e2d-e24534ea7215"), Type = TextBlockType.Text, Text = "Attempt a Performance check, comparing the result to the Will DC of each foe within 30 feet who can see you. Regardless of the result, each target is immune to your Flourishing Finish for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("8b96ce72-295a-4f81-9e2d-e24534ea7215"), Type = TextBlockType.Text, Text = $"Attempt a Performance check, comparing the result to the Will DC of each foe within 30 feet who can see you. Regardless of the result, each target is immune to your Flourishing Finish for 10 minutes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

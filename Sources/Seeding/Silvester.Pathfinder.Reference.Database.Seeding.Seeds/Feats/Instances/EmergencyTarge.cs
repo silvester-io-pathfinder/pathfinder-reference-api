@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("25c6a494-ce00-40b5-949d-294023eb03b5"), Type = TextBlockType.Text, Text = "You immediately (action: Raise a Shield) or cast (spell: shield). The circumstance bonus applies to your defenses when determining the outcome of the triggering attack or spell." };
+            yield return new TextBlock { Id = Guid.Parse("25c6a494-ce00-40b5-949d-294023eb03b5"), Type = TextBlockType.Text, Text = $"You immediately {ToMarkdownLink<Models.Entities.Action>("Raise a Shield", Actions.Instances.RaiseAShield.ID)} or cast {ToMarkdownLink<Models.Entities.Spell>("shield", Spells.Instances.Shield.ID)}. The circumstance bonus applies to your defenses when determining the outcome of the triggering attack or spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

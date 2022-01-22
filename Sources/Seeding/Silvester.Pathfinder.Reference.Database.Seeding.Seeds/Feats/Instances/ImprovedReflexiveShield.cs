@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f1236fc3-5f67-4ce6-9d83-088975fbb43c"), Type = TextBlockType.Text, Text = "Your shield can help save nearby allies. When you use (Feat: Shield Block) against damage resulting from a Reflex save, adjacent allies who would take damage due to Reflex saves against the same effect also benefit from the damage reduction." };
+            yield return new TextBlock { Id = Guid.Parse("f1236fc3-5f67-4ce6-9d83-088975fbb43c"), Type = TextBlockType.Text, Text = $"Your shield can help save nearby allies. When you use {ToMarkdownLink<Models.Entities.Feat>("Shield Block", Feats.Instances.ShieldBlock.ID)} against damage resulting from a Reflex save, adjacent allies who would take damage due to Reflex saves against the same effect also benefit from the damage reduction." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

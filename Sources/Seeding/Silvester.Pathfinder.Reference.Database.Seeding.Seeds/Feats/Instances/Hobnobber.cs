@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a4477510-b228-4897-bcda-57a434f6e878"), Type = TextBlockType.Text, Text = "You are skilled at learning information through conversation. The (action: Gather Information) exploration activity takes you half as long as normal (typically reducing the time to 1 hour). If you're a master in Diplomacy and you (action: Gather Information) at the normal speed, when you attempt to do so and roll a critical failure, you get a failure instead. There is still no guarantee that a rumor you learn with (action: Gather Information) is accurate." };
+            yield return new TextBlock { Id = Guid.Parse("a4477510-b228-4897-bcda-57a434f6e878"), Type = TextBlockType.Text, Text = $"You are skilled at learning information through conversation. The {ToMarkdownLink<Models.Entities.SkillAction>("Gather Information", SkillActions.Instances.GatherInformation.ID)} exploration activity takes you half as long as normal (typically reducing the time to 1 hour). If you're a master in Diplomacy and you {ToMarkdownLink<Models.Entities.SkillAction>("Gather Information", SkillActions.Instances.GatherInformation.ID)} at the normal speed, when you attempt to do so and roll a critical failure, you get a failure instead. There is still no guarantee that a rumor you learn with {ToMarkdownLink<Models.Entities.SkillAction>("Gather Information", SkillActions.Instances.GatherInformation.ID)} is accurate." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

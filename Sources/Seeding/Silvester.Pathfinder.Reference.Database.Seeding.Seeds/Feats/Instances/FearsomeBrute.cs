@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a5dc15f9-8199-49a6-b4b1-3f7f85cf051e"), Type = TextBlockType.Text, Text = "Fear makes your foes weak and more vulnerable to your attacks. You gain a circumstance bonus to damage rolls for (Action: Strikes | Strike) against frightened creatures. The bonus is equal to double the target's frightened value." };
-            yield return new TextBlock { Id = Guid.Parse("abd5912f-370a-4605-99d5-edb7b12b21b0"), Type = TextBlockType.Text, Text = "If you have master proficiency in Intimidation, increase the bonus to triple the target's frightened value." };
+            yield return new TextBlock { Id = Guid.Parse("a5dc15f9-8199-49a6-b4b1-3f7f85cf051e"), Type = TextBlockType.Text, Text = $"Fear makes your foes weak and more vulnerable to your attacks. You gain a circumstance bonus to damage rolls for {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} against frightened creatures. The bonus is equal to double the target's frightened value." };
+            yield return new TextBlock { Id = Guid.Parse("abd5912f-370a-4605-99d5-edb7b12b21b0"), Type = TextBlockType.Text, Text = $"If you have master proficiency in Intimidation, increase the bonus to triple the target's frightened value." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

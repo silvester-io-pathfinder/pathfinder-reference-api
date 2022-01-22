@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8142c7d3-7c88-4ad1-a2d9-8014a0e76f78"), Type = TextBlockType.Text, Text = "Aha! You lock on to your enemy's weak point to assist your construct companion in destroying it. When you Lock On, designate an enemy you can see. If your next action is to Command your construct, the construct gains a +2 circumstance bonus to attack rolls against the designated enemy until the end of the turn. If you use 2 actions for the Command, the bonus is instead a +3 circumstance bonus, or a +4 circumstance bonus if you're legendary in Crafting." };
+            yield return new TextBlock { Id = Guid.Parse("8142c7d3-7c88-4ad1-a2d9-8014a0e76f78"), Type = TextBlockType.Text, Text = $"Aha! You lock on to your enemy's weak point to assist your construct companion in destroying it. When you Lock On, designate an enemy you can see. If your next action is to Command your construct, the construct gains a +2 circumstance bonus to attack rolls against the designated enemy until the end of the turn. If you use 2 actions for the Command, the bonus is instead a +3 circumstance bonus, or a +4 circumstance bonus if you're legendary in Crafting." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

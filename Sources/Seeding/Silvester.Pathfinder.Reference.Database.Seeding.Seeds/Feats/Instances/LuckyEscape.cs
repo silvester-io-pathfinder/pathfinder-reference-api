@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0fe88f55-44aa-415b-8b90-71adb433c4a9"), Type = TextBlockType.Text, Text = "Your enemy lies in wait, lines up the perfect shot, and pulls the trigger... then at just the right moment you duck down to notice something scrawled on the cobblestone in chalk, a shiny coin, or some other coincidental distraction, creating an opportunity for the attack to miss. The attacker must roll the attack twice and use the worse result." };
+            yield return new TextBlock { Id = Guid.Parse("0fe88f55-44aa-415b-8b90-71adb433c4a9"), Type = TextBlockType.Text, Text = $"Your enemy lies in wait, lines up the perfect shot, and pulls the trigger... then at just the right moment you duck down to notice something scrawled on the cobblestone in chalk, a shiny coin, or some other coincidental distraction, creating an opportunity for the attack to miss. The attacker must roll the attack twice and use the worse result." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

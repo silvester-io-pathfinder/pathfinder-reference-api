@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f162b690-4545-44d2-9fb6-cda60e423a95"), Type = TextBlockType.Text, Text = "Your animal companion continues to grow and develop. It becomes a nimble or savage animal companion (your choice), gaining additional capabilities determined by the type of companion (page 214)." };
+            yield return new TextBlock { Id = Guid.Parse("f162b690-4545-44d2-9fb6-cda60e423a95"), Type = TextBlockType.Text, Text = $"Your animal companion continues to grow and develop. It becomes a nimble or savage animal companion (your choice), gaining additional capabilities determined by the type of companion (page 214)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

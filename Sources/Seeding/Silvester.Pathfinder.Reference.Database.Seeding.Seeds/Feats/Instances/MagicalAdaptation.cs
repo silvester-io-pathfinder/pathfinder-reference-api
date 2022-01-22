@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0aeace42-bebf-40ec-986e-893102e50916"), Type = TextBlockType.Text, Text = "When an obstacle bars your path, you pull a trick from your sleeve to overcome it. You can cast (spell: darkvision), (spell: spider climb), and 4th-level (spell: water breathing) as innate primal spells, each once per day." };
+            yield return new TextBlock { Id = Guid.Parse("0aeace42-bebf-40ec-986e-893102e50916"), Type = TextBlockType.Text, Text = $"When an obstacle bars your path, you pull a trick from your sleeve to overcome it. You can cast {ToMarkdownLink<Models.Entities.Spell>("darkvision", Spells.Instances.Darkvision.ID)}, {ToMarkdownLink<Models.Entities.Spell>("spider climb", Spells.Instances.SpiderClimb.ID)}, and 4th-level {ToMarkdownLink<Models.Entities.Spell>("water breathing", Spells.Instances.WaterBreathing.ID)} as innate primal spells, each once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

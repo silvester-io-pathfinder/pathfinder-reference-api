@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("46881bbf-1fd5-4e38-9f60-a90ad206755d"), Type = TextBlockType.Text, Text = "When you hit with both attacks with (feat: Double Slice), you flense the target, making it bleed and creating a weak spot. The target takes 1d8 persistent bleed damage per weapon damage die of whichever of the weapons you used that has the most weapon damage dice (maximum 4d8 for a (item: major striking | Major Striking Runestone) weapon). The target becomes flat-footed, and its resistances to any physical damage types are reduced by 5; these two effects last until the beginning of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("46881bbf-1fd5-4e38-9f60-a90ad206755d"), Type = TextBlockType.Text, Text = $"When you hit with both attacks with {ToMarkdownLink<Models.Entities.Feat>("Double Slice", Feats.Instances.DoubleSlice.ID)}, you flense the target, making it bleed and creating a weak spot. The target takes 1d8 persistent bleed damage per weapon damage die of whichever of the weapons you used that has the most weapon damage dice (maximum 4d8 for a {ToMarkdownLink<Models.Items.Instances.FundamentalWeaponRune>("major striking", Items.FundamentalWeaponRunes.Instances.Striking.ID)} weapon). The target becomes flat-footed, and its resistances to any physical damage types are reduced by 5; these two effects last until the beginning of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

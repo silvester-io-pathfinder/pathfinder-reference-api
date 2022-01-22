@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8b7c2d5d-7a5b-41c3-9d70-e22dcaf804d6"), Type = TextBlockType.Text, Text = "Your strength is part of your rage, so as long as your anger remains, you can gather your strength and rage to overcome any sort of enfeeblement. You reduce your enfeebled condition's value by 1." };
+            yield return new TextBlock { Id = Guid.Parse("8b7c2d5d-7a5b-41c3-9d70-e22dcaf804d6"), Type = TextBlockType.Text, Text = $"Your strength is part of your rage, so as long as your anger remains, you can gather your strength and rage to overcome any sort of enfeeblement. You reduce your enfeebled condition's value by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

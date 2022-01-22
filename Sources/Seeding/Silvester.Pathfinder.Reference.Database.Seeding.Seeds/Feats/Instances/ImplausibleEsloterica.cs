@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("39ffb02e-66de-49b3-b46e-be886e4d318f"), Type = TextBlockType.Text, Text = "It seems impossible, but your esoterica are so eclectic and complete that you can keep pulling out exactly the item you need, even in far-flung locations. You can use (feat: Prescient Planner) even if you've already used it after purchasing goods, and you can use it as a single action instead of a 2-action activity, during which you (action: Interact) to draw the item." };
-            yield return new TextBlock { Id = Guid.Parse("05c2bd9e-aa37-4cc9-b6c1-e2f830daa975"), Type = TextBlockType.Text, Text = "In addition, five times per day, you can use (feat: Prescient Planner) to pull out a common consumable item of a level up to 6 levels lower than your level." };
+            yield return new TextBlock { Id = Guid.Parse("39ffb02e-66de-49b3-b46e-be886e4d318f"), Type = TextBlockType.Text, Text = $"It seems impossible, but your esoterica are so eclectic and complete that you can keep pulling out exactly the item you need, even in far-flung locations. You can use {ToMarkdownLink<Models.Entities.Feat>("Prescient Planner", Feats.Instances.PrescientPlanner.ID)} even if you've already used it after purchasing goods, and you can use it as a single action instead of a 2-action activity, during which you {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw the item." };
+            yield return new TextBlock { Id = Guid.Parse("05c2bd9e-aa37-4cc9-b6c1-e2f830daa975"), Type = TextBlockType.Text, Text = $"In addition, five times per day, you can use {ToMarkdownLink<Models.Entities.Feat>("Prescient Planner", Feats.Instances.PrescientPlanner.ID)} to pull out a common consumable item of a level up to 6 levels lower than your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

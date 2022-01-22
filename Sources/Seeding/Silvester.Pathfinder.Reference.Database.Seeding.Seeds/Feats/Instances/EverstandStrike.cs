@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7e344755-71ee-47fd-8a29-74c6fbde7690"), Type = TextBlockType.Text, Text = "~ Access: The following class feat is available to Knights of Lastwall." };
-            yield return new TextBlock { Id = Guid.Parse("573bac65-9fad-44ce-a7c8-3c7c58369241"), Type = TextBlockType.Text, Text = "Your follow-up blow leaves you an opening to set your shield. Make a (action: Strike) with the wielded shield. If the (action: Strike) hits and deals damage, you also (action: Raise your Shield | Raise a Shield)." };
+            yield return new TextBlock { Id = Guid.Parse("7e344755-71ee-47fd-8a29-74c6fbde7690"), Type = TextBlockType.Text, Text = $"~ Access: The following class feat is available to Knights of Lastwall." };
+            yield return new TextBlock { Id = Guid.Parse("573bac65-9fad-44ce-a7c8-3c7c58369241"), Type = TextBlockType.Text, Text = $"Your follow-up blow leaves you an opening to set your shield. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with the wielded shield. If the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits and deals damage, you also {ToMarkdownLink<Models.Entities.Action>("Raise your Shield", Actions.Instances.RaiseAShield.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

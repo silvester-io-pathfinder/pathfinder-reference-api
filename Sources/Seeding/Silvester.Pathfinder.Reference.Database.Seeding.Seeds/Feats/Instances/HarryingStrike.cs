@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4aca3101-bc28-4ce2-8d17-2ada39dcf2ef"), Type = TextBlockType.Text, Text = "Your attack prevents a foe from pursuing your allies. Make a melee (action: Strike), adding the following effects in addition to the normal effects of the (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("4aca3101-bc28-4ce2-8d17-2ada39dcf2ef"), Type = TextBlockType.Text, Text = $"Your attack prevents a foe from pursuing your allies. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, adding the following effects in addition to the normal effects of the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

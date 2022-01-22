@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7bac9e93-0a86-4691-a842-8aaa63c3b933"), Type = TextBlockType.Text, Text = "Multidisciplinary magical theory grants your familiar even more magic than other familiars. You can select a base of six familiar or master abilities each day, instead of four." };
+            yield return new TextBlock { Id = Guid.Parse("7bac9e93-0a86-4691-a842-8aaa63c3b933"), Type = TextBlockType.Text, Text = $"Multidisciplinary magical theory grants your familiar even more magic than other familiars. You can select a base of six familiar or master abilities each day, instead of four." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

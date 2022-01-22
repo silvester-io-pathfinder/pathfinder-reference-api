@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1109b9af-4a99-4944-a5a3-428363a45025"), Type = TextBlockType.Text, Text = "You make the most of your iruxi unarmed attacks. Whenever you score a critical hit with a claw or an unarmed attack you gained from a lizardfolk ancestry feat, you apply the unarmed attack's critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("1109b9af-4a99-4944-a5a3-428363a45025"), Type = TextBlockType.Text, Text = $"You make the most of your iruxi unarmed attacks. Whenever you score a critical hit with a claw or an unarmed attack you gained from a lizardfolk ancestry feat, you apply the unarmed attack's critical specialization effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

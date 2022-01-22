@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("852ea089-e799-48a8-adcf-23acc70bb2d2"), Type = TextBlockType.Text, Text = "You don't just tinker with your own innovation, you fiddle with your allies' weapons as well (for their benefit, of course). Choose an ally in your reach and one of their weapons. Attempt a Crafting check against a high DC for your level." };
+            yield return new TextBlock { Id = Guid.Parse("852ea089-e799-48a8-adcf-23acc70bb2d2"), Type = TextBlockType.Text, Text = $"You don't just tinker with your own innovation, you fiddle with your allies' weapons as well (for their benefit, of course). Choose an ally in your reach and one of their weapons. Attempt a Crafting check against a high DC for your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

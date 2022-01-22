@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("07f2c1d2-67f4-4f57-867e-b497d77cd990"), Type = TextBlockType.Text, Text = "When you use an improvised weapon, you apply the critical specialization of a brawling weapon to it. Depending on the shape and nature of the improvised weapon, your GM might determine another weapon group's critical specialization is more appropriate." };
+            yield return new TextBlock { Id = Guid.Parse("07f2c1d2-67f4-4f57-867e-b497d77cd990"), Type = TextBlockType.Text, Text = $"When you use an improvised weapon, you apply the critical specialization of a brawling weapon to it. Depending on the shape and nature of the improvised weapon, your GM might determine another weapon group's critical specialization is more appropriate." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

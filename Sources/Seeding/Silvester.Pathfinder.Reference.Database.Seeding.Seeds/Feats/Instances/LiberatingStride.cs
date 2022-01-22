@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("44ab93b7-1cb1-428e-826d-ec488c134bbb"), Type = TextBlockType.Text, Text = "Instead of you taking a (action: Step) at the end of your (feat: Liberating Step), the triggering ally can (action: Stride) up to half their Speed. Even if you have exalt, only the triggering ally gains this benefit." };
+            yield return new TextBlock { Id = Guid.Parse("44ab93b7-1cb1-428e-826d-ec488c134bbb"), Type = TextBlockType.Text, Text = $"Instead of you taking a {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} at the end of your {ToMarkdownLink<Models.Entities.Feat>("Liberating Step", Feats.Instances.LiberatingStep.ID)}, the triggering ally can {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} up to half their Speed. Even if you have exalt, only the triggering ally gains this benefit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

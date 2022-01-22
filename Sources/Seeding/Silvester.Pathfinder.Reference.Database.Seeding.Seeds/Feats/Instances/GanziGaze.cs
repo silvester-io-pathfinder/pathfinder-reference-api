@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0c81043f-2f0c-413f-99a3-4c2be2fd54c6"), Type = TextBlockType.Text, Text = "You have unusual sensory abilities passed down from your chaotic forebears. You gain low-light vision. If you already have low-light vision, you gain darkvision instead." };
+            yield return new TextBlock { Id = Guid.Parse("0c81043f-2f0c-413f-99a3-4c2be2fd54c6"), Type = TextBlockType.Text, Text = $"You have unusual sensory abilities passed down from your chaotic forebears. You gain low-light vision. If you already have low-light vision, you gain darkvision instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

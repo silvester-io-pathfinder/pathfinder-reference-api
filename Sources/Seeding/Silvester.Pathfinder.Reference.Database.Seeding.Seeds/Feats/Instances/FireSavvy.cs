@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6cd4b782-f557-4b5f-b761-8d9de2710a44"), Type = TextBlockType.Text, Text = "~ Access: You are from Dongun Hold or Alkenstar." };
-            yield return new TextBlock { Id = Guid.Parse("36f386db-351b-45c2-b839-c802b945faaf"), Type = TextBlockType.Text, Text = "You've grown up around a forge and are well-suited to dealing with smoke and flame. Your flat check to remove persistent fire damage is DC 10 instead of DC 15, which is reduced to DC 5 with appropriate assistance. In addition, if you roll a success on a saving throw against suffocation or choking due to smoke or ash, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("6cd4b782-f557-4b5f-b761-8d9de2710a44"), Type = TextBlockType.Text, Text = $"~ Access: You are from Dongun Hold or Alkenstar." };
+            yield return new TextBlock { Id = Guid.Parse("36f386db-351b-45c2-b839-c802b945faaf"), Type = TextBlockType.Text, Text = $"You've grown up around a forge and are well-suited to dealing with smoke and flame. Your flat check to remove persistent fire damage is DC 10 instead of DC 15, which is reduced to DC 5 with appropriate assistance. In addition, if you roll a success on a saving throw against suffocation or choking due to smoke or ash, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

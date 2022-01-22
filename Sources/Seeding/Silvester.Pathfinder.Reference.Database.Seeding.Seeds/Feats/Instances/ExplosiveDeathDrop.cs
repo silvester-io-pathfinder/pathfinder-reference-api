@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e1fd3e3-8cbf-4101-9394-7968aaae61b4"), Type = TextBlockType.Text, Text = "You lift your enemy into the air before bringing them crashing down with a fiery detonation. Roll an Athletics check against your target's Fortitude DC. You take a -1 circumstance penalty to your check if the target is one size larger than you and a -3 circumstance penalty if it's larger than that. You gain a +1 circumstance bonus to your check if the target is one size smaller than you and a +3 circumstance bonus if it's smaller than that." };
+            yield return new TextBlock { Id = Guid.Parse("1e1fd3e3-8cbf-4101-9394-7968aaae61b4"), Type = TextBlockType.Text, Text = $"You lift your enemy into the air before bringing them crashing down with a fiery detonation. Roll an Athletics check against your target's Fortitude DC. You take a -1 circumstance penalty to your check if the target is one size larger than you and a -3 circumstance penalty if it's larger than that. You gain a +1 circumstance bonus to your check if the target is one size smaller than you and a +3 circumstance bonus if it's smaller than that." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

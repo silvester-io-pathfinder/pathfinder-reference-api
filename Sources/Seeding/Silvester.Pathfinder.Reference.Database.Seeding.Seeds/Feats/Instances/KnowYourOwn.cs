@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b604753f-1ddb-482f-bccf-c58b43e48207"), Type = TextBlockType.Text, Text = "You've spent countless hours studying the history of elves on your world and beyond and are a studied expert in your people's ways. If you critically fail a check to (action: Recall Knowledge) about elves, elven society, or elven history, you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("b604753f-1ddb-482f-bccf-c58b43e48207"), Type = TextBlockType.Text, Text = $"You've spent countless hours studying the history of elves on your world and beyond and are a studied expert in your people's ways. If you critically fail a check to {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} about elves, elven society, or elven history, you get a failure instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

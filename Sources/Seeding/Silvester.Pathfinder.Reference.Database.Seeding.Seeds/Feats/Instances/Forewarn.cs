@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a3ffd8d4-1b7b-491d-9c16-76b2ac52c00f"), Type = TextBlockType.Text, Text = "Your foresight and planning are more valuable than armor as you direct your ally away from danger, but there's a limit to how often you can guide your allies away from a foe's relentless assaults. The triggering attack roll targets your Perception DC instead of your ally's AC. Though this allows your ally to avoid taking penalties to their AC, it doesn't remove any conditions or other effects causing such penalties. For example, an enemy with sneak attack would still deal extra damage to your ally if they are flat-footed, even though they wouldn't take the –2 circumstance penalty when defending against the attack." };
+            yield return new TextBlock { Id = Guid.Parse("a3ffd8d4-1b7b-491d-9c16-76b2ac52c00f"), Type = TextBlockType.Text, Text = $"Your foresight and planning are more valuable than armor as you direct your ally away from danger, but there's a limit to how often you can guide your allies away from a foe's relentless assaults. The triggering attack roll targets your Perception DC instead of your ally's AC. Though this allows your ally to avoid taking penalties to their AC, it doesn't remove any conditions or other effects causing such penalties. For example, an enemy with sneak attack would still deal extra damage to your ally if they are flat-footed, even though they wouldn't take the –2 circumstance penalty when defending against the attack." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

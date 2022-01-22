@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6c3ca160-b48d-45a0-8e35-624f90873b8e"), Type = TextBlockType.Text, Text = "Your bloodline's deep connection to mental essence greatly enhances your spell repertoire. Add one spell to your spell repertoire for each spell level you can cast." };
+            yield return new TextBlock { Id = Guid.Parse("6c3ca160-b48d-45a0-8e35-624f90873b8e"), Type = TextBlockType.Text, Text = $"Your bloodline's deep connection to mental essence greatly enhances your spell repertoire. Add one spell to your spell repertoire for each spell level you can cast." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

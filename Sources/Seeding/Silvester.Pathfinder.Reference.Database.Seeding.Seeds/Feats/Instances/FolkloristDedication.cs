@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c5436988-569d-457e-bd4e-43d711cff3c5"), Type = TextBlockType.Text, Text = "You are a master archivist and entertainer, capable of pulling wisdom from the tales you tell and weaving your allies and enemies into a powerful narrative. You gain the (feat: Spin Tale) action." };
+            yield return new TextBlock { Id = Guid.Parse("c5436988-569d-457e-bd4e-43d711cff3c5"), Type = TextBlockType.Text, Text = $"You are a master archivist and entertainer, capable of pulling wisdom from the tales you tell and weaving your allies and enemies into a powerful narrative. You gain the Spin Tale action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

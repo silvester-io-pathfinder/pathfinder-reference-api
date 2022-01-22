@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7040a194-1413-4dc6-a499-b972da4ae778"), Type = TextBlockType.Text, Text = "Your ranged attacks can shoot an unprepared foe right out of the air. Make a (action: Strike) with a ranged weapon or a thrown weapon against a flat-footed creature. If the (action: Strike) is a success and deals damage, the target must attempt a Reflex save against your class DC with the following effects." };
+            yield return new TextBlock { Id = Guid.Parse("7040a194-1413-4dc6-a499-b972da4ae778"), Type = TextBlockType.Text, Text = $"Your ranged attacks can shoot an unprepared foe right out of the air. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a ranged weapon or a thrown weapon against a flat-footed creature. If the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} is a success and deals damage, the target must attempt a Reflex save against your class DC with the following effects." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

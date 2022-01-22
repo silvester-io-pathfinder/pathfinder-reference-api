@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cbc6b190-070e-49a8-9160-fbdce39ce3c6"), Type = TextBlockType.Text, Text = "You can cast the (spell: produce flame) cantrip as an innate arcane spell at will." };
+            yield return new TextBlock { Id = Guid.Parse("cbc6b190-070e-49a8-9160-fbdce39ce3c6"), Type = TextBlockType.Text, Text = $"You can cast the {ToMarkdownLink<Models.Entities.Spell>("produce flame", Spells.Instances.ProduceFlame.ID)} cantrip as an innate arcane spell at will." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

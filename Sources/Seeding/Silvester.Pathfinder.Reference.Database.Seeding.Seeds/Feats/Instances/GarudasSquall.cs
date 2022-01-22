@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3646d768-7e45-476c-9479-29218b460953"), Type = TextBlockType.Text, Text = "Garudas' marksmanship and magic are second nature to you. Whenever you critically hit using a bow, you apply the weapon's critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("3646d768-7e45-476c-9479-29218b460953"), Type = TextBlockType.Text, Text = $"Garudas' marksmanship and magic are second nature to you. Whenever you critically hit using a bow, you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

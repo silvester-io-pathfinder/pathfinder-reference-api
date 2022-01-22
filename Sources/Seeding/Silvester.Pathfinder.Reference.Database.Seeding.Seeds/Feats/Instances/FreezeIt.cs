@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d501680-cb7a-4c3f-801f-a450c4dc8990"), Type = TextBlockType.Text, Text = "You are no rime hag or Jadwiga, but the magic of the north has still left a mark on you. Frigid ice runs through your veins, and you can expel frost from your body to freeze your foes. Attempt an Athletics check against the Fortitude DC of an adjacent foe." };
-            yield return new TextBlock { Id = Guid.Parse("5c9bffe4-b194-4ef2-a8e3-9461665683cf"), Type = TextBlockType.Text, Text = "If you have master proficiency in Athletics, you can affect up to two adjacent foes, rolling one Athletics check against each foe." };
+            yield return new TextBlock { Id = Guid.Parse("2d501680-cb7a-4c3f-801f-a450c4dc8990"), Type = TextBlockType.Text, Text = $"You are no rime hag or Jadwiga, but the magic of the north has still left a mark on you. Frigid ice runs through your veins, and you can expel frost from your body to freeze your foes. Attempt an Athletics check against the Fortitude DC of an adjacent foe." };
+            yield return new TextBlock { Id = Guid.Parse("5c9bffe4-b194-4ef2-a8e3-9461665683cf"), Type = TextBlockType.Text, Text = $"If you have master proficiency in Athletics, you can affect up to two adjacent foes, rolling one Athletics check against each foe." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

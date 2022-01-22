@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e3e8e9e5-5f60-4251-99f1-f6967c9dd71c"), Type = TextBlockType.Text, Text = "You catch yourself as you make a mistake. You can trigger (feat: Cat's Luck) when you fail or critically fail on an Athletics or Acrobatics skill check, in addition to its normal trigger. When you do, you reroll the triggering skill check and use the better result. This still counts against (feat: Cat's Luck)'s frequency, as normal." };
+            yield return new TextBlock { Id = Guid.Parse("e3e8e9e5-5f60-4251-99f1-f6967c9dd71c"), Type = TextBlockType.Text, Text = $"You catch yourself as you make a mistake. You can trigger {ToMarkdownLink<Models.Entities.Feat>("Cat's Luck", Feats.Instances.CatsLuck.ID)} when you fail or critically fail on an Athletics or Acrobatics skill check, in addition to its normal trigger. When you do, you reroll the triggering skill check and use the better result. This still counts against {ToMarkdownLink<Models.Entities.Feat>("Cat's Luck", Feats.Instances.CatsLuck.ID)}'s frequency, as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

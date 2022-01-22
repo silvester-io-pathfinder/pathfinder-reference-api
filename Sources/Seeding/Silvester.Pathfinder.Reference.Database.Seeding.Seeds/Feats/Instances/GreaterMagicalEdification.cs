@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d45209c7-bb37-4907-9291-70b467678ec2"), Type = TextBlockType.Text, Text = "You've continued to expand your compendium of tools to compile knowledge. You can cast (spell: comprehend language), (spell: mindlink), and (spell: secret page) as innate occult spells, each once per day. When you cast (spell: secret page), it is automatically heightened to the same spell level as your cantrips from (feat: Magical Edification)." };
+            yield return new TextBlock { Id = Guid.Parse("d45209c7-bb37-4907-9291-70b467678ec2"), Type = TextBlockType.Text, Text = $"You've continued to expand your compendium of tools to compile knowledge. You can cast {ToMarkdownLink<Models.Entities.Spell>("comprehend language", Spells.Instances.ComprehendLanguage.ID)}, {ToMarkdownLink<Models.Entities.Spell>("mindlink", Spells.Instances.Mindlink.ID)}, and {ToMarkdownLink<Models.Entities.Spell>("secret page", Spells.Instances.SecretPage.ID)} as innate occult spells, each once per day. When you cast {ToMarkdownLink<Models.Entities.Spell>("secret page", Spells.Instances.SecretPage.ID)}, it is automatically heightened to the same spell level as your cantrips from {ToMarkdownLink<Models.Entities.Feat>("Magical Edification", Feats.Instances.MagicalEdification.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

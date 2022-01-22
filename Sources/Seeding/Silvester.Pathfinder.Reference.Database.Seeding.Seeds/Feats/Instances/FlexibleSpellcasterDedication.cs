@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fdbe1cd4-3c29-483f-82f1-f0afe497e97e"), Type = TextBlockType.Text, Text = "You now have four cantrips per day instead of three. At 4th level, you have five cantrips per day instead of four." };
+            yield return new TextBlock { Id = Guid.Parse("fdbe1cd4-3c29-483f-82f1-f0afe497e97e"), Type = TextBlockType.Text, Text = $"You now have four cantrips per day instead of three. At 4th level, you have five cantrips per day instead of four." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

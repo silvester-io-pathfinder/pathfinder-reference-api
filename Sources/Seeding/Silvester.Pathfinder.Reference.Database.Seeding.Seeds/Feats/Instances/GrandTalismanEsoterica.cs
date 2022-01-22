@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a04c9653-1214-4848-8e65-2c62865da2c2"), Type = TextBlockType.Text, Text = "You have completed your journey in studying esoteric talismans, gaining yet more temporary talismans each day. You can create six temporary talismans each day instead of four." };
+            yield return new TextBlock { Id = Guid.Parse("a04c9653-1214-4848-8e65-2c62865da2c2"), Type = TextBlockType.Text, Text = $"You have completed your journey in studying esoteric talismans, gaining yet more temporary talismans each day. You can create six temporary talismans each day instead of four." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

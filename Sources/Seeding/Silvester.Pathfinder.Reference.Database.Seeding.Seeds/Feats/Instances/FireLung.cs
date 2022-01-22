@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b0b75978-c45e-4dc2-810b-41d3d1af0cd6"), Type = TextBlockType.Text, Text = "A lifetime of proximity to flames has inured your lungs and eyes to smoke. You can breathe normally in areas of ash and smoke without risk of suffocation, and you ignore the concealed condition from smoke. You need only a successful DC 10 flat check to recover from persistent fire damage, rather than DC 15 (and the DC when receiving particularly effective assistance is 5 instead of 10)." };
+            yield return new TextBlock { Id = Guid.Parse("b0b75978-c45e-4dc2-810b-41d3d1af0cd6"), Type = TextBlockType.Text, Text = $"A lifetime of proximity to flames has inured your lungs and eyes to smoke. You can breathe normally in areas of ash and smoke without risk of suffocation, and you ignore the concealed condition from smoke. You need only a successful DC 10 flat check to recover from persistent fire damage, rather than DC 15 (and the DC when receiving particularly effective assistance is 5 instead of 10)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

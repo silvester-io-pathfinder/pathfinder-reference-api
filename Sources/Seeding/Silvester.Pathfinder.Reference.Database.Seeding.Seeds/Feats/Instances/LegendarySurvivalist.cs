@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b46fab78-bf88-427c-90ed-83f5bdfe3632"), Type = TextBlockType.Text, Text = "You can survive indefinitely without food or water and can endure severe, extreme, and incredible cold and heat without taking damage from doing so." };
+            yield return new TextBlock { Id = Guid.Parse("b46fab78-bf88-427c-90ed-83f5bdfe3632"), Type = TextBlockType.Text, Text = $"You can survive indefinitely without food or water and can endure severe, extreme, and incredible cold and heat without taking damage from doing so." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

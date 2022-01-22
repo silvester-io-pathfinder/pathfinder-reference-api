@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fec48772-ff26-4508-bd3a-108e5bb7c9f0"), Type = TextBlockType.Text, Text = "Your faith enhances your ability to remove conditions. When you use (feat: Mercy), you can instead attempt to counteract the blinded, deafened, sickened, or slowed conditions." };
+            yield return new TextBlock { Id = Guid.Parse("fec48772-ff26-4508-bd3a-108e5bb7c9f0"), Type = TextBlockType.Text, Text = $"Your faith enhances your ability to remove conditions. When you use {ToMarkdownLink<Models.Entities.Feat>("Mercy", Feats.Instances.Mercy.ID)}, you can instead attempt to counteract the blinded, deafened, sickened, or slowed conditions." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9492531-4787-4a63-8fe6-2c6068cb5eb3"), Type = TextBlockType.Text, Text = "You're one of Hei Feng's chosen people and have the authority of the Celestial Court on your side. Once per day, you can cast a 6th-level (spell: spirit blast) as a divine innate spell. In addition, you gain resistance 5 to both good and evil damage." };
+            yield return new TextBlock { Id = Guid.Parse("b9492531-4787-4a63-8fe6-2c6068cb5eb3"), Type = TextBlockType.Text, Text = $"You're one of Hei Feng's chosen people and have the authority of the Celestial Court on your side. Once per day, you can cast a 6th-level {ToMarkdownLink<Models.Entities.Spell>("spirit blast", Spells.Instances.SpiritBlast.ID)} as a divine innate spell. In addition, you gain resistance 5 to both good and evil damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

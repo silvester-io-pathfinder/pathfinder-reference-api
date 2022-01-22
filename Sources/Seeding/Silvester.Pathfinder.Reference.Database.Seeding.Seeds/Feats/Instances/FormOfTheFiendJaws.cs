@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d290ea57-1d63-440b-ba38-65ff2a25212f"), Type = TextBlockType.Text, Text = "Part of your body has an obvious, fiendish appearance. Sharp teeth fill your mouth." };
-            yield return new TextBlock { Id = Guid.Parse("e6926551-b0fa-4b97-bcc7-503c5cdd1e73"), Type = TextBlockType.Enumeration, Text = " Jaws: 1d6 piercing ((trait: finesse), (trait: unarmed))" };
+            yield return new TextBlock { Id = Guid.Parse("d290ea57-1d63-440b-ba38-65ff2a25212f"), Type = TextBlockType.Text, Text = $"Part of your body has an obvious, fiendish appearance. Sharp teeth fill your mouth." };
+            yield return new TextBlock { Id = Guid.Parse("e6926551-b0fa-4b97-bcc7-503c5cdd1e73"), Type = TextBlockType.Enumeration, Text = $" Jaws: 1d6 piercing ({ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)}, {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)})" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

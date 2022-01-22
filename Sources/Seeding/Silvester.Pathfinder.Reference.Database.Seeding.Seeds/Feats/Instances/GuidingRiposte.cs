@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a2db200d-6987-4fc5-967f-6c5bd308b800"), Type = TextBlockType.Text, Text = "By shifting your weight and angling your weapon, you guide your opponent to a more favorable position. When you use (feat: Dueling Riposte) to (action: Strike) and you hit, you can move the target up to 10 feet into a space in your reach. This follows the forced movement rules (page 475)." };
+            yield return new TextBlock { Id = Guid.Parse("a2db200d-6987-4fc5-967f-6c5bd308b800"), Type = TextBlockType.Text, Text = $"By shifting your weight and angling your weapon, you guide your opponent to a more favorable position. When you use {ToMarkdownLink<Models.Entities.Feat>("Dueling Riposte", Feats.Instances.DuelingRiposte.ID)} to {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} and you hit, you can move the target up to 10 feet into a space in your reach. This follows the forced movement rules (page 475)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("069dd447-5bf1-4ae0-b261-6cf91724f9af"), Type = TextBlockType.Text, Text = "You can turn your attack into an unerring blur of force. You learn the (spell: force fang) conflux spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("069dd447-5bf1-4ae0-b261-6cf91724f9af"), Type = TextBlockType.Text, Text = $"You can turn your attack into an unerring blur of force. You learn the {ToMarkdownLink<Models.Entities.Spell>("force fang", Spells.Instances.ForceFang.ID)} conflux spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

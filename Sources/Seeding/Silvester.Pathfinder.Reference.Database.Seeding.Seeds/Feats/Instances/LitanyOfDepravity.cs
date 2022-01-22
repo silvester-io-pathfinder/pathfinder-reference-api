@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c484bb9-7b50-4be2-9ca9-bd07f4ac9215"), Type = TextBlockType.Text, Text = "You undercut your enemy's vain moralism, opening their heart to evil. You can cast the (spell: litany of depravity) focus spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("7c484bb9-7b50-4be2-9ca9-bd07f4ac9215"), Type = TextBlockType.Text, Text = $"You undercut your enemy's vain moralism, opening their heart to evil. You can cast the {ToMarkdownLink<Models.Entities.Spell>("litany of depravity", Spells.Instances.LitanyOfDepravity.ID)} focus spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

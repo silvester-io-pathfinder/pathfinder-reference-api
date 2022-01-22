@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("233b0b4e-5cee-4f44-962f-97c3842548b5"), Type = TextBlockType.Text, Text = "You make your companion enormous. You gain the (spell: enlarge companion) warden spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("233b0b4e-5cee-4f44-962f-97c3842548b5"), Type = TextBlockType.Text, Text = $"You make your companion enormous. You gain the {ToMarkdownLink<Models.Entities.Spell>("enlarge companion", Spells.Instances.EnlargeCompanion.ID)} warden spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

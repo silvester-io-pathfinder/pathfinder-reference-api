@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c4009cb3-c4a1-47e7-aa0e-48949d97711a"), Type = TextBlockType.Text, Text = "~ Lesson Type: Greater" };
-            yield return new TextBlock { Id = Guid.Parse("3fd6512a-fc49-4265-9484-bb91b2c08596"), Type = TextBlockType.Text, Text = "You gain the (spell: personal blizzard) hex, and your familiar learns (spell: wall of wind)." };
+            yield return new TextBlock { Id = Guid.Parse("c4009cb3-c4a1-47e7-aa0e-48949d97711a"), Type = TextBlockType.Text, Text = $"~ Lesson Type: Greater" };
+            yield return new TextBlock { Id = Guid.Parse("3fd6512a-fc49-4265-9484-bb91b2c08596"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Spell>("personal blizzard", Spells.Instances.PersonalBlizzard.ID)} hex, and your familiar learns {ToMarkdownLink<Models.Entities.Spell>("wall of wind", Spells.Instances.WallOfWind.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

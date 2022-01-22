@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("67d6d66d-8645-43d7-b5ef-46c1f6861e07"), Type = TextBlockType.Text, Text = "You've trained with your order's weapon and your Hellknight plate long enough to apply your expertise from other weapons and armor. If you have expert proficiency in any weapon or unarmed attack, you gain expert proficiency in your order's weapon as well. If you have expert proficiency in any armor or unarmored defense, you gain expert proficiency in Hellknight plate as well." };
+            yield return new TextBlock { Id = Guid.Parse("67d6d66d-8645-43d7-b5ef-46c1f6861e07"), Type = TextBlockType.Text, Text = $"You've trained with your order's weapon and your Hellknight plate long enough to apply your expertise from other weapons and armor. If you have expert proficiency in any weapon or unarmed attack, you gain expert proficiency in your order's weapon as well. If you have expert proficiency in any armor or unarmored defense, you gain expert proficiency in Hellknight plate as well." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

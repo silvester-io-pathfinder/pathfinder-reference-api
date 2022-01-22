@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1abcb862-e629-4a6c-baa3-ca1a40fd1bd3"), Type = TextBlockType.Text, Text = "Your halo can enhance positive energy. Creatures who have recovered Hit Points from a (trait: positive) (trait: healing) effect recover an additional 1d6 Hit Points. Creatures who benefit from this power become temporarily immune to its effect for the next 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("1abcb862-e629-4a6c-baa3-ca1a40fd1bd3"), Type = TextBlockType.Text, Text = $"Your halo can enhance positive energy. Creatures who have recovered Hit Points from a {ToMarkdownLink<Models.Entities.Trait>("positive", Traits.Instances.Positive.ID)} {ToMarkdownLink<Models.Entities.Trait>("healing", Traits.Instances.Healing.ID)} effect recover an additional 1d6 Hit Points. Creatures who benefit from this power become temporarily immune to its effect for the next 10 minutes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

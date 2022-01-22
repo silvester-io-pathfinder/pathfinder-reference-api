@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a2e07d93-f3b7-48ef-bfd5-579a174581a1"), Type = TextBlockType.Text, Text = "Your command over halcyon magic is nearly unmatched. You gain two common 6th-level and 7th-level halcyon spells. You also gain a 6th-level halcyon spell slot and a 7th-level halcyon spell slot. Your proficiency rank in either arcane or primal spell DCs and spell attack rolls advances from expert to master." };
+            yield return new TextBlock { Id = Guid.Parse("a2e07d93-f3b7-48ef-bfd5-579a174581a1"), Type = TextBlockType.Text, Text = $"Your command over halcyon magic is nearly unmatched. You gain two common 6th-level and 7th-level halcyon spells. You also gain a 6th-level halcyon spell slot and a 7th-level halcyon spell slot. Your proficiency rank in either arcane or primal spell DCs and spell attack rolls advances from expert to master." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c27e205b-7764-4d6d-b41b-56d8198874f6"), Type = TextBlockType.Text, Text = "You transmute your body into an ethereal form. You gain the (spell: empty body) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("c27e205b-7764-4d6d-b41b-56d8198874f6"), Type = TextBlockType.Text, Text = $"You transmute your body into an ethereal form. You gain the {ToMarkdownLink<Models.Entities.Spell>("empty body", Spells.Instances.EmptyBody.ID)} ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("911e8b97-f50d-4cd1-ac2b-a290973e2e17"), Type = TextBlockType.Text, Text = "Under your care, your mount has realized its innate potential. The mount you gained through the divine ally class feature is now a nimble or savage animal companion (page 214). During an encounter, even if you don't use the (action: Command an Animal) action, your mount can still use 1 action on your turn to (action: Stride) or (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("911e8b97-f50d-4cd1-ac2b-a290973e2e17"), Type = TextBlockType.Text, Text = $"Under your care, your mount has realized its innate potential. The mount you gained through the divine ally class feature is now a nimble or savage animal companion (page 214). During an encounter, even if you don't use the {ToMarkdownLink<Models.Entities.SkillAction>("Command an Animal", SkillActions.Instances.CommandAnAnimal.ID)} action, your mount can still use 1 action on your turn to {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} or {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

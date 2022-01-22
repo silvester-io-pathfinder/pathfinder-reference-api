@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04381a46-d3ba-4653-8928-edc29b769331"), Type = TextBlockType.Text, Text = "Your (action: Strikes | Strike) deal an additional 1d4 negative damage. Once while the armament is manifested, you can cast harm as an innate spell, with a level equal to half your level rounded up." };
-            yield return new TextBlock { Id = Guid.Parse("8a6dd0bc-9d62-4f45-8f92-1c067610b364"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ Reduce any damage you would deal by half your level." };
+            yield return new TextBlock { Id = Guid.Parse("04381a46-d3ba-4653-8928-edc29b769331"), Type = TextBlockType.Text, Text = $"Your {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} deal an additional 1d4 negative damage. Once while the armament is manifested, you can cast harm as an innate spell, with a level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("8a6dd0bc-9d62-4f45-8f92-1c067610b364"), Type = TextBlockType.Text, Text = $"__Corruption Flaw__ Reduce any damage you would deal by half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

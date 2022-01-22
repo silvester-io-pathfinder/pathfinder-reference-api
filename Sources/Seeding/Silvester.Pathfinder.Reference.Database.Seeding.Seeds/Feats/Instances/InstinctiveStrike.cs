@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("28c2d073-9a55-4e19-99a8-7dc9ebc2701d"), Type = TextBlockType.Text, Text = "You trust your instincts and your sense of smell, using all of your senses to pinpoint your opponent's location. Make a melee (action: Strike) against an opponent that isn't hiding its scent with an effect like (spell: negate aroma). This attack ignores any flat check required due to the target being concealed or hidden." };
+            yield return new TextBlock { Id = Guid.Parse("28c2d073-9a55-4e19-99a8-7dc9ebc2701d"), Type = TextBlockType.Text, Text = $"You trust your instincts and your sense of smell, using all of your senses to pinpoint your opponent's location. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against an opponent that isn't hiding its scent with an effect like {ToMarkdownLink<Models.Entities.Spell>("negate aroma", Spells.Instances.NegateAroma.ID)}. This attack ignores any flat check required due to the target being concealed or hidden." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

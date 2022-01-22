@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("76331cc3-a5e5-4f06-afd0-15db81567a5b"), Type = TextBlockType.Text, Text = "The scorpion holds its foe in place with its pincers in order to sting it. It makes a pincer (action: Strike). If the (action: Strike) hits, the target creature automatically becomes grabbed by the scorpion, which then makes a stinger (action: Strike) against it. The grabbed condition lasts until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("76331cc3-a5e5-4f06-afd0-15db81567a5b"), Type = TextBlockType.Text, Text = $"The scorpion holds its foe in place with its pincers in order to sting it. It makes a pincer {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits, the target creature automatically becomes grabbed by the scorpion, which then makes a stinger {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against it. The grabbed condition lasts until the end of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9bdeac9f-920c-40eb-91f3-b763f344a4d1"), Type = TextBlockType.Text, Text = "Your time gossiping in fashionable salons keeps you informed on every topic. You are trained in Gossip Lore, a special Lore skill that can be used only to (action: Recall Knowledge), but on any topic. If you fail a check to (action: Recall Knowledge) with Gossip Lore, you get the effects of the (feat: Dubious Knowledge) skill feat." };
-            yield return new TextBlock { Id = Guid.Parse("5ab85052-e5ce-4fd4-8ba0-5de898aa9ba3"), Type = TextBlockType.Text, Text = "If you have legendary proficiency in Society, you gain expert proficiency in Gossip Lore, but you can't increase your proficiency rank in Gossip Lore by any other means." };
+            yield return new TextBlock { Id = Guid.Parse("9bdeac9f-920c-40eb-91f3-b763f344a4d1"), Type = TextBlockType.Text, Text = $"Your time gossiping in fashionable salons keeps you informed on every topic. You are trained in Gossip Lore, a special Lore skill that can be used only to {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)}, but on any topic. If you fail a check to {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} with Gossip Lore, you get the effects of the {ToMarkdownLink<Models.Entities.Feat>("Dubious Knowledge", Feats.Instances.DubiousKnowledge.ID)} skill feat." };
+            yield return new TextBlock { Id = Guid.Parse("5ab85052-e5ce-4fd4-8ba0-5de898aa9ba3"), Type = TextBlockType.Text, Text = $"If you have legendary proficiency in Society, you gain expert proficiency in Gossip Lore, but you can't increase your proficiency rank in Gossip Lore by any other means." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("738bfd5b-d5b8-4c22-b207-2c8beb44dde8"), Type = TextBlockType.Text, Text = "You achieve a state of perfect calm before unleashing your attack, opening your mind to the minute movements of the world around you to increase your accuracy. Make a ranged weapon (action: Strike) against a target within your weapon's first range increment. This (action: Strike) ignores the target's concealed condition and all cover." };
+            yield return new TextBlock { Id = Guid.Parse("738bfd5b-d5b8-4c22-b207-2c8beb44dde8"), Type = TextBlockType.Text, Text = $"You achieve a state of perfect calm before unleashing your attack, opening your mind to the minute movements of the world around you to increase your accuracy. Make a ranged weapon {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against a target within your weapon's first range increment. This {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} ignores the target's concealed condition and all cover." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

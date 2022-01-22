@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4ed91e75-b480-499e-9c09-60b8993598ed"), Type = TextBlockType.Text, Text = "By adding a flourish, you make your compositions last longer. You learn the (spell: lingering composition) composition spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("4ed91e75-b480-499e-9c09-60b8993598ed"), Type = TextBlockType.Text, Text = $"By adding a flourish, you make your compositions last longer. You learn the {ToMarkdownLink<Models.Entities.Spell>("lingering composition", Spells.Instances.LingeringComposition.ID)} composition spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

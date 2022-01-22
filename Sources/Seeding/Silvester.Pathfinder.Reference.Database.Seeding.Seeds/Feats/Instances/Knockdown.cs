@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("57872c27-608c-4515-861e-68b7888cfdc5"), Type = TextBlockType.Text, Text = "You make an attack to knock a foe off balance, then follow up immediately with a sweep to topple them. Make a melee (action: Strike). If it hits and deals damage, you can attempt an Athletics check to (action: Trip) the creature you hit. If you're wielding a two-handed melee weapon, you can ignore (action: Trip)'s requirement that you have a hand free. Both attacks count toward your multiple attack penalty, but the penalty doesn't increase until after you've made both of them." };
+            yield return new TextBlock { Id = Guid.Parse("57872c27-608c-4515-861e-68b7888cfdc5"), Type = TextBlockType.Text, Text = $"You make an attack to knock a foe off balance, then follow up immediately with a sweep to topple them. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If it hits and deals damage, you can attempt an Athletics check to {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} the creature you hit. If you're wielding a two-handed melee weapon, you can ignore {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)}'s requirement that you have a hand free. Both attacks count toward your multiple attack penalty, but the penalty doesn't increase until after you've made both of them." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

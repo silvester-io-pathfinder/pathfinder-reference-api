@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ddd0c65-f8e1-4e2d-a7ba-0ea36d23054a"), Type = TextBlockType.Text, Text = "Your eidolon gains more magic. Choose one 2nd-level spell and one 1st-level spell of your eidolon's tradition. Your eidolon can cast them each once per day as innate spells. At every even level after you take this feat, your eidolon can swap one of these innate spells for a new innate spell that's 2 or more levels lower than your highest-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("0ddd0c65-f8e1-4e2d-a7ba-0ea36d23054a"), Type = TextBlockType.Text, Text = $"Your eidolon gains more magic. Choose one 2nd-level spell and one 1st-level spell of your eidolon's tradition. Your eidolon can cast them each once per day as innate spells. At every even level after you take this feat, your eidolon can swap one of these innate spells for a new innate spell that's 2 or more levels lower than your highest-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

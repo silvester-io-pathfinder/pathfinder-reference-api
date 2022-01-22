@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92e68858-3a95-4f0d-9dd6-2c26ada8ad72"), Type = TextBlockType.Text, Text = "The earth inside you asserts itself as crystallized gemstones or metals, like a cluster of quartz or veins of iron and gold. This shimmering presence inside your being inspires you to flashy and flamboyant performances. You gain the trained proficiency rank in Performance. If you would automatically become trained in Performance (from your background or class, for example), you instead become trained in a skill of your choice. You gain the (feat: Impressive Performance) skill feat." };
+            yield return new TextBlock { Id = Guid.Parse("92e68858-3a95-4f0d-9dd6-2c26ada8ad72"), Type = TextBlockType.Text, Text = $"The earth inside you asserts itself as crystallized gemstones or metals, like a cluster of quartz or veins of iron and gold. This shimmering presence inside your being inspires you to flashy and flamboyant performances. You gain the trained proficiency rank in Performance. If you would automatically become trained in Performance (from your background or class, for example), you instead become trained in a skill of your choice. You gain the {ToMarkdownLink<Models.Entities.Feat>("Impressive Performance", Feats.Instances.ImpressivePerformance.ID)} skill feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

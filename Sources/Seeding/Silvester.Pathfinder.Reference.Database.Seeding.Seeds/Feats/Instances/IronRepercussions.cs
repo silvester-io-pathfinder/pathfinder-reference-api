@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("793a4fe3-d2a8-45e1-897f-eefb3bad4b02"), Type = TextBlockType.Text, Text = "Disobeying your (feat: Iron Command) has lasting consequences." };
-            yield return new TextBlock { Id = Guid.Parse("373ce4c3-94cf-4252-b6fa-9b89e3238680"), Type = TextBlockType.Text, Text = "If an enemy refuses to kneel to you, you can deal persistent mental damage instead of normal mental damage. You must decide whether the mental damage will be persistent before your enemy chooses whether to kneel or not. The amount of damage is unchanged." };
+            yield return new TextBlock { Id = Guid.Parse("793a4fe3-d2a8-45e1-897f-eefb3bad4b02"), Type = TextBlockType.Text, Text = $"Disobeying your {ToMarkdownLink<Models.Entities.Feat>("Iron Command", Feats.Instances.IronCommand.ID)} has lasting consequences." };
+            yield return new TextBlock { Id = Guid.Parse("373ce4c3-94cf-4252-b6fa-9b89e3238680"), Type = TextBlockType.Text, Text = $"If an enemy refuses to kneel to you, you can deal persistent mental damage instead of normal mental damage. You must decide whether the mental damage will be persistent before your enemy chooses whether to kneel or not. The amount of damage is unchanged." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

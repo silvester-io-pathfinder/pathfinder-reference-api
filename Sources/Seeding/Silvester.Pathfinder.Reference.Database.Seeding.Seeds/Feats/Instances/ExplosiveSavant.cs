@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8ffdc7b-606f-4f9d-a799-fd0effdd6aff"), Type = TextBlockType.Text, Text = "~ Access: You are from Dongun Hold or Alkenstar." };
-            yield return new TextBlock { Id = Guid.Parse("2331c7fb-3a70-4927-9abb-04bf6b06a27a"), Type = TextBlockType.Text, Text = "A lifetime wielding firearms and explosive ordinance amid the chaos of battle has granted you great skill with volatile weapons. You become trained in simple and martial bombs and firearms." };
+            yield return new TextBlock { Id = Guid.Parse("f8ffdc7b-606f-4f9d-a799-fd0effdd6aff"), Type = TextBlockType.Text, Text = $"~ Access: You are from Dongun Hold or Alkenstar." };
+            yield return new TextBlock { Id = Guid.Parse("2331c7fb-3a70-4927-9abb-04bf6b06a27a"), Type = TextBlockType.Text, Text = $"A lifetime wielding firearms and explosive ordinance amid the chaos of battle has granted you great skill with volatile weapons. You become trained in simple and martial bombs and firearms." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

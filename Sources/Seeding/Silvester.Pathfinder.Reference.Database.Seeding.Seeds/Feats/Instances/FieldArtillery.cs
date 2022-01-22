@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5ba03067-b80f-4230-a396-cb786f7f9d04"), Type = TextBlockType.Text, Text = "While castles are generally obliging enough to stay in one place, out in the field positioning is of paramount importance—a gun in the wrong place is worse than useless. You can (action: Interact) with an adjacent mounted siege weapon to increase its Speed by 10 feet for one round." };
+            yield return new TextBlock { Id = Guid.Parse("5ba03067-b80f-4230-a396-cb786f7f9d04"), Type = TextBlockType.Text, Text = $"While castles are generally obliging enough to stay in one place, out in the field positioning is of paramount importance—a gun in the wrong place is worse than useless. You can {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} with an adjacent mounted siege weapon to increase its Speed by 10 feet for one round." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

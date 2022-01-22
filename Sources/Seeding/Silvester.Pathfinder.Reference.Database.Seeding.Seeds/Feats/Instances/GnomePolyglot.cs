@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea16f8a5-5870-4fdc-b452-44a5ccea9593"), Type = TextBlockType.Text, Text = "Your extensive travels, curiosity, and love of learning help you to learn languages quickly. You learn three new languages, chosen from common languages and uncommon languages you have access to. These languages take the same form (signed or spoken) as your other languages. When you select the (feat: Multilingual) feat, you learn three new languages instead of two." };
+            yield return new TextBlock { Id = Guid.Parse("ea16f8a5-5870-4fdc-b452-44a5ccea9593"), Type = TextBlockType.Text, Text = $"Your extensive travels, curiosity, and love of learning help you to learn languages quickly. You learn three new languages, chosen from common languages and uncommon languages you have access to. These languages take the same form (signed or spoken) as your other languages. When you select the {ToMarkdownLink<Models.Entities.Feat>("Multilingual", Feats.Instances.Multilingual.ID)} feat, you learn three new languages instead of two." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

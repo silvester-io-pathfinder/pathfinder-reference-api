@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e9f665b-9902-469f-bfe4-4b6313c30cfd"), Type = TextBlockType.Text, Text = "Your steed ally manifests a suite of powerful and sinister gifts granted to it by your deity. It gains darkvision, its maximum Hit Points increase by 40, and it gains weakness 10 to good damage." };
-            yield return new TextBlock { Id = Guid.Parse("18807d8c-1a53-40ad-8d1a-d024de98b62b"), Type = TextBlockType.Text, Text = "Additionally, it grows wings appropriate for a servitor of your deity (such as bat wings for a devil), granting it a fly Speed equal to its Speed. It gains the fiend trait and the trait appropriate to the type of servitor it has become (such as daemon, demon, or devil)." };
+            yield return new TextBlock { Id = Guid.Parse("1e9f665b-9902-469f-bfe4-4b6313c30cfd"), Type = TextBlockType.Text, Text = $"Your steed ally manifests a suite of powerful and sinister gifts granted to it by your deity. It gains darkvision, its maximum Hit Points increase by 40, and it gains weakness 10 to good damage." };
+            yield return new TextBlock { Id = Guid.Parse("18807d8c-1a53-40ad-8d1a-d024de98b62b"), Type = TextBlockType.Text, Text = $"Additionally, it grows wings appropriate for a servitor of your deity (such as bat wings for a devil), granting it a fly Speed equal to its Speed. It gains the fiend trait and the trait appropriate to the type of servitor it has become (such as daemon, demon, or devil)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

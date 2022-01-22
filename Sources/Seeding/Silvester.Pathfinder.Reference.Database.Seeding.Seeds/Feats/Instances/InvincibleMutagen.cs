@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5803e949-7798-4c94-9315-d8c76e002e90"), Type = TextBlockType.Text, Text = "The fortifying additives you brew into your mutagens make your juggernaut form impervious. Whenever you're affected by a juggernaut mutagen, you gain resistance to all physical damage equal to your Intelligence modifier (minimum 0)." };
+            yield return new TextBlock { Id = Guid.Parse("5803e949-7798-4c94-9315-d8c76e002e90"), Type = TextBlockType.Text, Text = $"The fortifying additives you brew into your mutagens make your juggernaut form impervious. Whenever you're affected by a juggernaut mutagen, you gain resistance to all physical damage equal to your Intelligence modifier (minimum 0)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

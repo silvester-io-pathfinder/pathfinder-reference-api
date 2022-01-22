@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5d5a786a-4c85-4cbd-b58a-b9ab8f1fe0c1"), Type = TextBlockType.Text, Text = "Your enemy's blow fuels your rage and provokes your immediate retaliation. Make a melee (action: Strike) against the triggering enemy." };
+            yield return new TextBlock { Id = Guid.Parse("5d5a786a-4c85-4cbd-b58a-b9ab8f1fe0c1"), Type = TextBlockType.Text, Text = $"Your enemy's blow fuels your rage and provokes your immediate retaliation. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against the triggering enemy." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

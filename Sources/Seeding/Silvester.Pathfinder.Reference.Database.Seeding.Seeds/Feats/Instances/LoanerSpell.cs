@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cc2ee095-8292-40f3-9bcb-b8be1f1d1bcd"), Type = TextBlockType.Text, Text = "During your daily preparations, you can gain the assistance of an allied prepared spellcaster to prepare one spell for the day. The spell can be up to 3rd level. Your ally must be able to prepare and cast it, and the spell must have a Targets entry or an area. Your ally loses a spell slot of the corresponding spell level, and you gain the ability to cast the prepared spell once that day. When you (activity: Cast the Spell | Cast a Spell), use your class DC for any saving throws required by the spell, and your class DC – 10 as a spell attack roll modifier." };
+            yield return new TextBlock { Id = Guid.Parse("cc2ee095-8292-40f3-9bcb-b8be1f1d1bcd"), Type = TextBlockType.Text, Text = $"During your daily preparations, you can gain the assistance of an allied prepared spellcaster to prepare one spell for the day. The spell can be up to 3rd level. Your ally must be able to prepare and cast it, and the spell must have a Targets entry or an area. Your ally loses a spell slot of the corresponding spell level, and you gain the ability to cast the prepared spell once that day. When you {ToMarkdownLink<Models.Entities.Rule>("Cast the Spell", Rules.Instances.CastASpell.ID)}, use your class DC for any saving throws required by the spell, and your class DC – 10 as a spell attack roll modifier." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1c8c73fb-c9f5-4d73-bdf9-eca385224fba"), Type = TextBlockType.Text, Text = "You have grown more comfortable with your penchant for supernatural disappearance. The flat check DC of your (feat: Unexpected Shift) feat decreases to 11, and you are no longer dazzled if you succeed." };
+            yield return new TextBlock { Id = Guid.Parse("1c8c73fb-c9f5-4d73-bdf9-eca385224fba"), Type = TextBlockType.Text, Text = $"You have grown more comfortable with your penchant for supernatural disappearance. The flat check DC of your {ToMarkdownLink<Models.Entities.Feat>("Unexpected Shift", Feats.Instances.UnexpectedShift.ID)} feat decreases to 11, and you are no longer dazzled if you succeed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

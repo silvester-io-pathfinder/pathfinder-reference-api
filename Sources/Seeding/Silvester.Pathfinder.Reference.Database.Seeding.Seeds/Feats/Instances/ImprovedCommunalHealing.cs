@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a5ab35b8-f927-4804-973e-406f4f70e148"), Type = TextBlockType.Text, Text = "You can direct excess channeled energy outward to benefit an ally. You can grant the Hit Points you would regain from (feat: Communal Healing) to any one creature within the range of your (spell: heal) spell instead of yourself. You can also use (feat: Communal Healing) when you target only yourself with a (spell: heal) spell, though if you do, you must grant the additional healing to someone other than yourself." };
+            yield return new TextBlock { Id = Guid.Parse("a5ab35b8-f927-4804-973e-406f4f70e148"), Type = TextBlockType.Text, Text = $"You can direct excess channeled energy outward to benefit an ally. You can grant the Hit Points you would regain from {ToMarkdownLink<Models.Entities.Feat>("Communal Healing", Feats.Instances.CommunalHealing.ID)} to any one creature within the range of your {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} spell instead of yourself. You can also use {ToMarkdownLink<Models.Entities.Feat>("Communal Healing", Feats.Instances.CommunalHealing.ID)} when you target only yourself with a {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} spell, though if you do, you must grant the additional healing to someone other than yourself." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

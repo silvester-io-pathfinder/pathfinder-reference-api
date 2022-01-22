@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5db3f2a1-c6ab-496c-9abc-e6edc59c3d2a"), Type = TextBlockType.Text, Text = "Your body coiled to strike, you can lash out at distant enemies." };
-            yield return new TextBlock { Id = Guid.Parse("2fec8514-989c-440a-82b3-5c15a3af2ac3"), Type = TextBlockType.Text, Text = "While you are in this stance, you can use (Feat: Attack of Opportunity) against a creature that is outside your reach but within the reach you would have with a (Feat: Lunge). If you do, you increase your range with the (Action: Strike) by 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("5db3f2a1-c6ab-496c-9abc-e6edc59c3d2a"), Type = TextBlockType.Text, Text = $"Your body coiled to strike, you can lash out at distant enemies." };
+            yield return new TextBlock { Id = Guid.Parse("2fec8514-989c-440a-82b3-5c15a3af2ac3"), Type = TextBlockType.Text, Text = $"While you are in this stance, you can use {ToMarkdownLink<Models.Entities.Feat>("Attack of Opportunity", Feats.Instances.AttackOfOpportunity.ID)} against a creature that is outside your reach but within the reach you would have with a {ToMarkdownLink<Models.Entities.Feat>("Lunge", Feats.Instances.Lunge.ID)}. If you do, you increase your range with the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} by 5 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

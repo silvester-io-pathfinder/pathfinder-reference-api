@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4e0f009b-ef40-4b06-af5a-ecb72c0315f3"), Type = TextBlockType.Text, Text = "Your contrary nature means you bounce back with prejudice. When you roll a success on a save against an (trait: emotion) or (trait: fear) effect, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("4e0f009b-ef40-4b06-af5a-ecb72c0315f3"), Type = TextBlockType.Text, Text = $"Your contrary nature means you bounce back with prejudice. When you roll a success on a save against an {ToMarkdownLink<Models.Entities.Trait>("emotion", Traits.Instances.Emotion.ID)} or {ToMarkdownLink<Models.Entities.Trait>("fear", Traits.Instances.Fear.ID)} effect, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

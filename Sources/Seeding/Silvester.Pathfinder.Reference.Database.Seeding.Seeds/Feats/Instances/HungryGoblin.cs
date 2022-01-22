@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5c1d701d-d7fd-472f-ad06-410bd41eaf86"), Type = TextBlockType.Text, Text = "You'll eat anything and anyone. Whenever you inflict persistent bleed damage with your jaws unarmed attack, you gain temporary Hit Points equal to half your level for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("5c1d701d-d7fd-472f-ad06-410bd41eaf86"), Type = TextBlockType.Text, Text = $"You'll eat anything and anyone. Whenever you inflict persistent bleed damage with your jaws unarmed attack, you gain temporary Hit Points equal to half your level for 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

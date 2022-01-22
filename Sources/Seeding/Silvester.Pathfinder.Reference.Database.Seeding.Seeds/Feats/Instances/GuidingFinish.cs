@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2f25b3dd-4d3f-44d3-9abb-99dae11bbece"), Type = TextBlockType.Text, Text = "Using your weapon as a lever, you force your opponent to end up right where you want them. Make a (Action: Strike) with the required weapon. If the (Action: Strike) hits, you can move the target up to 10 feet into a space in your reach." };
-            yield return new TextBlock { Id = Guid.Parse("1b27ce81-85e9-4124-98e7-259c45818a85"), Type = TextBlockType.Text, Text = "You can move the target through your space during this movement. This follows the forced movement rules found on page 475. Your (Action: Strike) gains the following failure effect." };
+            yield return new TextBlock { Id = Guid.Parse("2f25b3dd-4d3f-44d3-9abb-99dae11bbece"), Type = TextBlockType.Text, Text = $"Using your weapon as a lever, you force your opponent to end up right where you want them. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with the required weapon. If the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits, you can move the target up to 10 feet into a space in your reach." };
+            yield return new TextBlock { Id = Guid.Parse("1b27ce81-85e9-4124-98e7-259c45818a85"), Type = TextBlockType.Text, Text = $"You can move the target through your space during this movement. This follows the forced movement rules found on page 475. Your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} gains the following failure effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

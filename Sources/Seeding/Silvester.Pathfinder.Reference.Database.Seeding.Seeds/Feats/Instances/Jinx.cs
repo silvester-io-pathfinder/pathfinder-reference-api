@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("759647ff-22db-4d7a-959b-0fd70a0a3ef7"), Type = TextBlockType.Text, Text = "You can curse another creature with clumsiness. This curse has a range of 30 feet, and you must be able to see your target. The target gets a Will saving throw to resist this jinx, using your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("759647ff-22db-4d7a-959b-0fd70a0a3ef7"), Type = TextBlockType.Text, Text = $"You can curse another creature with clumsiness. This curse has a range of 30 feet, and you must be able to see your target. The target gets a Will saving throw to resist this jinx, using your class DC or spell DC, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

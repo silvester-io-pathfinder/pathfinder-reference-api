@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("86adab52-af75-4a13-9783-c27d21f81ff6"), Type = TextBlockType.Text, Text = "Your enhanced fey connection affords you a warmer reception from creatures of the First World as well as tools to foil their tricks. You gain a +2 circumstance bonus to both Perception checks and saving throws against fey." };
-            yield return new TextBlock { Id = Guid.Parse("9fe3ef88-8fb5-4d9f-a07b-ad529148227e"), Type = TextBlockType.Text, Text = "In addition, whenever you meet a fey creature in a social situation, you can immediately attempt a Diplomacy check to (Action: Make an Impression) on that creature rather than needing to converse for 1 minute. You take a -5 penalty to the check. If you fail, you can engage in 1 minute of conversation and attempt a new check at the end of that time rather than accepting the failure or critical failure result." };
+            yield return new TextBlock { Id = Guid.Parse("86adab52-af75-4a13-9783-c27d21f81ff6"), Type = TextBlockType.Text, Text = $"Your enhanced fey connection affords you a warmer reception from creatures of the First World as well as tools to foil their tricks. You gain a +2 circumstance bonus to both Perception checks and saving throws against fey." };
+            yield return new TextBlock { Id = Guid.Parse("9fe3ef88-8fb5-4d9f-a07b-ad529148227e"), Type = TextBlockType.Text, Text = $"In addition, whenever you meet a fey creature in a social situation, you can immediately attempt a Diplomacy check to {ToMarkdownLink<Models.Entities.SkillAction>("Make an Impression", SkillActions.Instances.MakeAnImpression.ID)} on that creature rather than needing to converse for 1 minute. You take a -5 penalty to the check. If you fail, you can engage in 1 minute of conversation and attempt a new check at the end of that time rather than accepting the failure or critical failure result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

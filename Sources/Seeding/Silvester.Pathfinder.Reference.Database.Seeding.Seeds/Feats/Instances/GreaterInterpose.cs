@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3f9456f8-b519-428f-98eb-1539e6ab1766"), Type = TextBlockType.Text, Text = "You're able to avoid hits that others could not. You can use (feat: Sacrifice Armor) to reduce any type of damage from an attack or effect requiring a Reflex save." };
-            yield return new TextBlock { Id = Guid.Parse("d0943c0a-a165-4e71-9d1c-d99a5ce45225"), Type = TextBlockType.Text, Text = "When you use (feat: Sacrifice Armor) against a critical hit or a critical failure on a Reflex save that would otherwise cause you to take double damage, you take the normal amount of damage instead." };
+            yield return new TextBlock { Id = Guid.Parse("3f9456f8-b519-428f-98eb-1539e6ab1766"), Type = TextBlockType.Text, Text = $"You're able to avoid hits that others could not. You can use {ToMarkdownLink<Models.Entities.Feat>("Sacrifice Armor", Feats.Instances.SacrificeArmor.ID)} to reduce any type of damage from an attack or effect requiring a Reflex save." };
+            yield return new TextBlock { Id = Guid.Parse("d0943c0a-a165-4e71-9d1c-d99a5ce45225"), Type = TextBlockType.Text, Text = $"When you use {ToMarkdownLink<Models.Entities.Feat>("Sacrifice Armor", Feats.Instances.SacrificeArmor.ID)} against a critical hit or a critical failure on a Reflex save that would otherwise cause you to take double damage, you take the normal amount of damage instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

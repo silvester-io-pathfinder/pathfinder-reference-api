@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79e401d1-a779-438c-8065-cbfc35a011b6"), Type = TextBlockType.Text, Text = "As a knight in shining armor, you train daily in the heaviest armor, expanding your expertise to heavy armor. You gain expert proficiency in heavy armor." };
+            yield return new TextBlock { Id = Guid.Parse("79e401d1-a779-438c-8065-cbfc35a011b6"), Type = TextBlockType.Text, Text = $"As a knight in shining armor, you train daily in the heaviest armor, expanding your expertise to heavy armor. You gain expert proficiency in heavy armor." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

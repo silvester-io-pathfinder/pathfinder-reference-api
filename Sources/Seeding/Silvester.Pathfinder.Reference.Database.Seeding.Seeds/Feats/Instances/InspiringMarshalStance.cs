@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f97b16ae-08ca-4ac6-ad3b-24652ec003ff"), Type = TextBlockType.Text, Text = "You become a brilliant example of dedication and poise in battle, encouraging your allies to follow suit. When you spend this action, attempt a Diplomacy check. The DC is usually a standard-difficulty DC of your level, but the GM can assign a different DC based on the circumstances. The effect depends on the result of your check." };
+            yield return new TextBlock { Id = Guid.Parse("f97b16ae-08ca-4ac6-ad3b-24652ec003ff"), Type = TextBlockType.Text, Text = $"You become a brilliant example of dedication and poise in battle, encouraging your allies to follow suit. When you spend this action, attempt a Diplomacy check. The DC is usually a standard-difficulty DC of your level, but the GM can assign a different DC based on the circumstances. The effect depends on the result of your check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

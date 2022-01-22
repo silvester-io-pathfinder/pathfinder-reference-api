@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cea3dae2-5611-4fdf-80b9-e1383d6fc90f"), Type = TextBlockType.Text, Text = "You channel potent magic into your next shot, empowering it with a blast of crackling energy. Choose acid, cold, electricity, or fire. If you hit with your next attack roll using a firearm or crossbow before the end of your turn, you deal 1d6 additional damage of this type. At 12th level, this increases to 2d6 additional damage, and at 18th level, it increases to 3d6 additional damage." };
+            yield return new TextBlock { Id = Guid.Parse("cea3dae2-5611-4fdf-80b9-e1383d6fc90f"), Type = TextBlockType.Text, Text = $"You channel potent magic into your next shot, empowering it with a blast of crackling energy. Choose acid, cold, electricity, or fire. If you hit with your next attack roll using a firearm or crossbow before the end of your turn, you deal 1d6 additional damage of this type. At 12th level, this increases to 2d6 additional damage, and at 18th level, it increases to 3d6 additional damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

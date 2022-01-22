@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("464dc52e-c9e4-4de6-a6f7-01dc633f5d19"), Type = TextBlockType.Text, Text = "You enter the stance of impenetrable iron, refusing to yield to any blow. You can make iron sweep unarmed attacks. These deal 1d8 bludgeoning damage; are in the brawling group; and have the (trait: nonlethal), (trait: parry), (trait: sweep), and (trait: unarmed) traits." };
-            yield return new TextBlock { Id = Guid.Parse("4967a4d2-31d2-4a60-9443-9f975dac3c3d"), Type = TextBlockType.Text, Text = "While in Ironblood Stance, you gain resistance 2 to all damage. The resistance increases to 3 at 12th level, to 4 at 16th level, and to 5 at 20th level." };
+            yield return new TextBlock { Id = Guid.Parse("464dc52e-c9e4-4de6-a6f7-01dc633f5d19"), Type = TextBlockType.Text, Text = $"You enter the stance of impenetrable iron, refusing to yield to any blow. You can make iron sweep unarmed attacks. These deal 1d8 bludgeoning damage; are in the brawling group; and have the {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)}, {ToMarkdownLink<Models.Entities.Trait>("parry", Traits.Instances.Parry.ID)}, {ToMarkdownLink<Models.Entities.Trait>("sweep", Traits.Instances.Sweep.ID)}, and {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)} traits." };
+            yield return new TextBlock { Id = Guid.Parse("4967a4d2-31d2-4a60-9443-9f975dac3c3d"), Type = TextBlockType.Text, Text = $"While in Ironblood Stance, you gain resistance 2 to all damage. The resistance increases to 3 at 12th level, to 4 at 16th level, and to 5 at 20th level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

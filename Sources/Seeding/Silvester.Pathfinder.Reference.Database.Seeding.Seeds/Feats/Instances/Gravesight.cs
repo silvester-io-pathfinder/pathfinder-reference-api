@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("54f4a638-9af4-416a-9bc9-3c945e19fb27"), Type = TextBlockType.Text, Text = "You can see in the darkness as easily as a psychopomp. You gain darkvision." };
+            yield return new TextBlock { Id = Guid.Parse("54f4a638-9af4-416a-9bc9-3c945e19fb27"), Type = TextBlockType.Text, Text = $"You can see in the darkness as easily as a psychopomp. You gain darkvision." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

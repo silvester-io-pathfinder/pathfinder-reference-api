@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e9b6f13-d03f-4094-9f6d-5f36ebf265dc"), Type = TextBlockType.Text, Text = "~ Lesson Type: Major" };
-            yield return new TextBlock { Id = Guid.Parse("b856728b-ed37-46f0-a86c-22654af01ba4"), Type = TextBlockType.Text, Text = "You gain the (spell: glacial heart) hex, and your familiar learns (spell: wall of ice)." };
-            yield return new TextBlock { Id = Guid.Parse("65ebfc66-d75a-464a-b2af-02a8c19cc175"), Type = TextBlockType.Text, Text = "A witch with Baba Yaga as a patron can select the lesson of the frozen queen when a feat or other effect grants a major lesson. Other witches who find secret knowledge or magic from Baba Yaga hidden in Irrisen or elsewhere might be able to uncover this rare lesson as well." };
+            yield return new TextBlock { Id = Guid.Parse("1e9b6f13-d03f-4094-9f6d-5f36ebf265dc"), Type = TextBlockType.Text, Text = $"~ Lesson Type: Major" };
+            yield return new TextBlock { Id = Guid.Parse("b856728b-ed37-46f0-a86c-22654af01ba4"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Spell>("glacial heart", Spells.Instances.GlacialHeart.ID)} hex, and your familiar learns {ToMarkdownLink<Models.Entities.Spell>("wall of ice", Spells.Instances.WallOfIce.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("65ebfc66-d75a-464a-b2af-02a8c19cc175"), Type = TextBlockType.Text, Text = $"A witch with Baba Yaga as a patron can select the lesson of the frozen queen when a feat or other effect grants a major lesson. Other witches who find secret knowledge or magic from Baba Yaga hidden in Irrisen or elsewhere might be able to uncover this rare lesson as well." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

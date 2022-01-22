@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f5a1c357-d99a-4d6b-a116-6f9a34065aca"), Type = TextBlockType.Text, Text = "Divine energy fills your weapon. Whenever you critically hit a foe with (feat: Blade of Justice) or a (feat: Retributive Strike), your attack adds an extra damage die and the target is slowed 1 on its next turn." };
+            yield return new TextBlock { Id = Guid.Parse("f5a1c357-d99a-4d6b-a116-6f9a34065aca"), Type = TextBlockType.Text, Text = $"Divine energy fills your weapon. Whenever you critically hit a foe with {ToMarkdownLink<Models.Entities.Feat>("Blade of Justice", Feats.Instances.BladeOfJustice.ID)} or a {ToMarkdownLink<Models.Entities.Feat>("Retributive Strike", Feats.Instances.RetributiveStrike.ID)}, your attack adds an extra damage die and the target is slowed 1 on its next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

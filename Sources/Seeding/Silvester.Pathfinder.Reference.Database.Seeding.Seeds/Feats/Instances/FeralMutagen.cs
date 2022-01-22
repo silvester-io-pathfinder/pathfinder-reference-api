@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c93a3fb-e08c-4e52-95e4-83f84eb6b56c"), Type = TextBlockType.Text, Text = "Your bestial mutagen brings out the beast lurking within you, granting you especially sharp claws and teeth as well as a ferocious appearance. Whenever you're affected by a bestial mutagen, you gain the mutagen's item bonus to your Intimidation checks. In addition, your claws and jaws are increasingly vicious, and they gain the (trait: deadly) d10 trait. Finally, you can increase the mutagen's penalty to AC from -1 to -2 and, in exchange, increase the damage die size of your claws and jaws by one step." };
+            yield return new TextBlock { Id = Guid.Parse("2c93a3fb-e08c-4e52-95e4-83f84eb6b56c"), Type = TextBlockType.Text, Text = $"Your bestial mutagen brings out the beast lurking within you, granting you especially sharp claws and teeth as well as a ferocious appearance. Whenever you're affected by a bestial mutagen, you gain the mutagen's item bonus to your Intimidation checks. In addition, your claws and jaws are increasingly vicious, and they gain the {ToMarkdownLink<Models.Entities.Trait>("deadly", Traits.Instances.Deadly.ID)} d10 trait. Finally, you can increase the mutagen's penalty to AC from -1 to -2 and, in exchange, increase the damage die size of your claws and jaws by one step." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a1deb3fc-1a5a-4cc0-8f75-b310f01e3531"), Type = TextBlockType.Text, Text = "Your flesh has been specially treated with the same arcane and alchemical processes used to toughen the skin of flesh golems. Increase your maximum Hit Points by an amount equal to your level. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the golem grafter archetype." };
+            yield return new TextBlock { Id = Guid.Parse("a1deb3fc-1a5a-4cc0-8f75-b310f01e3531"), Type = TextBlockType.Text, Text = $"Your flesh has been specially treated with the same arcane and alchemical processes used to toughen the skin of flesh golems. Increase your maximum Hit Points by an amount equal to your level. You gain resistance to physical damage (except adamantine) equal to your number of class feats from the golem grafter archetype." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

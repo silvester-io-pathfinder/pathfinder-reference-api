@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("82196521-2777-4966-9967-e2111fd32e13"), Type = TextBlockType.Text, Text = "~ Access: underground dwarf ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("a280f407-d31d-471d-afc9-504e2c913bd5"), Type = TextBlockType.Text, Text = "Your unusual rest cycle allows you to recover faster. As long as you rest for 12 hours, you gain the effects of the (feat: Fast Recovery) general feat and you can go 20 hours without resting before becoming fatigued." };
+            yield return new TextBlock { Id = Guid.Parse("82196521-2777-4966-9967-e2111fd32e13"), Type = TextBlockType.Text, Text = $"~ Access: underground dwarf ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("a280f407-d31d-471d-afc9-504e2c913bd5"), Type = TextBlockType.Text, Text = $"Your unusual rest cycle allows you to recover faster. As long as you rest for 12 hours, you gain the effects of the {ToMarkdownLink<Models.Entities.Feat>("Fast Recovery", Feats.Instances.FastRecovery.ID)} general feat and you can go 20 hours without resting before becoming fatigued." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

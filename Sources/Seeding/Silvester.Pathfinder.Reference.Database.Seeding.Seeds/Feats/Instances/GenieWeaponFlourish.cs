@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0f92af64-1e15-48eb-963a-ea10b02dacf3"), Type = TextBlockType.Text, Text = "Whenever you critically hit using a (item: falchion), (item: ranseur), (item: scimitar), (item: trident), or a (trait: geniekin | Geniekin - Item) weapon, you apply the weapon's critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("0f92af64-1e15-48eb-963a-ea10b02dacf3"), Type = TextBlockType.Text, Text = $"Whenever you critically hit using a {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("falchion", Items.MeleeWeapons.Instances.Falchion.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("ranseur", Items.MeleeWeapons.Instances.Ranseur.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("scimitar", Items.MeleeWeapons.Instances.Scimitar.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("trident", Items.MeleeWeapons.Instances.Trident.ID)}, or a {ToMarkdownLink<Models.Entities.Trait>("geniekin", Traits.Instances.Geniekin.ID)} weapon, you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

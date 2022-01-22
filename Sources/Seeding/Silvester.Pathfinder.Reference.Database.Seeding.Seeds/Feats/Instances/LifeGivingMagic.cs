@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c1cae62b-1c96-4922-a896-4d2704b14477"), Type = TextBlockType.Text, Text = "The upwelling of innate magic refreshes your body. You gain a number of temporary Hit Points equal to half your level (minimum 1) that last until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("c1cae62b-1c96-4922-a896-4d2704b14477"), Type = TextBlockType.Text, Text = $"The upwelling of innate magic refreshes your body. You gain a number of temporary Hit Points equal to half your level (minimum 1) that last until the end of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

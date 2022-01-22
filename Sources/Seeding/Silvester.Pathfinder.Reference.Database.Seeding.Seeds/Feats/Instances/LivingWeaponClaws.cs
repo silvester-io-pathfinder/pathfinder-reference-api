@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("579af590-b73d-4c4c-957f-a7dc2683c060"), Type = TextBlockType.Text, Text = "You gain a claws unarmed attack that deals 1d4 slashing damage and has the (trait: agile) and (trait: finesse) traits." };
+            yield return new TextBlock { Id = Guid.Parse("579af590-b73d-4c4c-957f-a7dc2683c060"), Type = TextBlockType.Text, Text = $"You gain a claws unarmed attack that deals 1d4 slashing damage and has the {ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)} and {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)} traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

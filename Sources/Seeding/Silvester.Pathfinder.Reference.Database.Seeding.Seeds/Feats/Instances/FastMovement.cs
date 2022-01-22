@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cca29440-dec7-4596-8ecf-d9ce95b70867"), Type = TextBlockType.Text, Text = "Your rage is a frenzy of rapid movements. While you are raging, you gain a +10-foot status bonus to your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("cca29440-dec7-4596-8ecf-d9ce95b70867"), Type = TextBlockType.Text, Text = $"Your rage is a frenzy of rapid movements. While you are raging, you gain a +10-foot status bonus to your Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

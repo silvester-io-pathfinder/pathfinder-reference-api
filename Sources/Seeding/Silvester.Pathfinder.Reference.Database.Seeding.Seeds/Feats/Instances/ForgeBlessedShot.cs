@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("da1e4e65-1c13-4435-85b2-6b0d60e422ba"), Type = TextBlockType.Text, Text = "~ Access: You are from Dongun Hold or Alkenstar." };
-            yield return new TextBlock { Id = Guid.Parse("aa543650-ad5b-46bf-be51-aa7fc344b023"), Type = TextBlockType.Text, Text = "You intone a prayer to the dwarven deities Torag or Angradd, willing a higher power to guide your aim in the heat of battle. On your next (action: Strike) with a ranged weapon before the end of your turn, you gain a +2 circumstance bonus to your attack roll and ignore your target's concealed condition, as well as your target's lesser, standard, and greater cover." };
+            yield return new TextBlock { Id = Guid.Parse("da1e4e65-1c13-4435-85b2-6b0d60e422ba"), Type = TextBlockType.Text, Text = $"~ Access: You are from Dongun Hold or Alkenstar." };
+            yield return new TextBlock { Id = Guid.Parse("aa543650-ad5b-46bf-be51-aa7fc344b023"), Type = TextBlockType.Text, Text = $"You intone a prayer to the dwarven deities Torag or Angradd, willing a higher power to guide your aim in the heat of battle. On your next {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a ranged weapon before the end of your turn, you gain a +2 circumstance bonus to your attack roll and ignore your target's concealed condition, as well as your target's lesser, standard, and greater cover." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

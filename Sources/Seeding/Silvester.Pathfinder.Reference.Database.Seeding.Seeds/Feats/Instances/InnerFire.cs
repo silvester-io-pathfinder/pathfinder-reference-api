@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6251f25c-f7b3-4a45-a8c3-4aa9873c54e2"), Type = TextBlockType.Text, Text = "While you're in Stoked Flame Stance, you have cold and fire resistance equal to half your level, and any creature that hits you with an unarmed attack, tries to Grab or (action: Grapple) you, or otherwise touches you takes fire damage equal to your Wisdom modifier (minimum 1). A creature can take this damage no more than once per turn." };
+            yield return new TextBlock { Id = Guid.Parse("6251f25c-f7b3-4a45-a8c3-4aa9873c54e2"), Type = TextBlockType.Text, Text = $"While you're in Stoked Flame Stance, you have cold and fire resistance equal to half your level, and any creature that hits you with an unarmed attack, tries to Grab or {ToMarkdownLink<Models.Entities.SkillAction>("Grapple", SkillActions.Instances.Grapple.ID)} you, or otherwise touches you takes fire damage equal to your Wisdom modifier (minimum 1). A creature can take this damage no more than once per turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

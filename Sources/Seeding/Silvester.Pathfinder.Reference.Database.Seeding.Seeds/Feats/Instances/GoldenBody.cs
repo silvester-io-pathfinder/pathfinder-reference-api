@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("23886545-3cb9-40dc-9b6f-01e6b08c1797"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor's Pins or an alliance with Mengkare." };
-            yield return new TextBlock { Id = Guid.Parse("c5efad09-7d47-46b7-9bd4-cc17b98920ff"), Type = TextBlockType.Text, Text = "You perfect your body, refining the flex of every muscle and the bend of every joint to maximum efficiency. Your unarmed (action: Strikes | Strike) gain the (trait: deadly) d12 trait, and you have fast healing 20, causing you to regain 20 HP at the start of each of your turns provided you have at least 1 HP." };
+            yield return new TextBlock { Id = Guid.Parse("23886545-3cb9-40dc-9b6f-01e6b08c1797"), Type = TextBlockType.Text, Text = $"~ Access: secure Visitor's Pins or an alliance with Mengkare." };
+            yield return new TextBlock { Id = Guid.Parse("c5efad09-7d47-46b7-9bd4-cc17b98920ff"), Type = TextBlockType.Text, Text = $"You perfect your body, refining the flex of every muscle and the bend of every joint to maximum efficiency. Your unarmed {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} gain the {ToMarkdownLink<Models.Entities.Trait>("deadly", Traits.Instances.Deadly.ID)} d12 trait, and you have fast healing 20, causing you to regain 20 HP at the start of each of your turns provided you have at least 1 HP." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9ec46021-ecc5-48c2-b841-3bb8e36435b3"), Type = TextBlockType.Text, Text = "You batter your foes with a torrent of water siphoned from your surroundings. If the next action you take is an Athletics check to (action: Disarm), (action: Shove), or (action: Trip), that action has a range of 15 feet. You don't receive any item bonuses to that check or any circumstance bonuses related to your physical body, but if you roll a critical failure on that Athletics check, you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("9ec46021-ecc5-48c2-b841-3bb8e36435b3"), Type = TextBlockType.Text, Text = $"You batter your foes with a torrent of water siphoned from your surroundings. If the next action you take is an Athletics check to {ToMarkdownLink<Models.Entities.SkillAction>("Disarm", SkillActions.Instances.Disarm.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)}, that action has a range of 15 feet. You don't receive any item bonuses to that check or any circumstance bonuses related to your physical body, but if you roll a critical failure on that Athletics check, you get a failure instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

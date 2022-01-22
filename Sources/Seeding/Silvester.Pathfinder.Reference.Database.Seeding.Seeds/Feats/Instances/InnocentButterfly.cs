@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("774e01f4-3025-4956-8774-357fbee20cf2"), Type = TextBlockType.Text, Text = "You know how to alter the perceptions of others. You can cast (spell: aura of the unremarkable) once per day as an innate arcane spell. The spell uses your class DC or spell DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("774e01f4-3025-4956-8774-357fbee20cf2"), Type = TextBlockType.Text, Text = $"You know how to alter the perceptions of others. You can cast aura of the unremarkable once per day as an innate arcane spell. The spell uses your class DC or spell DC, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

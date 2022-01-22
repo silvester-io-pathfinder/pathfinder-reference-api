@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("226fe4a8-f506-400e-a617-ff8b6ffdf4f4"), Type = TextBlockType.Text, Text = "Mass and muscle are meaningless when you leap; only grace and balance matter. You can roll an Acrobatics check instead of an Athletics check when making a (action: High Jump) or (action: Long Jump)." };
+            yield return new TextBlock { Id = Guid.Parse("226fe4a8-f506-400e-a617-ff8b6ffdf4f4"), Type = TextBlockType.Text, Text = $"Mass and muscle are meaningless when you leap; only grace and balance matter. You can roll an Acrobatics check instead of an Athletics check when making a {ToMarkdownLink<Models.Entities.SkillAction>("High Jump", SkillActions.Instances.HighJump.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Long Jump", SkillActions.Instances.LongJump.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

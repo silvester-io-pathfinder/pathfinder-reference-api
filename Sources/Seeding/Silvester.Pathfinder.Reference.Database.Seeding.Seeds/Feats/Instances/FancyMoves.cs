@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("22e3cef5-2f2f-46e0-b11c-8ae37a6cf33d"), Type = TextBlockType.Text, Text = "You show off your fighting style to discourage your foes. You can use Performance to (action: Demoralize)." };
+            yield return new TextBlock { Id = Guid.Parse("22e3cef5-2f2f-46e0-b11c-8ae37a6cf33d"), Type = TextBlockType.Text, Text = $"You show off your fighting style to discourage your foes. You can use Performance to {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

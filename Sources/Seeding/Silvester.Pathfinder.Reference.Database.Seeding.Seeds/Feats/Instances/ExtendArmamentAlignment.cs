@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("94b2a4c4-21fc-4b3d-a68f-61f975b7456c"), Type = TextBlockType.Text, Text = "The alignment you impose on a weapon lasts much longer. The duration of (action: Align Armament) increases to 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("94b2a4c4-21fc-4b3d-a68f-61f975b7456c"), Type = TextBlockType.Text, Text = $"The alignment you impose on a weapon lasts much longer. The duration of {ToMarkdownLink<Models.Entities.Feat>("Align Armament", Feats.Instances.AlignArmament.ID)} increases to 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("93154463-f56c-47a6-9b11-accff66ff2e2"), Type = TextBlockType.Text, Text = "You harness the oncoming flames and twist them into a screen of heat and smoke, granting you concealment until the beginning of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("93154463-f56c-47a6-9b11-accff66ff2e2"), Type = TextBlockType.Text, Text = $"You harness the oncoming flames and twist them into a screen of heat and smoke, granting you concealment until the beginning of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

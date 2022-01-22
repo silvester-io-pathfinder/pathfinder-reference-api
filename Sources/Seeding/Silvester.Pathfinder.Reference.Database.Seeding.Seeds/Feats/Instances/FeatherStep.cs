@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("87889dcd-de79-4cdc-ae3c-77ec165ad5bf"), Type = TextBlockType.Text, Text = "You step carefully and quickly. You can (Action: Step) into difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("87889dcd-de79-4cdc-ae3c-77ec165ad5bf"), Type = TextBlockType.Text, Text = $"You step carefully and quickly. You can {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} into difficult terrain." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

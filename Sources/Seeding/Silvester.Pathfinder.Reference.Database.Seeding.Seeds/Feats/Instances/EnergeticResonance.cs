@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("813fb8db-8fd6-460d-89f9-e92d28ae339a"), Type = TextBlockType.Text, Text = "Your body resonates with magical energy, mitigating the effects of harmful spells. Expend one of your spell slots of a level equal to or higher than that of the triggering spell. You gain resistance to one of the triggering effect's damage types equal to twice the expended spell slot's level." };
+            yield return new TextBlock { Id = Guid.Parse("813fb8db-8fd6-460d-89f9-e92d28ae339a"), Type = TextBlockType.Text, Text = $"Your body resonates with magical energy, mitigating the effects of harmful spells. Expend one of your spell slots of a level equal to or higher than that of the triggering spell. You gain resistance to one of the triggering effect's damage types equal to twice the expended spell slot's level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

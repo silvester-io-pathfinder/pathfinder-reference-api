@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2f0fe546-9f0d-4f72-b21f-35fb847711c8"), Type = TextBlockType.Text, Text = "You can carry more than your frame implies. Increase your maximum and encumbered Bulk limits by 2." };
+            yield return new TextBlock { Id = Guid.Parse("2f0fe546-9f0d-4f72-b21f-35fb847711c8"), Type = TextBlockType.Text, Text = $"You can carry more than your frame implies. Increase your maximum and encumbered Bulk limits by 2." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c4c1425-48de-4a76-9138-faa64135e7ce"), Type = TextBlockType.Text, Text = "You produce outstanding results when wielding unusual weapons. Whenever you critically hit using a glaive, kukri, or gnome weapon, you apply the weapon's critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("4c4c1425-48de-4a76-9138-faa64135e7ce"), Type = TextBlockType.Text, Text = $"You produce outstanding results when wielding unusual weapons. Whenever you critically hit using a glaive, kukri, or gnome weapon, you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

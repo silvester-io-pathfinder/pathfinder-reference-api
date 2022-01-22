@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b4d5fc26-5e2e-4943-a7c3-d68afc3c81ef"), Type = TextBlockType.Text, Text = "Your tails show your magical mastery. During your daily preparations, choose (spell: confusion), (spell: death ward), or (spell: illusory scene). You can (action: Cast this Spell | Cast a Spell) as a 5th-level divine innate spell once that day. You become an expert in divine spell DCs and divine spell attack rolls." };
+            yield return new TextBlock { Id = Guid.Parse("b4d5fc26-5e2e-4943-a7c3-d68afc3c81ef"), Type = TextBlockType.Text, Text = $"Your tails show your magical mastery. During your daily preparations, choose {ToMarkdownLink<Models.Entities.Spell>("confusion", Spells.Instances.Confusion.ID)}, {ToMarkdownLink<Models.Entities.Spell>("death ward", Spells.Instances.DeathWard.ID)}, or {ToMarkdownLink<Models.Entities.Spell>("illusory scene", Spells.Instances.IllusoryScene.ID)}. You can {ToMarkdownLink<Models.Entities.Rule>("Cast this Spell", Rules.Instances.CastASpell.ID)} as a 5th-level divine innate spell once that day. You become an expert in divine spell DCs and divine spell attack rolls." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("52d797e8-2b8e-4d54-8985-1406099cf80f"), Type = TextBlockType.Text, Text = "You've completed the third and final step in your assimilation of scroll esoterica, granting you daily scrolls of incredible power. In addition to your daily scrolls from (feat: Scroll Esoterica) and (feat: Elaborate Scroll Esoterica), add a single scroll with a 6th-level spell. At 20th level, add a scroll with a 7th-level spell." };
+            yield return new TextBlock { Id = Guid.Parse("52d797e8-2b8e-4d54-8985-1406099cf80f"), Type = TextBlockType.Text, Text = $"You've completed the third and final step in your assimilation of scroll esoterica, granting you daily scrolls of incredible power. In addition to your daily scrolls from {ToMarkdownLink<Models.Entities.Feat>("Scroll Esoterica", Feats.Instances.ScrollEsoterica.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Elaborate Scroll Esoterica", Feats.Instances.ElaborateScrollEsoterica.ID)}, add a single scroll with a 6th-level spell. At 20th level, add a scroll with a 7th-level spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

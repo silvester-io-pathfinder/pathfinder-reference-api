@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b392340e-0d95-46c6-8ac0-54383b209fc5"), Type = TextBlockType.Text, Text = "Your knowledge of halcyon magic increases. You gain two common 2nd-level halcyon spells and two 3rd-level halcyon spells. You also gain a 2nd-level halcyon spell slot and a 3rd-level halcyon spell slot. These and all future halcyon spell slots work like the 1st-level halcyon spell slot you gained from (feat: Halcyon Speaker Dedication)." };
+            yield return new TextBlock { Id = Guid.Parse("b392340e-0d95-46c6-8ac0-54383b209fc5"), Type = TextBlockType.Text, Text = $"Your knowledge of halcyon magic increases. You gain two common 2nd-level halcyon spells and two 3rd-level halcyon spells. You also gain a 2nd-level halcyon spell slot and a 3rd-level halcyon spell slot. These and all future halcyon spell slots work like the 1st-level halcyon spell slot you gained from {ToMarkdownLink<Models.Entities.Feat>("Halcyon Speaker Dedication", Feats.Instances.HalcyonSpeakerDedication.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

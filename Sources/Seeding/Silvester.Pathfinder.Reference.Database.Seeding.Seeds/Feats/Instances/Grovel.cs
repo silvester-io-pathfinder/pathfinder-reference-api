@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ce985016-bfdf-45d7-b731-7d4bf40c7b1b"), Type = TextBlockType.Text, Text = "With obsequious words and begging gestures, you convince your foe you're less of a threat. You attempt to (action: Feint) against a creature. Unlike a normal (action: Feint), the creature can be within 30 feet instead of in your melee reach, and you make your check against its Will DC instead of its Perception DC." };
+            yield return new TextBlock { Id = Guid.Parse("ce985016-bfdf-45d7-b731-7d4bf40c7b1b"), Type = TextBlockType.Text, Text = $"With obsequious words and begging gestures, you convince your foe you're less of a threat. You attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)} against a creature. Unlike a normal {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)}, the creature can be within 30 feet instead of in your melee reach, and you make your check against its Will DC instead of its Perception DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

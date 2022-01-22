@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6ece14b-7b75-4d21-9fcf-86b5cda3677f"), Type = TextBlockType.Text, Text = "When you perform sleight of hand, you fold space so that objects really do disappear. You create a small extradimensional space somewhere within in your clothing that can hold up to 5 Bulk worth of objects. The space functions as a (item: bag of holding | Bag of Holding I), but can hold only up to 5 Bulk, has no Bulk of its own, and can be (action: Interacted | Interact) with using only one hand." };
-            yield return new TextBlock { Id = Guid.Parse("1b86b88e-2327-4cfc-b904-0bd8308c9815"), Type = TextBlockType.Text, Text = "In addition, when you (action: Palm an Object), you can place it directly into this extradimensional space as long as the space has sufficient free space to hold the object." };
+            yield return new TextBlock { Id = Guid.Parse("a6ece14b-7b75-4d21-9fcf-86b5cda3677f"), Type = TextBlockType.Text, Text = $"When you perform sleight of hand, you fold space so that objects really do disappear. You create a small extradimensional space somewhere within in your clothing that can hold up to 5 Bulk worth of objects. The space functions as a {ToMarkdownLink<Models.Items.Instances.HeldItem>("bag of holding", Items.HeldItems.Instances.BagOfHolding.ID)}, but can hold only up to 5 Bulk, has no Bulk of its own, and can be {ToMarkdownLink<Models.Entities.Action>("Interacted", Actions.Instances.Interact.ID)} with using only one hand." };
+            yield return new TextBlock { Id = Guid.Parse("1b86b88e-2327-4cfc-b904-0bd8308c9815"), Type = TextBlockType.Text, Text = $"In addition, when you {ToMarkdownLink<Models.Entities.SkillAction>("Palm an Object", SkillActions.Instances.PalmAnObject.ID)}, you can place it directly into this extradimensional space as long as the space has sufficient free space to hold the object." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

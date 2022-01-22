@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8b4a750b-303c-440b-af9d-4ede40d5d948"), Type = TextBlockType.Text, Text = "Your guard is up, even while moving. You gain a +4 circumstance bonus to AC against reactions triggered by your movement." };
+            yield return new TextBlock { Id = Guid.Parse("8b4a750b-303c-440b-af9d-4ede40d5d948"), Type = TextBlockType.Text, Text = $"Your guard is up, even while moving. You gain a +4 circumstance bonus to AC against reactions triggered by your movement." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

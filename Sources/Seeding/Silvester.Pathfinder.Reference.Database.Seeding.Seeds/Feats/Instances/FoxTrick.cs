@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bf9a4977-ec95-48fa-89fd-64e10aa87f5f"), Type = TextBlockType.Text, Text = "You always have time for a joke or prank. You (action: Create a Diversion), (action: Conceal an Object), or (action: Hide). All creatures who witnessed your Fox Trick then wise up to it, becoming temporarily immune to your Fox Trick for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("bf9a4977-ec95-48fa-89fd-64e10aa87f5f"), Type = TextBlockType.Text, Text = $"You always have time for a joke or prank. You {ToMarkdownLink<Models.Entities.SkillAction>("Create a Diversion", SkillActions.Instances.CreateADiversion.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Conceal an Object", SkillActions.Instances.ConcealAnObject.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)}. All creatures who witnessed your Fox Trick then wise up to it, becoming temporarily immune to your Fox Trick for 24 hours." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

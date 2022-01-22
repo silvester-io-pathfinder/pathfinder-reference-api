@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("96d2f0f3-e3db-4c81-8ca8-0ca8ce3d8ac7"), Type = TextBlockType.Text, Text = "You forgo precision to attack at an impossible speed. Make three melee (action: Strikes | Strike) with each of the required weapons. All of these (action: Strikes | Strike) take the maximum multiple attack penalty, as if you had already made two or more attacks this turn." };
+            yield return new TextBlock { Id = Guid.Parse("96d2f0f3-e3db-4c81-8ca8-0ca8ce3d8ac7"), Type = TextBlockType.Text, Text = $"You forgo precision to attack at an impossible speed. Make three melee {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} with each of the required weapons. All of these {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} take the maximum multiple attack penalty, as if you had already made two or more attacks this turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ae2cf43-63f2-45da-a3a3-00af84465e42"), Type = TextBlockType.Text, Text = "Under your tutelage, your familiar has grown attuned to the hidden currents of the world and can serve as a conduit for your magic. If the next action you use is to (activity: Cast a Spell) that has a range, the spell uses the familiar as its origin point." };
+            yield return new TextBlock { Id = Guid.Parse("3ae2cf43-63f2-45da-a3a3-00af84465e42"), Type = TextBlockType.Text, Text = $"Under your tutelage, your familiar has grown attuned to the hidden currents of the world and can serve as a conduit for your magic. If the next action you use is to {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)} that has a range, the spell uses the familiar as its origin point." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

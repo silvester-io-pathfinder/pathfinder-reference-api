@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b0e133fd-1998-41d8-a54d-630d13bdad20"), Type = TextBlockType.Text, Text = "__Your halcyon spellcasting is primal.__" };
+            yield return new TextBlock { Id = Guid.Parse("b0e133fd-1998-41d8-a54d-630d13bdad20"), Type = TextBlockType.Text, Text = $"__Your halcyon spellcasting is primal.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

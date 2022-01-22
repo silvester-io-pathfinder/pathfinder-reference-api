@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4749688f-ec7f-432e-b886-8003e553df3b"), Type = TextBlockType.Text, Text = "You carry the bones of your ancestors with you, and you can ask them for counsel. You can cast (spell: augury) twice per day as a 2nd-level occult innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("4749688f-ec7f-432e-b886-8003e553df3b"), Type = TextBlockType.Text, Text = $"You carry the bones of your ancestors with you, and you can ask them for counsel. You can cast {ToMarkdownLink<Models.Entities.Spell>("augury", Spells.Instances.Augury.ID)} twice per day as a 2nd-level occult innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

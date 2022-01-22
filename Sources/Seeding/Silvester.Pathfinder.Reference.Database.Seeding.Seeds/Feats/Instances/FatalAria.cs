@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f42f12dc-b030-44f0-9991-84d28077c95d"), Type = TextBlockType.Text, Text = "Your songs overwhelm the target with unbearable emotion, potentially striking them dead on the spot. You learn the (spell: fatal aria) composition spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("f42f12dc-b030-44f0-9991-84d28077c95d"), Type = TextBlockType.Text, Text = $"Your songs overwhelm the target with unbearable emotion, potentially striking them dead on the spot. You learn the {ToMarkdownLink<Models.Entities.Spell>("fatal aria", Spells.Instances.FatalAria.ID)} composition spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

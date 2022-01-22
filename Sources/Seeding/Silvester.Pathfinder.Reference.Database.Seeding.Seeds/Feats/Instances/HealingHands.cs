@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f1de7211-5905-47b7-91fa-e0dd96684cbc"), Type = TextBlockType.Text, Text = "Your positive energy is even more vibrant and restorative. When you cast (spell: heal), you roll d10s instead of d8s." };
+            yield return new TextBlock { Id = Guid.Parse("f1de7211-5905-47b7-91fa-e0dd96684cbc"), Type = TextBlockType.Text, Text = $"Your positive energy is even more vibrant and restorative. When you cast {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)}, you roll d10s instead of d8s." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

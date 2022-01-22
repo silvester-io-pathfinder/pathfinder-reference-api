@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("72fafa1c-8b54-4d62-b5f0-ef63d0253234"), Type = TextBlockType.Text, Text = "Your ability to blend into the background allows you to fade away entirely or appear innocuous even to magical effects. You gain (Spell: invisibility) and (Spell: misdirection) as 2nd-level innate occult spells. You can target only yourself with (Spell: invisibility), and you must be the primary target of (Spell: misdirection). You can cast each spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("72fafa1c-8b54-4d62-b5f0-ef63d0253234"), Type = TextBlockType.Text, Text = $"Your ability to blend into the background allows you to fade away entirely or appear innocuous even to magical effects. You gain {ToMarkdownLink<Models.Entities.Spell>("invisibility", Spells.Instances.Invisibility.ID)} and {ToMarkdownLink<Models.Entities.Spell>("misdirection", Spells.Instances.Misdirection.ID)} as 2nd-level innate occult spells. You can target only yourself with {ToMarkdownLink<Models.Entities.Spell>("invisibility", Spells.Instances.Invisibility.ID)}, and you must be the primary target of {ToMarkdownLink<Models.Entities.Spell>("misdirection", Spells.Instances.Misdirection.ID)}. You can cast each spell once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cc026b85-afb5-483e-a569-c0172a955f13"), Type = TextBlockType.Text, Text = "The powers of domination employed by your progenitors have manifested in you as well. Once per day, you can cast (spell: charm) as a 1st-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("cc026b85-afb5-483e-a569-c0172a955f13"), Type = TextBlockType.Text, Text = $"The powers of domination employed by your progenitors have manifested in you as well. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("charm", Spells.Instances.Charm.ID)} as a 1st-level divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

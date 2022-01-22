@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ed7bea6-ba49-4f96-8199-ea537cf44670"), Type = TextBlockType.Text, Text = "You can ignore difficult terrain caused by moving through tight spaces that aren't tight enough to force you to (action: Squeeze). When you roll a critical failure on a check to (action: Squeeze), you get a failure instead, and when you roll a success, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("8ed7bea6-ba49-4f96-8199-ea537cf44670"), Type = TextBlockType.Text, Text = $"You can ignore difficult terrain caused by moving through tight spaces that aren't tight enough to force you to {ToMarkdownLink<Models.Entities.SkillAction>("Squeeze", SkillActions.Instances.Squeeze.ID)}. When you roll a critical failure on a check to {ToMarkdownLink<Models.Entities.SkillAction>("Squeeze", SkillActions.Instances.Squeeze.ID)}, you get a failure instead, and when you roll a success, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

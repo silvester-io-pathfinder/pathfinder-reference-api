@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8fbc1057-92c2-4925-a66b-9cf8b8d2a7ec"), Type = TextBlockType.Text, Text = "You take on the imposing form of a large, winged oni. Once per day, as part of using (feat: Long-Nosed Form), you also gain the benefits of 4th-level (spell: enlarge) and (spell: fly). This lasts for 5 minutes or until you shift out of your (feat: Long-Nosed Form), whichever happens first." };
+            yield return new TextBlock { Id = Guid.Parse("8fbc1057-92c2-4925-a66b-9cf8b8d2a7ec"), Type = TextBlockType.Text, Text = $"You take on the imposing form of a large, winged oni. Once per day, as part of using {ToMarkdownLink<Models.Entities.Feat>("Long-Nosed Form", Feats.Instances.LongNosedForm.ID)}, you also gain the benefits of 4th-level {ToMarkdownLink<Models.Entities.Spell>("enlarge", Spells.Instances.Enlarge.ID)} and {ToMarkdownLink<Models.Entities.Spell>("fly", Spells.Instances.Fly.ID)}. This lasts for 5 minutes or until you shift out of your {ToMarkdownLink<Models.Entities.Feat>("Long-Nosed Form", Feats.Instances.LongNosedForm.ID)}, whichever happens first." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

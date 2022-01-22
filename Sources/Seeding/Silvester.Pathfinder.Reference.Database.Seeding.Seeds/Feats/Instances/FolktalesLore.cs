@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("910d9809-2ce7-4539-a8bb-e514a6c0377d"), Type = TextBlockType.Text, Text = "You can pull bits of wisdom from any tale. You become trained in Folktales Lore, a special Lore skill that can be used only to Recall Knowledge, but on any topic. If you fail a check to (action: Recall Knowledge) with Folktales Lore, you get the effects of the (feat: Dubious Knowledge) skill feat." };
-            yield return new TextBlock { Id = Guid.Parse("d262ffad-d79c-4888-a759-e211c795a8e8"), Type = TextBlockType.Text, Text = "If you are legendary in the Performance skill, you gain expert proficiency in Folktales Lore, but you can't increase your proficiency rank in Folktales Lore by any other means." };
+            yield return new TextBlock { Id = Guid.Parse("910d9809-2ce7-4539-a8bb-e514a6c0377d"), Type = TextBlockType.Text, Text = $"You can pull bits of wisdom from any tale. You become trained in Folktales Lore, a special Lore skill that can be used only to Recall Knowledge, but on any topic. If you fail a check to {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} with Folktales Lore, you get the effects of the {ToMarkdownLink<Models.Entities.Feat>("Dubious Knowledge", Feats.Instances.DubiousKnowledge.ID)} skill feat." };
+            yield return new TextBlock { Id = Guid.Parse("d262ffad-d79c-4888-a759-e211c795a8e8"), Type = TextBlockType.Text, Text = $"If you are legendary in the Performance skill, you gain expert proficiency in Folktales Lore, but you can't increase your proficiency rank in Folktales Lore by any other means." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

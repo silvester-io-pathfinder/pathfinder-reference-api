@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("23ac418d-66be-42a0-b9b0-0ab7f712edb1"), Type = TextBlockType.Text, Text = "Your fists have been forged by battle, your naturally tough skin and dense bone further hardened by conflict. Your fist unarmed attacks no longer have the (trait: nonlethal) trait and gain the (trait: shove) weapon trait." };
+            yield return new TextBlock { Id = Guid.Parse("23ac418d-66be-42a0-b9b0-0ab7f712edb1"), Type = TextBlockType.Text, Text = $"Your fists have been forged by battle, your naturally tough skin and dense bone further hardened by conflict. Your fist unarmed attacks no longer have the {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)} trait and gain the {ToMarkdownLink<Models.Entities.Trait>("shove", Traits.Instances.Shove.ID)} weapon trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

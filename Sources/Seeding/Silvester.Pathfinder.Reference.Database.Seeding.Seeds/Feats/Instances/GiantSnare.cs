@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("82c036ab-db63-4c4a-b9c6-5df85e452259"), Type = TextBlockType.Text, Text = "You can create bigger snares for quick deployment, making it more likely for a creature to walk into your snares. When you prepare snares for quick deployment, you can prepare some of them as giant snares. A giant snare takes up a 10-foot-by-10-foot area but costs two of your quick deployment snares. A giant snare can trigger from a creature entering any portion of its area, and all its effects apply over the full area." };
+            yield return new TextBlock { Id = Guid.Parse("82c036ab-db63-4c4a-b9c6-5df85e452259"), Type = TextBlockType.Text, Text = $"You can create bigger snares for quick deployment, making it more likely for a creature to walk into your snares. When you prepare snares for quick deployment, you can prepare some of them as giant snares. A giant snare takes up a 10-foot-by-10-foot area but costs two of your quick deployment snares. A giant snare can trigger from a creature entering any portion of its area, and all its effects apply over the full area." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

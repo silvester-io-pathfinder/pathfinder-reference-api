@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("589339ce-eff1-4e11-8af7-1c7def81c85e"), Type = TextBlockType.Text, Text = "You trace your lineage to archons: embodiments of heavenly virtues, guardians of the seven-tiered mountain of Heaven, and nurturers of law and virtue within mortals. Your own virtue and orderly mind protect you from foes who would turn your emotions against you. You gain a +1 circumstance bonus to saves against emotion effects, and if you roll a success on a save against an (trait: emotion) effect, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("589339ce-eff1-4e11-8af7-1c7def81c85e"), Type = TextBlockType.Text, Text = $"You trace your lineage to archons: embodiments of heavenly virtues, guardians of the seven-tiered mountain of Heaven, and nurturers of law and virtue within mortals. Your own virtue and orderly mind protect you from foes who would turn your emotions against you. You gain a +1 circumstance bonus to saves against emotion effects, and if you roll a success on a save against an {ToMarkdownLink<Models.Entities.Trait>("emotion", Traits.Instances.Emotion.ID)} effect, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("42514c79-e831-46b7-9a6b-0270396ded6c"), Type = TextBlockType.Text, Text = "Your size and demeanor make it easy for you to convince others that you mean no harm. You gain the (Feat: Shameless Request) skill feat as a bonus feat. Additionally, you gain a +1 circumstance bonus to initiative checks when you roll Deception for initiative." };
+            yield return new TextBlock { Id = Guid.Parse("42514c79-e831-46b7-9a6b-0270396ded6c"), Type = TextBlockType.Text, Text = $"Your size and demeanor make it easy for you to convince others that you mean no harm. You gain the {ToMarkdownLink<Models.Entities.Feat>("Shameless Request", Feats.Instances.ShamelessRequest.ID)} skill feat as a bonus feat. Additionally, you gain a +1 circumstance bonus to initiative checks when you roll Deception for initiative." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

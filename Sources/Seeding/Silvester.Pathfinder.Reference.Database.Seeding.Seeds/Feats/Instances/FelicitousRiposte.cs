@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("835692d0-2959-40d7-abf5-b8ed59d61af9"), Type = TextBlockType.Text, Text = "You take advantage of your foe's openings with uncanny odds. When you make an (feat: Opportune Riposte), roll twice on the attack roll and take the better result." };
+            yield return new TextBlock { Id = Guid.Parse("835692d0-2959-40d7-abf5-b8ed59d61af9"), Type = TextBlockType.Text, Text = $"You take advantage of your foe's openings with uncanny odds. When you make an {ToMarkdownLink<Models.Entities.Feat>("Opportune Riposte", Feats.Instances.OpportuneRiposte.ID)}, roll twice on the attack roll and take the better result." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

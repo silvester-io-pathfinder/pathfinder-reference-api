@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fa3fbe4c-831d-43e6-9dff-c5e273960547"), Type = TextBlockType.Text, Text = "~ Lesson Type: Basic" };
-            yield return new TextBlock { Id = Guid.Parse("8bb59066-cfa6-42d5-b3a4-0c111d005b58"), Type = TextBlockType.Text, Text = "You gain the (spell: stumbling curse) hex, and your familiar learns (spell: ill omen)." };
+            yield return new TextBlock { Id = Guid.Parse("fa3fbe4c-831d-43e6-9dff-c5e273960547"), Type = TextBlockType.Text, Text = $"~ Lesson Type: Basic" };
+            yield return new TextBlock { Id = Guid.Parse("8bb59066-cfa6-42d5-b3a4-0c111d005b58"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Spell>("stumbling curse", Spells.Instances.StumblingCurse.ID)} hex, and your familiar learns {ToMarkdownLink<Models.Entities.Spell>("ill omen", Spells.Instances.IllOmen.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cb4ed32a-cbba-46ff-bd4e-3293c3685fdc"), Type = TextBlockType.Text, Text = "You can channel your core's power through the magical gem that serves as your eye. You gain an energy beam ranged unarmed attack that deals 1d4 fire damage. The energy beam has a range increment of 20 feet. On a critical hit, the target takes persistent fire damage equal to the number of weapon damage dice. Your energy beam does not add critical specialization effects." };
-            yield return new TextBlock { Id = Guid.Parse("76b87856-c6fe-4b5c-808e-264a2eda78f6"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("e8ceb729-240a-4674-9bdb-1f981350295c"), Type = TextBlockType.Text, Text = "~ Enhancement: You channel greater power. Increase the damage die of your energy beam by one step, from 1d4 to 1d6." };
+            yield return new TextBlock { Id = Guid.Parse("cb4ed32a-cbba-46ff-bd4e-3293c3685fdc"), Type = TextBlockType.Text, Text = $"You can channel your core's power through the magical gem that serves as your eye. You gain an energy beam ranged unarmed attack that deals 1d4 fire damage. The energy beam has a range increment of 20 feet. On a critical hit, the target takes persistent fire damage equal to the number of weapon damage dice. Your energy beam does not add critical specialization effects." };
+            yield return new TextBlock { Id = Guid.Parse("76b87856-c6fe-4b5c-808e-264a2eda78f6"), Type = TextBlockType.Text, Text = $"----" };
+            yield return new TextBlock { Id = Guid.Parse("e8ceb729-240a-4674-9bdb-1f981350295c"), Type = TextBlockType.Text, Text = $"~ Enhancement: You channel greater power. Increase the damage die of your energy beam by one step, from 1d4 to 1d6." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

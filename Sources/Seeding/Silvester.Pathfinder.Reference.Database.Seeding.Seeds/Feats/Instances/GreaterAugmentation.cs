@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3bfc3a2c-d612-4566-9f88-9b1229996a56"), Type = TextBlockType.Text, Text = "You've greatly improved your abilities and your core can support further augmentations. You gain the enhancement benefits of one of your 1st-, 5th-, 9th-, or 13th-level automaton ancestry feats." };
-            yield return new TextBlock { Id = Guid.Parse("917dd54f-fdf1-44f3-bd48-211667e7e8b7"), Type = TextBlockType.Text, Text = "You are also capable of reconfiguring your augmentations to meet your needs. You can spend one week of downtime to change the enhancement you gain with this feat." };
+            yield return new TextBlock { Id = Guid.Parse("3bfc3a2c-d612-4566-9f88-9b1229996a56"), Type = TextBlockType.Text, Text = $"You've greatly improved your abilities and your core can support further augmentations. You gain the enhancement benefits of one of your 1st-, 5th-, 9th-, or 13th-level automaton ancestry feats." };
+            yield return new TextBlock { Id = Guid.Parse("917dd54f-fdf1-44f3-bd48-211667e7e8b7"), Type = TextBlockType.Text, Text = $"You are also capable of reconfiguring your augmentations to meet your needs. You can spend one week of downtime to change the enhancement you gain with this feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

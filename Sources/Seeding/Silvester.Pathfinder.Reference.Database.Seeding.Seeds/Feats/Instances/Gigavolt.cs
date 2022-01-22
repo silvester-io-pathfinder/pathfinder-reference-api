@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3f2b2e4a-6193-4975-83bb-67cb16b23a60"), Type = TextBlockType.Text, Text = "When you unleash electricity from your innovation, you can bounce it off obstacles, creating a field of electric death. When you use (feat: Megavolt), each time your line of electricity hits a solid barrier, such as a wall, it bounces off at an angle of your choice and continues until you have reached the full length of the line. Even if a creature is in the area from multiple bounces, it takes the damage only once." };
+            yield return new TextBlock { Id = Guid.Parse("3f2b2e4a-6193-4975-83bb-67cb16b23a60"), Type = TextBlockType.Text, Text = $"When you unleash electricity from your innovation, you can bounce it off obstacles, creating a field of electric death. When you use {ToMarkdownLink<Models.Entities.Feat>("Megavolt", Feats.Instances.Megavolt.ID)}, each time your line of electricity hits a solid barrier, such as a wall, it bounces off at an angle of your choice and continues until you have reached the full length of the line. Even if a creature is in the area from multiple bounces, it takes the damage only once." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

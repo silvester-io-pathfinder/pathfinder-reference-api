@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc077457-9a41-4e8e-bfff-99fbba155871"), Type = TextBlockType.Text, Text = "When you (feat: Cat Nap), you can also (activity: Refocus) as you dream of a relevant activity." };
+            yield return new TextBlock { Id = Guid.Parse("fc077457-9a41-4e8e-bfff-99fbba155871"), Type = TextBlockType.Text, Text = $"When you {ToMarkdownLink<Models.Entities.Feat>("Cat Nap", Feats.Instances.CatNap.ID)}, you can also {ToMarkdownLink<Models.Entities.Activity>("Refocus", Activities.Instances.Refocus.ID)} as you dream of a relevant activity." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

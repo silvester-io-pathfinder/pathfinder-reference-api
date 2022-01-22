@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("284acb99-ca5b-41ab-8d20-5021e4bb098a"), Type = TextBlockType.Text, Text = "Divine power is always at your fingertips, swiftly responding to your call. When you cast (spell: harm) or (spell: heal) by spending 2 actions, you can get the effects of the 3-action version instead of the 2-action version." };
-            yield return new TextBlock { Id = Guid.Parse("65ffb1cc-4163-4e0a-956d-b2645d0d41c6"), Type = TextBlockType.Text, Text = "You can do this with (spell: harm) if you have harmful font or (spell: heal) if you have healing font (or both if you have (feat: Versatile Font))." };
+            yield return new TextBlock { Id = Guid.Parse("284acb99-ca5b-41ab-8d20-5021e4bb098a"), Type = TextBlockType.Text, Text = $"Divine power is always at your fingertips, swiftly responding to your call. When you cast {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} or {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} by spending 2 actions, you can get the effects of the 3-action version instead of the 2-action version." };
+            yield return new TextBlock { Id = Guid.Parse("65ffb1cc-4163-4e0a-956d-b2645d0d41c6"), Type = TextBlockType.Text, Text = $"You can do this with {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} if you have harmful font or {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} if you have healing font (or both if you have {ToMarkdownLink<Models.Entities.Feat>("Versatile Font", Feats.Instances.VersatileFont.ID)})." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

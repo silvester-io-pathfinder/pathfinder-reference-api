@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ffa51a39-efd4-41a8-b3ac-04b2db4b79da"), Type = TextBlockType.Text, Text = "When using (feat: Natural Medicine) to (action: Treat Wounds), you can spend a batch of herbs to gain the +2 circumstance bonus from having fresh ingredients, even if not in wilderness. If you spend a batch of herbs in wilderness, you gain a +4 circumstance bonus instead." };
+            yield return new TextBlock { Id = Guid.Parse("ffa51a39-efd4-41a8-b3ac-04b2db4b79da"), Type = TextBlockType.Text, Text = $"When using {ToMarkdownLink<Models.Entities.Feat>("Natural Medicine", Feats.Instances.NaturalMedicine.ID)} to {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}, you can spend a batch of herbs to gain the +2 circumstance bonus from having fresh ingredients, even if not in wilderness. If you spend a batch of herbs in wilderness, you gain a +4 circumstance bonus instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

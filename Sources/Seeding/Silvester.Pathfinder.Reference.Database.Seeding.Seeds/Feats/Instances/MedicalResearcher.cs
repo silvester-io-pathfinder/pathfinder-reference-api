@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("21a1ec1c-1c4c-48ac-9d91-e5748afafd83"), Type = TextBlockType.Text, Text = "Kassi has taught you not only how to apply medicines with your medical skills but how to craft them as well. When you (action: Craft) (item: healer's kits | Healer's Tools), (item: vaccines | Vaccine minor), (item: addiction suppressants | Addiction Suppressant lesser), (item: antidotes | Antidote lesser), (item: antiplagues | Antiplague lesser), (item: elixirs of life | Elixir of Life minor), or other non-magical medical or healing items, you can use Medicine instead of Crafting." };
+            yield return new TextBlock { Id = Guid.Parse("21a1ec1c-1c4c-48ac-9d91-e5748afafd83"), Type = TextBlockType.Text, Text = "Kassi has taught you not only how to apply medicines with your medical skills but how to craft them as well. When you (action: Craft) (item: healer's kits | Healer's Tools), minor (item: vaccines | Vaccine), lesser (item: addiction suppressants | Addiction Suppressant), (item: antidotes | Antidote lesser), lesser (item: antiplagues | Antiplague), minor (item: elixirs of life | Elixir of Life), or other non-magical medical or healing items, you can use Medicine instead of Crafting." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

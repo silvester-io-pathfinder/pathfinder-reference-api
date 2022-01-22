@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("56545b54-7385-4d15-8765-c85aee532850"), Type = TextBlockType.Text, Text = "You've manifested wings that can flutter for brief spurts. You don't need to spend any additional actions to reach something in your space that a Medium creature could reach. For instance, if you wanted to open a cookie jar located four feet off the ground, you only need to spend a single (action: Interact) action to do so. When you use Evanescent Wings to flutter to a higher place in your space, your action gains the (trait: move) trait." };
+            yield return new TextBlock { Id = Guid.Parse("56545b54-7385-4d15-8765-c85aee532850"), Type = TextBlockType.Text, Text = $"You've manifested wings that can flutter for brief spurts. You don't need to spend any additional actions to reach something in your space that a Medium creature could reach. For instance, if you wanted to open a cookie jar located four feet off the ground, you only need to spend a single {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} action to do so. When you use Evanescent Wings to flutter to a higher place in your space, your action gains the {ToMarkdownLink<Models.Entities.Trait>("move", Traits.Instances.Move.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

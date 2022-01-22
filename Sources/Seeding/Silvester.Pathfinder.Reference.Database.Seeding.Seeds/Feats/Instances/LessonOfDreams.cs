@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2e6e4df7-e121-45f2-bf9a-9606cf7494f6"), Type = TextBlockType.Text, Text = "~ Lesson Type: Basic" };
-            yield return new TextBlock { Id = Guid.Parse("0d155e39-81a8-4fba-86a8-098948f9994e"), Type = TextBlockType.Text, Text = "You gain the (spell: veil of dreams) hex, and your familiar learns (spell: sleep)." };
+            yield return new TextBlock { Id = Guid.Parse("2e6e4df7-e121-45f2-bf9a-9606cf7494f6"), Type = TextBlockType.Text, Text = $"~ Lesson Type: Basic" };
+            yield return new TextBlock { Id = Guid.Parse("0d155e39-81a8-4fba-86a8-098948f9994e"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Spell>("veil of dreams", Spells.Instances.VeilOfDreams.ID)} hex, and your familiar learns {ToMarkdownLink<Models.Entities.Spell>("sleep", Spells.Instances.Sleep.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

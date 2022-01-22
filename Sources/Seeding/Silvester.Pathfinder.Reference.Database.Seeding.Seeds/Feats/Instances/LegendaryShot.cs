@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f5266945-71eb-4682-97b6-129fd43ad0c6"), Type = TextBlockType.Text, Text = "You focus on your hunted prey, perceiving angles, air resistance, and every variable that would affect your ranged attack. If you have master proficiency with your ranged weapon, you can ignore the penalty for attacking up to five range increments away when attacking your hunted prey." };
+            yield return new TextBlock { Id = Guid.Parse("f5266945-71eb-4682-97b6-129fd43ad0c6"), Type = TextBlockType.Text, Text = $"You focus on your hunted prey, perceiving angles, air resistance, and every variable that would affect your ranged attack. If you have master proficiency with your ranged weapon, you can ignore the penalty for attacking up to five range increments away when attacking your hunted prey." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

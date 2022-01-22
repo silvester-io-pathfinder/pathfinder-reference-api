@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9b1bdd31-6b21-4cdb-be47-cbee558d8ac6"), Type = TextBlockType.Text, Text = "From armor plating and flexible components, to reinforced materials and backup redundant functionality, you have built safeguards to protect your vehicle from the rigors of combat. Your signature vehicle gains a +1 circumstance bonus to AC and Fortitude saves, and increases its Hit Points by an amount equal to twice your level." };
+            yield return new TextBlock { Id = Guid.Parse("9b1bdd31-6b21-4cdb-be47-cbee558d8ac6"), Type = TextBlockType.Text, Text = $"From armor plating and flexible components, to reinforced materials and backup redundant functionality, you have built safeguards to protect your vehicle from the rigors of combat. Your signature vehicle gains a +1 circumstance bonus to AC and Fortitude saves, and increases its Hit Points by an amount equal to twice your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

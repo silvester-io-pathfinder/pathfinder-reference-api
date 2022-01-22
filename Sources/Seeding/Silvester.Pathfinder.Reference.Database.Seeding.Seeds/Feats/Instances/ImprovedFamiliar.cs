@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("10dc3738-70dc-4257-83b7-08253dddd4c6"), Type = TextBlockType.Text, Text = "You find it easy to attract a powerful and unusual familiar to your side. The number of abilities required to make your familiar a specific familiar is two lower than normal." };
+            yield return new TextBlock { Id = Guid.Parse("10dc3738-70dc-4257-83b7-08253dddd4c6"), Type = TextBlockType.Text, Text = $"You find it easy to attract a powerful and unusual familiar to your side. The number of abilities required to make your familiar a specific familiar is two lower than normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

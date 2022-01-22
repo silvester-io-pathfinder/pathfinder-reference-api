@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("df15c54f-04a7-40c8-a072-2f86e07b8edc"), Type = TextBlockType.Text, Text = "You know how to fight in formation with your brethren. When you are adjacent to at least two hobgoblin allies, you gain a +1 circumstance bonus to AC and saving throws. This bonus increases to +2 on Reflex saves against area effects." };
+            yield return new TextBlock { Id = Guid.Parse("df15c54f-04a7-40c8-a072-2f86e07b8edc"), Type = TextBlockType.Text, Text = $"You know how to fight in formation with your brethren. When you are adjacent to at least two hobgoblin allies, you gain a +1 circumstance bonus to AC and saving throws. This bonus increases to +2 on Reflex saves against area effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

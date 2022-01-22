@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0c4982ea-83df-483a-b73c-db81152f6909"), Type = TextBlockType.Text, Text = "You gain the on the case class feature, which grants you both the (feat: Pursue a Lead) activity and (feat: Clue In) reaction. You become trained in Society and another skill of your choice. If you were already trained in Society, you instead become trained in an additional skill of your choice. You also become trained in investigator class DC." };
+            yield return new TextBlock { Id = Guid.Parse("0c4982ea-83df-483a-b73c-db81152f6909"), Type = TextBlockType.Text, Text = $"You gain the on the case class feature, which grants you both the {ToMarkdownLink<Models.Entities.Feat>("Pursue a Lead", Feats.Instances.PursueALead.ID)} activity and {ToMarkdownLink<Models.Entities.Feat>("Clue In", Feats.Instances.ClueIn.ID)} reaction. You become trained in Society and another skill of your choice. If you were already trained in Society, you instead become trained in an additional skill of your choice. You also become trained in investigator class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

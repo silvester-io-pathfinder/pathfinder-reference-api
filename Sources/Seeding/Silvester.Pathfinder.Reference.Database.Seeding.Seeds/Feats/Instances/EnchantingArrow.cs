@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("214ad469-54b7-4812-bb9f-b94b064b3beb"), Type = TextBlockType.Text, Text = "With a single whisper carried on the wind, you enchant your ammunition to make a foe more vulnerable to your attacks. Make a bow (action: Strike). On a hit, the target takes an additional 2d6 mental damage. On a critical hit, the target also becomes stunned 1. The mental damage increases to 3d6 if your bow has a (item: greater striking rune | Greater Striking Runestone), or to 4d6 if your bow has a (item: major striking rune | Major Striking Runestone)." };
+            yield return new TextBlock { Id = Guid.Parse("214ad469-54b7-4812-bb9f-b94b064b3beb"), Type = TextBlockType.Text, Text = $"With a single whisper carried on the wind, you enchant your ammunition to make a foe more vulnerable to your attacks. Make a bow {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. On a hit, the target takes an additional 2d6 mental damage. On a critical hit, the target also becomes stunned 1. The mental damage increases to 3d6 if your bow has a {ToMarkdownLink<Models.Items.Instances.FundamentalWeaponRune>("greater striking rune", Items.FundamentalWeaponRunes.Instances.Striking.ID)}, or to 4d6 if your bow has a {ToMarkdownLink<Models.Items.Instances.FundamentalWeaponRune>("major striking rune", Items.FundamentalWeaponRunes.Instances.Striking.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

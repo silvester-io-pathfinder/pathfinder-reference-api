@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ab6f746-362c-433a-a60b-97eeae760480"), Type = TextBlockType.Text, Text = "You sweep your foe into your dance. Attempt a Performance check against an adjacent enemy's Will DC. If your swashbuckler's style is battledancer and you succeed, you gain panache." };
+            yield return new TextBlock { Id = Guid.Parse("0ab6f746-362c-433a-a60b-97eeae760480"), Type = TextBlockType.Text, Text = $"You sweep your foe into your dance. Attempt a Performance check against an adjacent enemy's Will DC. If your swashbuckler's style is battledancer and you succeed, you gain panache." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

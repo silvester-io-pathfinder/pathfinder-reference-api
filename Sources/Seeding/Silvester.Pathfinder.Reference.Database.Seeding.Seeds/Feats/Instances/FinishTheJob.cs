@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("37e08091-6978-43ba-9fdb-82ae869e0e00"), Type = TextBlockType.Text, Text = "Your last attack failed, but it set you up for another. Make a (action: Strike) with your other hand, using a one-handed melee weapon or unarmed attack. This (action: Strike) uses the same multiple attack penalty as the (action: Strike) that failed on the last action. Afterward, increase your multiple attack penalty normally." };
+            yield return new TextBlock { Id = Guid.Parse("37e08091-6978-43ba-9fdb-82ae869e0e00"), Type = TextBlockType.Text, Text = $"Your last attack failed, but it set you up for another. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with your other hand, using a one-handed melee weapon or unarmed attack. This {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} uses the same multiple attack penalty as the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} that failed on the last action. Afterward, increase your multiple attack penalty normally." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

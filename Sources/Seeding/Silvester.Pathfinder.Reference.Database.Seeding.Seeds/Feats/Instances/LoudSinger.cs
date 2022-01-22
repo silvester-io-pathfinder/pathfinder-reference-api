@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ccb1cc8-9b79-4b50-997a-20da73bf69b2"), Type = TextBlockType.Text, Text = "Staying on pitch, proper breath control, and remembering the words are all less important than the real measure of a good singer: volume! The range of your (feat: Goblin Song) is increased to 60 feet, and you can target one additional enemy when you use it." };
+            yield return new TextBlock { Id = Guid.Parse("3ccb1cc8-9b79-4b50-997a-20da73bf69b2"), Type = TextBlockType.Text, Text = $"Staying on pitch, proper breath control, and remembering the words are all less important than the real measure of a good singer: volume! The range of your {ToMarkdownLink<Models.Entities.Feat>("Goblin Song", Feats.Instances.GoblinSong.ID)} is increased to 60 feet, and you can target one additional enemy when you use it." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

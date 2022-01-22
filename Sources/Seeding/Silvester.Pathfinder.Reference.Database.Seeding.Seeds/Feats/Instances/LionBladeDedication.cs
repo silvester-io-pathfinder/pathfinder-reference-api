@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c973600-84a8-4074-bcd8-5d5626313871"), Type = TextBlockType.Text, Text = "~ Access: You are from Taldor." };
-            yield return new TextBlock { Id = Guid.Parse("c004b9e7-c907-4628-b568-82153dea20bd"), Type = TextBlockType.Text, Text = "Your lion blade spy training helps you conceal yourself and your identity. You become trained in your choice of Deception or Stealth and in Espionage Lore; if you were already trained, you become an expert instead. You never take circumstance penalties for attempting to take a disguise of a different ancestry, age, and so on, as long as the disguised form is appropriate for your size." };
+            yield return new TextBlock { Id = Guid.Parse("4c973600-84a8-4074-bcd8-5d5626313871"), Type = TextBlockType.Text, Text = $"~ Access: You are from Taldor." };
+            yield return new TextBlock { Id = Guid.Parse("c004b9e7-c907-4628-b568-82153dea20bd"), Type = TextBlockType.Text, Text = $"Your lion blade spy training helps you conceal yourself and your identity. You become trained in your choice of Deception or Stealth and in Espionage Lore; if you were already trained, you become an expert instead. You never take circumstance penalties for attempting to take a disguise of a different ancestry, age, and so on, as long as the disguised form is appropriate for your size." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

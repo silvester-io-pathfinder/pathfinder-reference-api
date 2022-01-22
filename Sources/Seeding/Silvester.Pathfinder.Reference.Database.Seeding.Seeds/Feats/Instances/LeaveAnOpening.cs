@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("83487ca9-7b9d-4010-aed4-638453bc11fc"), Type = TextBlockType.Text, Text = "When you hit hard enough, you leave an opening so your ally can jump in on the action. Whenever you critically hit a flat-footed opponent with a melee attack and deal damage, the target triggers an (feat: Attack of Opportunity) reaction from one ally of your choice who has that reaction, as if the enemy had used a manipulate action." };
+            yield return new TextBlock { Id = Guid.Parse("83487ca9-7b9d-4010-aed4-638453bc11fc"), Type = TextBlockType.Text, Text = $"When you hit hard enough, you leave an opening so your ally can jump in on the action. Whenever you critically hit a flat-footed opponent with a melee attack and deal damage, the target triggers an {ToMarkdownLink<Models.Entities.Feat>("Attack of Opportunity", Feats.Instances.AttackOfOpportunity.ID)} reaction from one ally of your choice who has that reaction, as if the enemy had used a manipulate action." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e1f40184-3cbd-4b5c-ae4c-dec3759385b7"), Type = TextBlockType.Text, Text = "~ Lesson Type: Greater" };
-            yield return new TextBlock { Id = Guid.Parse("135bdc20-293f-4d2a-a434-de14d6f35a0d"), Type = TextBlockType.Text, Text = "You gain the (spell: malicious shadow) hex, and your familiar learns (spell: chilling darkness)." };
+            yield return new TextBlock { Id = Guid.Parse("e1f40184-3cbd-4b5c-ae4c-dec3759385b7"), Type = TextBlockType.Text, Text = $"~ Lesson Type: Greater" };
+            yield return new TextBlock { Id = Guid.Parse("135bdc20-293f-4d2a-a434-de14d6f35a0d"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Spell>("malicious shadow", Spells.Instances.MaliciousShadow.ID)} hex, and your familiar learns {ToMarkdownLink<Models.Entities.Spell>("chilling darkness", Spells.Instances.ChillingDarkness.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

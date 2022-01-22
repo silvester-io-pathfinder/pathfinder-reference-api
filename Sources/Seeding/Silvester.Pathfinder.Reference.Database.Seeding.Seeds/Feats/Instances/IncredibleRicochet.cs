@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e8a294a-43b8-4032-b274-51475a1a88e2"), Type = TextBlockType.Text, Text = "After your first shot singles out your opponent's position, you direct another that ricochets around obstacles and strikes unerringly. Make a ranged weapon (Action: Strike) against a creature you previously attacked this turn. You ignore the target's concealed condition and all cover." };
+            yield return new TextBlock { Id = Guid.Parse("1e8a294a-43b8-4032-b274-51475a1a88e2"), Type = TextBlockType.Text, Text = $"After your first shot singles out your opponent's position, you direct another that ricochets around obstacles and strikes unerringly. Make a ranged weapon {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against a creature you previously attacked this turn. You ignore the target's concealed condition and all cover." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

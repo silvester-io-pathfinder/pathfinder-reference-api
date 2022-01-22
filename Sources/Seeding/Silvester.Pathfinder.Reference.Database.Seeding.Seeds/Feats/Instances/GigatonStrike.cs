@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("327b20f4-12a1-44c1-86fb-977747c0a1c7"), Type = TextBlockType.Text, Text = "When you use a full-power (feat: Megaton Strike), you can knock your foe back. When you succeed at your (action: Strike) while using an (trait: unstable) (feat: Megaton Strike), your target must attempt a Fortitude save against your class DC." };
+            yield return new TextBlock { Id = Guid.Parse("327b20f4-12a1-44c1-86fb-977747c0a1c7"), Type = TextBlockType.Text, Text = $"When you use a full-power {ToMarkdownLink<Models.Entities.Feat>("Megaton Strike", Feats.Instances.MegatonStrike.ID)}, you can knock your foe back. When you succeed at your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} while using an {ToMarkdownLink<Models.Entities.Trait>("unstable", Traits.Instances.Unstable.ID)} {ToMarkdownLink<Models.Entities.Feat>("Megaton Strike", Feats.Instances.MegatonStrike.ID)}, your target must attempt a Fortitude save against your class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

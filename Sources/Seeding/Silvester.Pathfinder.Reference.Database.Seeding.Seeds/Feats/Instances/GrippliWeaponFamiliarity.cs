@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("662a7587-59e1-4c55-888f-df36d44759f6"), Type = TextBlockType.Text, Text = "You've trained with weapons ideally suited to marshes and dense forests. You are trained with (item: blowguns | Blowgun), (item: hatchets | Hatchet), (item: scythes | Scythe), (item: shortbows | Shortbow), and (item: composite shortbows | Composite Shortbow)." };
-            yield return new TextBlock { Id = Guid.Parse("8aa2cdac-f29f-4575-b916-007924f5a25f"), Type = TextBlockType.Text, Text = "You also gain access to all uncommon grippli weapons. For the purpose of determining your proficiency, martial grippli weapons are simple weapons, and advanced grippli weapons are martial weapons." };
+            yield return new TextBlock { Id = Guid.Parse("662a7587-59e1-4c55-888f-df36d44759f6"), Type = TextBlockType.Text, Text = $"You've trained with weapons ideally suited to marshes and dense forests. You are trained with {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("blowguns", Items.RangedWeapons.Instances.Blowgun.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("hatchets", Items.MeleeWeapons.Instances.Hatchet.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("scythes", Items.MeleeWeapons.Instances.Scythe.ID)}, {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("shortbows", Items.RangedWeapons.Instances.Shortbow.ID)}, and {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("composite shortbows", Items.RangedWeapons.Instances.CompositeShortbow.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("8aa2cdac-f29f-4575-b916-007924f5a25f"), Type = TextBlockType.Text, Text = $"You also gain access to all uncommon grippli weapons. For the purpose of determining your proficiency, martial grippli weapons are simple weapons, and advanced grippli weapons are martial weapons." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

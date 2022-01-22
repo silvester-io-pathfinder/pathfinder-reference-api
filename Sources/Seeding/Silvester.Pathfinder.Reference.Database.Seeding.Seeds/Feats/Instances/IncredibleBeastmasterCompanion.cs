@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("18ced957-f806-48ea-8610-bed579c57830"), Type = TextBlockType.Text, Text = "Your mature animal companions continue to grow and develop. They each become nimble or savage animal companions (your choice, choose for each companion, including those that become mature after you take this feat), gaining additional capabilities determined by the type of companion (page 214)." };
+            yield return new TextBlock { Id = Guid.Parse("18ced957-f806-48ea-8610-bed579c57830"), Type = TextBlockType.Text, Text = $"Your mature animal companions continue to grow and develop. They each become nimble or savage animal companions (your choice, choose for each companion, including those that become mature after you take this feat), gaining additional capabilities determined by the type of companion (page 214)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

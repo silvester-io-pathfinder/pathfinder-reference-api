@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1afa6d4c-a7a4-4049-8c13-4c632eae6ef6"), Type = TextBlockType.Text, Text = "The hazard explodes, dealing the bombs' damage and splash damage to the inanimate object. Combine this damage for the purpose of resistances and weaknesses, and this damage ignores an amount of the object's Hardness equal to your level. Any creatures adjacent to the hazard take the bombs' splash damage, similarly combined for the purpose of resistances and weaknesses. As a reminder, since you didn't throw the bombs, (feat: Calculated Splash) and similar effects don't apply." };
+            yield return new TextBlock { Id = Guid.Parse("1afa6d4c-a7a4-4049-8c13-4c632eae6ef6"), Type = TextBlockType.Text, Text = $"The hazard explodes, dealing the bombs' damage and splash damage to the inanimate object. Combine this damage for the purpose of resistances and weaknesses, and this damage ignores an amount of the object's Hardness equal to your level. Any creatures adjacent to the hazard take the bombs' splash damage, similarly combined for the purpose of resistances and weaknesses. As a reminder, since you didn't throw the bombs, {ToMarkdownLink<Models.Entities.Feat>("Calculated Splash", Feats.Instances.CalculatedSplash.ID)} and similar effects don't apply." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

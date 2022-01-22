@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27fa4687-b5cb-4629-9107-867742e0799b"), Type = TextBlockType.Text, Text = "You've become an expert with your chosen weapons. Your proficiency ranks for simple and martial crossbows and simple and martial firearms increase to expert." };
+            yield return new TextBlock { Id = Guid.Parse("27fa4687-b5cb-4629-9107-867742e0799b"), Type = TextBlockType.Text, Text = $"You've become an expert with your chosen weapons. Your proficiency ranks for simple and martial crossbows and simple and martial firearms increase to expert." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

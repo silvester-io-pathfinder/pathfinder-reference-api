@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04a2b6b8-5b28-4a26-b5ba-4c9ad109ccdd"), Type = TextBlockType.Text, Text = "You are able to find and secure better labor than most. When securing a hireling for a service, that hireling gains a bonus applies to both trained and untrained hirelings and has no effect on the cost of the service or labor provided." };
+            yield return new TextBlock { Id = Guid.Parse("04a2b6b8-5b28-4a26-b5ba-4c9ad109ccdd"), Type = TextBlockType.Text, Text = $"You are able to find and secure better labor than most. When securing a hireling for a service, that hireling gains a bonus applies to both trained and untrained hirelings and has no effect on the cost of the service or labor provided." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

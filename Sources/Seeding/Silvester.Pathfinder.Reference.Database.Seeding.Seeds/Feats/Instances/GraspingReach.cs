@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("32361c43-1197-47a6-8fde-b45a0e10695b"), Type = TextBlockType.Text, Text = "You can extend a tangle of vines or tendrils to support your arms and extend your reach. When you wield a melee weapon that requires two hands, doesn't have reach, and deals at least 1d6 damage, you can change between a typical two-handed grip and an extended two-handed grasp using an (action: Interact) action. Weapons wielded in your extended grasp gain reach of 10 feet. This grasp is less stable and powerful than a typical grip, reducing the weapon's damage die by 1 step." };
+            yield return new TextBlock { Id = Guid.Parse("32361c43-1197-47a6-8fde-b45a0e10695b"), Type = TextBlockType.Text, Text = $"You can extend a tangle of vines or tendrils to support your arms and extend your reach. When you wield a melee weapon that requires two hands, doesn't have reach, and deals at least 1d6 damage, you can change between a typical two-handed grip and an extended two-handed grasp using an {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} action. Weapons wielded in your extended grasp gain reach of 10 feet. This grasp is less stable and powerful than a typical grip, reducing the weapon's damage die by 1 step." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

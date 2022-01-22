@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("809ff4bf-7dcb-4679-b756-2c27466dbb68"), Type = TextBlockType.Text, Text = "You have linked your bonded item to the well of energy that powers your school spells. When you (Action: Drain your Bonded Item | Drain Bonded Item) to cast a spell of your arcane school, you also regain 1 Focus Point." };
+            yield return new TextBlock { Id = Guid.Parse("809ff4bf-7dcb-4679-b756-2c27466dbb68"), Type = TextBlockType.Text, Text = $"You have linked your bonded item to the well of energy that powers your school spells. When you {ToMarkdownLink<Models.Entities.Feat>("Drain your Bonded Item", Feats.Instances.DrainBondedItem.ID)} to cast a spell of your arcane school, you also regain 1 Focus Point." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("28900be6-ac2c-4b15-917c-3897f1010db2"), Type = TextBlockType.Text, Text = "You can cast (spell: confusion) as a 5th-level divine innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("28900be6-ac2c-4b15-917c-3897f1010db2"), Type = TextBlockType.Text, Text = $"You can cast {ToMarkdownLink<Models.Entities.Spell>("confusion", Spells.Instances.Confusion.ID)} as a 5th-level divine innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

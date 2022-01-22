@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5f1025c-3f6f-442b-b927-1a49d24deeca"), Type = TextBlockType.Text, Text = "Your knowledge of monsters is so incredible that it reveals glaring flaws in your prey. Your bonus from (feat: Monster Hunter) (and the bonus from (feat: Monster Warden) if you have it) increases from +1 to +2 for you and any allies who benefit." };
+            yield return new TextBlock { Id = Guid.Parse("d5f1025c-3f6f-442b-b927-1a49d24deeca"), Type = TextBlockType.Text, Text = $"Your knowledge of monsters is so incredible that it reveals glaring flaws in your prey. Your bonus from {ToMarkdownLink<Models.Entities.Feat>("Monster Hunter", Feats.Instances.MonsterHunter.ID)} (and the bonus from {ToMarkdownLink<Models.Entities.Feat>("Monster Warden", Feats.Instances.MonsterWarden.ID)} if you have it) increases from +1 to +2 for you and any allies who benefit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e9a21d97-d3c2-4e90-a1cb-114256762d70"), Type = TextBlockType.Text, Text = "You excoriate a foe for its wrath against goodly creatures. You can cast the (spell: litany against wrath) devotion spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("e9a21d97-d3c2-4e90-a1cb-114256762d70"), Type = TextBlockType.Text, Text = $"You excoriate a foe for its wrath against goodly creatures. You can cast the {ToMarkdownLink<Models.Entities.Spell>("litany against wrath", Spells.Instances.LitanyAgainstWrath.ID)} devotion spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

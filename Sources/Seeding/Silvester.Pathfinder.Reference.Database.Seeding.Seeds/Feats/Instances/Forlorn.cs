@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("11d322bf-e34a-4e07-99b8-9868ca9e442d"), Type = TextBlockType.Text, Text = "Watching your friends age and die fills you with moroseness that protects you against harmful emotions. You gain a +1 circumstance bonus to saving throws against (trait: emotion) effects. If you roll a success on a saving throw against an emotion effect, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("11d322bf-e34a-4e07-99b8-9868ca9e442d"), Type = TextBlockType.Text, Text = $"Watching your friends age and die fills you with moroseness that protects you against harmful emotions. You gain a +1 circumstance bonus to saving throws against {ToMarkdownLink<Models.Entities.Trait>("emotion", Traits.Instances.Emotion.ID)} effects. If you roll a success on a saving throw against an emotion effect, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

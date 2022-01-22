@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b37571f7-8ef3-4e6a-a3e2-6e2878d08b9d"), Type = TextBlockType.Text, Text = "You gain a leshy familiar, a Tiny plant that embodies one of the many spirits of nature. Other than taking the form of a plant instead of an animal, this familiar uses all the same rules as other familiars, which are detailed on page 217." };
+            yield return new TextBlock { Id = Guid.Parse("b37571f7-8ef3-4e6a-a3e2-6e2878d08b9d"), Type = TextBlockType.Text, Text = $"You gain a leshy familiar, a Tiny plant that embodies one of the many spirits of nature. Other than taking the form of a plant instead of an animal, this familiar uses all the same rules as other familiars, which are detailed on page 217." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

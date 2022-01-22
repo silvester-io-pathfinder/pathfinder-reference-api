@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2acebcff-fd77-4171-94a9-edf2154463fe"), Type = TextBlockType.Text, Text = "You sing annoying goblin songs, distracting your foes with silly and repetitive lyrics. Attempt a Performance check against the Will DC of a single enemy within 30 feet. This has all the usual traits and restrictions of a Performance check." };
-            yield return new TextBlock { Id = Guid.Parse("90a481ba-891b-49ca-8662-fee095619d74"), Type = TextBlockType.Text, Text = "You can affect up to two targets within range if you have expert proficiency in Performance, four if you have master proficiency, and eight if you have legendary proficiency." };
+            yield return new TextBlock { Id = Guid.Parse("2acebcff-fd77-4171-94a9-edf2154463fe"), Type = TextBlockType.Text, Text = $"You sing annoying goblin songs, distracting your foes with silly and repetitive lyrics. Attempt a Performance check against the Will DC of a single enemy within 30 feet. This has all the usual traits and restrictions of a Performance check." };
+            yield return new TextBlock { Id = Guid.Parse("90a481ba-891b-49ca-8662-fee095619d74"), Type = TextBlockType.Text, Text = $"You can affect up to two targets within range if you have expert proficiency in Performance, four if you have master proficiency, and eight if you have legendary proficiency." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

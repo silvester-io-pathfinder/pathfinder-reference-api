@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("470e5376-c4b0-490b-8649-c48028d28322"), Type = TextBlockType.Text, Text = "You can recall all sorts of information. You gain the keen recollection class feature." };
+            yield return new TextBlock { Id = Guid.Parse("470e5376-c4b0-490b-8649-c48028d28322"), Type = TextBlockType.Text, Text = $"You can recall all sorts of information. You gain the keen recollection class feature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

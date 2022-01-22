@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9e35a2f7-4f40-42a3-bf43-7959be42300a"), Type = TextBlockType.Text, Text = "Energy runs through your blood more powerfully. When you use (feat: Energy Emanation), you can create an emanation of 5 feet, 10 feet, or 15 feet. The damage increases to 6d6 plus an additional 1d6 for every level you have above 9th, instead of 1d6 plus an additional 1d6 for every 2 levels above 1st." };
+            yield return new TextBlock { Id = Guid.Parse("9e35a2f7-4f40-42a3-bf43-7959be42300a"), Type = TextBlockType.Text, Text = $"Energy runs through your blood more powerfully. When you use {ToMarkdownLink<Models.Entities.Feat>("Energy Emanation", Feats.Instances.EnergyEmanation.ID)}, you can create an emanation of 5 feet, 10 feet, or 15 feet. The damage increases to 6d6 plus an additional 1d6 for every level you have above 9th, instead of 1d6 plus an additional 1d6 for every 2 levels above 1st." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

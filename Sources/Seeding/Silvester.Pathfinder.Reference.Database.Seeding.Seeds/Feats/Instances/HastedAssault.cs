@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b36ad54a-1c28-4c83-8888-88657c4100fa"), Type = TextBlockType.Text, Text = "You can speed yourself up to move and attack more swiftly. You learn the (spell: hasted assault) conflux spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("b36ad54a-1c28-4c83-8888-88657c4100fa"), Type = TextBlockType.Text, Text = $"You can speed yourself up to move and attack more swiftly. You learn the {ToMarkdownLink<Models.Entities.Spell>("hasted assault", Spells.Instances.HastedAssault.ID)} conflux spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a8b56b0e-425d-4e54-8c13-e6d87b68c531"), Type = TextBlockType.Text, Text = "You have mastered the shape of ferocious dinosaurs. Add the forms listed in (Spell: dinosaur form) to your (Spell: wild shape) list. Whenever you use (Spell: wild shape) to take a form that grants you a specific Athletics modifier, you gain a +1 status bonus to your Athletics checks." };
+            yield return new TextBlock { Id = Guid.Parse("a8b56b0e-425d-4e54-8c13-e6d87b68c531"), Type = TextBlockType.Text, Text = $"You have mastered the shape of ferocious dinosaurs. Add the forms listed in {ToMarkdownLink<Models.Entities.Spell>("dinosaur form", Spells.Instances.DinosaurForm.ID)} to your {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)} list. Whenever you use {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)} to take a form that grants you a specific Athletics modifier, you gain a +1 status bonus to your Athletics checks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

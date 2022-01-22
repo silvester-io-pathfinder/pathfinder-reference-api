@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("164bca68-0989-4b52-93b7-322c24ca7ed1"), Type = TextBlockType.Text, Text = "You've trained with weapons ideal for subterranean efficiency. You are trained with the (item: crossbow), (item: greatpick), (item: light pick), (item: pick), and (item: spear). You also gain access to all uncommon kobold weapons. For the purpose of determining your proficiency, martial kobold weapons are simple weapons, and advanced kobold weapons are martial weapons." };
+            yield return new TextBlock { Id = Guid.Parse("164bca68-0989-4b52-93b7-322c24ca7ed1"), Type = TextBlockType.Text, Text = $"You've trained with weapons ideal for subterranean efficiency. You are trained with the {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("crossbow", Items.RangedWeapons.Instances.Crossbow.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("greatpick", Items.MeleeWeapons.Instances.Greatpick.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("light pick", Items.MeleeWeapons.Instances.LightPick.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("pick", Items.MeleeWeapons.Instances.Pick.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("spear", Items.MeleeWeapons.Instances.Spear.ID)}. You also gain access to all uncommon kobold weapons. For the purpose of determining your proficiency, martial kobold weapons are simple weapons, and advanced kobold weapons are martial weapons." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

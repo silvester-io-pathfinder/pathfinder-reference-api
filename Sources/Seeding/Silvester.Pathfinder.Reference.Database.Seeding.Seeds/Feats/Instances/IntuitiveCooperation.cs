@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a5772d65-fe33-4bef-a6f1-455b4914a582"), Type = TextBlockType.Text, Text = "~ Access: Jaric ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("ba30f793-2870-4c1e-8128-5b961df9e0a0"), Type = TextBlockType.Text, Text = "You are accustomed to working alongside others, relying on each other to get by. You gain a +2 circumstance bonus to checks to (action: Aid), and your allies gain a +2 circumstance bonus to checks to (action: Aid) you." };
+            yield return new TextBlock { Id = Guid.Parse("a5772d65-fe33-4bef-a6f1-455b4914a582"), Type = TextBlockType.Text, Text = $"~ Access: Jaric ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("ba30f793-2870-4c1e-8128-5b961df9e0a0"), Type = TextBlockType.Text, Text = $"You are accustomed to working alongside others, relying on each other to get by. You gain a +2 circumstance bonus to checks to {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)}, and your allies gain a +2 circumstance bonus to checks to {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)} you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

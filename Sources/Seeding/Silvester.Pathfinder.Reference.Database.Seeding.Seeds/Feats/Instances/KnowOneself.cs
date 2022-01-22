@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1375a582-0a1a-4463-a915-5cbb36158d82"), Type = TextBlockType.Text, Text = "~ Access: Vudrani ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("de556137-5a41-4bff-bb21-95a5d16fdd5f"), Type = TextBlockType.Text, Text = "You center yourself and call to mind the Vudrani monastic ideals of mindfulness and self-knowledge. You fail the save against the (trait: emotion) effect instead of critically failing." };
+            yield return new TextBlock { Id = Guid.Parse("1375a582-0a1a-4463-a915-5cbb36158d82"), Type = TextBlockType.Text, Text = $"~ Access: Vudrani ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("de556137-5a41-4bff-bb21-95a5d16fdd5f"), Type = TextBlockType.Text, Text = $"You center yourself and call to mind the Vudrani monastic ideals of mindfulness and self-knowledge. You fail the save against the {ToMarkdownLink<Models.Entities.Trait>("emotion", Traits.Instances.Emotion.ID)} effect instead of critically failing." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

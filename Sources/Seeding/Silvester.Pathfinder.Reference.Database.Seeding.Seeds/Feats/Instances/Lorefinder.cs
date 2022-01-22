@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("30523902-a5eb-45ab-a03a-26e7d7e7e5f7"), Type = TextBlockType.Text, Text = "You know that fate sometimes conspires to keep dangerous knowledge or items from the eyes of those most able to understand them. You deny fate the ability to conceal truths from you. You can cast (spell: locate) as an innate occult spell once per day. When you reach 14th level, this spell is heightened to 5th level." };
+            yield return new TextBlock { Id = Guid.Parse("30523902-a5eb-45ab-a03a-26e7d7e7e5f7"), Type = TextBlockType.Text, Text = $"You know that fate sometimes conspires to keep dangerous knowledge or items from the eyes of those most able to understand them. You deny fate the ability to conceal truths from you. You can cast {ToMarkdownLink<Models.Entities.Spell>("locate", Spells.Instances.Locate.ID)} as an innate occult spell once per day. When you reach 14th level, this spell is heightened to 5th level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79aa4ca5-9642-496f-a7ab-6b4cfb2b705f"), Type = TextBlockType.Text, Text = "Your muse whispers knowledge to you at all the right times. You gain the benefits of the (feat: Automatic Knowledge) skill feat with any skill you can use to (action: Recall Knowledge). As per the special clause in the (feat: Automatic Knowledge) feat, you can still only use (feat: Automatic Knowledge) once per round." };
+            yield return new TextBlock { Id = Guid.Parse("79aa4ca5-9642-496f-a7ab-6b4cfb2b705f"), Type = TextBlockType.Text, Text = $"Your muse whispers knowledge to you at all the right times. You gain the benefits of the {ToMarkdownLink<Models.Entities.Feat>("Automatic Knowledge", Feats.Instances.AutomaticKnowledge.ID)} skill feat with any skill you can use to {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)}. As per the special clause in the {ToMarkdownLink<Models.Entities.Feat>("Automatic Knowledge", Feats.Instances.AutomaticKnowledge.ID)} feat, you can still only use {ToMarkdownLink<Models.Entities.Feat>("Automatic Knowledge", Feats.Instances.AutomaticKnowledge.ID)} once per round." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

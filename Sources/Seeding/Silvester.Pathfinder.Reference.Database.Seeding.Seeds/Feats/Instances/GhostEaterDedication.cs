@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d3025e4b-bc75-4554-b1d6-ef1a0045016f"), Type = TextBlockType.Text, Text = "You have trained as a ghost eater, a hunter specialized in the destruction of spirits. You know how to channel your own spiritual energy to harm spirits. Your weapon and unarmed attack (action: Strikes | Strike) become magical. Against incorporeal creatures, they also gain the effects of a (item: ghost touch property rune | Ghost Touch Runestone)." };
+            yield return new TextBlock { Id = Guid.Parse("d3025e4b-bc75-4554-b1d6-ef1a0045016f"), Type = TextBlockType.Text, Text = $"You have trained as a ghost eater, a hunter specialized in the destruction of spirits. You know how to channel your own spiritual energy to harm spirits. Your weapon and unarmed attack {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} become magical. Against incorporeal creatures, they also gain the effects of a {ToMarkdownLink<Models.Items.Instances.WeaponPropertyRune>("ghost touch property rune", Items.WeaponPropertyRunes.Instances.GhostTouch.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("632fd1d8-7186-4ab3-b139-f480203b8a80"), Type = TextBlockType.Text, Text = "You launch yourself through the air at a foe. Attempt a (action: High Jump) or (action: Long Jump). If you attempt a (action: High Jump), determine the distance you can travel using the scale of a (action: Long Jump). At the end of your jump, you can make a melee (action: Strike)." };
-            yield return new TextBlock { Id = Guid.Parse("28eb30df-3296-40c2-a9d5-5a6af9bc2ab0"), Type = TextBlockType.Text, Text = "After your (action: Strike), you fall to the ground if you're in the air. If the distance of your fall is no more than the height of your jump, you take no damage and land upright." };
+            yield return new TextBlock { Id = Guid.Parse("632fd1d8-7186-4ab3-b139-f480203b8a80"), Type = TextBlockType.Text, Text = $"You launch yourself through the air at a foe. Attempt a {ToMarkdownLink<Models.Entities.SkillAction>("High Jump", SkillActions.Instances.HighJump.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Long Jump", SkillActions.Instances.LongJump.ID)}. If you attempt a {ToMarkdownLink<Models.Entities.SkillAction>("High Jump", SkillActions.Instances.HighJump.ID)}, determine the distance you can travel using the scale of a {ToMarkdownLink<Models.Entities.SkillAction>("Long Jump", SkillActions.Instances.LongJump.ID)}. At the end of your jump, you can make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("28eb30df-3296-40c2-a9d5-5a6af9bc2ab0"), Type = TextBlockType.Text, Text = $"After your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, you fall to the ground if you're in the air. If the distance of your fall is no more than the height of your jump, you take no damage and land upright." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

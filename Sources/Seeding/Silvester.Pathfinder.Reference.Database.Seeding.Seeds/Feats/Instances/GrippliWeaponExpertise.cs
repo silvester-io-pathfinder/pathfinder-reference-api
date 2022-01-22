@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3fcf7145-90e9-457e-ac77-abf22643138b"), Type = TextBlockType.Text, Text = "You fight with effortless expertise with grippli weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the blowgun, hatchet, scythe, shortbow, composite shortbow, or grippli weapons in which you are trained." };
+            yield return new TextBlock { Id = Guid.Parse("3fcf7145-90e9-457e-ac77-abf22643138b"), Type = TextBlockType.Text, Text = $"You fight with effortless expertise with grippli weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the blowgun, hatchet, scythe, shortbow, composite shortbow, or grippli weapons in which you are trained." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
