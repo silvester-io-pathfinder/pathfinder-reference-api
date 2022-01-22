@@ -3107,13 +3107,44 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BaseItem",
+                name: "HarrowCards",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
+                    AlignmentId = table.Column<Guid>(type: "uuid", nullable: false),
+                    HarrowCategoryId = table.Column<Guid>(type: "uuid", nullable: false),
+                    SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: false)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "Description" })
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HarrowCards", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_HarrowCards_Alignments_AlignmentId",
+                        column: x => x.AlignmentId,
+                        principalTable: "Alignments",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_HarrowCards_HarrowCategories_HarrowCategoryId",
+                        column: x => x.HarrowCategoryId,
+                        principalTable: "HarrowCategories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Items",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: false),
                     AccessRequirements = table.Column<string>(type: "text", nullable: true),
                     SourcePageId = table.Column<Guid>(type: "uuid", nullable: false),
+                    TableId = table.Column<Guid>(type: "uuid", nullable: true),
                     Discriminator = table.Column<string>(type: "text", nullable: false),
                     Benefit = table.Column<string>(type: "text", nullable: true),
                     Drawback = table.Column<string>(type: "text", nullable: true),
@@ -3148,197 +3179,173 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BaseItem", x => x.Id);
+                    table.PrimaryKey("PK_Items", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Alignments_AlignmentId",
+                        name: "FK_Items_Alignments_AlignmentId",
                         column: x => x.AlignmentId,
                         principalTable: "Alignments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_ArmorCategories_ArmorCategoryId",
+                        name: "FK_Items_ArmorCategories_ArmorCategoryId",
                         column: x => x.ArmorCategoryId,
                         principalTable: "ArmorCategories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseItem_ArmorGroups_ArmorGroupId",
+                        name: "FK_Items_ArmorGroups_ArmorGroupId",
                         column: x => x.ArmorGroupId,
                         principalTable: "ArmorGroups",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseItem_SourcePage_SourcePageId",
+                        name: "FK_Items_SourcePage_SourcePageId",
                         column: x => x.SourcePageId,
                         principalTable: "SourcePage",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_AlchemicalElixir_TraitId",
+                        name: "FK_Items_Table_TableId",
+                        column: x => x.TableId,
+                        principalTable: "Table",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Items_Traits_AlchemicalElixir_TraitId",
                         column: x => x.AlchemicalElixir_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_AlchemicalPoison_TraitId",
+                        name: "FK_Items_Traits_AlchemicalPoison_TraitId",
                         column: x => x.AlchemicalPoison_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_AlchemicalTool_TraitId",
+                        name: "FK_Items_Traits_AlchemicalTool_TraitId",
                         column: x => x.AlchemicalTool_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_Armor_TraitId",
+                        name: "FK_Items_Traits_Armor_TraitId",
                         column: x => x.Armor_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_ArmorPropertyRune_TraitId",
+                        name: "FK_Items_Traits_ArmorPropertyRune_TraitId",
                         column: x => x.ArmorPropertyRune_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_Artifact_TraitId",
+                        name: "FK_Items_Traits_Artifact_TraitId",
                         column: x => x.Artifact_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_BeastGun_TraitId",
+                        name: "FK_Items_Traits_BeastGun_TraitId",
                         column: x => x.BeastGun_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_CombinationWeapon_TraitId",
+                        name: "FK_Items_Traits_CombinationWeapon_TraitId",
                         column: x => x.CombinationWeapon_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_FundamentalArmorRune_TraitId",
+                        name: "FK_Items_Traits_FundamentalArmorRune_TraitId",
                         column: x => x.FundamentalArmorRune_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_FundamentalWeaponRune_TraitId",
+                        name: "FK_Items_Traits_FundamentalWeaponRune_TraitId",
                         column: x => x.FundamentalWeaponRune_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_MeleeWeapon_TraitId",
+                        name: "FK_Items_Traits_MeleeWeapon_TraitId",
                         column: x => x.MeleeWeapon_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_RangedWeapon_TraitId",
+                        name: "FK_Items_Traits_RangedWeapon_TraitId",
                         column: x => x.RangedWeapon_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_Stave_TraitId",
+                        name: "FK_Items_Traits_Stave_TraitId",
                         column: x => x.Stave_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_TraitId",
+                        name: "FK_Items_Traits_TraitId",
                         column: x => x.TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Traits_WeaponPropertyRune_TraitId",
+                        name: "FK_Items_Traits_WeaponPropertyRune_TraitId",
                         column: x => x.WeaponPropertyRune_TraitId,
                         principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItem_WeaponCategories_CombinationWeapon_WeaponCategoryId",
+                        name: "FK_Items_WeaponCategories_CombinationWeapon_WeaponCategoryId",
                         column: x => x.CombinationWeapon_WeaponCategoryId,
                         principalTable: "WeaponCategories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseItem_WeaponCategories_MeleeWeapon_WeaponCategoryId",
+                        name: "FK_Items_WeaponCategories_MeleeWeapon_WeaponCategoryId",
                         column: x => x.MeleeWeapon_WeaponCategoryId,
                         principalTable: "WeaponCategories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseItem_WeaponCategories_RangedWeapon_WeaponCategoryId",
+                        name: "FK_Items_WeaponCategories_RangedWeapon_WeaponCategoryId",
                         column: x => x.RangedWeapon_WeaponCategoryId,
                         principalTable: "WeaponCategories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseItem_WeaponCategories_WeaponCategoryId",
+                        name: "FK_Items_WeaponCategories_WeaponCategoryId",
                         column: x => x.WeaponCategoryId,
                         principalTable: "WeaponCategories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseItem_WeaponGroups_BeastGun_WeaponGroupId",
+                        name: "FK_Items_WeaponGroups_BeastGun_WeaponGroupId",
                         column: x => x.BeastGun_WeaponGroupId,
                         principalTable: "WeaponGroups",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseItem_WeaponGroups_MeleeWeapon_WeaponGroupId",
+                        name: "FK_Items_WeaponGroups_MeleeWeapon_WeaponGroupId",
                         column: x => x.MeleeWeapon_WeaponGroupId,
                         principalTable: "WeaponGroups",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseItem_WeaponGroups_RangedWeapon_WeaponGroupId",
+                        name: "FK_Items_WeaponGroups_RangedWeapon_WeaponGroupId",
                         column: x => x.RangedWeapon_WeaponGroupId,
                         principalTable: "WeaponGroups",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseItem_WeaponGroups_WeaponGroupId",
+                        name: "FK_Items_WeaponGroups_WeaponGroupId",
                         column: x => x.WeaponGroupId,
                         principalTable: "WeaponGroups",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "HarrowCards",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: false),
-                    AlignmentId = table.Column<Guid>(type: "uuid", nullable: false),
-                    HarrowCategoryId = table.Column<Guid>(type: "uuid", nullable: false),
-                    SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: false)
-                        .Annotation("Npgsql:TsVectorConfig", "english")
-                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "Description" })
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_HarrowCards", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_HarrowCards_Alignments_AlignmentId",
-                        column: x => x.AlignmentId,
-                        principalTable: "Alignments",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_HarrowCards_HarrowCategories_HarrowCategoryId",
-                        column: x => x.HarrowCategoryId,
-                        principalTable: "HarrowCategories",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -3700,7 +3707,33 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BaseItem_Details",
+                name: "BaseItemTraitBinding",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Specifier = table.Column<string>(type: "text", nullable: true),
+                    OwnerId = table.Column<Guid>(type: "uuid", nullable: false),
+                    TraitId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BaseItemTraitBinding", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BaseItemTraitBinding_Items_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "Items",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BaseItemTraitBinding_Traits_TraitId",
+                        column: x => x.TraitId,
+                        principalTable: "Traits",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Items_Details",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -3714,37 +3747,11 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BaseItem_Details", x => x.Id);
+                    table.PrimaryKey("PK_Items_Details", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BaseItem_Details_BaseItem_OwnerId",
+                        name: "FK_Items_Details_Items_OwnerId",
                         column: x => x.OwnerId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "BaseItemTraitBinding",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Specifier = table.Column<string>(type: "text", nullable: true),
-                    OwnerId = table.Column<Guid>(type: "uuid", nullable: false),
-                    TraitId = table.Column<Guid>(type: "uuid", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BaseItemTraitBinding", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_BaseItemTraitBinding_BaseItem_OwnerId",
-                        column: x => x.OwnerId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BaseItemTraitBinding_Traits_TraitId",
-                        column: x => x.TraitId,
-                        principalTable: "Traits",
+                        principalTable: "Items",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -3956,6 +3963,13 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     CombinationWeaponVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
                         .Annotation("Npgsql:TsVectorConfig", "english")
                         .Annotation("Npgsql:TsVectorProperties", new[] { "Name" }),
+                    HeldItemVariant_Price = table.Column<int>(type: "integer", nullable: true),
+                    HeldItemVariant_Level = table.Column<int>(type: "integer", nullable: true),
+                    HeldItemVariant_Usage = table.Column<string>(type: "text", nullable: true),
+                    HeldItemVariant_Hands = table.Column<string>(type: "text", nullable: true),
+                    HeldItemVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "HeldItemVariant_Usage" }),
                     MeleeWeaponVariant_Price = table.Column<int>(type: "integer", nullable: true),
                     MeleeWeaponVariant_Damage = table.Column<string>(type: "text", nullable: true),
                     MeleeWeaponVariant_Hands = table.Column<string>(type: "text", nullable: true),
@@ -4032,12 +4046,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BaseItemVariant_BaseItem_ItemId",
-                        column: x => x.ItemId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_BaseItemVariant_Bulks_BulkId",
                         column: x => x.BulkId,
                         principalTable: "Bulks",
@@ -4071,6 +4079,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         name: "FK_BaseItemVariant_DamageTypes_RangedWeaponVariant_DamageTypeId",
                         column: x => x.RangedWeaponVariant_DamageTypeId,
                         principalTable: "DamageTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BaseItemVariant_Items_ItemId",
+                        column: x => x.ItemId,
+                        principalTable: "Items",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -4336,6 +4350,7 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     Frequency = table.Column<string>(type: "text", nullable: true),
                     Trigger = table.Column<string>(type: "text", nullable: true),
                     Kind = table.Column<string>(type: "text", nullable: true),
+                    Cost = table.Column<string>(type: "text", nullable: true),
                     ActionTypeId = table.Column<Guid>(type: "uuid", nullable: false),
                     RollableEffectId = table.Column<Guid>(type: "uuid", nullable: true),
                     StaggeredEffectId = table.Column<Guid>(type: "uuid", nullable: true),
@@ -4355,12 +4370,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_InlineAction_BaseItem_BaseItemId",
-                        column: x => x.BaseItemId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_InlineAction_BaseItemVariant_BaseItemVariantId",
                         column: x => x.BaseItemVariantId,
                         principalTable: "BaseItemVariant",
@@ -4370,6 +4379,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         name: "FK_InlineAction_Hazards_HazardId",
                         column: x => x.HazardId,
                         principalTable: "Hazards",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_InlineAction_Items_BaseItemId",
+                        column: x => x.BaseItemId,
+                        principalTable: "Items",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -4908,36 +4923,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BaseEffect_BaseItem_AlchemicalElixirId",
-                        column: x => x.AlchemicalElixirId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BaseEffect_BaseItem_ArmorId",
-                        column: x => x.ArmorId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BaseEffect_BaseItem_GainSpecificMeleeWeaponEffect_MeleeWeap~",
-                        column: x => x.GainSpecificMeleeWeaponEffect_MeleeWeaponId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BaseEffect_BaseItem_MeleeWeaponId",
-                        column: x => x.MeleeWeaponId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BaseEffect_BaseItem_RangedWeaponId",
-                        column: x => x.RangedWeaponId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_BaseEffect_Choice_ChoiceId",
                         column: x => x.ChoiceId,
                         principalTable: "Choice",
@@ -5001,6 +4986,36 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         name: "FK_BaseEffect_InstinctAbilities_InstinctAbilityId",
                         column: x => x.InstinctAbilityId,
                         principalTable: "InstinctAbilities",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BaseEffect_Items_AlchemicalElixirId",
+                        column: x => x.AlchemicalElixirId,
+                        principalTable: "Items",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BaseEffect_Items_ArmorId",
+                        column: x => x.ArmorId,
+                        principalTable: "Items",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BaseEffect_Items_GainSpecificMeleeWeaponEffect_MeleeWeaponId",
+                        column: x => x.GainSpecificMeleeWeaponEffect_MeleeWeaponId,
+                        principalTable: "Items",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BaseEffect_Items_MeleeWeaponId",
+                        column: x => x.MeleeWeaponId,
+                        principalTable: "Items",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BaseEffect_Items_RangedWeaponId",
+                        column: x => x.RangedWeaponId,
+                        principalTable: "Items",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -7190,15 +7205,15 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 {
                     table.PrimaryKey("PK_DeityMeleeWeapon", x => new { x.FavoredById, x.FavoredMeleeWeaponsId });
                     table.ForeignKey(
-                        name: "FK_DeityMeleeWeapon_BaseItem_FavoredMeleeWeaponsId",
-                        column: x => x.FavoredMeleeWeaponsId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_DeityMeleeWeapon_Deities_FavoredById",
                         column: x => x.FavoredById,
                         principalTable: "Deities",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DeityMeleeWeapon_Items_FavoredMeleeWeaponsId",
+                        column: x => x.FavoredMeleeWeaponsId,
+                        principalTable: "Items",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -7214,15 +7229,15 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 {
                     table.PrimaryKey("PK_DeityRangedWeapon", x => new { x.FavoredById, x.FavoredRangedWeaponId });
                     table.ForeignKey(
-                        name: "FK_DeityRangedWeapon_BaseItem_FavoredRangedWeaponId",
-                        column: x => x.FavoredRangedWeaponId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_DeityRangedWeapon_Deities_FavoredById",
                         column: x => x.FavoredById,
                         principalTable: "Deities",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_DeityRangedWeapon_Items_FavoredRangedWeaponId",
+                        column: x => x.FavoredRangedWeaponId,
+                        principalTable: "Items",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -8347,18 +8362,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BasePrerequisite_BaseItem_RequiredMeleeWeaponId",
-                        column: x => x.RequiredMeleeWeaponId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BasePrerequisite_BaseItem_RequiredRangedWeaponId",
-                        column: x => x.RequiredRangedWeaponId,
-                        principalTable: "BaseItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
                         name: "FK_BasePrerequisite_Bloodlines_RequiredBloodlineId",
                         column: x => x.RequiredBloodlineId,
                         principalTable: "Bloodlines",
@@ -8458,6 +8461,18 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         name: "FK_BasePrerequisite_Instincts_RequiredInstinctId",
                         column: x => x.RequiredInstinctId,
                         principalTable: "Instincts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BasePrerequisite_Items_RequiredMeleeWeaponId",
+                        column: x => x.RequiredMeleeWeaponId,
+                        principalTable: "Items",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BasePrerequisite_Items_RequiredRangedWeaponId",
+                        column: x => x.RequiredRangedWeaponId,
+                        principalTable: "Items",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -10096,152 +10111,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 column: "WeaponGroupId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_AlchemicalElixir_TraitId",
-                table: "BaseItem",
-                column: "AlchemicalElixir_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_AlchemicalPoison_TraitId",
-                table: "BaseItem",
-                column: "AlchemicalPoison_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_AlchemicalTool_TraitId",
-                table: "BaseItem",
-                column: "AlchemicalTool_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_AlignmentId",
-                table: "BaseItem",
-                column: "AlignmentId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_Armor_TraitId",
-                table: "BaseItem",
-                column: "Armor_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_ArmorCategoryId",
-                table: "BaseItem",
-                column: "ArmorCategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_ArmorGroupId",
-                table: "BaseItem",
-                column: "ArmorGroupId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_ArmorPropertyRune_TraitId",
-                table: "BaseItem",
-                column: "ArmorPropertyRune_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_Artifact_TraitId",
-                table: "BaseItem",
-                column: "Artifact_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_BeastGun_TraitId",
-                table: "BaseItem",
-                column: "BeastGun_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_BeastGun_WeaponGroupId",
-                table: "BaseItem",
-                column: "BeastGun_WeaponGroupId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_CombinationWeapon_TraitId",
-                table: "BaseItem",
-                column: "CombinationWeapon_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_CombinationWeapon_WeaponCategoryId",
-                table: "BaseItem",
-                column: "CombinationWeapon_WeaponCategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_FundamentalArmorRune_TraitId",
-                table: "BaseItem",
-                column: "FundamentalArmorRune_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_FundamentalWeaponRune_TraitId",
-                table: "BaseItem",
-                column: "FundamentalWeaponRune_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_MeleeWeapon_TraitId",
-                table: "BaseItem",
-                column: "MeleeWeapon_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_MeleeWeapon_WeaponCategoryId",
-                table: "BaseItem",
-                column: "MeleeWeapon_WeaponCategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_MeleeWeapon_WeaponGroupId",
-                table: "BaseItem",
-                column: "MeleeWeapon_WeaponGroupId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_RangedWeapon_TraitId",
-                table: "BaseItem",
-                column: "RangedWeapon_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_RangedWeapon_WeaponCategoryId",
-                table: "BaseItem",
-                column: "RangedWeapon_WeaponCategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_RangedWeapon_WeaponGroupId",
-                table: "BaseItem",
-                column: "RangedWeapon_WeaponGroupId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_SourcePageId",
-                table: "BaseItem",
-                column: "SourcePageId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_Stave_TraitId",
-                table: "BaseItem",
-                column: "Stave_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_TraitId",
-                table: "BaseItem",
-                column: "TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_WeaponCategoryId",
-                table: "BaseItem",
-                column: "WeaponCategoryId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_WeaponGroupId",
-                table: "BaseItem",
-                column: "WeaponGroupId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_WeaponPropertyRune_TraitId",
-                table: "BaseItem",
-                column: "WeaponPropertyRune_TraitId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_Details_OwnerId",
-                table: "BaseItem_Details",
-                column: "OwnerId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BaseItem_Details_SearchVector",
-                table: "BaseItem_Details",
-                column: "SearchVector")
-                .Annotation("Npgsql:IndexMethod", "GIN");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_BaseItemTraitBinding_OwnerId",
                 table: "BaseItemTraitBinding",
                 column: "OwnerId");
@@ -10351,6 +10220,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "IX_BaseItemVariant_FundamentalWeaponRuneVariant_SearchVector",
                 table: "BaseItemVariant",
                 column: "FundamentalWeaponRuneVariant_SearchVector")
+                .Annotation("Npgsql:IndexMethod", "GIN");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BaseItemVariant_HeldItemVariant_SearchVector",
+                table: "BaseItemVariant",
+                column: "HeldItemVariant_SearchVector")
                 .Annotation("Npgsql:IndexMethod", "GIN");
 
             migrationBuilder.CreateIndex(
@@ -12286,6 +12161,157 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 column: "TraitsId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Items_AlchemicalElixir_TraitId",
+                table: "Items",
+                column: "AlchemicalElixir_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_AlchemicalPoison_TraitId",
+                table: "Items",
+                column: "AlchemicalPoison_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_AlchemicalTool_TraitId",
+                table: "Items",
+                column: "AlchemicalTool_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_AlignmentId",
+                table: "Items",
+                column: "AlignmentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_Armor_TraitId",
+                table: "Items",
+                column: "Armor_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_ArmorCategoryId",
+                table: "Items",
+                column: "ArmorCategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_ArmorGroupId",
+                table: "Items",
+                column: "ArmorGroupId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_ArmorPropertyRune_TraitId",
+                table: "Items",
+                column: "ArmorPropertyRune_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_Artifact_TraitId",
+                table: "Items",
+                column: "Artifact_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_BeastGun_TraitId",
+                table: "Items",
+                column: "BeastGun_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_BeastGun_WeaponGroupId",
+                table: "Items",
+                column: "BeastGun_WeaponGroupId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_CombinationWeapon_TraitId",
+                table: "Items",
+                column: "CombinationWeapon_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_CombinationWeapon_WeaponCategoryId",
+                table: "Items",
+                column: "CombinationWeapon_WeaponCategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_FundamentalArmorRune_TraitId",
+                table: "Items",
+                column: "FundamentalArmorRune_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_FundamentalWeaponRune_TraitId",
+                table: "Items",
+                column: "FundamentalWeaponRune_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_MeleeWeapon_TraitId",
+                table: "Items",
+                column: "MeleeWeapon_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_MeleeWeapon_WeaponCategoryId",
+                table: "Items",
+                column: "MeleeWeapon_WeaponCategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_MeleeWeapon_WeaponGroupId",
+                table: "Items",
+                column: "MeleeWeapon_WeaponGroupId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_RangedWeapon_TraitId",
+                table: "Items",
+                column: "RangedWeapon_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_RangedWeapon_WeaponCategoryId",
+                table: "Items",
+                column: "RangedWeapon_WeaponCategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_RangedWeapon_WeaponGroupId",
+                table: "Items",
+                column: "RangedWeapon_WeaponGroupId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_SourcePageId",
+                table: "Items",
+                column: "SourcePageId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_Stave_TraitId",
+                table: "Items",
+                column: "Stave_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_TableId",
+                table: "Items",
+                column: "TableId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_TraitId",
+                table: "Items",
+                column: "TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_WeaponCategoryId",
+                table: "Items",
+                column: "WeaponCategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_WeaponGroupId",
+                table: "Items",
+                column: "WeaponGroupId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_WeaponPropertyRune_TraitId",
+                table: "Items",
+                column: "WeaponPropertyRune_TraitId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_Details_OwnerId",
+                table: "Items_Details",
+                column: "OwnerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_Details_SearchVector",
+                table: "Items_Details",
+                column: "SearchVector")
+                .Annotation("Npgsql:IndexMethod", "GIN");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Languages_SearchVector",
                 table: "Languages",
                 column: "SearchVector")
@@ -13563,10 +13589,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 table: "ArmorGroups");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_SourcePage_SourcePageId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
                 name: "FK_Bloodlines_SourcePage_SourcePageId",
                 table: "Bloodlines");
 
@@ -13629,6 +13651,10 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
             migrationBuilder.DropForeignKey(
                 name: "FK_Instincts_SourcePage_SourcePageId",
                 table: "Instincts");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_SourcePage_SourcePageId",
+                table: "Items");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_Methodologies_SourcePage_SourcePageId",
@@ -13715,72 +13741,72 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 table: "BaseEffect");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_AlchemicalElixir_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_AlchemicalPoison_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_AlchemicalTool_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_Armor_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_ArmorPropertyRune_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_Artifact_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_BeastGun_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_CombinationWeapon_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_FundamentalArmorRune_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_FundamentalWeaponRune_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_MeleeWeapon_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_RangedWeapon_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_Stave_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Traits_WeaponPropertyRune_TraitId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
                 name: "FK_BasePrerequisite_Traits_HaveSpecificTraitPrerequisite_Requi~",
                 table: "BasePrerequisite");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_BasePrerequisite_Traits_RequiredTraitId",
                 table: "BasePrerequisite");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_AlchemicalElixir_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_AlchemicalPoison_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_AlchemicalTool_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_Armor_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_ArmorPropertyRune_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_Artifact_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_BeastGun_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_CombinationWeapon_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_FundamentalArmorRune_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_FundamentalWeaponRune_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_MeleeWeapon_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_RangedWeapon_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_Stave_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_TraitId",
+                table: "Items");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Traits_WeaponPropertyRune_TraitId",
+                table: "Items");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_Spells_Traits_TraitId",
@@ -13803,10 +13829,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 table: "BaseEffect");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_BaseItem_Alignments_AlignmentId",
-                table: "BaseItem");
-
-            migrationBuilder.DropForeignKey(
                 name: "FK_BasePrerequisite_Alignments_HaveSpecificAlignmentPrerequisi~",
                 table: "BasePrerequisite");
 
@@ -13821,6 +13843,10 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
             migrationBuilder.DropForeignKey(
                 name: "FK_Deities_Alignments_AlignmentId",
                 table: "Deities");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_Items_Alignments_AlignmentId",
+                table: "Items");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_BasePrerequisite_Deities_RequiredDeityId",
@@ -14033,9 +14059,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "BackgroundTrait");
-
-            migrationBuilder.DropTable(
-                name: "BaseItem_Details");
 
             migrationBuilder.DropTable(
                 name: "BaseItemTraitBinding");
@@ -14261,6 +14284,9 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "ItemCurseTrait");
+
+            migrationBuilder.DropTable(
+                name: "Items_Details");
 
             migrationBuilder.DropTable(
                 name: "MagicEssences");
@@ -14638,9 +14664,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "BasePrerequisite");
 
             migrationBuilder.DropTable(
-                name: "BaseItem");
-
-            migrationBuilder.DropTable(
                 name: "Bloodlines");
 
             migrationBuilder.DropTable(
@@ -14674,6 +14697,9 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "Instincts");
 
             migrationBuilder.DropTable(
+                name: "Items");
+
+            migrationBuilder.DropTable(
                 name: "Languages");
 
             migrationBuilder.DropTable(
@@ -14704,6 +14730,15 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "UnarmedWeapons");
 
             migrationBuilder.DropTable(
+                name: "DamageTypes");
+
+            migrationBuilder.DropTable(
+                name: "EffectShape");
+
+            migrationBuilder.DropTable(
+                name: "Spells");
+
+            migrationBuilder.DropTable(
                 name: "ArmorCategories");
 
             migrationBuilder.DropTable(
@@ -14714,15 +14749,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
 
             migrationBuilder.DropTable(
                 name: "WeaponGroups");
-
-            migrationBuilder.DropTable(
-                name: "DamageTypes");
-
-            migrationBuilder.DropTable(
-                name: "EffectShape");
-
-            migrationBuilder.DropTable(
-                name: "Spells");
 
             migrationBuilder.DropTable(
                 name: "LanguageTypes");

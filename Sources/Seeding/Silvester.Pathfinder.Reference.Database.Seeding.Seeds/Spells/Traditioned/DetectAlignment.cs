@@ -4,6 +4,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
@@ -31,9 +32,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("93b29669-1b66-422e-96be-17a1c795e34f"), Type = Utilities.Text.TextBlockType.Text, Text = "Only creatures of 6th level or higher—unless divine spellcasters, undead, or beings from the Outer Sphere—have alignment auras." };
         }
 
-        protected override Table? GetTable(TableBuilder builder)
+        protected override Table? GetTable()
         {
-            builder
+            return new TableBuilder("2258f9cf-0a20-4580-a2dd-66ef4ba69280", "The strength of an alignment aura depends on the level of the creature, item, or spell. The auras of undead, clerics and other divine spellcasters with a patron deity, and creatures from the Outer Sphere are one step stronger than normal (faint instead of none, for example).")
                 .AddColumn("a995d2ac-862a-4144-a49d-ebe41674b98d", "Creature or Item Level")
                 .AddColumn("5fbc8431-df89-49f0-8031-278de1d821d7", "Spell or Effect Level")
                 .AddColumn("3b3ca2e1-0bae-4139-8a60-a5a67eed076c", "Aura Strength")
@@ -66,9 +67,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                     row.AddCell("7f98a85c-4835-4940-9abd-ed786424ed0a", "21+");
                     row.AddCell("0bb5fe75-a9d1-4a4b-bbf4-1cedee2c2d5b", "10");
                     row.AddCell("a3c30e30-faa2-450f-83bc-f688558f55df", "Overwhelming");
-                });
-
-            return builder.Build("2258f9cf-0a20-4580-a2dd-66ef4ba69280", "The strength of an alignment aura depends on the level of the creature, item, or spell. The auras of undead, clerics and other divine spellcasters with a patron deity, and creatures from the Outer Sphere are one step stronger than normal (faint instead of none, for example).");
+                })
+                .Build();
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

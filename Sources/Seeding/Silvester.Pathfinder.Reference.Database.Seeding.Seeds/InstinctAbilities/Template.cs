@@ -6,6 +6,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InstinctAbilities
 {
@@ -16,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InstinctAbilitie
             InstinctAbility instinct = GetInstinctAbility();
 
             builder.AddSourcePage(instinct, GetSourcePage(), (e => e.SourcePageId));
-            builder.AddTable(instinct, GetTable());
+            builder.AddTable(instinct, GetTable(), e => e.TableId);
 
             return instinct;
         }

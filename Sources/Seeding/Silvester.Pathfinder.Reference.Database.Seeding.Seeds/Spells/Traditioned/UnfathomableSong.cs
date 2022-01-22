@@ -4,6 +4,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
@@ -36,9 +37,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("8bbc1694-0ec7-4ac8-ab8a-31af421579ce"), Type = TextBlockType.Text, Text = "If a target creature fails or critically fails their saving throw, the table below can be referenced for the result of the 1d4 roll." };
         }
 
-        protected override Table? GetTable(TableBuilder builder)
+        protected override Table? GetTable()
         {
-            builder
+            return new TableBuilder("d432fce3-02e6-4b1a-a9da-0b6ccdd97301")
                 .AddColumn("2792cdda-3eb4-4bd3-b9d6-d81ea492587d", "Result")
                 .AddColumn("3d4b05ba-6fa1-425e-8a32-f72757cd9df7", "Effect")
                 .AddRow("d21314e9-e1df-4368-81ff-81397f602489", row =>
@@ -65,9 +66,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 {
                     row.AddCell("5b9d0d2e-8dc0-48c9-95e6-8fbbd0109a47", "5"); 
                     row.AddCell("b96d7dd3-615d-4b1b-ab03-dbce5c17da00", "The target is stunned for 1 round and stupefied 1 for an unlimited duration.");
-                });
-
-            return builder.Build("d432fce3-02e6-4b1a-a9da-0b6ccdd97301");
+                })
+                .Build();
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

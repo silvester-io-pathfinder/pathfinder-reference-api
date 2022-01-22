@@ -9,6 +9,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries.Instances
 {
@@ -127,7 +128,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries.Instan
                         },
                     }
                 },
-                Table = new TableBuilder()
+                Table = new TableBuilder("c24ab786-c774-44d0-a404-804ba5399c08")
                     .AddColumn("084d187b-57f3-4364-9946-b537a876bbb1", "1d4")
                     .AddColumn("9c3847bc-427c-4518-99cf-ab3a57c55f18", "Ancestor")
                     .AddColumn("7b519017-7f2b-4078-9c13-6df639760a85", "Preferred Action")
@@ -166,7 +167,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries.Instan
                             .AddCell("7bf88799-1e3b-4fa3-b67a-710a86800451", "4")
                             .AddCell("d73ae685-0c0a-4f52-9c19-d1c10937fccd", "You choose which ancestor guides your actions.");
                     })
-                    .Build("c24ab786-c774-44d0-a404-804ba5399c08")
+                    .Build()
             };
         }
 

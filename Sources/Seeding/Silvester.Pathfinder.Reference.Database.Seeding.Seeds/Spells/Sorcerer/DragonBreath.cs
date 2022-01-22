@@ -4,6 +4,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
@@ -46,9 +47,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        protected override Table? GetTable(TableBuilder builder)
+        protected override Table? GetTable()
         {
-            builder
+            return new TableBuilder("8f257a22-51a5-4dfd-994b-cf61347a5f58")
                 .AddColumn("8d4fe099-9f43-4beb-bdeb-fe0c65c8666b", "Dragon Type")
                 .AddColumn("f4328fbe-dd26-4f0b-ba0a-7a2b780f06d1", "Area and Damage Type")
                 .AddColumn("949bd8f3-fee0-4528-bca2-cf1bf56e029f", "Saving Throw")
@@ -93,9 +94,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                         .AddCell("0db1ef65-66e9-472e-8a8d-b4bbfe20c103", "Silver or white.")
                         .AddCell("d07c9ade-1a62-4961-8a0c-d4730a1db098", "30-foot cone of cold.")
                         .AddCell("c6cf8ab9-c13a-4196-9501-459ec2be5c85", "Reflex");
-                });
-
-            return builder.Build("8f257a22-51a5-4dfd-994b-cf61347a5f58");
+                })
+                .Build();
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

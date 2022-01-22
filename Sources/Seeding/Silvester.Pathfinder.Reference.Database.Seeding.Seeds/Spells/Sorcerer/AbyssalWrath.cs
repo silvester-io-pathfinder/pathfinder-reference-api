@@ -4,6 +4,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
@@ -46,9 +47,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             };
         }
 
-        protected override Table? GetTable(TableBuilder builder)
+        protected override Table? GetTable()
         {
-            builder
+            return new TableBuilder("3bea2bd8-f9fa-4369-b76b-37486eb7afbf", "You deal 4d6 damage of each of the corresponding types to each creature in the cone(8d6 total damage).")
                 .AddColumn("8f8b5c9d-6cb0-414a-bfd7-67ca16dbace9", "1d4")
                 .AddColumn("8d4f4f9b-ee4d-4f2f-971f-7427a586c588", "Realm")
                 .AddColumn("67bcbb99-6a2e-4fd4-b32a-39d3dd0f7a01", "Manifestation")
@@ -84,9 +85,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                         .AddCell("5e0fbbd7-11cf-4926-ae54-4ebfd800e9dd", "Volcanic")
                         .AddCell("e9630bd0-a5e6-4ebd-bc5d-f69c3ae3a0cb", "Jagged volcanic rocks and magma.")
                         .AddCell("048af3d4-dc26-4a3f-951e-59c5416cad93", "Fire and piercing.");
-                });
-
-            return builder.Build("3bea2bd8-f9fa-4369-b76b-37486eb7afbf", "You deal 4d6 damage of each of the corresponding types to each creature in the cone(8d6 total damage)."  );
+                })
+                .Build();
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

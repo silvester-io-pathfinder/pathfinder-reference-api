@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

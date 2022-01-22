@@ -3,6 +3,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InstinctAbilities.Instances
 {
@@ -22,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InstinctAbilitie
 
         protected override Table? GetTable()
         {
-            return new TableBuilder()
+            return new TableBuilder("64516cdd-9224-4a60-a924-4c4870d0357f")
                 .AddColumn("98131dee-5407-478c-b4c4-8aea6aede2d0", "Animal")
                 .AddColumn("a479c7c7-4733-404a-a5f8-86fca9d395ae", "Attack")
                 .AddColumn("1bf21bd2-d2d2-4781-869d-dba8ed657135", "Damage")
@@ -123,7 +124,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.InstinctAbilitie
                         .AddCell("b2763ae4-b39d-400d-9d4a-30e7de53566a", "1d10 P")
                         .AddCell("f0d24da9-6a81-410f-94e5-acd3ab428df9", "Trip, Unarmed");
                 })
-                .Build("64516cdd-9224-4a60-a924-4c4870d0357f");
+                .Build();
         }
 
         protected override SourcePage GetSourcePage()

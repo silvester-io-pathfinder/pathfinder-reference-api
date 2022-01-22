@@ -1,4 +1,5 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -72,7 +73,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override Table? GetTable()
         {
-            return new TableBuilder()
+            return new TableBuilder("aa8f7d33-3fa3-4e46-9e38-9a3eea339ee7")
                 .AddColumn("fff31cb5-7778-41df-94dc-c7474f37e0e8", "Task Level")
                 .AddColumn("d5327d4c-fadd-4f02-868a-e6440690bcd8", "Failure")
                 .AddColumn("9647569f-51b2-436c-9542-8474eaa2f69e", "Trained")
@@ -299,7 +300,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                       .AddCell("9abefb87-7175-49b7-bc67-917038927e41", "175 gp")
                       .AddCell("0b459329-5526-488c-af78-90740b07cec1", "300 gp");
                 })
-                .Build("aa8f7d33-3fa3-4e46-9e38-9a3eea339ee7");
+                .Build();
         }
 
         protected override SourcePage GetSourcePage()

@@ -4,6 +4,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
@@ -30,9 +31,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("964bc83a-72e9-40c7-9458-576ec905df98"), Type = TextBlockType.Text, Text = "A spray of rainbow light beams cascades from your open hand. Each creature in the area must roll 1d8 on the table below to see which beam affects it, then attempt a saving throw of the indicated type. The table notes any additional traits that apply to each type of ray. If a creature is struck by multiple beams, it uses the same d20 result for all its saving throws. For all rays, a successful saving throw negates the effect for that creature." };
         }
 
-        protected override Table? GetTable(TableBuilder builder)
+        protected override Table? GetTable()
         {
-            builder
+            return new TableBuilder("755b85a4-3292-4c5e-b898-f89e5e06e9b1")
                 .AddColumn("6ca123fe-d3de-444e-8e7b-a2312913fd9f", "1d8")
                 .AddColumn("09bfd599-c40b-46a7-a20a-9c6462f5b314", "Color")
                 .AddColumn("1732bfa4-4f69-4877-8669-a63df0d1fabd", "Save")
@@ -100,9 +101,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                         .AddCell("f5a5715f-b496-4bca-a2f2-5e52964753fa", "Potent Beam")
                         .AddCell("131297f2-aaab-458e-91d0-ca1e3278ff60", "-")
                         .AddCell("fc30d3e9-7541-4fb6-9a8b-530e4c26e3d1", "Affected by two beams - roll twice, rerolling any duplicates or results of 8.");
-                });
-
-            return builder.Build("755b85a4-3292-4c5e-b898-f89e5e06e9b1");
+                })
+                .Build();
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

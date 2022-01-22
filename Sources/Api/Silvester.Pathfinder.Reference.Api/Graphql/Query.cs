@@ -33,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Api.Graphql
                 }
 
                 Type genericType = property.PropertyType.GetGenericArguments().First();
-                if (genericType.IsAssignableTo(typeof(BaseEntity)) == false)
+                if (genericType.IsAssignableTo(typeof(BaseEntity)) == false || genericType.IsAbstract)
                 {
                     continue;
                 }

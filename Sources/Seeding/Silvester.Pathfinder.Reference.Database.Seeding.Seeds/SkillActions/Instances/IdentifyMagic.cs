@@ -1,4 +1,5 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -61,7 +62,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override Table? GetTable()
         {
-            return new TableBuilder()
+            return new TableBuilder("f5122968-afdf-439f-8a35-95c6a7091eeb", "Each magical tradition has a corresponding skill, as shown on the table below. You must have the trained proficiency rank in a skill to use it to Identify Magic or Learn a Spell. Something without a specific tradition, such as an item with the magical trait, can be identified using any of these skills.")
                 .AddColumn("cfea6c9a-234f-4668-b527-53909a114c26", "Magic Tradition")
                 .AddColumn("66bdb818-7bfb-47b6-ae20-e4fc34d9758f", "Corresponding Skill")
                 .AddRow("9beeb5f4-b844-40d8-94a7-576b07dc2431", row =>
@@ -88,7 +89,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                         .AddCell("5e2ad400-7134-4a6d-b491-239e28f54b2b", "Primal")
                         .AddCell("03811b2e-aa91-4666-8ffd-c38248e10688", "Nature");
                 })
-                .Build("f5122968-afdf-439f-8a35-95c6a7091eeb", "Each magical tradition has a corresponding skill, as shown on the table below. You must have the trained proficiency rank in a skill to use it to Identify Magic or Learn a Spell. Something without a specific tradition, such as an item with the magical trait, can be identified using any of these skills.");
+                .Build();
         }
 
         protected override SourcePage GetSourcePage()

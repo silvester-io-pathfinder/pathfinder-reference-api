@@ -20,50 +20,6 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds
 
     public static class SeedBuilderExtensions
     {
-        public static ISeedBuilder AddTable<TOwner>(this ISeedBuilder self, TOwner owner, Table? table)
-               where TOwner : BaseEntity
-        {
-            if (table == null)
-            {
-                return self;
-            }
-
-            table.OwnerId = owner.Id;
-
-            for (int iColumn = 0; iColumn < table.Columns.Count(); iColumn++)
-            {
-                Column column = table.Columns.ElementAt(iColumn);
-                column.Order = iColumn;
-                column.TableId = table.Id;
-                self.AddData(column);
-            }
-
-            for (int iRow = 0; iRow < table.Rows.Count(); iRow++)
-            {
-                Row row = table.Rows.ElementAt(iRow);
-
-                for (int iCell = 0; iCell < row.Cells.Count(); iCell++)
-                {
-                    Cell cell = row.Cells.ElementAt(iCell);
-                    cell.RowId = row.Id;
-                    cell.Order = iCell;
-                    self.AddData(cell);
-                }
-
-                row.TableId = table.Id;
-                row.Order = iRow;
-                row.Cells = new List<Cell>();
-
-                self.AddData(row);
-            }
-
-            table.Rows = new List<Row>();
-            table.Columns = new List<Column>();
-
-            self.AddData(table);
-            return self;
-        }
-
         public static ISeedBuilder AddTraits<TOwner>(this ISeedBuilder self, TOwner owner, IEnumerable<Guid> traitIds)
            where TOwner : BaseEntity
         {

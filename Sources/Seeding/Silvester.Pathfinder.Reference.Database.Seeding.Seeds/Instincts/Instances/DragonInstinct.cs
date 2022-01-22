@@ -7,6 +7,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects.Enums;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instances
 {
@@ -49,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
 
         protected override Table? GetTable()
         {
-            return new TableBuilder()
+            return new TableBuilder("bea51fc6-b94b-4db2-bcce-75fe501bd7b1")
                 .AddColumn("72f3580f-4053-49b7-bf61-488518db03e7", "Dragon Type")
                 .AddColumn("7eced65e-8ed6-4ebb-81ef-237280d0bb07", "Category")
                 .AddColumn("f4240546-dda4-4b46-809f-5e005dfb0d73", "Breadth Weapon")
@@ -124,7 +125,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
                         .AddCell("20fc1857-088a-4276-a856-bf4fee27db20", "Metallic")
                         .AddCell("114dfce8-05d6-4ea5-9eb2-a81e9670b0f6", "Cone of Cold");
                 })
-                .Build("bea51fc6-b94b-4db2-bcce-75fe501bd7b1");
+                .Build();
         }
 
         protected override SourcePage GetSourcePage()

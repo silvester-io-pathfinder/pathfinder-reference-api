@@ -1,4 +1,5 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -64,7 +65,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override Table? GetTable()
         {
-            return new TableBuilder()
+            return new TableBuilder("6c59d51c-36b5-41be-9099-ffcb854db50e", "This table provides a quick reference for how far you can move with a Climb or Swim action.")
                 .AddColumn("69de3128-524b-4001-a17d-5839762bc1f3", "Speed")
                 .AddColumn("007a0ca9-75f8-44b9-a58d-7b1d91388085", "Climb Distance Success")
                 .AddColumn("773787d4-0106-4d3f-8f46-1c8b3b5c5b7e", "Climb Distance Critical")
@@ -106,7 +107,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                         .AddCell("ca0de073-e003-43ea-95cb-e1b2c7692ced", "20")
                         .AddCell("d108e100-45aa-4b3b-81da-098d8ca6411d", "25");
                 })
-                .Build("6c59d51c-36b5-41be-9099-ffcb854db50e", "This table provides a quick reference for how far you can move with a Climb or Swim action.");
+                .Build();
         }
 
         protected override SourcePage GetSourcePage()

@@ -9,6 +9,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Innovations.Instances
 {
@@ -45,7 +46,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Innovations.Inst
 
         protected override Table GetTable()
         {
-            return new TableBuilder()
+            return new TableBuilder("06accbef-0ad7-4c29-9d2a-464bb4e93833")
                 .AddColumn("980cd4d2-208c-4a4d-a4f1-cf212fd9e534", "Medium Armor")
                 .AddColumn("9014c916-857f-4989-a39a-8f5bf77a17f2", "AC Bonus")
                 .AddColumn("9c8b22f6-7d07-4b16-8f69-f68f312a610c", "Dex Cap")
@@ -81,7 +82,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Innovations.Inst
                         .AddCell("b303a398-5189-4384-bdc6-654b94d8c172", "composite")
                         .AddCell("4855a471-aba7-4b09-8545-7f7528fc98ce", "-");
                 })
-                .Build("06accbef-0ad7-4c29-9d2a-464bb4e93833");
+                .Build();
         }
 
         protected override SourcePage GetSourcePage()

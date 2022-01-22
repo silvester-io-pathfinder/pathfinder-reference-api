@@ -16,6 +16,7 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public string? Frequency { get; set; }
         public string? Trigger { get; set; }
         public string? Kind { get; set; }
+        public string? Cost { get; set; }
 
         public Guid ActionTypeId { get; set; }
         public ActionType ActionType { get; set; } = default!;

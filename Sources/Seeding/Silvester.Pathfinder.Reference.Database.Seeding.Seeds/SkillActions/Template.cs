@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Silvester.Pathfinder.Reference.Database.Extensions;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
-
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions
             builder.AddTextBlocks(action, GetDetails(), e => e.Details);
             builder.AddRollableEffect(action, GetRollableEffect());
             builder.AddSourcePage(action, GetSourcePage(), e => e.SourcePageId);
-            builder.AddTable(action, GetTable());
+            builder.AddTable(action, GetTable(), e => e.TableId);
 
             builder.AddJoinData<SkillAction, PlayMode>(action, GetRequiredPlayModes());
             builder.AddJoinData<SkillAction, Skill>(action, GetApplicableSkills());

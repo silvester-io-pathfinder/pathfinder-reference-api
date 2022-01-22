@@ -11,7 +11,7 @@ using Silvester.Pathfinder.Reference.Database;
 namespace Silvester.Pathfinder.Reference.Database.Migrations
 {
     [DbContext(typeof(ReferenceDatabase))]
-    [Migration("20220120193750_Initial")]
+    [Migration("20220122000954_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -3359,6 +3359,9 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.Property<Guid?>("BaseItemVariantId")
                         .HasColumnType("uuid");
 
+                    b.Property<string>("Cost")
+                        .HasColumnType("text");
+
                     b.Property<string>("Frequency")
                         .HasColumnType("text");
 
@@ -6022,11 +6025,16 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.Property<Guid>("SourcePageId")
                         .HasColumnType("uuid");
 
+                    b.Property<Guid?>("TableId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
                     b.HasIndex("SourcePageId");
 
-                    b.ToTable("BaseItem");
+                    b.HasIndex("TableId");
+
+                    b.ToTable("Items");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("BaseItem");
                 });
@@ -9107,6 +9115,13 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasDiscriminator().HasValue("CombinationWeapon");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.HeldItem", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
+
+                    b.HasDiscriminator().HasValue("HeldItem");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.MeleeWeapon", b =>
                 {
                     b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
@@ -9569,6 +9584,42 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         .HasMethod("GIN");
 
                     b.HasDiscriminator().HasValue("CombinationWeaponVariant");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.HeldItemVariant", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItemVariant");
+
+                    b.Property<string>("Hands")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("HeldItemVariant_Hands");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer")
+                        .HasColumnName("HeldItemVariant_Level");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer")
+                        .HasColumnName("HeldItemVariant_Price");
+
+                    b.Property<NpgsqlTsVector>("SearchVector")
+                        .IsRequired()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("tsvector")
+                        .HasColumnName("HeldItemVariant_SearchVector")
+                        .HasAnnotation("Npgsql:TsVectorConfig", "english")
+                        .HasAnnotation("Npgsql:TsVectorProperties", new[] { "Name", "Usage" });
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("HeldItemVariant_Usage");
+
+                    b.HasIndex("SearchVector")
+                        .HasMethod("GIN");
+
+                    b.HasDiscriminator().HasValue("HeldItemVariant");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.MeleeWeaponVariant", b =>
@@ -16623,6 +16674,10 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Silvester.Pathfinder.Reference.Database.Utilities.Tables.Table", "Table")
+                        .WithMany()
+                        .HasForeignKey("TableId");
+
                     b.OwnsMany("Silvester.Pathfinder.Reference.Database.Utilities.Text.TextBlock", "Details", b1 =>
                         {
                             b1.Property<Guid>("Id")
@@ -16657,7 +16712,7 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                             b1.HasIndex("SearchVector")
                                 .HasMethod("GIN");
 
-                            b1.ToTable("BaseItem_Details");
+                            b1.ToTable("Items_Details");
 
                             b1.WithOwner()
                                 .HasForeignKey("OwnerId");
@@ -16666,6 +16721,8 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.Navigation("Details");
 
                     b.Navigation("SourcePage");
+
+                    b.Navigation("Table");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItemTraitBinding", b =>

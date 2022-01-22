@@ -1,5 +1,6 @@
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
@@ -67,7 +68,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override Table? GetTable()
         {
-            return new TableBuilder()
+            return new TableBuilder("cc94918b-3913-48a5-8e87-228e9b3e0e62")
                 .AddColumn("e2e869c6-37a5-4fe4-82c8-cc71841e86ab", "Spell Level")
                 .AddColumn("d2a21d5b-3f8c-4023-90af-4ab2d833d40f", "Price")
                 .AddColumn("c17a54a4-348e-4327-99c4-7af35cf5bff6", "Typical DC")
@@ -141,7 +142,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                         .AddCell("89f1cb6c-a589-485a-aa8e-f81f9b4d0b6e", "7000 gp")
                         .AddCell("bbf21378-6f82-4b87-880d-cbccb781eaa9", "41");
                 })
-                .Build("cc94918b-3913-48a5-8e87-228e9b3e0e62");
+                .Build();
         }
 
         protected override SourcePage GetSourcePage()

@@ -7,6 +7,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries
 
@@ -34,7 +35,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Mysteries
             MysteryCurse curse = GetCurse();
             builder.AddTextBlocks(curse, curse.Details, (e) => e.Details); 
             builder.AddSourcePage(curse, curse.SourcePage, e => e.SourcePageId);
-            builder.AddTable(curse, curse.Table);
+            builder.AddTable(curse, curse.Table, e => e.TableId);
 
             foreach (MysteryCursePotency potency in curse.Potencies)
             {

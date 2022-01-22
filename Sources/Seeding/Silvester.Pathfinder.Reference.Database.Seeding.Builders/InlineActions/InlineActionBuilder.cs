@@ -49,6 +49,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Builders.InlineActions
             return this;
         }
 
+        public InlineActionBuilder Cost(string cost)
+        {
+            InlineAction.Cost = cost;
+            return this;
+        }
+
         public InlineActionBuilder Trigger(string trigger)
         {
             InlineAction.Trigger = trigger;

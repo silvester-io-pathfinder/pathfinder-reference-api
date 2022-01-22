@@ -7,6 +7,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Effects.Builders;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts
 {
@@ -19,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts
             builder.AddSourcePage(instinct, GetSourcePage(), e => e.SourcePageId);
             builder.AddEffect(instinct, GetInstinctAbilityEffects, e => e.InstinctAbilityEffectId);
             builder.AddEffect(instinct, GetRagingEffects, e => e.RagingEffectId, overrideId: GetSourcePage().Id);
-            builder.AddTable(instinct, GetTable());
+            builder.AddTable(instinct, GetTable(), e => e.TableId);
 
             return instinct;
         }

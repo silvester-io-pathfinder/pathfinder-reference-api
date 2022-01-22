@@ -8,6 +8,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Innovations
 {
@@ -18,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Innovations
             Innovation innovation = GetInnovation();
 
             builder.AddSourcePage(innovation, GetSourcePage(), (e) => e.SourcePageId);
-            builder.AddTable(innovation, GetTable());
+            builder.AddTable(innovation, GetTable(), e => e.TableId);
             builder.AddTextBlocks(innovation, GetDetails(), e => e.Details);
             builder.AddEffect(innovation, GetEffects, e => e.EffectId);
 

@@ -6,6 +6,7 @@ using NpgsqlTypes;
 using Silvester.Pathfinder.Reference.Database.Seeding;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
+using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Items
 {
@@ -16,6 +17,9 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Items
 
         public Guid SourcePageId { get; set; }
         public SourcePage SourcePage { get; set; } = default!;
+
+        public Guid? TableId { get; set; }
+        public Table? Table { get; set; } 
 
         public ICollection<BaseItemTraitBinding> TraitBindings { get; set; } = new List<BaseItemTraitBinding>();
         public ICollection<TextBlock> Details { get; set; } = new List<TextBlock>();

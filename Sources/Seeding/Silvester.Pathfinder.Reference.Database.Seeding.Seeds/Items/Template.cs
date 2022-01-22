@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.InlineActions;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items
 {
@@ -27,6 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items
             builder.AddTraitBindings<BaseItemTraitBinding, BaseItem>(item, GetTraits);
             builder.AddInlineActions(item, GetInlineActions);
             builder.AddSourcePage(item, GetSourcePage(), (e => e.SourcePageId));
+            builder.AddTable(item, GetTable(), e => e.TableId);
 
             foreach(TVariant variant in GetVariants())
             {
@@ -53,7 +55,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items
         
         protected virtual void GetInlineActions(IInlineActionCollectionBuilder builder)
         {
-            
+
+        }
+
+        protected virtual Table? GetTable()
+        {
+            return null;
         }
     }
 }

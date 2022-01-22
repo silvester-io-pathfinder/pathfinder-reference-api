@@ -4,6 +4,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.InlineActions;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.RollableEffects;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.StaggeredEffects;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Utilities.Tables;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
@@ -17,9 +18,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells
         protected override Spell GetEntity(ISeedBuilder builder)
         {
             Spell spell = GetSpell();
-            Table? table = GetTable(new TableBuilder());
+            Table? table = GetTable();
 
-            builder.AddTable(spell, table);
+            builder.AddTable(spell, table, e => e.TableId);
             builder.AddSourcePage(spell, GetSourcePage(), e => e.SourcePageId);
             builder.AddTraitBindings<SpellTraitBinding, Spell>(spell, GetTraits);
             builder.AddTextBlocks(spell, GetSpellDetailBlocks(), e => e.Details);
@@ -55,7 +56,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells
             yield break;
         }
 
-        protected virtual Table? GetTable(TableBuilder builder)
+        protected virtual Table? GetTable()
         {
             return null;
         }

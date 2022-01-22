@@ -4,6 +4,7 @@ using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using System.Collections.Generic;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Tables;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
@@ -36,9 +37,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("3c18f999-1631-4ec7-bb23-9b48a1d7b66c"), Type = TextBlockType.Text, Text = "A deluge of colorful illusory paint, tools, or other symbols of art and artisanship drift down in the area. Roll 1d4 to determine the color of the illusion. Each creature in the area must attempt a Will save. A creature is unaffected on a success. On a failure or critical failure, the creature takes the results listed on the table relevant to the color." };
         }
 
-        protected override Table? GetTable(TableBuilder builder)
+        protected override Table? GetTable()
         {
-            builder
+            return new TableBuilder("77fab51e-5718-4cbc-93ec-29df80ce3c3b")
                 .AddColumn("b9917bfa-96d3-48c5-bc12-fb530e73db87", "1d4")
                 .AddColumn("e29d1ddf-cb8a-44f3-aa00-23c5d402493b", "Color")
                 .AddColumn("cce1ea2f-a856-428e-8a4d-5aac108cd5cd", "Failure")
@@ -74,9 +75,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                         .AddCell("7f9acb9d-5e79-454f-a1d6-c1e26bd07e88", "Blue")
                         .AddCell("59446203-e584-478e-8991-42706c01e4d8", "Clumsy 1 for 1 round.")
                         .AddCell("56068469-144a-407d-8edc-af02233ad5b3", "Clumsy 2 for 1 round.");
-                });
-
-            return builder.Build("77fab51e-5718-4cbc-93ec-29df80ce3c3b");
+                })
+                .Build();
         }
 
         public override IEnumerable<Guid> GetSpellComponents()
