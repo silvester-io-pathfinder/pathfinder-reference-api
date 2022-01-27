@@ -130,6 +130,7 @@ namespace Silvester.Pathfinder.Reference.Database
         public DbSet<SpellType> SpellTypes { get; set; } = default!;
         public DbSet<Stat> Stats { get; set; } = default!;
         public DbSet<Stave> Staves { get; set; } = default!;
+        public DbSet<Talisman> Talismans { get; set; } = default!;
         public DbSet<Tenet> Tenets { get; set; } = default!;
         public DbSet<Trait> Traits { get; set; } = default!;
         public DbSet<UnarmedWeapon> UnarmedWeapons { get; set; } = default!;

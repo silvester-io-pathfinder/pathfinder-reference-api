@@ -9128,6 +9128,13 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasDiscriminator().HasValue("CombinationWeapon");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.Consumable", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
+
+                    b.HasDiscriminator().HasValue("Consumable");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.HeldItem", b =>
                 {
                     b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
@@ -9224,6 +9231,11 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 {
                     b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
 
+                    b.Property<Guid>("SpellId")
+                        .HasColumnType("uuid");
+
+                    b.HasIndex("SpellId");
+
                     b.HasDiscriminator().HasValue("Scroll");
                 });
 
@@ -9245,6 +9257,13 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasIndex("TraitId");
 
                     b.HasDiscriminator().HasValue("Stave");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.Talisman", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItem");
+
+                    b.HasDiscriminator().HasValue("Talisman");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.WornItem", b =>
@@ -9625,6 +9644,41 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         .HasMethod("GIN");
 
                     b.HasDiscriminator().HasValue("CombinationWeaponVariant");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.ConsumableVariant", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItemVariant");
+
+                    b.Property<string>("Hands")
+                        .HasColumnType("text")
+                        .HasColumnName("ConsumableVariant_Hands");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer")
+                        .HasColumnName("ConsumableVariant_Level");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer")
+                        .HasColumnName("ConsumableVariant_Price");
+
+                    b.Property<NpgsqlTsVector>("SearchVector")
+                        .IsRequired()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("tsvector")
+                        .HasColumnName("ConsumableVariant_SearchVector")
+                        .HasAnnotation("Npgsql:TsVectorConfig", "english")
+                        .HasAnnotation("Npgsql:TsVectorProperties", new[] { "Name", "Usage" });
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("ConsumableVariant_Usage");
+
+                    b.HasIndex("SearchVector")
+                        .HasMethod("GIN");
+
+                    b.HasDiscriminator().HasValue("ConsumableVariant");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.HeldItemVariant", b =>
@@ -10035,6 +10089,41 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         .HasMethod("GIN");
 
                     b.HasDiscriminator().HasValue("StaveVariant");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.TalismanVariant", b =>
+                {
+                    b.HasBaseType("Silvester.Pathfinder.Reference.Database.Models.Items.BaseItemVariant");
+
+                    b.Property<string>("Hands")
+                        .HasColumnType("text")
+                        .HasColumnName("TalismanVariant_Hands");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("integer")
+                        .HasColumnName("TalismanVariant_Level");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("integer")
+                        .HasColumnName("TalismanVariant_Price");
+
+                    b.Property<NpgsqlTsVector>("SearchVector")
+                        .IsRequired()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("tsvector")
+                        .HasColumnName("TalismanVariant_SearchVector")
+                        .HasAnnotation("Npgsql:TsVectorConfig", "english")
+                        .HasAnnotation("Npgsql:TsVectorProperties", new[] { "Name", "Usage" });
+
+                    b.Property<string>("Usage")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("TalismanVariant_Usage");
+
+                    b.HasIndex("SearchVector")
+                        .HasMethod("GIN");
+
+                    b.HasDiscriminator().HasValue("TalismanVariant");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.WornItemVariant", b =>
@@ -18686,6 +18775,17 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.Navigation("WeaponCategory");
 
                     b.Navigation("WeaponGroup");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.Scroll", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Reference.Database.Models.Entities.Spell", "Spell")
+                        .WithMany()
+                        .HasForeignKey("SpellId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Spell");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Items.Instances.Stave", b =>

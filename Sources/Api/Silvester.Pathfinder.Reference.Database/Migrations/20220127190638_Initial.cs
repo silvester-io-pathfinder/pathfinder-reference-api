@@ -3137,6 +3137,118 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Planes",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    CategoryId = table.Column<Guid>(type: "uuid", nullable: false),
+                    AlignmentId = table.Column<Guid>(type: "uuid", nullable: false),
+                    SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: false)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name" })
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Planes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Planes_Alignments_AlignmentId",
+                        column: x => x.AlignmentId,
+                        principalTable: "Alignments",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Planes_PlaneCategories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "PlaneCategories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PreciousMaterialObjectInformation",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Hardness = table.Column<int>(type: "integer", nullable: false),
+                    HitPoints = table.Column<int>(type: "integer", nullable: false),
+                    BrokenThreshold = table.Column<int>(type: "integer", nullable: false),
+                    GradeId = table.Column<Guid>(type: "uuid", nullable: false),
+                    CategoryId = table.Column<Guid>(type: "uuid", nullable: false),
+                    MaterialId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PreciousMaterialObjectInformation", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PreciousMaterialObjectInformation_ObjectGrade_GradeId",
+                        column: x => x.GradeId,
+                        principalTable: "ObjectGrade",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PreciousMaterialObjectInformation_PreciousMaterialItemCateg~",
+                        column: x => x.CategoryId,
+                        principalTable: "PreciousMaterialItemCategories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PreciousMaterialObjectInformation_PreciousMaterials_Materia~",
+                        column: x => x.MaterialId,
+                        principalTable: "PreciousMaterials",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PreciousMaterials_Details",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    OwnerId = table.Column<Guid>(type: "uuid", nullable: false),
+                    Text = table.Column<string>(type: "text", nullable: false),
+                    Order = table.Column<int>(type: "integer", nullable: false),
+                    Type = table.Column<int>(type: "integer", nullable: false),
+                    SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: false)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Text" })
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PreciousMaterials_Details", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PreciousMaterials_Details_PreciousMaterials_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "PreciousMaterials",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PreciousMaterialTrait",
+                columns: table => new
+                {
+                    PreciousMaterialsId = table.Column<Guid>(type: "uuid", nullable: false),
+                    TraitsId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PreciousMaterialTrait", x => new { x.PreciousMaterialsId, x.TraitsId });
+                    table.ForeignKey(
+                        name: "FK_PreciousMaterialTrait_PreciousMaterials_PreciousMaterialsId",
+                        column: x => x.PreciousMaterialsId,
+                        principalTable: "PreciousMaterials",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PreciousMaterialTrait_Traits_TraitsId",
+                        column: x => x.TraitsId,
+                        principalTable: "Traits",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Items",
                 columns: table => new
                 {
@@ -3175,6 +3287,7 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     FundamentalArmorRune_TraitId = table.Column<Guid>(type: "uuid", nullable: true),
                     FundamentalWeaponRune_TraitId = table.Column<Guid>(type: "uuid", nullable: true),
                     WeaponPropertyRune_TraitId = table.Column<Guid>(type: "uuid", nullable: true),
+                    SpellId = table.Column<Guid>(type: "uuid", nullable: true),
                     Stave_TraitId = table.Column<Guid>(type: "uuid", nullable: true)
                 },
                 constraints: table =>
@@ -3202,6 +3315,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         name: "FK_Items_SourcePage_SourcePageId",
                         column: x => x.SourcePageId,
                         principalTable: "SourcePage",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Items_Spells_SpellId",
+                        column: x => x.SpellId,
+                        principalTable: "Spells",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -3346,118 +3465,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         name: "FK_Items_WeaponGroups_WeaponGroupId",
                         column: x => x.WeaponGroupId,
                         principalTable: "WeaponGroups",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Planes",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    CategoryId = table.Column<Guid>(type: "uuid", nullable: false),
-                    AlignmentId = table.Column<Guid>(type: "uuid", nullable: false),
-                    SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: false)
-                        .Annotation("Npgsql:TsVectorConfig", "english")
-                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name" })
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Planes", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Planes_Alignments_AlignmentId",
-                        column: x => x.AlignmentId,
-                        principalTable: "Alignments",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Planes_PlaneCategories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "PlaneCategories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PreciousMaterialObjectInformation",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Hardness = table.Column<int>(type: "integer", nullable: false),
-                    HitPoints = table.Column<int>(type: "integer", nullable: false),
-                    BrokenThreshold = table.Column<int>(type: "integer", nullable: false),
-                    GradeId = table.Column<Guid>(type: "uuid", nullable: false),
-                    CategoryId = table.Column<Guid>(type: "uuid", nullable: false),
-                    MaterialId = table.Column<Guid>(type: "uuid", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PreciousMaterialObjectInformation", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_PreciousMaterialObjectInformation_ObjectGrade_GradeId",
-                        column: x => x.GradeId,
-                        principalTable: "ObjectGrade",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_PreciousMaterialObjectInformation_PreciousMaterialItemCateg~",
-                        column: x => x.CategoryId,
-                        principalTable: "PreciousMaterialItemCategories",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_PreciousMaterialObjectInformation_PreciousMaterials_Materia~",
-                        column: x => x.MaterialId,
-                        principalTable: "PreciousMaterials",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PreciousMaterials_Details",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    OwnerId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Text = table.Column<string>(type: "text", nullable: false),
-                    Order = table.Column<int>(type: "integer", nullable: false),
-                    Type = table.Column<int>(type: "integer", nullable: false),
-                    SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: false)
-                        .Annotation("Npgsql:TsVectorConfig", "english")
-                        .Annotation("Npgsql:TsVectorProperties", new[] { "Text" })
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PreciousMaterials_Details", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_PreciousMaterials_Details_PreciousMaterials_OwnerId",
-                        column: x => x.OwnerId,
-                        principalTable: "PreciousMaterials",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PreciousMaterialTrait",
-                columns: table => new
-                {
-                    PreciousMaterialsId = table.Column<Guid>(type: "uuid", nullable: false),
-                    TraitsId = table.Column<Guid>(type: "uuid", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PreciousMaterialTrait", x => new { x.PreciousMaterialsId, x.TraitsId });
-                    table.ForeignKey(
-                        name: "FK_PreciousMaterialTrait_PreciousMaterials_PreciousMaterialsId",
-                        column: x => x.PreciousMaterialsId,
-                        principalTable: "PreciousMaterials",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_PreciousMaterialTrait_Traits_TraitsId",
-                        column: x => x.TraitsId,
-                        principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -3707,6 +3714,54 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Planes_Details",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    OwnerId = table.Column<Guid>(type: "uuid", nullable: false),
+                    Text = table.Column<string>(type: "text", nullable: false),
+                    Order = table.Column<int>(type: "integer", nullable: false),
+                    Type = table.Column<int>(type: "integer", nullable: false),
+                    SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: false)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Text" })
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Planes_Details", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Planes_Details_Planes_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "Planes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PlaneTrait",
+                columns: table => new
+                {
+                    PlanesId = table.Column<Guid>(type: "uuid", nullable: false),
+                    TraitsId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PlaneTrait", x => new { x.PlanesId, x.TraitsId });
+                    table.ForeignKey(
+                        name: "FK_PlaneTrait_Planes_PlanesId",
+                        column: x => x.PlanesId,
+                        principalTable: "Planes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PlaneTrait_Traits_TraitsId",
+                        column: x => x.TraitsId,
+                        principalTable: "Traits",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AmmunitionMagicAmmunition",
                 columns: table => new
                 {
@@ -3776,54 +3831,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         name: "FK_Items_Details_Items_OwnerId",
                         column: x => x.OwnerId,
                         principalTable: "Items",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Planes_Details",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    OwnerId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Text = table.Column<string>(type: "text", nullable: false),
-                    Order = table.Column<int>(type: "integer", nullable: false),
-                    Type = table.Column<int>(type: "integer", nullable: false),
-                    SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: false)
-                        .Annotation("Npgsql:TsVectorConfig", "english")
-                        .Annotation("Npgsql:TsVectorProperties", new[] { "Text" })
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Planes_Details", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Planes_Details_Planes_OwnerId",
-                        column: x => x.OwnerId,
-                        principalTable: "Planes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "PlaneTrait",
-                columns: table => new
-                {
-                    PlanesId = table.Column<Guid>(type: "uuid", nullable: false),
-                    TraitsId = table.Column<Guid>(type: "uuid", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PlaneTrait", x => new { x.PlanesId, x.TraitsId });
-                    table.ForeignKey(
-                        name: "FK_PlaneTrait_Planes_PlanesId",
-                        column: x => x.PlanesId,
-                        principalTable: "Planes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_PlaneTrait_Traits_TraitsId",
-                        column: x => x.TraitsId,
-                        principalTable: "Traits",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -3987,6 +3994,13 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     CombinationWeaponVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
                         .Annotation("Npgsql:TsVectorConfig", "english")
                         .Annotation("Npgsql:TsVectorProperties", new[] { "Name" }),
+                    ConsumableVariant_Price = table.Column<int>(type: "integer", nullable: true),
+                    ConsumableVariant_Level = table.Column<int>(type: "integer", nullable: true),
+                    ConsumableVariant_Usage = table.Column<string>(type: "text", nullable: true),
+                    ConsumableVariant_Hands = table.Column<string>(type: "text", nullable: true),
+                    ConsumableVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "ConsumableVariant_Usage" }),
                     HeldItemVariant_Price = table.Column<int>(type: "integer", nullable: true),
                     HeldItemVariant_Level = table.Column<int>(type: "integer", nullable: true),
                     HeldItemVariant_Usage = table.Column<string>(type: "text", nullable: true),
@@ -4079,6 +4093,13 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     StaveVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
                         .Annotation("Npgsql:TsVectorConfig", "english")
                         .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "StaveVariant_Usage" }),
+                    TalismanVariant_Price = table.Column<int>(type: "integer", nullable: true),
+                    TalismanVariant_Level = table.Column<int>(type: "integer", nullable: true),
+                    TalismanVariant_Usage = table.Column<string>(type: "text", nullable: true),
+                    TalismanVariant_Hands = table.Column<string>(type: "text", nullable: true),
+                    TalismanVariant_SearchVector = table.Column<NpgsqlTsVector>(type: "tsvector", nullable: true)
+                        .Annotation("Npgsql:TsVectorConfig", "english")
+                        .Annotation("Npgsql:TsVectorProperties", new[] { "Name", "TalismanVariant_Usage" }),
                     WornItemVariant_Price = table.Column<int>(type: "integer", nullable: true),
                     WornItemVariant_Level = table.Column<int>(type: "integer", nullable: true),
                     WornItemVariant_Usage = table.Column<string>(type: "text", nullable: true),
@@ -10261,6 +10282,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 .Annotation("Npgsql:IndexMethod", "GIN");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BaseItemVariant_ConsumableVariant_SearchVector",
+                table: "BaseItemVariant",
+                column: "ConsumableVariant_SearchVector")
+                .Annotation("Npgsql:IndexMethod", "GIN");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_BaseItemVariant_DamageTypeId",
                 table: "BaseItemVariant",
                 column: "DamageTypeId");
@@ -10397,6 +10424,12 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "IX_BaseItemVariant_StaveVariant_SearchVector",
                 table: "BaseItemVariant",
                 column: "StaveVariant_SearchVector")
+                .Annotation("Npgsql:IndexMethod", "GIN");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BaseItemVariant_TalismanVariant_SearchVector",
+                table: "BaseItemVariant",
+                column: "TalismanVariant_SearchVector")
                 .Annotation("Npgsql:IndexMethod", "GIN");
 
             migrationBuilder.CreateIndex(
@@ -12348,6 +12381,11 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                 name: "IX_Items_SourcePageId",
                 table: "Items",
                 column: "SourcePageId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Items_SpellId",
+                table: "Items",
+                column: "SpellId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Items_Stave_TraitId",

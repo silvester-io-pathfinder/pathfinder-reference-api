@@ -7,27 +7,26 @@ using System.Linq.Expressions;
 
 namespace Silvester.Pathfinder.Reference.Database.Models.Items.Instances
 {
-    public class Scroll : BaseItem
+    public class Talisman : BaseItem
     {
-        public Guid SpellId { get; set; }
-        public Spell Spell { get; set; } = default!;
+
     }
 
-    public class ScrollVariant : BaseItemVariant, IUsed, ISearchableEntity
+    public class TalismanVariant : BaseItemVariant, IUsed, ISearchableEntity
     {
         public int Price { get; set; }
         public int Level { get; set; }
         public string Usage { get; set; } = default!;
-        public string Hands { get; set; } = default!;
+        public string? Hands { get; set; }
 
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
-    public class ScrollVariantConfigurator : EntityConfigurator<ScrollVariant>
+    public class TalismanVariantConfigurator : EntityConfigurator<TalismanVariant>
 	{
-		public ScrollVariantConfigurator()
+		public TalismanVariantConfigurator()
 		{
-			ConfigureEntitySearch<ScrollVariant>(e => new {e.Name, e.Usage});
+			ConfigureEntitySearch<TalismanVariant>(e => new {e.Name, e.Usage});
 		}
 	}
 }
