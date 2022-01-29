@@ -36,6 +36,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
+            builder.Add(Guid.Parse(""), Traits.Instances.Azarketi.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Primal.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Transmutation.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Water.ID);
 
         }            
 

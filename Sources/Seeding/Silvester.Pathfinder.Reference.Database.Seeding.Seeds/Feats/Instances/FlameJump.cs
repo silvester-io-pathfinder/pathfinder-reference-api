@@ -42,6 +42,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
+            builder.Add(Guid.Parse(""), Traits.Instances.Aasimar.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Divine.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Exploration.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Fire.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Manipulate.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Teleportation.ID);
 
         }            
 

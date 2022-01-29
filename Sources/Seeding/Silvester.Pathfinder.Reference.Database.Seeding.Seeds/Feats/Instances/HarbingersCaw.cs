@@ -36,6 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
+            builder.Add(Guid.Parse(""), Traits.Instances.Auditory.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Misfortune.ID);
+            builder.Add(Guid.Parse(""), Traits.Instances.Tengu.ID);
 
         }            
 
