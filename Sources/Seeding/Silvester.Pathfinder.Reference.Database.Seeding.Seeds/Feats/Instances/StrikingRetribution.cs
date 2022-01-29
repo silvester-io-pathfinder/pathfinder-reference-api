@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eeb6b3ea-2108-4c47-ab66-3646b90932a0"), Type = TextBlockType.Text, Text = "You have an appropriately intense hatred for alghollthus. You gain a +2 circumstance bonus to damage with weapons and unarmed attacks against creatures from the alghollthu family and those that serve alghollthus (the GM determines which creatures serve an alghollthu). In addition, if an alghollthu successfully affects you or one of your allies within 60 feet with an enchantment, your circumstance bonus to damage against that alghollthu increases to +4 for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("eeb6b3ea-2108-4c47-ab66-3646b90932a0"), Type = TextBlockType.Text, Text = $"You have an appropriately intense hatred for alghollthus. You gain a +2 circumstance bonus to damage with weapons and unarmed attacks against creatures from the alghollthu family and those that serve alghollthus (the GM determines which creatures serve an alghollthu). In addition, if an alghollthu successfully affects you or one of your allies within 60 feet with an enchantment, your circumstance bonus to damage against that alghollthu increases to +4 for 1 minute." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

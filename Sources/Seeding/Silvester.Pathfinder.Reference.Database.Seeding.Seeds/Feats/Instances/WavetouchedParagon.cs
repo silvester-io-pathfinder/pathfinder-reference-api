@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("707ca441-f831-4fc3-83f4-a0a4f90f7747"), Type = TextBlockType.Text, Text = "~ Access: Bonuwat ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("14705f2b-7156-4e9e-8e51-7c7b186de4cf"), Type = TextBlockType.Text, Text = "You have been blessed by the sea, granting you the ability to swim like a fish. You gain a 15-foot swim Speed." };
+            yield return new TextBlock { Id = Guid.Parse("707ca441-f831-4fc3-83f4-a0a4f90f7747"), Type = TextBlockType.Text, Text = $"~ Access: Bonuwat ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("14705f2b-7156-4e9e-8e51-7c7b186de4cf"), Type = TextBlockType.Text, Text = $"You have been blessed by the sea, granting you the ability to swim like a fish. You gain a 15-foot swim Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

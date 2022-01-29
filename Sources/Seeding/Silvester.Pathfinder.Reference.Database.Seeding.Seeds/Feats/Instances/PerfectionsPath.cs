@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a63ed10d-445f-4581-8a1f-92c5da60ac87"), Type = TextBlockType.Text, Text = "Choose one saving throw (Fortitude, Reflex, or Will) in which you are an expert. Your proficiency rank in the chosen saving throw increases to master." };
+            yield return new TextBlock { Id = Guid.Parse("a63ed10d-445f-4581-8a1f-92c5da60ac87"), Type = TextBlockType.Text, Text = $"Choose one saving throw (Fortitude, Reflex, or Will) in which you are an expert. Your proficiency rank in the chosen saving throw increases to master." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

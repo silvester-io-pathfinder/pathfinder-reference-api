@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8b9cb3e-541f-48e1-938b-fc17456a49c9"), Type = TextBlockType.Text, Text = "You've spent considerable time practicing the manipulation of light, weaponizing your blade's reflection or bolstering the luminosity of magical displays to unconventional heights. Extend the duration of the blinded or dazzled condition you give the target by 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("f8b9cb3e-541f-48e1-938b-fc17456a49c9"), Type = TextBlockType.Text, Text = $"You've spent considerable time practicing the manipulation of light, weaponizing your blade's reflection or bolstering the luminosity of magical displays to unconventional heights. Extend the duration of the blinded or dazzled condition you give the target by 1 round." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

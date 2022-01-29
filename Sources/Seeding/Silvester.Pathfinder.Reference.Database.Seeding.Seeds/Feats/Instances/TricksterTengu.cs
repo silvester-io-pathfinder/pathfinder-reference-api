@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1790ab19-3af4-4935-9e9b-fec9a53cc0b8"), Type = TextBlockType.Text, Text = "You can transform yourself or the bodies of others to express your displeasure. Once per day, you can cast either (spell: aerial form) or (spell: baleful polymorph) as a 7th-level primal innate spell. You must take the form of a bird when using this (spell: aerial form)." };
+            yield return new TextBlock { Id = Guid.Parse("1790ab19-3af4-4935-9e9b-fec9a53cc0b8"), Type = TextBlockType.Text, Text = $"You can transform yourself or the bodies of others to express your displeasure. Once per day, you can cast either {ToMarkdownLink<Models.Entities.Spell>("aerial form", Spells.Instances.AerialForm.ID)} or {ToMarkdownLink<Models.Entities.Spell>("baleful polymorph", Spells.Instances.BalefulPolymorph.ID)} as a 7th-level primal innate spell. You must take the form of a bird when using this {ToMarkdownLink<Models.Entities.Spell>("aerial form", Spells.Instances.AerialForm.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c55aa400-c6cd-48f5-9b99-f42dae0e0915"), Type = TextBlockType.Text, Text = "You tumble under and behind your foe to catch them off guard. When you successfully (action: Tumble Through), the foe whose space you passed through is flat-footed against the next attack you make before the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("c55aa400-c6cd-48f5-9b99-f42dae0e0915"), Type = TextBlockType.Text, Text = $"You tumble under and behind your foe to catch them off guard. When you successfully {ToMarkdownLink<Models.Entities.SkillAction>("Tumble Through", SkillActions.Instances.TumbleThrough.ID)}, the foe whose space you passed through is flat-footed against the next attack you make before the end of your turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

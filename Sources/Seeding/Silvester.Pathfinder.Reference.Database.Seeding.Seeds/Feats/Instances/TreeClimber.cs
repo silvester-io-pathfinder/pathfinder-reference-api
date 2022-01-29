@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("68b1aca4-402c-4e03-986f-6e7f7c08352a"), Type = TextBlockType.Text, Text = "Your time in forest or jungle canopies has taught you how to scramble across branches with sure feet. You gain a climb Speed of 10 feet. If you also have the (feat: Cave Climber) ancestry feat, your total climb Speed increases to your land Speed when climbing trees." };
+            yield return new TextBlock { Id = Guid.Parse("68b1aca4-402c-4e03-986f-6e7f7c08352a"), Type = TextBlockType.Text, Text = $"Your time in forest or jungle canopies has taught you how to scramble across branches with sure feet. You gain a climb Speed of 10 feet. If you also have the {ToMarkdownLink<Models.Entities.Feat>("Cave Climber", Feats.Instances.CaveClimber.ID)} ancestry feat, your total climb Speed increases to your land Speed when climbing trees." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

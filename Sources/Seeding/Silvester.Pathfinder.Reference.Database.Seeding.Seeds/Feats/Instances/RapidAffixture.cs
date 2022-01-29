@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c7c55d5-9729-4753-9672-a4b9af763377"), Type = TextBlockType.Text, Text = "You take only 1 minute to (action: Affix a Talisman). If you're legendary in Crafting, you can (action: Affix a Talisman) as a 3-action activity." };
+            yield return new TextBlock { Id = Guid.Parse("7c7c55d5-9729-4753-9672-a4b9af763377"), Type = TextBlockType.Text, Text = $"You take only 1 minute to {ToMarkdownLink<Models.Entities.Action>("Affix a Talisman", Actions.Instances.AffixATalisman.ID)}. If you're legendary in Crafting, you can {ToMarkdownLink<Models.Entities.Action>("Affix a Talisman", Actions.Instances.AffixATalisman.ID)} as a 3-action activity." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

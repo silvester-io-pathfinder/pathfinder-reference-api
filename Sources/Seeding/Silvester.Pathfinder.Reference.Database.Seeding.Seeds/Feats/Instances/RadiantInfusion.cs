@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dc5a3735-c7c6-4746-860c-92c7d5b44fbe"), Type = TextBlockType.Text, Text = "You pour invigorating positive energy into a living ally. If the next action you use is to cast (spell: heal) to restore Hit Points to a single living creature, the target deals an additional 1d6 positive damage with its melee weapons and unarmed attacks until the end of its next turn. If the (spell: heal) spell is at least 5th level, this damage increases to 2d6, or 3d6 if the spell is at least 8th level." };
+            yield return new TextBlock { Id = Guid.Parse("dc5a3735-c7c6-4746-860c-92c7d5b44fbe"), Type = TextBlockType.Text, Text = $"You pour invigorating positive energy into a living ally. If the next action you use is to cast {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} to restore Hit Points to a single living creature, the target deals an additional 1d6 positive damage with its melee weapons and unarmed attacks until the end of its next turn. If the {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} spell is at least 5th level, this damage increases to 2d6, or 3d6 if the spell is at least 8th level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

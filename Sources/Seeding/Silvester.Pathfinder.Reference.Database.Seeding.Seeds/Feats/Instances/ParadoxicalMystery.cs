@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db836b8d-c81a-4043-ba52-bd4026d51bab"), Type = TextBlockType.Text, Text = "The truest depths of your divine mystery are fathomless and contradictory, granting you changing powers that even you can barely begin to fathom. Each day during your daily preparations, choose one basic or advanced domain spell from any domain from the Core Rulebook or another domain to which you have access, or any initial or advanced revelation spell from another mystery. You gain that spell as a revelation spell until your next daily preparations, and it has the (trait: cursebound) trait." };
+            yield return new TextBlock { Id = Guid.Parse("db836b8d-c81a-4043-ba52-bd4026d51bab"), Type = TextBlockType.Text, Text = $"The truest depths of your divine mystery are fathomless and contradictory, granting you changing powers that even you can barely begin to fathom. Each day during your daily preparations, choose one basic or advanced domain spell from any domain from the Core Rulebook or another domain to which you have access, or any initial or advanced revelation spell from another mystery. You gain that spell as a revelation spell until your next daily preparations, and it has the {ToMarkdownLink<Models.Entities.Trait>("cursebound", Traits.Instances.Cursebound.ID)} trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

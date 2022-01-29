@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("01de1ffc-28c7-4575-837a-43bbdcf04cdc"), Type = TextBlockType.Text, Text = "The magic of shaitans runs through your blood. You can cast (spell: glitterdust) and (spell: resist energy) once per day each as 2nd-level arcane innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("01de1ffc-28c7-4575-837a-43bbdcf04cdc"), Type = TextBlockType.Text, Text = $"The magic of shaitans runs through your blood. You can cast {ToMarkdownLink<Models.Entities.Spell>("glitterdust", Spells.Instances.Glitterdust.ID)} and {ToMarkdownLink<Models.Entities.Spell>("resist energy", Spells.Instances.ResistEnergy.ID)} once per day each as 2nd-level arcane innate spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1f54d843-3dd3-45a0-8566-7e85dfb97186"), Type = TextBlockType.Text, Text = "You and your animal companion fight in tandem, distracting your foes and keeping them off balance. Whenever you and your animal companion are adjacent to the same foe, you are both flanking that foe with each other, regardless of your actual positions." };
+            yield return new TextBlock { Id = Guid.Parse("1f54d843-3dd3-45a0-8566-7e85dfb97186"), Type = TextBlockType.Text, Text = $"You and your animal companion fight in tandem, distracting your foes and keeping them off balance. Whenever you and your animal companion are adjacent to the same foe, you are both flanking that foe with each other, regardless of your actual positions." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

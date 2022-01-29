@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a90405e9-c8d2-4d4a-a773-02a560581239"), Type = TextBlockType.Text, Text = "If your next action is to use your divine font to cast a 3-action (spell: heal) or (spell: harm) spell to damage creatures, you can harness the residual energy to counterbalance opposing forces. You use your (spell: heal) or (spell: harm) spell to attempt to counteract one effect in the spell's area with the chaotic, evil, good, or lawful trait. The chosen trait must oppose one component of your deity's alignment; if your deity is neutral, you can choose any one trait." };
+            yield return new TextBlock { Id = Guid.Parse("a90405e9-c8d2-4d4a-a773-02a560581239"), Type = TextBlockType.Text, Text = $"If your next action is to use your divine font to cast a 3-action {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} or {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} spell to damage creatures, you can harness the residual energy to counterbalance opposing forces. You use your {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} or {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} spell to attempt to counteract one effect in the spell's area with the chaotic, evil, good, or lawful trait. The chosen trait must oppose one component of your deity's alignment; if your deity is neutral, you can choose any one trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

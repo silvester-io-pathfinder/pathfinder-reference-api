@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec8e0f42-04b4-4320-a899-d42f4737de42"), Type = TextBlockType.Text, Text = "In nature, certain animals are covered in venomous spines, such that even touching them is deadly. To use this reaction, you must have brushed poison onto your clothing or woven sharp poisoned needles into the garment's fabric. This takes 10 minutes and uses one dose of (trait: contact) or (trait: injury) poison. You can have only one such poison suffused into your clothing at a time." };
-            yield return new TextBlock { Id = Guid.Parse("b15db5b2-8218-41b1-966d-831209508cdb"), Type = TextBlockType.Text, Text = "When you use this reaction, the triggering creature is exposed to the suffused poison." };
+            yield return new TextBlock { Id = Guid.Parse("ec8e0f42-04b4-4320-a899-d42f4737de42"), Type = TextBlockType.Text, Text = $"In nature, certain animals are covered in venomous spines, such that even touching them is deadly. To use this reaction, you must have brushed poison onto your clothing or woven sharp poisoned needles into the garment's fabric. This takes 10 minutes and uses one dose of {ToMarkdownLink<Models.Entities.Trait>("contact", Traits.Instances.Contact.ID)} or {ToMarkdownLink<Models.Entities.Trait>("injury", Traits.Instances.Injury.ID)} poison. You can have only one such poison suffused into your clothing at a time." };
+            yield return new TextBlock { Id = Guid.Parse("b15db5b2-8218-41b1-966d-831209508cdb"), Type = TextBlockType.Text, Text = $"When you use this reaction, the triggering creature is exposed to the suffused poison." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92ab1134-ae0d-4173-afa8-a092d46fe507"), Type = TextBlockType.Text, Text = "Your wings are now a permanent part of your physiology. You gain the effects of (feat: Fiendish Wings) at all times, rather than just once per day for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("92ab1134-ae0d-4173-afa8-a092d46fe507"), Type = TextBlockType.Text, Text = $"Your wings are now a permanent part of your physiology. You gain the effects of {ToMarkdownLink<Models.Entities.Feat>("Fiendish Wings", Feats.Instances.FiendishWings.ID)} at all times, rather than just once per day for 10 minutes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

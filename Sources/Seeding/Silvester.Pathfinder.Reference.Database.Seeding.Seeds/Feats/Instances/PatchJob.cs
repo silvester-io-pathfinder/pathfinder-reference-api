@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f22e403-64f3-4484-94c6-3cfde9326b6e"), Type = TextBlockType.Text, Text = "You can patch up damage to an object with a quick fix. You gain the (feat: Improvised Repair) general feat. When you use (feat: Improvised Repair), you can attempt a Crafting check with the same DC as (action: Repair). If you succeed, you can use the object as a normal object of its type until it takes damage rather than as a shoddy object of its type." };
+            yield return new TextBlock { Id = Guid.Parse("5f22e403-64f3-4484-94c6-3cfde9326b6e"), Type = TextBlockType.Text, Text = $"You can patch up damage to an object with a quick fix. You gain the {ToMarkdownLink<Models.Entities.Feat>("Improvised Repair", Feats.Instances.ImprovisedRepair.ID)} general feat. When you use {ToMarkdownLink<Models.Entities.Feat>("Improvised Repair", Feats.Instances.ImprovisedRepair.ID)}, you can attempt a Crafting check with the same DC as {ToMarkdownLink<Models.Entities.SkillAction>("Repair", SkillActions.Instances.Repair.ID)}. If you succeed, you can use the object as a normal object of its type until it takes damage rather than as a shoddy object of its type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

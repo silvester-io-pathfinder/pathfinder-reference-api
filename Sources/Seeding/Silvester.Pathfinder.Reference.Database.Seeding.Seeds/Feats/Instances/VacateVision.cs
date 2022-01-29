@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("248b56c9-1237-4232-b4f8-9cd7c178df62"), Type = TextBlockType.Text, Text = "You cause your eyes to liquefy and run out of your eye sockets, leaving them empty. You get a success on the save against the triggering effect, but you are blinded for the duration the effect would have had on a failure. At that time, your eyes regrow and your normal vision returns." };
+            yield return new TextBlock { Id = Guid.Parse("248b56c9-1237-4232-b4f8-9cd7c178df62"), Type = TextBlockType.Text, Text = $"You cause your eyes to liquefy and run out of your eye sockets, leaving them empty. You get a success on the save against the triggering effect, but you are blinded for the duration the effect would have had on a failure. At that time, your eyes regrow and your normal vision returns." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

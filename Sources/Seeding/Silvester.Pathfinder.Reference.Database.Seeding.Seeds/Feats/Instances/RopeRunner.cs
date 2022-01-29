@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("950addd0-7ca9-4efb-a086-83373648f95f"), Type = TextBlockType.Text, Text = "You run and climb across ropes and rigging almost as easily as on the ground. You gain a climb Speed of 15 feet, but only on ship's rigging or similar ropes. Whenever you succeed at an Athletics check to (action: Climb) a rope or an Acrobatics check to (action: Balance) on a rope, you get a critical success instead. You aren't flat-footed while (action: Climbing | Climb) or (action: Balancing | Balance) on a rope." };
+            yield return new TextBlock { Id = Guid.Parse("950addd0-7ca9-4efb-a086-83373648f95f"), Type = TextBlockType.Text, Text = $"You run and climb across ropes and rigging almost as easily as on the ground. You gain a climb Speed of 15 feet, but only on ship's rigging or similar ropes. Whenever you succeed at an Athletics check to {ToMarkdownLink<Models.Entities.SkillAction>("Climb", SkillActions.Instances.Climb.ID)} a rope or an Acrobatics check to {ToMarkdownLink<Models.Entities.SkillAction>("Balance", SkillActions.Instances.Balance.ID)} on a rope, you get a critical success instead. You aren't flat-footed while {ToMarkdownLink<Models.Entities.SkillAction>("Climbing", SkillActions.Instances.Climb.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Balancing", SkillActions.Instances.Balance.ID)} on a rope." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

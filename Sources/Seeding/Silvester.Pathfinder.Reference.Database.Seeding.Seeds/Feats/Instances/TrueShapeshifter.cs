@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f13f6857-6c81-4b26-8553-5329be2cd833"), Type = TextBlockType.Text, Text = "You transcend the limitations of form. While under the effects of (Spell: wild shape), you can change into any other form on your (Spell: wild shape) list; if the durations of the forms would vary, use the shorter of the two durations." };
-            yield return new TextBlock { Id = Guid.Parse("eb981d7b-9aac-465d-a0a2-c1030d302deb"), Type = TextBlockType.Text, Text = "Once per day, you can transform into a kaiju, with the effects of (Spell: nature incarnate); if you have (Feat: Plant Shape), you can instead transform into a green man." };
+            yield return new TextBlock { Id = Guid.Parse("f13f6857-6c81-4b26-8553-5329be2cd833"), Type = TextBlockType.Text, Text = $"You transcend the limitations of form. While under the effects of {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)}, you can change into any other form on your {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)} list; if the durations of the forms would vary, use the shorter of the two durations." };
+            yield return new TextBlock { Id = Guid.Parse("eb981d7b-9aac-465d-a0a2-c1030d302deb"), Type = TextBlockType.Text, Text = $"Once per day, you can transform into a kaiju, with the effects of {ToMarkdownLink<Models.Entities.Spell>("nature incarnate", Spells.Instances.NatureIncarnate.ID)}; if you have {ToMarkdownLink<Models.Entities.Feat>("Plant Shape", Feats.Instances.PlantShape.ID)}, you can instead transform into a green man." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

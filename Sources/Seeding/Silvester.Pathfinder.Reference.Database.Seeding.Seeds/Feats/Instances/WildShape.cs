@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f9a8434a-eff7-4a38-bc23-2eb2b4f54427"), Type = TextBlockType.Text, Text = "You are one with the wild, always changing and adapting to meet any challenge. You gain the (Spell: wild shape) order spell, which lets you transform into a variety of forms that you can expand with druid feats." };
+            yield return new TextBlock { Id = Guid.Parse("f9a8434a-eff7-4a38-bc23-2eb2b4f54427"), Type = TextBlockType.Text, Text = $"You are one with the wild, always changing and adapting to meet any challenge. You gain the {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)} order spell, which lets you transform into a variety of forms that you can expand with druid feats." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

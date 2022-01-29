@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d491522-08e1-4f9e-a4e9-027220a27fb2"), Type = TextBlockType.Text, Text = "You call forth the blood of your foes to grant you vigor. Once per day, you can cast (spell: vampiric exsanguination) as a 7th-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("2d491522-08e1-4f9e-a4e9-027220a27fb2"), Type = TextBlockType.Text, Text = $"You call forth the blood of your foes to grant you vigor. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("vampiric exsanguination", Spells.Instances.VampiricExsanguination.ID)} as a 7th-level divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13fbb39b-77d5-41bd-bdba-9bbcd8dc4308"), Type = TextBlockType.Text, Text = "You attempt to get a creature to do as you wish by threatening them with your knowledge of their true name. You must know and speak the creature's true name and say what you want the creature to do. Attempt an Intimidation check against the target's Will DC." };
+            yield return new TextBlock { Id = Guid.Parse("13fbb39b-77d5-41bd-bdba-9bbcd8dc4308"), Type = TextBlockType.Text, Text = $"You attempt to get a creature to do as you wish by threatening them with your knowledge of their true name. You must know and speak the creature's true name and say what you want the creature to do. Attempt an Intimidation check against the target's Will DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

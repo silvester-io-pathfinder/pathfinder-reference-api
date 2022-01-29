@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db39548b-0004-4bcd-a389-b60e39a593aa"), Type = TextBlockType.Text, Text = "You have perfected the formulas for bombs that impede your enemies. When you use (feat: Debilitating Bomb), your target avoids the condition the bomb imposes only if it critically succeeds at its saving throw." };
+            yield return new TextBlock { Id = Guid.Parse("db39548b-0004-4bcd-a389-b60e39a593aa"), Type = TextBlockType.Text, Text = $"You have perfected the formulas for bombs that impede your enemies. When you use {ToMarkdownLink<Models.Entities.Feat>("Debilitating Bomb", Feats.Instances.DebilitatingBomb.ID)}, your target avoids the condition the bomb imposes only if it critically succeeds at its saving throw." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b9931e8-c60c-4e66-95c2-5b33bc732060"), Type = TextBlockType.Text, Text = "You can manifest the power of your spirit in combat to realize your motivations. You manifest an armor, shield, or weapon as a soulforged armament. Choose one essence power for the armament. It gains the power temporarily when you manifest its essence form. Each power has a corruption flaw that affects you if you have soulforged corruption. Essence powers that only apply to some types of armament indicate which. Changing an essence power requires 1 week of retraining, and you can't retrain it while you have soulforged corruption." };
-            yield return new TextBlock { Id = Guid.Parse("34eeaf47-5dd2-4304-a877-d3f175e0cc23"), Type = TextBlockType.Text, Text = "You can (feat: Manifest Soulforged Armament) to summon your armaments in combat." };
-            yield return new TextBlock { Id = Guid.Parse("e9fd3ec7-ac8a-476c-af5a-c7fd8979853e"), Type = TextBlockType.Text, Text = "__Add the chosen essence power to your soulforged armament manually.__" };
+            yield return new TextBlock { Id = Guid.Parse("0b9931e8-c60c-4e66-95c2-5b33bc732060"), Type = TextBlockType.Text, Text = $"You can manifest the power of your spirit in combat to realize your motivations. You manifest an armor, shield, or weapon as a soulforged armament. Choose one essence power for the armament. It gains the power temporarily when you manifest its essence form. Each power has a corruption flaw that affects you if you have soulforged corruption. Essence powers that only apply to some types of armament indicate which. Changing an essence power requires 1 week of retraining, and you can't retrain it while you have soulforged corruption." };
+            yield return new TextBlock { Id = Guid.Parse("34eeaf47-5dd2-4304-a877-d3f175e0cc23"), Type = TextBlockType.Text, Text = $"You can {ToMarkdownLink<Models.Entities.Feat>("Manifest Soulforged Armament", Feats.Instances.ManifestSoulforgedArmament.ID)} to summon your armaments in combat." };
+            yield return new TextBlock { Id = Guid.Parse("e9fd3ec7-ac8a-476c-af5a-c7fd8979853e"), Type = TextBlockType.Text, Text = $"__Add the chosen essence power to your soulforged armament manually.__" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

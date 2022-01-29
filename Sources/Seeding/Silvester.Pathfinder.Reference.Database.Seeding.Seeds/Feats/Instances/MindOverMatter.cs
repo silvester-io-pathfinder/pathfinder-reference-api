@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8b81b52-2798-498d-a6d4-3bd6d05579a2"), Type = TextBlockType.Text, Text = "Your mind's limits are only what you imagine them to be. You gain an additional 10th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("b8b81b52-2798-498d-a6d4-3bd6d05579a2"), Type = TextBlockType.Text, Text = $"Your mind's limits are only what you imagine them to be. You gain an additional 10th-level spell slot." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

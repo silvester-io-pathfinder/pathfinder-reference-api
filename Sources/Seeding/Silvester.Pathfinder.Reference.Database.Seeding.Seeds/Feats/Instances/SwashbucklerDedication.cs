@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("83dfb18f-af01-4e9d-8673-a6017bec21c7"), Type = TextBlockType.Text, Text = "Choose a swashbuckler style (APG pg. 84). You gain the panache class feature, and you can gain panache in all the ways a swashbuckler of your style can. You become trained in Acrobatics or the skill associated with your style. If you were already trained in both skills, you instead become trained in a skill of your choice. You also become trained in swashbuckler class DC. You don't gain any other effects of your chosen style." };
+            yield return new TextBlock { Id = Guid.Parse("83dfb18f-af01-4e9d-8673-a6017bec21c7"), Type = TextBlockType.Text, Text = $"Choose a swashbuckler style (APG pg. 84). You gain the panache class feature, and you can gain panache in all the ways a swashbuckler of your style can. You become trained in Acrobatics or the skill associated with your style. If you were already trained in both skills, you instead become trained in a skill of your choice. You also become trained in swashbuckler class DC. You don't gain any other effects of your chosen style." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

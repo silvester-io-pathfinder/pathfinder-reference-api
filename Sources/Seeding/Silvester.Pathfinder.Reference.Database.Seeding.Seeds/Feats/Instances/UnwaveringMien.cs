@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("da659ae0-6864-4d3a-a233-23cbb408b1ac"), Type = TextBlockType.Text, Text = "Your mystic control and meditations allow you to resist external influences upon your consciousness. Whenever you are affected by a mental effect that lasts at least 2 rounds, you can reduce the duration by 1 round." };
-            yield return new TextBlock { Id = Guid.Parse("fa0f9297-7d72-4b1f-ae16-3930256e5e38"), Type = TextBlockType.Text, Text = "You still require natural sleep, but you treat your saving throws against effects that would cause you to fall asleep as one degree of success better. This protects only against sleep effects, not against other forms of falling unconscious." };
+            yield return new TextBlock { Id = Guid.Parse("da659ae0-6864-4d3a-a233-23cbb408b1ac"), Type = TextBlockType.Text, Text = $"Your mystic control and meditations allow you to resist external influences upon your consciousness. Whenever you are affected by a mental effect that lasts at least 2 rounds, you can reduce the duration by 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("fa0f9297-7d72-4b1f-ae16-3930256e5e38"), Type = TextBlockType.Text, Text = $"You still require natural sleep, but you treat your saving throws against effects that would cause you to fall asleep as one degree of success better. This protects only against sleep effects, not against other forms of falling unconscious." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

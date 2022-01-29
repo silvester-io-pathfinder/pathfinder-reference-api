@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("414cc8fd-2e99-43a2-9172-3ba8c38541dd"), Type = TextBlockType.Text, Text = "Your spines grow back much faster than other shisks. You can use the (feat: Barbed Quills) reaction once every 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("414cc8fd-2e99-43a2-9172-3ba8c38541dd"), Type = TextBlockType.Text, Text = $"Your spines grow back much faster than other shisks. You can use the {ToMarkdownLink<Models.Entities.Feat>("Barbed Quills", Feats.Instances.BarbedQuills.ID)} reaction once every 10 minutes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

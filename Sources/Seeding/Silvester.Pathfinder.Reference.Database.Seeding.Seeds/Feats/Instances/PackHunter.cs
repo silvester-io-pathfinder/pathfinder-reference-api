@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aac8fc74-63ba-410b-8b2e-77bc120ada31"), Type = TextBlockType.Text, Text = "You were taught how to hunt as part of a pack. You gain a +2 circumstance bonus to checks to (action: Aid), and your allies gain a +2 circumstance bonus to checks to (action: Aid) you." };
+            yield return new TextBlock { Id = Guid.Parse("aac8fc74-63ba-410b-8b2e-77bc120ada31"), Type = TextBlockType.Text, Text = $"You were taught how to hunt as part of a pack. You gain a +2 circumstance bonus to checks to {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)}, and your allies gain a +2 circumstance bonus to checks to {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)} you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

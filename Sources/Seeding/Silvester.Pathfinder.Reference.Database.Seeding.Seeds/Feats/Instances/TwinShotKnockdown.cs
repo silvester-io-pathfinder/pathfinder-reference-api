@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("55c4415d-972b-47a0-835e-76529ddc373a"), Type = TextBlockType.Text, Text = "You fire at an enemy while targeting a part of its anatomy that will disrupt its balance. Make two (action: Strikes|Strike) against the same target, one with each of the required weapons. If both (action: Strikes|Strike) are successful, the target is also knocked prone." };
+            yield return new TextBlock { Id = Guid.Parse("55c4415d-972b-47a0-835e-76529ddc373a"), Type = TextBlockType.Text, Text = $"You fire at an enemy while targeting a part of its anatomy that will disrupt its balance. Make two {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} against the same target, one with each of the required weapons. If both {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} are successful, the target is also knocked prone." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

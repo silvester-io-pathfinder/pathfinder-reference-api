@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("141a141d-40a4-4fa5-bee7-e033e7729df0"), Type = TextBlockType.Text, Text = "You strategically craft your debilitations to lessen or negate an enemy's tactical advantages. Add the following debilitations to the list you can choose from when you use (feat: Debilitating Strike)." };
-            yield return new TextBlock { Id = Guid.Parse("bd837fa1-1d7a-4a37-b11b-8295a4982526"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target can't flank other creatures, and it can't provide flanking for its allies." };
-            yield return new TextBlock { Id = Guid.Parse("c9f003c4-6802-465e-9e2f-1da035a100a5"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target doesn't gain a circumstance bonus to AC from Raising a Shield, lesser cover, or standard cover; it gains only a +2 circumstance bonus to AC from greater cover or (action: Taking Cover | Take Cover)." };
+            yield return new TextBlock { Id = Guid.Parse("141a141d-40a4-4fa5-bee7-e033e7729df0"), Type = TextBlockType.Text, Text = $"You strategically craft your debilitations to lessen or negate an enemy's tactical advantages. Add the following debilitations to the list you can choose from when you use {ToMarkdownLink<Models.Entities.Feat>("Debilitating Strike", Feats.Instances.DebilitatingStrike.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("bd837fa1-1d7a-4a37-b11b-8295a4982526"), Type = TextBlockType.Enumeration, Text = $" Debilitation: The target can't flank other creatures, and it can't provide flanking for its allies." };
+            yield return new TextBlock { Id = Guid.Parse("c9f003c4-6802-465e-9e2f-1da035a100a5"), Type = TextBlockType.Enumeration, Text = $" Debilitation: The target doesn't gain a circumstance bonus to AC from Raising a Shield, lesser cover, or standard cover; it gains only a +2 circumstance bonus to AC from greater cover or {ToMarkdownLink<Models.Entities.Action>("Taking Cover", Actions.Instances.TakeCover.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

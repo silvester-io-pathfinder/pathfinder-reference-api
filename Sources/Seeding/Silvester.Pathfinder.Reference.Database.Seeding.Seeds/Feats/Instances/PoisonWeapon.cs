@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("44703bd6-7d0d-4943-b63e-3ff6ca709944"), Type = TextBlockType.Text, Text = "You apply a poison to the required weapon; if you have a free hand, you can (action: Interact) to draw a poison as part of this action. If your next attack with that weapon before the end of your next turn hits and deals damage, it applies the effects of the poison, provided that poison can be delivered by (trait: contact) or (trait: injury). If you critically fail the attack roll, the poison is wasted as normal." };
+            yield return new TextBlock { Id = Guid.Parse("44703bd6-7d0d-4943-b63e-3ff6ca709944"), Type = TextBlockType.Text, Text = $"You apply a poison to the required weapon; if you have a free hand, you can {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw a poison as part of this action. If your next attack with that weapon before the end of your next turn hits and deals damage, it applies the effects of the poison, provided that poison can be delivered by {ToMarkdownLink<Models.Entities.Trait>("contact", Traits.Instances.Contact.ID)} or {ToMarkdownLink<Models.Entities.Trait>("injury", Traits.Instances.Injury.ID)}. If you critically fail the attack roll, the poison is wasted as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

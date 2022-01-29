@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e327619-fe04-451c-8315-7b2ea36bfc5e"), Type = TextBlockType.Text, Text = "You transmogrify your eidolon each day. During your daily preparations, you can swap out any number of your (trait: evolution) feats, each for a different (trait: evolution) feat of an appropriate level for which you meet the prerequisites. These swaps last until your next daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("3e327619-fe04-451c-8315-7b2ea36bfc5e"), Type = TextBlockType.Text, Text = $"You transmogrify your eidolon each day. During your daily preparations, you can swap out any number of your {ToMarkdownLink<Models.Entities.Trait>("evolution", Traits.Instances.Evolution.ID)} feats, each for a different {ToMarkdownLink<Models.Entities.Trait>("evolution", Traits.Instances.Evolution.ID)} feat of an appropriate level for which you meet the prerequisites. These swaps last until your next daily preparations." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

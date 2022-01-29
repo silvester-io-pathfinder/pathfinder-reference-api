@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b3a6eb30-7cbe-4d3a-a332-298a0b0aeabe"), Type = TextBlockType.Text, Text = "Your skin develops a malleable, rubbery quality. You gain resistance to bludgeoning damage equal to 2 + your number of class feats from the oozemorph archetype. You also gain resistance equal to twice that amount to extra damage from critical hits; if the resistance is greater than the extra damage, it reduces the extra damage to 0 but doesn't reduce the attack's normal damage." };
+            yield return new TextBlock { Id = Guid.Parse("b3a6eb30-7cbe-4d3a-a332-298a0b0aeabe"), Type = TextBlockType.Text, Text = $"Your skin develops a malleable, rubbery quality. You gain resistance to bludgeoning damage equal to 2 + your number of class feats from the oozemorph archetype. You also gain resistance equal to twice that amount to extra damage from critical hits; if the resistance is greater than the extra damage, it reduces the extra damage to 0 but doesn't reduce the attack's normal damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

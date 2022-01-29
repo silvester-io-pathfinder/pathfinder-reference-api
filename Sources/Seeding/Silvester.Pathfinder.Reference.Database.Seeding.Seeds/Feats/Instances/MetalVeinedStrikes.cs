@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("95a94877-33f6-40c8-bced-381cb8b6622f"), Type = TextBlockType.Text, Text = "Metallic veins grow throughout your body, giving your unarmed attacks a metallic sheen. Choose either cold iron or silver. Your unarmed attacks are treated as the chosen type of metal." };
+            yield return new TextBlock { Id = Guid.Parse("95a94877-33f6-40c8-bced-381cb8b6622f"), Type = TextBlockType.Text, Text = $"Metallic veins grow throughout your body, giving your unarmed attacks a metallic sheen. Choose either cold iron or silver. Your unarmed attacks are treated as the chosen type of metal." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

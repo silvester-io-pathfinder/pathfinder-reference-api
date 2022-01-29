@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("065f36e0-e418-4876-91c4-61f11be133a0"), Type = TextBlockType.Text, Text = "You are fastidious about keeping yourself clean, whether licking your fur or carefully using traditional catfolk hygiene products, to salubrious effect. You gain a +1 circumstance bonus to saving throws against diseases. If you roll a success on a saving throw against a disease, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("065f36e0-e418-4876-91c4-61f11be133a0"), Type = TextBlockType.Text, Text = $"You are fastidious about keeping yourself clean, whether licking your fur or carefully using traditional catfolk hygiene products, to salubrious effect. You gain a +1 circumstance bonus to saving throws against diseases. If you roll a success on a saving throw against a disease, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

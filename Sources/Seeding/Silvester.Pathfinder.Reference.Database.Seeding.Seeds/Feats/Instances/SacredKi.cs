@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ff9c755-bad9-4698-b356-19cd85aa94fc"), Type = TextBlockType.Text, Text = "The power of your faith suffuses your ki. When you select this feat, choose chaos, evil, good, or law. Your choice must match one of your deity's alignment components." };
-            yield return new TextBlock { Id = Guid.Parse("f4def405-c473-4295-9e27-74ea308791b8"), Type = TextBlockType.Text, Text = "When you cast the (spell: ki strike) focus spell and damage a creature whose alignment is opposite your chosen alignment, you can choose for the (spell: ki strike) damage to be of the chosen type. Additionally, you can substitute the damage from (spell: ki blast) (or other ki spells that deal force damage, at the GM's discretion) with damage of your chosen alignment." };
+            yield return new TextBlock { Id = Guid.Parse("8ff9c755-bad9-4698-b356-19cd85aa94fc"), Type = TextBlockType.Text, Text = $"The power of your faith suffuses your ki. When you select this feat, choose chaos, evil, good, or law. Your choice must match one of your deity's alignment components." };
+            yield return new TextBlock { Id = Guid.Parse("f4def405-c473-4295-9e27-74ea308791b8"), Type = TextBlockType.Text, Text = $"When you cast the {ToMarkdownLink<Models.Entities.Spell>("ki strike", Spells.Instances.KiStrike.ID)} focus spell and damage a creature whose alignment is opposite your chosen alignment, you can choose for the {ToMarkdownLink<Models.Entities.Spell>("ki strike", Spells.Instances.KiStrike.ID)} damage to be of the chosen type. Additionally, you can substitute the damage from {ToMarkdownLink<Models.Entities.Spell>("ki blast", Spells.Instances.KiBlast.ID)} (or other ki spells that deal force damage, at the GM's discretion) with damage of your chosen alignment." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

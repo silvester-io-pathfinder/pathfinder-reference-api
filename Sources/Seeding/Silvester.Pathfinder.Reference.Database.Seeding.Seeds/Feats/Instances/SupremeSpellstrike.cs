@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("67a06e67-aad4-4be9-ac60-6a3a882f8404"), Type = TextBlockType.Text, Text = "You've made it almost effortless to combine spells and attacks. You're permanently quickened. You can use your extra action only to (action: Strike) or to recharge (feat: Spellstrike)." };
+            yield return new TextBlock { Id = Guid.Parse("67a06e67-aad4-4be9-ac60-6a3a882f8404"), Type = TextBlockType.Text, Text = $"You've made it almost effortless to combine spells and attacks. You're permanently quickened. You can use your extra action only to {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} or to recharge {ToMarkdownLink<Models.Entities.Feat>("Spellstrike", Feats.Instances.Spellstrike.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

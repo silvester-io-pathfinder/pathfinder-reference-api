@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2f67b2d2-2dcb-40d8-bde5-b729878ef234"), Type = TextBlockType.Text, Text = "You make a point of always having a few toxins near at hand – you never know when some arsenic or the like might prove useful. You gain the alchemist's infused reagents class feature, gaining a number of reagents each day equal to your level. Your advanced alchemy level for creating these is 1 and doesn't increase on its own. You also gain the (feat: Alchemical Crafting) feat. You may only create and choose formulas for alchemical poisons." };
+            yield return new TextBlock { Id = Guid.Parse("2f67b2d2-2dcb-40d8-bde5-b729878ef234"), Type = TextBlockType.Text, Text = $"You make a point of always having a few toxins near at hand – you never know when some arsenic or the like might prove useful. You gain the alchemist's infused reagents class feature, gaining a number of reagents each day equal to your level. Your advanced alchemy level for creating these is 1 and doesn't increase on its own. You also gain the {ToMarkdownLink<Models.Entities.Feat>("Alchemical Crafting", Feats.Instances.AlchemicalCrafting.ID)} feat. You may only create and choose formulas for alchemical poisons." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

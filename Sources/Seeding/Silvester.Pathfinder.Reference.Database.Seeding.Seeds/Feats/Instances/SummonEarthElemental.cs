@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bc65ca4b-52f0-4c5a-91e5-f7d128768376"), Type = TextBlockType.Text, Text = "You have a connection to the Inner Sphere, allowing you to summon an elemental ally. Once per day, you can cast (spell: summon elemental) as a 5th-level primal innate spell, but the elemental summoned must be an (trait: earth) elemental." };
+            yield return new TextBlock { Id = Guid.Parse("bc65ca4b-52f0-4c5a-91e5-f7d128768376"), Type = TextBlockType.Text, Text = $"You have a connection to the Inner Sphere, allowing you to summon an elemental ally. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("summon elemental", Spells.Instances.SummonElemental.ID)} as a 5th-level primal innate spell, but the elemental summoned must be an {ToMarkdownLink<Models.Entities.Trait>("earth", Traits.Instances.Earth.ID)} elemental." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

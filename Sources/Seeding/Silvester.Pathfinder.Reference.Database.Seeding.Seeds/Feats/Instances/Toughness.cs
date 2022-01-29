@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c6ad7f01-54e5-4d4c-9c58-8a67620fcbe7"), Type = TextBlockType.Text, Text = "You can withstand more punishment than most before succumbing. Increase your maximum Hit Points by your level. The DC of recovery checks is equal to 9 + your dying condition value." };
+            yield return new TextBlock { Id = Guid.Parse("c6ad7f01-54e5-4d4c-9c58-8a67620fcbe7"), Type = TextBlockType.Text, Text = $"You can withstand more punishment than most before succumbing. Increase your maximum Hit Points by your level. The DC of recovery checks is equal to 9 + your dying condition value." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

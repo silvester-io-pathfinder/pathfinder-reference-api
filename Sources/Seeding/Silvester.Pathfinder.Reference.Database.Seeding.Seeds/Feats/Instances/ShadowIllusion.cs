@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d5c3bee-e196-405e-8666-81d8ed4555be"), Type = TextBlockType.Text, Text = "With an artful eye, you shape shadows into illusory forms. You gain the (spell: shadow illusion) focus spell. Increase the number of Focus Points in your pool by 1. You become an expert in occult spell attack rolls and DCs." };
+            yield return new TextBlock { Id = Guid.Parse("1d5c3bee-e196-405e-8666-81d8ed4555be"), Type = TextBlockType.Text, Text = $"With an artful eye, you shape shadows into illusory forms. You gain the {ToMarkdownLink<Models.Entities.Spell>("shadow illusion", Spells.Instances.ShadowIllusion.ID)} focus spell. Increase the number of Focus Points in your pool by 1. You become an expert in occult spell attack rolls and DCs." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

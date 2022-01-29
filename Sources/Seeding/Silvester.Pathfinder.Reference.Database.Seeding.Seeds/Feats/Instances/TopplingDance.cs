@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("787f4a7c-6197-4cc3-bfeb-82b8f8b517e3"), Type = TextBlockType.Text, Text = "While sharing a creature's space using (feat: Dance Underfoot), your weapons and unarmed attacks gain the (trait: trip) trait, but only against the creature whose space you share. You can be in the same space as a Large or larger prone creature, even if it's not your ally." };
+            yield return new TextBlock { Id = Guid.Parse("787f4a7c-6197-4cc3-bfeb-82b8f8b517e3"), Type = TextBlockType.Text, Text = $"While sharing a creature's space using {ToMarkdownLink<Models.Entities.Feat>("Dance Underfoot", Feats.Instances.DanceUnderfoot.ID)}, your weapons and unarmed attacks gain the {ToMarkdownLink<Models.Entities.Trait>("trip", Traits.Instances.Trip.ID)} trait, but only against the creature whose space you share. You can be in the same space as a Large or larger prone creature, even if it's not your ally." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

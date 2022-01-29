@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("73c35e74-e4cd-48e4-9e0e-9ae0025e3ddc"), Type = TextBlockType.Text, Text = "Your Speed bonus from (feat: Bellflower Tiller Dedication) increases to +10 feet. Members of your crop receive a +5-foot circumstance bonus to Speed." };
+            yield return new TextBlock { Id = Guid.Parse("73c35e74-e4cd-48e4-9e0e-9ae0025e3ddc"), Type = TextBlockType.Text, Text = $"Your Speed bonus from {ToMarkdownLink<Models.Entities.Feat>("Bellflower Tiller Dedication", Feats.Instances.BellflowerTillerDedication.ID)} increases to +10 feet. Members of your crop receive a +5-foot circumstance bonus to Speed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("59fdb262-68ff-4854-9a67-f3b7c9a45ea6"), Type = TextBlockType.Text, Text = "Your instincts kick in and you take on an aggressive stance. You use (feat: Change Shape | Change Shape - Beastkin) to enter your hybrid form or a new form granted by a beastkin feat." };
+            yield return new TextBlock { Id = Guid.Parse("59fdb262-68ff-4854-9a67-f3b7c9a45ea6"), Type = TextBlockType.Text, Text = $"Your instincts kick in and you take on an aggressive stance. You use {ToMarkdownLink<Models.Entities.Feat>("Change Shape", Feats.Instances.ChangeShapeBeastkin.ID)} to enter your hybrid form or a new form granted by a beastkin feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

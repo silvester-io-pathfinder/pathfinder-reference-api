@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("02635054-e19c-4bc9-b3d0-808785d24cd7"), Type = TextBlockType.Text, Text = "You take advantage of an opening from your enemy's fumbled attack. You either make a melee (action: Strike) against the triggering foe or attempt to (action: Disarm) it of the weapon it used for the (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("02635054-e19c-4bc9-b3d0-808785d24cd7"), Type = TextBlockType.Text, Text = $"You take advantage of an opening from your enemy's fumbled attack. You either make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against the triggering foe or attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Disarm", SkillActions.Instances.Disarm.ID)} it of the weapon it used for the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

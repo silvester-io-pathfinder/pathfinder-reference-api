@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81f938de-a640-43b1-b9cc-215e11735e28"), Type = TextBlockType.Text, Text = "Your mask protects you further from divination. Once per day, you can cast (spell: nondetection) on yourself, heightened to the highest level of spell you can cast; the spell ends immediately if your mask is removed for even a moment." };
+            yield return new TextBlock { Id = Guid.Parse("81f938de-a640-43b1-b9cc-215e11735e28"), Type = TextBlockType.Text, Text = $"Your mask protects you further from divination. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("nondetection", Spells.Instances.Nondetection.ID)} on yourself, heightened to the highest level of spell you can cast; the spell ends immediately if your mask is removed for even a moment." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

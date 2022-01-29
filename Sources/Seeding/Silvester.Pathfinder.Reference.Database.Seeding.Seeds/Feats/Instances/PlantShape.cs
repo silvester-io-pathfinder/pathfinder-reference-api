@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d0da633c-124d-4393-9b33-8da3ad0ba122"), Type = TextBlockType.Text, Text = "You can take the form of a plant creature. Add the forms listed in (Spell: plant form) to your (Spell: wild shape) list; if you don't have (Spell: wild shape), you can instead cast (Spell: plant form) once per day, heightened to the same level as your highest druid spell slot. Whenever you're polymorphed into another form using (Spell: wild shape), you gain resistance 5 to poison." };
+            yield return new TextBlock { Id = Guid.Parse("d0da633c-124d-4393-9b33-8da3ad0ba122"), Type = TextBlockType.Text, Text = $"You can take the form of a plant creature. Add the forms listed in {ToMarkdownLink<Models.Entities.Spell>("plant form", Spells.Instances.PlantForm.ID)} to your {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)} list; if you don't have {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)}, you can instead cast {ToMarkdownLink<Models.Entities.Spell>("plant form", Spells.Instances.PlantForm.ID)} once per day, heightened to the same level as your highest druid spell slot. Whenever you're polymorphed into another form using {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)}, you gain resistance 5 to poison." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

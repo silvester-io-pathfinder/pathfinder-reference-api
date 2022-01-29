@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0fa7f8e9-a46f-461e-8a3b-48f69d75dff8"), Type = TextBlockType.Text, Text = "Your eidolon gains tremorsense as an imprecise sense with a range of 30 feet. If aquatic, it gains wavesense as an imprecise sense with a range of 30 feet instead. If amphibious, it gains both." };
+            yield return new TextBlock { Id = Guid.Parse("0fa7f8e9-a46f-461e-8a3b-48f69d75dff8"), Type = TextBlockType.Text, Text = $"Your eidolon gains tremorsense as an imprecise sense with a range of 30 feet. If aquatic, it gains wavesense as an imprecise sense with a range of 30 feet instead. If amphibious, it gains both." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

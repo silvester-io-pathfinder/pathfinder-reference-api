@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79a698ba-7c70-407c-ab24-1658541e7f3f"), Type = TextBlockType.Text, Text = "You have transcended the barriers between words and meaning. You can speak and understand all spoken languages." };
+            yield return new TextBlock { Id = Guid.Parse("79a698ba-7c70-407c-ab24-1658541e7f3f"), Type = TextBlockType.Text, Text = $"You have transcended the barriers between words and meaning. You can speak and understand all spoken languages." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

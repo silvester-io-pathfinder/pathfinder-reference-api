@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db6124cc-a969-4de0-b348-d43b8215b270"), Type = TextBlockType.Text, Text = "By birth or through training, your tail is strong enough to make for a powerful melee weapon. You gain a tail unarmed attack that deals 1d6 bludgeoning damage and has the sweep trait." };
+            yield return new TextBlock { Id = Guid.Parse("db6124cc-a969-4de0-b348-d43b8215b270"), Type = TextBlockType.Text, Text = $"By birth or through training, your tail is strong enough to make for a powerful melee weapon. You gain a tail unarmed attack that deals 1d6 bludgeoning damage and has the sweep trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

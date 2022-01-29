@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("20fff126-e44f-460f-914a-738eb6a534d2"), Type = TextBlockType.Text, Text = "You're used to dealing with dangerous situations and sinister creatures. You become trained in Deception (or another skill of your choice, if you're already trained in Deception), and you gain the (feat: Lengthy Diversion) skill feat as a bonus feat." };
+            yield return new TextBlock { Id = Guid.Parse("20fff126-e44f-460f-914a-738eb6a534d2"), Type = TextBlockType.Text, Text = $"You're used to dealing with dangerous situations and sinister creatures. You become trained in Deception (or another skill of your choice, if you're already trained in Deception), and you gain the {ToMarkdownLink<Models.Entities.Feat>("Lengthy Diversion", Feats.Instances.LengthyDiversion.ID)} skill feat as a bonus feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

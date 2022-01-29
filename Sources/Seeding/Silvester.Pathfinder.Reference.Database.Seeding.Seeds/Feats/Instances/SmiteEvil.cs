@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("85f09d59-62c8-48d4-b59c-cc560bb61d5f"), Type = TextBlockType.Text, Text = "Your blade ally becomes an even more powerful tool against evildoers. Select one foe you can see. Until the start of your next turn, your (action: Strikes | Strike) with the weapon your blade ally inhabits against that foe deal an extra 4 good damage, increasing to 6 if you have master proficiency with this weapon." };
-            yield return new TextBlock { Id = Guid.Parse("e2b0c65d-0585-447b-aca1-d7235ed40771"), Type = TextBlockType.Text, Text = "If the foe attacks one of your allies, the duration extends to the end of that foe's next turn. If the foe continues to attack your allies each turn, the duration continues to extend." };
+            yield return new TextBlock { Id = Guid.Parse("85f09d59-62c8-48d4-b59c-cc560bb61d5f"), Type = TextBlockType.Text, Text = $"Your blade ally becomes an even more powerful tool against evildoers. Select one foe you can see. Until the start of your next turn, your {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} with the weapon your blade ally inhabits against that foe deal an extra 4 good damage, increasing to 6 if you have master proficiency with this weapon." };
+            yield return new TextBlock { Id = Guid.Parse("e2b0c65d-0585-447b-aca1-d7235ed40771"), Type = TextBlockType.Text, Text = $"If the foe attacks one of your allies, the duration extends to the end of that foe's next turn. If the foe continues to attack your allies each turn, the duration continues to extend." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

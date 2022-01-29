@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("77c55905-a6cf-40fe-8034-11660516fd69"), Type = TextBlockType.Text, Text = "You gain the (spell: transcribe moment) focus spell. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by spending 10 minutes to study a text or record notes on your recent experiences." };
+            yield return new TextBlock { Id = Guid.Parse("77c55905-a6cf-40fe-8034-11660516fd69"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Feat>("transcribe moment", Feats.Instances.TranscribeMoment.ID)} focus spell. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can {ToMarkdownLink<Models.Entities.Activity>("Refocus", Activities.Instances.Refocus.ID)} by spending 10 minutes to study a text or record notes on your recent experiences." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cf2ae57c-daa0-4908-ba0c-9c93c725af74"), Type = TextBlockType.Text, Text = "Your mother was a moon hag, a handmaiden of Groetus, and you have a single scarlet eye and a sliver of her supernal foresight. You can cast (spell: guidance) as an occult innate cantrip. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("cf2ae57c-daa0-4908-ba0c-9c93c725af74"), Type = TextBlockType.Text, Text = $"Your mother was a moon hag, a handmaiden of Groetus, and you have a single scarlet eye and a sliver of her supernal foresight. You can cast {ToMarkdownLink<Models.Entities.Spell>("guidance", Spells.Instances.Guidance.ID)} as an occult innate cantrip. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

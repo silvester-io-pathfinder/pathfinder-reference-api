@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("90c02413-4a56-4b1c-89d2-c9453393d7e2"), Type = TextBlockType.Text, Text = "Your command over your vital essence allows you or an ally to recover from grievous wounds. You can cast (spell: regenerate) as a 7th-level primal innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("90c02413-4a56-4b1c-89d2-c9453393d7e2"), Type = TextBlockType.Text, Text = $"Your command over your vital essence allows you or an ally to recover from grievous wounds. You can cast {ToMarkdownLink<Models.Entities.Spell>("regenerate", Spells.Instances.Regenerate.ID)} as a 7th-level primal innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

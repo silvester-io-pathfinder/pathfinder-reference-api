@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c52c8d54-3b54-4cb2-afde-72d0bf63cb89"), Type = TextBlockType.Text, Text = "Stealth is an important tool in your arsenal. You can move 5 feet farther when you take the (action: Sneak) action, up to your Speed." };
-            yield return new TextBlock { Id = Guid.Parse("878e1de3-7a96-4577-8de9-8a51e905f167"), Type = TextBlockType.Text, Text = "In addition, as long as you continue to use Sneak actions and succeed at your Stealth check, you don't become observed if you don't have cover or greater cover and aren't concealed at the end of the (action: Sneak) action, as long as you have cover or greater cover or are concealed at the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("c52c8d54-3b54-4cb2-afde-72d0bf63cb89"), Type = TextBlockType.Text, Text = $"Stealth is an important tool in your arsenal. You can move 5 feet farther when you take the {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} action, up to your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("878e1de3-7a96-4577-8de9-8a51e905f167"), Type = TextBlockType.Text, Text = $"In addition, as long as you continue to use Sneak actions and succeed at your Stealth check, you don't become observed if you don't have cover or greater cover and aren't concealed at the end of the {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} action, as long as you have cover or greater cover or are concealed at the end of your turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("568d06f1-2208-413b-bddd-73537397cc3b"), Type = TextBlockType.Text, Text = "You bid the winds to lift and carry you through the air. You gain the (Spell: stormwind flight) order spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("568d06f1-2208-413b-bddd-73537397cc3b"), Type = TextBlockType.Text, Text = $"You bid the winds to lift and carry you through the air. You gain the {ToMarkdownLink<Models.Entities.Spell>("stormwind flight", Spells.Instances.StormwindFlight.ID)} order spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

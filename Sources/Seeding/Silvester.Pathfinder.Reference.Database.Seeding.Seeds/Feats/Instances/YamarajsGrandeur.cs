@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("25fd2fda-8dae-4d83-bb2b-1f8600b22809"), Type = TextBlockType.Text, Text = "You have been granted a sliver of the power of the yamaraj, the magistrates of the dead who agreed to allow duskwalkers to exist at all. You exhale a blast of icy wind and ravenous insects. This is a 30-foot cone that deals 14d6 slashing damage and 4d6 persistent slashing damage (basic Reflex save using your class DC or spell DC, whichever is higher). On a critical failure, targets also become sickened 2." };
+            yield return new TextBlock { Id = Guid.Parse("25fd2fda-8dae-4d83-bb2b-1f8600b22809"), Type = TextBlockType.Text, Text = $"You have been granted a sliver of the power of the yamaraj, the magistrates of the dead who agreed to allow duskwalkers to exist at all. You exhale a blast of icy wind and ravenous insects. This is a 30-foot cone that deals 14d6 slashing damage and 4d6 persistent slashing damage (basic Reflex save using your class DC or spell DC, whichever is higher). On a critical failure, targets also become sickened 2." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

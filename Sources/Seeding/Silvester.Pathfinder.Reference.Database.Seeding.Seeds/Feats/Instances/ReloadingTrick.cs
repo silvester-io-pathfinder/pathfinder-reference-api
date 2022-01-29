@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8287692a-1f12-4584-9d7f-cbd924dd8762"), Type = TextBlockType.Text, Text = "You can fire off a single shot even when unprepared. You (action: Interact) to reload your (item: hand crossbow) and (action: Strike) with it." };
+            yield return new TextBlock { Id = Guid.Parse("8287692a-1f12-4584-9d7f-cbd924dd8762"), Type = TextBlockType.Text, Text = $"You can fire off a single shot even when unprepared. You {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to reload your {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("hand crossbow", Items.RangedWeapons.Instances.HandCrossbow.ID)} and {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with it." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

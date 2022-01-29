@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5c8427f2-0a01-4ce8-b8fc-95a93a908cb6"), Type = TextBlockType.Text, Text = "You are so used to wielding a shield that you can do so even while using the hand that's holding it for other purposes. The hand you use to wield a shield counts as a free hand for the purposes of the (action: Interact) action. You can also hold another object in this hand (but you still can't use it to wield a weapon). This benefit doesn't apply to (item: tower shields | Tower Shield), which are still too cumbersome." };
+            yield return new TextBlock { Id = Guid.Parse("5c8427f2-0a01-4ce8-b8fc-95a93a908cb6"), Type = TextBlockType.Text, Text = $"You are so used to wielding a shield that you can do so even while using the hand that's holding it for other purposes. The hand you use to wield a shield counts as a free hand for the purposes of the {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} action. You can also hold another object in this hand (but you still can't use it to wield a weapon). This benefit doesn't apply to {ToMarkdownLink<Models.Items.Instances.Shield>("tower shields", Items.Shields.Instances.TowerShield.ID)}, which are still too cumbersome." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

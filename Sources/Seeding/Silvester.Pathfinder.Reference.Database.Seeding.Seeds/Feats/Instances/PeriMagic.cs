@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ee43511f-69a6-4805-8e43-55d91e38ac6f"), Type = TextBlockType.Text, Text = "The shimmering embers of the righteous peris crackle at your fingertips. You can cast (spell: glitterdust) and (spell: status) each once per day as 2nd-level divine innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("ee43511f-69a6-4805-8e43-55d91e38ac6f"), Type = TextBlockType.Text, Text = $"The shimmering embers of the righteous peris crackle at your fingertips. You can cast {ToMarkdownLink<Models.Entities.Spell>("glitterdust", Spells.Instances.Glitterdust.ID)} and {ToMarkdownLink<Models.Entities.Spell>("status", Spells.Instances.Status.ID)} each once per day as 2nd-level divine innate spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

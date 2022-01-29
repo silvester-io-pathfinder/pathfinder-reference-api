@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("68ec9568-ab4c-44eb-b6bf-ee7d57ae3e89"), Type = TextBlockType.Text, Text = "If you are trained in the appropriate skill for the spell's tradition and it's a common spell of 2nd level or lower, you automatically identify it (you still roll to attempt to get a critical success, but can't get a worse result than success). The highest level of spell you automatically identify increases to 4 if you're an expert, 6 if you're a master, and 10 if you're legendary. The GM rolls a secret Arcana, Nature, Occultism, or Religion check, whichever corresponds to the tradition of the spell being cast. If you're not trained in the skill, you can't get a result better than failure." };
+            yield return new TextBlock { Id = Guid.Parse("68ec9568-ab4c-44eb-b6bf-ee7d57ae3e89"), Type = TextBlockType.Text, Text = $"If you are trained in the appropriate skill for the spell's tradition and it's a common spell of 2nd level or lower, you automatically identify it (you still roll to attempt to get a critical success, but can't get a worse result than success). The highest level of spell you automatically identify increases to 4 if you're an expert, 6 if you're a master, and 10 if you're legendary. The GM rolls a secret Arcana, Nature, Occultism, or Religion check, whichever corresponds to the tradition of the spell being cast. If you're not trained in the skill, you can't get a result better than failure." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

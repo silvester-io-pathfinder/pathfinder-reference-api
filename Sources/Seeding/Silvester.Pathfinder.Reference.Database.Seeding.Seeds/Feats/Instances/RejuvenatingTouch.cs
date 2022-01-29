@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6ed5acb0-061f-4719-bc79-62263549ea3f"), Type = TextBlockType.Text, Text = "Your healing energies linger after you cast, providing continual benefits. An ally that recovers Hit Points from your lay on hands gains 10 temporary Hit Points at the start of their turn during each of the next 10 rounds. This effect ends if the ally is knocked unconscious." };
+            yield return new TextBlock { Id = Guid.Parse("6ed5acb0-061f-4719-bc79-62263549ea3f"), Type = TextBlockType.Text, Text = $"Your healing energies linger after you cast, providing continual benefits. An ally that recovers Hit Points from your lay on hands gains 10 temporary Hit Points at the start of their turn during each of the next 10 rounds. This effect ends if the ally is knocked unconscious." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

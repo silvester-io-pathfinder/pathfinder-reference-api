@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c90090b-5289-49da-893b-4488accee028"), Type = TextBlockType.Text, Text = "Your victories in battle fill you with pride and imbue you with the energy to fight a bit longer despite your wounds. You gain temporary Hit Points equal to your Constitution modifier until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("9c90090b-5289-49da-893b-4488accee028"), Type = TextBlockType.Text, Text = $"Your victories in battle fill you with pride and imbue you with the energy to fight a bit longer despite your wounds. You gain temporary Hit Points equal to your Constitution modifier until the end of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

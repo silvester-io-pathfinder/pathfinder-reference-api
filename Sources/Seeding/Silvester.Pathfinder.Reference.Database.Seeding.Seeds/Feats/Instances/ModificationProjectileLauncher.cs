@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2a245bbe-5e8f-4df0-9450-ced1df94df81"), Type = TextBlockType.Text, Text = "Your construct has a mounted dart launcher, embedded cannon, or similar armament. Your innovation gains a ranged unarmed attack that deals 1d4 bludgeoning or piercing damage (you choose when you pick this modification). The attack has the (trait: propulsive) trait and a range increment of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("2a245bbe-5e8f-4df0-9450-ced1df94df81"), Type = TextBlockType.Text, Text = $"Your construct has a mounted dart launcher, embedded cannon, or similar armament. Your innovation gains a ranged unarmed attack that deals 1d4 bludgeoning or piercing damage (you choose when you pick this modification). The attack has the {ToMarkdownLink<Models.Entities.Trait>("propulsive", Traits.Instances.Propulsive.ID)} trait and a range increment of 30 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

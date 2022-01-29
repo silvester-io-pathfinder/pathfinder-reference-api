@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("edfd143d-8b6d-4ca8-aeb2-d21a0c3e6cc6"), Type = TextBlockType.Text, Text = "You strike out when your foe tries to flee. Make a melee (action: Strike) against the triggering creature. If the attack is a critical hit and the trigger was a (trait: move) action, you disrupt that action." };
+            yield return new TextBlock { Id = Guid.Parse("edfd143d-8b6d-4ca8-aeb2-d21a0c3e6cc6"), Type = TextBlockType.Text, Text = $"You strike out when your foe tries to flee. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against the triggering creature. If the attack is a critical hit and the trigger was a {ToMarkdownLink<Models.Entities.Trait>("move", Traits.Instances.Move.ID)} action, you disrupt that action." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

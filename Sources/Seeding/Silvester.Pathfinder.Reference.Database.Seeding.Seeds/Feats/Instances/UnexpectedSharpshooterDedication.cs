@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("14f7f20e-c207-4e98-860c-f1c0d2e92d6c"), Type = TextBlockType.Text, Text = "Who needs skill when you've got dumb luck? Sometimes your shots hit miraculously, regardless of the fact that you seemed to slip when you pulled the trigger or that you weren't aiming at your foe when you fired. You gain the (feat: Accidental Shot) activity." };
+            yield return new TextBlock { Id = Guid.Parse("14f7f20e-c207-4e98-860c-f1c0d2e92d6c"), Type = TextBlockType.Text, Text = $"Who needs skill when you've got dumb luck? Sometimes your shots hit miraculously, regardless of the fact that you seemed to slip when you pulled the trigger or that you weren't aiming at your foe when you fired. You gain the {ToMarkdownLink<Models.Entities.Feat>("Accidental Shot", Feats.Instances.AccidentalShot.ID)} activity." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

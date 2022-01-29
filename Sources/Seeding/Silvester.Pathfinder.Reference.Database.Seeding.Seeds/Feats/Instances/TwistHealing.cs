@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d1b5478b-07dd-4da3-b5d6-bef6d71cb410"), Type = TextBlockType.Text, Text = "Your connection to both life and undeath lets you twist the healing power of magic items to suit your own needs and aims. Whenever you (action: Activate an Item) to cast a (spell: heal) spell, you can invert its energy to produce the effects of an equivalent (spell: harm) spell instead." };
+            yield return new TextBlock { Id = Guid.Parse("d1b5478b-07dd-4da3-b5d6-bef6d71cb410"), Type = TextBlockType.Text, Text = $"Your connection to both life and undeath lets you twist the healing power of magic items to suit your own needs and aims. Whenever you activate an item to cast a {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} spell, you can invert its energy to produce the effects of an equivalent {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} spell instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

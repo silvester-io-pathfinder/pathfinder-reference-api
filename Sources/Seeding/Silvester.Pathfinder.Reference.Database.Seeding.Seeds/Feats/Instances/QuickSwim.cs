@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f32c3f2e-dc8c-4cf4-821c-62f0ca5f6f2b"), Type = TextBlockType.Text, Text = "You (action: Swim) 5 feet farther on a success and 10 feet farther on a critical success, to a maximum of your Speed. If you're legendary in Athletics, you gain a swim Speed equal to your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("f32c3f2e-dc8c-4cf4-821c-62f0ca5f6f2b"), Type = TextBlockType.Text, Text = $"You {ToMarkdownLink<Models.Entities.SkillAction>("Swim", SkillActions.Instances.Swim.ID)} 5 feet farther on a success and 10 feet farther on a critical success, to a maximum of your Speed. If you're legendary in Athletics, you gain a swim Speed equal to your Speed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

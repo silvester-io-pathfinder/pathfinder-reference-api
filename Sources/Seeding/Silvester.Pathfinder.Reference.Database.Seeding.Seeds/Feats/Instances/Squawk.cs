@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb07f972-7836-455f-9b07-4b8192474bd1"), Type = TextBlockType.Text, Text = "You let out an awkward squawk, ruffle your feathers, or fake some other birdlike tic to cover up a social misstep or faux pas. You get a failure on the triggering check, rather than a critical failure. All creatures that witnessed you Squawk are temporarily immune for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("fb07f972-7836-455f-9b07-4b8192474bd1"), Type = TextBlockType.Text, Text = $"You let out an awkward squawk, ruffle your feathers, or fake some other birdlike tic to cover up a social misstep or faux pas. You get a failure on the triggering check, rather than a critical failure. All creatures that witnessed you Squawk are temporarily immune for 24 hours." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

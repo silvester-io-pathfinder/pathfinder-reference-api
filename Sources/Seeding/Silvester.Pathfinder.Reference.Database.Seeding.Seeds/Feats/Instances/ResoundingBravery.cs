@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8f82bc94-898e-413f-a8e8-77bfb85d7a85"), Type = TextBlockType.Text, Text = "Even your fears serve as fuel for your fighting spirit. When you critically succeed at a Will save against a foe's ability, you gain a +1 status bonus to saves and a number of temporary Hit Points equal to half your level for 1 minute. These benefits are doubled if you critically succeed against a (trait: fear) effect." };
+            yield return new TextBlock { Id = Guid.Parse("8f82bc94-898e-413f-a8e8-77bfb85d7a85"), Type = TextBlockType.Text, Text = $"Even your fears serve as fuel for your fighting spirit. When you critically succeed at a Will save against a foe's ability, you gain a +1 status bonus to saves and a number of temporary Hit Points equal to half your level for 1 minute. These benefits are doubled if you critically succeed against a {ToMarkdownLink<Models.Entities.Trait>("fear", Traits.Instances.Fear.ID)} effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

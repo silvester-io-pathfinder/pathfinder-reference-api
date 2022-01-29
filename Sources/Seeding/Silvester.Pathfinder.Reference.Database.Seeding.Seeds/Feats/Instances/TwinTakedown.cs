@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a61070eb-e129-4d86-9c09-782ec9b69500"), Type = TextBlockType.Text, Text = "You swiftly attack your hunted prey with both weapons. Make two (action: Strikes | Strike) against your hunted prey, one with each of the required weapons. If both hit the same hunted prey, combine their damage for the purpose of its resistances and weaknesses. Apply your multiple attack penalty to each (action: Strike) normally." };
+            yield return new TextBlock { Id = Guid.Parse("a61070eb-e129-4d86-9c09-782ec9b69500"), Type = TextBlockType.Text, Text = $"You swiftly attack your hunted prey with both weapons. Make two {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} against your hunted prey, one with each of the required weapons. If both hit the same hunted prey, combine their damage for the purpose of its resistances and weaknesses. Apply your multiple attack penalty to each {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} normally." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

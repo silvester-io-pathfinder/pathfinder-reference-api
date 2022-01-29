@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("31be449e-6c4f-4c46-8cb6-1b28d3bf181c"), Type = TextBlockType.Text, Text = "You learn the sign languages associated with the languages you know, allowing you to sign and understand signs. Sign languages typically require both hands to convey more complex concepts, and they are visual rather than auditory." };
-            yield return new TextBlock { Id = Guid.Parse("f052d973-61f6-46a6-b099-c54a9ae7f7c5"), Type = TextBlockType.Text, Text = "Sign language is difficult to understand during combat due to the level of attention needed, unlike basic gestures like pointing at a foe to suggest a target. Sign language is hard to use in areas of low visibility, just like speech is difficult in a noisy environment." };
+            yield return new TextBlock { Id = Guid.Parse("31be449e-6c4f-4c46-8cb6-1b28d3bf181c"), Type = TextBlockType.Text, Text = $"You learn the sign languages associated with the languages you know, allowing you to sign and understand signs. Sign languages typically require both hands to convey more complex concepts, and they are visual rather than auditory." };
+            yield return new TextBlock { Id = Guid.Parse("f052d973-61f6-46a6-b099-c54a9ae7f7c5"), Type = TextBlockType.Text, Text = $"Sign language is difficult to understand during combat due to the level of attention needed, unlike basic gestures like pointing at a foe to suggest a target. Sign language is hard to use in areas of low visibility, just like speech is difficult in a noisy environment." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

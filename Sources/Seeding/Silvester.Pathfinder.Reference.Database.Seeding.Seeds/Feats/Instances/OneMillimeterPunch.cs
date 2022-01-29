@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7bf64de2-ea39-4610-b4f2-961052c69d73"), Type = TextBlockType.Text, Text = "Your punches have incredible force and control. When you damage a target using (feat: One-Inch Punch), you can focus your ki to send the foe flying. If you do, the target must attempt a Fortitude save against your class DC." };
+            yield return new TextBlock { Id = Guid.Parse("7bf64de2-ea39-4610-b4f2-961052c69d73"), Type = TextBlockType.Text, Text = $"Your punches have incredible force and control. When you damage a target using {ToMarkdownLink<Models.Entities.Feat>("One-Inch Punch", Feats.Instances.OneInchPunch.ID)}, you can focus your ki to send the foe flying. If you do, the target must attempt a Fortitude save against your class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

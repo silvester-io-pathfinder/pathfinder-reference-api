@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6f1b1d3d-4fb9-4cf3-b4e1-a6448656fcc8"), Type = TextBlockType.Text, Text = "You have mastered how to hunt with your pack. If an enemy is within reach of you and at least two of your allies, that enemy is flat-footed against you." };
+            yield return new TextBlock { Id = Guid.Parse("6f1b1d3d-4fb9-4cf3-b4e1-a6448656fcc8"), Type = TextBlockType.Text, Text = $"You have mastered how to hunt with your pack. If an enemy is within reach of you and at least two of your allies, that enemy is flat-footed against you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

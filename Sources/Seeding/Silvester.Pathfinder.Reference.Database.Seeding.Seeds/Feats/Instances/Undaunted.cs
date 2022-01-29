@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("70aabe00-3e67-4488-b725-bc9942b61b66"), Type = TextBlockType.Text, Text = "Your spirit has endured many challenges over its long existence, and you are certain you can overcome whatever hardships life throws your way. You gain a +1 circumstance bonus to saves against emotion effects. If you roll a success on a saving throw against an emotion effect, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("70aabe00-3e67-4488-b725-bc9942b61b66"), Type = TextBlockType.Text, Text = $"Your spirit has endured many challenges over its long existence, and you are certain you can overcome whatever hardships life throws your way. You gain a +1 circumstance bonus to saves against emotion effects. If you roll a success on a saving throw against an emotion effect, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

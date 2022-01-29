@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("51c0e21a-709a-49ba-ac07-103497d0603a"), Type = TextBlockType.Text, Text = "Your stratagems benefit from your precise knowledge of anatomy. When you critically hit with an attack on which you substituted your attack roll due to (action: Devising a Stratagem | Devise a Stratagem), if your attack dealt piercing or slashing damage, you also deal 1d6 persistent bleed damage to your target." };
+            yield return new TextBlock { Id = Guid.Parse("51c0e21a-709a-49ba-ac07-103497d0603a"), Type = TextBlockType.Text, Text = $"Your stratagems benefit from your precise knowledge of anatomy. When you critically hit with an attack on which you substituted your attack roll due to {ToMarkdownLink<Models.Entities.Feat>("Devising a Stratagem", Feats.Instances.DeviseAStratagem.ID)}, if your attack dealt piercing or slashing damage, you also deal 1d6 persistent bleed damage to your target." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

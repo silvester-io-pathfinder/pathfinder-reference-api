@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1076d6b7-fca8-4c3c-b871-92f761166b87"), Type = TextBlockType.Text, Text = "You (action: Strike) a target within reach. If you hit and deal damage, the target is also restrained as if you had critically succeeded at an Athletics check to (action: Grapple)." };
+            yield return new TextBlock { Id = Guid.Parse("1076d6b7-fca8-4c3c-b871-92f761166b87"), Type = TextBlockType.Text, Text = $"You {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} a target within reach. If you hit and deal damage, the target is also restrained as if you had critically succeeded at an Athletics check to {ToMarkdownLink<Models.Entities.SkillAction>("Grapple", SkillActions.Instances.Grapple.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

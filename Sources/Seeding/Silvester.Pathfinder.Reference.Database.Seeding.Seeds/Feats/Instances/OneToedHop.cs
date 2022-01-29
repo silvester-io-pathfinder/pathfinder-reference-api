@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("87c0f5b1-b580-4bf2-808e-95b978c2eef5"), Type = TextBlockType.Text, Text = "Assuming a peculiar stance, you make a short hop on each toe. You make a vertical (action: Leap) without triggering reactions that can be triggered by (trait: move) actions or upon leaving or entering a square." };
+            yield return new TextBlock { Id = Guid.Parse("87c0f5b1-b580-4bf2-808e-95b978c2eef5"), Type = TextBlockType.Text, Text = $"Assuming a peculiar stance, you make a short hop on each toe. You make a vertical {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)} without triggering reactions that can be triggered by {ToMarkdownLink<Models.Entities.Trait>("move", Traits.Instances.Move.ID)} actions or upon leaving or entering a square." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

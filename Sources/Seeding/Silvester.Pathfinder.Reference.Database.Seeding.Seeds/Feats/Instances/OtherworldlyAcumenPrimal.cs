@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7472c70f-8d26-4b59-9380-dafd2b5cc811"), Type = TextBlockType.Text, Text = "Choose one common 2nd-level spell from the primal tradition." };
-            yield return new TextBlock { Id = Guid.Parse("d24f1114-8af6-4a97-8164-38ae8359fc8f"), Type = TextBlockType.Text, Text = "You can cast that spell as an innate spell once per day. Your magic is adaptable. By spending 1 day of downtime, you can change the spell you chose to a different common 2nd-level spell from the same tradition." };
+            yield return new TextBlock { Id = Guid.Parse("7472c70f-8d26-4b59-9380-dafd2b5cc811"), Type = TextBlockType.Text, Text = $"Choose one common 2nd-level spell from the primal tradition." };
+            yield return new TextBlock { Id = Guid.Parse("d24f1114-8af6-4a97-8164-38ae8359fc8f"), Type = TextBlockType.Text, Text = $"You can cast that spell as an innate spell once per day. Your magic is adaptable. By spending 1 day of downtime, you can change the spell you chose to a different common 2nd-level spell from the same tradition." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

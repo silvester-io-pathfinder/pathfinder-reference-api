@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c67d36cb-1035-411f-871d-947bf073b50e"), Type = TextBlockType.Text, Text = "You rip your enemy off their feet. Make a wolf jaw (action: Strike). Your wolf jaw gains the (trait: fatal) d12 trait for this (action: Strike), and if the attack succeeds, you knock the target prone." };
+            yield return new TextBlock { Id = Guid.Parse("c67d36cb-1035-411f-871d-947bf073b50e"), Type = TextBlockType.Text, Text = $"You rip your enemy off their feet. Make a wolf jaw {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. Your wolf jaw gains the {ToMarkdownLink<Models.Entities.Trait>("fatal", Traits.Instances.Fatal.ID)} d12 trait for this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, and if the attack succeeds, you knock the target prone." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

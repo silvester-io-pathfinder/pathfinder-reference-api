@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c7382b2c-9235-4e96-bc47-c146a344553a"), Type = TextBlockType.Text, Text = "You hear the sounds of reptiles as language. You can ask questions of, receive answers from, and use the Diplomacy skill with animals that are reptiles (the GM determines which animals count as reptiles)." };
+            yield return new TextBlock { Id = Guid.Parse("c7382b2c-9235-4e96-bc47-c146a344553a"), Type = TextBlockType.Text, Text = $"You hear the sounds of reptiles as language. You can ask questions of, receive answers from, and use the Diplomacy skill with animals that are reptiles (the GM determines which animals count as reptiles)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ab6bfb38-72cb-4776-a726-655f35e5467c"), Type = TextBlockType.Text, Text = "You have studied a great many combat techniques, which you can review each day. During your daily preparations, you can swap out any number of your duelist archetype feats for other duelist archetype feats of the appropriate level for which you are qualified. You can't swap out (feat: Duelist Dedication) or Student of the Dueling Arts in this way." };
-            yield return new TextBlock { Id = Guid.Parse("3b909dcc-e0fb-4fd0-abd4-3bab98d45b32"), Type = TextBlockType.Text, Text = "In addition, you can enter a stance from a duelist archetype feat you don't have by increasing the number of actions it takes to enter the stance by 1 (typically to 2 actions). You must still meet the feat's prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("ab6bfb38-72cb-4776-a726-655f35e5467c"), Type = TextBlockType.Text, Text = $"You have studied a great many combat techniques, which you can review each day. During your daily preparations, you can swap out any number of your duelist archetype feats for other duelist archetype feats of the appropriate level for which you are qualified. You can't swap out {ToMarkdownLink<Models.Entities.Feat>("Duelist Dedication", Feats.Instances.DuelistDedication.ID)} or Student of the Dueling Arts in this way." };
+            yield return new TextBlock { Id = Guid.Parse("3b909dcc-e0fb-4fd0-abd4-3bab98d45b32"), Type = TextBlockType.Text, Text = $"In addition, you can enter a stance from a duelist archetype feat you don't have by increasing the number of actions it takes to enter the stance by 1 (typically to 2 actions). You must still meet the feat's prerequisites." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

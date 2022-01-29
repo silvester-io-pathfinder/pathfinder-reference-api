@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d596b428-e3c1-4d1c-9cee-a95b3d1ce6e3"), Type = TextBlockType.Text, Text = "You gain one cantrip from the divine spell list. You can cast this spell as an innate spell at will." };
+            yield return new TextBlock { Id = Guid.Parse("d596b428-e3c1-4d1c-9cee-a95b3d1ce6e3"), Type = TextBlockType.Text, Text = $"You gain one cantrip from the divine spell list. You can cast this spell as an innate spell at will." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

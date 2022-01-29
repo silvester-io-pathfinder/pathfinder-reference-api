@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("85b29960-47fd-42fe-8a15-8f96f50a9de7"), Type = TextBlockType.Text, Text = "The source of your (item: warmask | warmask the land)'s power is from the land. You become trained in Nature and your mask's magical tradition is (trait: primal)." };
+            yield return new TextBlock { Id = Guid.Parse("85b29960-47fd-42fe-8a15-8f96f50a9de7"), Type = TextBlockType.Text, Text = $"The source of your warmask's power is from the land. You become trained in Nature and your mask's magical tradition is {ToMarkdownLink<Models.Entities.Trait>("primal", Traits.Instances.Primal.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

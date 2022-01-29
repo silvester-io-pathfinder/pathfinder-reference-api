@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04e276c0-9a04-436e-b10d-a0e38cb49a4e"), Type = TextBlockType.Text, Text = "You're resilient to performative influences that aren't your own. You gain a +1 circumstance bonus to saving throws against effects with the (trait: auditory), (trait: illusion), (trait: linguistic), (trait: sonic), or (trait: visual) traits." };
+            yield return new TextBlock { Id = Guid.Parse("04e276c0-9a04-436e-b10d-a0e38cb49a4e"), Type = TextBlockType.Text, Text = $"You're resilient to performative influences that aren't your own. You gain a +1 circumstance bonus to saving throws against effects with the {ToMarkdownLink<Models.Entities.Trait>("auditory", Traits.Instances.Auditory.ID)}, {ToMarkdownLink<Models.Entities.Trait>("illusion", Traits.Instances.Illusion.ID)}, {ToMarkdownLink<Models.Entities.Trait>("linguistic", Traits.Instances.Linguistic.ID)}, {ToMarkdownLink<Models.Entities.Trait>("sonic", Traits.Instances.Sonic.ID)}, or {ToMarkdownLink<Models.Entities.Trait>("visual", Traits.Instances.Visual.ID)} traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

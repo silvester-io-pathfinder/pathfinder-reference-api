@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("95d30eae-fd00-43ff-b323-e74b1ccfa15f"), Type = TextBlockType.Text, Text = "You can riposte almost without a thought. At the start of each of your turns when you regain your actions, you gain an additional reaction that can be used only to perform an (feat: Opportune Riposte)." };
+            yield return new TextBlock { Id = Guid.Parse("95d30eae-fd00-43ff-b323-e74b1ccfa15f"), Type = TextBlockType.Text, Text = $"You can riposte almost without a thought. At the start of each of your turns when you regain your actions, you gain an additional reaction that can be used only to perform an {ToMarkdownLink<Models.Entities.Feat>("Opportune Riposte", Feats.Instances.OpportuneRiposte.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ea2d53f-a948-453e-9697-77f464b3ffb1"), Type = TextBlockType.Text, Text = "Though no one sees them and only you can hear them, the spirits around you constantly chatter, save when you are raging. Sometimes they're even helpful. You can heed the spirits' guidance to reroll the triggering check, using the second result even if it's worse." };
+            yield return new TextBlock { Id = Guid.Parse("0ea2d53f-a948-453e-9697-77f464b3ffb1"), Type = TextBlockType.Text, Text = $"Though no one sees them and only you can hear them, the spirits around you constantly chatter, save when you are raging. Sometimes they're even helpful. You can heed the spirits' guidance to reroll the triggering check, using the second result even if it's worse." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

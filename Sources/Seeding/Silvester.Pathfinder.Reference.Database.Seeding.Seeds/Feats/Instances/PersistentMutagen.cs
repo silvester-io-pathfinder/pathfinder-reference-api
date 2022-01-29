@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("26262d63-5f10-4e7f-9740-33a2f3a974f1"), Type = TextBlockType.Text, Text = "You've trained your physical form to remain stable within the a given altered state. Once per day, when you consume an alchemical item with the (trait: infused) and (trait: mutagen) traits, you can retain its effects until the next time you make your daily preparations instead of its normal duration." };
+            yield return new TextBlock { Id = Guid.Parse("26262d63-5f10-4e7f-9740-33a2f3a974f1"), Type = TextBlockType.Text, Text = $"You've trained your physical form to remain stable within the a given altered state. Once per day, when you consume an alchemical item with the {ToMarkdownLink<Models.Entities.Trait>("infused", Traits.Instances.Infused.ID)} and {ToMarkdownLink<Models.Entities.Trait>("mutagen", Traits.Instances.Mutagen.ID)} traits, you can retain its effects until the next time you make your daily preparations instead of its normal duration." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

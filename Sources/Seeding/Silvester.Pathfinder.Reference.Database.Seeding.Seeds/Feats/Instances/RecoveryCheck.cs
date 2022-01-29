@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("49147a0e-f554-4524-a3c3-e351f9e8ca40"), Type = TextBlockType.Text, Text = "When you're dying, at the start of each of your turns, you must attempt a flat check with a DC equal to 10 + your current dying value to see if you get better or worse. The effects of this check are as follows." };
+            yield return new TextBlock { Id = Guid.Parse("49147a0e-f554-4524-a3c3-e351f9e8ca40"), Type = TextBlockType.Text, Text = $"When you're dying, at the start of each of your turns, you must attempt a flat check with a DC equal to 10 + your current dying value to see if you get better or worse. The effects of this check are as follows." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

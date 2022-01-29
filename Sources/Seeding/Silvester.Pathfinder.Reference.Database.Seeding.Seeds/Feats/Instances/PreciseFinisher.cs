@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c7376b35-c07c-46ce-b18c-843cc21323aa"), Type = TextBlockType.Text, Text = "Even when your foe avoids your (feat: Confident Finisher), you can still hit a vital spot. On a failure with (feat: Confident Finisher), you apply your full precise strike damage instead of half." };
+            yield return new TextBlock { Id = Guid.Parse("c7376b35-c07c-46ce-b18c-843cc21323aa"), Type = TextBlockType.Text, Text = $"Even when your foe avoids your {ToMarkdownLink<Models.Entities.Feat>("Confident Finisher", Feats.Instances.ConfidentFinisher.ID)}, you can still hit a vital spot. On a failure with {ToMarkdownLink<Models.Entities.Feat>("Confident Finisher", Feats.Instances.ConfidentFinisher.ID)}, you apply your full precise strike damage instead of half." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

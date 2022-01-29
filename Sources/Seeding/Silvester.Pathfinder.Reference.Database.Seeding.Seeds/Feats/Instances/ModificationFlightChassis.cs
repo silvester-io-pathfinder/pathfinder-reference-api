@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6cf5490c-0eac-4e06-a3a9-416c681a8541"), Type = TextBlockType.Text, Text = "You fit your construct with a means of flight, such as adding rotors or rebuilding it with wings and a lightweight construction. Your innovation gains a fly Speed of 25 feet." };
+            yield return new TextBlock { Id = Guid.Parse("6cf5490c-0eac-4e06-a3a9-416c681a8541"), Type = TextBlockType.Text, Text = $"You fit your construct with a means of flight, such as adding rotors or rebuilding it with wings and a lightweight construction. Your innovation gains a fly Speed of 25 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

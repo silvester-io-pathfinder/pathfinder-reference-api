@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cdf9fb75-21f4-425f-a6fd-502303992daf"), Type = TextBlockType.Text, Text = "Your physiology is slight, and you can pack into small spaces with others of similar stature. As long as you are Small, you can end your movement in the same square as a Small ally. Only two creatures total can share the same space when using this ability or a similar one." };
+            yield return new TextBlock { Id = Guid.Parse("cdf9fb75-21f4-425f-a6fd-502303992daf"), Type = TextBlockType.Text, Text = $"Your physiology is slight, and you can pack into small spaces with others of similar stature. As long as you are Small, you can end your movement in the same square as a Small ally. Only two creatures total can share the same space when using this ability or a similar one." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

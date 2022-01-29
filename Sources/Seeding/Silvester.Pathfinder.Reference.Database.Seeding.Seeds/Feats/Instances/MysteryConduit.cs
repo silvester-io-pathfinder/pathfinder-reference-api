@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("811a58c7-6ba3-493d-9e1f-ed90ad014ba7"), Type = TextBlockType.Text, Text = "The power of your mystery enables you to cast more than just revelation spells. When you cast a spell of 5th level or lower that has no duration, instead of spending a spell slot, you can advance the effects of your oracular curse in the same manner as when you cast a revelation spell. A spell cast in this way gains the (trait: cursebound) trait." };
+            yield return new TextBlock { Id = Guid.Parse("811a58c7-6ba3-493d-9e1f-ed90ad014ba7"), Type = TextBlockType.Text, Text = $"The power of your mystery enables you to cast more than just revelation spells. When you cast a spell of 5th level or lower that has no duration, instead of spending a spell slot, you can advance the effects of your oracular curse in the same manner as when you cast a revelation spell. A spell cast in this way gains the {ToMarkdownLink<Models.Entities.Trait>("cursebound", Traits.Instances.Cursebound.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

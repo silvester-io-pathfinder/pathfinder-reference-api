@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0c6967cb-4c56-431a-9b68-a2af416b7b56"), Type = TextBlockType.Text, Text = "You (action: Stride) to be adjacent to a foe and (action: Demoralize) that foe. If you succeed, the foe is frightened 2 instead of frightened 1." };
+            yield return new TextBlock { Id = Guid.Parse("0c6967cb-4c56-431a-9b68-a2af416b7b56"), Type = TextBlockType.Text, Text = $"You {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} to be adjacent to a foe and {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)} that foe. If you succeed, the foe is frightened 2 instead of frightened 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

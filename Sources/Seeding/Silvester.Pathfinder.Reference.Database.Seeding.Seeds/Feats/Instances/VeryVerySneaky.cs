@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e6bff81e-4976-4d35-9e74-498992e80a7d"), Type = TextBlockType.Text, Text = "You can move up to your Speed when you use the (action: Sneak) action, and you no longer need to have cover or greater cover or be concealed to (action: Hide) or (action: Sneak)." };
+            yield return new TextBlock { Id = Guid.Parse("e6bff81e-4976-4d35-9e74-498992e80a7d"), Type = TextBlockType.Text, Text = $"You can move up to your Speed when you use the {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} action, and you no longer need to have cover or greater cover or be concealed to {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

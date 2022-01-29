@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec9f52b0-c025-404d-8e00-f7acabf3d030"), Type = TextBlockType.Text, Text = "You can attempt to (action: Disarm), (action: Grapple), (action: Shove), or (action: Trip) creatures up to two sizes larger than you, or up to three sizes larger than you if you're legendary in Athletics." };
+            yield return new TextBlock { Id = Guid.Parse("ec9f52b0-c025-404d-8e00-f7acabf3d030"), Type = TextBlockType.Text, Text = $"You can attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Disarm", SkillActions.Instances.Disarm.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Grapple", SkillActions.Instances.Grapple.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} creatures up to two sizes larger than you, or up to three sizes larger than you if you're legendary in Athletics." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

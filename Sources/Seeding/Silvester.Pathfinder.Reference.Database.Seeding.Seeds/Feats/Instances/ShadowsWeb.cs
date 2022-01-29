@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("51bef21f-8100-4466-87ae-ab72689ee99d"), Type = TextBlockType.Text, Text = "You launch a wave of shadowy ki outward from your body, damaging your opponents and potentially binding them in place. You gain the (spell: Shadow's Web) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("51bef21f-8100-4466-87ae-ab72689ee99d"), Type = TextBlockType.Text, Text = $"You launch a wave of shadowy ki outward from your body, damaging your opponents and potentially binding them in place. You gain the {ToMarkdownLink<Models.Entities.Spell>("Shadow's Web", Spells.Instances.ShadowsWeb.ID)} ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

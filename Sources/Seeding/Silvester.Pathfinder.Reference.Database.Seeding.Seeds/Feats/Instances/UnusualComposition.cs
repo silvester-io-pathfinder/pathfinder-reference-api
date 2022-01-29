@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d9502e28-a013-4250-822b-59a87726424e"), Type = TextBlockType.Text, Text = "You can translate the emotion and power of a composition to other mediums. If your next action is to cast a (trait: composition) spell, you can use a different kind of performance than usual for the composition to change any of its somatic components to verbal components or vice versa. As usual for (trait: composition) spells, this changes whether the composition is (trait: auditory) or (trait: visual)." };
+            yield return new TextBlock { Id = Guid.Parse("d9502e28-a013-4250-822b-59a87726424e"), Type = TextBlockType.Text, Text = $"You can translate the emotion and power of a composition to other mediums. If your next action is to cast a {ToMarkdownLink<Models.Entities.Trait>("composition", Traits.Instances.Composition.ID)} spell, you can use a different kind of performance than usual for the composition to change any of its somatic components to verbal components or vice versa. As usual for {ToMarkdownLink<Models.Entities.Trait>("composition", Traits.Instances.Composition.ID)} spells, this changes whether the composition is {ToMarkdownLink<Models.Entities.Trait>("auditory", Traits.Instances.Auditory.ID)} or {ToMarkdownLink<Models.Entities.Trait>("visual", Traits.Instances.Visual.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3bbbe32b-073b-4141-be8b-03a24f0349e5"), Type = TextBlockType.Text, Text = "You achieve a breakthrough in your exploration of magic. You gain (spell: humanoid form) and (spell: mirror image) as 2nd-level arcane innate spells. You can cast each of these arcane innate spells once per day." };
+            yield return new TextBlock { Id = Guid.Parse("3bbbe32b-073b-4141-be8b-03a24f0349e5"), Type = TextBlockType.Text, Text = $"You achieve a breakthrough in your exploration of magic. You gain {ToMarkdownLink<Models.Entities.Spell>("humanoid form", Spells.Instances.HumanoidForm.ID)} and {ToMarkdownLink<Models.Entities.Spell>("mirror image", Spells.Instances.MirrorImage.ID)} as 2nd-level arcane innate spells. You can cast each of these arcane innate spells once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

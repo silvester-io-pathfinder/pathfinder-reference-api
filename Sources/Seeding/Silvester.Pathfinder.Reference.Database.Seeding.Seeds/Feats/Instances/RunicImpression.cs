@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c77e566e-9776-462e-955d-d6e6b80dddc9"), Type = TextBlockType.Text, Text = "You can temporarily replicate the effects of a property rune for your weapon or unarmed attacks. You learn the (spell: runic impression) conflux spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("c77e566e-9776-462e-955d-d6e6b80dddc9"), Type = TextBlockType.Text, Text = $"You can temporarily replicate the effects of a property rune for your weapon or unarmed attacks. You learn the {ToMarkdownLink<Models.Entities.Spell>("runic impression", Spells.Instances.RunicImpression.ID)} conflux spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

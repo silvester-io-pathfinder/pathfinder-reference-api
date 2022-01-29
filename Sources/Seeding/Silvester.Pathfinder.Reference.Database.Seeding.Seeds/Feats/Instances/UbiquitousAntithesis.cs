@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ab710374-f130-47b6-b73a-e3ee733b58d0"), Type = TextBlockType.Text, Text = "You've channeled your power into the connections you've formed with your comrades, allowing you to share the benefits of your esoterica with all of them. Whenever you use (feat: Esoteric Antithesis), all your allies within 30 feet gain the benefits as well. Since this effect depends on magically strengthening your connection to your allies, only allies with whom you've developed a connection over the course of one or more days gain the benefit, rather than new allies you just met." };
+            yield return new TextBlock { Id = Guid.Parse("ab710374-f130-47b6-b73a-e3ee733b58d0"), Type = TextBlockType.Text, Text = $"You've channeled your power into the connections you've formed with your comrades, allowing you to share the benefits of your esoterica with all of them. Whenever you use {ToMarkdownLink<Models.Entities.Feat>("Esoteric Antithesis", Feats.Instances.EsotericAntithesis.ID)}, all your allies within 30 feet gain the benefits as well. Since this effect depends on magically strengthening your connection to your allies, only allies with whom you've developed a connection over the course of one or more days gain the benefit, rather than new allies you just met." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

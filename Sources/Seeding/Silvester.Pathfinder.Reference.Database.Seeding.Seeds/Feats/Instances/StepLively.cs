@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("34e2283e-7fc1-4e63-a9b6-6358c2de793f"), Type = TextBlockType.Text, Text = "You are an expert at avoiding the lumbering footsteps of larger creatures. You (action: Step) to another space adjacent to the enemy." };
+            yield return new TextBlock { Id = Guid.Parse("34e2283e-7fc1-4e63-a9b6-6358c2de793f"), Type = TextBlockType.Text, Text = $"You are an expert at avoiding the lumbering footsteps of larger creatures. You {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} to another space adjacent to the enemy." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

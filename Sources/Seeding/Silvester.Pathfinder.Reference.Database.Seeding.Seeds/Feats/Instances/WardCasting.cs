@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ece5b7b4-197f-42b9-8de1-9ae47d37233a"), Type = TextBlockType.Text, Text = "You carefully ward your spell by drawing from a mantle of magical energy you prepared to protect your casting, increasing your chance of retaining the spell. You reduce the DC of the flat check for (feat: Steady Spellcasting) from 15 to 10." };
+            yield return new TextBlock { Id = Guid.Parse("ece5b7b4-197f-42b9-8de1-9ae47d37233a"), Type = TextBlockType.Text, Text = $"You carefully ward your spell by drawing from a mantle of magical energy you prepared to protect your casting, increasing your chance of retaining the spell. You reduce the DC of the flat check for {ToMarkdownLink<Models.Entities.Feat>("Steady Spellcasting", Feats.Instances.SteadySpellcasting.ID)} from 15 to 10." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

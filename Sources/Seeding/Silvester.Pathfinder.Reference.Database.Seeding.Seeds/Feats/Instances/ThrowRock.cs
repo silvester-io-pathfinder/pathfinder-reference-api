@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d45dd75c-b93e-4589-aa9b-4114bf9deb7c"), Type = TextBlockType.Text, Text = "The arboreal sapling (action: Interacts | Interact) to pick up a rock within reach or retrieve a stowed rock, then throws it with a ranged rock (action: Strike) that deals a base of 1d6 bludgeoning damage with a range increment of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("d45dd75c-b93e-4589-aa9b-4114bf9deb7c"), Type = TextBlockType.Text, Text = $"The arboreal sapling {ToMarkdownLink<Models.Entities.Action>("Interacts", Actions.Instances.Interact.ID)} to pick up a rock within reach or retrieve a stowed rock, then throws it with a ranged rock {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} that deals a base of 1d6 bludgeoning damage with a range increment of 30 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

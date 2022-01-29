@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1c5c1a29-9874-44d1-901e-be2fb50fe1a5"), Type = TextBlockType.Text, Text = "Whether you used some clever adaptation of the magic-negating skymetal known as noqual or created magical protections entirely of your own devising, you've made your innovation highly resilient to spells. Your construct innovation gains a +2 circumstance bonus to all saving throws and AC against spells." };
+            yield return new TextBlock { Id = Guid.Parse("1c5c1a29-9874-44d1-901e-be2fb50fe1a5"), Type = TextBlockType.Text, Text = $"Whether you used some clever adaptation of the magic-negating skymetal known as noqual or created magical protections entirely of your own devising, you've made your innovation highly resilient to spells. Your construct innovation gains a +2 circumstance bonus to all saving throws and AC against spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8b6d8148-ea30-4605-9e0d-8bd1960a6213"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
-            yield return new TextBlock { Id = Guid.Parse("6977979b-3251-4529-9ff1-9c674368727b"), Type = TextBlockType.Text, Text = "You can knock down and slash your foes with sharp, curved blades added to your weapon. Your innovation gains the (trait: trip) and (trait: versatile S) traits." };
+            yield return new TextBlock { Id = Guid.Parse("8b6d8148-ea30-4605-9e0d-8bd1960a6213"), Type = TextBlockType.Enumeration, Text = $"*Melee Only**" };
+            yield return new TextBlock { Id = Guid.Parse("6977979b-3251-4529-9ff1-9c674368727b"), Type = TextBlockType.Text, Text = $"You can knock down and slash your foes with sharp, curved blades added to your weapon. Your innovation gains the {ToMarkdownLink<Models.Entities.Trait>("trip", Traits.Instances.Trip.ID)} and {ToMarkdownLink<Models.Entities.Trait>("versatile S", Traits.Instances.Versatile.ID)} traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

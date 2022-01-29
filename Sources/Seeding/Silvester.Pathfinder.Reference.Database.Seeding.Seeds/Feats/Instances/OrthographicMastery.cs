@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84e1e479-3766-43c1-9403-9c32cf8f5f01"), Type = TextBlockType.Text, Text = "You understand the principles that underlie all written words, allowing you to read nearly any text. You can attempt to (action: Decipher Writing) using Loremaster Lore in place of the required skill." };
+            yield return new TextBlock { Id = Guid.Parse("84e1e479-3766-43c1-9403-9c32cf8f5f01"), Type = TextBlockType.Text, Text = $"You understand the principles that underlie all written words, allowing you to read nearly any text. You can attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Decipher Writing", SkillActions.Instances.DecipherWriting.ID)} using Loremaster Lore in place of the required skill." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

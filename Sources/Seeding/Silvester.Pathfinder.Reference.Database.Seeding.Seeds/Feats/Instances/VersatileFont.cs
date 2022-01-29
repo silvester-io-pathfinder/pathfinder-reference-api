@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6b2574ed-9189-488c-8ac4-65804fe455b8"), Type = TextBlockType.Text, Text = "As you explore your deity's aspects, you move beyond restrictions on healing or harming. You can prepare either (spell: harm) or (spell: heal) in the spell slots gained from the harmful font or healing font." };
+            yield return new TextBlock { Id = Guid.Parse("6b2574ed-9189-488c-8ac4-65804fe455b8"), Type = TextBlockType.Text, Text = $"As you explore your deity's aspects, you move beyond restrictions on healing or harming. You can prepare either {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} or {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} in the spell slots gained from the harmful font or healing font." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

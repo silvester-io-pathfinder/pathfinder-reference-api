@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4724ad5d-d922-424e-843d-7df0a024b320"), Type = TextBlockType.Text, Text = "You feel a connection to shokis, the rambling collectors of wayward souls, and might have found old texts written by one. You are trained in Diplomacy. If you were already trained in Diplomacy (from your background or class, for example), you instead become trained in a skill of your choice. You can also cast (spell: disrupt undead) as a divine innate cantrip at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("4724ad5d-d922-424e-843d-7df0a024b320"), Type = TextBlockType.Text, Text = $"You feel a connection to shokis, the rambling collectors of wayward souls, and might have found old texts written by one. You are trained in Diplomacy. If you were already trained in Diplomacy (from your background or class, for example), you instead become trained in a skill of your choice. You can also cast {ToMarkdownLink<Models.Entities.Spell>("disrupt undead", Spells.Instances.DisruptUndead.ID)} as a divine innate cantrip at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

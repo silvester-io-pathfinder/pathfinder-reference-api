@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5170c93e-7a71-45ad-abdf-db59a6accfbc"), Type = TextBlockType.Text, Text = "Any time you hit with the soulforged weapon, the target takes a –10-foot penalty to its Speeds for 1 round. On a critical hit, the creature is immobilized for 1 round instead." };
-            yield return new TextBlock { Id = Guid.Parse("c7d83544-c90e-4655-9a36-3e80f8db8a71"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ You take a –10-foot penalty to all your Speeds." };
+            yield return new TextBlock { Id = Guid.Parse("5170c93e-7a71-45ad-abdf-db59a6accfbc"), Type = TextBlockType.Text, Text = $"Any time you hit with the soulforged weapon, the target takes a –10-foot penalty to its Speeds for 1 round. On a critical hit, the creature is immobilized for 1 round instead." };
+            yield return new TextBlock { Id = Guid.Parse("c7d83544-c90e-4655-9a36-3e80f8db8a71"), Type = TextBlockType.Text, Text = $"__Corruption Flaw__ You take a –10-foot penalty to all your Speeds." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

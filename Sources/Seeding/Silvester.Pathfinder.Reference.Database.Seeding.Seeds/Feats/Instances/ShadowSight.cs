@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d9d96b7f-8996-496f-975c-52842a696b05"), Type = TextBlockType.Text, Text = "You draw on your connection with the Shadow Plane to see through all but the deepest darkness. You gain greater darkvision for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("d9d96b7f-8996-496f-975c-52842a696b05"), Type = TextBlockType.Text, Text = $"You draw on your connection with the Shadow Plane to see through all but the deepest darkness. You gain greater darkvision for 1 minute." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

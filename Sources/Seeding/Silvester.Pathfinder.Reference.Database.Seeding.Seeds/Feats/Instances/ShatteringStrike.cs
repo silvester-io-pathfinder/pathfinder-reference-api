@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9bc86378-2946-4424-9f9a-22faec1207b5"), Type = TextBlockType.Text, Text = "The improvised weapon shatters, destroying it completely but dealing an additional 3d6 piercing damage to the creature you hit with the (feat: Improvised Pummel). This extra damage you apply on the critical hit doesn't double from the critical hit, as normal." };
+            yield return new TextBlock { Id = Guid.Parse("9bc86378-2946-4424-9f9a-22faec1207b5"), Type = TextBlockType.Text, Text = $"The improvised weapon shatters, destroying it completely but dealing an additional 3d6 piercing damage to the creature you hit with the {ToMarkdownLink<Models.Entities.Feat>("Improvised Pummel", Feats.Instances.ImprovisedPummel.ID)}. This extra damage you apply on the critical hit doesn't double from the critical hit, as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

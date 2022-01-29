@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("077e5d38-4b3c-4152-a75f-81728b5fd5af"), Type = TextBlockType.Text, Text = "You gain an arcane cantrip." };
+            yield return new TextBlock { Id = Guid.Parse("077e5d38-4b3c-4152-a75f-81728b5fd5af"), Type = TextBlockType.Text, Text = $"You gain an arcane cantrip." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

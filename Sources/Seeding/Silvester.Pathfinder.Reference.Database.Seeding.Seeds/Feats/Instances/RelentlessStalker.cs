@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0680aa4d-b941-4488-8247-fa104fb37d78"), Type = TextBlockType.Text, Text = "Your hunted prey cannot escape your relentless pursuit. (action: Stride) up to your Speed in tandem with the triggering creature, remaining adjacent to the foe throughout its movement until it stops moving or you run out of movement. You can ignore difficult terrain during this movement unless the difficult terrain is caused by a (trait: magical) effect." };
+            yield return new TextBlock { Id = Guid.Parse("0680aa4d-b941-4488-8247-fa104fb37d78"), Type = TextBlockType.Text, Text = $"Your hunted prey cannot escape your relentless pursuit. {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} up to your Speed in tandem with the triggering creature, remaining adjacent to the foe throughout its movement until it stops moving or you run out of movement. You can ignore difficult terrain during this movement unless the difficult terrain is caused by a {ToMarkdownLink<Models.Entities.Trait>("magical", Traits.Instances.Magical.ID)} effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

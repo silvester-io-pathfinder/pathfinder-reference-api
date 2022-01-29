@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0de4cfc7-ac8e-40c7-93c9-b7b1f0d445a3"), Type = TextBlockType.Text, Text = "Whenever possible, you follow the serene path and encourage others to do the same. You can cast (spell: sanctuary) once per day as a 1st-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("0de4cfc7-ac8e-40c7-93c9-b7b1f0d445a3"), Type = TextBlockType.Text, Text = $"Whenever possible, you follow the serene path and encourage others to do the same. You can cast {ToMarkdownLink<Models.Entities.Spell>("sanctuary", Spells.Instances.Sanctuary.ID)} once per day as a 1st-level divine innate spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

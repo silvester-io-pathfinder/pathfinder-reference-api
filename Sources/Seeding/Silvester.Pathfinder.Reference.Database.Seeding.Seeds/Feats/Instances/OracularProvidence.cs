@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("56be3f92-193f-425e-b47e-d04238f6e9c5"), Type = TextBlockType.Text, Text = "Your mystery grants you access to deep reserves of truly miraculous divine power. You gain an additional 10th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("56be3f92-193f-425e-b47e-d04238f6e9c5"), Type = TextBlockType.Text, Text = $"Your mystery grants you access to deep reserves of truly miraculous divine power. You gain an additional 10th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bfb7c2dd-51a2-4f2b-9773-eb48c8615762"), Type = TextBlockType.Text, Text = "You can cast more spells each day. Increase the spell slots you gain from witch archetype feats by 1 for each spell level other than your two highest witch spell slots." };
+            yield return new TextBlock { Id = Guid.Parse("bfb7c2dd-51a2-4f2b-9773-eb48c8615762"), Type = TextBlockType.Text, Text = $"You can cast more spells each day. Increase the spell slots you gain from witch archetype feats by 1 for each spell level other than your two highest witch spell slots." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a085dd64-bda7-44bf-92cb-abfe89154a66"), Type = TextBlockType.Text, Text = "You fight fiercely to protect your crop. When you hit a creature that is adjacent to two or more members of your crop with a weapon or unarmed attack, you gain a circumstance bonus to your damage roll equal to the number of weapon damage dice. When you hit a creature who has a member of your crop grabbed, that member can attempt to (action: Escape) using a reaction." };
+            yield return new TextBlock { Id = Guid.Parse("a085dd64-bda7-44bf-92cb-abfe89154a66"), Type = TextBlockType.Text, Text = $"You fight fiercely to protect your crop. When you hit a creature that is adjacent to two or more members of your crop with a weapon or unarmed attack, you gain a circumstance bonus to your damage roll equal to the number of weapon damage dice. When you hit a creature who has a member of your crop grabbed, that member can attempt to {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)} using a reaction." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

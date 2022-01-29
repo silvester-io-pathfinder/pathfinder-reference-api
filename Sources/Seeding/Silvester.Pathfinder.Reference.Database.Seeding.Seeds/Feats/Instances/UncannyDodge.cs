@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dca68cd7-0330-4be4-b96d-512b31c4bdd5"), Type = TextBlockType.Text, Text = "You gain the deny advantage class feature (page 181)." };
+            yield return new TextBlock { Id = Guid.Parse("dca68cd7-0330-4be4-b96d-512b31c4bdd5"), Type = TextBlockType.Text, Text = $"You gain the deny advantage class feature (page 181)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

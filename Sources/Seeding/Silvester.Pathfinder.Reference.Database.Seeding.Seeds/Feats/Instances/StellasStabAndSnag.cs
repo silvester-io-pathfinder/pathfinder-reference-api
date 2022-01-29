@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("973caf66-9199-4cb8-a708-0dc48cb86af8"), Type = TextBlockType.Text, Text = "~ Access: Member of the Pathfinder Society." };
-            yield return new TextBlock { Id = Guid.Parse("6d2eb169-16ff-4bb3-9edd-4f25e87ea841"), Type = TextBlockType.Text, Text = "You dart towards your opponent, seeking to stab them and slice their purse-strings with a single movement. (action: Stride) up to your Speed; this movement does not trigger reactions triggered by movement. At any point during this movement you can (action: Strike) an opponent within reach. If this (action: Strike) is successful, you can attempt a Thievery check to (action: Steal) from the target." };
+            yield return new TextBlock { Id = Guid.Parse("973caf66-9199-4cb8-a708-0dc48cb86af8"), Type = TextBlockType.Text, Text = $"~ Access: Member of the Pathfinder Society." };
+            yield return new TextBlock { Id = Guid.Parse("6d2eb169-16ff-4bb3-9edd-4f25e87ea841"), Type = TextBlockType.Text, Text = $"You dart towards your opponent, seeking to stab them and slice their purse-strings with a single movement. {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} up to your Speed; this movement does not trigger reactions triggered by movement. At any point during this movement you can {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} an opponent within reach. If this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} is successful, you can attempt a Thievery check to {ToMarkdownLink<Models.Entities.SkillAction>("Steal", SkillActions.Instances.Steal.ID)} from the target." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

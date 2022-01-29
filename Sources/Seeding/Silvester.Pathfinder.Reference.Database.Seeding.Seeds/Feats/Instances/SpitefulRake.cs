@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0e0bb07d-d523-4249-9734-14d05e7462a5"), Type = TextBlockType.Text, Text = "Your instincts sing of spite and malice, and you've learned a devastating trick: go for the eyes. You make a claw (action: Strike). If you hit and deal damage, the target is dazzled for 1 round. On a critical hit, the target is instead blinded for 1 round and dazzled until restored to maximum hit points." };
+            yield return new TextBlock { Id = Guid.Parse("0e0bb07d-d523-4249-9734-14d05e7462a5"), Type = TextBlockType.Text, Text = $"Your instincts sing of spite and malice, and you've learned a devastating trick: go for the eyes. You make a claw {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If you hit and deal damage, the target is dazzled for 1 round. On a critical hit, the target is instead blinded for 1 round and dazzled until restored to maximum hit points." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

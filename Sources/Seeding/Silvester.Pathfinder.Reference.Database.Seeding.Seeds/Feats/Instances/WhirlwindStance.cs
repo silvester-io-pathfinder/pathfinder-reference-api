@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f75f7c16-ecc9-4f43-95da-8b0c6d000189"), Type = TextBlockType.Text, Text = "You use your staff as a defensive implement as well as an offensive one. You gain a +2 circumstance bonus to AC as long as you remain in this stance." };
+            yield return new TextBlock { Id = Guid.Parse("f75f7c16-ecc9-4f43-95da-8b0c6d000189"), Type = TextBlockType.Text, Text = $"You use your staff as a defensive implement as well as an offensive one. You gain a +2 circumstance bonus to AC as long as you remain in this stance." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d808781-ff83-4c6b-b42a-3f1cc5dc8a86"), Type = TextBlockType.Text, Text = "You excel at using your tail as a weapon to upend your foes. Attempt a single Athletics check to (action: Trip) up to two adjacent creatures. If you roll a success against a target, you get a critical success against that target instead." };
+            yield return new TextBlock { Id = Guid.Parse("1d808781-ff83-4c6b-b42a-3f1cc5dc8a86"), Type = TextBlockType.Text, Text = $"You excel at using your tail as a weapon to upend your foes. Attempt a single Athletics check to {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} up to two adjacent creatures. If you roll a success against a target, you get a critical success against that target instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

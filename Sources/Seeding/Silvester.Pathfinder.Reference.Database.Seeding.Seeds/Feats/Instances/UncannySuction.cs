@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c5901c65-4ad6-4ac2-bfbb-37473aa99bfe"), Type = TextBlockType.Text, Text = "Your limbs produce strange, sucker-like growths that allow you to adhere to walls, objects, and most other surfaces. You gain a climb Speed equal to your half your land Speed (minimum 5 feet). If you have the (feat: Quick Climb) feat, your climb Speed is equal to your land Speed. In addition, you gain a +2 circumstance bonus to your Reflex DC to avoid being (action: Disarmed | Disarm)." };
+            yield return new TextBlock { Id = Guid.Parse("c5901c65-4ad6-4ac2-bfbb-37473aa99bfe"), Type = TextBlockType.Text, Text = $"Your limbs produce strange, sucker-like growths that allow you to adhere to walls, objects, and most other surfaces. You gain a climb Speed equal to your half your land Speed (minimum 5 feet). If you have the {ToMarkdownLink<Models.Entities.Feat>("Quick Climb", Feats.Instances.QuickClimb.ID)} feat, your climb Speed is equal to your land Speed. In addition, you gain a +2 circumstance bonus to your Reflex DC to avoid being {ToMarkdownLink<Models.Entities.SkillAction>("Disarmed", SkillActions.Instances.Disarm.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

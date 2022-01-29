@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c698b6be-7738-4213-bda1-0ee751bcbb09"), Type = TextBlockType.Text, Text = "~ Access: You are from Katapesh." };
-            yield return new TextBlock { Id = Guid.Parse("305e51b1-15da-4a7b-b46b-9b316184f9a6"), Type = TextBlockType.Text, Text = "As a Zephyr Guard, you're always vigilant against crime and threats to the city's safety. You gain a +1 circumstance bonus to Perception checks against attempts to (action: Palm an Object), (action: Steal), or (action: Conceal an Object) (including if you're (action: Seeking | Seek) concealed objects). You become trained in Society and Katapesh Lore; if you were already trained, you become an expert instead." };
-            yield return new TextBlock { Id = Guid.Parse("68db6dc2-5095-4ee4-9119-54d42f49a613"), Type = TextBlockType.Text, Text = "__(If you are already trained in Society or Katapesh Lore, override the proficiency on your character sheet.)__" };
+            yield return new TextBlock { Id = Guid.Parse("c698b6be-7738-4213-bda1-0ee751bcbb09"), Type = TextBlockType.Text, Text = $"~ Access: You are from Katapesh." };
+            yield return new TextBlock { Id = Guid.Parse("305e51b1-15da-4a7b-b46b-9b316184f9a6"), Type = TextBlockType.Text, Text = $"As a Zephyr Guard, you're always vigilant against crime and threats to the city's safety. You gain a +1 circumstance bonus to Perception checks against attempts to {ToMarkdownLink<Models.Entities.SkillAction>("Palm an Object", SkillActions.Instances.PalmAnObject.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Steal", SkillActions.Instances.Steal.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Conceal an Object", SkillActions.Instances.ConcealAnObject.ID)} (including if you're {ToMarkdownLink<Models.Entities.Action>("Seeking", Actions.Instances.Seek.ID)} concealed objects). You become trained in Society and Katapesh Lore; if you were already trained, you become an expert instead." };
+            yield return new TextBlock { Id = Guid.Parse("68db6dc2-5095-4ee4-9119-54d42f49a613"), Type = TextBlockType.Text, Text = $"__(If you are already trained in Society or Katapesh Lore, override the proficiency on your character sheet.)__" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

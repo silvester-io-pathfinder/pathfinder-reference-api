@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9d5aa212-771b-47d3-926b-4ecf20810dfb"), Type = TextBlockType.Text, Text = "Your verdant weapon can cut through the resistances of magical creatures. The weapon is treated as cold iron and silver. If you critically hit a creature that has a weakness to cold iron or silver, the target takes 1d6 persistent bleed damage as the primal energies within your weapon slow its natural healing." };
+            yield return new TextBlock { Id = Guid.Parse("9d5aa212-771b-47d3-926b-4ecf20810dfb"), Type = TextBlockType.Text, Text = $"Your verdant weapon can cut through the resistances of magical creatures. The weapon is treated as cold iron and silver. If you critically hit a creature that has a weakness to cold iron or silver, the target takes 1d6 persistent bleed damage as the primal energies within your weapon slow its natural healing." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

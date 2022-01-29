@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("52f7d304-29dd-4d73-ab04-a2ede3de8a30"), Type = TextBlockType.Text, Text = "Your reservoir of Focus Points is a deep wellspring. If you have spent at least 3 Focus Points since the last time you (Activity: Refocused | Refocus), you recover 3 Focus Points when you (Activity: Refocus) instead of 1." };
+            yield return new TextBlock { Id = Guid.Parse("52f7d304-29dd-4d73-ab04-a2ede3de8a30"), Type = TextBlockType.Text, Text = $"Your reservoir of Focus Points is a deep wellspring. If you have spent at least 3 Focus Points since the last time you {ToMarkdownLink<Models.Entities.Activity>("Refocused", Activities.Instances.Refocus.ID)}, you recover 3 Focus Points when you {ToMarkdownLink<Models.Entities.Activity>("Refocus", Activities.Instances.Refocus.ID)} instead of 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

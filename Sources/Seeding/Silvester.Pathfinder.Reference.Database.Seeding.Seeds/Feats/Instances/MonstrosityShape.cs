@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("465201a0-62e5-421a-afc6-f12f12df41e6"), Type = TextBlockType.Text, Text = "You can transform into a powerful magical creature. Add the purple worm and sea serpent forms listed in (Spell: monstrosity form) to your (Spell: wild shape) list. If you have (Feat: Soaring Shape), add the phoenix form listed in (Spell: aerial form) to your (Spell: wild shape) list." };
+            yield return new TextBlock { Id = Guid.Parse("465201a0-62e5-421a-afc6-f12f12df41e6"), Type = TextBlockType.Text, Text = $"You can transform into a powerful magical creature. Add the purple worm and sea serpent forms listed in {ToMarkdownLink<Models.Entities.Spell>("monstrosity form", Spells.Instances.MonstrosityForm.ID)} to your {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)} list. If you have {ToMarkdownLink<Models.Entities.Feat>("Soaring Shape", Feats.Instances.SoaringShape.ID)}, add the phoenix form listed in {ToMarkdownLink<Models.Entities.Spell>("aerial form", Spells.Instances.AerialForm.ID)} to your {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)} list." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

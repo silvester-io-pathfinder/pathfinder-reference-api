@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f5aaa0f9-7a66-42bf-8644-bce194971c48"), Type = TextBlockType.Text, Text = "Nanites augment your attacks. You can choose to activate (feat: Nanite Surge) when you attempt an attack roll, instead of when you attempt a skill check. If you do, you gain a +1 status bonus to the triggering attack roll." };
+            yield return new TextBlock { Id = Guid.Parse("f5aaa0f9-7a66-42bf-8644-bce194971c48"), Type = TextBlockType.Text, Text = $"Nanites augment your attacks. You can choose to activate {ToMarkdownLink<Models.Entities.Feat>("Nanite Surge", Feats.Instances.NaniteSurge.ID)} when you attempt an attack roll, instead of when you attempt a skill check. If you do, you gain a +1 status bonus to the triggering attack roll." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

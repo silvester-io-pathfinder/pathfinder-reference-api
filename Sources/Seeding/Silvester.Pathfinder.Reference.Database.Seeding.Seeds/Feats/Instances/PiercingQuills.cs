@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c215ed8-e765-40b4-b444-5992b9599a6a"), Type = TextBlockType.Text, Text = "Your quills can dig particularly deep into the flesh of your opponents. Your quills unarmed attack deals 1d4 persistent bleed damage on a critical hit." };
+            yield return new TextBlock { Id = Guid.Parse("7c215ed8-e765-40b4-b444-5992b9599a6a"), Type = TextBlockType.Text, Text = $"Your quills can dig particularly deep into the flesh of your opponents. Your quills unarmed attack deals 1d4 persistent bleed damage on a critical hit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

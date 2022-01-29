@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ff4f431-7d78-4a88-afc8-9b78ead20b54"), Type = TextBlockType.Text, Text = "Your draconic wings have grown large and strong enough for flight. You gain a fly Speed equal to your Speed, using your wings to stay aloft." };
+            yield return new TextBlock { Id = Guid.Parse("8ff4f431-7d78-4a88-afc8-9b78ead20b54"), Type = TextBlockType.Text, Text = $"Your draconic wings have grown large and strong enough for flight. You gain a fly Speed equal to your Speed, using your wings to stay aloft." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

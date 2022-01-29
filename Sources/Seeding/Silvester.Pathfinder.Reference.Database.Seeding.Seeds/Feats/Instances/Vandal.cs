@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b93e9c0e-b4d9-485f-bd77-3e8b486023c4"), Type = TextBlockType.Text, Text = "You have a knack for breaking and dismantling things. Putting them back together is the boring part, so you largely don't bother with that. You become trained in Thievery. If you would automatically become trained in Thievery (from your background or class, for example), you instead become trained in a skill of your choice. In addition, whenever you hit with a (action: Strike) against a trap or an unattended object, you ignore the first 5 points of the object's Hardness." };
+            yield return new TextBlock { Id = Guid.Parse("b93e9c0e-b4d9-485f-bd77-3e8b486023c4"), Type = TextBlockType.Text, Text = $"You have a knack for breaking and dismantling things. Putting them back together is the boring part, so you largely don't bother with that. You become trained in Thievery. If you would automatically become trained in Thievery (from your background or class, for example), you instead become trained in a skill of your choice. In addition, whenever you hit with a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against a trap or an unattended object, you ignore the first 5 points of the object's Hardness." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

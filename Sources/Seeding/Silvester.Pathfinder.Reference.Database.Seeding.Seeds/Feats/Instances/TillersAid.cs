@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aab05ec3-0e04-4e83-bcd4-dcae7694a7c0"), Type = TextBlockType.Text, Text = "You can use the (action: Aid) reaction to help a member of your crop even if you haven't prepared to do so." };
+            yield return new TextBlock { Id = Guid.Parse("aab05ec3-0e04-4e83-bcd4-dcae7694a7c0"), Type = TextBlockType.Text, Text = $"You can use the {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)} reaction to help a member of your crop even if you haven't prepared to do so." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

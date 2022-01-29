@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1fc920ea-b96f-415c-a7d8-9d839a30a527"), Type = TextBlockType.Text, Text = "Vanths themselves recognize you as an honorary reaper. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in (item: bo staves | bo staff), (item: longbows | longbow), (item: composite longbows | composite longbow), (item: scythes | scythe), and (item: staves | staff)." };
+            yield return new TextBlock { Id = Guid.Parse("1fc920ea-b96f-415c-a7d8-9d839a30a527"), Type = TextBlockType.Text, Text = $"Vanths themselves recognize you as an honorary reaper. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("bo staves", Items.MeleeWeapons.Instances.BoStaff.ID)}, {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("longbows", Items.RangedWeapons.Instances.Longbow.ID)}, {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("composite longbows", Items.RangedWeapons.Instances.CompositeLongbow.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("scythes", Items.MeleeWeapons.Instances.Scythe.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("staves", Items.MeleeWeapons.Instances.Staff.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

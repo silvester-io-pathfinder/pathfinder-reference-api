@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c5798e7e-74b6-4873-a443-0ebef968dd5d"), Type = TextBlockType.Text, Text = "Your ancestral resistance to magic protects you. You gain a +1 circumstance bonus to the triggering saving throw. If the triggering effect is arcane, you gain a +2 circumstance bonus instead." };
+            yield return new TextBlock { Id = Guid.Parse("c5798e7e-74b6-4873-a443-0ebef968dd5d"), Type = TextBlockType.Text, Text = $"Your ancestral resistance to magic protects you. You gain a +1 circumstance bonus to the triggering saving throw. If the triggering effect is arcane, you gain a +2 circumstance bonus instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

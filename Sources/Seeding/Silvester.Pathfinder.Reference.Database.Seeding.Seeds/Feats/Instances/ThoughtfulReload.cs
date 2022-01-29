@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd9c7b07-821d-4fa5-a6a9-2f01d2b9a4d8"), Type = TextBlockType.Text, Text = "As you sink deep into a state of analytical calm and focus on the foe before you, your hands reload a bullet instinctively. Attempt a (action: Recall Knowledge) check against an opponent you can see and then (action: Interact) to reload." };
+            yield return new TextBlock { Id = Guid.Parse("cd9c7b07-821d-4fa5-a6a9-2f01d2b9a4d8"), Type = TextBlockType.Text, Text = $"As you sink deep into a state of analytical calm and focus on the foe before you, your hands reload a bullet instinctively. Attempt a {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} check against an opponent you can see and then {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to reload." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

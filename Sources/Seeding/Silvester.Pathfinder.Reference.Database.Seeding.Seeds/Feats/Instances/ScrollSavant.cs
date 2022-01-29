@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("145e7755-516e-43dc-9b87-e232f13c1b63"), Type = TextBlockType.Text, Text = "During your daily preparations, you can create two temporary scrolls containing arcane spells from your spellbook. These scrolls follow the normal rules for scrolls (page 564), with some additional restrictions. Each scroll must be of a different spell level, and both spell levels must be 2 or more levels lower than your highest-level spell. Any scrolls you create this way become non-magical the next time you make your daily preparations. A temporary scroll has no value." };
-            yield return new TextBlock { Id = Guid.Parse("42080478-8234-4816-a41a-9a3b72a5235c"), Type = TextBlockType.Text, Text = "If you have master proficiency in arcane spell DCs, you can create three temporary scrolls during your daily preparations, and if you have legendary proficiency, you can create four temporary scrolls." };
+            yield return new TextBlock { Id = Guid.Parse("145e7755-516e-43dc-9b87-e232f13c1b63"), Type = TextBlockType.Text, Text = $"During your daily preparations, you can create two temporary scrolls containing arcane spells from your spellbook. These scrolls follow the normal rules for scrolls (page 564), with some additional restrictions. Each scroll must be of a different spell level, and both spell levels must be 2 or more levels lower than your highest-level spell. Any scrolls you create this way become non-magical the next time you make your daily preparations. A temporary scroll has no value." };
+            yield return new TextBlock { Id = Guid.Parse("42080478-8234-4816-a41a-9a3b72a5235c"), Type = TextBlockType.Text, Text = $"If you have master proficiency in arcane spell DCs, you can create three temporary scrolls during your daily preparations, and if you have legendary proficiency, you can create four temporary scrolls." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

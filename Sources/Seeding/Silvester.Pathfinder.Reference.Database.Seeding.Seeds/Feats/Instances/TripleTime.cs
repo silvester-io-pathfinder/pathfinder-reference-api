@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db9ca479-312d-4fd5-aab4-afc2b6eee3e8"), Type = TextBlockType.Text, Text = "You learn the (spell: triple time) composition cantrip, which speeds up you and your allies for a round." };
+            yield return new TextBlock { Id = Guid.Parse("db9ca479-312d-4fd5-aab4-afc2b6eee3e8"), Type = TextBlockType.Text, Text = $"You learn the {ToMarkdownLink<Models.Entities.Spell>("triple time", Spells.Instances.TripleTime.ID)} composition cantrip, which speeds up you and your allies for a round." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

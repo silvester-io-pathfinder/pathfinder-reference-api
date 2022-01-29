@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("29396514-6a34-4b35-86ec-61b43b7551dd"), Type = TextBlockType.Text, Text = "Interweaving your most powerful attacks in a graceful flow, you temporarily unbalance your foes. Whenever your (action: Strike) is a critical hit and deals damage, the target is flat-footed against your attacks until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("29396514-6a34-4b35-86ec-61b43b7551dd"), Type = TextBlockType.Text, Text = $"Interweaving your most powerful attacks in a graceful flow, you temporarily unbalance your foes. Whenever your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} is a critical hit and deals damage, the target is flat-footed against your attacks until the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

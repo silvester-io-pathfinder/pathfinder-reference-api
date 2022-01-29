@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc06a627-3e46-4829-89dd-05b1256be0cb"), Type = TextBlockType.Text, Text = "You ask a question that charms or needles someone in just the right way. Ask a question of a non-allied creature that you can see and have been conversing with. Attempt a Diplomacy check against the creature's Will DC. The creature is then temporarily immune for 1 hour." };
+            yield return new TextBlock { Id = Guid.Parse("fc06a627-3e46-4829-89dd-05b1256be0cb"), Type = TextBlockType.Text, Text = $"You ask a question that charms or needles someone in just the right way. Ask a question of a non-allied creature that you can see and have been conversing with. Attempt a Diplomacy check against the creature's Will DC. The creature is then temporarily immune for 1 hour." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

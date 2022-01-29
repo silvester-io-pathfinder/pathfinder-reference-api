@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8e84d97-c4ee-4cf2-9f00-1bb8ca578a8c"), Type = TextBlockType.Text, Text = "Your studies open up new horizons. You become an expert in a Lore skill about a specific settlement; if you were already trained in that Lore skill, you also become trained in the Lore skill for a different settlement of your choice. Choose a single common or uncommon language prevalent in that settlement. You learn that language." };
+            yield return new TextBlock { Id = Guid.Parse("b8e84d97-c4ee-4cf2-9f00-1bb8ca578a8c"), Type = TextBlockType.Text, Text = $"Your studies open up new horizons. You become an expert in a Lore skill about a specific settlement; if you were already trained in that Lore skill, you also become trained in the Lore skill for a different settlement of your choice. Choose a single common or uncommon language prevalent in that settlement. You learn that language." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

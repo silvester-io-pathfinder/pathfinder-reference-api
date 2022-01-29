@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d03e2a83-f799-4b28-ae4d-b3a98aa73386"), Type = TextBlockType.Text, Text = "You can rely on the grandeur of your performances rather than ordinary social skills. You can use Performance instead of Diplomacy to (action: Make an Impression) and instead of Intimidation to (action: Demoralize). You can also use an acting Performance instead of Deception to (action: Impersonate). You can use your proficiency rank in Performance to meet the requirements of skill feats that require a particular rank in Deception, Diplomacy, or Intimidation." };
+            yield return new TextBlock { Id = Guid.Parse("d03e2a83-f799-4b28-ae4d-b3a98aa73386"), Type = TextBlockType.Text, Text = $"You can rely on the grandeur of your performances rather than ordinary social skills. You can use Performance instead of Diplomacy to {ToMarkdownLink<Models.Entities.SkillAction>("Make an Impression", SkillActions.Instances.MakeAnImpression.ID)} and instead of Intimidation to {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)}. You can also use an acting Performance instead of Deception to {ToMarkdownLink<Models.Entities.SkillAction>("Impersonate", SkillActions.Instances.Impersonate.ID)}. You can use your proficiency rank in Performance to meet the requirements of skill feats that require a particular rank in Deception, Diplomacy, or Intimidation." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

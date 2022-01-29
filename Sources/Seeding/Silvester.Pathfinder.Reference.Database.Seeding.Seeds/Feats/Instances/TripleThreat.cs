@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3d3eca0a-e98e-432a-aac6-142614bc40f8"), Type = TextBlockType.Text, Text = "You can divide your attention three ways when hunting. When you use (feat: Hunt Prey), you can designate three creatures as prey, designate two creatures as prey and share the effect with one ally (as (feat: Shared Prey)), or designate one creature as prey and share the effect with two allies." };
+            yield return new TextBlock { Id = Guid.Parse("3d3eca0a-e98e-432a-aac6-142614bc40f8"), Type = TextBlockType.Text, Text = $"You can divide your attention three ways when hunting. When you use {ToMarkdownLink<Models.Entities.Feat>("Hunt Prey", Feats.Instances.HuntPrey.ID)}, you can designate three creatures as prey, designate two creatures as prey and share the effect with one ally (as {ToMarkdownLink<Models.Entities.Feat>("Shared Prey", Feats.Instances.SharedPrey.ID)}), or designate one creature as prey and share the effect with two allies." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

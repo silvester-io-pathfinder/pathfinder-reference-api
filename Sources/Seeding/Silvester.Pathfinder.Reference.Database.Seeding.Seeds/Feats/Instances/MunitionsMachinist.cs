@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("170f6f83-bc7a-493e-b28f-2caa17e790e1"), Type = TextBlockType.Text, Text = "You're particularly adept at crafting ammunition and bombs. Your advanced alchemy level for ammunition and bombs increases to your level – 3." };
+            yield return new TextBlock { Id = Guid.Parse("170f6f83-bc7a-493e-b28f-2caa17e790e1"), Type = TextBlockType.Text, Text = $"You're particularly adept at crafting ammunition and bombs. Your advanced alchemy level for ammunition and bombs increases to your level – 3." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

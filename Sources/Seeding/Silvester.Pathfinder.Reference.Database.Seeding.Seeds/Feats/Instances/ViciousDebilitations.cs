@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c1940346-d083-4812-936f-d40ed568438a"), Type = TextBlockType.Text, Text = "The debilitations you dish out seriously impair your foes. Add the following debilitations to the list you can choose from when you use (feat: Debilitating Strike)." };
-            yield return new TextBlock { Id = Guid.Parse("470cdd5f-c224-48ff-8e50-47d299896489"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target gains weakness 5 to your choice of bludgeoning, piercing, or slashing damage." };
-            yield return new TextBlock { Id = Guid.Parse("7f030bfe-4487-49d4-8cc5-925e392a420e"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target becomes clumsy 1." };
+            yield return new TextBlock { Id = Guid.Parse("c1940346-d083-4812-936f-d40ed568438a"), Type = TextBlockType.Text, Text = $"The debilitations you dish out seriously impair your foes. Add the following debilitations to the list you can choose from when you use {ToMarkdownLink<Models.Entities.Feat>("Debilitating Strike", Feats.Instances.DebilitatingStrike.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("470cdd5f-c224-48ff-8e50-47d299896489"), Type = TextBlockType.Enumeration, Text = $" Debilitation: The target gains weakness 5 to your choice of bludgeoning, piercing, or slashing damage." };
+            yield return new TextBlock { Id = Guid.Parse("7f030bfe-4487-49d4-8cc5-925e392a420e"), Type = TextBlockType.Enumeration, Text = $" Debilitation: The target becomes clumsy 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("711e2b2c-ebe8-48f8-b3f1-ec4a792f317c"), Type = TextBlockType.Text, Text = "You have near-supernatural poise that lets you move swiftly across the most unsteady surfaces. You gain the (feat: Steady Balance) skill feat. You can (action: Step) into difficult terrain caused by uneven ground, such as a rocky field or hilly incline." };
+            yield return new TextBlock { Id = Guid.Parse("711e2b2c-ebe8-48f8-b3f1-ec4a792f317c"), Type = TextBlockType.Text, Text = $"You have near-supernatural poise that lets you move swiftly across the most unsteady surfaces. You gain the {ToMarkdownLink<Models.Entities.Feat>("Steady Balance", Feats.Instances.SteadyBalance.ID)} skill feat. You can {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} into difficult terrain caused by uneven ground, such as a rocky field or hilly incline." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

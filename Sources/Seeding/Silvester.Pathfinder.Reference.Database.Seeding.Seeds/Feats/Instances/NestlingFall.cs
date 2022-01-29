@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79cb485e-5739-403a-92f3-7713cebbd527"), Type = TextBlockType.Text, Text = "You trust the strength of your wings and can spread them to glide safely to the ground. As long as you can act, you take no damage from falling, no matter what distance you fall." };
+            yield return new TextBlock { Id = Guid.Parse("79cb485e-5739-403a-92f3-7713cebbd527"), Type = TextBlockType.Text, Text = $"You trust the strength of your wings and can spread them to glide safely to the ground. As long as you can act, you take no damage from falling, no matter what distance you fall." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

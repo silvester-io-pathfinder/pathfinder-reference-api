@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9fedc7f7-006b-493b-9261-6abc81ee5f9e"), Type = TextBlockType.Text, Text = "They told you there was no way that explosions could heal people, but they were fools… Fools who didn't understand your brilliance! You create a minor explosion from your innovation, altering the combustion to cauterize wounds using vaporized medicinal herbs. You or a living creature adjacent to you regains 1d10 Hit Points. In addition, the creature you heal can attempt an immediate flat check to recover from a single source of persistent bleed damage, with the DC reduction from appropriate assistance." };
-            yield return new TextBlock { Id = Guid.Parse("018ee33b-78fc-4a78-8bcc-e64bc2932e39"), Type = TextBlockType.Text, Text = "At 3rd level, and every 2 levels thereafter, increase the healing by 1d10." };
+            yield return new TextBlock { Id = Guid.Parse("9fedc7f7-006b-493b-9261-6abc81ee5f9e"), Type = TextBlockType.Text, Text = $"They told you there was no way that explosions could heal people, but they were fools… Fools who didn't understand your brilliance! You create a minor explosion from your innovation, altering the combustion to cauterize wounds using vaporized medicinal herbs. You or a living creature adjacent to you regains 1d10 Hit Points. In addition, the creature you heal can attempt an immediate flat check to recover from a single source of persistent bleed damage, with the DC reduction from appropriate assistance." };
+            yield return new TextBlock { Id = Guid.Parse("018ee33b-78fc-4a78-8bcc-e64bc2932e39"), Type = TextBlockType.Text, Text = $"At 3rd level, and every 2 levels thereafter, increase the healing by 1d10." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

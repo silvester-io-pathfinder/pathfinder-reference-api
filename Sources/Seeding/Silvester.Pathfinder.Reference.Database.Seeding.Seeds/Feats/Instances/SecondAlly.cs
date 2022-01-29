@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0d422535-db90-46c6-8b42-6df1c3972cd0"), Type = TextBlockType.Text, Text = "Your inner grace attracts the attention of a second protective spirit. Choose a second type of divine ally and gain its benefits." };
+            yield return new TextBlock { Id = Guid.Parse("0d422535-db90-46c6-8b42-6df1c3972cd0"), Type = TextBlockType.Text, Text = $"Your inner grace attracts the attention of a second protective spirit. Choose a second type of divine ally and gain its benefits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

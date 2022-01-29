@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c200dabb-7114-46a0-b6d3-097fd35981c3"), Type = TextBlockType.Text, Text = "Your intractable nature can help you shrug off even the most grievous injuries. Attempt a DC 17 flat check. If you are successful, the attack becomes a normal hit." };
+            yield return new TextBlock { Id = Guid.Parse("c200dabb-7114-46a0-b6d3-097fd35981c3"), Type = TextBlockType.Text, Text = $"Your intractable nature can help you shrug off even the most grievous injuries. Attempt a DC 17 flat check. If you are successful, the attack becomes a normal hit." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

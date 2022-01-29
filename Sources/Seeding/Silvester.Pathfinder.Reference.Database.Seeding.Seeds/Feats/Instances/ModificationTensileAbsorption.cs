@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f655a794-61b3-4fa0-9e49-53b23570569a"), Type = TextBlockType.Text, Text = "You've enhanced the tensile capabilities of your armor, enabling it to bend with bludgeoning attacks. While wearing your armor, you gain resistance to bludgeoning damage equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("f655a794-61b3-4fa0-9e49-53b23570569a"), Type = TextBlockType.Text, Text = $"You've enhanced the tensile capabilities of your armor, enabling it to bend with bludgeoning attacks. While wearing your armor, you gain resistance to bludgeoning damage equal to half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

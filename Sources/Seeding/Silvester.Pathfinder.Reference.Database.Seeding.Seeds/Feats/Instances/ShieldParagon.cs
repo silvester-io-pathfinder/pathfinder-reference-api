@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f3c21809-4f07-4fcf-8c6f-776416df1f1f"), Type = TextBlockType.Text, Text = "Your shield is a vessel of divine protection. When you're wielding your chosen shield, it is always raised, even without you using the (action: Raise a Shield) action. Your chosen shield doubles its HP and BT, rather than increasing them by half. If it would be destroyed, it vanishes to your deity's realm instead, where your divine ally repairs it. During your next daily preparations, the shield returns to you fully repaired." };
+            yield return new TextBlock { Id = Guid.Parse("f3c21809-4f07-4fcf-8c6f-776416df1f1f"), Type = TextBlockType.Text, Text = $"Your shield is a vessel of divine protection. When you're wielding your chosen shield, it is always raised, even without you using the {ToMarkdownLink<Models.Entities.Action>("Raise a Shield", Actions.Instances.RaiseAShield.ID)} action. Your chosen shield doubles its HP and BT, rather than increasing them by half. If it would be destroyed, it vanishes to your deity's realm instead, where your divine ally repairs it. During your next daily preparations, the shield returns to you fully repaired." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

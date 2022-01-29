@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0c804b66-ecb5-46ca-b4b5-2e29707789d8"), Type = TextBlockType.Text, Text = "You've trained your animal companion to blend in to its surroundings. Your animal companion gains the benefit of the (feat: Camouflage) feat. If your companion is a specialized ambusher, its proficiency rank for Stealth increases to master (or legendary if it was already master)." };
+            yield return new TextBlock { Id = Guid.Parse("0c804b66-ecb5-46ca-b4b5-2e29707789d8"), Type = TextBlockType.Text, Text = $"You've trained your animal companion to blend in to its surroundings. Your animal companion gains the benefit of the {ToMarkdownLink<Models.Entities.Feat>("Camouflage", Feats.Instances.Camouflage.ID)} feat. If your companion is a specialized ambusher, its proficiency rank for Stealth increases to master (or legendary if it was already master)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

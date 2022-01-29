@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c7cb988b-f81a-4912-a216-e97e1e63c397"), Type = TextBlockType.Text, Text = "You draw life from the water around you. If you submerge in water and rest for 10 minutes, you regain Hit Points equal to your Constitution modifier &#215; half your level." };
+            yield return new TextBlock { Id = Guid.Parse("c7cb988b-f81a-4912-a216-e97e1e63c397"), Type = TextBlockType.Text, Text = $"You draw life from the water around you. If you submerge in water and rest for 10 minutes, you regain Hit Points equal to your Constitution modifier &#215; half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

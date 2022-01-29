@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b85fa80b-2628-4c2e-8fdd-5b16b5ea0869"), Type = TextBlockType.Text, Text = "If your next action is to cast a spell that would grant your terrain attunement bonus, reduce the number of actions to cast it by 1 (to a minimum of 1 action)." };
+            yield return new TextBlock { Id = Guid.Parse("b85fa80b-2628-4c2e-8fdd-5b16b5ea0869"), Type = TextBlockType.Text, Text = $"If your next action is to cast a spell that would grant your terrain attunement bonus, reduce the number of actions to cast it by 1 (to a minimum of 1 action)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

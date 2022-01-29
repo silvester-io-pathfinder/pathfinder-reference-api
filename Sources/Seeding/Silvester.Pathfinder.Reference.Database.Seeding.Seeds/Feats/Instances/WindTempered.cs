@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cbe064ec-262e-4fed-9ecc-5ba2351922a8"), Type = TextBlockType.Text, Text = "You are at home in tempestuous weather and accustomed to even the harshest winds. You gain a +1 circumstance bonus to saves against (trait: air) and (trait: electricity) effects. If you roll a success on a save against an (trait: air) effect, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("cbe064ec-262e-4fed-9ecc-5ba2351922a8"), Type = TextBlockType.Text, Text = $"You are at home in tempestuous weather and accustomed to even the harshest winds. You gain a +1 circumstance bonus to saves against {ToMarkdownLink<Models.Entities.Trait>("air", Traits.Instances.Air.ID)} and {ToMarkdownLink<Models.Entities.Trait>("electricity", Traits.Instances.Electricity.ID)} effects. If you roll a success on a save against an {ToMarkdownLink<Models.Entities.Trait>("air", Traits.Instances.Air.ID)} effect, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ff6e5411-bb3a-4968-8d03-4c6a06ecfac8"), Type = TextBlockType.Text, Text = "Ancestral spirits have begun to bond themselves to you, granting you powers characteristic of a rokoa. You can cast (spell: speak with animals) and (spell: status) as primal innate spells once per day each." };
+            yield return new TextBlock { Id = Guid.Parse("ff6e5411-bb3a-4968-8d03-4c6a06ecfac8"), Type = TextBlockType.Text, Text = $"Ancestral spirits have begun to bond themselves to you, granting you powers characteristic of a rokoa. You can cast {ToMarkdownLink<Models.Entities.Spell>("speak with animals", Spells.Instances.SpeakWithAnimals.ID)} and {ToMarkdownLink<Models.Entities.Spell>("status", Spells.Instances.Status.ID)} as primal innate spells once per day each." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

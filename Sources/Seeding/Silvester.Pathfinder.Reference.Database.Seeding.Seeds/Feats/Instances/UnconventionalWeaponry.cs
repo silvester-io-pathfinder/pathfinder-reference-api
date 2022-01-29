@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("34814f5b-0c17-4ad8-b423-33802d3ce80c"), Type = TextBlockType.Text, Text = "You've familiarized yourself with a particular weapon, potentially from another ancestry or culture. Choose an uncommon simple or martial weapon with a trait corresponding to an ancestry (such as dwarf, goblin, or orc) or that is common in another culture. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a simple weapon." };
-            yield return new TextBlock { Id = Guid.Parse("5118a242-117b-4a90-8ec3-c2741a7d742b"), Type = TextBlockType.Text, Text = "If you are trained in all martial weapons, you can choose an uncommon advanced weapon with such a trait. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a martial weapon." };
+            yield return new TextBlock { Id = Guid.Parse("34814f5b-0c17-4ad8-b423-33802d3ce80c"), Type = TextBlockType.Text, Text = $"You've familiarized yourself with a particular weapon, potentially from another ancestry or culture. Choose an uncommon simple or martial weapon with a trait corresponding to an ancestry (such as dwarf, goblin, or orc) or that is common in another culture. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a simple weapon." };
+            yield return new TextBlock { Id = Guid.Parse("5118a242-117b-4a90-8ec3-c2741a7d742b"), Type = TextBlockType.Text, Text = $"If you are trained in all martial weapons, you can choose an uncommon advanced weapon with such a trait. You gain access to that weapon, and for the purpose of determining your proficiency, that weapon is a martial weapon." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

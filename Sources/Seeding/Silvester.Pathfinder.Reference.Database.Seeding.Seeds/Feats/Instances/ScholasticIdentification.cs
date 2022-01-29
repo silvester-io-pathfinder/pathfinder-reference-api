@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4a186371-b35f-48f1-ad0b-56017cd03783"), Type = TextBlockType.Text, Text = "You have the knowledge needed to understand ancient texts and cultural artifacts. You can use Society when (action: Deciphering Writing | Decipher Writing), no matter the type of writing you are examining. You can also use Society to (action: Identify Magic) when examining a magic item or location with cultural significance." };
+            yield return new TextBlock { Id = Guid.Parse("4a186371-b35f-48f1-ad0b-56017cd03783"), Type = TextBlockType.Text, Text = $"You have the knowledge needed to understand ancient texts and cultural artifacts. You can use Society when {ToMarkdownLink<Models.Entities.SkillAction>("Deciphering Writing", SkillActions.Instances.DecipherWriting.ID)}, no matter the type of writing you are examining. You can also use Society to {ToMarkdownLink<Models.Entities.SkillAction>("Identify Magic", SkillActions.Instances.IdentifyMagic.ID)} when examining a magic item or location with cultural significance." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

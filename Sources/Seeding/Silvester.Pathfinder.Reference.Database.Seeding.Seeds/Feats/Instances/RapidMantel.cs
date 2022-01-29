@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7a7e0bfd-f8fb-4113-a007-48c02592d7b6"), Type = TextBlockType.Text, Text = "You easily pull yourself onto ledges. When you (action: Grab an Edge), you can pull yourself onto that surface and stand. You can use Athletics instead of a Reflex save to (action: Grab an Edge)." };
+            yield return new TextBlock { Id = Guid.Parse("7a7e0bfd-f8fb-4113-a007-48c02592d7b6"), Type = TextBlockType.Text, Text = $"You easily pull yourself onto ledges. When you {ToMarkdownLink<Models.Entities.Action>("Grab an Edge", Actions.Instances.GrabEdge.ID)}, you can pull yourself onto that surface and stand. You can use Athletics instead of a Reflex save to {ToMarkdownLink<Models.Entities.Action>("Grab an Edge", Actions.Instances.GrabEdge.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

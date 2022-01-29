@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6336928-f112-47a4-bcab-949ce60c80d9"), Type = TextBlockType.Text, Text = "You've perfected your ability to keep up with all the skills you've learned over your long life, so you're almost never truly untrained at a skill. You reflect on your life experiences, changing the skills you selected with (Feat: Ancestral Longevity) and (Feat: Expert Longevity)." };
+            yield return new TextBlock { Id = Guid.Parse("a6336928-f112-47a4-bcab-949ce60c80d9"), Type = TextBlockType.Text, Text = $"You've perfected your ability to keep up with all the skills you've learned over your long life, so you're almost never truly untrained at a skill. You reflect on your life experiences, changing the skills you selected with {ToMarkdownLink<Models.Entities.Feat>("Ancestral Longevity", Feats.Instances.AncestralLongevity.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Expert Longevity", Feats.Instances.ExpertLongevity.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

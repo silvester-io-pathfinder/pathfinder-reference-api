@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("397e8cf7-7ded-47e7-9757-ab675d8b0ea3"), Type = TextBlockType.Text, Text = "Your spotter's quick signals help you make even difficult shots seem simple. As long as both you and your spotter can see the target of your attacks, you don't take a penalty for attacking within your weapon's second range increment. The penalty you take for firing into further range increments is –3 for the third range increment, with an additional –2 penalty for each additional increment beyond the third (–5 for the fourth range increment, –7 for the fifth, and –9 for the sixth)." };
+            yield return new TextBlock { Id = Guid.Parse("397e8cf7-7ded-47e7-9757-ab675d8b0ea3"), Type = TextBlockType.Text, Text = $"Your spotter's quick signals help you make even difficult shots seem simple. As long as both you and your spotter can see the target of your attacks, you don't take a penalty for attacking within your weapon's second range increment. The penalty you take for firing into further range increments is –3 for the third range increment, with an additional –2 penalty for each additional increment beyond the third (–5 for the fourth range increment, –7 for the fifth, and –9 for the sixth)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

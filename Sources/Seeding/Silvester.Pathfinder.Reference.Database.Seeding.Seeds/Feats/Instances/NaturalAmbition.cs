@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0e9b4c16-1f4f-4129-ba5a-8743d05e6f87"), Type = TextBlockType.Text, Text = "You were raised to be ambitious and always reach for the stars, leading you to progress quickly in your chosen field. You gain a 1st-level class feat for your class." };
+            yield return new TextBlock { Id = Guid.Parse("0e9b4c16-1f4f-4129-ba5a-8743d05e6f87"), Type = TextBlockType.Text, Text = $"You were raised to be ambitious and always reach for the stars, leading you to progress quickly in your chosen field. You gain a 1st-level class feat for your class." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

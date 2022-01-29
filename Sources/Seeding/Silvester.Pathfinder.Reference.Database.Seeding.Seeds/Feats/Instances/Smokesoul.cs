@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("26c187d5-d92a-4f08-859b-0e319c2a7d7d"), Type = TextBlockType.Text, Text = "You have a connection to smoke and haze. You gain the (feat: Smoke Blending) reaction." };
+            yield return new TextBlock { Id = Guid.Parse("26c187d5-d92a-4f08-859b-0e319c2a7d7d"), Type = TextBlockType.Text, Text = $"You have a connection to smoke and haze. You gain the {ToMarkdownLink<Models.Entities.Feat>("Smoke Blending", Feats.Instances.SmokeBlending.ID)} reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

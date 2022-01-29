@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("19ad4a56-e555-4fe1-938d-472ae3394c6c"), Type = TextBlockType.Text, Text = "By drawing upon the First World's magic, you can siphon a portion of that malleable world to create a convincing illusion. Once per day, you can cast (spell: illusory disguise), (spell: item facade), or (spell: ventriloquism). At 7th level, the spell is heightened to 2nd level, and every 2 levels thereafter, the spell is heightened an additional spell level." };
+            yield return new TextBlock { Id = Guid.Parse("19ad4a56-e555-4fe1-938d-472ae3394c6c"), Type = TextBlockType.Text, Text = $"By drawing upon the First World's magic, you can siphon a portion of that malleable world to create a convincing illusion. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("illusory disguise", Spells.Instances.IllusoryDisguise.ID)}, {ToMarkdownLink<Models.Entities.Spell>("item facade", Spells.Instances.ItemFacade.ID)}, or {ToMarkdownLink<Models.Entities.Spell>("ventriloquism", Spells.Instances.Ventriloquism.ID)}. At 7th level, the spell is heightened to 2nd level, and every 2 levels thereafter, the spell is heightened an additional spell level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

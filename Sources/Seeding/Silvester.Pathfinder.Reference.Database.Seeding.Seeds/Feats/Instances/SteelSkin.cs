@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a85bc982-106b-4e3d-ae3a-496e86336d2e"), Type = TextBlockType.Text, Text = "You wear your armor like a second skin. You can rest normally while wearing medium armor. If you are a master in heavy armor, you can also rest normally while wearing heavy armor." };
+            yield return new TextBlock { Id = Guid.Parse("a85bc982-106b-4e3d-ae3a-496e86336d2e"), Type = TextBlockType.Text, Text = $"You wear your armor like a second skin. You can rest normally while wearing medium armor. If you are a master in heavy armor, you can also rest normally while wearing heavy armor." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

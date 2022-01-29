@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c81b7bda-8d75-4d23-9d8a-ea7fa0098e5d"), Type = TextBlockType.Text, Text = "You can call forth an invisible eye to let you peek on secrets. Once per day, you can cast (spell: prying eye) as an innate occult spell." };
+            yield return new TextBlock { Id = Guid.Parse("c81b7bda-8d75-4d23-9d8a-ea7fa0098e5d"), Type = TextBlockType.Text, Text = $"You can call forth an invisible eye to let you peek on secrets. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("prying eye", Spells.Instances.PryingEye.ID)} as an innate occult spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

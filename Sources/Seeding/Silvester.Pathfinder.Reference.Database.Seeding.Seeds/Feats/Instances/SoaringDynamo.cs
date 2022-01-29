@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5c997ce-245f-483f-acc8-920e7fe6c40a"), Type = TextBlockType.Text, Text = "You've built clockwork wings or jets into your dynamo, allowing you to use your prosthesis to fly. You gain a fly Speed equal to your Speed. Each minute of flight reduces the operational time of your sterling dynamo by 1 hour, measured from the first time you use the (action: Fly) action in a given minute." };
+            yield return new TextBlock { Id = Guid.Parse("d5c997ce-245f-483f-acc8-920e7fe6c40a"), Type = TextBlockType.Text, Text = $"You've built clockwork wings or jets into your dynamo, allowing you to use your prosthesis to fly. You gain a fly Speed equal to your Speed. Each minute of flight reduces the operational time of your sterling dynamo by 1 hour, measured from the first time you use the {ToMarkdownLink<Models.Entities.Action>("Fly", Actions.Instances.Fly.ID)} action in a given minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

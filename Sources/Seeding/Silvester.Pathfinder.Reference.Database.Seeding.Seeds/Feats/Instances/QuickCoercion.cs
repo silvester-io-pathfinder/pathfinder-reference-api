@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a520feb0-0aae-4f4f-89ae-6b824da4de90"), Type = TextBlockType.Text, Text = "You can bully others with just a few choice implications. You can (action: Coerce) a creature after 1 round of conversation instead of 1 minute. You still can't (action: Coerce) a creature in the midst of combat, or without engaging in a conversation." };
+            yield return new TextBlock { Id = Guid.Parse("a520feb0-0aae-4f4f-89ae-6b824da4de90"), Type = TextBlockType.Text, Text = $"You can bully others with just a few choice implications. You can {ToMarkdownLink<Models.Entities.SkillAction>("Coerce", SkillActions.Instances.Coerce.ID)} a creature after 1 round of conversation instead of 1 minute. You still can't {ToMarkdownLink<Models.Entities.SkillAction>("Coerce", SkillActions.Instances.Coerce.ID)} a creature in the midst of combat, or without engaging in a conversation." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

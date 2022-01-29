@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d8a75139-926b-4f4b-86e2-482c963d4411"), Type = TextBlockType.Text, Text = "You emit a powerful surge of instinctual energy when you unleash your potential. Each adjacent creature takes damage equal to your level (basic Fortitude save against your class DC) of the same type as your additional damage during that (action: Rage)." };
+            yield return new TextBlock { Id = Guid.Parse("d8a75139-926b-4f4b-86e2-482c963d4411"), Type = TextBlockType.Text, Text = $"You emit a powerful surge of instinctual energy when you unleash your potential. Each adjacent creature takes damage equal to your level (basic Fortitude save against your class DC) of the same type as your additional damage during that {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

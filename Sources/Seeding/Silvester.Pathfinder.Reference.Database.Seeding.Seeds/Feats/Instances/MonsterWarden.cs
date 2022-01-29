@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9bf9dbd3-7bb7-4ff1-bad4-6517f79c0619"), Type = TextBlockType.Text, Text = "You understand how to defend yourself and others against your prey. When you grant bonuses from (feat: Monster Hunter), you and your allies also each gain a +1 circumstance bonus to your next saving throw against that particular creature and to your AC against that creature's next attack against you." };
+            yield return new TextBlock { Id = Guid.Parse("9bf9dbd3-7bb7-4ff1-bad4-6517f79c0619"), Type = TextBlockType.Text, Text = $"You understand how to defend yourself and others against your prey. When you grant bonuses from {ToMarkdownLink<Models.Entities.Feat>("Monster Hunter", Feats.Instances.MonsterHunter.ID)}, you and your allies also each gain a +1 circumstance bonus to your next saving throw against that particular creature and to your AC against that creature's next attack against you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

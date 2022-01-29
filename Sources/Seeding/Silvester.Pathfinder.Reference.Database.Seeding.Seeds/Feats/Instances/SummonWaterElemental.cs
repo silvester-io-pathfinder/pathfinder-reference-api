@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9da50b3b-7a46-48db-8219-c6db3fd796e2"), Type = TextBlockType.Text, Text = "You can summon an elemental ally. Once per day, you can cast (spell: summon elemental) as a 5th-level primal innate spell, but the elemental summoned must be a (trait: water) elemental." };
+            yield return new TextBlock { Id = Guid.Parse("9da50b3b-7a46-48db-8219-c6db3fd796e2"), Type = TextBlockType.Text, Text = $"You can summon an elemental ally. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("summon elemental", Spells.Instances.SummonElemental.ID)} as a 5th-level primal innate spell, but the elemental summoned must be a {ToMarkdownLink<Models.Entities.Trait>("water", Traits.Instances.Water.ID)} elemental." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

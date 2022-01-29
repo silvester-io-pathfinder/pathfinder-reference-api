@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bead3396-9476-45ac-9d04-3cdfc486b8d7"), Type = TextBlockType.Text, Text = "While in (feat: Ricochet Stance), you can bounce a thrown weapon off a foe to distract them. You can attempt a (action: Feint) against a creature within the first range increment of a thrown weapon you are wielding, rather than only creatures within your melee reach." };
+            yield return new TextBlock { Id = Guid.Parse("bead3396-9476-45ac-9d04-3cdfc486b8d7"), Type = TextBlockType.Text, Text = $"While in {ToMarkdownLink<Models.Entities.Feat>("Ricochet Stance", Feats.Instances.RicochetStance.ID)}, you can bounce a thrown weapon off a foe to distract them. You can attempt a {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)} against a creature within the first range increment of a thrown weapon you are wielding, rather than only creatures within your melee reach." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

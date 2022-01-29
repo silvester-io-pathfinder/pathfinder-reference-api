@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("50fa0e97-f77d-4162-a59e-d7a02367150a"), Type = TextBlockType.Text, Text = "Additional sensory devices give your innovation low-light vision and darkvision, as well as imprecise tremorsense out to a range of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("50fa0e97-f77d-4162-a59e-d7a02367150a"), Type = TextBlockType.Text, Text = $"Additional sensory devices give your innovation low-light vision and darkvision, as well as imprecise tremorsense out to a range of 30 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

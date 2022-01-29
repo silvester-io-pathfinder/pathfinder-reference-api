@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8834a3b4-342d-4b17-a727-8c67d17aab4f"), Type = TextBlockType.Text, Text = "You laugh innocently about the inexplicable luck of your last shot hitting its mark or how close the attack that just missed you came to taking your head off, causing your foes to second guess whether it's a good idea to oppose you in battle. Attempt to (action: Demoralize) either the foe you hit with (feat: Accidental Shot) or the foe that missed you due to (feat: Lucky Escape). You use Deception instead of Intimidation to attempt the check to (action: Demoralize)." };
+            yield return new TextBlock { Id = Guid.Parse("8834a3b4-342d-4b17-a727-8c67d17aab4f"), Type = TextBlockType.Text, Text = $"You laugh innocently about the inexplicable luck of your last shot hitting its mark or how close the attack that just missed you came to taking your head off, causing your foes to second guess whether it's a good idea to oppose you in battle. Attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)} either the foe you hit with {ToMarkdownLink<Models.Entities.Feat>("Accidental Shot", Feats.Instances.AccidentalShot.ID)} or the foe that missed you due to {ToMarkdownLink<Models.Entities.Feat>("Lucky Escape", Feats.Instances.LuckyEscape.ID)}. You use Deception instead of Intimidation to attempt the check to {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

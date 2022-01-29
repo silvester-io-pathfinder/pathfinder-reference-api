@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b06663a6-3401-473b-872f-9722176dfb9f"), Type = TextBlockType.Text, Text = "After some time of acclimating to a stressful situation, your psychic magic flares to greater destructive power." };
-            yield return new TextBlock { Id = Guid.Parse("b73a65eb-b679-4f01-b1ed-3c6be06a8adc"), Type = TextBlockType.Text, Text = "~ Benefit: When you (action: Cast a Spell) from your spell slots while you have Unleashed Focused Intent, you gain a status bonus to that spell's damage equal to double the spell's level as long as spell deals damage and doesn't have a duration." };
-            yield return new TextBlock { Id = Guid.Parse("82b4d858-f557-4480-acbb-6599c7212fa6"), Type = TextBlockType.Text, Text = "~ Drawback: The focus on offense comes at the expense of your defensive instincts. You take a –2 penalty to AC while you've Unleashed Focused Intent." };
+            yield return new TextBlock { Id = Guid.Parse("b06663a6-3401-473b-872f-9722176dfb9f"), Type = TextBlockType.Text, Text = $"After some time of acclimating to a stressful situation, your psychic magic flares to greater destructive power." };
+            yield return new TextBlock { Id = Guid.Parse("b73a65eb-b679-4f01-b1ed-3c6be06a8adc"), Type = TextBlockType.Text, Text = $"~ Benefit: When you {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)} from your spell slots while you have Unleashed Focused Intent, you gain a status bonus to that spell's damage equal to double the spell's level as long as spell deals damage and doesn't have a duration." };
+            yield return new TextBlock { Id = Guid.Parse("82b4d858-f557-4480-acbb-6599c7212fa6"), Type = TextBlockType.Text, Text = $"~ Drawback: The focus on offense comes at the expense of your defensive instincts. You take a –2 penalty to AC while you've Unleashed Focused Intent." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

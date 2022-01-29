@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c01b8d9f-2539-4418-925d-93804d7ca6ba"), Type = TextBlockType.Text, Text = "You reposition foes with raking attacks. Make a lashing branch (action: Strike). If you hit and deal damage, you force the target to move 5 feet into a space within your reach. This follows the forced movement rules found on page 475." };
+            yield return new TextBlock { Id = Guid.Parse("c01b8d9f-2539-4418-925d-93804d7ca6ba"), Type = TextBlockType.Text, Text = $"You reposition foes with raking attacks. Make a lashing branch {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If you hit and deal damage, you force the target to move 5 feet into a space within your reach. This follows the forced movement rules found on page 475." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

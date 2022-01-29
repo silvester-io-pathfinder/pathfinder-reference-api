@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("65daf6ab-4235-4beb-908d-dc3b694f03a6"), Type = TextBlockType.Text, Text = "You have seen people from so many walks of life in your travels that you naturally adopt a pleasant and affable demeanor when meeting others. You are trained in Diplomacy. If you would automatically become trained in Diplomacy (from your background or class, for example), you instead become trained in a skill of your choice." };
-            yield return new TextBlock { Id = Guid.Parse("82cda2e8-6480-436b-b861-c6e638c56c20"), Type = TextBlockType.Text, Text = "In addition, you gain the (feat: Hobnobber) skill feat." };
+            yield return new TextBlock { Id = Guid.Parse("65daf6ab-4235-4beb-908d-dc3b694f03a6"), Type = TextBlockType.Text, Text = $"You have seen people from so many walks of life in your travels that you naturally adopt a pleasant and affable demeanor when meeting others. You are trained in Diplomacy. If you would automatically become trained in Diplomacy (from your background or class, for example), you instead become trained in a skill of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("82cda2e8-6480-436b-b861-c6e638c56c20"), Type = TextBlockType.Text, Text = $"In addition, you gain the {ToMarkdownLink<Models.Entities.Feat>("Hobnobber", Feats.Instances.Hobnobber.ID)} skill feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

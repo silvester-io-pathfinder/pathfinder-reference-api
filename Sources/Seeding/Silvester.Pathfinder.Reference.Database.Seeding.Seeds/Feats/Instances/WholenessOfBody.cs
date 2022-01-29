@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3d1f52d5-5736-4af5-a27e-e5c9a8cfd6f6"), Type = TextBlockType.Text, Text = "You can restore your health by tapping into your ki. You gain the (spell: wholeness of body) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("3d1f52d5-5736-4af5-a27e-e5c9a8cfd6f6"), Type = TextBlockType.Text, Text = $"You can restore your health by tapping into your ki. You gain the {ToMarkdownLink<Models.Entities.Spell>("wholeness of body", Spells.Instances.WholenessOfBody.ID)} ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

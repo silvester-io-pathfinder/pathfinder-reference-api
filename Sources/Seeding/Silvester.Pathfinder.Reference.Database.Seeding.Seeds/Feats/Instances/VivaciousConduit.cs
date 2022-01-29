@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e9376c53-e6b9-434e-b4a9-bdee49bd4912"), Type = TextBlockType.Text, Text = "Your connection to the First World has grown, and its positive energy flows into you rapidly. If you rest for 10 minutes, you gain Hit Points equal to your Constitution modifier &#215; half your level. This is cumulative with any healing you receive from (action: Treat Wounds)." };
+            yield return new TextBlock { Id = Guid.Parse("e9376c53-e6b9-434e-b4a9-bdee49bd4912"), Type = TextBlockType.Text, Text = $"Your connection to the First World has grown, and its positive energy flows into you rapidly. If you rest for 10 minutes, you gain Hit Points equal to your Constitution modifier &#215; half your level. This is cumulative with any healing you receive from {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

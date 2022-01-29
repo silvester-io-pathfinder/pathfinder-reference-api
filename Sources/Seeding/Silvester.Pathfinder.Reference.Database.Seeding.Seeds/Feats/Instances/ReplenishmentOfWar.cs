@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("307016ef-23b1-426a-b0db-e7e5d23eadd1"), Type = TextBlockType.Text, Text = "Striking out against your enemies draws praise and protection from your deity. When you damage a creature with a (action: Strike) using your deity's favored weapon, you gain a number of temporary Hit Points equal to half your level, or equal to your level if the (action: Strike) was a critical hit. These temporary Hit Points last until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("307016ef-23b1-426a-b0db-e7e5d23eadd1"), Type = TextBlockType.Text, Text = $"Striking out against your enemies draws praise and protection from your deity. When you damage a creature with a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} using your deity's favored weapon, you gain a number of temporary Hit Points equal to half your level, or equal to your level if the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} was a critical hit. These temporary Hit Points last until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

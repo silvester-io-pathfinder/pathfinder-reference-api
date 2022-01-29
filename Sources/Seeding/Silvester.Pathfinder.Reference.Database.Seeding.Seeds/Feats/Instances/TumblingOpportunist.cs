@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0549c5c9-4e08-45af-a100-747147cf0ba2"), Type = TextBlockType.Text, Text = "You use a burst of stamina to perform a breathtaking feat of Acrobatics as you speed through a foe's space, leaving your foe lying flat on their back. You attempt to (action: Trip) the enemy whose space you moved through. You can use Acrobatics instead of Athletics for this check." };
+            yield return new TextBlock { Id = Guid.Parse("0549c5c9-4e08-45af-a100-747147cf0ba2"), Type = TextBlockType.Text, Text = $"You use a burst of stamina to perform a breathtaking feat of Acrobatics as you speed through a foe's space, leaving your foe lying flat on their back. You attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} the enemy whose space you moved through. You can use Acrobatics instead of Athletics for this check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

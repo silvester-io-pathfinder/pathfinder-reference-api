@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("80f48813-e78b-465c-888f-b1499492ff90"), Type = TextBlockType.Text, Text = "You cease aging. In addition, you gain a +2 status bonus to saving throws against poisons and diseases, and you gain resistance to poison damage equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("80f48813-e78b-465c-888f-b1499492ff90"), Type = TextBlockType.Text, Text = $"You cease aging. In addition, you gain a +2 status bonus to saving throws against poisons and diseases, and you gain resistance to poison damage equal to half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

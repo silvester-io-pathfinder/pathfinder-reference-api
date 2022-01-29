@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0f0d0f63-574b-4048-8a7b-59eacf2412a8"), Type = TextBlockType.Text, Text = "You gain the (feat: Terrain Stalker) skill feat twice, choosing a different terrain each time. If you (action: Avoid Notice) while exploring and any allies use (action: Follow the Expert) to follow you as you do so, you can choose one of those allies to gain the benefit of any one (feat: Terrain Stalker) feat you have." };
+            yield return new TextBlock { Id = Guid.Parse("0f0d0f63-574b-4048-8a7b-59eacf2412a8"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Feat>("Terrain Stalker", Feats.Instances.TerrainStalker.ID)} skill feat twice, choosing a different terrain each time. If you {ToMarkdownLink<Models.Entities.Activity>("Avoid Notice", Activities.Instances.AvoidNotice.ID)} while exploring and any allies use {ToMarkdownLink<Models.Entities.Activity>("Follow the Expert", Activities.Instances.FollowTheExpert.ID)} to follow you as you do so, you can choose one of those allies to gain the benefit of any one {ToMarkdownLink<Models.Entities.Feat>("Terrain Stalker", Feats.Instances.TerrainStalker.ID)} feat you have." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

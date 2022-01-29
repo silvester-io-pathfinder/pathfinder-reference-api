@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d36f495b-8b90-4133-8153-93c00924cec6"), Type = TextBlockType.Text, Text = "Thanks to magic and muscle memory, you can stay in your alternate forms indefinitely; you may have even forgotten your original form. When you use (Feat: Form Control), instead of lasting 1 hour, (Spell: wild shape) is permanent until you (Activity: Dismiss) it." };
+            yield return new TextBlock { Id = Guid.Parse("d36f495b-8b90-4133-8153-93c00924cec6"), Type = TextBlockType.Text, Text = $"Thanks to magic and muscle memory, you can stay in your alternate forms indefinitely; you may have even forgotten your original form. When you use {ToMarkdownLink<Models.Entities.Feat>("Form Control", Feats.Instances.FormControl.ID)}, instead of lasting 1 hour, {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)} is permanent until you {ToMarkdownLink<Models.Entities.Action>("Dismiss", Actions.Instances.Dismiss.ID)} it." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

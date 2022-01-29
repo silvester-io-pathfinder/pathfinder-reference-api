@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("08746e15-7d90-4db4-92c4-0f54b656364c"), Type = TextBlockType.Text, Text = "You steep yourself in superstition and practice ancient orc mental exercises for shrugging off the effects of magic. You gain a +1 circumstance bonus to saving throws against spells and magical effects at all times." };
+            yield return new TextBlock { Id = Guid.Parse("08746e15-7d90-4db4-92c4-0f54b656364c"), Type = TextBlockType.Text, Text = $"You steep yourself in superstition and practice ancient orc mental exercises for shrugging off the effects of magic. You gain a +1 circumstance bonus to saving throws against spells and magical effects at all times." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

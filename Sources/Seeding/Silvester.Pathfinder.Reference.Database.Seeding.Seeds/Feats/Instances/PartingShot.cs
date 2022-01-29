@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d63cfb2c-ca7d-4ca7-ab5e-e3fd617fbfd2"), Type = TextBlockType.Text, Text = "You jump back and fire a quick shot that catches your opponent off guard. You (action: Step) and then make a ranged (action: Strike) with the required weapon. Your target is flat-footed against the attack." };
+            yield return new TextBlock { Id = Guid.Parse("d63cfb2c-ca7d-4ca7-ab5e-e3fd617fbfd2"), Type = TextBlockType.Text, Text = $"You jump back and fire a quick shot that catches your opponent off guard. You {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} and then make a ranged {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with the required weapon. Your target is flat-footed against the attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

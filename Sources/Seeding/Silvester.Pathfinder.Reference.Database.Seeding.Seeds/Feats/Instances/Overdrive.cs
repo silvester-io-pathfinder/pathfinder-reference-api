@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("00baea45-0941-43ff-9a13-9917831c3cb8"), Type = TextBlockType.Text, Text = "Temporarily cranking the gizmos on your body into overdrive, you try to add greater power to your attacks. Attempt a Crafting check that has a standard DC for your level." };
+            yield return new TextBlock { Id = Guid.Parse("00baea45-0941-43ff-9a13-9917831c3cb8"), Type = TextBlockType.Text, Text = $"Temporarily cranking the gizmos on your body into overdrive, you try to add greater power to your attacks. Attempt a Crafting check that has a standard DC for your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

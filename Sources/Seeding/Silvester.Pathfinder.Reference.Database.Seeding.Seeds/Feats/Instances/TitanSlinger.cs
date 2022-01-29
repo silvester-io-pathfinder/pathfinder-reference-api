@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81f2c412-3aba-4909-b77f-4ed690f25498"), Type = TextBlockType.Text, Text = "You have learned how to use your sling to fell enormous creatures. When you hit on an attack with a (item: sling) against a Large or larger creature, increase the size of the weapon damage die by one step (details on increasing weapon damage die sizes can be found on page 279)." };
+            yield return new TextBlock { Id = Guid.Parse("81f2c412-3aba-4909-b77f-4ed690f25498"), Type = TextBlockType.Text, Text = $"You have learned how to use your sling to fell enormous creatures. When you hit on an attack with a {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("sling", Items.RangedWeapons.Instances.Sling.ID)} against a Large or larger creature, increase the size of the weapon damage die by one step (details on increasing weapon damage die sizes can be found on page 279)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

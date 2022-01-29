@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("205af745-487f-493a-a251-3609be38b174"), Type = TextBlockType.Text, Text = "Years toiling in soil have made you an expert digger. You gain a burrow Speed of 10 feet through loose soil or dirt." };
+            yield return new TextBlock { Id = Guid.Parse("205af745-487f-493a-a251-3609be38b174"), Type = TextBlockType.Text, Text = $"Years toiling in soil have made you an expert digger. You gain a burrow Speed of 10 feet through loose soil or dirt." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

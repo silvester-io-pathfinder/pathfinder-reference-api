@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("016fbe82-877c-4ad2-b409-d14d515c479c"), Type = TextBlockType.Text, Text = "You call forth protective spirits to ward off ranged attacks. Until your rage ends, anyone making a ranged attack against you must succeed at a DC 5 flat check or the attack misses with no effect." };
+            yield return new TextBlock { Id = Guid.Parse("016fbe82-877c-4ad2-b409-d14d515c479c"), Type = TextBlockType.Text, Text = $"You call forth protective spirits to ward off ranged attacks. Until your rage ends, anyone making a ranged attack against you must succeed at a DC 5 flat check or the attack misses with no effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

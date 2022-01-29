@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cc952db4-8376-4c0e-aba2-45ba89ea5d9f"), Type = TextBlockType.Text, Text = "You roar in pain, awakening the rage within you. You (Action: Rage)." };
+            yield return new TextBlock { Id = Guid.Parse("cc952db4-8376-4c0e-aba2-45ba89ea5d9f"), Type = TextBlockType.Text, Text = $"You roar in pain, awakening the rage within you. You {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

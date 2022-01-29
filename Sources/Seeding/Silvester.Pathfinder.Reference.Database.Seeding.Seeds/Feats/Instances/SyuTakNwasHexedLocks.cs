@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fad9e1dc-29d4-4b96-96da-c453060f72db"), Type = TextBlockType.Text, Text = "Your hair unarmed attack gains the (trait: reach) trait. You can deliver hexes through your hair. When you successfully cast a hex focus spell that requires 2 or more actions to cast and that doesn't require a spell attack roll, if your target is within your reach, as part of the spellcasting activity you can make a hair (action: Strike) against the foe before applying any effects of the hex. If this (action: Strike) misses, the hex has no effect." };
+            yield return new TextBlock { Id = Guid.Parse("fad9e1dc-29d4-4b96-96da-c453060f72db"), Type = TextBlockType.Text, Text = $"Your hair unarmed attack gains the {ToMarkdownLink<Models.Entities.Trait>("reach", Traits.Instances.Reach.ID)} trait. You can deliver hexes through your hair. When you successfully cast a hex focus spell that requires 2 or more actions to cast and that doesn't require a spell attack roll, if your target is within your reach, as part of the spellcasting activity you can make a hair {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against the foe before applying any effects of the hex. If this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} misses, the hex has no effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

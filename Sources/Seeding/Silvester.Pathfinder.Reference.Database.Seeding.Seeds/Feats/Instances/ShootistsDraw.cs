@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2bb35e14-1cb2-4b06-8a6f-40c4c88fd207"), Type = TextBlockType.Text, Text = "You (action: Interact) to draw a (item: hand crossbow) and (action: Strike) with it, or you (action: Strike) with a loaded (item: hand crossbow) you're already holding and then (action: Interact) to stow it." };
+            yield return new TextBlock { Id = Guid.Parse("2bb35e14-1cb2-4b06-8a6f-40c4c88fd207"), Type = TextBlockType.Text, Text = $"You {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw a {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("hand crossbow", Items.RangedWeapons.Instances.HandCrossbow.ID)} and {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with it, or you {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a loaded {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("hand crossbow", Items.RangedWeapons.Instances.HandCrossbow.ID)} you're already holding and then {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to stow it." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

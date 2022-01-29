@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0fb28957-a365-4095-918c-8194fc829b02"), Type = TextBlockType.Text, Text = "You replace your initial bloodline spell with the initial earth elemental focus spell ((spell: crushing ground)), and your advanced bloodline spell (if you get it) with the advanced earth elemental focus spell ((spell: stone lance))." };
-            yield return new TextBlock { Id = Guid.Parse("2dc20f7b-0891-41c0-a49c-35ad4b8beee0"), Type = TextBlockType.Text, Text = "You can only select this option if your bloodline's elemental type is earth." };
+            yield return new TextBlock { Id = Guid.Parse("0fb28957-a365-4095-918c-8194fc829b02"), Type = TextBlockType.Text, Text = $"You replace your initial bloodline spell with the initial earth elemental focus spell ({ToMarkdownLink<Models.Entities.Spell>("crushing ground", Spells.Instances.CrushingGround.ID)}), and your advanced bloodline spell (if you get it) with the advanced earth elemental focus spell ({ToMarkdownLink<Models.Entities.Spell>("stone lance", Spells.Instances.StoneLance.ID)})." };
+            yield return new TextBlock { Id = Guid.Parse("2dc20f7b-0891-41c0-a49c-35ad4b8beee0"), Type = TextBlockType.Text, Text = $"You can only select this option if your bloodline's elemental type is earth." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

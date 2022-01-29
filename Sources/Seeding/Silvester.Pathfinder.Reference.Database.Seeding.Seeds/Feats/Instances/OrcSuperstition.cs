@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0d8421d7-d96e-4c20-a2c7-40baa5f83277"), Type = TextBlockType.Text, Text = "You defend yourself against magic by relying on techniques derived from orc cultural superstitions. You gain a +1 circumstance bonus to your saving throw against the triggering spell or magical effect." };
+            yield return new TextBlock { Id = Guid.Parse("0d8421d7-d96e-4c20-a2c7-40baa5f83277"), Type = TextBlockType.Text, Text = $"You defend yourself against magic by relying on techniques derived from orc cultural superstitions. You gain a +1 circumstance bonus to your saving throw against the triggering spell or magical effect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

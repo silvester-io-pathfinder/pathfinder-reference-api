@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eae7cf14-6d0b-4b1e-a37b-986b32017626"), Type = TextBlockType.Text, Text = "When you focus your eyes carefully, your gaze can pierce through all obfuscations, even magical ones. When you use True Gaze, you gain the effects of a 6th-level (spell: true seeing) spell, using your Perception modifier for the counteract check." };
+            yield return new TextBlock { Id = Guid.Parse("eae7cf14-6d0b-4b1e-a37b-986b32017626"), Type = TextBlockType.Text, Text = $"When you focus your eyes carefully, your gaze can pierce through all obfuscations, even magical ones. When you use True Gaze, you gain the effects of a 6th-level {ToMarkdownLink<Models.Entities.Spell>("true seeing", Spells.Instances.TrueSeeing.ID)} spell, using your Perception modifier for the counteract check." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eece99e9-8595-4cb0-a457-ae1fdadbbc9e"), Type = TextBlockType.Text, Text = "You have encased your armor in robust plating. While wearing your armor, you gain resistance to slashing damage equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("eece99e9-8595-4cb0-a457-ae1fdadbbc9e"), Type = TextBlockType.Text, Text = $"You have encased your armor in robust plating. While wearing your armor, you gain resistance to slashing damage equal to half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

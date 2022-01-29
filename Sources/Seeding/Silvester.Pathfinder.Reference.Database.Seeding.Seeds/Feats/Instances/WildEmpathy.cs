@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eefad9d4-1589-40d0-bd5a-dca74d95a4c1"), Type = TextBlockType.Text, Text = "You have a connection to the creatures of the natural world that allows you to communicate with them on a rudimentary level. You can use Diplomacy to (action: Make an Impression) on animals and to make very simple (action: Requests | Request) of them. In most cases, wild animals will give you time to make your case." };
+            yield return new TextBlock { Id = Guid.Parse("eefad9d4-1589-40d0-bd5a-dca74d95a4c1"), Type = TextBlockType.Text, Text = $"You have a connection to the creatures of the natural world that allows you to communicate with them on a rudimentary level. You can use Diplomacy to {ToMarkdownLink<Models.Entities.SkillAction>("Make an Impression", SkillActions.Instances.MakeAnImpression.ID)} on animals and to make very simple {ToMarkdownLink<Models.Entities.SkillAction>("Requests", SkillActions.Instances.Request.ID)} of them. In most cases, wild animals will give you time to make your case." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92899c16-4d92-4b2a-8a59-81a67e2755ce"), Type = TextBlockType.Text, Text = "A clever parry with one weapon leaves your opponent open to an attack with the other weapon. Make a melee (action: Strike) or use a (action: Disarm) action against the triggering opponent." };
+            yield return new TextBlock { Id = Guid.Parse("92899c16-4d92-4b2a-8a59-81a67e2755ce"), Type = TextBlockType.Text, Text = $"A clever parry with one weapon leaves your opponent open to an attack with the other weapon. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} or use a {ToMarkdownLink<Models.Entities.SkillAction>("Disarm", SkillActions.Instances.Disarm.ID)} action against the triggering opponent." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

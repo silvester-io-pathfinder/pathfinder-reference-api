@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c5e23e9-42c3-4377-a68a-5b04ff09af14"), Type = TextBlockType.Text, Text = "You are adept at using the unusual resonance of your wayfinder to aid in any deceptions you might employ. Once per day you can activate your (item: wayfinder) to cast (spell: illusory disguise), heightened to 2nd level, as an arcane spell." };
-            yield return new TextBlock { Id = Guid.Parse("78b014a1-4da6-4b04-9afe-647454c15aff"), Type = TextBlockType.Text, Text = "Additionally, once per day, you can activate your (item: wayfinder) with a single-action envision activation to transform it into a perfect replica of another similarly sized badge of membership or office, such as an Aspis Consortium badge. This transformation lasts for 1 hour." };
+            yield return new TextBlock { Id = Guid.Parse("9c5e23e9-42c3-4377-a68a-5b04ff09af14"), Type = TextBlockType.Text, Text = $"You are adept at using the unusual resonance of your wayfinder to aid in any deceptions you might employ. Once per day you can activate your {ToMarkdownLink<Models.Items.Instances.WornItem>("wayfinder", Items.WornItems.Instances.Wayfinder.ID)} to cast {ToMarkdownLink<Models.Entities.Spell>("illusory disguise", Spells.Instances.IllusoryDisguise.ID)}, heightened to 2nd level, as an arcane spell." };
+            yield return new TextBlock { Id = Guid.Parse("78b014a1-4da6-4b04-9afe-647454c15aff"), Type = TextBlockType.Text, Text = $"Additionally, once per day, you can activate your {ToMarkdownLink<Models.Items.Instances.WornItem>("wayfinder", Items.WornItems.Instances.Wayfinder.ID)} with a single-action envision activation to transform it into a perfect replica of another similarly sized badge of membership or office, such as an Aspis Consortium badge. This transformation lasts for 1 hour." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

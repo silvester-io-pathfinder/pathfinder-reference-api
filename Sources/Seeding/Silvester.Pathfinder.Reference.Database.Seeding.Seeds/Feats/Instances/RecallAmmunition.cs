@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9a4b367-9f2f-4dfe-9e9a-5f8af7a9b0d0"), Type = TextBlockType.Text, Text = "You amplify the connection between bullet and firearm, calling your missed shot back into your gun. The ammunition you just fired is reloaded back into your gun and immediately ready to fire again." };
+            yield return new TextBlock { Id = Guid.Parse("b9a4b367-9f2f-4dfe-9e9a-5f8af7a9b0d0"), Type = TextBlockType.Text, Text = $"You amplify the connection between bullet and firearm, calling your missed shot back into your gun. The ammunition you just fired is reloaded back into your gun and immediately ready to fire again." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

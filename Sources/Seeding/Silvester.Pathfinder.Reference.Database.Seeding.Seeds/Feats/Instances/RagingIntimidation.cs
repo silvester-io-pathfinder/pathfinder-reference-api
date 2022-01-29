@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3c8051fa-c4d2-4569-a20d-bdcd0d6f464d"), Type = TextBlockType.Text, Text = "Your fury fills your foes with fear. While you are raging, your (Action: Demoralize) and (Feat: Scare to Death) actions gain the (trait: rage) trait, allowing you to use them while raging. As soon as you meet the prerequisites for the skill feats (Feat: Intimidating Glare) and (Feat: Scare to Death), you gain these feats." };
+            yield return new TextBlock { Id = Guid.Parse("3c8051fa-c4d2-4569-a20d-bdcd0d6f464d"), Type = TextBlockType.Text, Text = $"Your fury fills your foes with fear. While you are raging, your {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Scare to Death", Feats.Instances.ScareToDeath.ID)} actions gain the {ToMarkdownLink<Models.Entities.Trait>("rage", Traits.Instances.Rage.ID)} trait, allowing you to use them while raging. As soon as you meet the prerequisites for the skill feats {ToMarkdownLink<Models.Entities.Feat>("Intimidating Glare", Feats.Instances.IntimidatingGlare.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Scare to Death", Feats.Instances.ScareToDeath.ID)}, you gain these feats." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

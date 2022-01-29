@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b3d8e1f9-2527-462e-97bf-189dc37044bb"), Type = TextBlockType.Text, Text = "You make your foes fall painfully when you trip them. When you successfully (action: Trip) a flat-footed foe, your target takes 1d6 bludgeoning damage. On a critical success, the target takes 1d6 bludgeoning damage plus your sneak attack damage." };
+            yield return new TextBlock { Id = Guid.Parse("b3d8e1f9-2527-462e-97bf-189dc37044bb"), Type = TextBlockType.Text, Text = $"You make your foes fall painfully when you trip them. When you successfully {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} a flat-footed foe, your target takes 1d6 bludgeoning damage. On a critical success, the target takes 1d6 bludgeoning damage plus your sneak attack damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

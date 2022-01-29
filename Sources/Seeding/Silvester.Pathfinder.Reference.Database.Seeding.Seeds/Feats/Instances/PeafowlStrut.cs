@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f1d55b4c-1afd-42be-93a0-8edc479b8880"), Type = TextBlockType.Text, Text = "You slowly move across the battlefield with dangerous grace. (action: Step) twice and then (action: Strike). The (action: Strike) must be made with the sword required by (feat: Peafowl Stance)." };
+            yield return new TextBlock { Id = Guid.Parse("f1d55b4c-1afd-42be-93a0-8edc479b8880"), Type = TextBlockType.Text, Text = $"You slowly move across the battlefield with dangerous grace. {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} twice and then {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. The {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} must be made with the sword required by {ToMarkdownLink<Models.Entities.Feat>("Peafowl Stance", Feats.Instances.PeafowlStance.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

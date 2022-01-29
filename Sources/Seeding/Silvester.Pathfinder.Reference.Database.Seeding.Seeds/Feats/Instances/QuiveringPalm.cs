@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8b7ed95d-d881-4bb6-8b09-6effc7e18219"), Type = TextBlockType.Text, Text = "Your strikes can kill foes. You gain the (spell: quivering palm) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("8b7ed95d-d881-4bb6-8b09-6effc7e18219"), Type = TextBlockType.Text, Text = $"Your strikes can kill foes. You gain the {ToMarkdownLink<Models.Entities.Spell>("quivering palm", Spells.Instances.QuiveringPalm.ID)} ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

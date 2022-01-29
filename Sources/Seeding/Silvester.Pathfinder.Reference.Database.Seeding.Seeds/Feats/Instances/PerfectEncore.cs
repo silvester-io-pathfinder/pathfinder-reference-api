@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4a71c9da-f3d4-4fa7-9805-d9ff15c19472"), Type = TextBlockType.Text, Text = "You develop another incredible creation. You gain an additional 10th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("4a71c9da-f3d4-4fa7-9805-d9ff15c19472"), Type = TextBlockType.Text, Text = $"You develop another incredible creation. You gain an additional 10th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

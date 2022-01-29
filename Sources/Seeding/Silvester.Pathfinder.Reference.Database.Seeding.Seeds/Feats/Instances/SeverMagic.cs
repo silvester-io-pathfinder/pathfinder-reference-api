@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("20e0e643-a3b4-4d86-b8f3-6b8f55814bde"), Type = TextBlockType.Text, Text = "You apply a frayed thread, a pinch of fulu ash, or a similar undone charm, and you swing to break a spell. Make a (action: Strike) against an enemy. If you hit and deal damage, you attempt to counteract a single spell active on the target (your choice). Your counteract level is equal to half your level (rounded up), and your counteract check modifier is equal to your class DC – 10." };
+            yield return new TextBlock { Id = Guid.Parse("20e0e643-a3b4-4d86-b8f3-6b8f55814bde"), Type = TextBlockType.Text, Text = $"You apply a frayed thread, a pinch of fulu ash, or a similar undone charm, and you swing to break a spell. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against an enemy. If you hit and deal damage, you attempt to counteract a single spell active on the target (your choice). Your counteract level is equal to half your level (rounded up), and your counteract check modifier is equal to your class DC – 10." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

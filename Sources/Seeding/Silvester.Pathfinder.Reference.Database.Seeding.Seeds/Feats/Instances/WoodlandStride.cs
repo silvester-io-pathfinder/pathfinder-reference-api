@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aa9557e9-5e30-40ad-b886-aa86bb3cca37"), Type = TextBlockType.Text, Text = "You can always find a path, almost as if foliage parted before you. You ignore any difficult terrain caused by plants, such as bushes, vines, and undergrowth. Even plants manipulated by magic don't impede your progress." };
+            yield return new TextBlock { Id = Guid.Parse("aa9557e9-5e30-40ad-b886-aa86bb3cca37"), Type = TextBlockType.Text, Text = $"You can always find a path, almost as if foliage parted before you. You ignore any difficult terrain caused by plants, such as bushes, vines, and undergrowth. Even plants manipulated by magic don't impede your progress." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

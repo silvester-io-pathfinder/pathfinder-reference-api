@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("217e4a52-cf7b-43f3-8232-75606014f459"), Type = TextBlockType.Text, Text = "The force of your blow sends your victim back to its home plane. You expend a (spell: banishment) spell you have prepared, affecting the creature you critically hit without needing to cast the spell. The creature can attempt to resist the spell as normal." };
+            yield return new TextBlock { Id = Guid.Parse("217e4a52-cf7b-43f3-8232-75606014f459"), Type = TextBlockType.Text, Text = $"The force of your blow sends your victim back to its home plane. You expend a {ToMarkdownLink<Models.Entities.Spell>("banishment", Spells.Instances.Banishment.ID)} spell you have prepared, affecting the creature you critically hit without needing to cast the spell. The creature can attempt to resist the spell as normal." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

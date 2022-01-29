@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6b1eb444-b0f4-4f50-9c09-a30a49f20fd7"), Type = TextBlockType.Text, Text = "Your sudden appearance leaves your foe unable to respond. When you use (feat: Startling Appearance), if your foe's level is equal to or lower than yours, they are also stunned 1 on a hit, or stunned 2 on a critical hit." };
+            yield return new TextBlock { Id = Guid.Parse("6b1eb444-b0f4-4f50-9c09-a30a49f20fd7"), Type = TextBlockType.Text, Text = $"Your sudden appearance leaves your foe unable to respond. When you use {ToMarkdownLink<Models.Entities.Feat>("Startling Appearance", Feats.Instances.StartlingAppearance.ID)}, if your foe's level is equal to or lower than yours, they are also stunned 1 on a hit, or stunned 2 on a critical hit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

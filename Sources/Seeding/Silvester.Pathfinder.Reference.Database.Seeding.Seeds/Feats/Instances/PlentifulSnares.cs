@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dfbf88f4-f761-44ad-ab94-ed87d6c4cd11"), Type = TextBlockType.Text, Text = "You can prepare incredible numbers of snares each day out of simple ingredients. Double the number of prepared snares granted by (feat: Snarecrafter Dedication)." };
+            yield return new TextBlock { Id = Guid.Parse("dfbf88f4-f761-44ad-ab94-ed87d6c4cd11"), Type = TextBlockType.Text, Text = $"You can prepare incredible numbers of snares each day out of simple ingredients. Double the number of prepared snares granted by {ToMarkdownLink<Models.Entities.Feat>("Snarecrafter Dedication", Feats.Instances.SnarecrafterDedication.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

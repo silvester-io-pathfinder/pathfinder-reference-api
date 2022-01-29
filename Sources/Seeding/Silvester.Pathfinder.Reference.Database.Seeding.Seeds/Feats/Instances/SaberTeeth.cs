@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("96fdb33e-16f1-4fea-959f-5684523c9f72"), Type = TextBlockType.Text, Text = "You have long fangs, natural or augmented. You gain a jaws unarmed attack that deals 1d6 piercing damage. Your jaws are in the brawling group and have the (trait: unarmed) trait." };
+            yield return new TextBlock { Id = Guid.Parse("96fdb33e-16f1-4fea-959f-5684523c9f72"), Type = TextBlockType.Text, Text = $"You have long fangs, natural or augmented. You gain a jaws unarmed attack that deals 1d6 piercing damage. Your jaws are in the brawling group and have the {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

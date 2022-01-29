@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27bf7a62-a84d-47dc-959c-0d9965f8219c"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
-            yield return new TextBlock { Id = Guid.Parse("516fcb69-b266-4825-ba41-d11833539c29"), Type = TextBlockType.Text, Text = "A special weighted device lets your weapon retain more of its momentum when you attack. Your innovation gains the (trait: forceful) and (trait: versatile B) traits." };
+            yield return new TextBlock { Id = Guid.Parse("27bf7a62-a84d-47dc-959c-0d9965f8219c"), Type = TextBlockType.Enumeration, Text = $"*Melee Only**" };
+            yield return new TextBlock { Id = Guid.Parse("516fcb69-b266-4825-ba41-d11833539c29"), Type = TextBlockType.Text, Text = $"A special weighted device lets your weapon retain more of its momentum when you attack. Your innovation gains the {ToMarkdownLink<Models.Entities.Trait>("forceful", Traits.Instances.Forceful.ID)} and {ToMarkdownLink<Models.Entities.Trait>("versatile B", Traits.Instances.Versatile.ID)} traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a363302-c52b-439b-a331-423e09b518dd"), Type = TextBlockType.Text, Text = "A lifetime of experience helps you see through disguises. When you come within 10 feet of a creature that is transformed into another form or is (action: Impersonating | Impersonate) a specific creature, the GM rolls a secret Perception check for you to realize that the creature is transformed, even if you didn't spend an action to (action: Seek) against that creature." };
+            yield return new TextBlock { Id = Guid.Parse("6a363302-c52b-439b-a331-423e09b518dd"), Type = TextBlockType.Text, Text = $"A lifetime of experience helps you see through disguises. When you come within 10 feet of a creature that is transformed into another form or is {ToMarkdownLink<Models.Entities.SkillAction>("Impersonating", SkillActions.Instances.Impersonate.ID)} a specific creature, the GM rolls a secret Perception check for you to realize that the creature is transformed, even if you didn't spend an action to {ToMarkdownLink<Models.Entities.Action>("Seek", Actions.Instances.Seek.ID)} against that creature." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

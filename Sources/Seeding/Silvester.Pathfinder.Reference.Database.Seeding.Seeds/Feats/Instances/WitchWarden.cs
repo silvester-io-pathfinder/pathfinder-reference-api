@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ff13619e-dc52-4d66-ac59-ecc4ef343fb2"), Type = TextBlockType.Text, Text = "~ Access: Kellid ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("4f98e087-4f11-4cb3-af35-4d311379c893"), Type = TextBlockType.Text, Text = "You and your family have fought long and hard against witches, particularly the winter witches of Irrisen, and you've learned to be wary of their curses and the otherworldly powers their patrons grant. You gain a +1 circumstance bonus to saving throws against curses, and to saving throws against spells cast by a witch or hag. If you roll a success on a saving throw against a curse or a spell cast by a witch or hag, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("ff13619e-dc52-4d66-ac59-ecc4ef343fb2"), Type = TextBlockType.Text, Text = $"~ Access: Kellid ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("4f98e087-4f11-4cb3-af35-4d311379c893"), Type = TextBlockType.Text, Text = $"You and your family have fought long and hard against witches, particularly the winter witches of Irrisen, and you've learned to be wary of their curses and the otherworldly powers their patrons grant. You gain a +1 circumstance bonus to saving throws against curses, and to saving throws against spells cast by a witch or hag. If you roll a success on a saving throw against a curse or a spell cast by a witch or hag, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

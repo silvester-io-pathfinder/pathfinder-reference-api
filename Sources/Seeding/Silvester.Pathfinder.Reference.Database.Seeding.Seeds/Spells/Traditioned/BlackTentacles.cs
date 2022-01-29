@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             return new Spell
             {
                 Id = ID,
-                Name = "Black Tentacle",
+                Name = "Black Tentacles",
                 Level = 5,
                 Range = "120 feet.",
                 Duration = "1 minute.",

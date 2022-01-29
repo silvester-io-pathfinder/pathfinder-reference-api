@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1b725ab2-7df3-4f7a-be61-72df7d589769"), Type = TextBlockType.Text, Text = "You quickly whirl your blade, trying to deflect enough momentum to avoid the worst of the attack. Attempt a DC 16 flat check. If you succeed, the attack becomes a normal hit, instead of a critical hit." };
+            yield return new TextBlock { Id = Guid.Parse("1b725ab2-7df3-4f7a-be61-72df7d589769"), Type = TextBlockType.Text, Text = $"You quickly whirl your blade, trying to deflect enough momentum to avoid the worst of the attack. Attempt a DC 16 flat check. If you succeed, the attack becomes a normal hit, instead of a critical hit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("77ffed67-c3dc-456a-95a6-52bf690cfbad"), Type = TextBlockType.Text, Text = "You've built triple redundancies into your innovation and added all sorts of buffers to protect it from the harm of your unstable experiments. You automatically succeed at the triggering flat check." };
-            yield return new TextBlock { Id = Guid.Parse("425cda7b-7b0d-4ace-b8a3-1a739969bb6b"), Type = TextBlockType.Text, Text = "You can't rely on your Unstable Redundancies again until you spend 10 minutes setting them back up. If you spend 10 minutes retuning your innovation so you can use (trait: unstable) actions again, you can set up your Unstable Redundancies during the same time." };
+            yield return new TextBlock { Id = Guid.Parse("77ffed67-c3dc-456a-95a6-52bf690cfbad"), Type = TextBlockType.Text, Text = $"You've built triple redundancies into your innovation and added all sorts of buffers to protect it from the harm of your unstable experiments. You automatically succeed at the triggering flat check." };
+            yield return new TextBlock { Id = Guid.Parse("425cda7b-7b0d-4ace-b8a3-1a739969bb6b"), Type = TextBlockType.Text, Text = $"You can't rely on your Unstable Redundancies again until you spend 10 minutes setting them back up. If you spend 10 minutes retuning your innovation so you can use {ToMarkdownLink<Models.Entities.Trait>("unstable", Traits.Instances.Unstable.ID)} actions again, you can set up your Unstable Redundancies during the same time." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

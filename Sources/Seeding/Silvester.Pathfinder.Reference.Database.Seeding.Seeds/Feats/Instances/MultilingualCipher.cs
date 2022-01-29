@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f8fd95da-b1e5-440d-91f8-408481bad3ff"), Type = TextBlockType.Text, Text = "You use multiple languages to create and break codes. You gain a +1 circumstance bonus to (action: Decipher Writing). If another creature attempts to (action: Decipher Writing) you encoded, they take a -2 circumstance penalty unless they speak all the languages you used when you created the writing." };
+            yield return new TextBlock { Id = Guid.Parse("f8fd95da-b1e5-440d-91f8-408481bad3ff"), Type = TextBlockType.Text, Text = $"You use multiple languages to create and break codes. You gain a +1 circumstance bonus to {ToMarkdownLink<Models.Entities.SkillAction>("Decipher Writing", SkillActions.Instances.DecipherWriting.ID)}. If another creature attempts to {ToMarkdownLink<Models.Entities.SkillAction>("Decipher Writing", SkillActions.Instances.DecipherWriting.ID)} you encoded, they take a -2 circumstance penalty unless they speak all the languages you used when you created the writing." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

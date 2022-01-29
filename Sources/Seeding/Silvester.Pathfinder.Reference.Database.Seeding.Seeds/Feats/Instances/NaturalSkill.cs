@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("53fbf1e4-fe8c-4336-bc63-d1cd489555cb"), Type = TextBlockType.Text, Text = "Your ingenuity allows you to learn a wide variety of skills. You gain the trained proficiency rank in two skills of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("53fbf1e4-fe8c-4336-bc63-d1cd489555cb"), Type = TextBlockType.Text, Text = $"Your ingenuity allows you to learn a wide variety of skills. You gain the trained proficiency rank in two skills of your choice." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

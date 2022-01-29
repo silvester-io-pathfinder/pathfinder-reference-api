@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fa280a09-6cba-41ce-bd99-92bc1493657a"), Type = TextBlockType.Text, Text = "You've constructed a multi-purpose, adjustable striking surface for your weapon, or you've made special ammunition you can swiftly alter. Your innovation gains the (trait: modular | modular B, P, or S) trait for bludgeoning, piercing, and slashing. When you (action: Interact) to use the (trait: modular) trait, you can also choose to give the weapon the (trait: nonlethal) trait if it doesn't currently have it, or to remove that trait if it's currently nonlethal." };
+            yield return new TextBlock { Id = Guid.Parse("fa280a09-6cba-41ce-bd99-92bc1493657a"), Type = TextBlockType.Text, Text = $"You've constructed a multi-purpose, adjustable striking surface for your weapon, or you've made special ammunition you can swiftly alter. Your innovation gains the {ToMarkdownLink<Models.Entities.Trait>("modular", Traits.Instances.Modular.ID)} (B, P, or S) trait for bludgeoning, piercing, and slashing. When you {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to use the {ToMarkdownLink<Models.Entities.Trait>("modular", Traits.Instances.Modular.ID)} trait, you can also choose to give the weapon the {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)} trait if it doesn't currently have it, or to remove that trait if it's currently nonlethal." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

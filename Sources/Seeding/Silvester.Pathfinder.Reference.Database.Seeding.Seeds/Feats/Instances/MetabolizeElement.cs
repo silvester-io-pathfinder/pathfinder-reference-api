@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("728f1149-4e78-427f-af5f-79bb8716c392"), Type = TextBlockType.Text, Text = "Your rapidly metabolize the elemental particles in your opponent's spell to gain a boost of energy. You gain the quickened condition until the end of your next turn. You can use the extra action only to (action: Step) or (action: Stride)." };
+            yield return new TextBlock { Id = Guid.Parse("728f1149-4e78-427f-af5f-79bb8716c392"), Type = TextBlockType.Text, Text = $"Your rapidly metabolize the elemental particles in your opponent's spell to gain a boost of energy. You gain the quickened condition until the end of your next turn. You can use the extra action only to {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} or {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

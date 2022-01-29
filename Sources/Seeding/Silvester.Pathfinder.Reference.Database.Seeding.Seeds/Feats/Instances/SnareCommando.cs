@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a5795f4-578d-40b5-a27a-9e47c0bdf688"), Type = TextBlockType.Text, Text = "Your snares are so befuddling that your victims rarely notice you slipping out of sight. If you have expert proficiency in Deception, you can (action: Create a Diversion) against the triggering creature. If you have expert proficiency in Intimidation, you can instead (action: Demoralize) the triggering creature. If you have both, choose one of the two effects." };
+            yield return new TextBlock { Id = Guid.Parse("5a5795f4-578d-40b5-a27a-9e47c0bdf688"), Type = TextBlockType.Text, Text = $"Your snares are so befuddling that your victims rarely notice you slipping out of sight. If you have expert proficiency in Deception, you can {ToMarkdownLink<Models.Entities.SkillAction>("Create a Diversion", SkillActions.Instances.CreateADiversion.ID)} against the triggering creature. If you have expert proficiency in Intimidation, you can instead {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)} the triggering creature. If you have both, choose one of the two effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4e13414d-dea7-4cf8-9009-cd35321824f2"), Type = TextBlockType.Text, Text = "You spend 10 minutes using techniques you've developed to calm your emotions and bring them back under control. This allows you to access your (feat: Catharsis) again." };
+            yield return new TextBlock { Id = Guid.Parse("4e13414d-dea7-4cf8-9009-cd35321824f2"), Type = TextBlockType.Text, Text = $"You spend 10 minutes using techniques you've developed to calm your emotions and bring them back under control. This allows you to access your {ToMarkdownLink<Models.Entities.Feat>("Catharsis", Feats.Instances.Catharsis.ID)} again." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c53a2fb9-4ac5-4a75-b7c0-af48d30b782f"), Type = TextBlockType.Text, Text = "You learn the (spell: symphony of the unfettered heart) composition spell, which enables you to protect an ally against incapacitating conditions." };
+            yield return new TextBlock { Id = Guid.Parse("c53a2fb9-4ac5-4a75-b7c0-af48d30b782f"), Type = TextBlockType.Text, Text = $"You learn the {ToMarkdownLink<Models.Entities.Spell>("symphony of the unfettered heart", Spells.Instances.SymphonyOfTheUnfetteredHeart.ID)} composition spell, which enables you to protect an ally against incapacitating conditions." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7d90d72b-3284-42bf-85e0-1fb90aa77b28"), Type = TextBlockType.Text, Text = "Your eidolon shares innate spells with you. You can cast the innate spells your eidolon gained from (feat: Magical Understudy), (feat: Magical Adept), and (feat: Magical Master). You and your eidolon share the same daily uses of these innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("7d90d72b-3284-42bf-85e0-1fb90aa77b28"), Type = TextBlockType.Text, Text = $"Your eidolon shares innate spells with you. You can cast the innate spells your eidolon gained from {ToMarkdownLink<Models.Entities.Feat>("Magical Understudy", Feats.Instances.MagicalUnderstudy.ID)}, {ToMarkdownLink<Models.Entities.Feat>("Magical Adept", Feats.Instances.MagicalAdept.ID)}, and {ToMarkdownLink<Models.Entities.Feat>("Magical Master", Feats.Instances.MagicalMaster.ID)}. You and your eidolon share the same daily uses of these innate spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

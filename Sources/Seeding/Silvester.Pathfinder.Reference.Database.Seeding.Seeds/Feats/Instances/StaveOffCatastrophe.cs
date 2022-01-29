@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("349a6588-6495-489e-a84b-068aa38278a4"), Type = TextBlockType.Text, Text = "You fully protect your allies from the worst blows. When you use the (feat: Shoulder Catastrophe) reaction, you can choose to take the full critical damage and effects from the attack, including effects that apply on a critical hit, and have your ally take no damage and avoid the attack's effects." };
+            yield return new TextBlock { Id = Guid.Parse("349a6588-6495-489e-a84b-068aa38278a4"), Type = TextBlockType.Text, Text = $"You fully protect your allies from the worst blows. When you use the {ToMarkdownLink<Models.Entities.Feat>("Shoulder Catastrophe", Feats.Instances.ShoulderCatastrophe.ID)} reaction, you can choose to take the full critical damage and effects from the attack, including effects that apply on a critical hit, and have your ally take no damage and avoid the attack's effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

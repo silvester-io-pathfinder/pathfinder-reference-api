@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb4dd606-3ada-4a4c-ae8d-316588c0d4c0"), Type = TextBlockType.Text, Text = "Your blood sings with the liberating power of the azatas, living embodiments of freedom from the wild realm of Elysium. You gain a +1 circumstance bonus to (action: Escape). When you roll a critical failure on a check to Escape, you get a failure instead, and when you roll a success, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("fb4dd606-3ada-4a4c-ae8d-316588c0d4c0"), Type = TextBlockType.Text, Text = $"Your blood sings with the liberating power of the azatas, living embodiments of freedom from the wild realm of Elysium. You gain a +1 circumstance bonus to {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)}. When you roll a critical failure on a check to Escape, you get a failure instead, and when you roll a success, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

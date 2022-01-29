@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4bba5c1d-5094-45df-8335-1b07ca78cbfd"), Type = TextBlockType.Text, Text = "You wear many faces, even those that don't belong to you. When you (action: Change Shape | Change Shape - Kitsune) into your tailless form, you gain the effects of 3rd-level (spell: illusory disguise) for 1 hour or until you shift back, except it's a (trait: transmutation) effect rather than an (trait: illusion)." };
+            yield return new TextBlock { Id = Guid.Parse("4bba5c1d-5094-45df-8335-1b07ca78cbfd"), Type = TextBlockType.Text, Text = $"You wear many faces, even those that don't belong to you. When you {ToMarkdownLink<Models.Entities.Feat>("Change Shape", Feats.Instances.ChangeShapeKitsune.ID)} into your tailless form, you gain the effects of 3rd-level {ToMarkdownLink<Models.Entities.Spell>("illusory disguise", Spells.Instances.IllusoryDisguise.ID)} for 1 hour or until you shift back, except it's a {ToMarkdownLink<Models.Entities.Trait>("transmutation", Traits.Instances.Transmutation.ID)} effect rather than an {ToMarkdownLink<Models.Entities.Trait>("illusion", Traits.Instances.Illusion.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

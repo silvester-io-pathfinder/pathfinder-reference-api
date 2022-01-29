@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("efce2ffb-0370-4251-89ca-179e34e99312"), Type = TextBlockType.Text, Text = "Your healing energies create an aura of protection that defends your allies against more than just blades and arrows. An ally that recovers Hit Points from your (spell: lay on hands) gains a +1 status bonus to their saving throws until the end of their next turn." };
+            yield return new TextBlock { Id = Guid.Parse("efce2ffb-0370-4251-89ca-179e34e99312"), Type = TextBlockType.Text, Text = $"Your healing energies create an aura of protection that defends your allies against more than just blades and arrows. An ally that recovers Hit Points from your {ToMarkdownLink<Models.Entities.Spell>("lay on hands", Spells.Instances.LayOnHands.ID)} gains a +1 status bonus to their saving throws until the end of their next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

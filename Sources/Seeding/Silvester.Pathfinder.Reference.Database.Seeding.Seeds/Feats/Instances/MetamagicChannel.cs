@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("844c2700-52fa-4a34-a626-8ccbac11514a"), Type = TextBlockType.Text, Text = "Deep understanding of divine revelations into the nature of vital essence allows you to freely manipulate the effects of your positive or negative energy. Use 1 metamagic action that you can perform that normally takes 1 action and can be applied to the (spell: harm) or (spell: heal) spell. If you use it in this way, its effects apply only to a (spell: harm) or (spell: heal) spell." };
+            yield return new TextBlock { Id = Guid.Parse("844c2700-52fa-4a34-a626-8ccbac11514a"), Type = TextBlockType.Text, Text = $"Deep understanding of divine revelations into the nature of vital essence allows you to freely manipulate the effects of your positive or negative energy. Use 1 metamagic action that you can perform that normally takes 1 action and can be applied to the {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} or {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} spell. If you use it in this way, its effects apply only to a {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} or {ToMarkdownLink<Models.Entities.Spell>("heal", Spells.Instances.Heal.ID)} spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

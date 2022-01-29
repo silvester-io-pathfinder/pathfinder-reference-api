@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dd2be4b8-f397-4521-afad-5512815ee6b4"), Type = TextBlockType.Text, Text = "You read the body language of an intelligent creature within 30 feet and pick up on subtle cues to detect its general propensity for good or evil and law or chaos. The GM rolls a secret Perception check, comparing the result against the target's Deception DC." };
+            yield return new TextBlock { Id = Guid.Parse("dd2be4b8-f397-4521-afad-5512815ee6b4"), Type = TextBlockType.Text, Text = $"You read the body language of an intelligent creature within 30 feet and pick up on subtle cues to detect its general propensity for good or evil and law or chaos. The GM rolls a secret Perception check, comparing the result against the target's Deception DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

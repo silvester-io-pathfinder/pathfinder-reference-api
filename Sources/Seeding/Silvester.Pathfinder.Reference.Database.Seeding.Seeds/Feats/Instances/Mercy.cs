@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ae54bb69-1b01-40da-b157-8698c54cedbd"), Type = TextBlockType.Text, Text = "Your touch relieves fear and restores movement. If the next action you use is to cast (spell: lay on hands), you can attempt to counteract a (spell: fear) effect or an effect imposing the paralyzed condition on the target, in addition to the other benefits of (spell: lay on hands)." };
+            yield return new TextBlock { Id = Guid.Parse("ae54bb69-1b01-40da-b157-8698c54cedbd"), Type = TextBlockType.Text, Text = $"Your touch relieves fear and restores movement. If the next action you use is to cast {ToMarkdownLink<Models.Entities.Spell>("lay on hands", Spells.Instances.LayOnHands.ID)}, you can attempt to counteract a {ToMarkdownLink<Models.Entities.Spell>("fear", Spells.Instances.Fear.ID)} effect or an effect imposing the paralyzed condition on the target, in addition to the other benefits of {ToMarkdownLink<Models.Entities.Spell>("lay on hands", Spells.Instances.LayOnHands.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

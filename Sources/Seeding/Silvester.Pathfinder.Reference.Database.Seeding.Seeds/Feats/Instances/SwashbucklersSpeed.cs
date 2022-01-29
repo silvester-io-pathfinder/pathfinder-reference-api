@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("729d2e41-0f49-431b-8dfc-3134b8aba258"), Type = TextBlockType.Text, Text = "You move faster, with or without panache. Increase the status bonus to your Speeds when you have panache to a +10-foot status bonus; you also gain a +5-foot status bonus to your Speeds when you don't have panache." };
+            yield return new TextBlock { Id = Guid.Parse("729d2e41-0f49-431b-8dfc-3134b8aba258"), Type = TextBlockType.Text, Text = $"You move faster, with or without panache. Increase the status bonus to your Speeds when you have panache to a +10-foot status bonus; you also gain a +5-foot status bonus to your Speeds when you don't have panache." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

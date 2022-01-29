@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad1005e2-69b6-4937-a75e-e413f67038b6"), Type = TextBlockType.Text, Text = "You take your time searching to ensure you find everything. When (action: Searching | Search), you can take twice as long to search. Normally this means you (action: Search) at up to one quarter of your Speed, to a maximum of 150 feet per minute to check everything, or 75 feet per minute to check everything before you walk into it. If you do, you gain a +2 circumstance bonus to your Perception checks to (action: Seek)." };
+            yield return new TextBlock { Id = Guid.Parse("ad1005e2-69b6-4937-a75e-e413f67038b6"), Type = TextBlockType.Text, Text = $"You take your time searching to ensure you find everything. When {ToMarkdownLink<Models.Entities.Activity>("Searching", Activities.Instances.Search.ID)}, you can take twice as long to search. Normally this means you {ToMarkdownLink<Models.Entities.Activity>("Search", Activities.Instances.Search.ID)} at up to one quarter of your Speed, to a maximum of 150 feet per minute to check everything, or 75 feet per minute to check everything before you walk into it. If you do, you gain a +2 circumstance bonus to your Perception checks to {ToMarkdownLink<Models.Entities.Action>("Seek", Actions.Instances.Seek.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

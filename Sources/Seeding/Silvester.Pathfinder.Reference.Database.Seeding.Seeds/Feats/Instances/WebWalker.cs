@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("77b49d1f-4774-40f4-a801-ac4e921608a4"), Type = TextBlockType.Text, Text = "You have plenty of practice navigating webs. You gain a +2 circumstance bonus to saves and AC against the (spell: web) spell, natural webbing, and effects that entrap you in webbing, as well as a +1 circumstance bonus against other effects that snare and entangle you, like the (spell: entangle) spell. Whenever you roll a success on a saving throw against an effect involving a web, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("77b49d1f-4774-40f4-a801-ac4e921608a4"), Type = TextBlockType.Text, Text = $"You have plenty of practice navigating webs. You gain a +2 circumstance bonus to saves and AC against the {ToMarkdownLink<Models.Entities.Spell>("web", Spells.Instances.Web.ID)} spell, natural webbing, and effects that entrap you in webbing, as well as a +1 circumstance bonus against other effects that snare and entangle you, like the {ToMarkdownLink<Models.Entities.Spell>("entangle", Spells.Instances.Entangle.ID)} spell. Whenever you roll a success on a saving throw against an effect involving a web, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

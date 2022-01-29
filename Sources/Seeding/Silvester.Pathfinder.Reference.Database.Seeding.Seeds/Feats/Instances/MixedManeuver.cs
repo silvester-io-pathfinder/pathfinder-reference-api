@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("444a9e0c-e068-4709-8b59-2c4a2002e3cb"), Type = TextBlockType.Text, Text = "You combine two different maneuvers together into a single flowing whole. Choose any two of (action: Grapple), (action: Shove), and (action: Trip). Attempt both of the attacks you chose against the same or different creatures, but don't apply the multiple attack penalty until after resolving both attacks." };
+            yield return new TextBlock { Id = Guid.Parse("444a9e0c-e068-4709-8b59-2c4a2002e3cb"), Type = TextBlockType.Text, Text = $"You combine two different maneuvers together into a single flowing whole. Choose any two of {ToMarkdownLink<Models.Entities.SkillAction>("Grapple", SkillActions.Instances.Grapple.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)}, and {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)}. Attempt both of the attacks you chose against the same or different creatures, but don't apply the multiple attack penalty until after resolving both attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

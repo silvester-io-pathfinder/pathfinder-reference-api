@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("15922fc5-19df-4534-868d-9b6dbdd33770"), Type = TextBlockType.Text, Text = "After stabbing your opponent in a weak spot, you tear the wound open. You deal persistent bleed damage to the target equal to your number of sneak attack damage dice." };
+            yield return new TextBlock { Id = Guid.Parse("15922fc5-19df-4534-868d-9b6dbdd33770"), Type = TextBlockType.Text, Text = $"After stabbing your opponent in a weak spot, you tear the wound open. You deal persistent bleed damage to the target equal to your number of sneak attack damage dice." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

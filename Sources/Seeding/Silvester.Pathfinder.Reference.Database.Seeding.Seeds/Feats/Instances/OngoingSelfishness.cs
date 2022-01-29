@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("df2a6cc1-006a-4274-bb3a-8b25ee6014f2"), Type = TextBlockType.Text, Text = "Your powerful personality and incredible ego demand that you protect yourself above all else. After you use (feat: Selfish Shield), you gain resistance to all further damage from the triggering enemy until the end of the turn on which you used the reaction. This resistance is equal to half your (feat: Selfish Shield) resistance." };
+            yield return new TextBlock { Id = Guid.Parse("df2a6cc1-006a-4274-bb3a-8b25ee6014f2"), Type = TextBlockType.Text, Text = $"Your powerful personality and incredible ego demand that you protect yourself above all else. After you use {ToMarkdownLink<Models.Entities.Feat>("Selfish Shield", Feats.Instances.SelfishShield.ID)}, you gain resistance to all further damage from the triggering enemy until the end of the turn on which you used the reaction. This resistance is equal to half your {ToMarkdownLink<Models.Entities.Feat>("Selfish Shield", Feats.Instances.SelfishShield.ID)} resistance." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

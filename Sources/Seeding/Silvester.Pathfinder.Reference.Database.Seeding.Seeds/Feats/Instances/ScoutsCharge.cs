@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("025e5039-5f6d-4b64-893f-94167eab6d92"), Type = TextBlockType.Text, Text = "You meander around unpredictably, and then ambush your opponents without warning. Choose one enemy. (action: Stride), (action: Feint) against that opponent, and then make a (action: Strike) against that foe. For your (action: Feint), you can attempt a Stealth check instead of the Deception check that's usually required, because you use the terrain around you to catch your foe off-guard." };
+            yield return new TextBlock { Id = Guid.Parse("025e5039-5f6d-4b64-893f-94167eab6d92"), Type = TextBlockType.Text, Text = $"You meander around unpredictably, and then ambush your opponents without warning. Choose one enemy. {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)} against that opponent, and then make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against that foe. For your {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)}, you can attempt a Stealth check instead of the Deception check that's usually required, because you use the terrain around you to catch your foe off-guard." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ca751c9e-7336-48bd-80e4-25d504077a41"), Type = TextBlockType.Text, Text = "~ Access: any surface dwarf ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("24e7bf92-16ec-4429-a5ec-e06c61e5f13f"), Type = TextBlockType.Text, Text = "Your interactions with other cultures on the surface have not only taught you about many other ancestries, but have also helped you realize the value of your own. You gain the trained proficiency rank in the Society skill (or another skill of your choice if you were already trained in Society), and you gain the (feat: Additional Lore) skill feat for the Lore corresponding to your culture (for instance, Ouat Lore or Pahmet Lore)." };
+            yield return new TextBlock { Id = Guid.Parse("ca751c9e-7336-48bd-80e4-25d504077a41"), Type = TextBlockType.Text, Text = $"~ Access: any surface dwarf ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("24e7bf92-16ec-4429-a5ec-e06c61e5f13f"), Type = TextBlockType.Text, Text = $"Your interactions with other cultures on the surface have not only taught you about many other ancestries, but have also helped you realize the value of your own. You gain the trained proficiency rank in the Society skill (or another skill of your choice if you were already trained in Society), and you gain the {ToMarkdownLink<Models.Entities.Feat>("Additional Lore", Feats.Instances.AdditionalLore.ID)} skill feat for the Lore corresponding to your culture (for instance, Ouat Lore or Pahmet Lore)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

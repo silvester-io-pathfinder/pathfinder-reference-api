@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9163848-fcf1-4988-99eb-ad766d54580a"), Type = TextBlockType.Text, Text = "The animal companion you gain from the (feat: Animal Trainer Dedication) feat gains one specialization of your choice (page 217). Increase its proficiency rank in Performance to legendary instead of one of the specialization's skill increases." };
+            yield return new TextBlock { Id = Guid.Parse("b9163848-fcf1-4988-99eb-ad766d54580a"), Type = TextBlockType.Text, Text = $"The animal companion you gain from the {ToMarkdownLink<Models.Entities.Feat>("Animal Trainer Dedication", Feats.Instances.AnimalTrainerDedication.ID)} feat gains one specialization of your choice (page 217). Increase its proficiency rank in Performance to legendary instead of one of the specialization's skill increases." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

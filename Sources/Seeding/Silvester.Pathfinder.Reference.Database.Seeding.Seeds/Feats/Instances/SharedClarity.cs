@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("12334600-db52-4e55-9db0-78370b4aff64"), Type = TextBlockType.Text, Text = "You can project your premonitions of clarity to your allies. When you use (feat: Premonition of Clarity), allies within 15 feet of you who failed the same saving throw against the same mental effect can also spend their reactions to reroll the failed saving throw with a +2 circumstance bonus." };
+            yield return new TextBlock { Id = Guid.Parse("12334600-db52-4e55-9db0-78370b4aff64"), Type = TextBlockType.Text, Text = $"You can project your premonitions of clarity to your allies. When you use {ToMarkdownLink<Models.Entities.Feat>("Premonition of Clarity", Feats.Instances.PremonitionOfClarity.ID)}, allies within 15 feet of you who failed the same saving throw against the same mental effect can also spend their reactions to reroll the failed saving throw with a +2 circumstance bonus." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

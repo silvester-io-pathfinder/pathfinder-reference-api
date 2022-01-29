@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("701be6d7-9ee8-4901-a685-9c764260197f"), Type = TextBlockType.Text, Text = "When you use (feat: Legendary Thief) to steal the impossible, you can steal a prepared spell or spontaneous spell from a foe. The spell is randomly selected from the highest-level spells the foe knows that have a target or area, to a maximum of 8th-level spells; the target loses the appropriate spell slot as if they had cast it themself. You can (activity: Cast the Spell | Cast a Spell) once within the next 1d4 rounds, after which the fleeting magic fades; this otherwise works the same as casting a (feat: Loaner Spell)." };
+            yield return new TextBlock { Id = Guid.Parse("701be6d7-9ee8-4901-a685-9c764260197f"), Type = TextBlockType.Text, Text = $"When you use {ToMarkdownLink<Models.Entities.Feat>("Legendary Thief", Feats.Instances.LegendaryThief.ID)} to steal the impossible, you can steal a prepared spell or spontaneous spell from a foe. The spell is randomly selected from the highest-level spells the foe knows that have a target or area, to a maximum of 8th-level spells; the target loses the appropriate spell slot as if they had cast it themself. You can {ToMarkdownLink<Models.Entities.Rule>("Cast the Spell", Rules.Instances.CastASpell.ID)} once within the next 1d4 rounds, after which the fleeting magic fades; this otherwise works the same as casting a {ToMarkdownLink<Models.Entities.Feat>("Loaner Spell", Feats.Instances.LoanerSpell.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

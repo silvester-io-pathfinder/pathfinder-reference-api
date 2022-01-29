@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7d958b97-abcd-428e-ba93-c21c59a9840b"), Type = TextBlockType.Text, Text = "As a pirate, you sail the seas in search of enemy ships to plunder. You become trained in Sailing Lore, or become an expert in it if you were already trained. You ignore the effects of difficult terrain or uneven ground caused by a ship's movement. Additionally, you gain the (feat: Boarding Assault) action." };
+            yield return new TextBlock { Id = Guid.Parse("7d958b97-abcd-428e-ba93-c21c59a9840b"), Type = TextBlockType.Text, Text = $"As a pirate, you sail the seas in search of enemy ships to plunder. You become trained in Sailing Lore, or become an expert in it if you were already trained. You ignore the effects of difficult terrain or uneven ground caused by a ship's movement. Additionally, you gain the {ToMarkdownLink<Models.Entities.Feat>("Boarding Assault", Feats.Instances.BoardingAssault.ID)} action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

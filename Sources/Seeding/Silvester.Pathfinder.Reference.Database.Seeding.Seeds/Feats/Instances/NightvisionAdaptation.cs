@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("564884b1-67d8-4fa3-885b-996307dcc391"), Type = TextBlockType.Text, Text = "The nanites in your ocular processors have adapted to darkness, enhancing your ability to see in the dark. You gain darkvision." };
+            yield return new TextBlock { Id = Guid.Parse("564884b1-67d8-4fa3-885b-996307dcc391"), Type = TextBlockType.Text, Text = $"The nanites in your ocular processors have adapted to darkness, enhancing your ability to see in the dark. You gain darkvision." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

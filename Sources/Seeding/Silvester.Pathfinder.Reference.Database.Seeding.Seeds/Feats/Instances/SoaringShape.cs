@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d2bd8a0f-7b17-4f0a-8a1a-3a3606b6546c"), Type = TextBlockType.Text, Text = "Wings free you from the shackles of the ground below. Add the bat and bird forms in (spell: aerial form) to your wild shape list. If you have (feat: Insect Shape), you also add the wasp form to your wild shape list. If you have (feat: Ferocious Shape), you also add the pterosaur form to your wild shape list. Whenever you use (spell: wild shape) to gain a form that grants you a specific Acrobatics modifier, you gain a +1 status bonus to Acrobatics checks." };
+            yield return new TextBlock { Id = Guid.Parse("d2bd8a0f-7b17-4f0a-8a1a-3a3606b6546c"), Type = TextBlockType.Text, Text = $"Wings free you from the shackles of the ground below. Add the bat and bird forms in {ToMarkdownLink<Models.Entities.Spell>("aerial form", Spells.Instances.AerialForm.ID)} to your wild shape list. If you have {ToMarkdownLink<Models.Entities.Feat>("Insect Shape", Feats.Instances.InsectShape.ID)}, you also add the wasp form to your wild shape list. If you have {ToMarkdownLink<Models.Entities.Feat>("Ferocious Shape", Feats.Instances.FerociousShape.ID)}, you also add the pterosaur form to your wild shape list. Whenever you use {ToMarkdownLink<Models.Entities.Spell>("wild shape", Spells.Instances.WildShape.ID)} to gain a form that grants you a specific Acrobatics modifier, you gain a +1 status bonus to Acrobatics checks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

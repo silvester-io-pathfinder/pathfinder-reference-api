@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2e885047-4b35-4bac-8710-aaa474773193"), Type = TextBlockType.Text, Text = "You pour negative energy into your undead subject to empower its attacks. If the next action you use is to cast (spell: harm) to restore Hit Points to a single undead creature, the target then deals an additional 1d6 negative damage with its melee weapons and unarmed attacks until the end of its next turn." };
-            yield return new TextBlock { Id = Guid.Parse("9949d99c-ff2c-442b-8b6f-56537290e58d"), Type = TextBlockType.Text, Text = "If the (spell: harm) spell is at least 5th level, this damage increases to 2d6, and if the (spell: harm) spell is at least 8th level, the damage increases to 3d6." };
+            yield return new TextBlock { Id = Guid.Parse("2e885047-4b35-4bac-8710-aaa474773193"), Type = TextBlockType.Text, Text = $"You pour negative energy into your undead subject to empower its attacks. If the next action you use is to cast {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} to restore Hit Points to a single undead creature, the target then deals an additional 1d6 negative damage with its melee weapons and unarmed attacks until the end of its next turn." };
+            yield return new TextBlock { Id = Guid.Parse("9949d99c-ff2c-442b-8b6f-56537290e58d"), Type = TextBlockType.Text, Text = $"If the {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} spell is at least 5th level, this damage increases to 2d6, and if the {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} spell is at least 8th level, the damage increases to 3d6." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

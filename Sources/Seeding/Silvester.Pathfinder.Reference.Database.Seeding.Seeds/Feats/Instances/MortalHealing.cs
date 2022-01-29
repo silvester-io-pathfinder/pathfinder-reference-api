@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d7108499-d955-46cd-af31-d53f10c87a4c"), Type = TextBlockType.Text, Text = "You grant greater healing when the gods don't interfere. When you roll a success to (Action: Treat Wounds) for a creature that hasn't regained Hit Points from divine magic in the past 24 hours, you get a critical success on your check instead and restore the corresponding amount of Hit Points." };
+            yield return new TextBlock { Id = Guid.Parse("d7108499-d955-46cd-af31-d53f10c87a4c"), Type = TextBlockType.Text, Text = $"You grant greater healing when the gods don't interfere. When you roll a success to {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)} for a creature that hasn't regained Hit Points from divine magic in the past 24 hours, you get a critical success on your check instead and restore the corresponding amount of Hit Points." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c026699b-3188-48a9-af51-57924dc32395"), Type = TextBlockType.Text, Text = "Your parries and finishers allow you to riposte with the slightest provocation. You can use (feat: Opportune Riposte) against an enemy who fails at a (action: Strike) against you (not just critically fails), provided you have both damaged that creature with a (trait: finisher) on your last turn and currently have a circumstance bonus to AC from the (trait: parry) weapon trait, (feat: Dueling Parry), or (feat: Twin Parry)." };
+            yield return new TextBlock { Id = Guid.Parse("c026699b-3188-48a9-af51-57924dc32395"), Type = TextBlockType.Text, Text = $"Your parries and finishers allow you to riposte with the slightest provocation. You can use {ToMarkdownLink<Models.Entities.Feat>("Opportune Riposte", Feats.Instances.OpportuneRiposte.ID)} against an enemy who fails at a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against you (not just critically fails), provided you have both damaged that creature with a {ToMarkdownLink<Models.Entities.Trait>("finisher", Traits.Instances.Finisher.ID)} on your last turn and currently have a circumstance bonus to AC from the {ToMarkdownLink<Models.Entities.Trait>("parry", Traits.Instances.Parry.ID)} weapon trait, {ToMarkdownLink<Models.Entities.Feat>("Dueling Parry", Feats.Instances.DuelingParry.ID)}, or {ToMarkdownLink<Models.Entities.Feat>("Twin Parry", Feats.Instances.TwinParry.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

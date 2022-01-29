@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eec6d204-257b-434f-86cf-c46391f985e9"), Type = TextBlockType.Text, Text = "You (action: Squeeze) 5 feet per round (10 feet on a critical success). If you're legendary in Acrobatics, you (action: Squeeze) at full Speed." };
+            yield return new TextBlock { Id = Guid.Parse("eec6d204-257b-434f-86cf-c46391f985e9"), Type = TextBlockType.Text, Text = $"You {ToMarkdownLink<Models.Entities.SkillAction>("Squeeze", SkillActions.Instances.Squeeze.ID)} 5 feet per round (10 feet on a critical success). If you're legendary in Acrobatics, you {ToMarkdownLink<Models.Entities.SkillAction>("Squeeze", SkillActions.Instances.Squeeze.ID)} at full Speed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

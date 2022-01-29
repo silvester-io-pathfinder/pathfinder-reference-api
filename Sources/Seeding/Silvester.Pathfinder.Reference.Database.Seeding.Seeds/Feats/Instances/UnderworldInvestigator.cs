@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e26a16f3-1e7d-4ea7-879f-981b60f70b14"), Type = TextBlockType.Text, Text = "Your work as an investigator makes you familiar with the criminal element. You might be a criminal yourself, or you might have gained an understanding of how they operate from the outside. You become trained in Underworld Lore, and you gain your (feat: Pursue a Lead) circumstance bonus to Thievery checks to investigate the subject of your lead (such as checks to (action: Steal) a clue from a suspect or (action: Pick a Lock) to open a safe with damning documents)." };
+            yield return new TextBlock { Id = Guid.Parse("e26a16f3-1e7d-4ea7-879f-981b60f70b14"), Type = TextBlockType.Text, Text = $"Your work as an investigator makes you familiar with the criminal element. You might be a criminal yourself, or you might have gained an understanding of how they operate from the outside. You become trained in Underworld Lore, and you gain your {ToMarkdownLink<Models.Entities.Feat>("Pursue a Lead", Feats.Instances.PursueALead.ID)} circumstance bonus to Thievery checks to investigate the subject of your lead (such as checks to {ToMarkdownLink<Models.Entities.SkillAction>("Steal", SkillActions.Instances.Steal.ID)} a clue from a suspect or {ToMarkdownLink<Models.Entities.SkillAction>("Pick a Lock", SkillActions.Instances.PickALock.ID)} to open a safe with damning documents)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

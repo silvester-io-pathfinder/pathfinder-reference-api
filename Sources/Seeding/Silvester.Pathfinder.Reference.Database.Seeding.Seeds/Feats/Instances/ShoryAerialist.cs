@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("48cede14-926c-4acb-ad60-28b11d18ea9d"), Type = TextBlockType.Text, Text = "~ Access: Garundi, Mauxi, or Tian-Yae ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("c8eb1a92-2ab0-4df8-9a25-9824a432f5da"), Type = TextBlockType.Text, Text = "Unique in Golarion's history, the Shory people developed fighting styles dedicated to combat in the air. You gain a +2 circumstance bonus to Acrobatics checks to (action: Maneuver in Flight) and a +5-foot status bonus to your fly Speed whenever you are flying via magic." };
+            yield return new TextBlock { Id = Guid.Parse("48cede14-926c-4acb-ad60-28b11d18ea9d"), Type = TextBlockType.Text, Text = $"~ Access: Garundi, Mauxi, or Tian-Yae ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("c8eb1a92-2ab0-4df8-9a25-9824a432f5da"), Type = TextBlockType.Text, Text = $"Unique in Golarion's history, the Shory people developed fighting styles dedicated to combat in the air. You gain a +2 circumstance bonus to Acrobatics checks to {ToMarkdownLink<Models.Entities.SkillAction>("Maneuver in Flight", SkillActions.Instances.ManeuverInFlight.ID)} and a +5-foot status bonus to your fly Speed whenever you are flying via magic." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

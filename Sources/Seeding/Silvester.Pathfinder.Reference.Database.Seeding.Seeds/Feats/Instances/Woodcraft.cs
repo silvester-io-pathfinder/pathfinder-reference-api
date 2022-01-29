@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f646340e-df3c-4709-950a-c033a5af0634"), Type = TextBlockType.Text, Text = "You have a innate familiarity with forested areas. When in a forest or jungle environment, if you roll a critical failure on a Survival skill check to (Action: Sense Direction), (Action: Subsist), or (Action: Cover Tracks), you get a failure instead, and if you roll a success, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("f646340e-df3c-4709-950a-c033a5af0634"), Type = TextBlockType.Text, Text = $"You have a innate familiarity with forested areas. When in a forest or jungle environment, if you roll a critical failure on a Survival skill check to {ToMarkdownLink<Models.Entities.SkillAction>("Sense Direction", SkillActions.Instances.SenseDirection.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Subsist", SkillActions.Instances.Subsist.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Cover Tracks", SkillActions.Instances.CoverTracks.ID)}, you get a failure instead, and if you roll a success, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

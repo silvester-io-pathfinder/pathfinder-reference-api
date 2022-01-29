@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("91a501ff-7fdb-4782-bc05-ef12a78078f7"), Type = TextBlockType.Text, Text = "You keep pace with a retreating foe. You (action: Stride), but you must end your movement adjacent to the triggering enemy. Your move does not trigger reactions from the triggering enemy. You can use Reactive Pursuit to (action: Burrow), (action: Climb), (action: Fly), or (action: Swim) instead of (action: Stride) if you have the corresponding movement type." };
+            yield return new TextBlock { Id = Guid.Parse("91a501ff-7fdb-4782-bc05-ef12a78078f7"), Type = TextBlockType.Text, Text = $"You keep pace with a retreating foe. You {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}, but you must end your movement adjacent to the triggering enemy. Your move does not trigger reactions from the triggering enemy. You can use Reactive Pursuit to {ToMarkdownLink<Models.Entities.Action>("Burrow", Actions.Instances.Burrow.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Climb", SkillActions.Instances.Climb.ID)}, {ToMarkdownLink<Models.Entities.Action>("Fly", Actions.Instances.Fly.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Swim", SkillActions.Instances.Swim.ID)} instead of {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} if you have the corresponding movement type." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

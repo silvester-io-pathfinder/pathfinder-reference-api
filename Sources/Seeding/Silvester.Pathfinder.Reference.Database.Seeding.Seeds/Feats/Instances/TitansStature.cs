@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84868912-a029-4e7e-9dc0-be1103b13b37"), Type = TextBlockType.Text, Text = "You grow to even greater size. When using (feat: Giant's Stature), you can instead become Huge (increasing your reach by 10 feet if you were Medium or smaller) while you are raging. You have the clumsy 1 condition as long as you are Huge." };
+            yield return new TextBlock { Id = Guid.Parse("84868912-a029-4e7e-9dc0-be1103b13b37"), Type = TextBlockType.Text, Text = $"You grow to even greater size. When using {ToMarkdownLink<Models.Entities.Feat>("Giant's Stature", Feats.Instances.GiantsStature.ID)}, you can instead become Huge (increasing your reach by 10 feet if you were Medium or smaller) while you are raging. You have the clumsy 1 condition as long as you are Huge." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

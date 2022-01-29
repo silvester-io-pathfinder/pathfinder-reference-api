@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("22f95548-766e-4c7f-a51f-da0c93e227f1"), Type = TextBlockType.Text, Text = "__Your minor magic is occult.__" };
+            yield return new TextBlock { Id = Guid.Parse("22f95548-766e-4c7f-a51f-da0c93e227f1"), Type = TextBlockType.Text, Text = $"__Your minor magic is occult.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

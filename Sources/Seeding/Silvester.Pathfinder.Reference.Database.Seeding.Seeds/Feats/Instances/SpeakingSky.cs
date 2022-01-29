@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13b3afca-0841-4cd7-8fc2-36855bd4568e"), Type = TextBlockType.Text, Text = "You can hear air movement like soft whispers. You gain the (spell: speaking sky) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("13b3afca-0841-4cd7-8fc2-36855bd4568e"), Type = TextBlockType.Text, Text = $"You can hear air movement like soft whispers. You gain the {ToMarkdownLink<Models.Entities.Feat>("speaking sky", Feats.Instances.SpeakingSky.ID)} ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

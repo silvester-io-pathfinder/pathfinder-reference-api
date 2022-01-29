@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2bd99101-884e-4a55-b4f0-ac20a753ef68"), Type = TextBlockType.Text, Text = "Careful research into the art of rituals has made you better at performing them. You gain a +2 circumstance bonus to all primary and secondary checks you attempt as part of casting a ritual." };
+            yield return new TextBlock { Id = Guid.Parse("2bd99101-884e-4a55-b4f0-ac20a753ef68"), Type = TextBlockType.Text, Text = $"Careful research into the art of rituals has made you better at performing them. You gain a +2 circumstance bonus to all primary and secondary checks you attempt as part of casting a ritual." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

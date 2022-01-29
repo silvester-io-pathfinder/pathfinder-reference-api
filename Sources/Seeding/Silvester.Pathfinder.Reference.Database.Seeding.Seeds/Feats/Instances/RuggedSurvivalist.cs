@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("70e5b4e8-f212-48f4-bab6-2f51ae1a56dd"), Type = TextBlockType.Text, Text = "You've studied survival skills with the School of Swords experts and are comfortable spending long periods of time in the wilderness. You don't get fatigued more quickly due to precipitation during overland travel, though you can otherwise be fatigued as normal. You can go 3 days + your Constitution modifier without water before you take damage from thirst and you can go 5 days + your Constitution modifier without food before you take damage from starvation." };
+            yield return new TextBlock { Id = Guid.Parse("70e5b4e8-f212-48f4-bab6-2f51ae1a56dd"), Type = TextBlockType.Text, Text = $"You've studied survival skills with the School of Swords experts and are comfortable spending long periods of time in the wilderness. You don't get fatigued more quickly due to precipitation during overland travel, though you can otherwise be fatigued as normal. You can go 3 days + your Constitution modifier without water before you take damage from thirst and you can go 5 days + your Constitution modifier without food before you take damage from starvation." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

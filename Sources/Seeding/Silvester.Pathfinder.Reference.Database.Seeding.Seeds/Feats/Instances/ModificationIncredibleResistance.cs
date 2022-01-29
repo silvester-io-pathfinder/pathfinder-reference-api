@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3f50ef36-8862-4cc8-865f-044ac92fb8e0"), Type = TextBlockType.Text, Text = "You've improved upon your breakthrough modification's ability to resist damage. Choose one of the following breakthrough modifications your innovation has: (feat: dense plating | Modification - Dense Plating), (feat: layered mesh | Modification - Layered Mesh), or (feat: tensile absorption | Modification - Tensile Absorption). Increase the resistance you gain from that modification to be equal to your level, instead of half your level." };
+            yield return new TextBlock { Id = Guid.Parse("3f50ef36-8862-4cc8-865f-044ac92fb8e0"), Type = TextBlockType.Text, Text = $"You've improved upon your breakthrough modification's ability to resist damage. Choose one of the following breakthrough modifications your innovation has: {ToMarkdownLink<Models.Entities.Feat>("dense plating", Feats.Instances.ModificationDensePlating.ID)}, {ToMarkdownLink<Models.Entities.Feat>("layered mesh", Feats.Instances.ModificationLayeredMesh.ID)}, or {ToMarkdownLink<Models.Entities.Feat>("tensile absorption", Feats.Instances.ModificationTensileAbsorption.ID)}. Increase the resistance you gain from that modification to be equal to your level, instead of half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("664caa13-b06f-4711-9ef0-053a8f456374"), Type = TextBlockType.Text, Text = "Long hours of practice and an instinctive understanding of boundaries lets you create protective circles impossibly quickly. As you fling your esoterica during a quick spin, you find that everything falls in a perfect circle each time. You can (feat: Draw a Warding Circle|Draw Warding Circle) as a three-action activity, instead of taking 1 minute to do so." };
+            yield return new TextBlock { Id = Guid.Parse("664caa13-b06f-4711-9ef0-053a8f456374"), Type = TextBlockType.Text, Text = $"Long hours of practice and an instinctive understanding of boundaries lets you create protective circles impossibly quickly. As you fling your esoterica during a quick spin, you find that everything falls in a perfect circle each time. You can {ToMarkdownLink<Models.Entities.Feat>("Draw a Warding Circle", Feats.Instances.DrawWardingCircle.ID)} as a three-action activity, instead of taking 1 minute to do so." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

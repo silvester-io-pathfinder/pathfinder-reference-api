@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ba5b0e26-0007-411d-a8c9-d4febcb23169"), Type = TextBlockType.Text, Text = "Fierceness in battle runs through your blood, and you refuse to fall from your injuries. You avoid being knocked out and remain at 1 Hit Point, and your wounded condition increases by 1." };
+            yield return new TextBlock { Id = Guid.Parse("ba5b0e26-0007-411d-a8c9-d4febcb23169"), Type = TextBlockType.Text, Text = $"Fierceness in battle runs through your blood, and you refuse to fall from your injuries. You avoid being knocked out and remain at 1 Hit Point, and your wounded condition increases by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

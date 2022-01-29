@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04b581e6-c029-4f0d-86c3-a5bfe973c70e"), Type = TextBlockType.Text, Text = "You lash out with a powerful punch, extending your dynamo to a greater length in order to attack two creatures in a row. Make a single bludgeoning or piercing dynamo (action: Strike) and compare the attack roll result to the ACs of up to two foes. The first foe must be within your melee reach and the second foe must be adjacent to the first foe in a straight line away from you. Roll damage only once and apply it to each creature you hit. A Piston Punch counts as two attacks for your multiple attack penalty. Reduce the operational time of your sterling dynamo by 1 hour." };
+            yield return new TextBlock { Id = Guid.Parse("04b581e6-c029-4f0d-86c3-a5bfe973c70e"), Type = TextBlockType.Text, Text = $"You lash out with a powerful punch, extending your dynamo to a greater length in order to attack two creatures in a row. Make a single bludgeoning or piercing dynamo {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} and compare the attack roll result to the ACs of up to two foes. The first foe must be within your melee reach and the second foe must be adjacent to the first foe in a straight line away from you. Roll damage only once and apply it to each creature you hit. A Piston Punch counts as two attacks for your multiple attack penalty. Reduce the operational time of your sterling dynamo by 1 hour." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a7ae1279-bca9-4166-a0d5-ac398b31a9de"), Type = TextBlockType.Text, Text = "You've learned techniques for using blades and other tengu weapons. Whenever you critically hit using one of the weapons from your (feat: Tengu Weapon Familiarity), you apply the weapon's critical specialization effect." };
+            yield return new TextBlock { Id = Guid.Parse("a7ae1279-bca9-4166-a0d5-ac398b31a9de"), Type = TextBlockType.Text, Text = $"You've learned techniques for using blades and other tengu weapons. Whenever you critically hit using one of the weapons from your {ToMarkdownLink<Models.Entities.Feat>("Tengu Weapon Familiarity", Feats.Instances.TenguWeaponFamiliarity.ID)}, you apply the weapon's critical specialization effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

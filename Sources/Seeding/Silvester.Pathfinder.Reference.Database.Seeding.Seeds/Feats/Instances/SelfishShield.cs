@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e1255aae-eb40-4a6d-865d-e37a00c59fa3"), Type = TextBlockType.Text, Text = "Your self-interest keeps you safe. You gain resistance against the triggering damage equal to 2 + half your level, regardless of damage type." };
-            yield return new TextBlock { Id = Guid.Parse("6bffcbff-d712-4e08-8695-8a0ad9bd8fea"), Type = TextBlockType.Text, Text = "In addition, your (action: Strikes | Strike) against the triggering creature deal 1 extra damage until the end of your next turn. You choose whether this extra damage is evil or negative each time you use this reaction. This extra damage increases to 2 at 9th level and 3 at 16th level." };
+            yield return new TextBlock { Id = Guid.Parse("e1255aae-eb40-4a6d-865d-e37a00c59fa3"), Type = TextBlockType.Text, Text = $"Your self-interest keeps you safe. You gain resistance against the triggering damage equal to 2 + half your level, regardless of damage type." };
+            yield return new TextBlock { Id = Guid.Parse("6bffcbff-d712-4e08-8695-8a0ad9bd8fea"), Type = TextBlockType.Text, Text = $"In addition, your {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} against the triggering creature deal 1 extra damage until the end of your next turn. You choose whether this extra damage is evil or negative each time you use this reaction. This extra damage increases to 2 at 9th level and 3 at 16th level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

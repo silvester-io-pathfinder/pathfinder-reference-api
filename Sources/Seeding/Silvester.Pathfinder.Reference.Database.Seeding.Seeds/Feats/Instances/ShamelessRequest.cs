@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a7806f31-09f4-474a-969a-17fa05e96a23"), Type = TextBlockType.Text, Text = "You can downplay the consequences or outrageousness of your requests using sheer brazenness and charm. When you (action: Request) something, you reduce any DC increases for making an outrageous request by 2, and if you roll a critical failure for your (action: Request), you get a failure instead. While this means you can never cause your target to reduce their attitude toward you by making a (action: Request), they eventually tire of requests, even though they still have a positive attitude toward you." };
+            yield return new TextBlock { Id = Guid.Parse("a7806f31-09f4-474a-969a-17fa05e96a23"), Type = TextBlockType.Text, Text = $"You can downplay the consequences or outrageousness of your requests using sheer brazenness and charm. When you {ToMarkdownLink<Models.Entities.SkillAction>("Request", SkillActions.Instances.Request.ID)} something, you reduce any DC increases for making an outrageous request by 2, and if you roll a critical failure for your {ToMarkdownLink<Models.Entities.SkillAction>("Request", SkillActions.Instances.Request.ID)}, you get a failure instead. While this means you can never cause your target to reduce their attitude toward you by making a {ToMarkdownLink<Models.Entities.SkillAction>("Request", SkillActions.Instances.Request.ID)}, they eventually tire of requests, even though they still have a positive attitude toward you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

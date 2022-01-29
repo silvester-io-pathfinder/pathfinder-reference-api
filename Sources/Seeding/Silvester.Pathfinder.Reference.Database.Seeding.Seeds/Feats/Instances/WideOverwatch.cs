@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2a4a381f-a6ad-4d21-970f-3b43d4173a46"), Type = TextBlockType.Text, Text = "Through a variety of perceptive techniques, careful routines, and upgrades to your enhanced visual gear, you have become able to observe and maintain your overwatch at a much greater distance. Increase the size of your overwatch field from 30 feet to 60 feet." };
+            yield return new TextBlock { Id = Guid.Parse("2a4a381f-a6ad-4d21-970f-3b43d4173a46"), Type = TextBlockType.Text, Text = $"Through a variety of perceptive techniques, careful routines, and upgrades to your enhanced visual gear, you have become able to observe and maintain your overwatch at a much greater distance. Increase the size of your overwatch field from 30 feet to 60 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

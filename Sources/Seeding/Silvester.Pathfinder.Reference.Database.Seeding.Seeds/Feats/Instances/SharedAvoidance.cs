@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8f9d7912-ebb6-4077-8b2a-48ba0dc344b3"), Type = TextBlockType.Text, Text = "You can project your premonitions of danger to your allies. When you use (feat: Premonition of Avoidance), allies within 15 feet of you who are rolling the same saving throw against the same hazard also gain a +2 circumstance bonus to their saving throws." };
+            yield return new TextBlock { Id = Guid.Parse("8f9d7912-ebb6-4077-8b2a-48ba0dc344b3"), Type = TextBlockType.Text, Text = $"You can project your premonitions of danger to your allies. When you use {ToMarkdownLink<Models.Entities.Feat>("Premonition of Avoidance", Feats.Instances.PremonitionOfAvoidance.ID)}, allies within 15 feet of you who are rolling the same saving throw against the same hazard also gain a +2 circumstance bonus to their saving throws." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

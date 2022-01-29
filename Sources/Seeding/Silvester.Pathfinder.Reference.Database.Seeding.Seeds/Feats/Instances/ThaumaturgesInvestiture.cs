@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2ea88e44-bf1f-46d9-92ea-f8459a4f341b"), Type = TextBlockType.Text, Text = "Using your knowledge of esoterica and implements, you can invest far more items than most. You gain the (feat: Incredible Investiture) skill feat, increasing your limit on invested items from 10 to 12. The limit increases to 14 if you have Charisma 18, 16 if you have Charisma 20, 18 if you have Charisma 22, and 20 if you have Charisma 24." };
+            yield return new TextBlock { Id = Guid.Parse("2ea88e44-bf1f-46d9-92ea-f8459a4f341b"), Type = TextBlockType.Text, Text = $"Using your knowledge of esoterica and implements, you can invest far more items than most. You gain the {ToMarkdownLink<Models.Entities.Feat>("Incredible Investiture", Feats.Instances.IncredibleInvestiture.ID)} skill feat, increasing your limit on invested items from 10 to 12. The limit increases to 14 if you have Charisma 18, 16 if you have Charisma 20, 18 if you have Charisma 22, and 20 if you have Charisma 24." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

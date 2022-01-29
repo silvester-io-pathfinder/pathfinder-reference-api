@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ebe12d6-21cf-4c92-a4fa-bd1a37d8e228"), Type = TextBlockType.Text, Text = "You stand firm, steeling your mind and body, allowing you to use your magic unperturbed. While in this stance, you gain a +4 circumstance bonus to AC against reactions triggered by using actions with the (trait: concentrate) or (trait: manipulate) traits. In addition, when you cast a spell that requires one or more actions while in this stance, your unarmed (action: Strikes | Strike) gain a +1 circumstance bonus to damage." };
+            yield return new TextBlock { Id = Guid.Parse("8ebe12d6-21cf-4c92-a4fa-bd1a37d8e228"), Type = TextBlockType.Text, Text = $"You stand firm, steeling your mind and body, allowing you to use your magic unperturbed. While in this stance, you gain a +4 circumstance bonus to AC against reactions triggered by using actions with the {ToMarkdownLink<Models.Entities.Trait>("concentrate", Traits.Instances.Concentrate.ID)} or {ToMarkdownLink<Models.Entities.Trait>("manipulate", Traits.Instances.Manipulate.ID)} traits. In addition, when you cast a spell that requires one or more actions while in this stance, your unarmed {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} gain a +1 circumstance bonus to damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

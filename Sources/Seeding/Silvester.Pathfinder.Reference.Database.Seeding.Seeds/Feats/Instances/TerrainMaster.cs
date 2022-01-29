@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c01d1784-0bfa-43ff-a86f-aec9a1b81a84"), Type = TextBlockType.Text, Text = "You adapt to your surroundings in any natural terrain. You can spend 1 hour practicing in your current terrain in order to make it your favored terrain, replacing your current favored terrain temporarily. If you spend a full day out of the new favored terrain, your favored terrain reverts back to your original choice when you took the (feat: Favored Terrain) feat." };
+            yield return new TextBlock { Id = Guid.Parse("c01d1784-0bfa-43ff-a86f-aec9a1b81a84"), Type = TextBlockType.Text, Text = $"You adapt to your surroundings in any natural terrain. You can spend 1 hour practicing in your current terrain in order to make it your favored terrain, replacing your current favored terrain temporarily. If you spend a full day out of the new favored terrain, your favored terrain reverts back to your original choice when you took the {ToMarkdownLink<Models.Entities.Feat>("Favored Terrain", Feats.Instances.FavoredTerrain.ID)} feat." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("78d53e91-eded-4213-bfaf-12ac549fdd36"), Type = TextBlockType.Text, Text = "Your tattoos are a work of eldritch genius, a masterpiece of art, magic, and skin. Choose a 3rd-level arcane spell from the same school as your (feat: Arcane Tattoos), either a common spell or another to which you have access, including a lower-level spell heightened to 3rd level if you wish. You can cast that spell once per day as an innate arcane spell." };
+            yield return new TextBlock { Id = Guid.Parse("78d53e91-eded-4213-bfaf-12ac549fdd36"), Type = TextBlockType.Text, Text = $"Your tattoos are a work of eldritch genius, a masterpiece of art, magic, and skin. Choose a 3rd-level arcane spell from the same school as your {ToMarkdownLink<Models.Entities.Feat>("Arcane Tattoos", Feats.Instances.ArcaneTattoos.ID)}, either a common spell or another to which you have access, including a lower-level spell heightened to 3rd level if you wish. You can cast that spell once per day as an innate arcane spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

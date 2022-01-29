@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("95a4ed36-99f7-4717-aa72-cce552182316"), Type = TextBlockType.Text, Text = "Your legs end in hooves rather than feet, with joints and tendons that allow you to move with great haste. Your Speed increases by 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("95a4ed36-99f7-4717-aa72-cce552182316"), Type = TextBlockType.Text, Text = $"Your legs end in hooves rather than feet, with joints and tendons that allow you to move with great haste. Your Speed increases by 5 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

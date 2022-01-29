@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4715f797-195c-402f-83eb-81ada9796c14"), Type = TextBlockType.Text, Text = "You experience a brief resurgence of a mutagen. Choose one mutagen you've consumed since your last daily preparations. You gain the effects of that mutagen for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("4715f797-195c-402f-83eb-81ada9796c14"), Type = TextBlockType.Text, Text = $"You experience a brief resurgence of a mutagen. Choose one mutagen you've consumed since your last daily preparations. You gain the effects of that mutagen for 1 minute." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

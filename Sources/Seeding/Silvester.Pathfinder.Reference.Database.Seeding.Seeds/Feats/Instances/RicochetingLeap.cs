@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6e22413c-00db-457b-b4d5-60f7d6c8f317"), Type = TextBlockType.Text, Text = "You quickly use your momentum to topple and spring off of foes. You can use (feat: Wall Jump) to make additional jumps off of creatures larger than you as if they were walls. Once per turn when you make an additional jump off of a creature in this way, you can also attempt to (action: Shove) or (action: Trip) that creature as a free action." };
+            yield return new TextBlock { Id = Guid.Parse("6e22413c-00db-457b-b4d5-60f7d6c8f317"), Type = TextBlockType.Text, Text = $"You quickly use your momentum to topple and spring off of foes. You can use {ToMarkdownLink<Models.Entities.Feat>("Wall Jump", Feats.Instances.WallJump.ID)} to make additional jumps off of creatures larger than you as if they were walls. Once per turn when you make an additional jump off of a creature in this way, you can also attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} that creature as a free action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

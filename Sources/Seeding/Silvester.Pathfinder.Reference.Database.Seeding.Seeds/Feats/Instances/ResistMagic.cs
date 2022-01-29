@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2c91cd3-2592-4ac4-9553-1d800220a192"), Type = TextBlockType.Text, Text = "Your innate magic protects you. You gain a +1 circumstance bonus to the triggering saving throw. Additionally, if the triggering effect is (trait: arcane), if you roll a success, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("e2c91cd3-2592-4ac4-9553-1d800220a192"), Type = TextBlockType.Text, Text = $"Your innate magic protects you. You gain a +1 circumstance bonus to the triggering saving throw. Additionally, if the triggering effect is {ToMarkdownLink<Models.Entities.Trait>("arcane", Traits.Instances.Arcane.ID)}, if you roll a success, you get a critical success instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

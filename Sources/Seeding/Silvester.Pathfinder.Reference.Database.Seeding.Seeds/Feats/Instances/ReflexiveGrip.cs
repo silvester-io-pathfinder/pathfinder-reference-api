@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d8b7d1a0-8443-4dab-a4d4-f3b0585e4671"), Type = TextBlockType.Text, Text = "You keep hold of your weapons even when knocked out. You gain a +2 circumstance bonus to your Reflex DC when defending against checks to (action: Disarm) you. In addition, when you fall unconscious, you don't drop any weapons that you're currently wielding, though somebody else can remove them from you." };
+            yield return new TextBlock { Id = Guid.Parse("d8b7d1a0-8443-4dab-a4d4-f3b0585e4671"), Type = TextBlockType.Text, Text = $"You keep hold of your weapons even when knocked out. You gain a +2 circumstance bonus to your Reflex DC when defending against checks to {ToMarkdownLink<Models.Entities.SkillAction>("Disarm", SkillActions.Instances.Disarm.ID)} you. In addition, when you fall unconscious, you don't drop any weapons that you're currently wielding, though somebody else can remove them from you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f6fd17a5-c6d3-4db7-b486-39bfce6e3ca0"), Type = TextBlockType.Text, Text = "You manipulate the energy of your spell, causing it to affect a wider area. If the next action you use is to (activity: Cast a Spell) that has an area of a burst, cone, or line and doesn't have a duration, increase the area of that spell. Add 5 feet to the radius of a burst that normally has a radius of at least 10 feet (a burst with a smaller radius isn't affected). Add 5 feet to the length of a cone or line that is normally 15 feet long or smaller, and add 10 feet to the length of a larger cone or line." };
+            yield return new TextBlock { Id = Guid.Parse("f6fd17a5-c6d3-4db7-b486-39bfce6e3ca0"), Type = TextBlockType.Text, Text = $"You manipulate the energy of your spell, causing it to affect a wider area. If the next action you use is to {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)} that has an area of a burst, cone, or line and doesn't have a duration, increase the area of that spell. Add 5 feet to the radius of a burst that normally has a radius of at least 10 feet (a burst with a smaller radius isn't affected). Add 5 feet to the length of a cone or line that is normally 15 feet long or smaller, and add 10 feet to the length of a larger cone or line." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

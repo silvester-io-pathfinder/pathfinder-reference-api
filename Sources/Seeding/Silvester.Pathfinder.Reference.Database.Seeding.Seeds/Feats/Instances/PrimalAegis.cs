@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a1f95192-35dc-44e1-b3d2-89a6f62c27f0"), Type = TextBlockType.Text, Text = "You surround yourself with a thick field of protective primal energy. You and allies within 30 feet of you gain resistance equal to your Wisdom modifier to acid, cold, electricity, fire, negative, and positive damage." };
+            yield return new TextBlock { Id = Guid.Parse("a1f95192-35dc-44e1-b3d2-89a6f62c27f0"), Type = TextBlockType.Text, Text = $"You surround yourself with a thick field of protective primal energy. You and allies within 30 feet of you gain resistance equal to your Wisdom modifier to acid, cold, electricity, fire, negative, and positive damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

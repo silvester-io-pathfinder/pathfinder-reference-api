@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8bbfcbfc-ec6b-4d0a-854a-e6ffc8e4d2e3"), Type = TextBlockType.Text, Text = "When you manifest the essence form, choose one damage type: acid, chaotic, cold, electricity, evil, fire, good, lawful, negative, positive, or sonic. You gain resistance equal to your level + 2 to damage of the selected type." };
-            yield return new TextBlock { Id = Guid.Parse("2c7c08a1-64c8-4e35-abe0-c0fb2f5bbe1d"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ You gain weakness 1 to all damage." };
+            yield return new TextBlock { Id = Guid.Parse("8bbfcbfc-ec6b-4d0a-854a-e6ffc8e4d2e3"), Type = TextBlockType.Text, Text = $"When you manifest the essence form, choose one damage type: acid, chaotic, cold, electricity, evil, fire, good, lawful, negative, positive, or sonic. You gain resistance equal to your level + 2 to damage of the selected type." };
+            yield return new TextBlock { Id = Guid.Parse("2c7c08a1-64c8-4e35-abe0-c0fb2f5bbe1d"), Type = TextBlockType.Text, Text = $"__Corruption Flaw__ You gain weakness 1 to all damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("62064ad5-c5c7-4090-9092-1fb58274630c"), Type = TextBlockType.Text, Text = "You take an extra moment to carefully sync your aim and breathing, then fire a shot with great accuracy. Make a ranged weapon (action: Strike). You gain a +2 circumstance bonus to this (action: Strike's|Strike) attack roll and ignore the target's concealment. If you're using a (trait: kickback) firearm, you don't take the normal circumstance penalty on this (action: Strike) for not having the required Strength score or firing without using a stabilizer." };
+            yield return new TextBlock { Id = Guid.Parse("62064ad5-c5c7-4090-9092-1fb58274630c"), Type = TextBlockType.Text, Text = $"You take an extra moment to carefully sync your aim and breathing, then fire a shot with great accuracy. Make a ranged weapon {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. You gain a +2 circumstance bonus to this {ToMarkdownLink<Models.Entities.Action>("Strike's", Actions.Instances.Strike.ID)} attack roll and ignore the target's concealment. If you're using a {ToMarkdownLink<Models.Entities.Trait>("kickback", Traits.Instances.Kickback.ID)} firearm, you don't take the normal circumstance penalty on this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} for not having the required Strength score or firing without using a stabilizer." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

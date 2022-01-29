@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ee220f5c-11a1-448c-8894-985f535ad0c9"), Type = TextBlockType.Text, Text = "When you (feat: Counterspell) a spell with a school matching your specialization, if you critically succeed at your counteract check, or if you succeed while using a spell of a higher level than the spell you countered, you can redirect the spell you countered. You choose the target, area, and other aspects of the spell and use your own spell DC, spell attack roll, or other statistics as appropriate to determine the effects." };
+            yield return new TextBlock { Id = Guid.Parse("ee220f5c-11a1-448c-8894-985f535ad0c9"), Type = TextBlockType.Text, Text = $"When you {ToMarkdownLink<Models.Entities.Feat>("Counterspell", Feats.Instances.Counterspell.ID)} a spell with a school matching your specialization, if you critically succeed at your counteract check, or if you succeed while using a spell of a higher level than the spell you countered, you can redirect the spell you countered. You choose the target, area, and other aspects of the spell and use your own spell DC, spell attack roll, or other statistics as appropriate to determine the effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

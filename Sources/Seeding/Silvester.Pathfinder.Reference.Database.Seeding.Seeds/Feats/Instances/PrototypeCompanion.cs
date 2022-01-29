@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2a14093-aeba-415d-b0c3-0c8e6c3607d4"), Type = TextBlockType.Text, Text = "You have created a construct companion, and while it might not be an innovation, it serves as a trustworthy minion. You gain a prototype construct companion (G&amp;G pg. 32)." };
+            yield return new TextBlock { Id = Guid.Parse("e2a14093-aeba-415d-b0c3-0c8e6c3607d4"), Type = TextBlockType.Text, Text = $"You have created a construct companion, and while it might not be an innovation, it serves as a trustworthy minion. You gain a prototype construct companion (G&amp;G pg. 32)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

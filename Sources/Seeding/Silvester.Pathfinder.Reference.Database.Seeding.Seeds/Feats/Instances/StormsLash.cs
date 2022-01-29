@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("20afaa9a-1989-44fd-af77-b673c9256605"), Type = TextBlockType.Text, Text = "Wind and lightning have always been close friends to you. You can cast the (spell: electric arc) cantrip as a primal innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("20afaa9a-1989-44fd-af77-b673c9256605"), Type = TextBlockType.Text, Text = $"Wind and lightning have always been close friends to you. You can cast the {ToMarkdownLink<Models.Entities.Spell>("electric arc", Spells.Instances.ElectricArc.ID)} cantrip as a primal innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

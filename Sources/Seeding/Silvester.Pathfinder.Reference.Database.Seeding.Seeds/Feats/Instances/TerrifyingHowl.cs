@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a06f0ff8-d507-4b8a-80a8-edaa33910030"), Type = TextBlockType.Text, Text = "You unleash a terrifying howl. Attempt Intimidate checks to (action: Demoralize) each enemy within 30 feet. Regardless of the results of your checks, each enemy is then temporarily immune to Terrifying Howl for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("a06f0ff8-d507-4b8a-80a8-edaa33910030"), Type = TextBlockType.Text, Text = $"You unleash a terrifying howl. Attempt Intimidate checks to {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)} each enemy within 30 feet. Regardless of the results of your checks, each enemy is then temporarily immune to Terrifying Howl for 1 minute." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

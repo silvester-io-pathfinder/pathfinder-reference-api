@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0be4e466-58a9-4d68-9d91-72ca98c2b6e9"), Type = TextBlockType.Text, Text = "The power of your bond can protect you and your eidolon from harm. If you and your eidolon would take different amounts of damage from the area effect, you take the lower amount of damage instead of the greater amount of damage." };
+            yield return new TextBlock { Id = Guid.Parse("0be4e466-58a9-4d68-9d91-72ca98c2b6e9"), Type = TextBlockType.Text, Text = $"The power of your bond can protect you and your eidolon from harm. If you and your eidolon would take different amounts of damage from the area effect, you take the lower amount of damage instead of the greater amount of damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

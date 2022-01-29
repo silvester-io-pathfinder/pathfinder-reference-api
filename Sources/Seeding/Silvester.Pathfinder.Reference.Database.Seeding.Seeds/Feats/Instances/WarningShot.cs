@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1315511d-0b7e-435e-b75d-83a4c954d517"), Type = TextBlockType.Text, Text = "Who needs words when the roar of a gun is so much more succinct? You attempt to (action: Demoralize) a foe by firing your weapon into the air, using the firearm's maximum range rather than the usual range of 30 feet. This check doesn't take the –4 circumstance penalty if the target doesn't share a language with you." };
+            yield return new TextBlock { Id = Guid.Parse("1315511d-0b7e-435e-b75d-83a4c954d517"), Type = TextBlockType.Text, Text = $"Who needs words when the roar of a gun is so much more succinct? You attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)} a foe by firing your weapon into the air, using the firearm's maximum range rather than the usual range of 30 feet. This check doesn't take the –4 circumstance penalty if the target doesn't share a language with you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

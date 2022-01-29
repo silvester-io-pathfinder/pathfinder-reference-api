@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6e6a73b4-5342-4e09-bfad-cc70831dfc54"), Type = TextBlockType.Text, Text = "You (action: Leap) and then (action: Strike) using your staff. You gain a circumstance bonus to damage for the (action: Strike) equal to twice the number of weapon damage dice. Regardless of whether your (action: Strike) hit, you can then attempt to (action: Shove) or (action: Trip) the target." };
+            yield return new TextBlock { Id = Guid.Parse("6e6a73b4-5342-4e09-bfad-cc70831dfc54"), Type = TextBlockType.Text, Text = $"You {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)} and then {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} using your staff. You gain a circumstance bonus to damage for the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} equal to twice the number of weapon damage dice. Regardless of whether your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hit, you can then attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} the target." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

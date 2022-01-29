@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("640970bd-2c3d-4ebe-b7ed-9e9e59f59033"), Type = TextBlockType.Text, Text = "~ Access: You are from Mediogalti Island." };
-            yield return new TextBlock { Id = Guid.Parse("25e9d061-7c42-4650-a65a-ef40c3070abc"), Type = TextBlockType.Text, Text = "You have learned how to stalk your foes and slay them with a sawtooth sabre. You become trained in Stealth and Assassin Lore; if you were already trained, you become an expert instead. Whenever your proficiency in any weapon increases to expert or beyond, you also gain that new proficiency with sawtooth sabers." };
+            yield return new TextBlock { Id = Guid.Parse("640970bd-2c3d-4ebe-b7ed-9e9e59f59033"), Type = TextBlockType.Text, Text = $"~ Access: You are from Mediogalti Island." };
+            yield return new TextBlock { Id = Guid.Parse("25e9d061-7c42-4650-a65a-ef40c3070abc"), Type = TextBlockType.Text, Text = $"You have learned how to stalk your foes and slay them with a sawtooth sabre. You become trained in Stealth and Assassin Lore; if you were already trained, you become an expert instead. Whenever your proficiency in any weapon increases to expert or beyond, you also gain that new proficiency with sawtooth sabers." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

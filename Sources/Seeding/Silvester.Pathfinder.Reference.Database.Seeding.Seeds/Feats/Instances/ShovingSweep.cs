@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c0948418-93fa-40c3-a4ea-c99a7969bdc8"), Type = TextBlockType.Text, Text = "You swing your weapon at your foe, rebuffing them back. You attempt to (action: Shove) the triggering creature, ignoring the requirement that you have a hand free. The creature continues its movement after the (action: Shove)." };
+            yield return new TextBlock { Id = Guid.Parse("c0948418-93fa-40c3-a4ea-c99a7969bdc8"), Type = TextBlockType.Text, Text = $"You swing your weapon at your foe, rebuffing them back. You attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} the triggering creature, ignoring the requirement that you have a hand free. The creature continues its movement after the {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

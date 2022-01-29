@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("910bce7c-662a-4627-adc7-63a4fe83ad00"), Type = TextBlockType.Text, Text = "You work quickly and efficiently in times of danger to deliver needed assistance. You (action: Stride) towards the triggering ally. You gain a +10-foot circumstance bonus to your Speed during this movement." };
+            yield return new TextBlock { Id = Guid.Parse("910bce7c-662a-4627-adc7-63a4fe83ad00"), Type = TextBlockType.Text, Text = $"You work quickly and efficiently in times of danger to deliver needed assistance. You {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} towards the triggering ally. You gain a +10-foot circumstance bonus to your Speed during this movement." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

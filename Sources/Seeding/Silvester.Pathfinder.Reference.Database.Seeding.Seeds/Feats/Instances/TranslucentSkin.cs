@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("00d7d80f-ebe7-44db-8922-539c4f7e44aa"), Type = TextBlockType.Text, Text = "Your body is translucent while underwater. Whenever you are fully submerged in water, you can (action: Hide) from other creatures even if you don't have cover against them and aren't concealed from them." };
+            yield return new TextBlock { Id = Guid.Parse("00d7d80f-ebe7-44db-8922-539c4f7e44aa"), Type = TextBlockType.Text, Text = $"Your body is translucent while underwater. Whenever you are fully submerged in water, you can {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)} from other creatures even if you don't have cover against them and aren't concealed from them." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

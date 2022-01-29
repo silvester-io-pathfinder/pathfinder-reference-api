@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0acad07d-07d0-4a75-81e4-6ee2a55e8e61"), Type = TextBlockType.Text, Text = "Actuated legs, efficient gears in the wheels or treads, or add-on boosters make your construct faster. Your innovation's Speed increases to 40 feet." };
+            yield return new TextBlock { Id = Guid.Parse("0acad07d-07d0-4a75-81e4-6ee2a55e8e61"), Type = TextBlockType.Text, Text = $"Actuated legs, efficient gears in the wheels or treads, or add-on boosters make your construct faster. Your innovation's Speed increases to 40 feet." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

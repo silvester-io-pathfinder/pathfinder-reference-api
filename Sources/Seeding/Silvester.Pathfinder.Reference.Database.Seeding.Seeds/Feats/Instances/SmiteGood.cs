@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("78dbc110-1a17-44d0-8c4a-66482d3ae3b2"), Type = TextBlockType.Text, Text = "Your blade ally shares your lust for the blood of good creatures. Select one enemy you can see. Until the start of your next turn, your (action: Strikes | Strike) against that foe using the weapon your blade ally inhabits deal an extra 4 evil damage, increasing to 6 if you have master proficiency with this weapon." };
-            yield return new TextBlock { Id = Guid.Parse("635e13fb-46b9-493a-96ed-c42fa1d42a6c"), Type = TextBlockType.Text, Text = "If the chosen enemy attacks you before the start of your next turn, the duration extends to the end of that enemy's next turn. If the enemy continues to attack you each turn, the duration continues to extend." };
+            yield return new TextBlock { Id = Guid.Parse("78dbc110-1a17-44d0-8c4a-66482d3ae3b2"), Type = TextBlockType.Text, Text = $"Your blade ally shares your lust for the blood of good creatures. Select one enemy you can see. Until the start of your next turn, your {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} against that foe using the weapon your blade ally inhabits deal an extra 4 evil damage, increasing to 6 if you have master proficiency with this weapon." };
+            yield return new TextBlock { Id = Guid.Parse("635e13fb-46b9-493a-96ed-c42fa1d42a6c"), Type = TextBlockType.Text, Text = $"If the chosen enemy attacks you before the start of your next turn, the duration extends to the end of that enemy's next turn. If the enemy continues to attack you each turn, the duration continues to extend." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

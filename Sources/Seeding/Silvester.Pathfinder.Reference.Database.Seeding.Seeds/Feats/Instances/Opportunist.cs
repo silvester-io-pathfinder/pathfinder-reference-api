@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5606f281-476d-4dfd-8b50-edfe945ec05b"), Type = TextBlockType.Text, Text = "You gain the (feat: Attack of Opportunity) reaction." };
+            yield return new TextBlock { Id = Guid.Parse("5606f281-476d-4dfd-8b50-edfe945ec05b"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Feat>("Attack of Opportunity", Feats.Instances.AttackOfOpportunity.ID)} reaction." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

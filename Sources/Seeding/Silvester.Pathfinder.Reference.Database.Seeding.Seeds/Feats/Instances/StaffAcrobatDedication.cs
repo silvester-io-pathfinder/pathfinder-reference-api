@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3453a0ec-9fc0-4f6a-9e83-f555343596ae"), Type = TextBlockType.Text, Text = "When you (action: High Jump), (action: Leap), or (action: Long Jump) while wielding your staff, you gain a +2 circumstance bonus to any Athletics check required and add 5 feet to the distance you can (action: Leap) vertically and horizontally." };
-            yield return new TextBlock { Id = Guid.Parse("61fb5f36-693a-4729-90e5-2f155c09c06b"), Type = TextBlockType.Text, Text = "You can (action: Shove) and (action: Trip) even if you don't have a free hand, provided you are wielding your staff." };
-            yield return new TextBlock { Id = Guid.Parse("ade19018-b951-4c08-8cd7-e021dde39982"), Type = TextBlockType.Text, Text = "Finally, when you roll a success on a check to (action: Balance) while wielding your staff, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("3453a0ec-9fc0-4f6a-9e83-f555343596ae"), Type = TextBlockType.Text, Text = $"When you {ToMarkdownLink<Models.Entities.SkillAction>("High Jump", SkillActions.Instances.HighJump.ID)}, {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Long Jump", SkillActions.Instances.LongJump.ID)} while wielding your staff, you gain a +2 circumstance bonus to any Athletics check required and add 5 feet to the distance you can {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)} vertically and horizontally." };
+            yield return new TextBlock { Id = Guid.Parse("61fb5f36-693a-4729-90e5-2f155c09c06b"), Type = TextBlockType.Text, Text = $"You can {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} and {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} even if you don't have a free hand, provided you are wielding your staff." };
+            yield return new TextBlock { Id = Guid.Parse("ade19018-b951-4c08-8cd7-e021dde39982"), Type = TextBlockType.Text, Text = $"Finally, when you roll a success on a check to {ToMarkdownLink<Models.Entities.SkillAction>("Balance", SkillActions.Instances.Balance.ID)} while wielding your staff, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

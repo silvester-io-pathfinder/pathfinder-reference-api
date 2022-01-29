@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2ee719f0-2bcd-41e7-9697-cb499c7a473a"), Type = TextBlockType.Text, Text = "Your fearless charge into battle reinvigorates your allies to carry on the fight. You (action: Stride) up to your Speed and make a melee (action: Strike). If your (action: Strike) hits and damages an enemy, each ally within 60 feet who saw you hit gains temporary Hit Points equal to your Charisma modifier. These temporary Hit Points last until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("2ee719f0-2bcd-41e7-9697-cb499c7a473a"), Type = TextBlockType.Text, Text = $"Your fearless charge into battle reinvigorates your allies to carry on the fight. You {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} up to your Speed and make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits and damages an enemy, each ally within 60 feet who saw you hit gains temporary Hit Points equal to your Charisma modifier. These temporary Hit Points last until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

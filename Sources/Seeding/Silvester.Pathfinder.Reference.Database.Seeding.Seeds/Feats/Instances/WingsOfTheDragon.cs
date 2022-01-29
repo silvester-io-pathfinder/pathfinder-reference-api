@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ad45ef8-2718-4aa3-b9f0-70e9220c6fd9"), Type = TextBlockType.Text, Text = "You can manifest draconic wings to soar through the air at great speed. You gain the (spell: dragon wings) sorcerer bloodline spell and a focus pool of 1 Focus Point. If you already have a focus pool, increase your number of Focus Points by 1." };
+            yield return new TextBlock { Id = Guid.Parse("3ad45ef8-2718-4aa3-b9f0-70e9220c6fd9"), Type = TextBlockType.Text, Text = $"You can manifest draconic wings to soar through the air at great speed. You gain the {ToMarkdownLink<Models.Entities.Spell>("dragon wings", Spells.Instances.DragonWings.ID)} sorcerer bloodline spell and a focus pool of 1 Focus Point. If you already have a focus pool, increase your number of Focus Points by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

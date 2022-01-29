@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e75dcf22-1b7c-408e-ae36-3e63794b6961"), Type = TextBlockType.Text, Text = "You are at home out in the elements, reveling in the power of nature unleashed. You do not take circumstance penalties to ranged spell attacks or Perception checks caused by weather, and your targeted spells don't require a flat check to succeed against a target concealed by weather (such as fog)." };
+            yield return new TextBlock { Id = Guid.Parse("e75dcf22-1b7c-408e-ae36-3e63794b6961"), Type = TextBlockType.Text, Text = $"You are at home out in the elements, reveling in the power of nature unleashed. You do not take circumstance penalties to ranged spell attacks or Perception checks caused by weather, and your targeted spells don't require a flat check to succeed against a target concealed by weather (such as fog)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

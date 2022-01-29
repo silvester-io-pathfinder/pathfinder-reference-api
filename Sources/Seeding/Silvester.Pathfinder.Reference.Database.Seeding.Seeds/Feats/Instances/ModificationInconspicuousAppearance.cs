@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ac52920-ec30-4d76-8b1e-8b33e1b02a6e"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
-            yield return new TextBlock { Id = Guid.Parse("c50dea90-1c19-49ba-be88-dbd9083f4f37"), Type = TextBlockType.Text, Text = "Your innovation is built for easy concealment and surprise attacks. It gains the (trait: backstabber) and (trait: versatile P) traits. If the weapon has light Bulk, it also gains the (trait: concealable) trait." };
+            yield return new TextBlock { Id = Guid.Parse("3ac52920-ec30-4d76-8b1e-8b33e1b02a6e"), Type = TextBlockType.Enumeration, Text = $"*Melee Only**" };
+            yield return new TextBlock { Id = Guid.Parse("c50dea90-1c19-49ba-be88-dbd9083f4f37"), Type = TextBlockType.Text, Text = $"Your innovation is built for easy concealment and surprise attacks. It gains the {ToMarkdownLink<Models.Entities.Trait>("backstabber", Traits.Instances.Backstabber.ID)} and {ToMarkdownLink<Models.Entities.Trait>("versatile P", Traits.Instances.Versatile.ID)} traits. If the weapon has light Bulk, it also gains the {ToMarkdownLink<Models.Entities.Trait>("concealable", Traits.Instances.Concealable.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

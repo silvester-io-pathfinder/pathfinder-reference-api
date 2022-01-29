@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fe5f4bb3-26cc-4f12-82b0-26920b51176a"), Type = TextBlockType.Text, Text = "You leave little sign when attempting to remain unseen. When you (action: Avoid Notice), you also gain the benefits of (action: Cover Tracks) unless you choose not to." };
+            yield return new TextBlock { Id = Guid.Parse("fe5f4bb3-26cc-4f12-82b0-26920b51176a"), Type = TextBlockType.Text, Text = $"You leave little sign when attempting to remain unseen. When you {ToMarkdownLink<Models.Entities.Activity>("Avoid Notice", Activities.Instances.AvoidNotice.ID)}, you also gain the benefits of {ToMarkdownLink<Models.Entities.SkillAction>("Cover Tracks", SkillActions.Instances.CoverTracks.ID)} unless you choose not to." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e1ba10aa-3c34-441b-9b7b-6d69aec999ff"), Type = TextBlockType.Text, Text = "You can rig a snare in only moments. You can (action: Craft) snares that normally take 1 minute to (action: Craft) with 3 (action: Interact) actions, even if you haven't prepared them." };
+            yield return new TextBlock { Id = Guid.Parse("e1ba10aa-3c34-441b-9b7b-6d69aec999ff"), Type = TextBlockType.Text, Text = $"You can rig a snare in only moments. You can {ToMarkdownLink<Models.Entities.SkillAction>("Craft", SkillActions.Instances.Craft.ID)} snares that normally take 1 minute to {ToMarkdownLink<Models.Entities.SkillAction>("Craft", SkillActions.Instances.Craft.ID)} with 3 {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} actions, even if you haven't prepared them." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

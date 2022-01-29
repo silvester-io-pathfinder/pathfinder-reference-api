@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2f93a667-8fe5-4b8f-9541-f0ea7df26189"), Type = TextBlockType.Text, Text = "Instead of specializing in a school of magic, you specialize in one of the four elements: air. Any benefits your arcane school would grant you that are associated with a selected spell school, you instead apply to your selected element." };
-            yield return new TextBlock { Id = Guid.Parse("212964a2-ef0c-42d8-9a25-f3a3d84ea157"), Type = TextBlockType.Text, Text = "In place of your arcane school spell, you learn the initial air elemental focus spell ((spell: updraft)). If you later select the (feat: Advanced School Spell) wizard feat, instead of gaining the listed school spell, you gain the advanced air elemental focus spell ((spell: powerful inhalation))." };
+            yield return new TextBlock { Id = Guid.Parse("2f93a667-8fe5-4b8f-9541-f0ea7df26189"), Type = TextBlockType.Text, Text = $"Instead of specializing in a school of magic, you specialize in one of the four elements: air. Any benefits your arcane school would grant you that are associated with a selected spell school, you instead apply to your selected element." };
+            yield return new TextBlock { Id = Guid.Parse("212964a2-ef0c-42d8-9a25-f3a3d84ea157"), Type = TextBlockType.Text, Text = $"In place of your arcane school spell, you learn the initial air elemental focus spell ({ToMarkdownLink<Models.Entities.Spell>("updraft", Spells.Instances.Updraft.ID)}). If you later select the {ToMarkdownLink<Models.Entities.Feat>("Advanced School Spell", Feats.Instances.AdvancedSchoolSpell.ID)} wizard feat, instead of gaining the listed school spell, you gain the advanced air elemental focus spell ({ToMarkdownLink<Models.Entities.Spell>("powerful inhalation", Spells.Instances.PowerfulInhalation.ID)})." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

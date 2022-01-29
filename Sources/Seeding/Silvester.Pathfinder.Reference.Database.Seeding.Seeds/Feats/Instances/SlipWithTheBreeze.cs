@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b3626ace-91b3-4bce-82e6-b2cc3a63019d"), Type = TextBlockType.Text, Text = "You create gusts of wind when you jump, allowing you to carry yourself across greater distances. You gain the (feat: Quick Jump) and (feat: Powerful Leap) skill feats as bonus feats." };
+            yield return new TextBlock { Id = Guid.Parse("b3626ace-91b3-4bce-82e6-b2cc3a63019d"), Type = TextBlockType.Text, Text = $"You create gusts of wind when you jump, allowing you to carry yourself across greater distances. You gain the {ToMarkdownLink<Models.Entities.Feat>("Quick Jump", Feats.Instances.QuickJump.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Powerful Leap", Feats.Instances.PowerfulLeap.ID)} skill feats as bonus feats." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

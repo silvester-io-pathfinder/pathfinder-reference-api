@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e7ee8dea-f64a-43ef-8beb-8760ac9b9916"), Type = TextBlockType.Text, Text = "The life-giving properties of the aeon orbs flourish within you. Small plants or fungi magically appear on all surfaces in a 60-foot emanation around you. This life withers after 1 day unless the environment can support it. You can choose one of the following options each time you use this feat." };
-            yield return new TextBlock { Id = Guid.Parse("84c4401d-46be-4f90-a752-b2a251363bad"), Type = TextBlockType.Enumeration, Text = " : You can cause any number of 5-foot squares in the area to be light undergrowth, which is difficult terrain and provides lesser cover." };
-            yield return new TextBlock { Id = Guid.Parse("74f2b9a0-c601-4c51-8ef0-bc712ec11579"), Type = TextBlockType.Enumeration, Text = " : You can cause a tree or giant mushroom to appear in any unoccupied location in the area; it occupies an entire 5-foot square and provides standard cover. The tree or mushroom has 5 Hardness and 50 Hit Points." };
+            yield return new TextBlock { Id = Guid.Parse("e7ee8dea-f64a-43ef-8beb-8760ac9b9916"), Type = TextBlockType.Text, Text = $"The life-giving properties of the aeon orbs flourish within you. Small plants or fungi magically appear on all surfaces in a 60-foot emanation around you. This life withers after 1 day unless the environment can support it. You can choose one of the following options each time you use this feat." };
+            yield return new TextBlock { Id = Guid.Parse("84c4401d-46be-4f90-a752-b2a251363bad"), Type = TextBlockType.Enumeration, Text = $" : You can cause any number of 5-foot squares in the area to be light undergrowth, which is difficult terrain and provides lesser cover." };
+            yield return new TextBlock { Id = Guid.Parse("74f2b9a0-c601-4c51-8ef0-bc712ec11579"), Type = TextBlockType.Enumeration, Text = $" : You can cause a tree or giant mushroom to appear in any unoccupied location in the area; it occupies an entire 5-foot square and provides standard cover. The tree or mushroom has 5 Hardness and 50 Hit Points." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

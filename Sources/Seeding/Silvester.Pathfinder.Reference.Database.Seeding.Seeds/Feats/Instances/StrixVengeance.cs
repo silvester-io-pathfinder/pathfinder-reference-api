@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9829f482-792f-4270-81f9-d3dcd2e65ed6"), Type = TextBlockType.Text, Text = "You dedicate yourself to destroying those who harm your kin. Until the end of your next turn, you deal an additional 1d6 damage on (action: Strikes | Strike) against the triggering enemy. The bonus increases to 2d6 if you use a (item: striking | Striking Runestone) weapon or unarmed attack and 3d6 if you use a (item: major striking | Major Striking Runestone) weapon or unarmed attack." };
+            yield return new TextBlock { Id = Guid.Parse("9829f482-792f-4270-81f9-d3dcd2e65ed6"), Type = TextBlockType.Text, Text = $"You dedicate yourself to destroying those who harm your kin. Until the end of your next turn, you deal an additional 1d6 damage on {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} against the triggering enemy. The bonus increases to 2d6 if you use a {ToMarkdownLink<Models.Items.Instances.FundamentalWeaponRune>("striking", Items.FundamentalWeaponRunes.Instances.Striking.ID)} weapon or unarmed attack and 3d6 if you use a {ToMarkdownLink<Models.Items.Instances.FundamentalWeaponRune>("major striking", Items.FundamentalWeaponRunes.Instances.Striking.ID)} weapon or unarmed attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

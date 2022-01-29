@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e511af35-6513-48a3-8382-7645f0504f1f"), Type = TextBlockType.Text, Text = "Your spellcasting is rife with strange lights, esoteric gestures, and other captivating effects that befuddle your foes. If the next action you use is to (activity: Cast a Spell), any creature that attempts to use a reaction triggered by your (activity: Cast a Spell) activity takes a -2 circumstance penalty to attack rolls and skill checks rolled as part of the reaction. In addition, if the spell includes a spell attack roll or requires a saving throw, creatures you hit or that fail their saves are fascinated with you until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("e511af35-6513-48a3-8382-7645f0504f1f"), Type = TextBlockType.Text, Text = $"Your spellcasting is rife with strange lights, esoteric gestures, and other captivating effects that befuddle your foes. If the next action you use is to {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)}, any creature that attempts to use a reaction triggered by your {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)} activity takes a -2 circumstance penalty to attack rolls and skill checks rolled as part of the reaction. In addition, if the spell includes a spell attack roll or requires a saving throw, creatures you hit or that fail their saves are fascinated with you until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("243bd0b4-5601-4428-9d85-32a0db56f083"), Type = TextBlockType.Text, Text = "You can focus the shadows into a powerful blast. You can cast (spell: shadow blast) as an innate occult spell once per day. Its level is always 1 level lower than the level of your shadowcaster focus spells. You become an expert in occult spell attack rolls and DCs." };
+            yield return new TextBlock { Id = Guid.Parse("243bd0b4-5601-4428-9d85-32a0db56f083"), Type = TextBlockType.Text, Text = $"You can focus the shadows into a powerful blast. You can cast {ToMarkdownLink<Models.Entities.Spell>("shadow blast", Spells.Instances.ShadowBlast.ID)} as an innate occult spell once per day. Its level is always 1 level lower than the level of your shadowcaster focus spells. You become an expert in occult spell attack rolls and DCs." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

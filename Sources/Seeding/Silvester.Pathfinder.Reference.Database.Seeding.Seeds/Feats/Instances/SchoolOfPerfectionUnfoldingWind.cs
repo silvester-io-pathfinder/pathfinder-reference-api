@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c18248b0-a87f-4230-8bae-56725803d460"), Type = TextBlockType.Text, Text = "You gain the (spell: unfolding wind rush) ki spell." };
+            yield return new TextBlock { Id = Guid.Parse("c18248b0-a87f-4230-8bae-56725803d460"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Spell>("unfolding wind rush", Spells.Instances.UnfoldingWindRush.ID)} ki spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

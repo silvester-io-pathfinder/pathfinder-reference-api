@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c1143292-5360-4d9c-a3d8-2c40dbd4a976"), Type = TextBlockType.Text, Text = "You are even more skilled in the weapons of your people. You gain the critical specialization effects of the (item: battle axe), (item: hatchet), (item: longsword), and (item: shortsword). Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency rank in the above four weapons." };
+            yield return new TextBlock { Id = Guid.Parse("c1143292-5360-4d9c-a3d8-2c40dbd4a976"), Type = TextBlockType.Text, Text = $"You are even more skilled in the weapons of your people. You gain the critical specialization effects of the {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("battle axe", Items.MeleeWeapons.Instances.BattleAxe.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("hatchet", Items.MeleeWeapons.Instances.Hatchet.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("longsword", Items.MeleeWeapons.Instances.Longsword.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("shortsword", Items.MeleeWeapons.Instances.Shortsword.ID)}. Whenever you gain a class feature that grants you expert or greater proficiency in certain weapons, you also gain that proficiency rank in the above four weapons." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

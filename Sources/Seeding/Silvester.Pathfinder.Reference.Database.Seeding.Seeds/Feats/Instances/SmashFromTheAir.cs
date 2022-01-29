@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0dc0d64e-3a19-44fb-bb7c-f5bc56f56307"), Type = TextBlockType.Text, Text = "Your expertise enables you to knock away spells. You can use (feat: Cut from the Air) against ranged spell attack rolls." };
+            yield return new TextBlock { Id = Guid.Parse("0dc0d64e-3a19-44fb-bb7c-f5bc56f56307"), Type = TextBlockType.Text, Text = $"Your expertise enables you to knock away spells. You can use {ToMarkdownLink<Models.Entities.Feat>("Cut from the Air", Feats.Instances.CutFromTheAir.ID)} against ranged spell attack rolls." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

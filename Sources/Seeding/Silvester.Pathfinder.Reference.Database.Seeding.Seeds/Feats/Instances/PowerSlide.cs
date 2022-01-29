@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ce735046-b04f-4e79-b412-70fdfee5a586"), Type = TextBlockType.Text, Text = "You throw the vehicle into a barely controlled skid, turning sharply to evade pursuit or bring your weapons to bear. You Drive with a –2 penalty to your piloting check, gaining the effects of the Drive action for the same number of actions you spent to Power Slide. At the end of the movement, if you succeed, you can turn the vehicle up to 90 degrees. If you critically succeed at your piloting check, you can instead turn the vehicle up to 180 degrees." };
-            yield return new TextBlock { Id = Guid.Parse("b405cd87-fe29-4dd4-8222-556cdb387a9c"), Type = TextBlockType.Text, Text = "You may use ONE-ACTION to THREE-ACTIONS when performing this activity." };
+            yield return new TextBlock { Id = Guid.Parse("ce735046-b04f-4e79-b412-70fdfee5a586"), Type = TextBlockType.Text, Text = $"You throw the vehicle into a barely controlled skid, turning sharply to evade pursuit or bring your weapons to bear. You Drive with a –2 penalty to your piloting check, gaining the effects of the Drive action for the same number of actions you spent to Power Slide. At the end of the movement, if you succeed, you can turn the vehicle up to 90 degrees. If you critically succeed at your piloting check, you can instead turn the vehicle up to 180 degrees." };
+            yield return new TextBlock { Id = Guid.Parse("b405cd87-fe29-4dd4-8222-556cdb387a9c"), Type = TextBlockType.Text, Text = $"You may use ONE-ACTION to THREE-ACTIONS when performing this activity." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

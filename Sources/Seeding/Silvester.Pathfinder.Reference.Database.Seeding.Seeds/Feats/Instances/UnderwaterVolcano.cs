@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c350328c-2e75-410d-9404-6cc493f8a784"), Type = TextBlockType.Text, Text = "You can cast (spell: volcanic eruption) as a 7th-level primal innate spell once per day, except that you can only evoke the volcano on the floor of a body of water, and the effects that normally happen to flying creatures happen to swimming creatures instead." };
+            yield return new TextBlock { Id = Guid.Parse("c350328c-2e75-410d-9404-6cc493f8a784"), Type = TextBlockType.Text, Text = $"You can cast {ToMarkdownLink<Models.Entities.Spell>("volcanic eruption", Spells.Instances.VolcanicEruption.ID)} as a 7th-level primal innate spell once per day, except that you can only evoke the volcano on the floor of a body of water, and the effects that normally happen to flying creatures happen to swimming creatures instead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

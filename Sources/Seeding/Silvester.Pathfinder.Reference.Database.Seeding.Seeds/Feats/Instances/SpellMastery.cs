@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0455bc61-b879-4c99-87d4-8ea10c37c29b"), Type = TextBlockType.Text, Text = "You have mastered a handful of spells to such a degree that you can cast them even if you haven't prepared them. Select any four spells of 9th level or lower that you have access to. Each spell you select must be of a different level. These spells are automatically prepared when you make your daily preparations and have their own spell slots. You can select a different array of spells by spending 1 week of downtime retraining your mastered spells." };
+            yield return new TextBlock { Id = Guid.Parse("0455bc61-b879-4c99-87d4-8ea10c37c29b"), Type = TextBlockType.Text, Text = $"You have mastered a handful of spells to such a degree that you can cast them even if you haven't prepared them. Select any four spells of 9th level or lower that you have access to. Each spell you select must be of a different level. These spells are automatically prepared when you make your daily preparations and have their own spell slots. You can select a different array of spells by spending 1 week of downtime retraining your mastered spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

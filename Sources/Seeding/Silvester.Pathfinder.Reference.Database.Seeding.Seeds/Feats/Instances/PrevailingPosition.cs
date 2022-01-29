@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e8d5d51a-acf1-40c4-9e42-3c2bb77f6632"), Type = TextBlockType.Text, Text = "Your willingness to flow from one stance to another lets you sacrifice their benefits to better protect yourself. You leave the stance you were in, gaining a +4 circumstance bonus to the triggering saving throw or to your AC against the triggering attack." };
+            yield return new TextBlock { Id = Guid.Parse("e8d5d51a-acf1-40c4-9e42-3c2bb77f6632"), Type = TextBlockType.Text, Text = $"Your willingness to flow from one stance to another lets you sacrifice their benefits to better protect yourself. You leave the stance you were in, gaining a +4 circumstance bonus to the triggering saving throw or to your AC against the triggering attack." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

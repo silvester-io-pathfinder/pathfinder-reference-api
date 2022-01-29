@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8d785247-0c4f-4743-bb2c-be632bd3feaf"), Type = TextBlockType.Text, Text = "You lead by example and can help others push themselves beyond their normal limits. When (action: Hustling | Hustle) in a group during exploration mode, your group can (action: Hustle) for up to 20 additional minutes, to a maximum of the amount of time the character with the highest Constitution modifier could (action: Hustle) alone." };
+            yield return new TextBlock { Id = Guid.Parse("8d785247-0c4f-4743-bb2c-be632bd3feaf"), Type = TextBlockType.Text, Text = $"You lead by example and can help others push themselves beyond their normal limits. When {ToMarkdownLink<Models.Entities.Activity>("Hustling", Activities.Instances.Hustle.ID)} in a group during exploration mode, your group can {ToMarkdownLink<Models.Entities.Activity>("Hustle", Activities.Instances.Hustle.ID)} for up to 20 additional minutes, to a maximum of the amount of time the character with the highest Constitution modifier could {ToMarkdownLink<Models.Entities.Activity>("Hustle", Activities.Instances.Hustle.ID)} alone." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

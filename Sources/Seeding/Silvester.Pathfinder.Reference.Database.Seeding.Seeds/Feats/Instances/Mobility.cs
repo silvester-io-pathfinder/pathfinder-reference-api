@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b627ea6f-ae84-4d7b-8e40-0cbe753d5a1f"), Type = TextBlockType.Text, Text = "You move in a way that denies your enemies the opportunity to retaliate. When you take a (action: Stride) action to move half your Speed or less, that movement does not trigger reactions. You can use Mobility when (action: Climbing | Climb), (action: Flying | Fly), or (action: Swimming | Swim) instead of (action: Striding | Stride) if you have the corresponding movement type." };
+            yield return new TextBlock { Id = Guid.Parse("b627ea6f-ae84-4d7b-8e40-0cbe753d5a1f"), Type = TextBlockType.Text, Text = $"You move in a way that denies your enemies the opportunity to retaliate. When you take a {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} action to move half your Speed or less, that movement does not trigger reactions. You can use Mobility when {ToMarkdownLink<Models.Entities.SkillAction>("Climbing", SkillActions.Instances.Climb.ID)}, {ToMarkdownLink<Models.Entities.Action>("Flying", Actions.Instances.Fly.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Swimming", SkillActions.Instances.Swim.ID)} instead of {ToMarkdownLink<Models.Entities.Action>("Striding", Actions.Instances.Stride.ID)} if you have the corresponding movement type." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fe03757c-66d1-4f0a-ad15-c90feb69e6cb"), Type = TextBlockType.Text, Text = "Once per day, when you (action: Change Shape | Change Shape - Kitsune) into a fox, you can instead gain the effects of both the canine form of 5th-level (spell: animal form) and 7th-level (spell: fiery body) for 1 minute or until you shift back, whichever comes first. You can cast (spell: produce flame) from the fiery body effect even though you're in a battle form." };
+            yield return new TextBlock { Id = Guid.Parse("fe03757c-66d1-4f0a-ad15-c90feb69e6cb"), Type = TextBlockType.Text, Text = $"Once per day, when you {ToMarkdownLink<Models.Entities.Feat>("Change Shape", Feats.Instances.ChangeShapeKitsune.ID)} into a fox, you can instead gain the effects of both the canine form of 5th-level {ToMarkdownLink<Models.Entities.Spell>("animal form", Spells.Instances.AnimalForm.ID)} and 7th-level {ToMarkdownLink<Models.Entities.Spell>("fiery body", Spells.Instances.FieryBody.ID)} for 1 minute or until you shift back, whichever comes first. You can cast {ToMarkdownLink<Models.Entities.Spell>("produce flame", Spells.Instances.ProduceFlame.ID)} from the fiery body effect even though you're in a battle form." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

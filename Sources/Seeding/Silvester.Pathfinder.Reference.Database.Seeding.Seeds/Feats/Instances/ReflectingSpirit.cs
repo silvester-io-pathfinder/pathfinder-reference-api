@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c8f368c2-b36d-45ea-aaa2-a31d832e1663"), Type = TextBlockType.Text, Text = "You gain a +2 status bonus to AC against physical ranged attacks. If an enemy's physical ranged attack misses you, you can use your reaction to immediately attempt a ranged (action: Strike) against the attacker using the projectile that missed." };
-            yield return new TextBlock { Id = Guid.Parse("cd8f5d91-b0ff-4dee-8c0e-0f5d644bacc9"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ You have weakness 5 to physical ranged attacks." };
+            yield return new TextBlock { Id = Guid.Parse("c8f368c2-b36d-45ea-aaa2-a31d832e1663"), Type = TextBlockType.Text, Text = $"You gain a +2 status bonus to AC against physical ranged attacks. If an enemy's physical ranged attack misses you, you can use your reaction to immediately attempt a ranged {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against the attacker using the projectile that missed." };
+            yield return new TextBlock { Id = Guid.Parse("cd8f5d91-b0ff-4dee-8c0e-0f5d644bacc9"), Type = TextBlockType.Text, Text = $"__Corruption Flaw__ You have weakness 5 to physical ranged attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

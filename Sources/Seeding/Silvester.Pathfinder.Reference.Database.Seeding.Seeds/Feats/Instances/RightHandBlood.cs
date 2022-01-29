@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84a784a0-5950-4b50-a7fb-9b9edc0af337"), Type = TextBlockType.Text, Text = "It's said that the flesh of the right side of a hyena can heal diseases, but that of the left side is poisonous. You can take 1 damage to feed someone blood from your right side and (action: Administer First Aid) or take 2d8 damage to (action: Treat Disease) or (action: Treat Wounds); in either case, you don't need (item: healer's tools), and gain a +1 item bonus. Blood from your left side causes the check to critically fail automatically." };
+            yield return new TextBlock { Id = Guid.Parse("84a784a0-5950-4b50-a7fb-9b9edc0af337"), Type = TextBlockType.Text, Text = $"It's said that the flesh of the right side of a hyena can heal diseases, but that of the left side is poisonous. You can take 1 damage to feed someone blood from your right side and {ToMarkdownLink<Models.Entities.SkillAction>("Administer First Aid", SkillActions.Instances.AdministerFirstAid.ID)} or take 2d8 damage to {ToMarkdownLink<Models.Entities.SkillAction>("Treat Disease", SkillActions.Instances.TreatDisease.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}; in either case, you don't need {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("healer's tools", Items.AdventuringGears.Instances.HealersTools.ID)}, and gain a +1 item bonus. Blood from your left side causes the check to critically fail automatically." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8cd934de-8c36-4f2d-8b03-fba5dd68f0a8"), Type = TextBlockType.Text, Text = "Your shadow magic bleeds into the space around you. Whenever you cast a spell with the (trait: darkness) trait, a lingering aura of shadows reduces bright light within a 5-foot emanation around you to dim light until the end of your turn. Like in natural dim light, you can use these shadows to (action: Hide), but the aura still makes your overall position obvious, so you can't become undetected through the use of these shadows alone." };
+            yield return new TextBlock { Id = Guid.Parse("8cd934de-8c36-4f2d-8b03-fba5dd68f0a8"), Type = TextBlockType.Text, Text = $"Your shadow magic bleeds into the space around you. Whenever you cast a spell with the {ToMarkdownLink<Models.Entities.Trait>("darkness", Traits.Instances.Darkness.ID)} trait, a lingering aura of shadows reduces bright light within a 5-foot emanation around you to dim light until the end of your turn. Like in natural dim light, you can use these shadows to {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)}, but the aura still makes your overall position obvious, so you can't become undetected through the use of these shadows alone." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c08ffe50-3838-4fbe-89f0-e37dd9feaed5"), Type = TextBlockType.Text, Text = "You can tap into the magic that runs through your blood. You gain (spell: animal form) (wolf only, using the statistics for a canine) and (spell: obscuring mist) as 2nd-level divine innate spells. You can cast each of these spells once per day." };
+            yield return new TextBlock { Id = Guid.Parse("c08ffe50-3838-4fbe-89f0-e37dd9feaed5"), Type = TextBlockType.Text, Text = $"You can tap into the magic that runs through your blood. You gain {ToMarkdownLink<Models.Entities.Spell>("animal form", Spells.Instances.AnimalForm.ID)} (wolf only, using the statistics for a canine) and {ToMarkdownLink<Models.Entities.Spell>("obscuring mist", Spells.Instances.ObscuringMist.ID)} as 2nd-level divine innate spells. You can cast each of these spells once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

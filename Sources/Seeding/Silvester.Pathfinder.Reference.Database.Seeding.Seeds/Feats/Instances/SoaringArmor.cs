@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("34121ca0-e462-4c85-b05b-e482005ee348"), Type = TextBlockType.Text, Text = "Whether through a release of jets of flame, propeller blades, sonic bursts, streamlined aerodynamic structure, electromagnetic fields, or some combination of the above, you've managed to free your innovation from the bonds of gravity! While wearing your innovation, you gain a fly Speed equal to your land Speed." };
+            yield return new TextBlock { Id = Guid.Parse("34121ca0-e462-4c85-b05b-e482005ee348"), Type = TextBlockType.Text, Text = $"Whether through a release of jets of flame, propeller blades, sonic bursts, streamlined aerodynamic structure, electromagnetic fields, or some combination of the above, you've managed to free your innovation from the bonds of gravity! While wearing your innovation, you gain a fly Speed equal to your land Speed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3cb99d7f-515a-4b9c-ab3b-4aa8ef0d1a5c"), Type = TextBlockType.Text, Text = "Your first shot is the deadliest. Interact to draw a firearm or crossbow. On your first turn, your first (action: Strike) with that weapon deals an additional 1d6 precision damage. This precision damage increases to 2d6 at 9th level and 3d6 at 15th level." };
+            yield return new TextBlock { Id = Guid.Parse("3cb99d7f-515a-4b9c-ab3b-4aa8ef0d1a5c"), Type = TextBlockType.Text, Text = $"Your first shot is the deadliest. Interact to draw a firearm or crossbow. On your first turn, your first {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with that weapon deals an additional 1d6 precision damage. This precision damage increases to 2d6 at 9th level and 3d6 at 15th level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e3679163-5d93-4125-b451-b1341f5fd8db"), Type = TextBlockType.Text, Text = "You can transform into an elemental. Once per day, you can cast (spell: elemental form) as a 7th-level primal innate spell, but you can only choose the air elemental form." };
+            yield return new TextBlock { Id = Guid.Parse("e3679163-5d93-4125-b451-b1341f5fd8db"), Type = TextBlockType.Text, Text = $"You can transform into an elemental. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("elemental form", Spells.Instances.ElementalForm.ID)} as a 7th-level primal innate spell, but you can only choose the air elemental form." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

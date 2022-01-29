@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("96ecccc6-5729-4313-9ff1-8bdbb797f36d"), Type = TextBlockType.Text, Text = "As hard as most unbreakable goblins are to break, you are that much harder to break. You gain 20 Hit Points from your ancestry instead of 10. When you fall, you take no falling damage. If you have the (feat: Bouncy Goblin) feat, after falling or jumping from a height of at least 20 feet, you can bounce back into the air, up to half the distance you fell (and half as far forward if you jumped). These bounces continue until you bounce less than 20 feet." };
+            yield return new TextBlock { Id = Guid.Parse("96ecccc6-5729-4313-9ff1-8bdbb797f36d"), Type = TextBlockType.Text, Text = $"As hard as most unbreakable goblins are to break, you are that much harder to break. You gain 20 Hit Points from your ancestry instead of 10. When you fall, you take no falling damage. If you have the {ToMarkdownLink<Models.Entities.Feat>("Bouncy Goblin", Feats.Instances.BouncyGoblin.ID)} feat, after falling or jumping from a height of at least 20 feet, you can bounce back into the air, up to half the distance you fell (and half as far forward if you jumped). These bounces continue until you bounce less than 20 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

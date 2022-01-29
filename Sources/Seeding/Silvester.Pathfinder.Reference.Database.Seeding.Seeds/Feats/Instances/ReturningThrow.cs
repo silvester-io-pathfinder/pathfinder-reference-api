@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dc65b112-19ba-4eac-a85c-292257da1641"), Type = TextBlockType.Text, Text = "You have mastered the technique of arcing a projectile so that it returns to your hand after being thrown, though this requires a moment to precisely calculate the trajectory and possible ricochets. Make a ranged (action: Strike) with a thrown weapon. Once the (action: Strike) is complete, the weapon arcs or ricochets back to your hand. If your hands are full when the weapon returns, it falls to the ground in your space." };
+            yield return new TextBlock { Id = Guid.Parse("dc65b112-19ba-4eac-a85c-292257da1641"), Type = TextBlockType.Text, Text = $"You have mastered the technique of arcing a projectile so that it returns to your hand after being thrown, though this requires a moment to precisely calculate the trajectory and possible ricochets. Make a ranged {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a thrown weapon. Once the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} is complete, the weapon arcs or ricochets back to your hand. If your hands are full when the weapon returns, it falls to the ground in your space." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

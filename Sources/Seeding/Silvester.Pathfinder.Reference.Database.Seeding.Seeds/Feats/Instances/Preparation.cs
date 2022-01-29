@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("98199d53-4c3b-475f-8eff-1528dcb7e6ea"), Type = TextBlockType.Text, Text = "You survey the battlefield, calculating the possibilities. You gain one additional reaction, which you can use before the beginning of your next turn for any rogue reaction." };
+            yield return new TextBlock { Id = Guid.Parse("98199d53-4c3b-475f-8eff-1528dcb7e6ea"), Type = TextBlockType.Text, Text = $"You survey the battlefield, calculating the possibilities. You gain one additional reaction, which you can use before the beginning of your next turn for any rogue reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

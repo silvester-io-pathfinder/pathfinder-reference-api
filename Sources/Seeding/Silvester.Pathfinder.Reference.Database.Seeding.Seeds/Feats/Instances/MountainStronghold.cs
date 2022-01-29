@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2ac07b98-e9ab-4661-b634-ef93922a2aac"), Type = TextBlockType.Text, Text = "You focus on your connection to the earth and call upon the mountain to block attacks against you. You gain a +2 circumstance bonus to AC until the beginning of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("2ac07b98-e9ab-4661-b634-ef93922a2aac"), Type = TextBlockType.Text, Text = $"You focus on your connection to the earth and call upon the mountain to block attacks against you. You gain a +2 circumstance bonus to AC until the beginning of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

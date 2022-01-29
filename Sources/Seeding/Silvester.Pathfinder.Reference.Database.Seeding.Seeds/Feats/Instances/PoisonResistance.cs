@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e085efe-6af9-4431-a924-6f0309d795da"), Type = TextBlockType.Text, Text = "Repeated exposure to toxic reagents has fortified your body against poisons of all kinds. You gain poison resistance equal to half your level, and you gain a +1 status bonus to saving throws against poisons." };
+            yield return new TextBlock { Id = Guid.Parse("1e085efe-6af9-4431-a924-6f0309d795da"), Type = TextBlockType.Text, Text = $"Repeated exposure to toxic reagents has fortified your body against poisons of all kinds. You gain poison resistance equal to half your level, and you gain a +1 status bonus to saving throws against poisons." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

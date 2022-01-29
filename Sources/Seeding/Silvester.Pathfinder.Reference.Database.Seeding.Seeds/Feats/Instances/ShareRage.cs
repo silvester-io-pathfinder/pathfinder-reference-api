@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("914822b0-fff5-484c-a46b-5a3c89e0654d"), Type = TextBlockType.Text, Text = "You stoke an ally's fury. While you are raging, one willing creature within 30 feet gains the effects of the (feat: Rage) action, except it can still use (trait: concentrate) actions." };
+            yield return new TextBlock { Id = Guid.Parse("914822b0-fff5-484c-a46b-5a3c89e0654d"), Type = TextBlockType.Text, Text = $"You stoke an ally's fury. While you are raging, one willing creature within 30 feet gains the effects of the {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)} action, except it can still use {ToMarkdownLink<Models.Entities.Trait>("concentrate", Traits.Instances.Concentrate.ID)} actions." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

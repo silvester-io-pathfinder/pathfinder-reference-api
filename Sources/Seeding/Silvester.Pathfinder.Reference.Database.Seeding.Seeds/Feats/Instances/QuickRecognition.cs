@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7ce3d7d6-6861-4b79-81db-5b53e0088082"), Type = TextBlockType.Text, Text = "You (action: Recognize Spells | Recognize Spell) swiftly. Once per round, you can (action: Recognize a Spell | Recognize Spell) using a skill in which you're a master as a free action." };
+            yield return new TextBlock { Id = Guid.Parse("7ce3d7d6-6861-4b79-81db-5b53e0088082"), Type = TextBlockType.Text, Text = $"You {ToMarkdownLink<Models.Entities.Feat>("Recognize Spells", Feats.Instances.RecognizeSpell.ID)} swiftly. Once per round, you can {ToMarkdownLink<Models.Entities.Feat>("Recognize a Spell", Feats.Instances.RecognizeSpell.ID)} using a skill in which you're a master as a free action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

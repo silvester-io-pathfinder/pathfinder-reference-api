@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2209a9f7-41a1-46d1-8b89-14fa71b62d2e"), Type = TextBlockType.Text, Text = "Your nanites can augment your defenses. You can choose to activate (feat: Nanite Surge) when you attempt a saving throw, instead of when you attempt a skill check. If you do, you gain a +2 status bonus to the triggering saving throw." };
+            yield return new TextBlock { Id = Guid.Parse("2209a9f7-41a1-46d1-8b89-14fa71b62d2e"), Type = TextBlockType.Text, Text = $"Your nanites can augment your defenses. You can choose to activate {ToMarkdownLink<Models.Entities.Feat>("Nanite Surge", Feats.Instances.NaniteSurge.ID)} when you attempt a saving throw, instead of when you attempt a skill check. If you do, you gain a +2 status bonus to the triggering saving throw." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

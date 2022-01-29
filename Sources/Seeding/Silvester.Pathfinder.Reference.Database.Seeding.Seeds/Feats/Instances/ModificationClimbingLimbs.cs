@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c83b2761-f618-4201-b327-3b0466460223"), Type = TextBlockType.Text, Text = "With appendages that can claw or create suction, your construct becomes a capable climber. Your innovation gains a climb Speed equal to half its land Speed." };
+            yield return new TextBlock { Id = Guid.Parse("c83b2761-f618-4201-b327-3b0466460223"), Type = TextBlockType.Text, Text = $"With appendages that can claw or create suction, your construct becomes a capable climber. Your innovation gains a climb Speed equal to half its land Speed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

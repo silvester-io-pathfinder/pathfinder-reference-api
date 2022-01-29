@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eca35aff-94f8-452b-8231-5885734bc3bb"), Type = TextBlockType.Text, Text = "You combine unholy might with negative energy to damage angels, archons, and other self-righteous denizens of the Outer Planes. When you cast a (spell: harm) spell, you can change the damage you deal to celestial creatures to evil damage instead of negative damage." };
+            yield return new TextBlock { Id = Guid.Parse("eca35aff-94f8-452b-8231-5885734bc3bb"), Type = TextBlockType.Text, Text = $"You combine unholy might with negative energy to damage angels, archons, and other self-righteous denizens of the Outer Planes. When you cast a {ToMarkdownLink<Models.Entities.Spell>("harm", Spells.Instances.Harm.ID)} spell, you can change the damage you deal to celestial creatures to evil damage instead of negative damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6c056b2a-5801-4604-b80e-33962e66a6df"), Type = TextBlockType.Text, Text = "You spend 10 minutes communing with spirits of earth and stone, requesting shelter. At the end of this time, the earth rises and opens, forming a small cave or earthen mound 20 feet in diameter and 10 feet high. This cave has the (trait: structure) trait and the same restrictions as structures created by magic items. The cave has a single entrance and provides shelter from the elements. The cave remains for 12 hours or until you spend 10 minutes coaxing the earth to close." };
+            yield return new TextBlock { Id = Guid.Parse("6c056b2a-5801-4604-b80e-33962e66a6df"), Type = TextBlockType.Text, Text = $"You spend 10 minutes communing with spirits of earth and stone, requesting shelter. At the end of this time, the earth rises and opens, forming a small cave or earthen mound 20 feet in diameter and 10 feet high. This cave has the {ToMarkdownLink<Models.Entities.Trait>("structure", Traits.Instances.Structure.ID)} trait and the same restrictions as structures created by magic items. The cave has a single entrance and provides shelter from the elements. The cave remains for 12 hours or until you spend 10 minutes coaxing the earth to close." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

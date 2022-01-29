@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("265d003c-f2a4-433c-85b4-4fc1bcf8ab5e"), Type = TextBlockType.Text, Text = "You channel salt and brine from your blood into the creature's wounds. The creature must attempt a Fortitude save using your class DC or spell DC, whichever is higher. On a failure, the creature takes 1d6 persistent acid damage and is sickened 1 by the pain. On a critical failure, it instead takes 2d6 persistent acid damage and is sickened 2." };
+            yield return new TextBlock { Id = Guid.Parse("265d003c-f2a4-433c-85b4-4fc1bcf8ab5e"), Type = TextBlockType.Text, Text = $"You channel salt and brine from your blood into the creature's wounds. The creature must attempt a Fortitude save using your class DC or spell DC, whichever is higher. On a failure, the creature takes 1d6 persistent acid damage and is sickened 1 by the pain. On a critical failure, it instead takes 2d6 persistent acid damage and is sickened 2." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

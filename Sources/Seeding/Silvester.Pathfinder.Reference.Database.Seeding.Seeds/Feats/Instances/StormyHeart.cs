@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8b1c4319-f3d5-47a2-beb0-2448f6fb1a3c"), Type = TextBlockType.Text, Text = "The elemental power in your blood is a raging storm. You can (feat: Invoke the Elements) with a frequency of once per 10 minutes, rather than once per day." };
+            yield return new TextBlock { Id = Guid.Parse("8b1c4319-f3d5-47a2-beb0-2448f6fb1a3c"), Type = TextBlockType.Text, Text = $"The elemental power in your blood is a raging storm. You can {ToMarkdownLink<Models.Entities.Feat>("Invoke the Elements", Feats.Instances.InvokeTheElements.ID)} with a frequency of once per 10 minutes, rather than once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

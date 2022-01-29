@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d20333eb-d331-4f31-859a-d894dc4de779"), Type = TextBlockType.Text, Text = "You gain a +10-foot status bonus to your Speed when you're not wearing armor." };
+            yield return new TextBlock { Id = Guid.Parse("d20333eb-d331-4f31-859a-d894dc4de779"), Type = TextBlockType.Text, Text = $"You gain a +10-foot status bonus to your Speed when you're not wearing armor." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

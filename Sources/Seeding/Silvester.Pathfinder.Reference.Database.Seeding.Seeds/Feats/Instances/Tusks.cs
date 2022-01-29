@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1d30e4c2-7687-45e3-9357-cbcbc6d703ae"), Type = TextBlockType.Text, Text = "You have particularly long, jagged tusks perfect for tearing meat from bone. You gain a tusks unarmed attack that deals 1d6 piercing damage. Your tusks are in the brawling group and have the (trait: finesse) and (trait: unarmed) traits." };
+            yield return new TextBlock { Id = Guid.Parse("1d30e4c2-7687-45e3-9357-cbcbc6d703ae"), Type = TextBlockType.Text, Text = $"You have particularly long, jagged tusks perfect for tearing meat from bone. You gain a tusks unarmed attack that deals 1d6 piercing damage. Your tusks are in the brawling group and have the {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)} and {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)} traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

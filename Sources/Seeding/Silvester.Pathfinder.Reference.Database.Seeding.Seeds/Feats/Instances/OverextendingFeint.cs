@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bfcc532a-0083-49bf-a2d1-caf536fd3998"), Type = TextBlockType.Text, Text = "When you trick a foe, instead of catching them off guard, you goad them into overextending their next attack. On a successful (action: Feint), you can use the following success and critical success effects instead of any other effects that would occur when you (action: Feint). You can choose a different effect each time you (action: Feint) against a given foe." };
+            yield return new TextBlock { Id = Guid.Parse("bfcc532a-0083-49bf-a2d1-caf536fd3998"), Type = TextBlockType.Text, Text = $"When you trick a foe, instead of catching them off guard, you goad them into overextending their next attack. On a successful {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)}, you can use the following success and critical success effects instead of any other effects that would occur when you {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)}. You can choose a different effect each time you {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)} against a given foe." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e20ecd1c-59a6-4467-bd6e-4d4e0fa48a2b"), Type = TextBlockType.Text, Text = "Your innovation is solidly built; it can take significant punishment before being destroyed. Increase its maximum HP by your level." };
+            yield return new TextBlock { Id = Guid.Parse("e20ecd1c-59a6-4467-bd6e-4d4e0fa48a2b"), Type = TextBlockType.Text, Text = $"Your innovation is solidly built; it can take significant punishment before being destroyed. Increase its maximum HP by your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

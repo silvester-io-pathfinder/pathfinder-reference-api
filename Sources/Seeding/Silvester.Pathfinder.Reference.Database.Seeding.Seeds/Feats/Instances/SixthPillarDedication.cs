@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c1b6b570-19ab-447a-94d3-e4a733c5ef26"), Type = TextBlockType.Text, Text = "You use your physical discipline to channel your magic. If your proficiency rank in unarmed attacks is at least expert, your proficiency rank in spell attacks increases to expert. Likewise, if your proficiency rank in spell attacks is at least expert, your proficiency rank in unarmed attacks improves to expert. You become an expert in Athletics, or in another trained skill if you were already expert in Athletics." };
-            yield return new TextBlock { Id = Guid.Parse("f53c3735-dd95-4aec-ade6-ee41d9d2ff00"), Type = TextBlockType.Text, Text = "__Manually improve your spell attacks and unarmed attacks proficiencies accordingly.__" };
+            yield return new TextBlock { Id = Guid.Parse("c1b6b570-19ab-447a-94d3-e4a733c5ef26"), Type = TextBlockType.Text, Text = $"You use your physical discipline to channel your magic. If your proficiency rank in unarmed attacks is at least expert, your proficiency rank in spell attacks increases to expert. Likewise, if your proficiency rank in spell attacks is at least expert, your proficiency rank in unarmed attacks improves to expert. You become an expert in Athletics, or in another trained skill if you were already expert in Athletics." };
+            yield return new TextBlock { Id = Guid.Parse("f53c3735-dd95-4aec-ade6-ee41d9d2ff00"), Type = TextBlockType.Text, Text = $"__Manually improve your spell attacks and unarmed attacks proficiencies accordingly.__" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

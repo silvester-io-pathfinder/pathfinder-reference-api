@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("56d5e844-2739-4800-b6ed-9770c9106fe6"), Type = TextBlockType.Text, Text = "You can take away the air that keeps a flying foe aloft. You gain the (spell: steal the sky) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("56d5e844-2739-4800-b6ed-9770c9106fe6"), Type = TextBlockType.Text, Text = $"You can take away the air that keeps a flying foe aloft. You gain the {ToMarkdownLink<Models.Entities.Feat>("steal the sky", Feats.Instances.StealTheSky.ID)} ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("408468bb-0e8b-4e95-92a7-6efdb670894a"), Type = TextBlockType.Text, Text = "You buffer your eidolon. You gain the (spell: reinforce eidolon) link cantrip." };
+            yield return new TextBlock { Id = Guid.Parse("408468bb-0e8b-4e95-92a7-6efdb670894a"), Type = TextBlockType.Text, Text = $"You buffer your eidolon. You gain the {ToMarkdownLink<Models.Entities.Feat>("reinforce eidolon", Feats.Instances.ReinforceEidolon.ID)} link cantrip." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

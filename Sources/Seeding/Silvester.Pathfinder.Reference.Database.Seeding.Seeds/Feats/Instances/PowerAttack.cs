@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f300ecd4-f752-4c86-8bc0-0b474bda30f0"), Type = TextBlockType.Text, Text = "You unleash a particularly powerful attack that clobbers your foe but leaves you a bit unsteady. Make a melee (action: Strike). This counts as two attacks when calculating your multiple attack penalty. If this (action: Strike) hits, you deal an extra die of weapon damage. If you're at least 10th level, increase this to two extra dice, and if you're at least 18th level, increase it to three extra dice." };
+            yield return new TextBlock { Id = Guid.Parse("f300ecd4-f752-4c86-8bc0-0b474bda30f0"), Type = TextBlockType.Text, Text = $"You unleash a particularly powerful attack that clobbers your foe but leaves you a bit unsteady. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. This counts as two attacks when calculating your multiple attack penalty. If this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits, you deal an extra die of weapon damage. If you're at least 10th level, increase this to two extra dice, and if you're at least 18th level, increase it to three extra dice." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6598e09-5171-49a0-8726-b526fbf664ff"), Type = TextBlockType.Text, Text = "Your eidolon gains a 1st-level skill feat and a 2nd-level or lower skill feat. At 7th level, your eidolon gains an additional skill feat, of 7th level or lower." };
+            yield return new TextBlock { Id = Guid.Parse("a6598e09-5171-49a0-8726-b526fbf664ff"), Type = TextBlockType.Text, Text = $"Your eidolon gains a 1st-level skill feat and a 2nd-level or lower skill feat. At 7th level, your eidolon gains an additional skill feat, of 7th level or lower." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

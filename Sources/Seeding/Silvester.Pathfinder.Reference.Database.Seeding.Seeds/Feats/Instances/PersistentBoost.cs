@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d190d610-169f-4531-8c11-3c25c67f826f"), Type = TextBlockType.Text, Text = "Your innovation sets foes on fire, covers them in acid, leaves barbed thorns behind, or otherwise deals persistent damage to your foes that sticks around long after you deliver your boosted attack. When you or your construct innovation damage a foe with offensive boost, that foe also takes 1d8 persistent damage of the same damage type as the offensive boost damage." };
+            yield return new TextBlock { Id = Guid.Parse("d190d610-169f-4531-8c11-3c25c67f826f"), Type = TextBlockType.Text, Text = $"Your innovation sets foes on fire, covers them in acid, leaves barbed thorns behind, or otherwise deals persistent damage to your foes that sticks around long after you deliver your boosted attack. When you or your construct innovation damage a foe with offensive boost, that foe also takes 1d8 persistent damage of the same damage type as the offensive boost damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

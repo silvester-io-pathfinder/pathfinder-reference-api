@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dbab3c92-4dc8-48ce-9535-0c8f785a424a"), Type = TextBlockType.Text, Text = "Your study of occult practices has shown you how to best defend against them. You gain a +1 circumstance bonus to all saving throws against (trait: occult) effects." };
+            yield return new TextBlock { Id = Guid.Parse("dbab3c92-4dc8-48ce-9535-0c8f785a424a"), Type = TextBlockType.Text, Text = $"Your study of occult practices has shown you how to best defend against them. You gain a +1 circumstance bonus to all saving throws against {ToMarkdownLink<Models.Entities.Trait>("occult", Traits.Instances.Occult.ID)} effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

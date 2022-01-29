@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e136f332-d64a-4f7a-9a60-547a4e828838"), Type = TextBlockType.Text, Text = "When an ally you can see falls in battle, your fight or flight response triggers a surge in your deity's might within you. You instantly regain 1 Focus Point." };
+            yield return new TextBlock { Id = Guid.Parse("e136f332-d64a-4f7a-9a60-547a4e828838"), Type = TextBlockType.Text, Text = $"When an ally you can see falls in battle, your fight or flight response triggers a surge in your deity's might within you. You instantly regain 1 Focus Point." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

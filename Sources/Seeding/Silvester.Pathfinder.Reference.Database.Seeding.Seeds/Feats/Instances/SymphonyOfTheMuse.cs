@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("809aa4d1-800f-40e8-96d0-29c77cbeb91a"), Type = TextBlockType.Text, Text = "You are able to weave countless performances together into a solo symphony. You are no longer limited to a single composition each turn or a single composition at a time; when you use a new composition, all previous compositions' effects continue for their remaining duration." };
+            yield return new TextBlock { Id = Guid.Parse("809aa4d1-800f-40e8-96d0-29c77cbeb91a"), Type = TextBlockType.Text, Text = $"You are able to weave countless performances together into a solo symphony. You are no longer limited to a single composition each turn or a single composition at a time; when you use a new composition, all previous compositions' effects continue for their remaining duration." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

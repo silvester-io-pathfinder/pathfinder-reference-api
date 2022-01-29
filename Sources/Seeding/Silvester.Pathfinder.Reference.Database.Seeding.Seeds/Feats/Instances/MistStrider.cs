@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("51f554d4-581a-4bf8-80b2-935bdab1cc50"), Type = TextBlockType.Text, Text = "You condense the moisture in the air, solidifying it so it can hold your weight. When you use (feat: Water Strider), you can walk on air. You can ascend and descend at a maximum of a 45-degree angle. You still fall at the end of your movement if you don't end on a surface that can support you, as normal for (feat: Water Strider)." };
+            yield return new TextBlock { Id = Guid.Parse("51f554d4-581a-4bf8-80b2-935bdab1cc50"), Type = TextBlockType.Text, Text = $"You condense the moisture in the air, solidifying it so it can hold your weight. When you use {ToMarkdownLink<Models.Entities.Feat>("Water Strider", Feats.Instances.WaterStrider.ID)}, you can walk on air. You can ascend and descend at a maximum of a 45-degree angle. You still fall at the end of your movement if you don't end on a surface that can support you, as normal for {ToMarkdownLink<Models.Entities.Feat>("Water Strider", Feats.Instances.WaterStrider.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

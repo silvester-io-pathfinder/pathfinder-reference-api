@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7777a38c-29f0-4834-90c8-e9558395c7d7"), Type = TextBlockType.Text, Text = "Much like morrignas, you feel an affinity for spiders. You can cast (spell: animal messenger) (spiders only), (spell: speak with animals) (spiders only), and (spell: spider climb) each once per day as 2nd-level divine innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("7777a38c-29f0-4834-90c8-e9558395c7d7"), Type = TextBlockType.Text, Text = $"Much like morrignas, you feel an affinity for spiders. You can cast {ToMarkdownLink<Models.Entities.Spell>("animal messenger", Spells.Instances.AnimalMessenger.ID)} (spiders only), {ToMarkdownLink<Models.Entities.Spell>("speak with animals", Spells.Instances.SpeakWithAnimals.ID)} (spiders only), and {ToMarkdownLink<Models.Entities.Spell>("spider climb", Spells.Instances.SpiderClimb.ID)} each once per day as 2nd-level divine innate spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

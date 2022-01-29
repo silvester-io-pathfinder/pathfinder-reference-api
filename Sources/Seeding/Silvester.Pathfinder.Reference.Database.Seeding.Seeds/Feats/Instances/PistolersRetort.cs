@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bcfefeaf-dc24-4f3e-ada3-d9a41f293526"), Type = TextBlockType.Text, Text = "You punish your foe's failure with a shot. Make a (action: Strike) against the triggering foe with a one-handed firearm or one-handed crossbow." };
+            yield return new TextBlock { Id = Guid.Parse("bcfefeaf-dc24-4f3e-ada3-d9a41f293526"), Type = TextBlockType.Text, Text = $"You punish your foe's failure with a shot. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against the triggering foe with a one-handed firearm or one-handed crossbow." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

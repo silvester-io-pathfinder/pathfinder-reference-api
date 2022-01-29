@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5e03e914-6225-470a-bf88-c6430357bea8"), Type = TextBlockType.Text, Text = "During daily preparations, you can indulge in your associated sin. When you do, you gain one additional spell slot of any spell level up to two levels below the highest-level wizard spell you can cast. You can prepare only a spell of your specialized school in this slot. As with any other act, indulging in your sin might change your alignment if your behavior harms someone else." };
-            yield return new TextBlock { Id = Guid.Parse("5157eb16-22cf-4af5-b925-da216c926cf2"), Type = TextBlockType.Text, Text = "__Add this additional spell slot manually__" };
+            yield return new TextBlock { Id = Guid.Parse("5e03e914-6225-470a-bf88-c6430357bea8"), Type = TextBlockType.Text, Text = $"During daily preparations, you can indulge in your associated sin. When you do, you gain one additional spell slot of any spell level up to two levels below the highest-level wizard spell you can cast. You can prepare only a spell of your specialized school in this slot. As with any other act, indulging in your sin might change your alignment if your behavior harms someone else." };
+            yield return new TextBlock { Id = Guid.Parse("5157eb16-22cf-4af5-b925-da216c926cf2"), Type = TextBlockType.Text, Text = $"__Add this additional spell slot manually__" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

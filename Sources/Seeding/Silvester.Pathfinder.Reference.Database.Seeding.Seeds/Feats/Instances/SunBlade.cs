@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("51e04a07-34c7-4d81-b150-015481f9bf48"), Type = TextBlockType.Text, Text = "~ Access: The following class feat is available to Knights of Lastwall." };
-            yield return new TextBlock { Id = Guid.Parse("3d0963e8-6722-45f7-89f2-3227d229e0c6"), Type = TextBlockType.Text, Text = "You can unleash burning sunlight from your sword or spear. You gain the (spell: sun blade) devotion spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("51e04a07-34c7-4d81-b150-015481f9bf48"), Type = TextBlockType.Text, Text = $"~ Access: The following class feat is available to Knights of Lastwall." };
+            yield return new TextBlock { Id = Guid.Parse("3d0963e8-6722-45f7-89f2-3227d229e0c6"), Type = TextBlockType.Text, Text = $"You can unleash burning sunlight from your sword or spear. You gain the {ToMarkdownLink<Models.Entities.Feat>("sun blade", Feats.Instances.SunBlade.ID)} devotion spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

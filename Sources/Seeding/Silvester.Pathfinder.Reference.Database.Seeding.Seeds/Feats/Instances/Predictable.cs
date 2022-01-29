@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("53da7904-2dfe-4953-9c87-d7c962f99482"), Type = TextBlockType.Text, Text = "By observing an opponent, you can get a sense of their next move and prepare to counter or resist it. Choose one target and attempt a Perception check to (action: Sense Motive) against the foe's Deception DC or a hard DC of the foe's level, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("53da7904-2dfe-4953-9c87-d7c962f99482"), Type = TextBlockType.Text, Text = $"By observing an opponent, you can get a sense of their next move and prepare to counter or resist it. Choose one target and attempt a Perception check to {ToMarkdownLink<Models.Entities.Action>("Sense Motive", Actions.Instances.SenseMotive.ID)} against the foe's Deception DC or a hard DC of the foe's level, whichever is higher." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d26dd330-eebb-4c00-8142-fb9b6af36b20"), Type = TextBlockType.Text, Text = "You have a deep connection to the fiendish realms, allowing you to summon a fiend matching your own lineage. Once per day, you can cast (spell: summon fiend) as a 5th-level divine innate spell. The fiend you summon must match your own lineage." };
+            yield return new TextBlock { Id = Guid.Parse("d26dd330-eebb-4c00-8142-fb9b6af36b20"), Type = TextBlockType.Text, Text = $"You have a deep connection to the fiendish realms, allowing you to summon a fiend matching your own lineage. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("summon fiend", Spells.Instances.SummonFiend.ID)} as a 5th-level divine innate spell. The fiend you summon must match your own lineage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

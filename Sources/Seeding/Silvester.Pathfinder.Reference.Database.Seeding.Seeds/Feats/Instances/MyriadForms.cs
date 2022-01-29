@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3cc936ed-e8fd-4b87-a6f0-bacfcadbb63b"), Type = TextBlockType.Text, Text = "With a bit of self-discovery, you find a new form. You gain the alternate form of a kitsune heritage other than your own, adding it to the options for your (action: Change Shape | Change Shape - Kitsune)." };
+            yield return new TextBlock { Id = Guid.Parse("3cc936ed-e8fd-4b87-a6f0-bacfcadbb63b"), Type = TextBlockType.Text, Text = $"With a bit of self-discovery, you find a new form. You gain the alternate form of a kitsune heritage other than your own, adding it to the options for your {ToMarkdownLink<Models.Entities.Feat>("Change Shape", Feats.Instances.ChangeShapeKitsune.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

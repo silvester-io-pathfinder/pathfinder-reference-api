@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5ec05ee7-6660-43f4-974d-100bf728e0c3"), Type = TextBlockType.Text, Text = "You're skilled at navigating bogs and marshes, even for a paddler shoony. You gain a swim Speed of 15 feet." };
+            yield return new TextBlock { Id = Guid.Parse("5ec05ee7-6660-43f4-974d-100bf728e0c3"), Type = TextBlockType.Text, Text = $"You're skilled at navigating bogs and marshes, even for a paddler shoony. You gain a swim Speed of 15 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

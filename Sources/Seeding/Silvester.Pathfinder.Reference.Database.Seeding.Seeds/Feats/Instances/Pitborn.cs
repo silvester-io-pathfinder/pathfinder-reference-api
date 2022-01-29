@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("412dc86f-9545-415f-b0fc-c428482a549b"), Type = TextBlockType.Text, Text = "Your blood bears the mark of a demon, a living embodiment of sin from the fetid depths of the Abyss. Demonic power pulses through your veins and manifests in a different way for each pitborn, whether you have webbed fingers and thrive in the water, large hands capable of wrestling larger foes, or some other manifestation. You are trained in Athletics. If you were already trained in Athletics (from your background or class, for example), you instead become trained in a skill of your choice." };
-            yield return new TextBlock { Id = Guid.Parse("2b30858a-74d8-4c0a-b6cc-47457344861e"), Type = TextBlockType.Text, Text = "You also gain any one common 1st-level skill feat with a prerequisite of trained in Athletics, as reflects the manifestation of your Abyssal blood." };
+            yield return new TextBlock { Id = Guid.Parse("412dc86f-9545-415f-b0fc-c428482a549b"), Type = TextBlockType.Text, Text = $"Your blood bears the mark of a demon, a living embodiment of sin from the fetid depths of the Abyss. Demonic power pulses through your veins and manifests in a different way for each pitborn, whether you have webbed fingers and thrive in the water, large hands capable of wrestling larger foes, or some other manifestation. You are trained in Athletics. If you were already trained in Athletics (from your background or class, for example), you instead become trained in a skill of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("2b30858a-74d8-4c0a-b6cc-47457344861e"), Type = TextBlockType.Text, Text = $"You also gain any one common 1st-level skill feat with a prerequisite of trained in Athletics, as reflects the manifestation of your Abyssal blood." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

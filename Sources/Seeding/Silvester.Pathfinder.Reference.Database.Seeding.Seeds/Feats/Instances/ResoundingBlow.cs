@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6bae8854-a4d3-400a-bc2d-593c127f686a"), Type = TextBlockType.Text, Text = "You strike your enemy in the head with such force that their ears ring. Make a melee (action: Strike). If the (action: Strike) hits and deals damage, the target is deafened until the start of your next turn (or for 1 minute on a critical hit)." };
+            yield return new TextBlock { Id = Guid.Parse("6bae8854-a4d3-400a-bc2d-593c127f686a"), Type = TextBlockType.Text, Text = $"You strike your enemy in the head with such force that their ears ring. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits and deals damage, the target is deafened until the start of your next turn (or for 1 minute on a critical hit)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

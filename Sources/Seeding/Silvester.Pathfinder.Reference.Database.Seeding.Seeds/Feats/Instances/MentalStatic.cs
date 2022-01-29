@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dc7f0ba1-0493-4003-9bea-3c7770011368"), Type = TextBlockType.Text, Text = "Your thoughts sting back when a lesser mind tries to invade your own. You deal mental damage equal to your level to the triggering creature. This effect has the (trait: nonlethal) trait. If you desire, you can also send them a single mental image to coincide with the damage, such as a watching eye or the dread of floating in an infinite sea." };
+            yield return new TextBlock { Id = Guid.Parse("dc7f0ba1-0493-4003-9bea-3c7770011368"), Type = TextBlockType.Text, Text = $"Your thoughts sting back when a lesser mind tries to invade your own. You deal mental damage equal to your level to the triggering creature. This effect has the {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)} trait. If you desire, you can also send them a single mental image to coincide with the damage, such as a watching eye or the dread of floating in an infinite sea." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

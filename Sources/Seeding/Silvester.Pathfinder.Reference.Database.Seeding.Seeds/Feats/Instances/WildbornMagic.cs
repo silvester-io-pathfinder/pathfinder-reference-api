@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5773af2b-378f-45dc-9d20-1e4d2a72122a"), Type = TextBlockType.Text, Text = "~ Access: Mualijae ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("bb73a9ab-17dd-4365-a58d-df0de130a671"), Type = TextBlockType.Text, Text = "You have learned to access the old magic of wild places. Choose one cantrip from the primal spell list. You can cast this cantrip as an innate primal spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("5773af2b-378f-45dc-9d20-1e4d2a72122a"), Type = TextBlockType.Text, Text = $"~ Access: Mualijae ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("bb73a9ab-17dd-4365-a58d-df0de130a671"), Type = TextBlockType.Text, Text = $"You have learned to access the old magic of wild places. Choose one cantrip from the primal spell list. You can cast this cantrip as an innate primal spell at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

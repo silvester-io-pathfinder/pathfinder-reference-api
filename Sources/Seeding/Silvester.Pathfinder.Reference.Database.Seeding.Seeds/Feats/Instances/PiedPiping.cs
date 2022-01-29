@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e08a5d03-f963-4460-9898-6d6881d99c4b"), Type = TextBlockType.Text, Text = "You learn the (spell: pied piping) composition spell, which enables you to control the actions of weak-minded individuals." };
+            yield return new TextBlock { Id = Guid.Parse("e08a5d03-f963-4460-9898-6d6881d99c4b"), Type = TextBlockType.Text, Text = $"You learn the {ToMarkdownLink<Models.Entities.Spell>("pied piping", Spells.Instances.PiedPiping.ID)} composition spell, which enables you to control the actions of weak-minded individuals." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

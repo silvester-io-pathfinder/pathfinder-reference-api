@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("939b3ef4-b3ad-4fef-87d6-e510a032d96d"), Type = TextBlockType.Text, Text = "You siphon some of the power from an offensive hex you cast to direct it at a second target as well. If the next action you use is to (activity: Cast a Spell) to cast a harmful (trait: hex) with a single target, reduce its level by 2 (making it 2 levels lower than the maximum spell level you can cast). If you do, you can select a second target for that (trait: hex) to affect." };
+            yield return new TextBlock { Id = Guid.Parse("939b3ef4-b3ad-4fef-87d6-e510a032d96d"), Type = TextBlockType.Text, Text = $"You siphon some of the power from an offensive hex you cast to direct it at a second target as well. If the next action you use is to {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)} to cast a harmful {ToMarkdownLink<Models.Entities.Trait>("hex", Traits.Instances.Hex.ID)} with a single target, reduce its level by 2 (making it 2 levels lower than the maximum spell level you can cast). If you do, you can select a second target for that {ToMarkdownLink<Models.Entities.Trait>("hex", Traits.Instances.Hex.ID)} to affect." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

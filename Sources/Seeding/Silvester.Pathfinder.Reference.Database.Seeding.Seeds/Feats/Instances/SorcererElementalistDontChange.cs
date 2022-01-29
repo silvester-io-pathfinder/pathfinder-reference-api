@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("786cc90c-484e-4538-9e49-4259b40ad066"), Type = TextBlockType.Text, Text = "You choose not to replace your initial and advanced bloodline spells with elemental focus spells." };
+            yield return new TextBlock { Id = Guid.Parse("786cc90c-484e-4538-9e49-4259b40ad066"), Type = TextBlockType.Text, Text = $"You choose not to replace your initial and advanced bloodline spells with elemental focus spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

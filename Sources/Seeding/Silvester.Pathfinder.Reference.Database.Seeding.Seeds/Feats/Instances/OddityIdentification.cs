@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6d5a9a59-abb4-49bc-aca2-0084300e2c4e"), Type = TextBlockType.Text, Text = "You have a sense for spells that twist minds or reveal secrets. You gain a +2 circumstance bonus to Occultism checks to (Action: Identify Magic) with the (trait: mental), (trait: possession), (trait: prediction), or (trait: scrying) traits." };
+            yield return new TextBlock { Id = Guid.Parse("6d5a9a59-abb4-49bc-aca2-0084300e2c4e"), Type = TextBlockType.Text, Text = $"You have a sense for spells that twist minds or reveal secrets. You gain a +2 circumstance bonus to Occultism checks to {ToMarkdownLink<Models.Entities.SkillAction>("Identify Magic", SkillActions.Instances.IdentifyMagic.ID)} with the {ToMarkdownLink<Models.Entities.Trait>("mental", Traits.Instances.Mental.ID)}, {ToMarkdownLink<Models.Entities.Trait>("possession", Traits.Instances.Possession.ID)}, {ToMarkdownLink<Models.Entities.Trait>("prediction", Traits.Instances.Prediction.ID)}, or {ToMarkdownLink<Models.Entities.Trait>("scrying", Traits.Instances.Scrying.ID)} traits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

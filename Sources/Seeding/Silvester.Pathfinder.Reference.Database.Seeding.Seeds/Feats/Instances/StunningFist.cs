@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("30de8147-014f-42f6-a22f-929276c7b937"), Type = TextBlockType.Text, Text = "The focused power of your flurry threatens to overwhelm your opponent. When you target the same creature with two (action: Strikes | Strike) from your (feat: Flurry of Blows), you can try to stun the creature. If either (action: Strike) hits and deals damage, the target must succeed at a Fortitude save against your class DC or be stunned 1 (or stunned 3 on a critical failure). This is an (trait: incapacitation) effect." };
+            yield return new TextBlock { Id = Guid.Parse("30de8147-014f-42f6-a22f-929276c7b937"), Type = TextBlockType.Text, Text = $"The focused power of your flurry threatens to overwhelm your opponent. When you target the same creature with two {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} from your {ToMarkdownLink<Models.Entities.Feat>("Flurry of Blows", Feats.Instances.FlurryOfBlows.ID)}, you can try to stun the creature. If either {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits and deals damage, the target must succeed at a Fortitude save against your class DC or be stunned 1 (or stunned 3 on a critical failure). This is an {ToMarkdownLink<Models.Entities.Trait>("incapacitation", Traits.Instances.Incapacitation.ID)} effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

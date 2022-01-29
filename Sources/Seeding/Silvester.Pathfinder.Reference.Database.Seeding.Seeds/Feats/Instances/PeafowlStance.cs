@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a795837c-a586-414e-9596-4d9e25f3c8e5"), Type = TextBlockType.Text, Text = "You enter a tall and proud stance while remaining mobile, with all the grace and composure of a peafowl. While in this stance, the only (action: Strikes | Strike) you can make are melee (action: Strikes | Strike) with the required sword. Once per round, after you hit with a monk sword (action: Strike), you can (action: Step) as a free action as your next action." };
+            yield return new TextBlock { Id = Guid.Parse("a795837c-a586-414e-9596-4d9e25f3c8e5"), Type = TextBlockType.Text, Text = $"You enter a tall and proud stance while remaining mobile, with all the grace and composure of a peafowl. While in this stance, the only {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} you can make are melee {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} with the required sword. Once per round, after you hit with a monk sword {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, you can {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} as a free action as your next action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

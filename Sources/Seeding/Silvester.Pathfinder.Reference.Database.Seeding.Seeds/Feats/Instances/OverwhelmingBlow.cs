@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("171c2e06-e392-40ab-a73e-312f87ddb187"), Type = TextBlockType.Text, Text = "You throw your weight into a powerful attack that leaves you vulnerable. Make a melee (action: Strike). This counts as three attacks when calculating your multiple attack penalty. If this (action: Strike) hits, you get a critical hit. If you roll a critical hit, your attack also gains the deadly d12 trait. Whether or not you hit, you become stunned 1 and are flat-footed until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("171c2e06-e392-40ab-a73e-312f87ddb187"), Type = TextBlockType.Text, Text = $"You throw your weight into a powerful attack that leaves you vulnerable. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. This counts as three attacks when calculating your multiple attack penalty. If this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits, you get a critical hit. If you roll a critical hit, your attack also gains the deadly d12 trait. Whether or not you hit, you become stunned 1 and are flat-footed until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

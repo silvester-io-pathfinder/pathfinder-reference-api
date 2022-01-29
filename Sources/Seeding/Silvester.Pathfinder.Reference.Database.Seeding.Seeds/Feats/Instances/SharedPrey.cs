@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ef9c05ec-8b94-4101-8a16-0f4c65678031"), Type = TextBlockType.Text, Text = "Hunting as a duo, you and your ally both single out your prey. When you use (feat: Hunt Prey) and select only one prey, you can grant your (feat: Hunt Prey) benefits and hunter's edge to an ally in addition to gaining them yourself. The ally retains these benefits until you use (feat: Hunt Prey) again." };
+            yield return new TextBlock { Id = Guid.Parse("ef9c05ec-8b94-4101-8a16-0f4c65678031"), Type = TextBlockType.Text, Text = $"Hunting as a duo, you and your ally both single out your prey. When you use {ToMarkdownLink<Models.Entities.Feat>("Hunt Prey", Feats.Instances.HuntPrey.ID)} and select only one prey, you can grant your {ToMarkdownLink<Models.Entities.Feat>("Hunt Prey", Feats.Instances.HuntPrey.ID)} benefits and hunter's edge to an ally in addition to gaining them yourself. The ally retains these benefits until you use {ToMarkdownLink<Models.Entities.Feat>("Hunt Prey", Feats.Instances.HuntPrey.ID)} again." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c3a01e1b-1868-4edf-9704-ced35b221d7e"), Type = TextBlockType.Text, Text = "Your blood soars with the power of the magnificent garuda, proud and stoic avian warriors. You only take half the normal damage from falling and gain a +2 circumstance bonus to saving throws against effects with the (trait: air) trait." };
+            yield return new TextBlock { Id = Guid.Parse("c3a01e1b-1868-4edf-9704-ced35b221d7e"), Type = TextBlockType.Text, Text = $"Your blood soars with the power of the magnificent garuda, proud and stoic avian warriors. You only take half the normal damage from falling and gain a +2 circumstance bonus to saving throws against effects with the {ToMarkdownLink<Models.Entities.Trait>("air", Traits.Instances.Air.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

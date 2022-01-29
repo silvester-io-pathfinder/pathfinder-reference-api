@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b4cdc138-3ea7-49bd-9628-6cbde6909f33"), Type = TextBlockType.Text, Text = "~ Access: member of the Magaambya" };
-            yield return new TextBlock { Id = Guid.Parse("1f02ed99-ab14-4037-af75-b1b5d4f51b89"), Type = TextBlockType.Text, Text = "You move the spell's area to a new location within 120 feet. The spell's remaining duration is reduced by half. The spell no longer affects its previous area." };
+            yield return new TextBlock { Id = Guid.Parse("b4cdc138-3ea7-49bd-9628-6cbde6909f33"), Type = TextBlockType.Text, Text = $"~ Access: member of the Magaambya" };
+            yield return new TextBlock { Id = Guid.Parse("1f02ed99-ab14-4037-af75-b1b5d4f51b89"), Type = TextBlockType.Text, Text = $"You move the spell's area to a new location within 120 feet. The spell's remaining duration is reduced by half. The spell no longer affects its previous area." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

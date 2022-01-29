@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fcbba961-1b14-4823-a8fa-0e504699343b"), Type = TextBlockType.Text, Text = "Your repertoire expands, and you can cast more occult spells each day. Increase the number of spells in your repertoire and the number of spell slots you gain from bard archetype feats by 1 for each spell level other than your two highest bard spell slots." };
+            yield return new TextBlock { Id = Guid.Parse("fcbba961-1b14-4823-a8fa-0e504699343b"), Type = TextBlockType.Text, Text = $"Your repertoire expands, and you can cast more occult spells each day. Increase the number of spells in your repertoire and the number of spell slots you gain from bard archetype feats by 1 for each spell level other than your two highest bard spell slots." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

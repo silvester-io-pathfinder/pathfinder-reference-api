@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c5b20ff4-fbfc-413f-b242-a569a5483a15"), Type = TextBlockType.Text, Text = "Your wings grow stronger. You gain the effects of (feat: Soaring Flight) at all times." };
+            yield return new TextBlock { Id = Guid.Parse("c5b20ff4-fbfc-413f-b242-a569a5483a15"), Type = TextBlockType.Text, Text = $"Your wings grow stronger. You gain the effects of {ToMarkdownLink<Models.Entities.Feat>("Soaring Flight", Feats.Instances.SoaringFlight.ID)} at all times." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

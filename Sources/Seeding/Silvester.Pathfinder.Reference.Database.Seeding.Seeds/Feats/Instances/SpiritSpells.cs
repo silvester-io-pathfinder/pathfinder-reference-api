@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f81ecc25-57bf-4748-902b-8a69b7c34cf6"), Type = TextBlockType.Text, Text = "Your ability to confront incorporeal menaces develops into full-fledged spellcasting. Choose a 1st-level occult spell. You can (activity: Cast this Spell | Cast a Spell) as an innate occult spell. At 6th level, you gain a 2nd-level occult spell, and at 8th level, you gain a 3rd-level occult spell. Each of these spells must have the (trait: divination), (trait: enchantment), or (trait: necromancy) trait. You can cast each of these spells once per day." };
+            yield return new TextBlock { Id = Guid.Parse("f81ecc25-57bf-4748-902b-8a69b7c34cf6"), Type = TextBlockType.Text, Text = $"Your ability to confront incorporeal menaces develops into full-fledged spellcasting. Choose a 1st-level occult spell. You can {ToMarkdownLink<Models.Entities.Rule>("Cast this Spell", Rules.Instances.CastASpell.ID)} as an innate occult spell. At 6th level, you gain a 2nd-level occult spell, and at 8th level, you gain a 3rd-level occult spell. Each of these spells must have the {ToMarkdownLink<Models.Entities.Trait>("divination", Traits.Instances.Divination.ID)}, {ToMarkdownLink<Models.Entities.Trait>("enchantment", Traits.Instances.Enchantment.ID)}, or {ToMarkdownLink<Models.Entities.Trait>("necromancy", Traits.Instances.Necromancy.ID)} trait. You can cast each of these spells once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3af1a97b-fd4f-4195-8dcf-5e130fd2de48"), Type = TextBlockType.Text, Text = "You leap from the shadows to strike your foes. (action: Stride) up to your Speed, then (action: Strike) twice. If you were hidden or unnoticed by the target of these (action: Strikes | Strike), your foe is flat-footed against both attacks. Your multiple attack penalty applies normally for both attacks." };
+            yield return new TextBlock { Id = Guid.Parse("3af1a97b-fd4f-4195-8dcf-5e130fd2de48"), Type = TextBlockType.Text, Text = $"You leap from the shadows to strike your foes. {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} up to your Speed, then {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} twice. If you were hidden or unnoticed by the target of these {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}, your foe is flat-footed against both attacks. Your multiple attack penalty applies normally for both attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

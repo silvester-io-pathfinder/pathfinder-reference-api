@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5e5f2ae-88b1-484e-a312-a3333b537f85"), Type = TextBlockType.Text, Text = "You attempt to reduce panic. Attempt a Diplomacy check, comparing it to the Will DC of creatures in a 10-foot emanation around you who are frightened. Each of them is temporarily immune for 1 hour." };
+            yield return new TextBlock { Id = Guid.Parse("d5e5f2ae-88b1-484e-a312-a3333b537f85"), Type = TextBlockType.Text, Text = $"You attempt to reduce panic. Attempt a Diplomacy check, comparing it to the Will DC of creatures in a 10-foot emanation around you who are frightened. Each of them is temporarily immune for 1 hour." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

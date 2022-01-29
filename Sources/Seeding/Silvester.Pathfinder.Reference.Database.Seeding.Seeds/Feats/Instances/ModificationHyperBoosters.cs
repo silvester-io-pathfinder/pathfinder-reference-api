@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("49177f47-53d9-4681-96c9-bf79d6213707"), Type = TextBlockType.Text, Text = "You've improved your speed boosters' power through a breakthrough that significantly increases the energy flow without risking exploding. You gain a +10-foot status bonus to your Speed, which increases to a +20-foot status bonus when you're in (feat: Overdrive). If you're legendary in Crafting, it instead increases to a +30-foot status bonus when you're in (feat: Overdrive). You must have the (feat: speed boosters | Modification - Speed Boosters) modification to select this modification." };
+            yield return new TextBlock { Id = Guid.Parse("49177f47-53d9-4681-96c9-bf79d6213707"), Type = TextBlockType.Text, Text = $"You've improved your speed boosters' power through a breakthrough that significantly increases the energy flow without risking exploding. You gain a +10-foot status bonus to your Speed, which increases to a +20-foot status bonus when you're in {ToMarkdownLink<Models.Entities.Feat>("Overdrive", Feats.Instances.Overdrive.ID)}. If you're legendary in Crafting, it instead increases to a +30-foot status bonus when you're in {ToMarkdownLink<Models.Entities.Feat>("Overdrive", Feats.Instances.Overdrive.ID)}. You must have the {ToMarkdownLink<Models.Entities.Feat>("speed boosters", Feats.Instances.ModificationSpeedBoosters.ID)} modification to select this modification." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

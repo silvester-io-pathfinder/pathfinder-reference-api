@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d20d065d-d026-4a0a-bbae-9bdad5fc9a51"), Type = TextBlockType.Text, Text = "You become an expert in Medicine. When you succeed with (feat: Battle Medicine) or (action: Treat Wounds), the target regains 5 additional HP at DC 20, 10 HP at DC 30, or 15 HP at DC 40. Once per day, you can use (feat: Battle Medicine) on a creature that's temporarily immune. If you're a master in Medicine, you can do so once per hour." };
+            yield return new TextBlock { Id = Guid.Parse("d20d065d-d026-4a0a-bbae-9bdad5fc9a51"), Type = TextBlockType.Text, Text = $"You become an expert in Medicine. When you succeed with {ToMarkdownLink<Models.Entities.Feat>("Battle Medicine", Feats.Instances.BattleMedicine.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}, the target regains 5 additional HP at DC 20, 10 HP at DC 30, or 15 HP at DC 40. Once per day, you can use {ToMarkdownLink<Models.Entities.Feat>("Battle Medicine", Feats.Instances.BattleMedicine.ID)} on a creature that's temporarily immune. If you're a master in Medicine, you can do so once per hour." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

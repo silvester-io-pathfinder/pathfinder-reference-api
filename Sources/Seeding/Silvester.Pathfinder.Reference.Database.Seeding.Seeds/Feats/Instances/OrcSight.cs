@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b438f559-92ac-45a5-8e34-69e41456ca4e"), Type = TextBlockType.Text, Text = "Your orc blood is strong enough to grant you the keen vision of your orc forebears. You gain darkvision, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness, you see in black and white only." };
+            yield return new TextBlock { Id = Guid.Parse("b438f559-92ac-45a5-8e34-69e41456ca4e"), Type = TextBlockType.Text, Text = $"Your orc blood is strong enough to grant you the keen vision of your orc forebears. You gain darkvision, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness, you see in black and white only." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

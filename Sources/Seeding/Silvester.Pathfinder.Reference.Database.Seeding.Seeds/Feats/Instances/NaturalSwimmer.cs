@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5928489c-e5de-4d2c-9256-b8e88a00823e"), Type = TextBlockType.Text, Text = "Water flows around you, letting you cut through the waves as if born to it. You gain a swim Speed of 15 feet. If you already have a permanent swim Speed, swimming up or down isn't difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("5928489c-e5de-4d2c-9256-b8e88a00823e"), Type = TextBlockType.Text, Text = $"Water flows around you, letting you cut through the waves as if born to it. You gain a swim Speed of 15 feet. If you already have a permanent swim Speed, swimming up or down isn't difficult terrain." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e8b18a8-aea7-40e6-9e15-ecb729b459f6"), Type = TextBlockType.Text, Text = "You've taken your share of licks while scurrying around the battlefield and know how to defend yourself against opportunistic attackers. Your movement ends only when you critically fail an Acrobatics check to (Action: Tumble Through) an enemy's space (or when you don't have enough Speed to move all the way through its space). You still trigger reactions on a failure to (Action: Tumble Through), but you gain a +1 circumstance bonus to AC against attacks that you trigger in this way." };
+            yield return new TextBlock { Id = Guid.Parse("3e8b18a8-aea7-40e6-9e15-ecb729b459f6"), Type = TextBlockType.Text, Text = $"You've taken your share of licks while scurrying around the battlefield and know how to defend yourself against opportunistic attackers. Your movement ends only when you critically fail an Acrobatics check to {ToMarkdownLink<Models.Entities.SkillAction>("Tumble Through", SkillActions.Instances.TumbleThrough.ID)} an enemy's space (or when you don't have enough Speed to move all the way through its space). You still trigger reactions on a failure to {ToMarkdownLink<Models.Entities.SkillAction>("Tumble Through", SkillActions.Instances.TumbleThrough.ID)}, but you gain a +1 circumstance bonus to AC against attacks that you trigger in this way." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

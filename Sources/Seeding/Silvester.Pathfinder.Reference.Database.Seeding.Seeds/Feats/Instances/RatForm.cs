@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c118dba9-0b67-4a69-aeb4-418eb64f4323"), Type = TextBlockType.Text, Text = "You can transform into an innocuous-looking rat to scout an area or slip through tight spaces. You gain the effects of a 1st-level (spell: pest form) spell, except that you must assume the battle form of a Tiny rat." };
+            yield return new TextBlock { Id = Guid.Parse("c118dba9-0b67-4a69-aeb4-418eb64f4323"), Type = TextBlockType.Text, Text = $"You can transform into an innocuous-looking rat to scout an area or slip through tight spaces. You gain the effects of a 1st-level {ToMarkdownLink<Models.Entities.Spell>("pest form", Spells.Instances.PestForm.ID)} spell, except that you must assume the battle form of a Tiny rat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

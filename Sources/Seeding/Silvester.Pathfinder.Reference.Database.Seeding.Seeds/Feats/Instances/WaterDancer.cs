@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("831a29cc-5269-4ab3-ac91-d42e8f36f46c"), Type = TextBlockType.Text, Text = "You glide through the water with graceful ease. When in an aquatic or swamp environment, you ignore the effects of non-magical difficult terrain. In addition, swimming up or down isn't difficult terrain for you." };
+            yield return new TextBlock { Id = Guid.Parse("831a29cc-5269-4ab3-ac91-d42e8f36f46c"), Type = TextBlockType.Text, Text = $"You glide through the water with graceful ease. When in an aquatic or swamp environment, you ignore the effects of non-magical difficult terrain. In addition, swimming up or down isn't difficult terrain for you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

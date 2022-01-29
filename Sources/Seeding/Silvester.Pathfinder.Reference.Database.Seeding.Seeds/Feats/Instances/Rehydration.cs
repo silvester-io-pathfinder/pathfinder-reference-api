@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0e83b5c1-8e91-4e6a-bb93-0c8b852fbcd1"), Type = TextBlockType.Text, Text = "You surround your body with a thin layer of water drawn from the moisture in the air. You can spend one hour resting to rehydrate your gills and skin, which counts as submerging your body in water. At the GM's discretion, incredibly dry areas, such as deserts, might not have enough moisture in the air for your Rehydration to work." };
+            yield return new TextBlock { Id = Guid.Parse("0e83b5c1-8e91-4e6a-bb93-0c8b852fbcd1"), Type = TextBlockType.Text, Text = $"You surround your body with a thin layer of water drawn from the moisture in the air. You can spend one hour resting to rehydrate your gills and skin, which counts as submerging your body in water. At the GM's discretion, incredibly dry areas, such as deserts, might not have enough moisture in the air for your Rehydration to work." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

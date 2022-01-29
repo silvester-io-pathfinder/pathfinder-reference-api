@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9d757a20-fed6-46d5-a821-f759980a6c88"), Type = TextBlockType.Enumeration, Text = "*Thrown Only**" };
-            yield return new TextBlock { Id = Guid.Parse("fce047e4-43ef-48aa-a926-b1132c7b5aeb"), Type = TextBlockType.Text, Text = "Your weapon has an extensible line that you can use to knock your enemies over and quickly recall the weapon back to your hand. Your innovation gains the (trait: ranged trip) trait and the (trait: tethered) trait." };
+            yield return new TextBlock { Id = Guid.Parse("9d757a20-fed6-46d5-a821-f759980a6c88"), Type = TextBlockType.Enumeration, Text = $"*Thrown Only**" };
+            yield return new TextBlock { Id = Guid.Parse("fce047e4-43ef-48aa-a926-b1132c7b5aeb"), Type = TextBlockType.Text, Text = $"Your weapon has an extensible line that you can use to knock your enemies over and quickly recall the weapon back to your hand. Your innovation gains the {ToMarkdownLink<Models.Entities.Trait>("ranged trip", Traits.Instances.RangedTrip.ID)} trait and the {ToMarkdownLink<Models.Entities.Trait>("tethered", Traits.Instances.Tethered.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

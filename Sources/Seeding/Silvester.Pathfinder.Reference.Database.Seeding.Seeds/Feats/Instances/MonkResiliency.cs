@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7837488a-dc04-432f-86a9-79a91ce92007"), Type = TextBlockType.Text, Text = "You gain 3 additional Hit Points for each monk archetype class feat you have. As you continue selecting monk archetype class feats, you continue to gain additional Hit Points in this way." };
+            yield return new TextBlock { Id = Guid.Parse("7837488a-dc04-432f-86a9-79a91ce92007"), Type = TextBlockType.Text, Text = $"You gain 3 additional Hit Points for each monk archetype class feat you have. As you continue selecting monk archetype class feats, you continue to gain additional Hit Points in this way." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

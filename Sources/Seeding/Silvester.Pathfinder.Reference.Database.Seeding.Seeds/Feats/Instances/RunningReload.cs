@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e79ee60-fef0-4383-9f04-b8681eec5972"), Type = TextBlockType.Text, Text = "You can reload your weapon on the move. You (action: Stride), (action: Step), or (action: Sneak), then (action: Interact) to reload." };
+            yield return new TextBlock { Id = Guid.Parse("1e79ee60-fef0-4383-9f04-b8681eec5972"), Type = TextBlockType.Text, Text = $"You can reload your weapon on the move. You {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}, {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)}, then {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to reload." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

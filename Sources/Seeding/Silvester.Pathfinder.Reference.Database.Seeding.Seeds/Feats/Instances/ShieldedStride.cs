@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("96680656-e5e5-42ba-ae5e-d6dfbf6b22da"), Type = TextBlockType.Text, Text = "When your shield is up, your enemies' blows can't touch you. When you have your shield raised, you can (action: Stride) to move half your Speed without triggering reactions that are triggered by your movement (such as (feat: Attacks of Opportunity | Attack of Opportunity)). You can use Shielded Stride while (action: Flying | Fly) or (action: Swimming | Swim) instead of (action: Striding | Stride) if you have the corresponding movement type." };
+            yield return new TextBlock { Id = Guid.Parse("96680656-e5e5-42ba-ae5e-d6dfbf6b22da"), Type = TextBlockType.Text, Text = $"When your shield is up, your enemies' blows can't touch you. When you have your shield raised, you can {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} to move half your Speed without triggering reactions that are triggered by your movement (such as {ToMarkdownLink<Models.Entities.Feat>("Attacks of Opportunity", Feats.Instances.AttackOfOpportunity.ID)}). You can use Shielded Stride while {ToMarkdownLink<Models.Entities.Action>("Flying", Actions.Instances.Fly.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Swimming", SkillActions.Instances.Swim.ID)} instead of {ToMarkdownLink<Models.Entities.Action>("Striding", Actions.Instances.Stride.ID)} if you have the corresponding movement type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

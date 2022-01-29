@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5ced7f49-aa3c-42f1-911a-261591f1df9c"), Type = TextBlockType.Text, Text = "You can use (feat: Retributive Strike) with a ranged weapon. In addition, if the foe that triggered your reaction is within 5 feet of your reach but not in your reach, as part of your reaction you can (action: Step) to put the foe in your reach before making a melee (feat: Retributive Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("5ced7f49-aa3c-42f1-911a-261591f1df9c"), Type = TextBlockType.Text, Text = $"You can use {ToMarkdownLink<Models.Entities.Feat>("Retributive Strike", Feats.Instances.RetributiveStrike.ID)} with a ranged weapon. In addition, if the foe that triggered your reaction is within 5 feet of your reach but not in your reach, as part of your reaction you can {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} to put the foe in your reach before making a melee {ToMarkdownLink<Models.Entities.Feat>("Retributive Strike", Feats.Instances.RetributiveStrike.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

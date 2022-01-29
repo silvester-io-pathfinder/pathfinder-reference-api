@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8b84de9-bfff-49e3-978f-0113840d4e03"), Type = TextBlockType.Text, Text = "It is almost impossible to spot you without taking effort to look. When you roll a failure on a (action: Sneak) action, you get a success instead. You can still critically fail." };
+            yield return new TextBlock { Id = Guid.Parse("b8b84de9-bfff-49e3-978f-0113840d4e03"), Type = TextBlockType.Text, Text = $"It is almost impossible to spot you without taking effort to look. When you roll a failure on a {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} action, you get a success instead. You can still critically fail." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

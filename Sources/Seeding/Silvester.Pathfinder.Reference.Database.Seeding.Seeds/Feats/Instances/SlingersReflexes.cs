@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aac286f4-d563-404a-a8ea-430c1d4319b0"), Type = TextBlockType.Text, Text = "Your ability to react to unexpected circumstances is preternaturally sharp. At the start of each enemy's turn, you gain an additional reaction you can use on only that turn to use a gunslinger reaction." };
+            yield return new TextBlock { Id = Guid.Parse("aac286f4-d563-404a-a8ea-430c1d4319b0"), Type = TextBlockType.Text, Text = $"Your ability to react to unexpected circumstances is preternaturally sharp. At the start of each enemy's turn, you gain an additional reaction you can use on only that turn to use a gunslinger reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

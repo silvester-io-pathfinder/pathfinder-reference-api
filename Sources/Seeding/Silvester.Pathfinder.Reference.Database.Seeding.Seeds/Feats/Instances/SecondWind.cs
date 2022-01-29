@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("02f0baf4-60e6-402a-8137-934987886681"), Type = TextBlockType.Text, Text = "You can enter a second rage, but afterward you need to catch your breath. You can (Action: Rage) without waiting for 1 minute after the previous (Action: Rage) (or 1 round, if you have the quick rage class feature), but when you end this second (Action: Rage), you're fatigued until you rest for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("02f0baf4-60e6-402a-8137-934987886681"), Type = TextBlockType.Text, Text = $"You can enter a second rage, but afterward you need to catch your breath. You can {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)} without waiting for 1 minute after the previous {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)} (or 1 round, if you have the quick rage class feature), but when you end this second {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)}, you're fatigued until you rest for 10 minutes." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

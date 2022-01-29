@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("09e88431-16df-4f0c-8cd4-7fe604dacf5c"), Type = TextBlockType.Text, Text = "You tell a story spontaneously from nearly forgotten facts, delving into your memory and entertaining your audience in the process. (action: Recall Knowledge) with a skill in which you have master proficiency, then use (feat: Uzunjati Storytelling) with the same skill. You gain a +1 circumstance bonus to your skill check for (feat: Uzunjati Storytelling) from the added details." };
+            yield return new TextBlock { Id = Guid.Parse("09e88431-16df-4f0c-8cd4-7fe604dacf5c"), Type = TextBlockType.Text, Text = $"You tell a story spontaneously from nearly forgotten facts, delving into your memory and entertaining your audience in the process. {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} with a skill in which you have master proficiency, then use {ToMarkdownLink<Models.Entities.Feat>("Uzunjati Storytelling", Feats.Instances.UzunjatiStorytelling.ID)} with the same skill. You gain a +1 circumstance bonus to your skill check for {ToMarkdownLink<Models.Entities.Feat>("Uzunjati Storytelling", Feats.Instances.UzunjatiStorytelling.ID)} from the added details." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

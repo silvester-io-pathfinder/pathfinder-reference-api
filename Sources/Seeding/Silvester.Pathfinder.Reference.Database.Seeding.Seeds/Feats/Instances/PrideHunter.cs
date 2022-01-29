@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d363eb8e-9a46-49a4-b229-84298b9464eb"), Type = TextBlockType.Text, Text = "You avoid the attention of creatures focused on your allies. You can use lesser cover from your allies to (action: Hide)." };
+            yield return new TextBlock { Id = Guid.Parse("d363eb8e-9a46-49a4-b229-84298b9464eb"), Type = TextBlockType.Text, Text = $"You avoid the attention of creatures focused on your allies. You can use lesser cover from your allies to {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("45fc58b1-3fa5-44fb-943f-1b292325549d"), Type = TextBlockType.Text, Text = "You use your many eyes to look in all directions at once, making you extremely observant for a short period of time. You gain all-around vision until the start of your next turn. This lets you see in all directions and prevents you from being flanked." };
+            yield return new TextBlock { Id = Guid.Parse("45fc58b1-3fa5-44fb-943f-1b292325549d"), Type = TextBlockType.Text, Text = $"You use your many eyes to look in all directions at once, making you extremely observant for a short period of time. You gain all-around vision until the start of your next turn. This lets you see in all directions and prevents you from being flanked." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

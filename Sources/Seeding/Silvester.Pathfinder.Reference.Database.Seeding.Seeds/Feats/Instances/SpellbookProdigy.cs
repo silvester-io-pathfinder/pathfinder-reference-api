@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("04b26307-c9ef-41bd-b318-11cdd2d917ed"), Type = TextBlockType.Text, Text = "You are particularly adept at learning spells to add to your spellbook. You can (action: Learn a Spell) in half the time it normally takes. Further, when you roll a critical failure on your check to (action: Learn a Spell), you get a failure instead. When you roll a failure, you can try again after 1 week." };
+            yield return new TextBlock { Id = Guid.Parse("04b26307-c9ef-41bd-b318-11cdd2d917ed"), Type = TextBlockType.Text, Text = $"You are particularly adept at learning spells to add to your spellbook. You can {ToMarkdownLink<Models.Entities.SkillAction>("Learn a Spell", SkillActions.Instances.LearnASpell.ID)} in half the time it normally takes. Further, when you roll a critical failure on your check to {ToMarkdownLink<Models.Entities.SkillAction>("Learn a Spell", SkillActions.Instances.LearnASpell.ID)}, you get a failure instead. When you roll a failure, you can try again after 1 week." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

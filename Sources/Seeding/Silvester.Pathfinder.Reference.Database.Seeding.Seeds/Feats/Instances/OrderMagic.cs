@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc3a5bec-d9b8-4af2-ac25-d87f12e5a761"), Type = TextBlockType.Text, Text = "You have delved deeper into the teaching of a new order, gaining access to a coveted order spell. Choose an order you have selected with (Feat: Order Explorer). You gain the initial order spell from that order." };
+            yield return new TextBlock { Id = Guid.Parse("fc3a5bec-d9b8-4af2-ac25-d87f12e5a761"), Type = TextBlockType.Text, Text = $"You have delved deeper into the teaching of a new order, gaining access to a coveted order spell. Choose an order you have selected with {ToMarkdownLink<Models.Entities.Feat>("Order Explorer", Feats.Instances.OrderExplorer.ID)}. You gain the initial order spell from that order." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

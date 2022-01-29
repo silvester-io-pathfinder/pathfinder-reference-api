@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("236160d9-3a7a-4fe9-a360-d0094e2d7813"), Type = TextBlockType.Text, Text = "~ Access: You are from Jalmeray." };
-            yield return new TextBlock { Id = Guid.Parse("ee865d75-331c-46f8-94ba-341aa362358b"), Type = TextBlockType.Text, Text = "You have learned the martial arts techniques of your House of Perfection. You become trained in your choice of Acrobatics or Athletics and Warfare Lore; if you were already trained, you become an expert instead. You gain the (feat: Ki Strike) class feat, which grants you the (spell: ki strike) ki spell and a focus pool of 1 Focus Point that you can recover using the (action: Refocus) activity as a monk does. Your ki spells from Student of Perfection are occult spells." };
+            yield return new TextBlock { Id = Guid.Parse("236160d9-3a7a-4fe9-a360-d0094e2d7813"), Type = TextBlockType.Text, Text = $"~ Access: You are from Jalmeray." };
+            yield return new TextBlock { Id = Guid.Parse("ee865d75-331c-46f8-94ba-341aa362358b"), Type = TextBlockType.Text, Text = $"You have learned the martial arts techniques of your House of Perfection. You become trained in your choice of Acrobatics or Athletics and Warfare Lore; if you were already trained, you become an expert instead. You gain the {ToMarkdownLink<Models.Entities.Feat>("Ki Strike", Feats.Instances.KiStrike.ID)} class feat, which grants you the {ToMarkdownLink<Models.Entities.Spell>("ki strike", Spells.Instances.KiStrike.ID)} ki spell and a focus pool of 1 Focus Point that you can recover using the {ToMarkdownLink<Models.Entities.Activity>("Refocus", Activities.Instances.Refocus.ID)} activity as a monk does. Your ki spells from Student of Perfection are occult spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

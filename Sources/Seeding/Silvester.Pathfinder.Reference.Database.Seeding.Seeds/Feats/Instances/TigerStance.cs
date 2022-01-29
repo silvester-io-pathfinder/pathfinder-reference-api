@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0cd7ed88-44a9-4448-8426-8628508ded82"), Type = TextBlockType.Text, Text = "You enter the stance of a tiger and can make tiger claw attacks. These deal 1d8 slashing damage; are in the brawling group; and have the (trait: agile), (trait: finesse), (trait: nonlethal), and (trait: unarmed) traits. On a critical success with your tiger claws, if you deal damage, the target takes 1d4 persistent bleed damage." };
-            yield return new TextBlock { Id = Guid.Parse("1fd9adde-5ce8-4fe3-b3ee-e21c25898cc1"), Type = TextBlockType.Text, Text = "As long as your Speed is at least 20 feet while in Tiger Stance, you can (action: Step) 10 feet." };
+            yield return new TextBlock { Id = Guid.Parse("0cd7ed88-44a9-4448-8426-8628508ded82"), Type = TextBlockType.Text, Text = $"You enter the stance of a tiger and can make tiger claw attacks. These deal 1d8 slashing damage; are in the brawling group; and have the {ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)}, {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)}, {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)}, and {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)} traits. On a critical success with your tiger claws, if you deal damage, the target takes 1d4 persistent bleed damage." };
+            yield return new TextBlock { Id = Guid.Parse("1fd9adde-5ce8-4fe3-b3ee-e21c25898cc1"), Type = TextBlockType.Text, Text = $"As long as your Speed is at least 20 feet while in Tiger Stance, you can {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} 10 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("58488813-3343-4bdc-827e-768150ce19b0"), Type = TextBlockType.Text, Text = "Even magical means have a hard time prying information from you. You gain (spell: nondetection) as an innate occult spell once per day, which can only be cast on yourself and is automatically heightened to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("58488813-3343-4bdc-827e-768150ce19b0"), Type = TextBlockType.Text, Text = $"Even magical means have a hard time prying information from you. You gain {ToMarkdownLink<Models.Entities.Spell>("nondetection", Spells.Instances.Nondetection.ID)} as an innate occult spell once per day, which can only be cast on yourself and is automatically heightened to half your level rounded up." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

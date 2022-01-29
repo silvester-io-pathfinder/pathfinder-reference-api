@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c74cb801-3c61-458a-bffc-b21e91257438"), Type = TextBlockType.Text, Text = "Your physique is robust and can withstand blood loss startlingly well. Whenever you would gain the drained condition, you can attempt a DC 17 flat check. On a success, you don't gain the drained condition." };
+            yield return new TextBlock { Id = Guid.Parse("c74cb801-3c61-458a-bffc-b21e91257438"), Type = TextBlockType.Text, Text = $"Your physique is robust and can withstand blood loss startlingly well. Whenever you would gain the drained condition, you can attempt a DC 17 flat check. On a success, you don't gain the drained condition." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

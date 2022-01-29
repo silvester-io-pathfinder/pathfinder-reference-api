@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9070d78c-583a-4f63-84bd-799f2a844d40"), Type = TextBlockType.Enumeration, Text = "*Simple Weapon Only**" };
-            yield return new TextBlock { Id = Guid.Parse("3d057c68-ef8e-42fa-b662-c867475dc76c"), Type = TextBlockType.Text, Text = "Increase your innovation's weapon damage die by one step (d4 to d6, d6 to d8, d8 to d10, d10 to d12). In addition, it gains one of the following traits of your choice: (trait: versatile B), (trait: versatile P), or (trait: versatile S)." };
+            yield return new TextBlock { Id = Guid.Parse("9070d78c-583a-4f63-84bd-799f2a844d40"), Type = TextBlockType.Enumeration, Text = $"*Simple Weapon Only**" };
+            yield return new TextBlock { Id = Guid.Parse("3d057c68-ef8e-42fa-b662-c867475dc76c"), Type = TextBlockType.Text, Text = $"Increase your innovation's weapon damage die by one step (d4 to d6, d6 to d8, d8 to d10, d10 to d12). In addition, it gains one of the following traits of your choice: {ToMarkdownLink<Models.Entities.Trait>("versatile B", Traits.Instances.Versatile.ID)}, {ToMarkdownLink<Models.Entities.Trait>("versatile P", Traits.Instances.Versatile.ID)}, or {ToMarkdownLink<Models.Entities.Trait>("versatile S", Traits.Instances.Versatile.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

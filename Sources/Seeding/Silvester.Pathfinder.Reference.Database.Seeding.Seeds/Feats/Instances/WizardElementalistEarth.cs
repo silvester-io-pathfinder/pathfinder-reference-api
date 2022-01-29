@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a2ee40f5-9317-49cb-9724-dbe1545ddea3"), Type = TextBlockType.Text, Text = "Instead of specializing in a school of magic, you specialize in one of the four elements: earth. Any benefits your arcane school would grant you that are associated with a selected spell school, you instead apply to your selected element." };
-            yield return new TextBlock { Id = Guid.Parse("9b7a7db5-5dd5-45be-a11e-bcb6848f9a79"), Type = TextBlockType.Text, Text = "In place of your arcane school spell, you learn the initial earth elemental focus spell ((spell: crushing ground)). If you later select the (feat: Advanced School Spell) wizard feat, instead of gaining the listed school spell, you gain the advanced earth elemental focus spell ((spell: stone lance))." };
+            yield return new TextBlock { Id = Guid.Parse("a2ee40f5-9317-49cb-9724-dbe1545ddea3"), Type = TextBlockType.Text, Text = $"Instead of specializing in a school of magic, you specialize in one of the four elements: earth. Any benefits your arcane school would grant you that are associated with a selected spell school, you instead apply to your selected element." };
+            yield return new TextBlock { Id = Guid.Parse("9b7a7db5-5dd5-45be-a11e-bcb6848f9a79"), Type = TextBlockType.Text, Text = $"In place of your arcane school spell, you learn the initial earth elemental focus spell ({ToMarkdownLink<Models.Entities.Spell>("crushing ground", Spells.Instances.CrushingGround.ID)}). If you later select the {ToMarkdownLink<Models.Entities.Feat>("Advanced School Spell", Feats.Instances.AdvancedSchoolSpell.ID)} wizard feat, instead of gaining the listed school spell, you gain the advanced earth elemental focus spell ({ToMarkdownLink<Models.Entities.Spell>("stone lance", Spells.Instances.StoneLance.ID)})." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

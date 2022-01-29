@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d8c3ad67-7e78-436e-8050-79abf30824bc"), Type = TextBlockType.Text, Text = "You tear the veil between the Material Plane and its shadow. You can cast (spell: plane shift) twice per week as an occult innate spell that can only target yourself; you can travel only to the Material or Shadow Planes, and your body serves as the focus component." };
+            yield return new TextBlock { Id = Guid.Parse("d8c3ad67-7e78-436e-8050-79abf30824bc"), Type = TextBlockType.Text, Text = $"You tear the veil between the Material Plane and its shadow. You can cast {ToMarkdownLink<Models.Entities.Spell>("plane shift", Spells.Instances.PlaneShift.ID)} twice per week as an occult innate spell that can only target yourself; you can travel only to the Material or Shadow Planes, and your body serves as the focus component." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

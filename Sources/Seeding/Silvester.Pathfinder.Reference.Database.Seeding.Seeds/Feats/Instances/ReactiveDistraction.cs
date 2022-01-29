@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec9550e5-47b8-4c6e-9238-481c45125c59"), Type = TextBlockType.Text, Text = "You reactively switch with your decoy to foil your foe. You use (feat: Perfect Distraction), even if you were observed, as long as you end the movement of your (action: Sneak) while concealed or in a location with cover or greater cover. Your decoy is targeted by the attack or effect instead of you. In the case of an area effect, if your (action: Sneak) doesn't move you out of the area, both you and the decoy are targeted by the effect." };
+            yield return new TextBlock { Id = Guid.Parse("ec9550e5-47b8-4c6e-9238-481c45125c59"), Type = TextBlockType.Text, Text = $"You reactively switch with your decoy to foil your foe. You use {ToMarkdownLink<Models.Entities.Feat>("Perfect Distraction", Feats.Instances.PerfectDistraction.ID)}, even if you were observed, as long as you end the movement of your {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} while concealed or in a location with cover or greater cover. Your decoy is targeted by the attack or effect instead of you. In the case of an area effect, if your {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} doesn't move you out of the area, both you and the decoy are targeted by the effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

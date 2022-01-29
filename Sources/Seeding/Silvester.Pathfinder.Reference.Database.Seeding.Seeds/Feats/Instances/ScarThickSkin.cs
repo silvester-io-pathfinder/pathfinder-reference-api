@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a1b0f8c8-8f7a-4e0e-aebf-f0707f8fd641"), Type = TextBlockType.Text, Text = "Glorious, storied scars cover and protect much of your body. Your DC on flat checks to end persistent bleed damage is reduced from 15 to 10, or from 10 to 5 after receiving especially appropriate assistance." };
+            yield return new TextBlock { Id = Guid.Parse("a1b0f8c8-8f7a-4e0e-aebf-f0707f8fd641"), Type = TextBlockType.Text, Text = $"Glorious, storied scars cover and protect much of your body. Your DC on flat checks to end persistent bleed damage is reduced from 15 to 10, or from 10 to 5 after receiving especially appropriate assistance." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

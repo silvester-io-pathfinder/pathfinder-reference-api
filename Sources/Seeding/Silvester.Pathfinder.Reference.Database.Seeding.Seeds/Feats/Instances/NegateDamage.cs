@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81b9d5d9-5637-4495-80f9-a5c3f94deac0"), Type = TextBlockType.Text, Text = "Your armor innovation activates various devices you prepared ahead of time, and you use one of them to reduce the damage you would take by 15." };
-            yield return new TextBlock { Id = Guid.Parse("00f24a30-c72d-441d-bde3-c2fc20596050"), Type = TextBlockType.Text, Text = "----" };
-            yield return new TextBlock { Id = Guid.Parse("e74b97a6-2b80-4eaf-8753-56b902e1d862"), Type = TextBlockType.Text, Text = "~ Unstable Function: You activate all the precautions at once, violently repelling the incoming attack to blunt its force. Add the (trait: unstable) trait to Negate Damage and reduce the damage you would take by 50." };
+            yield return new TextBlock { Id = Guid.Parse("81b9d5d9-5637-4495-80f9-a5c3f94deac0"), Type = TextBlockType.Text, Text = $"Your armor innovation activates various devices you prepared ahead of time, and you use one of them to reduce the damage you would take by 15." };
+            yield return new TextBlock { Id = Guid.Parse("00f24a30-c72d-441d-bde3-c2fc20596050"), Type = TextBlockType.Text, Text = $"----" };
+            yield return new TextBlock { Id = Guid.Parse("e74b97a6-2b80-4eaf-8753-56b902e1d862"), Type = TextBlockType.Text, Text = $"~ Unstable Function: You activate all the precautions at once, violently repelling the incoming attack to blunt its force. Add the {ToMarkdownLink<Models.Entities.Trait>("unstable", Traits.Instances.Unstable.ID)} trait to Negate Damage and reduce the damage you would take by 50." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

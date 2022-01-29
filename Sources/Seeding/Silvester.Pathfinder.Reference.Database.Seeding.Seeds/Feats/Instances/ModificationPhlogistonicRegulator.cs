@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7b2a6bba-f2ae-4e8f-b58a-c339a7ebfea8"), Type = TextBlockType.Text, Text = "A layer of insulation within your armor protects you from rapid temperature fluctuations. You gain resistance equal to half your level to cold and fire damage. When under the effects of (feat: Overdrive), the resistance increases by 2." };
+            yield return new TextBlock { Id = Guid.Parse("7b2a6bba-f2ae-4e8f-b58a-c339a7ebfea8"), Type = TextBlockType.Text, Text = $"A layer of insulation within your armor protects you from rapid temperature fluctuations. You gain resistance equal to half your level to cold and fire damage. When under the effects of {ToMarkdownLink<Models.Entities.Feat>("Overdrive", Feats.Instances.Overdrive.ID)}, the resistance increases by 2." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

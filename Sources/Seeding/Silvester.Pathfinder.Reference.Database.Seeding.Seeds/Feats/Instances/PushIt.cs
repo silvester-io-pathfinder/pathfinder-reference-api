@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27bc332d-41f0-4328-b4f3-515405ced687"), Type = TextBlockType.Text, Text = "You can push your vehicle's performance beyond the limits envisioned by its makers. Whenever you succeed at a piloting check, the vehicle you are piloting gains a +5-foot circumstance bonus to all its Speeds until the end of your turn. If you critically succeed, this bonus increases to +10 feet." };
+            yield return new TextBlock { Id = Guid.Parse("27bc332d-41f0-4328-b4f3-515405ced687"), Type = TextBlockType.Text, Text = $"You can push your vehicle's performance beyond the limits envisioned by its makers. Whenever you succeed at a piloting check, the vehicle you are piloting gains a +5-foot circumstance bonus to all its Speeds until the end of your turn. If you critically succeed, this bonus increases to +10 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

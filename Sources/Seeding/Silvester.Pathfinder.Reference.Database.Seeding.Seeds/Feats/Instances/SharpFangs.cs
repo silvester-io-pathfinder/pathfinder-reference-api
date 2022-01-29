@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("90a7523b-10ad-466b-bc6f-db823ed8e336"), Type = TextBlockType.Text, Text = "Your teeth are formidable weapons. You gain a fangs unarmed attack that deals 1d8 piercing damage." };
+            yield return new TextBlock { Id = Guid.Parse("90a7523b-10ad-466b-bc6f-db823ed8e336"), Type = TextBlockType.Text, Text = $"Your teeth are formidable weapons. You gain a fangs unarmed attack that deals 1d8 piercing damage." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

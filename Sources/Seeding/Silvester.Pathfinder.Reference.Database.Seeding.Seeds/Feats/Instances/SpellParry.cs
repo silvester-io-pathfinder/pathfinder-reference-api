@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3f2eb97a-2806-412f-b79c-edd0324b188b"), Type = TextBlockType.Text, Text = "You infuse magical power into your body or armaments to parry both physical and magical assaults. You raise your guard, gaining a +1 circumstance bonus to AC and to saving throws against spells that target you until the start of your next turn, as long as you continue to meet the requirements." };
+            yield return new TextBlock { Id = Guid.Parse("3f2eb97a-2806-412f-b79c-edd0324b188b"), Type = TextBlockType.Text, Text = $"You infuse magical power into your body or armaments to parry both physical and magical assaults. You raise your guard, gaining a +1 circumstance bonus to AC and to saving throws against spells that target you until the start of your next turn, as long as you continue to meet the requirements." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

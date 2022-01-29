@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c0b564de-c35e-4b5b-95dc-55a09e77b84a"), Type = TextBlockType.Text, Text = "You can alter offensive spells to be less deadly. If your next action is to (activity: Cast a Spell) that deals damage and doesn't have the (trait: death) or (trait: negative) trait, that spell gains the (trait: nonlethal) trait." };
+            yield return new TextBlock { Id = Guid.Parse("c0b564de-c35e-4b5b-95dc-55a09e77b84a"), Type = TextBlockType.Text, Text = $"You can alter offensive spells to be less deadly. If your next action is to {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)} that deals damage and doesn't have the {ToMarkdownLink<Models.Entities.Trait>("death", Traits.Instances.Death.ID)} or {ToMarkdownLink<Models.Entities.Trait>("negative", Traits.Instances.Negative.ID)} trait, that spell gains the {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

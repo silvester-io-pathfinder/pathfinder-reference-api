@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("639346f9-b340-4b5d-92e2-3dbda053d8e3"), Type = TextBlockType.Text, Text = "You draw your bow and attack with the same action. You (action: Interact) to draw a weapon from the bow weapon group that is loaded or has reload 0, then (action: Strike) with that weapon." };
+            yield return new TextBlock { Id = Guid.Parse("639346f9-b340-4b5d-92e2-3dbda053d8e3"), Type = TextBlockType.Text, Text = $"You draw your bow and attack with the same action. You {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw a weapon from the bow weapon group that is loaded or has reload 0, then {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with that weapon." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d2914127-64dd-4502-90cc-c1eba23911cd"), Type = TextBlockType.Text, Text = "You lash out confusingly with what seems to be a weak move but instead allows you to unleash a dangerous flurry of blows upon your unsuspecting foe. When you use (feat: Flurry of Blows), you can attempt a check to (action: Feint) as a free action just before the first (action: Strike). On a success, instead of making the target flat-footed against your next attack, they become flat-footed against both attacks from the (feat: Flurry of Blows)." };
+            yield return new TextBlock { Id = Guid.Parse("d2914127-64dd-4502-90cc-c1eba23911cd"), Type = TextBlockType.Text, Text = $"You lash out confusingly with what seems to be a weak move but instead allows you to unleash a dangerous flurry of blows upon your unsuspecting foe. When you use {ToMarkdownLink<Models.Entities.Feat>("Flurry of Blows", Feats.Instances.FlurryOfBlows.ID)}, you can attempt a check to {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)} as a free action just before the first {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. On a success, instead of making the target flat-footed against your next attack, they become flat-footed against both attacks from the {ToMarkdownLink<Models.Entities.Feat>("Flurry of Blows", Feats.Instances.FlurryOfBlows.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

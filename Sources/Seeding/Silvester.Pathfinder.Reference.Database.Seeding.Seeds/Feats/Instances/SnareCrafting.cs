@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("83fca245-49b8-488c-bdb8-c8ef81e3d195"), Type = TextBlockType.Text, Text = "You can use the (action: Craft) activity to create snares. When you select this feat, you add the formulas for four common snares to your (item: formula book)." };
+            yield return new TextBlock { Id = Guid.Parse("83fca245-49b8-488c-bdb8-c8ef81e3d195"), Type = TextBlockType.Text, Text = $"You can use the {ToMarkdownLink<Models.Entities.SkillAction>("Craft", SkillActions.Instances.Craft.ID)} activity to create snares. When you select this feat, you add the formulas for four common snares to your {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("formula book", Items.AdventuringGears.Instances.FormulaBook.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

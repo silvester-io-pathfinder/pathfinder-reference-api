@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("59c5d4b3-d045-41fa-bc4d-5db25be3ebf1"), Type = TextBlockType.Text, Text = "Your innovation is hard to damage by any means. It gains resistance 5 to all damage (except adamantine)." };
+            yield return new TextBlock { Id = Guid.Parse("59c5d4b3-d045-41fa-bc4d-5db25be3ebf1"), Type = TextBlockType.Text, Text = $"Your innovation is hard to damage by any means. It gains resistance 5 to all damage (except adamantine)." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

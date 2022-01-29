@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0bde6110-70db-40a9-ab93-992ec1671b62"), Type = TextBlockType.Text, Text = "The companion maintains its performance to captivate a single target within 30 feet that witnessed its successful performance. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("0bde6110-70db-40a9-ab93-992ec1671b62"), Type = TextBlockType.Text, Text = $"The companion maintains its performance to captivate a single target within 30 feet that witnessed its successful performance. The target must attempt a Will save." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

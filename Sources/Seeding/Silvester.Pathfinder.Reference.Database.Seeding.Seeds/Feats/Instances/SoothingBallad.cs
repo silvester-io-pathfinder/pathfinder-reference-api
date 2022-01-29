@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("758ce1eb-1cf9-4566-8f4c-b82f0bfffef1"), Type = TextBlockType.Text, Text = "You soothe your allies' wounds with the power of your performance. You learn the (spell: soothing ballad) composition spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("758ce1eb-1cf9-4566-8f4c-b82f0bfffef1"), Type = TextBlockType.Text, Text = $"You soothe your allies' wounds with the power of your performance. You learn the {ToMarkdownLink<Models.Entities.Spell>("soothing ballad", Spells.Instances.SoothingBallad.ID)} composition spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

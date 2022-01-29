@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c72cf65-cd55-43c7-906a-0fcf796858fa"), Type = TextBlockType.Text, Text = "When your seedpods strike a felling blow, they burst into viciously thorny vines. When you critically succeed at a seedpod (action: Strike), vines twist and stab your foe, dealing 1d4 persistent piercing damage." };
+            yield return new TextBlock { Id = Guid.Parse("7c72cf65-cd55-43c7-906a-0fcf796858fa"), Type = TextBlockType.Text, Text = $"When your seedpods strike a felling blow, they burst into viciously thorny vines. When you critically succeed at a seedpod {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, vines twist and stab your foe, dealing 1d4 persistent piercing damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

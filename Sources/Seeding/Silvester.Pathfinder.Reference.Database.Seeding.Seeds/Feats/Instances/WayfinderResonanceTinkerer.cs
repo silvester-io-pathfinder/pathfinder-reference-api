@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dbf49a62-f58c-4586-a43b-0834f3c0bc70"), Type = TextBlockType.Text, Text = "You can use the unusual resonance of your wayfinder to grant it additional effects. Choose one cantrip from the arcane, divine, occult, or primal list. You can activate your wayfinder to cast that cantrip at will. Additionally, you can Activate your wayfinder with a ONE-ACTION (envision) activation to transform it into a nondescript pin or brooch to hide your affiliation with the Pathfinder Society. This transformation lasts for 1 hour." };
+            yield return new TextBlock { Id = Guid.Parse("dbf49a62-f58c-4586-a43b-0834f3c0bc70"), Type = TextBlockType.Text, Text = $"You can use the unusual resonance of your wayfinder to grant it additional effects. Choose one cantrip from the arcane, divine, occult, or primal list. You can activate your wayfinder to cast that cantrip at will. Additionally, you can Activate your wayfinder with a ONE-ACTION (envision) activation to transform it into a nondescript pin or brooch to hide your affiliation with the Pathfinder Society. This transformation lasts for 1 hour." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

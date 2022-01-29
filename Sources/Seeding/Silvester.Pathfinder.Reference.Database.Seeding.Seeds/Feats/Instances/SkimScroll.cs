@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("545ec77f-9bee-4ed6-b4fe-1394998d271c"), Type = TextBlockType.Text, Text = "You can activate the magic of a scroll with a cursory read as you draw it from your belt. You (action: Interact) to draw forth a scroll, then use (feat: Trick Magic Item) on the scroll." };
+            yield return new TextBlock { Id = Guid.Parse("545ec77f-9bee-4ed6-b4fe-1394998d271c"), Type = TextBlockType.Text, Text = $"You can activate the magic of a scroll with a cursory read as you draw it from your belt. You {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw forth a scroll, then use {ToMarkdownLink<Models.Entities.Feat>("Trick Magic Item", Feats.Instances.TrickMagicItem.ID)} on the scroll." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

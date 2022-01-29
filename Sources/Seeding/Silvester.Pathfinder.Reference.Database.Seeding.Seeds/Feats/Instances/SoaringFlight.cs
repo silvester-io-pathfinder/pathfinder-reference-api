@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84eb66c8-4326-4bd1-a53f-c066e8caaab5"), Type = TextBlockType.Text, Text = "To be a tengu is to be unburdened by the concerns of the world below. You grow a pair of magical wings or expand your existing ones. For 5 minutes, you gain a fly Speed equal to your land Speed or 20 feet, whichever is greater." };
+            yield return new TextBlock { Id = Guid.Parse("84eb66c8-4326-4bd1-a53f-c066e8caaab5"), Type = TextBlockType.Text, Text = $"To be a tengu is to be unburdened by the concerns of the world below. You grow a pair of magical wings or expand your existing ones. For 5 minutes, you gain a fly Speed equal to your land Speed or 20 feet, whichever is greater." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

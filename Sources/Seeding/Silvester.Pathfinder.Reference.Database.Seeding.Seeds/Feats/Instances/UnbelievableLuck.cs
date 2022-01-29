@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d60ba18-c2b3-430f-95bd-42d06cdfdb89"), Type = TextBlockType.Text, Text = "While no one, not even you, might appear to understand why, you demonstrate a greater ability to hit your targets regardless of the obstacles in your way. You can use the (feat: Accidental Shot) activity granted to you by the Unexpected Sharpshooter Dedication once per hour instead of once per day." };
+            yield return new TextBlock { Id = Guid.Parse("4d60ba18-c2b3-430f-95bd-42d06cdfdb89"), Type = TextBlockType.Text, Text = $"While no one, not even you, might appear to understand why, you demonstrate a greater ability to hit your targets regardless of the obstacles in your way. You can use the {ToMarkdownLink<Models.Entities.Feat>("Accidental Shot", Feats.Instances.AccidentalShot.ID)} activity granted to you by the Unexpected Sharpshooter Dedication once per hour instead of once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

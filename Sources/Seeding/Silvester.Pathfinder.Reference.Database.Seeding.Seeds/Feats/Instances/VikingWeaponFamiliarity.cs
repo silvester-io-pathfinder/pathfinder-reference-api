@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("28a01164-e775-4600-ad54-f2bbbe02827e"), Type = TextBlockType.Text, Text = "From childhood, you have been exposed to traditional viking weapons, and you soon learned to handle them in battle. Now, you can raid proudly alongside your fellows. You are trained with the (item: battle axe), (item: hatchet), (item: longsword), and (item: shortsword). In addition, you gain the (feat: Shield Block) reaction." };
+            yield return new TextBlock { Id = Guid.Parse("28a01164-e775-4600-ad54-f2bbbe02827e"), Type = TextBlockType.Text, Text = $"From childhood, you have been exposed to traditional viking weapons, and you soon learned to handle them in battle. Now, you can raid proudly alongside your fellows. You are trained with the {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("battle axe", Items.MeleeWeapons.Instances.BattleAxe.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("hatchet", Items.MeleeWeapons.Instances.Hatchet.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("longsword", Items.MeleeWeapons.Instances.Longsword.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("shortsword", Items.MeleeWeapons.Instances.Shortsword.ID)}. In addition, you gain the {ToMarkdownLink<Models.Entities.Feat>("Shield Block", Feats.Instances.ShieldBlock.ID)} reaction." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

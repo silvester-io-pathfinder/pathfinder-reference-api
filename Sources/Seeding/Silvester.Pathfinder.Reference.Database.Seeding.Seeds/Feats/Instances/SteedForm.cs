@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("87173d1c-66d1-435a-a940-729c410055e0"), Type = TextBlockType.Text, Text = "Your eidolon changes to make it particularly effective as your mount. While you ride it, you get your full number of actions each round instead of reducing them to 2. This applies only when you ride your eidolon, not when anyone else does (see the Riding Sapient Creatures sidebar on SoM pg. 71). Your eidolon still must be at least one size category larger than you to ride it. Since you work together to move, your eidolon's (trait: move) actions while you're mounted gain the (trait: tandem) trait." };
+            yield return new TextBlock { Id = Guid.Parse("87173d1c-66d1-435a-a940-729c410055e0"), Type = TextBlockType.Text, Text = $"Your eidolon changes to make it particularly effective as your mount. While you ride it, you get your full number of actions each round instead of reducing them to 2. This applies only when you ride your eidolon, not when anyone else does (see the Riding Sapient Creatures sidebar on SoM pg. 71). Your eidolon still must be at least one size category larger than you to ride it. Since you work together to move, your eidolon's {ToMarkdownLink<Models.Entities.Trait>("move", Traits.Instances.Move.ID)} actions while you're mounted gain the {ToMarkdownLink<Models.Entities.Trait>("tandem", Traits.Instances.Tandem.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

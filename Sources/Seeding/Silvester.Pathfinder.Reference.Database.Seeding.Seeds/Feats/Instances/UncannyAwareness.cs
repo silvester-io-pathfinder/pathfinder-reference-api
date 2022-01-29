@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13f88491-857d-48ec-9650-81997eee6059"), Type = TextBlockType.Text, Text = "You have a keen sense of movement around you. You gain motion sense as an imprecise sense out to 30 feet. Motion sense allows you to detect nearby motion through vibration and air movement." };
+            yield return new TextBlock { Id = Guid.Parse("13f88491-857d-48ec-9650-81997eee6059"), Type = TextBlockType.Text, Text = $"You have a keen sense of movement around you. You gain motion sense as an imprecise sense out to 30 feet. Motion sense allows you to detect nearby motion through vibration and air movement." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

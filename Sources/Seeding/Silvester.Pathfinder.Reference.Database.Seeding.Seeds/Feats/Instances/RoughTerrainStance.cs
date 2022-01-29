@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("85a64a0d-ca09-4738-8658-14f85542477d"), Type = TextBlockType.Text, Text = "You enter a stance that makes it difficult to move around you. Each square adjacent to you becomes difficult terrain that matches the terrain attunement you gained (rime forms in an arctic terrain, momentary undergrowth shoots up in a forest terrain, and so on). You ignore this difficult terrain." };
-            yield return new TextBlock { Id = Guid.Parse("e8ebe8f8-840e-41dd-aed9-15b51eccb11a"), Type = TextBlockType.Text, Text = "This stance ends if you move into a different type of terrain." };
+            yield return new TextBlock { Id = Guid.Parse("85a64a0d-ca09-4738-8658-14f85542477d"), Type = TextBlockType.Text, Text = $"You enter a stance that makes it difficult to move around you. Each square adjacent to you becomes difficult terrain that matches the terrain attunement you gained (rime forms in an arctic terrain, momentary undergrowth shoots up in a forest terrain, and so on). You ignore this difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("e8ebe8f8-840e-41dd-aed9-15b51eccb11a"), Type = TextBlockType.Text, Text = $"This stance ends if you move into a different type of terrain." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

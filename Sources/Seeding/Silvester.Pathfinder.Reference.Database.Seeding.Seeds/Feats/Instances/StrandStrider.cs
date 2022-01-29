@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fd6cfb9b-8c2e-4059-a20a-07e971f60725"), Type = TextBlockType.Text, Text = "Your eight legs serve you well when climbing walls and webs alike. You gain a climb speed of 25 feet in your spider shape." };
+            yield return new TextBlock { Id = Guid.Parse("fd6cfb9b-8c2e-4059-a20a-07e971f60725"), Type = TextBlockType.Text, Text = $"Your eight legs serve you well when climbing walls and webs alike. You gain a climb speed of 25 feet in your spider shape." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

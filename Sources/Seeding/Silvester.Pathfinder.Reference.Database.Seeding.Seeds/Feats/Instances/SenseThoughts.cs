@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("28fbb0e1-db04-421a-a0a9-bf784fb5e706"), Type = TextBlockType.Text, Text = "You have an even stranger knack for knowing what other people are thinking. You can cast (spell: mind reading) as an innate occult spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("28fbb0e1-db04-421a-a0a9-bf784fb5e706"), Type = TextBlockType.Text, Text = $"You have an even stranger knack for knowing what other people are thinking. You can cast {ToMarkdownLink<Models.Entities.Spell>("mind reading", Spells.Instances.MindReading.ID)} as an innate occult spell once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

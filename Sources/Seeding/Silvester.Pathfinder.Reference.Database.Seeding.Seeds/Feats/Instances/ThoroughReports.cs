@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("76bdce14-5eae-4c38-9eed-6a65b39c6c98"), Type = TextBlockType.Text, Text = "Your reports are thorough and informative, and putting your thoughts to paper helps you retain the information. Keep track of each type of creature you successfully identify with (action: Recall Knowledge). When attempting (action: Recall Knowledge) checks against creatures on your list in later encounters, you gain a +2 circumstance bonus, and you learn an additional fact about such creatures on a success." };
+            yield return new TextBlock { Id = Guid.Parse("76bdce14-5eae-4c38-9eed-6a65b39c6c98"), Type = TextBlockType.Text, Text = $"Your reports are thorough and informative, and putting your thoughts to paper helps you retain the information. Keep track of each type of creature you successfully identify with {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)}. When attempting {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} checks against creatures on your list in later encounters, you gain a +2 circumstance bonus, and you learn an additional fact about such creatures on a success." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

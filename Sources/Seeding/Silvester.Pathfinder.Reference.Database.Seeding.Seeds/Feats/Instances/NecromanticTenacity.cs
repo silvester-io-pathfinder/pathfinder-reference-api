@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b64d786b-1772-4c27-83cf-a4272fe9cd83"), Type = TextBlockType.Text, Text = "Your training against necromantic effects allows you to escape the worst of their touch. If you roll a success on a saving throw against a (trait: necromancy) effect, you get a critical success instead; if you roll a critical failure on such a save, you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("b64d786b-1772-4c27-83cf-a4272fe9cd83"), Type = TextBlockType.Text, Text = $"Your training against necromantic effects allows you to escape the worst of their touch. If you roll a success on a saving throw against a {ToMarkdownLink<Models.Entities.Trait>("necromancy", Traits.Instances.Necromancy.ID)} effect, you get a critical success instead; if you roll a critical failure on such a save, you get a failure instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cfcb123e-a5bb-4e12-9e67-d6b0a30bd9ab"), Type = TextBlockType.Text, Text = "You have the power to shatter the earth into a shape of your devising. You crack the ground beneath you, creating difficult terrain in a 5-foot burst centered on one corner of your space." };
+            yield return new TextBlock { Id = Guid.Parse("cfcb123e-a5bb-4e12-9e67-d6b0a30bd9ab"), Type = TextBlockType.Text, Text = $"You have the power to shatter the earth into a shape of your devising. You crack the ground beneath you, creating difficult terrain in a 5-foot burst centered on one corner of your space." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

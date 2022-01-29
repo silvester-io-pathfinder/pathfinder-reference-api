@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8a30f3b6-da6b-42e9-8006-299a252e7827"), Type = TextBlockType.Text, Text = "A quick strike to the face or mouth silences your opponent. Make a melee (action: Strike) against a foe. The foe must succeed at a Fortitude save against your class DC." };
+            yield return new TextBlock { Id = Guid.Parse("8a30f3b6-da6b-42e9-8006-299a252e7827"), Type = TextBlockType.Text, Text = $"A quick strike to the face or mouth silences your opponent. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against a foe. The foe must succeed at a Fortitude save against your class DC." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

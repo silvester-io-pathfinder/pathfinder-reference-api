@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e8607e72-d302-4ca9-b51a-30bd015b00e2"), Type = TextBlockType.Text, Text = "Use an action that has the (trait: rage) trait. Alternatively, you can increase the actions of the triggering (feat: Rage) to 2 to instead use a 2-action activity with the (trait: rage) trait." };
+            yield return new TextBlock { Id = Guid.Parse("e8607e72-d302-4ca9-b51a-30bd015b00e2"), Type = TextBlockType.Text, Text = $"Use an action that has the {ToMarkdownLink<Models.Entities.Trait>("rage", Traits.Instances.Rage.ID)} trait. Alternatively, you can increase the actions of the triggering {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)} to 2 to instead use a 2-action activity with the {ToMarkdownLink<Models.Entities.Trait>("rage", Traits.Instances.Rage.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

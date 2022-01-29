@@ -29,10 +29,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6f6f62fa-ba15-4521-90fb-0133a20498d4"), Type = TextBlockType.Text, Text = "You show off for the crowd. Attempt a Performance check; the DC is determined by the GM but is typically the standard DC for your level or the DC to (action: Make an Impression) on the spectators, whichever is higher. On a success, choose one of the following benefits; on a critical success, choose two benefits:" };
-            yield return new TextBlock { Id = Guid.Parse("6a71c391-f064-41ec-81c7-d465d0f4de46"), Type = TextBlockType.Enumeration, Text = " : A number of temporary Hit Points equal to your character level; these last for 1 minute." };
-            yield return new TextBlock { Id = Guid.Parse("db8b2a29-5c1e-4e74-90ec-d053bb0b71a1"), Type = TextBlockType.Enumeration, Text = " : A +1 circumstance bonus to AC until the end of your next turn." };
-            yield return new TextBlock { Id = Guid.Parse("af041a07-d12f-412c-b0d6-eb70f824d810"), Type = TextBlockType.Enumeration, Text = " : A +1 circumstance bonus to your next attack roll before the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("6f6f62fa-ba15-4521-90fb-0133a20498d4"), Type = TextBlockType.Text, Text = $"You show off for the crowd. Attempt a Performance check; the DC is determined by the GM but is typically the standard DC for your level or the DC to {ToMarkdownLink<Models.Entities.SkillAction>("Make an Impression", SkillActions.Instances.MakeAnImpression.ID)} on the spectators, whichever is higher. On a success, choose one of the following benefits; on a critical success, choose two benefits:" };
+            yield return new TextBlock { Id = Guid.Parse("6a71c391-f064-41ec-81c7-d465d0f4de46"), Type = TextBlockType.Enumeration, Text = $" : A number of temporary Hit Points equal to your character level; these last for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("db8b2a29-5c1e-4e74-90ec-d053bb0b71a1"), Type = TextBlockType.Enumeration, Text = $" : A +1 circumstance bonus to AC until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("af041a07-d12f-412c-b0d6-eb70f824d810"), Type = TextBlockType.Enumeration, Text = $" : A +1 circumstance bonus to your next attack roll before the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

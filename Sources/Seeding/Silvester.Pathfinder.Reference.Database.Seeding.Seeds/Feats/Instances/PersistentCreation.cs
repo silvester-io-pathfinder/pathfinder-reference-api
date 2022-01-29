@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8d04cf62-d888-43fd-9a90-0b3e357dd7f1"), Type = TextBlockType.Text, Text = "You can cast (spell: creation) as an innate spell at will, choosing whether it is arcane or primal each time. The created object lasts until you spend 1 hour not within its immediate vicinity or until it is destroyed. Such objects are called persistent creations. If you cast (spell: creation) again, any persistent creation you previously created with the spell immediately disintegrates." };
+            yield return new TextBlock { Id = Guid.Parse("8d04cf62-d888-43fd-9a90-0b3e357dd7f1"), Type = TextBlockType.Text, Text = $"You can cast {ToMarkdownLink<Models.Entities.Spell>("creation", Spells.Instances.Creation.ID)} as an innate spell at will, choosing whether it is arcane or primal each time. The created object lasts until you spend 1 hour not within its immediate vicinity or until it is destroyed. Such objects are called persistent creations. If you cast {ToMarkdownLink<Models.Entities.Spell>("creation", Spells.Instances.Creation.ID)} again, any persistent creation you previously created with the spell immediately disintegrates." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

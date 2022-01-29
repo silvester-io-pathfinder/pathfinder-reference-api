@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dd62e6c3-e301-4d72-bda5-e06ffa106df4"), Type = TextBlockType.Enumeration, Text = "*Power Suit Only**" };
-            yield return new TextBlock { Id = Guid.Parse("e0cb3e37-4ff8-4c3f-b187-9c1215419b77"), Type = TextBlockType.Text, Text = "Your armor supports your muscles with a carefully crafted exoskeleton. When you send your armor into overdrive, the exoskeleton supplements your feats of athletics as well. When under the effects of (action: Overdrive), you gain a +1 circumstance bonus to Athletics checks; if you're a master in Crafting, this increases to a +2 circumstance bonus." };
+            yield return new TextBlock { Id = Guid.Parse("dd62e6c3-e301-4d72-bda5-e06ffa106df4"), Type = TextBlockType.Enumeration, Text = $"*Power Suit Only**" };
+            yield return new TextBlock { Id = Guid.Parse("e0cb3e37-4ff8-4c3f-b187-9c1215419b77"), Type = TextBlockType.Text, Text = $"Your armor supports your muscles with a carefully crafted exoskeleton. When you send your armor into overdrive, the exoskeleton supplements your feats of athletics as well. When under the effects of {ToMarkdownLink<Models.Entities.Feat>("Overdrive", Feats.Instances.Overdrive.ID)}, you gain a +1 circumstance bonus to Athletics checks; if you're a master in Crafting, this increases to a +2 circumstance bonus." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

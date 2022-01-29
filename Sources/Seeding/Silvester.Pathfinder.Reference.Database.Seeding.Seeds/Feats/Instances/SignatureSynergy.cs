@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b1cffe2e-b28d-4d1b-ace6-3b7df838d6a5"), Type = TextBlockType.Text, Text = "Your eidolon gains an evolution integral to its form, and it comes more easily than your other synergies. You gain one (trait: evolution) feat from the following list: (feat: Airborne Form), (feat: Burrowing Form), (feat: Ever-Vigilant Senses), or (feat: Hulking Size). For the purpose of meeting its prerequisites, your summoner level is equal to your character level – 4." };
+            yield return new TextBlock { Id = Guid.Parse("b1cffe2e-b28d-4d1b-ace6-3b7df838d6a5"), Type = TextBlockType.Text, Text = $"Your eidolon gains an evolution integral to its form, and it comes more easily than your other synergies. You gain one {ToMarkdownLink<Models.Entities.Trait>("evolution", Traits.Instances.Evolution.ID)} feat from the following list: {ToMarkdownLink<Models.Entities.Feat>("Airborne Form", Feats.Instances.AirborneForm.ID)}, {ToMarkdownLink<Models.Entities.Feat>("Burrowing Form", Feats.Instances.BurrowingForm.ID)}, {ToMarkdownLink<Models.Entities.Feat>("Ever-Vigilant Senses", Feats.Instances.EverVigilantSenses.ID)}, or {ToMarkdownLink<Models.Entities.Feat>("Hulking Size", Feats.Instances.HulkingSize.ID)}. For the purpose of meeting its prerequisites, your summoner level is equal to your character level – 4." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

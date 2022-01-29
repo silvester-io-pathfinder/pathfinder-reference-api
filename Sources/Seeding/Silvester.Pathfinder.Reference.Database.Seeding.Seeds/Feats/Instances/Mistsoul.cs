@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0d066b63-d8e0-48a4-9f21-53abd3e8c70b"), Type = TextBlockType.Text, Text = "You have a connection to vaporous forms of water, such as fog and mist. You gain the (feat: Mist Blending) reaction." };
+            yield return new TextBlock { Id = Guid.Parse("0d066b63-d8e0-48a4-9f21-53abd3e8c70b"), Type = TextBlockType.Text, Text = $"You have a connection to vaporous forms of water, such as fog and mist. You gain the {ToMarkdownLink<Models.Entities.Feat>("Mist Blending", Feats.Instances.MistBlending.ID)} reaction." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

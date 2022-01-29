@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b65d3500-8adf-425e-a8db-7339569c7f58"), Type = TextBlockType.Text, Text = "Select one unarmed attack you gained with (feat: Living Weapon). The damage die for that attack increases by one step until the end of your turn. In addition, choose to either have the attack gain a reach of 10 feet until the end of your turn or for you to gain a +1 status bonus to attack rolls with the chosen unarmed attack until the end of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("b65d3500-8adf-425e-a8db-7339569c7f58"), Type = TextBlockType.Text, Text = $"Select one unarmed attack you gained with {ToMarkdownLink<Models.Entities.Feat>("Living Weapon", Feats.Instances.LivingWeapon.ID)}. The damage die for that attack increases by one step until the end of your turn. In addition, choose to either have the attack gain a reach of 10 feet until the end of your turn or for you to gain a +1 status bonus to attack rolls with the chosen unarmed attack until the end of your turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

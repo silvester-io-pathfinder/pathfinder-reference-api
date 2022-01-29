@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b784dd8c-0c3c-4cdf-95fa-8aa4be71da3b"), Type = TextBlockType.Text, Text = "You place your body between your friends and your enemies, protecting your allies against oncoming attacks. You choose one adjacent ally. That ally gains a +1 circumstance bonus to AC until the start of your next turn or until that ally is no longer adjacent to you, whichever comes first. You can only protect a single ally in this way. If you choose to Protect a different Ally, the previous ally loses the bonus to AC." };
+            yield return new TextBlock { Id = Guid.Parse("b784dd8c-0c3c-4cdf-95fa-8aa4be71da3b"), Type = TextBlockType.Text, Text = $"You place your body between your friends and your enemies, protecting your allies against oncoming attacks. You choose one adjacent ally. That ally gains a +1 circumstance bonus to AC until the start of your next turn or until that ally is no longer adjacent to you, whichever comes first. You can only protect a single ally in this way. If you choose to Protect a different Ally, the previous ally loses the bonus to AC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

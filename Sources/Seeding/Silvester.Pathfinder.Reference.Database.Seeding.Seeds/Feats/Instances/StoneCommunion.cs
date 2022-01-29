@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("914b35dc-8bea-4864-9584-c3e6c870a778"), Type = TextBlockType.Text, Text = "You gain a unique communion with the earth and stones. You learn the Terran language and you can Activate your ka stone with a 10-minute activation (envision) to cast (spell: stone tell)." };
+            yield return new TextBlock { Id = Guid.Parse("914b35dc-8bea-4864-9584-c3e6c870a778"), Type = TextBlockType.Text, Text = $"You gain a unique communion with the earth and stones. You learn the Terran language and you can Activate your ka stone with a 10-minute activation (envision) to cast {ToMarkdownLink<Models.Entities.Spell>("stone tell", Spells.Instances.StoneTell.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

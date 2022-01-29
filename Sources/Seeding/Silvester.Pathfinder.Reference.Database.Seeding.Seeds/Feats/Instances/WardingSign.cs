@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b5725b2e-2400-4c57-a137-e1afa1eb4e19"), Type = TextBlockType.Text, Text = "You call on the power of a personal, eldritch sign of protection, which flares brightly before slowly fading. You gain a +2 circumstance bonus to the triggering saving throw, or a +3 circumstance bonus if the effect is a (trait: curse)." };
+            yield return new TextBlock { Id = Guid.Parse("b5725b2e-2400-4c57-a137-e1afa1eb4e19"), Type = TextBlockType.Text, Text = $"You call on the power of a personal, eldritch sign of protection, which flares brightly before slowly fading. You gain a +2 circumstance bonus to the triggering saving throw, or a +3 circumstance bonus if the effect is a {ToMarkdownLink<Models.Entities.Trait>("curse", Traits.Instances.Curse.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

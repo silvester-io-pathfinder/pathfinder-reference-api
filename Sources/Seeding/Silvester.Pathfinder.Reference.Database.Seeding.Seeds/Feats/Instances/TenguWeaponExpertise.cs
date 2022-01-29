@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("18d5e0f1-41fd-44d7-a837-d39d79dbbe2d"), Type = TextBlockType.Text, Text = "Study has made you an expert with tengu weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency for the weapons from your (feat: Tengu Weapon Familiarity)." };
+            yield return new TextBlock { Id = Guid.Parse("18d5e0f1-41fd-44d7-a837-d39d79dbbe2d"), Type = TextBlockType.Text, Text = $"Study has made you an expert with tengu weapons. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency for the weapons from your {ToMarkdownLink<Models.Entities.Feat>("Tengu Weapon Familiarity", Feats.Instances.TenguWeaponFamiliarity.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

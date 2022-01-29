@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("073fdae4-792e-4220-98e6-5903a83fa194"), Type = TextBlockType.Text, Text = "Your greater discipline aligns your magical and physical potential. If your proficiency rank in unarmed attacks is at least master, your proficiency rank in spell attacks increases to master. Likewise, if your proficiency rank in spell attacks is at least master, your proficiency rank in unarmed attacks improves to master." };
-            yield return new TextBlock { Id = Guid.Parse("38c8867d-0e33-4929-b186-68cdab31495a"), Type = TextBlockType.Text, Text = "__Manually improve your spell attacks and unarmed attacks proficiencies accordingly.__" };
+            yield return new TextBlock { Id = Guid.Parse("073fdae4-792e-4220-98e6-5903a83fa194"), Type = TextBlockType.Text, Text = $"Your greater discipline aligns your magical and physical potential. If your proficiency rank in unarmed attacks is at least master, your proficiency rank in spell attacks increases to master. Likewise, if your proficiency rank in spell attacks is at least master, your proficiency rank in unarmed attacks improves to master." };
+            yield return new TextBlock { Id = Guid.Parse("38c8867d-0e33-4929-b186-68cdab31495a"), Type = TextBlockType.Text, Text = $"__Manually improve your spell attacks and unarmed attacks proficiencies accordingly.__" };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

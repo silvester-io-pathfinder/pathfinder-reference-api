@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("be7e0b37-1388-405a-8c10-a71efc0d5bec"), Type = TextBlockType.Text, Text = "You protect an ally with both your shield and your body. Whenever you use the (feat: Shield Block) reaction to prevent damage to an ally, you can evenly split the remaining damage after the (feat: Shield Block) between the ally and yourself." };
+            yield return new TextBlock { Id = Guid.Parse("be7e0b37-1388-405a-8c10-a71efc0d5bec"), Type = TextBlockType.Text, Text = $"You protect an ally with both your shield and your body. Whenever you use the {ToMarkdownLink<Models.Entities.Feat>("Shield Block", Feats.Instances.ShieldBlock.ID)} reaction to prevent damage to an ally, you can evenly split the remaining damage after the {ToMarkdownLink<Models.Entities.Feat>("Shield Block", Feats.Instances.ShieldBlock.ID)} between the ally and yourself." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

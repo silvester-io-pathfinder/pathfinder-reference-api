@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("34833178-e017-4827-b51a-2a2fda79c2bd"), Type = TextBlockType.Text, Text = "Your eyes have adapted to see in all circumstances, even without the assistance of light. You gain darkvision, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness you see in black and white only." };
+            yield return new TextBlock { Id = Guid.Parse("34833178-e017-4827-b51a-2a2fda79c2bd"), Type = TextBlockType.Text, Text = $"Your eyes have adapted to see in all circumstances, even without the assistance of light. You gain darkvision, allowing you to see in darkness and dim light just as well as you can in bright light. However, in darkness you see in black and white only." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

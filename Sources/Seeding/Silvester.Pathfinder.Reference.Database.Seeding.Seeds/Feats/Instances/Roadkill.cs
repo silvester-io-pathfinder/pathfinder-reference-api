@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b5eb8d60-c03b-4200-b1de-d73613ff1392"), Type = TextBlockType.Text, Text = "In your hands, any vehicle is a weapon. When you use Run Over, you can use your class DC in place of the vehicle's collision DC. Your vehicle can Run Over any number of creatures up to one Size smaller than the vehicle or ram any one target creature or object in your path up to the size of your vehicle." };
+            yield return new TextBlock { Id = Guid.Parse("b5eb8d60-c03b-4200-b1de-d73613ff1392"), Type = TextBlockType.Text, Text = $"In your hands, any vehicle is a weapon. When you use Run Over, you can use your class DC in place of the vehicle's collision DC. Your vehicle can Run Over any number of creatures up to one Size smaller than the vehicle or ram any one target creature or object in your path up to the size of your vehicle." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

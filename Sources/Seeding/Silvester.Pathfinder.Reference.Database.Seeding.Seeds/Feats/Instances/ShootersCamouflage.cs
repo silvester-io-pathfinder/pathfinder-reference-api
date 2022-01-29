@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("daa568b3-7e51-4dfc-a2a4-07ba0ae30be8"), Type = TextBlockType.Text, Text = "You specialize in blending into a particular type of environment, able to disappear after taking your shot. Choose either natural or urban terrain. In the chosen terrain, you can (action: Hide) and (action: Sneak) even without cover or being concealed." };
+            yield return new TextBlock { Id = Guid.Parse("daa568b3-7e51-4dfc-a2a4-07ba0ae30be8"), Type = TextBlockType.Text, Text = $"You specialize in blending into a particular type of environment, able to disappear after taking your shot. Choose either natural or urban terrain. In the chosen terrain, you can {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)} and {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} even without cover or being concealed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("34797a18-9ac0-47ee-be9e-6333eaba8796"), Type = TextBlockType.Text, Text = "When using a simple firearm, you can shoot objects right out of your enemy's hands. Attempt to (action: Disarm) the target using a ranged attack roll with your simple firearm, instead of attempting an Athletics check against the target's Reflex DC." };
+            yield return new TextBlock { Id = Guid.Parse("34797a18-9ac0-47ee-be9e-6333eaba8796"), Type = TextBlockType.Text, Text = $"When using a simple firearm, you can shoot objects right out of your enemy's hands. Attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Disarm", SkillActions.Instances.Disarm.ID)} the target using a ranged attack roll with your simple firearm, instead of attempting an Athletics check against the target's Reflex DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

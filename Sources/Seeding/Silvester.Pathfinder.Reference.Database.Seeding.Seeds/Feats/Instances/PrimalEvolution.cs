@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b321801f-078d-4d19-b4e2-07ec25846285"), Type = TextBlockType.Text, Text = "You can call upon the creatures of the wild for aid. You gain an additional spell slot of your highest level, which you can use only to cast (spell: summon animal) or (spell: summon plants or fungi | summon plant or fungus). You can cast either of these spells using that spell slot, even if it they aren't in your spell repertoire." };
+            yield return new TextBlock { Id = Guid.Parse("b321801f-078d-4d19-b4e2-07ec25846285"), Type = TextBlockType.Text, Text = $"You can call upon the creatures of the wild for aid. You gain an additional spell slot of your highest level, which you can use only to cast {ToMarkdownLink<Models.Entities.Spell>("summon animal", Spells.Instances.SummonAnimal.ID)} or {ToMarkdownLink<Models.Entities.Spell>("summon plants or fungi", Spells.Instances.SummonPlantOrFungus.ID)}. You can cast either of these spells using that spell slot, even if it they aren't in your spell repertoire." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

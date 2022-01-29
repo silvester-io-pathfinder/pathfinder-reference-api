@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("305602a2-cf7b-4842-9a66-046e5bf174bd"), Type = TextBlockType.Text, Text = "Your connection to rune magic has revealed tricks to make polearms deadlier in your hands. You gain the critical specialization effects of polearms." };
+            yield return new TextBlock { Id = Guid.Parse("305602a2-cf7b-4842-9a66-046e5bf174bd"), Type = TextBlockType.Text, Text = $"Your connection to rune magic has revealed tricks to make polearms deadlier in your hands. You gain the critical specialization effects of polearms." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

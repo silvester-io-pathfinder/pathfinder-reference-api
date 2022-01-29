@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7455e776-2051-4ac4-b2f0-860ed1f47170"), Type = TextBlockType.Text, Text = "A trail of energy flows from your target back to you. Make a (feat: Spellstrike) with a ranged weapon or ranged unarmed attack against a target within the ranged weapon or unarmed attack's first range increment. The spell you cast for the (feat: Spellstrike) can't be a cantrip or focus spell. Each creature in a line between you and the target, excluding you and the targer, takes damage equal to double the spell's level. Determine the damage type as described in (feat: Arcane Cascade)." };
+            yield return new TextBlock { Id = Guid.Parse("7455e776-2051-4ac4-b2f0-860ed1f47170"), Type = TextBlockType.Text, Text = $"A trail of energy flows from your target back to you. Make a {ToMarkdownLink<Models.Entities.Feat>("Spellstrike", Feats.Instances.Spellstrike.ID)} with a ranged weapon or ranged unarmed attack against a target within the ranged weapon or unarmed attack's first range increment. The spell you cast for the {ToMarkdownLink<Models.Entities.Feat>("Spellstrike", Feats.Instances.Spellstrike.ID)} can't be a cantrip or focus spell. Each creature in a line between you and the target, excluding you and the targer, takes damage equal to double the spell's level. Determine the damage type as described in {ToMarkdownLink<Models.Entities.Feat>("Arcane Cascade", Feats.Instances.ArcaneCascade.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

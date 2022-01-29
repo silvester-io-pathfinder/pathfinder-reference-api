@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("406626f6-6da3-422a-9ec1-4bdf54ef4aa3"), Type = TextBlockType.Text, Text = "When you draw upon your bonded item, you can leave a bit of energy within it for later use. You can use (Action: Drain Bonded Item) one additional time per day, but only to cast a spell 2 or more levels lower than your highest-level spell." };
+            yield return new TextBlock { Id = Guid.Parse("406626f6-6da3-422a-9ec1-4bdf54ef4aa3"), Type = TextBlockType.Text, Text = $"When you draw upon your bonded item, you can leave a bit of energy within it for later use. You can use {ToMarkdownLink<Models.Entities.Feat>("Drain Bonded Item", Feats.Instances.DrainBondedItem.ID)} one additional time per day, but only to cast a spell 2 or more levels lower than your highest-level spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

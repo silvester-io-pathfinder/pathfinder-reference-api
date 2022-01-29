@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("810ef96f-96c7-406d-b922-0af46bc7e652"), Type = TextBlockType.Text, Text = "You take advantage of the opening created by your ally to tip your foe off their feet. Attempt an Athletics check to (action: Trip) the target of the triggering attack." };
+            yield return new TextBlock { Id = Guid.Parse("810ef96f-96c7-406d-b922-0af46bc7e652"), Type = TextBlockType.Text, Text = $"You take advantage of the opening created by your ally to tip your foe off their feet. Attempt an Athletics check to {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} the target of the triggering attack." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("17868bc5-9561-4056-ae7f-98c84da6500c"), Type = TextBlockType.Text, Text = "You designed your armor to inaudibly thrum at just the right frequency to create interference against force and sound waves. You gain resistance equal to 3 + half your level to force and sonic damage. When under the effects of (feat: Overdrive), the resistance increases by 2." };
+            yield return new TextBlock { Id = Guid.Parse("17868bc5-9561-4056-ae7f-98c84da6500c"), Type = TextBlockType.Text, Text = $"You designed your armor to inaudibly thrum at just the right frequency to create interference against force and sound waves. You gain resistance equal to 3 + half your level to force and sonic damage. When under the effects of {ToMarkdownLink<Models.Entities.Feat>("Overdrive", Feats.Instances.Overdrive.ID)}, the resistance increases by 2." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

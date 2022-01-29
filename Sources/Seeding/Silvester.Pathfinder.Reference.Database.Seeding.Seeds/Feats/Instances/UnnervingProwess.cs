@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("965a67ac-0037-4893-b8d5-cb0ebb636261"), Type = TextBlockType.Text, Text = "Your incredible skill with your blade unnerves your foes. You attempt to (action: Demoralize) the target of your (action: Strike) or (action: Disarm). This (action: Demoralize) attempt does not have the (trait: auditory) trait, nor do you take a penalty to the check if the target doesn't understand your language." };
+            yield return new TextBlock { Id = Guid.Parse("965a67ac-0037-4893-b8d5-cb0ebb636261"), Type = TextBlockType.Text, Text = $"Your incredible skill with your blade unnerves your foes. You attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)} the target of your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Disarm", SkillActions.Instances.Disarm.ID)}. This {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)} attempt does not have the {ToMarkdownLink<Models.Entities.Trait>("auditory", Traits.Instances.Auditory.ID)} trait, nor do you take a penalty to the check if the target doesn't understand your language." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

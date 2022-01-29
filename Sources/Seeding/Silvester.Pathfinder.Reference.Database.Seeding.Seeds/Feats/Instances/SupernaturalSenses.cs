@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("323501af-d1d2-4322-8a7c-c740797ff4a7"), Type = TextBlockType.Text, Text = "Your scent is preternaturally sharp, and you can always rely on your sense of smell to help guide you when your vision is compromised. When you target a concealed or hidden opponent while you are raging, you reduce the DC of the flat check to 3 for a concealed target or to 9 for a hidden one." };
+            yield return new TextBlock { Id = Guid.Parse("323501af-d1d2-4322-8a7c-c740797ff4a7"), Type = TextBlockType.Text, Text = $"Your scent is preternaturally sharp, and you can always rely on your sense of smell to help guide you when your vision is compromised. When you target a concealed or hidden opponent while you are raging, you reduce the DC of the flat check to 3 for a concealed target or to 9 for a hidden one." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

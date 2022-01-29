@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a06ac0c-c26b-4136-80ec-e5c3cbfbda0c"), Type = TextBlockType.Text, Text = "Your hair unarmed attack deals 1d6 bludgeoning damage and gains the (trait: grapple) trait." };
+            yield return new TextBlock { Id = Guid.Parse("5a06ac0c-c26b-4136-80ec-e5c3cbfbda0c"), Type = TextBlockType.Text, Text = $"Your hair unarmed attack deals 1d6 bludgeoning damage and gains the {ToMarkdownLink<Models.Entities.Trait>("grapple", Traits.Instances.Grapple.ID)} trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

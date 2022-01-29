@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ab2884f0-6317-4c56-955d-cbe62e0e7e35"), Type = TextBlockType.Text, Text = "When in danger, you can harden the stone in your skin into armor, much like a shaitan. You can cast (spell: stoneskin) on yourself only, 3 times per day as a 4th-level arcane innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("ab2884f0-6317-4c56-955d-cbe62e0e7e35"), Type = TextBlockType.Text, Text = $"When in danger, you can harden the stone in your skin into armor, much like a shaitan. You can cast {ToMarkdownLink<Models.Entities.Spell>("stoneskin", Spells.Instances.Stoneskin.ID)} on yourself only, 3 times per day as a 4th-level arcane innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

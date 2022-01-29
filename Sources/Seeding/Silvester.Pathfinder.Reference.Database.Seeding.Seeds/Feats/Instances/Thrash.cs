@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d2692fdd-88d5-469d-82c5-e15692ece76f"), Type = TextBlockType.Text, Text = "You thrash the grabbed foe around. It takes bludgeoning damage equal to your Strength modifier plus your weapon specialization damage plus your (feat: Rage) damage. The foe must attempt a basic Fortitude save against your class DC." };
+            yield return new TextBlock { Id = Guid.Parse("d2692fdd-88d5-469d-82c5-e15692ece76f"), Type = TextBlockType.Text, Text = $"You thrash the grabbed foe around. It takes bludgeoning damage equal to your Strength modifier plus your weapon specialization damage plus your {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)} damage. The foe must attempt a basic Fortitude save against your class DC." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

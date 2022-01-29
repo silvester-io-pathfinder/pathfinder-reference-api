@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("42d569c4-ef08-46a6-823c-7db14e4a46bf"), Type = TextBlockType.Text, Text = "You can prepare two spells in one slot, giving you the freedom to choose the spell when you cast it. When you prepare your spells for the day, you can choose one spell slot at least 1 level lower than the highest-level spell you can cast and prepare two spells in that slot. When you (activity: Cast a Spell) from that slot, choose which spell to cast. Once you've chosen, the unused spell dissipates as though you hadn't prepared it at all–for example, it isn't available for use with (feat: Drain Bonded Item)." };
+            yield return new TextBlock { Id = Guid.Parse("42d569c4-ef08-46a6-823c-7db14e4a46bf"), Type = TextBlockType.Text, Text = $"You can prepare two spells in one slot, giving you the freedom to choose the spell when you cast it. When you prepare your spells for the day, you can choose one spell slot at least 1 level lower than the highest-level spell you can cast and prepare two spells in that slot. When you {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)} from that slot, choose which spell to cast. Once you've chosen, the unused spell dissipates as though you hadn't prepared it at all–for example, it isn't available for use with {ToMarkdownLink<Models.Entities.Feat>("Drain Bonded Item", Feats.Instances.DrainBondedItem.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

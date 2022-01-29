@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fcaa6166-efba-4a70-8fb8-73d8a212f49d"), Type = TextBlockType.Text, Text = "Your mercy transcends the bounds of life and death. When you use (feat: Mercy), you can cast (spell: lay on hands) on a creature that died since your last turn to return it to life. The target returns to life with 1 Hit Point and becomes wounded 1. You can't use Ultimate Mercy if the triggering effect was (spell: disintegrate) or a (trait: death) effect." };
+            yield return new TextBlock { Id = Guid.Parse("fcaa6166-efba-4a70-8fb8-73d8a212f49d"), Type = TextBlockType.Text, Text = $"Your mercy transcends the bounds of life and death. When you use {ToMarkdownLink<Models.Entities.Feat>("Mercy", Feats.Instances.Mercy.ID)}, you can cast {ToMarkdownLink<Models.Entities.Spell>("lay on hands", Spells.Instances.LayOnHands.ID)} on a creature that died since your last turn to return it to life. The target returns to life with 1 Hit Point and becomes wounded 1. You can't use Ultimate Mercy if the triggering effect was {ToMarkdownLink<Models.Entities.Spell>("disintegrate", Spells.Instances.Disintegrate.ID)} or a {ToMarkdownLink<Models.Entities.Trait>("death", Traits.Instances.Death.ID)} effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

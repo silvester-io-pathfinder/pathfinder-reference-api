@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7098fc7f-c145-463b-9cdc-fd510d72b466"), Type = TextBlockType.Text, Text = "You tamper with a foe's weapon or armor, using a free hand. Choose either a weapon held by an enemy in your reach or a suit of armor worn by an enemy in your reach. Attempt a Crafting check against the enemy's Reflex DC." };
+            yield return new TextBlock { Id = Guid.Parse("7098fc7f-c145-463b-9cdc-fd510d72b466"), Type = TextBlockType.Text, Text = $"You tamper with a foe's weapon or armor, using a free hand. Choose either a weapon held by an enemy in your reach or a suit of armor worn by an enemy in your reach. Attempt a Crafting check against the enemy's Reflex DC." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

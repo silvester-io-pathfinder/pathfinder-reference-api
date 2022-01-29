@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bb5e5fcb-f7f2-4c7f-8db2-464ce713545f"), Type = TextBlockType.Text, Text = "You call upon your deity to grant you their protective blessing. Attempt a DC 30 Religion check. If you have legendary proficiency in Religion, you can instead attempt a DC 40 Religion check to increase the temporary Hit Points you gain on a successful check to 15 (25 on a critical success)." };
+            yield return new TextBlock { Id = Guid.Parse("bb5e5fcb-f7f2-4c7f-8db2-464ce713545f"), Type = TextBlockType.Text, Text = $"You call upon your deity to grant you their protective blessing. Attempt a DC 30 Religion check. If you have legendary proficiency in Religion, you can instead attempt a DC 40 Religion check to increase the temporary Hit Points you gain on a successful check to 15 (25 on a critical success)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

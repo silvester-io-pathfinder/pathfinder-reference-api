@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d3c1333-5b4b-40a0-8a69-24616c201b21"), Type = TextBlockType.Text, Text = "You can flexibly cast all of your spells, granting a dizzying array of possible options. All of the spells in your repertoire are signature spells for you." };
+            yield return new TextBlock { Id = Guid.Parse("2d3c1333-5b4b-40a0-8a69-24616c201b21"), Type = TextBlockType.Text, Text = $"You can flexibly cast all of your spells, granting a dizzying array of possible options. All of the spells in your repertoire are signature spells for you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

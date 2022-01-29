@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("33ad4949-8121-4bea-891c-8bb640809f16"), Type = TextBlockType.Text, Text = "You can put a single item you're holding of light or negligible Bulk onto a person without them noticing by succeeding at a Thievery check against their Perception DC. If you have the ruffian racket, you can do this as a free action when you successfully (action: Shove) a target." };
+            yield return new TextBlock { Id = Guid.Parse("33ad4949-8121-4bea-891c-8bb640809f16"), Type = TextBlockType.Text, Text = $"You can put a single item you're holding of light or negligible Bulk onto a person without them noticing by succeeding at a Thievery check against their Perception DC. If you have the ruffian racket, you can do this as a free action when you successfully {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} a target." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

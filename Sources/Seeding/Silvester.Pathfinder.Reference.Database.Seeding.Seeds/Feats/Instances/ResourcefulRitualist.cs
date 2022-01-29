@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8736861-0890-48ec-9ab5-d4e384fa8064"), Type = TextBlockType.Text, Text = "You can cast difficult rituals that might otherwise be just beyond your skill. You can attempt checks to cast a ritual that requires expert proficiency if you are trained, master proficiency if you are an expert, or legendary proficiency if you are a master." };
+            yield return new TextBlock { Id = Guid.Parse("b8736861-0890-48ec-9ab5-d4e384fa8064"), Type = TextBlockType.Text, Text = $"You can cast difficult rituals that might otherwise be just beyond your skill. You can attempt checks to cast a ritual that requires expert proficiency if you are trained, master proficiency if you are an expert, or legendary proficiency if you are a master." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

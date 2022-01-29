@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5ff3106c-676c-4e15-ae0c-e1f09e0fa53b"), Type = TextBlockType.Text, Text = "You can keep watch over multiple charges. Each day during your preparations, you can designate a number of charges equal to your Intelligence modifier instead of just one." };
+            yield return new TextBlock { Id = Guid.Parse("5ff3106c-676c-4e15-ae0c-e1f09e0fa53b"), Type = TextBlockType.Text, Text = $"You can keep watch over multiple charges. Each day during your preparations, you can designate a number of charges equal to your Intelligence modifier instead of just one." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ce3d7f5f-02e2-4926-ab24-381cf1a5b07b"), Type = TextBlockType.Text, Text = "You move faster, especially when traveling, allowing you to scout ahead and report back without slowing your allies. You gain a +10-foot status bonus to your Speed. When calculating your travel speed, this increases to a +20-foot status bonus." };
+            yield return new TextBlock { Id = Guid.Parse("ce3d7f5f-02e2-4926-ab24-381cf1a5b07b"), Type = TextBlockType.Text, Text = $"You move faster, especially when traveling, allowing you to scout ahead and report back without slowing your allies. You gain a +10-foot status bonus to your Speed. When calculating your travel speed, this increases to a +20-foot status bonus." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

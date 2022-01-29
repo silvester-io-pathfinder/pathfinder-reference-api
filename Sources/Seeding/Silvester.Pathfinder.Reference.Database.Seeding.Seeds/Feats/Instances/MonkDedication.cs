@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9af3d39b-d9b4-4cea-b600-880fbf392db6"), Type = TextBlockType.Text, Text = "You become trained in unarmed attacks and gain the powerful fist class feature (page 156). You become trained in your choice of Acrobatics or Athletics; if you are already trained in both of these skills, you become trained in a skill of your choice. You become trained in monk class DC." };
+            yield return new TextBlock { Id = Guid.Parse("9af3d39b-d9b4-4cea-b600-880fbf392db6"), Type = TextBlockType.Text, Text = $"You become trained in unarmed attacks and gain the powerful fist class feature (page 156). You become trained in your choice of Acrobatics or Athletics; if you are already trained in both of these skills, you become trained in a skill of your choice. You become trained in monk class DC." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

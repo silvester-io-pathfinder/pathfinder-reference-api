@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("986c41da-6b30-495c-a43c-99290af81d93"), Type = TextBlockType.Text, Text = "You enter a stance that lets you throw shuriken with lightning speed. While in this stance, you can use your monk feats or monk abilities that normally require unarmed attacks with shuriken instead." };
+            yield return new TextBlock { Id = Guid.Parse("986c41da-6b30-495c-a43c-99290af81d93"), Type = TextBlockType.Text, Text = $"You enter a stance that lets you throw shuriken with lightning speed. While in this stance, you can use your monk feats or monk abilities that normally require unarmed attacks with shuriken instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

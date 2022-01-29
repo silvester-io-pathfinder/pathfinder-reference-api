@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("51cd2d82-83d1-454c-836e-e21144f094ae"), Type = TextBlockType.Text, Text = "You've practiced and increased your draconic might, allowing you to take your draconic form more often. You can use (feat: Shape of the Dragon) once per hour instead of once per day." };
+            yield return new TextBlock { Id = Guid.Parse("51cd2d82-83d1-454c-836e-e21144f094ae"), Type = TextBlockType.Text, Text = $"You've practiced and increased your draconic might, allowing you to take your draconic form more often. You can use {ToMarkdownLink<Models.Entities.Feat>("Shape of the Dragon", Feats.Instances.ShapeOfTheDragon.ID)} once per hour instead of once per day." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

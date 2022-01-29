@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("54de3612-a0c2-4dde-89be-ce99f32ded20"), Type = TextBlockType.Text, Text = "Your mother was an annis hag, known for physical prowess, and you have one violet or steel-gray eye. You have thick, sturdy claws made of cold iron that grow naturally from your body. You gain a claw unarmed attack that deals 1d6 slashing damage. Your claws are in the brawling group, have the (trait: unarmed) and (trait: grapple) traits, and are cold iron." };
+            yield return new TextBlock { Id = Guid.Parse("54de3612-a0c2-4dde-89be-ce99f32ded20"), Type = TextBlockType.Text, Text = $"Your mother was an annis hag, known for physical prowess, and you have one violet or steel-gray eye. You have thick, sturdy claws made of cold iron that grow naturally from your body. You gain a claw unarmed attack that deals 1d6 slashing damage. Your claws are in the brawling group, have the {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)} and {ToMarkdownLink<Models.Entities.Trait>("grapple", Traits.Instances.Grapple.ID)} traits, and are cold iron." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

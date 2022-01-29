@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e70a68f2-a7cf-4af9-be0d-fcfcacae82e9"), Type = TextBlockType.Text, Text = "Poisons attack specific parts of the body – one venom might target the lungs, another the circulatory system, while another deteriorates the nerves. You know how to take advantage of such weaknesses. You deal 1d6 damage of the required (action: Strike)'s damage type and 1d6 poison damage to the target. If you're at least 18th level, you deal 2d6 damage of each type." };
+            yield return new TextBlock { Id = Guid.Parse("e70a68f2-a7cf-4af9-be0d-fcfcacae82e9"), Type = TextBlockType.Text, Text = $"Poisons attack specific parts of the body – one venom might target the lungs, another the circulatory system, while another deteriorates the nerves. You know how to take advantage of such weaknesses. You deal 1d6 damage of the required {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}'s damage type and 1d6 poison damage to the target. If you're at least 18th level, you deal 2d6 damage of each type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

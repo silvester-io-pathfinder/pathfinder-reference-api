@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dda317b7-80e0-46b0-94ec-d086758c41cd"), Type = TextBlockType.Text, Text = "You're always investigating what's around you, even as you perform other activities. You can move at full Speed while using the (action: Investigate) exploration activity, and you can use another exploration activity while (action: Investigating | Investigate)." };
+            yield return new TextBlock { Id = Guid.Parse("dda317b7-80e0-46b0-94ec-d086758c41cd"), Type = TextBlockType.Text, Text = $"You're always investigating what's around you, even as you perform other activities. You can move at full Speed while using the {ToMarkdownLink<Models.Entities.Activity>("Investigate", Activities.Instances.Investigate.ID)} exploration activity, and you can use another exploration activity while {ToMarkdownLink<Models.Entities.Activity>("Investigating", Activities.Instances.Investigate.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

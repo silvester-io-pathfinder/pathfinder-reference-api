@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4309a2c8-6bc1-4420-9d08-d06f85fb40b0"), Type = TextBlockType.Text, Text = "You swagger readily into any fight – even an ambush. You gain a +2 circumstance bonus to your initiative roll and can (action: Interact) to draw a weapon." };
+            yield return new TextBlock { Id = Guid.Parse("4309a2c8-6bc1-4420-9d08-d06f85fb40b0"), Type = TextBlockType.Text, Text = $"You swagger readily into any fight – even an ambush. You gain a +2 circumstance bonus to your initiative roll and can {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw a weapon." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

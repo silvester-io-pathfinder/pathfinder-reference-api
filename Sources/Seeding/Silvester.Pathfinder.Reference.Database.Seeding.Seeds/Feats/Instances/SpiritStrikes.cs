@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5b82bab1-db35-4b48-bf22-77878ce7dc68"), Type = TextBlockType.Text, Text = "Your connection to the Boneyard empowers you to bring death to all forms of life and unlife, exploiting their weaknesses. All your weapon and unarmed (action: Strikes | Strike) are magical and deal 1 additional negative damage to living creatures and 1 additional positive damage to undead." };
+            yield return new TextBlock { Id = Guid.Parse("5b82bab1-db35-4b48-bf22-77878ce7dc68"), Type = TextBlockType.Text, Text = $"Your connection to the Boneyard empowers you to bring death to all forms of life and unlife, exploiting their weaknesses. All your weapon and unarmed {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} are magical and deal 1 additional negative damage to living creatures and 1 additional positive damage to undead." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

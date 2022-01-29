@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ce0706f6-1387-40aa-a472-2fc183a01054"), Type = TextBlockType.Text, Text = "The chitin on your claws is so hard you can defend against attacks with them. Your claw unarmed attack from the vicious goloma heritage gains the (trait: parry) weapon trait." };
+            yield return new TextBlock { Id = Guid.Parse("ce0706f6-1387-40aa-a472-2fc183a01054"), Type = TextBlockType.Text, Text = $"The chitin on your claws is so hard you can defend against attacks with them. Your claw unarmed attack from the vicious goloma heritage gains the {ToMarkdownLink<Models.Entities.Trait>("parry", Traits.Instances.Parry.ID)} weapon trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

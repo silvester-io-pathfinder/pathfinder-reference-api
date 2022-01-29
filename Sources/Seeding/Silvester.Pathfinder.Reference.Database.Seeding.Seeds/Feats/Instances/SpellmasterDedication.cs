@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3a0598d3-70b0-4600-af6b-a7e6a48eff0c"), Type = TextBlockType.Text, Text = "As a Spellmaster, you are adept at identifying magic. You gain a +2 circumstance bonus when you (action: Identify Magic) with a skill in which you are trained or better. If you have the (feat: Wayfinder Resonance Tinkerer) feat, you can change the cantrip you chose for that feat each day during your daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("3a0598d3-70b0-4600-af6b-a7e6a48eff0c"), Type = TextBlockType.Text, Text = $"As a Spellmaster, you are adept at identifying magic. You gain a +2 circumstance bonus when you {ToMarkdownLink<Models.Entities.SkillAction>("Identify Magic", SkillActions.Instances.IdentifyMagic.ID)} with a skill in which you are trained or better. If you have the {ToMarkdownLink<Models.Entities.Feat>("Wayfinder Resonance Tinkerer", Feats.Instances.WayfinderResonanceTinkerer.ID)} feat, you can change the cantrip you chose for that feat each day during your daily preparations." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

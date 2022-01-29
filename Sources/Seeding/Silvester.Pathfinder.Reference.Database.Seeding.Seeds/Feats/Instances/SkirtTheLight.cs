@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9cc860d-d99d-4ea6-b529-0b623fff9077"), Type = TextBlockType.Text, Text = "You can travel the border between the Material and Shadow Planes and even bring others along. You can cast (spell: shadow walk) as an occult innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("b9cc860d-d99d-4ea6-b529-0b623fff9077"), Type = TextBlockType.Text, Text = $"You can travel the border between the Material and Shadow Planes and even bring others along. You can cast {ToMarkdownLink<Models.Entities.Spell>("shadow walk", Spells.Instances.ShadowWalk.ID)} as an occult innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0ddcf3b6-f3be-4097-b53e-a52fec476e9a"), Type = TextBlockType.Text, Text = "You're constantly studying small aspects of everyone's movements, even if you don't have a stratagem in place ahead of time. On any (action: Strike) for which you didn't (feat: Devise a Stratagem), you still deal precision damage equal to your number of strategic strike damage dice so long as the weapon or unarmed attack you used is one that would have let you use your Intelligence modifier had you (feat: Devised a Stratagem | Devise a Stratagem)." };
+            yield return new TextBlock { Id = Guid.Parse("0ddcf3b6-f3be-4097-b53e-a52fec476e9a"), Type = TextBlockType.Text, Text = $"You're constantly studying small aspects of everyone's movements, even if you don't have a stratagem in place ahead of time. On any {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} for which you didn't {ToMarkdownLink<Models.Entities.Feat>("Devise a Stratagem", Feats.Instances.DeviseAStratagem.ID)}, you still deal precision damage equal to your number of strategic strike damage dice so long as the weapon or unarmed attack you used is one that would have let you use your Intelligence modifier had you {ToMarkdownLink<Models.Entities.Feat>("Devised a Stratagem", Feats.Instances.DeviseAStratagem.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

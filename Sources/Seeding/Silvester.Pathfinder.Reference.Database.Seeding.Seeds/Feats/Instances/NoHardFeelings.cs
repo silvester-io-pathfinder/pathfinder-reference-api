@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5eaae087-1258-4e6e-a6d5-97f94f8eab7e"), Type = TextBlockType.Text, Text = "Despite the devastation your weapons tend to inflict upon their targets or the destruction you might unleash upon an area, your foes still manage to walk away at the end of a fight—at least sometimes. You can choose to add the (trait: nonlethal) trait to your ranged weapons, making the choice of whether to add the trait or not just before each (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("5eaae087-1258-4e6e-a6d5-97f94f8eab7e"), Type = TextBlockType.Text, Text = $"Despite the devastation your weapons tend to inflict upon their targets or the destruction you might unleash upon an area, your foes still manage to walk away at the end of a fight—at least sometimes. You can choose to add the {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)} trait to your ranged weapons, making the choice of whether to add the trait or not just before each {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

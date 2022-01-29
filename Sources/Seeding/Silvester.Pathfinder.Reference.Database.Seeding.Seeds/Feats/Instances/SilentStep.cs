@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b09f279e-a20d-44bf-8b97-6db62c7bfcd9"), Type = TextBlockType.Text, Text = "You vanish with silent treads. You (action: Step), then (action: Hide) or (action: Sneak). You still need to meet the requirements to (action: Hide) or (action: Sneak), as normal." };
+            yield return new TextBlock { Id = Guid.Parse("b09f279e-a20d-44bf-8b97-6db62c7bfcd9"), Type = TextBlockType.Text, Text = $"You vanish with silent treads. You {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)}, then {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)}. You still need to meet the requirements to {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)}, as normal." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("406bc96c-9bd3-42c0-9480-46c0ffbb9a32"), Type = TextBlockType.Text, Text = "You've let your incisors grow long enough to serve as formidable weapons. You gain a jaws unarmed attack that deals 1d6 piercing damage. Your jaws are in the brawling group and have the (trait: finesse) and (trait: unarmed) traits. Unlike most creatures, you can file down your teeth and regrow them later on, enabling you to select this feat at any level, and to retrain into and out of this feat." };
+            yield return new TextBlock { Id = Guid.Parse("406bc96c-9bd3-42c0-9480-46c0ffbb9a32"), Type = TextBlockType.Text, Text = $"You've let your incisors grow long enough to serve as formidable weapons. You gain a jaws unarmed attack that deals 1d6 piercing damage. Your jaws are in the brawling group and have the {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)} and {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)} traits. Unlike most creatures, you can file down your teeth and regrow them later on, enabling you to select this feat at any level, and to retrain into and out of this feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

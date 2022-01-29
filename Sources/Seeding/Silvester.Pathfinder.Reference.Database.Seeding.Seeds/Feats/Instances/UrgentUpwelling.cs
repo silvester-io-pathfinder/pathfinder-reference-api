@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fd22f1f9-2790-429b-999f-31ad49230e2b"), Type = TextBlockType.Text, Text = "Defeat lets you to tap into your wellspring. Attempt the flat check for wellspring magic. If you critically succeed, you can choose to forgo gaining a temporary spell slot to instead have the triggering enemy undergo a wellspring surge. This surge functions just as it would for you, the only difference being that it emits from the enemy." };
+            yield return new TextBlock { Id = Guid.Parse("fd22f1f9-2790-429b-999f-31ad49230e2b"), Type = TextBlockType.Text, Text = $"Defeat lets you to tap into your wellspring. Attempt the flat check for wellspring magic. If you critically succeed, you can choose to forgo gaining a temporary spell slot to instead have the triggering enemy undergo a wellspring surge. This surge functions just as it would for you, the only difference being that it emits from the enemy." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c4e0b46d-ebff-46ea-82d4-8c6202cc20ec"), Type = TextBlockType.Text, Text = "You have some feature that allows you to quickly evade effects that restrain you. Attempt a check to (action: Escape). If you succeed, you can (action: Stride), (action: Step), or make a (action: Strike) with a melee unarmed attack targeting the creature you (action: Escaped | Escape) from. If you fail, you instead attempt to (action: Escape) a second time." };
-            yield return new TextBlock { Id = Guid.Parse("6ea6832c-0737-4aaa-b324-5b94e525ba55"), Type = TextBlockType.Text, Text = "You increase your multiple attack penalty as appropriate for the actions you took, but only after completing both actions." };
+            yield return new TextBlock { Id = Guid.Parse("c4e0b46d-ebff-46ea-82d4-8c6202cc20ec"), Type = TextBlockType.Text, Text = $"You have some feature that allows you to quickly evade effects that restrain you. Attempt a check to {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)}. If you succeed, you can {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}, {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)}, or make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a melee unarmed attack targeting the creature you {ToMarkdownLink<Models.Entities.Action>("Escaped", Actions.Instances.Escape.ID)} from. If you fail, you instead attempt to {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)} a second time." };
+            yield return new TextBlock { Id = Guid.Parse("6ea6832c-0737-4aaa-b324-5b94e525ba55"), Type = TextBlockType.Text, Text = $"You increase your multiple attack penalty as appropriate for the actions you took, but only after completing both actions." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

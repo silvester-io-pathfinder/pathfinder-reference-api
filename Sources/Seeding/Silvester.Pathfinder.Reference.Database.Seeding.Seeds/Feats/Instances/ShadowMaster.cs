@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a3ccc59d-4c9e-403c-838d-e6898b22d325"), Type = TextBlockType.Text, Text = "The shadows protect you better than any armor can, and they give you power to plunge others into darkness. Whenever you are in an area of dim light or darkness, you gain resistance 5 to all damage except force and damage from (action: Strikes | Strike) with the (item: ghost touch | Ghost Touch Runestone) property rune. When you attempt a Reflex saving throw in an area of dim light or darkness, you can roll twice and take the higher result; this is a (trait: fortune) effect." };
+            yield return new TextBlock { Id = Guid.Parse("a3ccc59d-4c9e-403c-838d-e6898b22d325"), Type = TextBlockType.Text, Text = $"The shadows protect you better than any armor can, and they give you power to plunge others into darkness. Whenever you are in an area of dim light or darkness, you gain resistance 5 to all damage except force and damage from {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} with the {ToMarkdownLink<Models.Items.Instances.WeaponPropertyRune>("ghost touch", Items.WeaponPropertyRunes.Instances.GhostTouch.ID)} property rune. When you attempt a Reflex saving throw in an area of dim light or darkness, you can roll twice and take the higher result; this is a {ToMarkdownLink<Models.Entities.Trait>("fortune", Traits.Instances.Fortune.ID)} effect." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

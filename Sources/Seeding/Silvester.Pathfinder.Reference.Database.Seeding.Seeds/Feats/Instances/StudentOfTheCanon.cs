@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6c5f400d-c461-4543-8b3f-6ffe973fde64"), Type = TextBlockType.Text, Text = "You've researched many faiths enough to recognize notions about them that are unlikely to be true. If you roll a critical failure at a Religion check to (Action: Decipher Writing) of a religious nature or to (Action: Recall Knowledge) about the tenets of faiths, you get a failure instead. When attempting to (Action: Recall Knowledge) about the tenets of your own faith, if you roll a failure, you get a success instead, and if you roll a success, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("6c5f400d-c461-4543-8b3f-6ffe973fde64"), Type = TextBlockType.Text, Text = $"You've researched many faiths enough to recognize notions about them that are unlikely to be true. If you roll a critical failure at a Religion check to {ToMarkdownLink<Models.Entities.SkillAction>("Decipher Writing", SkillActions.Instances.DecipherWriting.ID)} of a religious nature or to {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} about the tenets of faiths, you get a failure instead. When attempting to {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} about the tenets of your own faith, if you roll a failure, you get a success instead, and if you roll a success, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

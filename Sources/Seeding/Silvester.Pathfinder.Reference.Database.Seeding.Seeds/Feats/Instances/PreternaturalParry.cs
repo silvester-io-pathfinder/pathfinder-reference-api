@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c9dfec2c-bba0-49bb-9c9d-60dcb028af4a"), Type = TextBlockType.Text, Text = "You snap your weapon or limb into place to ward off harm at the last second. You gain a +2 circumstance bonus to AC and saving throws against the triggering effect until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("c9dfec2c-bba0-49bb-9c9d-60dcb028af4a"), Type = TextBlockType.Text, Text = $"You snap your weapon or limb into place to ward off harm at the last second. You gain a +2 circumstance bonus to AC and saving throws against the triggering effect until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

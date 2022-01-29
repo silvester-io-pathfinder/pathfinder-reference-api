@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eaf02835-72c1-4461-8f1c-ea8e67dfbee4"), Type = TextBlockType.Text, Text = "When you manifest the essence form, choose one damage type: acid, chaotic, cold, electricity, evil, fire, good, lawful, negative, positive, or sonic. Attacks with the weapon deal this type of damage instead of their physical damage with a +2 status bonus to the damage." };
-            yield return new TextBlock { Id = Guid.Parse("858cbe43-942c-4c4f-8e83-2f12f5b8407e"), Type = TextBlockType.Text, Text = "__Corruption Flaw__ When you deal damage with a weapon or unarmed attack, you take 2 damage of the last type you chose for planar pain, even if the damage type normally wouldn't harm you, such as good damage if you aren't evil." };
+            yield return new TextBlock { Id = Guid.Parse("eaf02835-72c1-4461-8f1c-ea8e67dfbee4"), Type = TextBlockType.Text, Text = $"When you manifest the essence form, choose one damage type: acid, chaotic, cold, electricity, evil, fire, good, lawful, negative, positive, or sonic. Attacks with the weapon deal this type of damage instead of their physical damage with a +2 status bonus to the damage." };
+            yield return new TextBlock { Id = Guid.Parse("858cbe43-942c-4c4f-8e83-2f12f5b8407e"), Type = TextBlockType.Text, Text = $"__Corruption Flaw__ When you deal damage with a weapon or unarmed attack, you take 2 damage of the last type you chose for planar pain, even if the damage type normally wouldn't harm you, such as good damage if you aren't evil." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

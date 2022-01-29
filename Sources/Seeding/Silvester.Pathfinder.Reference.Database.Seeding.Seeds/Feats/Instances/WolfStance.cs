@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("18554183-fc23-4b35-9e77-3050ba89bf93"), Type = TextBlockType.Text, Text = "You enter the stance of a wolf, low to the ground with your hands held like fanged teeth. You can make wolf jaw unarmed attacks. These deal 1d8 piercing damage; are in the brawling group; and have the (trait: agile), (trait: backstabber), (trait: finesse), (trait: nonlethal), and (trait: unarmed) traits." };
-            yield return new TextBlock { Id = Guid.Parse("343dcb9f-5ae5-45b1-a68b-8d65308dfc90"), Type = TextBlockType.Text, Text = "If you're flanking a target while in Wolf Stance, your wolf jaw unarmed attacks also gain the (trait: trip) trait." };
+            yield return new TextBlock { Id = Guid.Parse("18554183-fc23-4b35-9e77-3050ba89bf93"), Type = TextBlockType.Text, Text = $"You enter the stance of a wolf, low to the ground with your hands held like fanged teeth. You can make wolf jaw unarmed attacks. These deal 1d8 piercing damage; are in the brawling group; and have the {ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)}, {ToMarkdownLink<Models.Entities.Trait>("backstabber", Traits.Instances.Backstabber.ID)}, {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)}, {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)}, and {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)} traits." };
+            yield return new TextBlock { Id = Guid.Parse("343dcb9f-5ae5-45b1-a68b-8d65308dfc90"), Type = TextBlockType.Text, Text = $"If you're flanking a target while in Wolf Stance, your wolf jaw unarmed attacks also gain the {ToMarkdownLink<Models.Entities.Trait>("trip", Traits.Instances.Trip.ID)} trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

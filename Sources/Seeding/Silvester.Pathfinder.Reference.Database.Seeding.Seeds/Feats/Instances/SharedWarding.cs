@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("df82b719-a800-4872-855a-5c0007089ea6"), Type = TextBlockType.Text, Text = "You ward your allies from the attacks of your foes whenever you apply those protections to yourself. When you gain a status bonus to AC and saves from (feat: Esoteric Warden), you can also choose to grant the same benefit to all allies within 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("df82b719-a800-4872-855a-5c0007089ea6"), Type = TextBlockType.Text, Text = $"You ward your allies from the attacks of your foes whenever you apply those protections to yourself. When you gain a status bonus to AC and saves from {ToMarkdownLink<Models.Entities.Feat>("Esoteric Warden", Feats.Instances.EsotericWarden.ID)}, you can also choose to grant the same benefit to all allies within 30 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ddfbe5b6-181a-48ee-afc0-19636a58f221"), Type = TextBlockType.Text, Text = "You can transform your body into a pure primal manifestation of earth, an elemental. Once per day, you can cast (spell: elemental form) as a 7th-level primal innate spell, but you can only choose the earth elemental form." };
+            yield return new TextBlock { Id = Guid.Parse("ddfbe5b6-181a-48ee-afc0-19636a58f221"), Type = TextBlockType.Text, Text = $"You can transform your body into a pure primal manifestation of earth, an elemental. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("elemental form", Spells.Instances.ElementalForm.ID)} as a 7th-level primal innate spell, but you can only choose the earth elemental form." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8383f15-1532-4f83-bafa-76c220c97d5f"), Type = TextBlockType.Text, Text = "You can tell when something's off. You can trigger (feat: Cat's Luck) after you roll initiative, in addition to its normal trigger, to reroll your Initiative and take the higher of the two results. This still counts against (feat: Cat's Luck's | Cat's Luck) frequency, as normal." };
+            yield return new TextBlock { Id = Guid.Parse("b8383f15-1532-4f83-bafa-76c220c97d5f"), Type = TextBlockType.Text, Text = $"You can tell when something's off. You can trigger {ToMarkdownLink<Models.Entities.Feat>("Cat's Luck", Feats.Instances.CatsLuck.ID)} after you roll initiative, in addition to its normal trigger, to reroll your Initiative and take the higher of the two results. This still counts against {ToMarkdownLink<Models.Entities.Feat>("Cat's Luck's", Feats.Instances.CatsLuck.ID)} frequency, as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

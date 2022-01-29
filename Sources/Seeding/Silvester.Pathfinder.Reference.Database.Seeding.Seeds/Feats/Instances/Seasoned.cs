@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c9edd55d-fd39-48a1-b0c4-a41d218e40d5"), Type = TextBlockType.Text, Text = "You've mastered the preparation of many types of food and drink. You gain a +1 circumstance bonus to checks to (action: Craft) food and drink, including potions. If you are a master in one of the prerequisite skills, this bonus increases to +2." };
+            yield return new TextBlock { Id = Guid.Parse("c9edd55d-fd39-48a1-b0c4-a41d218e40d5"), Type = TextBlockType.Text, Text = $"You've mastered the preparation of many types of food and drink. You gain a +1 circumstance bonus to checks to {ToMarkdownLink<Models.Entities.SkillAction>("Craft", SkillActions.Instances.Craft.ID)} food and drink, including potions. If you are a master in one of the prerequisite skills, this bonus increases to +2." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("72c9873a-d7ea-49b7-acfe-811a9bf58de7"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
-            yield return new TextBlock { Id = Guid.Parse("39d2cfeb-0c98-4ab0-a768-be0feccac22a"), Type = TextBlockType.Text, Text = "You've altered your weapon to including tangling wires or straps, or to have a flexible construction. Your innovation gains the (trait: grapple) and (trait: trip) traits." };
+            yield return new TextBlock { Id = Guid.Parse("72c9873a-d7ea-49b7-acfe-811a9bf58de7"), Type = TextBlockType.Enumeration, Text = $"*Melee Only**" };
+            yield return new TextBlock { Id = Guid.Parse("39d2cfeb-0c98-4ab0-a768-be0feccac22a"), Type = TextBlockType.Text, Text = $"You've altered your weapon to including tangling wires or straps, or to have a flexible construction. Your innovation gains the {ToMarkdownLink<Models.Entities.Trait>("grapple", Traits.Instances.Grapple.ID)} and {ToMarkdownLink<Models.Entities.Trait>("trip", Traits.Instances.Trip.ID)} traits." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

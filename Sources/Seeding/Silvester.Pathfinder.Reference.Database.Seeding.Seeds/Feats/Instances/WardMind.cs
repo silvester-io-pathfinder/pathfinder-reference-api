@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c311388-fd72-4c09-9b00-b2682bf8053c"), Type = TextBlockType.Text, Text = "To protect the knowledge within your mind from intrusion or erasure, you ward yourself against a mental attack, temporarily delaying its effects. Until the end of your next turn, you ignore a single (trait: mental) effect that meets the requirement. You can suppress a particular effect using Ward Mind or (feat: Cognitive Loophole) only once, even if you have both feats." };
+            yield return new TextBlock { Id = Guid.Parse("7c311388-fd72-4c09-9b00-b2682bf8053c"), Type = TextBlockType.Text, Text = $"To protect the knowledge within your mind from intrusion or erasure, you ward yourself against a mental attack, temporarily delaying its effects. Until the end of your next turn, you ignore a single {ToMarkdownLink<Models.Entities.Trait>("mental", Traits.Instances.Mental.ID)} effect that meets the requirement. You can suppress a particular effect using Ward Mind or {ToMarkdownLink<Models.Entities.Feat>("Cognitive Loophole", Feats.Instances.CognitiveLoophole.ID)} only once, even if you have both feats." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

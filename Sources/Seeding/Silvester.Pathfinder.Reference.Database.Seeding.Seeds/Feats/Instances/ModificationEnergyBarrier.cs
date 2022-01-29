@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9fd6b03b-e2d1-42bd-a16b-464a6024eed7"), Type = TextBlockType.Text, Text = "Your armor's defenses ablate any kind of energy coming your way. While wearing your armor, you gain resistance to all energy damage (acid, cold, electricity, fire, force, negative, positive, and sonic damage) equal to 2 + half your level. You must have the (feat: harmonic oscillator | Modification - Harmonic Oscillator), (feat: metallic reactance | Modification - Metallic Reactance), or (feat: phlogistonic regulator | Modification - Phlogistonic Regulator) modification to select this modification." };
+            yield return new TextBlock { Id = Guid.Parse("9fd6b03b-e2d1-42bd-a16b-464a6024eed7"), Type = TextBlockType.Text, Text = $"Your armor's defenses ablate any kind of energy coming your way. While wearing your armor, you gain resistance to all energy damage (acid, cold, electricity, fire, force, negative, positive, and sonic damage) equal to 2 + half your level. You must have the {ToMarkdownLink<Models.Entities.Feat>("harmonic oscillator", Feats.Instances.ModificationHarmonicOscillator.ID)}, {ToMarkdownLink<Models.Entities.Feat>("metallic reactance", Feats.Instances.ModificationMetallicReactance.ID)}, or {ToMarkdownLink<Models.Entities.Feat>("phlogistonic regulator", Feats.Instances.ModificationPhlogistonicRegulator.ID)} modification to select this modification." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

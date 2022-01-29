@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4ba1671d-a77c-4e59-9d10-dc415bb92e83"), Type = TextBlockType.Text, Text = "You gather the wind beneath you, allowing you to soar as you jump. You gain the (spell: wind jump) ki spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("4ba1671d-a77c-4e59-9d10-dc415bb92e83"), Type = TextBlockType.Text, Text = $"You gather the wind beneath you, allowing you to soar as you jump. You gain the {ToMarkdownLink<Models.Entities.Spell>("wind jump", Spells.Instances.WindJump.ID)} ki spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6ca7bce6-6bf2-4a27-95ac-5e890cbf094d"), Type = TextBlockType.Text, Text = "Your divine ally turns your chosen weapon into a paragon of its type. When you choose the weapon for your blade divine ally during your preparations, add the following property runes to the list of effects you can choose from: (item: dancing | Dancing Runestone), (item: greater disrupting | Greater Disrupting Runestone), and (item: keen | Keen Runestone)." };
+            yield return new TextBlock { Id = Guid.Parse("6ca7bce6-6bf2-4a27-95ac-5e890cbf094d"), Type = TextBlockType.Text, Text = $"Your divine ally turns your chosen weapon into a paragon of its type. When you choose the weapon for your blade divine ally during your preparations, add the following property runes to the list of effects you can choose from: {ToMarkdownLink<Models.Items.Instances.WeaponPropertyRune>("dancing", Items.WeaponPropertyRunes.Instances.Dancing.ID)}, {ToMarkdownLink<Models.Items.Instances.WeaponPropertyRune>("greater disrupting", Items.WeaponPropertyRunes.Instances.Disrupting.ID)}, and {ToMarkdownLink<Models.Items.Instances.WeaponPropertyRune>("keen", Items.WeaponPropertyRunes.Instances.Keen.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

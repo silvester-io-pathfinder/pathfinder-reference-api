@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("89639ac7-5c62-49ce-bd8d-cd9452b0006a"), Type = TextBlockType.Text, Text = "You encourage an ally to toughen up, giving them a fighting chance. Choose one ally within your marshal's aura. The ally gains temporary Hit Points equal to your Charisma modifier and a +2 circumstance bonus to Fortitude saves. Both benefits last until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("89639ac7-5c62-49ce-bd8d-cd9452b0006a"), Type = TextBlockType.Text, Text = $"You encourage an ally to toughen up, giving them a fighting chance. Choose one ally within your marshal's aura. The ally gains temporary Hit Points equal to your Charisma modifier and a +2 circumstance bonus to Fortitude saves. Both benefits last until the start of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

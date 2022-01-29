@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("408907be-120c-4ebb-b635-ec7638dcfae5"), Type = TextBlockType.Text, Text = "Pathfinder agents serve as members of diverse teams with complementary skill sets. You are practiced at following the example of a more skilled ally to accomplish a wide variety of tasks. For the next minute you can add your level as a proficiency bonus to the observed skill check, even though you are untrained. This does not allow you to attempt trained actions using that skill unless you would otherwise be able to do so." };
+            yield return new TextBlock { Id = Guid.Parse("408907be-120c-4ebb-b635-ec7638dcfae5"), Type = TextBlockType.Text, Text = $"Pathfinder agents serve as members of diverse teams with complementary skill sets. You are practiced at following the example of a more skilled ally to accomplish a wide variety of tasks. For the next minute you can add your level as a proficiency bonus to the observed skill check, even though you are untrained. This does not allow you to attempt trained actions using that skill unless you would otherwise be able to do so." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

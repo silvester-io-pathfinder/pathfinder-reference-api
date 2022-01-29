@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84da074d-460b-4e1b-a6b8-180df40b1826"), Type = TextBlockType.Text, Text = "Your snares are particularly difficult for enemies to avoid. When you set a snare, the saving throw DC for that snare is equal to its normal DC or your class DC, whichever is higher." };
+            yield return new TextBlock { Id = Guid.Parse("84da074d-460b-4e1b-a6b8-180df40b1826"), Type = TextBlockType.Text, Text = $"Your snares are particularly difficult for enemies to avoid. When you set a snare, the saving throw DC for that snare is equal to its normal DC or your class DC, whichever is higher." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

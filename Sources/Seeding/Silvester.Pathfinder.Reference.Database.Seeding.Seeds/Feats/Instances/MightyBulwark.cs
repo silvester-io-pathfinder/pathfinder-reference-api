@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5949b3ce-c4b6-4b3e-9e34-211bf1eda25b"), Type = TextBlockType.Text, Text = "Thanks to your incredible connection to your armor, you can use it to shrug off an incredible array of dangers. Your bonus from the (trait: bulwark) armor trait increases from +3 to +4, and it applies on all Reflex saves, not just damaging Reflex saves." };
+            yield return new TextBlock { Id = Guid.Parse("5949b3ce-c4b6-4b3e-9e34-211bf1eda25b"), Type = TextBlockType.Text, Text = $"Thanks to your incredible connection to your armor, you can use it to shrug off an incredible array of dangers. Your bonus from the {ToMarkdownLink<Models.Entities.Trait>("bulwark", Traits.Instances.Bulwark.ID)} armor trait increases from +3 to +4, and it applies on all Reflex saves, not just damaging Reflex saves." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

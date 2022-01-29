@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a62a1388-460f-419d-96ea-61e468e95a1f"), Type = TextBlockType.Text, Text = "It's difficult to notice your passage through wild areas. As long as you're not in an urban environment, you're always considered to be (Action: Covering Tracks | Cover Tracks), even if you chose a different activity in exploration mode." };
+            yield return new TextBlock { Id = Guid.Parse("a62a1388-460f-419d-96ea-61e468e95a1f"), Type = TextBlockType.Text, Text = $"It's difficult to notice your passage through wild areas. As long as you're not in an urban environment, you're always considered to be {ToMarkdownLink<Models.Entities.SkillAction>("Covering Tracks", SkillActions.Instances.CoverTracks.ID)}, even if you chose a different activity in exploration mode." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

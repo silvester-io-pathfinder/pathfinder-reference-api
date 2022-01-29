@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("069012fb-1610-4a08-853c-db16c07b3b15"), Type = TextBlockType.Text, Text = "You have enhanced the formulas for your mutagens, aligning them perfectly to your physiology. When under the effect of a mutagen you crafted, you do not suffer its drawback." };
+            yield return new TextBlock { Id = Guid.Parse("069012fb-1610-4a08-853c-db16c07b3b15"), Type = TextBlockType.Text, Text = $"You have enhanced the formulas for your mutagens, aligning them perfectly to your physiology. When under the effect of a mutagen you crafted, you do not suffer its drawback." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

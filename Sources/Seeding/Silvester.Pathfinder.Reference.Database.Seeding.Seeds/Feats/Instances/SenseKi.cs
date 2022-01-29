@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3c928b50-1351-4e02-a88d-d319c732260f"), Type = TextBlockType.Text, Text = "You can read the presence of ki in your area. You gain imprecise lifesense out to a range of 30 feet." };
+            yield return new TextBlock { Id = Guid.Parse("3c928b50-1351-4e02-a88d-d319c732260f"), Type = TextBlockType.Text, Text = $"You can read the presence of ki in your area. You gain imprecise lifesense out to a range of 30 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

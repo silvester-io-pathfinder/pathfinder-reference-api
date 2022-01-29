@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fe7e0114-4d79-4338-8246-b6114449eff4"), Type = TextBlockType.Text, Text = "You spot anything out of place in the areas you know best. While in your favored terrain, you always gain the benefits of the (action: Scout) exploration activity, even if you are performing another exploration activity. If you're legendary in Survival, you gain these benefits in any terrain." };
+            yield return new TextBlock { Id = Guid.Parse("fe7e0114-4d79-4338-8246-b6114449eff4"), Type = TextBlockType.Text, Text = $"You spot anything out of place in the areas you know best. While in your favored terrain, you always gain the benefits of the {ToMarkdownLink<Models.Entities.Activity>("Scout", Activities.Instances.Scout.ID)} exploration activity, even if you are performing another exploration activity. If you're legendary in Survival, you gain these benefits in any terrain." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

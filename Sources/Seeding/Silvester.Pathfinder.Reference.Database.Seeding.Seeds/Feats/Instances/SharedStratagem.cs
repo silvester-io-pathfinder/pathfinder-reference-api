@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb212312-ae2b-4d36-828f-6e5e14674df2"), Type = TextBlockType.Text, Text = "The plans you make include your allies as well as yourself. When you hit a creature with an attack on which you substituted your attack roll due to (feat: Devising a Stratagem | Devise a Stratagem), designate one ally. The creature you hit is flat-footed to that ally on the next attack the designated ally makes against that creature before the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("fb212312-ae2b-4d36-828f-6e5e14674df2"), Type = TextBlockType.Text, Text = $"The plans you make include your allies as well as yourself. When you hit a creature with an attack on which you substituted your attack roll due to {ToMarkdownLink<Models.Entities.Feat>("Devising a Stratagem", Feats.Instances.DeviseAStratagem.ID)}, designate one ally. The creature you hit is flat-footed to that ally on the next attack the designated ally makes against that creature before the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

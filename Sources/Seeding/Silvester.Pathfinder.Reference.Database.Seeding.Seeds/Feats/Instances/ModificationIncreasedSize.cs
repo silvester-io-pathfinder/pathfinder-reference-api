@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7b159c31-1660-4242-9eb1-a7f7740db4c6"), Type = TextBlockType.Text, Text = "You built your construct innovation bigger than most. Your construct is Large. If you have this modification and your construct innovation becomes an advanced construct companion or otherwise gains the ability to become Large, you can immediately change increased size to a different initial construct modification." };
+            yield return new TextBlock { Id = Guid.Parse("7b159c31-1660-4242-9eb1-a7f7740db4c6"), Type = TextBlockType.Text, Text = $"You built your construct innovation bigger than most. Your construct is Large. If you have this modification and your construct innovation becomes an advanced construct companion or otherwise gains the ability to become Large, you can immediately change increased size to a different initial construct modification." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

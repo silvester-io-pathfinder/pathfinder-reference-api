@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("48d694ca-c09f-4361-840e-d152605dea33"), Type = TextBlockType.Text, Text = "You can use your wayfinder to store a little extra magic for when you need it most. When making your daily preparations, you can choose one 1st-level spell from your spellbook or spell repertoire and store it in your (item: wayfinder). You can cast this spell from the wayfinder using the normal actions required. Once the spell has been cast, it is expended, and you must make your next daily preparations to store another spell in your wayfinder." };
+            yield return new TextBlock { Id = Guid.Parse("48d694ca-c09f-4361-840e-d152605dea33"), Type = TextBlockType.Text, Text = $"You can use your wayfinder to store a little extra magic for when you need it most. When making your daily preparations, you can choose one 1st-level spell from your spellbook or spell repertoire and store it in your {ToMarkdownLink<Models.Items.Instances.WornItem>("wayfinder", Items.WornItems.Instances.Wayfinder.ID)}. You can cast this spell from the wayfinder using the normal actions required. Once the spell has been cast, it is expended, and you must make your next daily preparations to store another spell in your wayfinder." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("39b27f0a-6801-4413-9868-fa57002f74c0"), Type = TextBlockType.Text, Text = "Your bodily fluids burn with surprising volatility, as if you ran on oil instead of blood. As long as you are taking persistent fire damage, you gain a boiling spit ranged unarmed attack with a range of 30 feet that deals 1d6 fire damage." };
+            yield return new TextBlock { Id = Guid.Parse("39b27f0a-6801-4413-9868-fa57002f74c0"), Type = TextBlockType.Text, Text = $"Your bodily fluids burn with surprising volatility, as if you ran on oil instead of blood. As long as you are taking persistent fire damage, you gain a boiling spit ranged unarmed attack with a range of 30 feet that deals 1d6 fire damage." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

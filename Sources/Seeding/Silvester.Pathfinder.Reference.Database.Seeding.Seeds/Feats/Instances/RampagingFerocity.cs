@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4e350e44-df7c-43a2-ba9b-962102958b15"), Type = TextBlockType.Text, Text = "You lash out viciously even as you fend off death. Make a single melee (action: Strike). If this (action: Strike) brings a foe to 0 Hit Points, this activation of (feat: Orc Ferocity) doesn't count against its frequency." };
+            yield return new TextBlock { Id = Guid.Parse("4e350e44-df7c-43a2-ba9b-962102958b15"), Type = TextBlockType.Text, Text = $"You lash out viciously even as you fend off death. Make a single melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} brings a foe to 0 Hit Points, this activation of {ToMarkdownLink<Models.Entities.Feat>("Orc Ferocity", Feats.Instances.OrcFerocity.ID)} doesn't count against its frequency." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

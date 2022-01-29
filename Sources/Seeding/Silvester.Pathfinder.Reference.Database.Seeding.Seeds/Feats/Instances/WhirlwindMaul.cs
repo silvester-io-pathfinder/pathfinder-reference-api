@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("285b8402-3b36-4461-93bd-8eb4c99c702e"), Type = TextBlockType.Text, Text = "Your eidolon lashes out in all directions. It makes a melee unarmed (action: Strike) against up to four enemies within reach. It can choose different unarmed attacks for each enemy. Each attack counts toward your multiple attack penalty, but you don't increase your penalty until the eidolon has made all its attacks." };
+            yield return new TextBlock { Id = Guid.Parse("285b8402-3b36-4461-93bd-8eb4c99c702e"), Type = TextBlockType.Text, Text = $"Your eidolon lashes out in all directions. It makes a melee unarmed {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against up to four enemies within reach. It can choose different unarmed attacks for each enemy. Each attack counts toward your multiple attack penalty, but you don't increase your penalty until the eidolon has made all its attacks." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

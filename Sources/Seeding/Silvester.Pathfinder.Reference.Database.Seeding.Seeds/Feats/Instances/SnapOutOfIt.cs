@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d96a451a-47d2-434e-ad63-d931853ef726"), Type = TextBlockType.Text, Text = "Pathfinders are trained to help each other be safe and successful, and you know how to jolt your allies back to their senses. Attempt a Medicine check on an adjacent ally who is fascinated, frightened, stunned, or stupefied and choose one of those conditions. The DC is the DC for the effect that caused the condition." };
+            yield return new TextBlock { Id = Guid.Parse("d96a451a-47d2-434e-ad63-d931853ef726"), Type = TextBlockType.Text, Text = $"Pathfinders are trained to help each other be safe and successful, and you know how to jolt your allies back to their senses. Attempt a Medicine check on an adjacent ally who is fascinated, frightened, stunned, or stupefied and choose one of those conditions. The DC is the DC for the effect that caused the condition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

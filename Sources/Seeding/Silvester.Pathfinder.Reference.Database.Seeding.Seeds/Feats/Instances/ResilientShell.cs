@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c62b78d-c9d8-48a5-bc82-be0a5358a1e5"), Type = TextBlockType.Text, Text = "Your eidolon is resilient against attacks. It gains resistance to physical damage equal to its Constitution modifier." };
+            yield return new TextBlock { Id = Guid.Parse("7c62b78d-c9d8-48a5-bc82-be0a5358a1e5"), Type = TextBlockType.Text, Text = $"Your eidolon is resilient against attacks. It gains resistance to physical damage equal to its Constitution modifier." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

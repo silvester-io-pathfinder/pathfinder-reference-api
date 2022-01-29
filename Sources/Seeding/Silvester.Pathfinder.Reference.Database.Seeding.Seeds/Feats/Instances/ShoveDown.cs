@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cea844a7-31f9-428d-b091-e7a720f8adeb"), Type = TextBlockType.Text, Text = "You leverage your weight to topple foes that you move. You attempt to (action: Trip) the target, even if the target is no longer in your reach." };
+            yield return new TextBlock { Id = Guid.Parse("cea844a7-31f9-428d-b091-e7a720f8adeb"), Type = TextBlockType.Text, Text = $"You leverage your weight to topple foes that you move. You attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)} the target, even if the target is no longer in your reach." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

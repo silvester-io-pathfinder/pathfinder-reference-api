@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4389b1ed-1c09-450a-8c01-eaf0d52b825d"), Type = TextBlockType.Text, Text = "You can block with your shield instinctively. At the start of each of your turns, you gain an additional reaction that you can use only to perform a (feat: Shield Block)." };
+            yield return new TextBlock { Id = Guid.Parse("4389b1ed-1c09-450a-8c01-eaf0d52b825d"), Type = TextBlockType.Text, Text = $"You can block with your shield instinctively. At the start of each of your turns, you gain an additional reaction that you can use only to perform a {ToMarkdownLink<Models.Entities.Feat>("Shield Block", Feats.Instances.ShieldBlock.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

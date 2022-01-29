@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("af57062f-fee0-454f-b48c-fb1581d88691"), Type = TextBlockType.Text, Text = "Your mystical connection to your foe is so strong that you can follow them to the ends of this world, or any other. You teleport along with the foe, appearing the same direction and distance from it as you were before it teleported away (or the nearest unoccupied space if your destination is occupied)." };
+            yield return new TextBlock { Id = Guid.Parse("af57062f-fee0-454f-b48c-fb1581d88691"), Type = TextBlockType.Text, Text = $"Your mystical connection to your foe is so strong that you can follow them to the ends of this world, or any other. You teleport along with the foe, appearing the same direction and distance from it as you were before it teleported away (or the nearest unoccupied space if your destination is occupied)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("56d5656a-8cee-43b8-af8f-93c4a1443e8f"), Type = TextBlockType.Text, Text = "Your continued study of occult magic has increased your magical capacity, allowing you to cast spells even when it seems impossible. You can cast one spell each day even after you've run out of spell slots of the appropriate spell level, but you can't use this ability to cast a spell of your highest spell level." };
+            yield return new TextBlock { Id = Guid.Parse("56d5656a-8cee-43b8-af8f-93c4a1443e8f"), Type = TextBlockType.Text, Text = $"Your continued study of occult magic has increased your magical capacity, allowing you to cast spells even when it seems impossible. You can cast one spell each day even after you've run out of spell slots of the appropriate spell level, but you can't use this ability to cast a spell of your highest spell level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

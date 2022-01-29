@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ffc34b77-07a8-4c5b-b8d1-56b0d3fa60a3"), Type = TextBlockType.Text, Text = "~ Access: Garundi, Mauxi, or Tian-Yae ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("8d46638f-7aa2-48c2-a6d9-e893c510bb97"), Type = TextBlockType.Text, Text = "Your ancestors hailed from the flying cities of the Shory, and a few simple tricks have come down through the ages to you. You can cast 4th-level (spell: fly) on yourself as an innate arcane spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("ffc34b77-07a8-4c5b-b8d1-56b0d3fa60a3"), Type = TextBlockType.Text, Text = $"~ Access: Garundi, Mauxi, or Tian-Yae ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("8d46638f-7aa2-48c2-a6d9-e893c510bb97"), Type = TextBlockType.Text, Text = $"Your ancestors hailed from the flying cities of the Shory, and a few simple tricks have come down through the ages to you. You can cast 4th-level {ToMarkdownLink<Models.Entities.Spell>("fly", Spells.Instances.Fly.ID)} on yourself as an innate arcane spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

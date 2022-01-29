@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0180953f-5de1-4ba2-bdb9-6bda36aabecb"), Type = TextBlockType.Text, Text = "You know how to assemble the supernatural objects in your esoterica into a number of temporary talismans. Each day during your daily preparations, you can make two talismans with an item level no higher than half your level. You must know each talisman's formula. A talisman created this way is a temporary item and loses its magic the next time you make your daily preparations." };
-            yield return new TextBlock { Id = Guid.Parse("966d3f5a-9688-48e3-852a-ff791f136a48"), Type = TextBlockType.Text, Text = "You know the formulas for all common talismans in the Core Rulebook of your level or lower. You remember your talisman formulas through oral tradition or mnemonics, so you don't need a formula book for them." };
+            yield return new TextBlock { Id = Guid.Parse("0180953f-5de1-4ba2-bdb9-6bda36aabecb"), Type = TextBlockType.Text, Text = $"You know how to assemble the supernatural objects in your esoterica into a number of temporary talismans. Each day during your daily preparations, you can make two talismans with an item level no higher than half your level. You must know each talisman's formula. A talisman created this way is a temporary item and loses its magic the next time you make your daily preparations." };
+            yield return new TextBlock { Id = Guid.Parse("966d3f5a-9688-48e3-852a-ff791f136a48"), Type = TextBlockType.Text, Text = $"You know the formulas for all common talismans in the Core Rulebook of your level or lower. You remember your talisman formulas through oral tradition or mnemonics, so you don't need a formula book for them." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

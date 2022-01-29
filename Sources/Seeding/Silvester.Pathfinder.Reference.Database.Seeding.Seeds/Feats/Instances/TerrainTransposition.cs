@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b51a07c4-7750-4201-9c00-aaa861bbfad4"), Type = TextBlockType.Text, Text = "You are so connected to the wilderness that you can magically jump from place to place within it. You gain the (spell: terrain transposition) warden spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("b51a07c4-7750-4201-9c00-aaa861bbfad4"), Type = TextBlockType.Text, Text = $"You are so connected to the wilderness that you can magically jump from place to place within it. You gain the {ToMarkdownLink<Models.Entities.Spell>("terrain transposition", Spells.Instances.TerrainTransposition.ID)} warden spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

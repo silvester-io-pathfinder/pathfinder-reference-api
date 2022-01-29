@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d4aefe1-1690-416a-a6d0-8b96a43fc468"), Type = TextBlockType.Text, Text = "You make a wide, arcing swing. Make a single melee (Action: Strike) and compare the attack roll result to the ACs of up to two foes, each of whom must be within your melee reach and adjacent to the other." };
-            yield return new TextBlock { Id = Guid.Parse("fb7a8c40-553e-4bd3-8e36-0adee675e054"), Type = TextBlockType.Text, Text = "Roll damage only once and apply it to each creature you hit. A Swipe counts as two attacks for your multiple attack penalty." };
-            yield return new TextBlock { Id = Guid.Parse("49280132-32ae-4034-8bea-754cef58cb2e"), Type = TextBlockType.Text, Text = "If you're using a weapon with the (trait: sweep) trait, its modifier applies to all your Swipe attacks." };
+            yield return new TextBlock { Id = Guid.Parse("4d4aefe1-1690-416a-a6d0-8b96a43fc468"), Type = TextBlockType.Text, Text = $"You make a wide, arcing swing. Make a single melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} and compare the attack roll result to the ACs of up to two foes, each of whom must be within your melee reach and adjacent to the other." };
+            yield return new TextBlock { Id = Guid.Parse("fb7a8c40-553e-4bd3-8e36-0adee675e054"), Type = TextBlockType.Text, Text = $"Roll damage only once and apply it to each creature you hit. A Swipe counts as two attacks for your multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("49280132-32ae-4034-8bea-754cef58cb2e"), Type = TextBlockType.Text, Text = $"If you're using a weapon with the {ToMarkdownLink<Models.Entities.Trait>("sweep", Traits.Instances.Sweep.ID)} trait, its modifier applies to all your Swipe attacks." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

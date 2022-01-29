@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("887660ad-d95b-476f-8c4d-0d78f305df3f"), Type = TextBlockType.Text, Text = "Your intricate knowledge of your school lets you easily negate spells from that school. Instead of being able to counter a foe's spell with (feat: Counterspell) only if you have the same spell prepared, if the foe casts a spell from the school matching your specialization, you can (feat: Counterspell) it with any other spell of the same school." };
+            yield return new TextBlock { Id = Guid.Parse("887660ad-d95b-476f-8c4d-0d78f305df3f"), Type = TextBlockType.Text, Text = $"Your intricate knowledge of your school lets you easily negate spells from that school. Instead of being able to counter a foe's spell with {ToMarkdownLink<Models.Entities.Feat>("Counterspell", Feats.Instances.Counterspell.ID)} only if you have the same spell prepared, if the foe casts a spell from the school matching your specialization, you can {ToMarkdownLink<Models.Entities.Feat>("Counterspell", Feats.Instances.Counterspell.ID)} it with any other spell of the same school." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb6259e2-5256-44ea-86f3-fa7eed546266"), Type = TextBlockType.Text, Text = "As part of daily preparation, you can drill with a number of allies up to your Charisma modifier. These allies must be present and listening during this time, but this does not otherwise impede their own preparation. When you use this feat's benefit, you and all drilled companions within 30 feet who are wielding shields (action: Raise a Shield). Allies who (action: Raise their Shields | Raise a Shield) keep them raised until the start of their next turn, as normal." };
+            yield return new TextBlock { Id = Guid.Parse("fb6259e2-5256-44ea-86f3-fa7eed546266"), Type = TextBlockType.Text, Text = $"As part of daily preparation, you can drill with a number of allies up to your Charisma modifier. These allies must be present and listening during this time, but this does not otherwise impede their own preparation. When you use this feat's benefit, you and all drilled companions within 30 feet who are wielding shields {ToMarkdownLink<Models.Entities.Action>("Raise a Shield", Actions.Instances.RaiseAShield.ID)}. Allies who {ToMarkdownLink<Models.Entities.Action>("Raise their Shields", Actions.Instances.RaiseAShield.ID)} keep them raised until the start of their next turn, as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

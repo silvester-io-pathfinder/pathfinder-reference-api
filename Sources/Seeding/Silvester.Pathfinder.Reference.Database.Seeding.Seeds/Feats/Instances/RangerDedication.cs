@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fab0157a-4689-4d27-8d8a-781cd4327f93"), Type = TextBlockType.Text, Text = "You become trained in Survival; if you were already trained in Survival, you instead become trained in another skill of your choice. You become trained in ranger class DC." };
-            yield return new TextBlock { Id = Guid.Parse("0e0ff199-1ce8-4f32-bcee-5c378caddd6a"), Type = TextBlockType.Text, Text = "You can use the (feat: Hunt Prey) action." };
+            yield return new TextBlock { Id = Guid.Parse("fab0157a-4689-4d27-8d8a-781cd4327f93"), Type = TextBlockType.Text, Text = $"You become trained in Survival; if you were already trained in Survival, you instead become trained in another skill of your choice. You become trained in ranger class DC." };
+            yield return new TextBlock { Id = Guid.Parse("0e0ff199-1ce8-4f32-bcee-5c378caddd6a"), Type = TextBlockType.Text, Text = $"You can use the {ToMarkdownLink<Models.Entities.Feat>("Hunt Prey", Feats.Instances.HuntPrey.ID)} action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

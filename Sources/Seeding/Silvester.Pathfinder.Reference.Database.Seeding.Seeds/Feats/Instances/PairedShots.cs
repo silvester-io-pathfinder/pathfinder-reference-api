@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f6704cf-b874-4582-8f98-1bd2c9a3fbfc"), Type = TextBlockType.Text, Text = "Your shots hit simultaneously. Make two (action: Strikes|Strike), one with each of your two ranged weapons, each using your current multiple attack penalty. Both (action: Strikes|Strike) must have the same target." };
-            yield return new TextBlock { Id = Guid.Parse("d51455d3-5603-4ba7-afc6-bb9d9477ac92"), Type = TextBlockType.Text, Text = "If both attacks hit, combine their damage and then add any applicable effects from both weapons. You add any precision damage, only once, to the attack of your choice. Combine the damage from both (action: Strikes|Strike) and apply resistances and weaknesses only once. This counts as two attacks when calculating your multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("5f6704cf-b874-4582-8f98-1bd2c9a3fbfc"), Type = TextBlockType.Text, Text = $"Your shots hit simultaneously. Make two {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}, one with each of your two ranged weapons, each using your current multiple attack penalty. Both {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} must have the same target." };
+            yield return new TextBlock { Id = Guid.Parse("d51455d3-5603-4ba7-afc6-bb9d9477ac92"), Type = TextBlockType.Text, Text = $"If both attacks hit, combine their damage and then add any applicable effects from both weapons. You add any precision damage, only once, to the attack of your choice. Combine the damage from both {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} and apply resistances and weaknesses only once. This counts as two attacks when calculating your multiple attack penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

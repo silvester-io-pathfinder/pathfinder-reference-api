@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("87095902-7cd6-4877-a2d4-3420c60008f8"), Type = TextBlockType.Text, Text = "Your surgery can bring a patient back from the brink of death, but might push them over the edge. When you (action: Treat Wounds), you can deal 1d8 slashing damage to your patient just before applying the effects of (action: Treat Wounds). If you do, you gain a +2 circumstance bonus to your Medicine check to (action: Treat Wounds), and if you roll a success, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("87095902-7cd6-4877-a2d4-3420c60008f8"), Type = TextBlockType.Text, Text = $"Your surgery can bring a patient back from the brink of death, but might push them over the edge. When you {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}, you can deal 1d8 slashing damage to your patient just before applying the effects of {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}. If you do, you gain a +2 circumstance bonus to your Medicine check to {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}, and if you roll a success, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

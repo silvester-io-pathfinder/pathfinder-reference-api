@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("28627eb4-e7ee-4723-880c-25cc2994cb10"), Type = TextBlockType.Text, Text = "You quickly brew up a short-lived tincture. You create a single alchemical elixir or tool of your level or lower without having to spend the normal monetary cost in alchemical reagents or needing to attempt a Crafting check. This item has the (trait: infused) trait, but it remains potent only until the end of the current turn." };
+            yield return new TextBlock { Id = Guid.Parse("28627eb4-e7ee-4723-880c-25cc2994cb10"), Type = TextBlockType.Text, Text = $"You quickly brew up a short-lived tincture. You create a single alchemical elixir or tool of your level or lower without having to spend the normal monetary cost in alchemical reagents or needing to attempt a Crafting check. This item has the {ToMarkdownLink<Models.Entities.Trait>("infused", Traits.Instances.Infused.ID)} trait, but it remains potent only until the end of the current turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

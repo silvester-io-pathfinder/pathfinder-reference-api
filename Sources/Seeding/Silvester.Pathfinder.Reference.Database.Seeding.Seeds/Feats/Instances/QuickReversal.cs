@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1eee637d-b25b-4dfb-974d-f1ded38c497c"), Type = TextBlockType.Text, Text = "You turn your foes' flanking against them with a quick reverse. Make a melee (Action: Strike) against one of the flanking enemies and make a second (Action: Strike) with the same weapon or unarmed attack against a different enemy that is flanking you. This second (Action: Strike) has the same multiple attack penalty of the initial attack and doesn't count toward your multiple attack penalty." };
+            yield return new TextBlock { Id = Guid.Parse("1eee637d-b25b-4dfb-974d-f1ded38c497c"), Type = TextBlockType.Text, Text = $"You turn your foes' flanking against them with a quick reverse. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against one of the flanking enemies and make a second {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with the same weapon or unarmed attack against a different enemy that is flanking you. This second {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} has the same multiple attack penalty of the initial attack and doesn't count toward your multiple attack penalty." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

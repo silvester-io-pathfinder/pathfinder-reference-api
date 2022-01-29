@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e784134-d0e9-4451-98de-9438a18b0b21"), Type = TextBlockType.Text, Text = "You can enhance your senses and mental state to consider every aspect of an attack. You can cast (spell: true strike) as a divine innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("3e784134-d0e9-4451-98de-9438a18b0b21"), Type = TextBlockType.Text, Text = $"You can enhance your senses and mental state to consider every aspect of an attack. You can cast {ToMarkdownLink<Models.Entities.Spell>("true strike", Spells.Instances.TrueStrike.ID)} as a divine innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

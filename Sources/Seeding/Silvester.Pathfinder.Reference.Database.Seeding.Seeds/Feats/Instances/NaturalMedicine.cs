@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5488c4f-4fa3-4e37-8369-9d82ebbbf3fd"), Type = TextBlockType.Text, Text = "You can apply natural cures to heal your allies. You can use Nature instead of Medicine to (Action: Treat Wounds). If you're in the wilderness, you might have easier access to fresh ingredients, allowing you to gain a +2 circumstance bonus to your check to (Action: Treat Wounds) using Nature, subject to the GM's determination." };
+            yield return new TextBlock { Id = Guid.Parse("d5488c4f-4fa3-4e37-8369-9d82ebbbf3fd"), Type = TextBlockType.Text, Text = $"You can apply natural cures to heal your allies. You can use Nature instead of Medicine to {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}. If you're in the wilderness, you might have easier access to fresh ingredients, allowing you to gain a +2 circumstance bonus to your check to {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)} using Nature, subject to the GM's determination." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

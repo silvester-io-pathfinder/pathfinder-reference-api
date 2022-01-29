@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("83c04f80-6db0-4e09-a80d-0406ffdac4ad"), Type = TextBlockType.Text, Text = "You make a thrown ranged (action: Strike) with the required weapon against the triggering creature. If you critically succeed and the trigger was a (trait: manipulate) action, you disrupt that action." };
+            yield return new TextBlock { Id = Guid.Parse("83c04f80-6db0-4e09-a80d-0406ffdac4ad"), Type = TextBlockType.Text, Text = $"You make a thrown ranged {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with the required weapon against the triggering creature. If you critically succeed and the trigger was a {ToMarkdownLink<Models.Entities.Trait>("manipulate", Traits.Instances.Manipulate.ID)} action, you disrupt that action." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

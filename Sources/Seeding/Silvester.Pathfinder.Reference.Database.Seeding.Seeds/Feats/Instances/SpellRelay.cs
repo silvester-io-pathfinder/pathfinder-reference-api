@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a01f8208-f679-400e-a3f8-71ed74a568b0"), Type = TextBlockType.Text, Text = "You open the power inside you to your ally's spellcasting, using your magic to boost their range. Your ally can use you as the point of origin for their spell, calculating range and cover from your space instead of their own." };
+            yield return new TextBlock { Id = Guid.Parse("a01f8208-f679-400e-a3f8-71ed74a568b0"), Type = TextBlockType.Text, Text = $"You open the power inside you to your ally's spellcasting, using your magic to boost their range. Your ally can use you as the point of origin for their spell, calculating range and cover from your space instead of their own." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b17ab7bd-006e-4c63-90fd-b6b71faab936"), Type = TextBlockType.Text, Text = "While your vengeance is painful for both you and your foe, none can doubt that your enemies suffer more. You gain a circumstance bonus to the damage you deal from (feat: Destructive Vengeance) equal to the number of damage dice from the reaction. This only applies to the damage the enemy takes, not the damage to yourself or the extra damage you gain after using the reaction." };
+            yield return new TextBlock { Id = Guid.Parse("b17ab7bd-006e-4c63-90fd-b6b71faab936"), Type = TextBlockType.Text, Text = $"While your vengeance is painful for both you and your foe, none can doubt that your enemies suffer more. You gain a circumstance bonus to the damage you deal from {ToMarkdownLink<Models.Entities.Feat>("Destructive Vengeance", Feats.Instances.DestructiveVengeance.ID)} equal to the number of damage dice from the reaction. This only applies to the damage the enemy takes, not the damage to yourself or the extra damage you gain after using the reaction." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

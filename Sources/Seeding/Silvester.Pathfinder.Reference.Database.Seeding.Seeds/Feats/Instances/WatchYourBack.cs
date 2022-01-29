@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb85c839-8f19-4f42-9042-424efca940c1"), Type = TextBlockType.Text, Text = "You menace the target, stoking their fears and drawing their attention. Attempt an Intimidation check against the Will DC of a target within 30 feet. If you succeed, for 1 minute, that target gains a +2 status bonus to Perception checks against you, but they take a –2 status penalty to Will saves against fear effects." };
+            yield return new TextBlock { Id = Guid.Parse("fb85c839-8f19-4f42-9042-424efca940c1"), Type = TextBlockType.Text, Text = $"You menace the target, stoking their fears and drawing their attention. Attempt an Intimidation check against the Will DC of a target within 30 feet. If you succeed, for 1 minute, that target gains a +2 status bonus to Perception checks against you, but they take a –2 status penalty to Will saves against fear effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

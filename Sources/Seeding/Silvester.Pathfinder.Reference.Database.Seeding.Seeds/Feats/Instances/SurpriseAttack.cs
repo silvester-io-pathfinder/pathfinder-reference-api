@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9ab04aa-88c1-4a72-b218-aef22a825fc5"), Type = TextBlockType.Text, Text = "You act before foes can react. On the first round of combat, if you roll Deception or Stealth for initiative, creatures that haven't acted are flat-footed to you." };
+            yield return new TextBlock { Id = Guid.Parse("b9ab04aa-88c1-4a72-b218-aef22a825fc5"), Type = TextBlockType.Text, Text = $"You act before foes can react. On the first round of combat, if you roll Deception or Stealth for initiative, creatures that haven't acted are flat-footed to you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ceb7bb67-6470-4ae4-a8ac-fc2e92d98035"), Type = TextBlockType.Text, Text = "Scales grow across your body, protecting you against physical and magical threats. When you're unarmored, the scales give you a +2 status bonus to AC with a Dexterity cap of +2. Your resistance from (feat: Dragon Disciple Dedication) increases to 3 + half your level." };
+            yield return new TextBlock { Id = Guid.Parse("ceb7bb67-6470-4ae4-a8ac-fc2e92d98035"), Type = TextBlockType.Text, Text = $"Scales grow across your body, protecting you against physical and magical threats. When you're unarmored, the scales give you a +2 status bonus to AC with a Dexterity cap of +2. Your resistance from {ToMarkdownLink<Models.Entities.Feat>("Dragon Disciple Dedication", Feats.Instances.DragonDiscipleDedication.ID)} increases to 3 + half your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

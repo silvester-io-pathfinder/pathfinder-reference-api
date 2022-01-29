@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("859216c9-524f-406d-9c25-69614d0f723c"), Type = TextBlockType.Text, Text = "You're skilled at beating a foe when their morale is already breaking. When you succeed at a melee weapon (Action: Strike) against a frightened foe, that foe can't reduce their frightened condition below 1 until the beginning of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("859216c9-524f-406d-9c25-69614d0f723c"), Type = TextBlockType.Text, Text = $"You're skilled at beating a foe when their morale is already breaking. When you succeed at a melee weapon {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against a frightened foe, that foe can't reduce their frightened condition below 1 until the beginning of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

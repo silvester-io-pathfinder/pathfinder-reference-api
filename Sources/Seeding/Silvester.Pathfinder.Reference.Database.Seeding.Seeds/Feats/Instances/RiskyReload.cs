@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("553675c1-86e4-4223-b938-38ac3c651bc9"), Type = TextBlockType.Text, Text = "You've practiced a technique for rapidly reloading your firearm, but attempting to use this technique is a dangerous gamble with your firearm's functionality. (action: Interact) to reload a firearm, then make a (action: Strike) with that firearm. If the (action: Strike) fails, the firearm misfires." };
+            yield return new TextBlock { Id = Guid.Parse("553675c1-86e4-4223-b938-38ac3c651bc9"), Type = TextBlockType.Text, Text = $"You've practiced a technique for rapidly reloading your firearm, but attempting to use this technique is a dangerous gamble with your firearm's functionality. {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to reload a firearm, then make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with that firearm. If the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} fails, the firearm misfires." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

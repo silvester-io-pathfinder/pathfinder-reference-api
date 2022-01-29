@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3374b5bf-3914-42b2-8ff5-8129cedaff66"), Type = TextBlockType.Text, Text = "You have a connection to the celestial realms, allowing you to summon a celestial ally. Once per day, you can cast (spell: summon celestial) as a 5th-level divine innate spell, but the celestial summoned must be from the same category as your own lineage, such as a creature with the angel trait if you are angelkin." };
+            yield return new TextBlock { Id = Guid.Parse("3374b5bf-3914-42b2-8ff5-8129cedaff66"), Type = TextBlockType.Text, Text = $"You have a connection to the celestial realms, allowing you to summon a celestial ally. Once per day, you can cast {ToMarkdownLink<Models.Entities.Spell>("summon celestial", Spells.Instances.SummonCelestial.ID)} as a 5th-level divine innate spell, but the celestial summoned must be from the same category as your own lineage, such as a creature with the angel trait if you are angelkin." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

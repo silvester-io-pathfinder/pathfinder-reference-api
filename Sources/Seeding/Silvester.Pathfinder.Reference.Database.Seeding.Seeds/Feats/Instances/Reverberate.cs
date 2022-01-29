@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("118c03a4-63a9-4dd6-82cb-f9f92d59da2f"), Type = TextBlockType.Text, Text = "You can manipulate the acoustics around you to deflect sonic damage back at its source. Attempt a Performance check against the spell DC of the creature that cast the triggering spell." };
+            yield return new TextBlock { Id = Guid.Parse("118c03a4-63a9-4dd6-82cb-f9f92d59da2f"), Type = TextBlockType.Text, Text = $"You can manipulate the acoustics around you to deflect sonic damage back at its source. Attempt a Performance check against the spell DC of the creature that cast the triggering spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

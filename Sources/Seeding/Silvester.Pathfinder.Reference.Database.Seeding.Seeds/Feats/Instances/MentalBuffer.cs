@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b0fbf9d7-5513-42d4-86b7-9e2544ad2b85"), Type = TextBlockType.Text, Text = "Your mind deflects some amount of harm from attacks that induce pain or manipulate your mind directly. You gain resistance to mental damage equal to half your level. This resistance increases to equal your level while your psyche is Unleashed." };
+            yield return new TextBlock { Id = Guid.Parse("b0fbf9d7-5513-42d4-86b7-9e2544ad2b85"), Type = TextBlockType.Text, Text = $"Your mind deflects some amount of harm from attacks that induce pain or manipulate your mind directly. You gain resistance to mental damage equal to half your level. This resistance increases to equal your level while your psyche is Unleashed." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

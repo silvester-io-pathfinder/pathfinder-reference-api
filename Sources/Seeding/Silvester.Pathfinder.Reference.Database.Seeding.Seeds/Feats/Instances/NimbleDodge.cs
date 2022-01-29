@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b1802fd-d1be-43ac-950b-c76b7def810b"), Type = TextBlockType.Text, Text = "You deftly dodge out of the way, gaining a +2 circumstance bonus to AC against the triggering attack." };
+            yield return new TextBlock { Id = Guid.Parse("0b1802fd-d1be-43ac-950b-c76b7def810b"), Type = TextBlockType.Text, Text = $"You deftly dodge out of the way, gaining a +2 circumstance bonus to AC against the triggering attack." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

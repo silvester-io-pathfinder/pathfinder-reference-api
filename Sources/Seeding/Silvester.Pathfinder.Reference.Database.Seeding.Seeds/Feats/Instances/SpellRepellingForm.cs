@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27b4e7e4-5fe9-4cca-92bd-ec78c842fe87"), Type = TextBlockType.Text, Text = "Your eidolon evolves to protect itself from the danger posed by spells. It gains a +1 status bonus to all saving throws against magic." };
+            yield return new TextBlock { Id = Guid.Parse("27b4e7e4-5fe9-4cca-92bd-ec78c842fe87"), Type = TextBlockType.Text, Text = $"Your eidolon evolves to protect itself from the danger posed by spells. It gains a +1 status bonus to all saving throws against magic." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

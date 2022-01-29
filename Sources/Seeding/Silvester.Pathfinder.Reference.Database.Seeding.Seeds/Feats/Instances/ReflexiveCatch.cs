@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d4a9ca5f-01c7-451f-ad9f-37a23eaff718"), Type = TextBlockType.Text, Text = "You grab the triggering item. If you are (feat: Juggling | Juggle), you can immediately add the item to the objects you're (feat: Juggling | Juggle) as a free action, which has the (trait: concentrate) and (trait: manipulate) traits." };
+            yield return new TextBlock { Id = Guid.Parse("d4a9ca5f-01c7-451f-ad9f-37a23eaff718"), Type = TextBlockType.Text, Text = $"You grab the triggering item. If you are {ToMarkdownLink<Models.Entities.Feat>("Juggling", Feats.Instances.Juggle.ID)}, you can immediately add the item to the objects you're {ToMarkdownLink<Models.Entities.Feat>("Juggling", Feats.Instances.Juggle.ID)} as a free action, which has the {ToMarkdownLink<Models.Entities.Trait>("concentrate", Traits.Instances.Concentrate.ID)} and {ToMarkdownLink<Models.Entities.Trait>("manipulate", Traits.Instances.Manipulate.ID)} traits." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

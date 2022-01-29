@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1f006736-f9d5-4dd8-82a5-adc78ba70d64"), Type = TextBlockType.Text, Text = "Snatching an arrow out of the air, you instantly put it to your bow and return fire. When you successfully (feat: Deflect an Arrow | Deflect Arrow), as part of that reaction you can immediately make a ranged bow (action: Strike) by firing the arrow you deflected from your own bow." };
+            yield return new TextBlock { Id = Guid.Parse("1f006736-f9d5-4dd8-82a5-adc78ba70d64"), Type = TextBlockType.Text, Text = $"Snatching an arrow out of the air, you instantly put it to your bow and return fire. When you successfully {ToMarkdownLink<Models.Entities.Feat>("Deflect an Arrow", Feats.Instances.DeflectArrow.ID)}, as part of that reaction you can immediately make a ranged bow {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} by firing the arrow you deflected from your own bow." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

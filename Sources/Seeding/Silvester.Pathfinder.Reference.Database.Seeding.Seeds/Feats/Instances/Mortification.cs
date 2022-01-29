@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5f9aeaed-2831-4169-adb0-a0d9d2b53a57"), Type = TextBlockType.Text, Text = "Your reckonings have prepared your body for physical punishment. Choose bludgeoning, piercing, or slashing damage, based on the nature of your physical reckonings. You gain resistance to the chosen damage type equal to your number of class feats from the Hellknight Armiger archetype and other Hellknight archetypes." };
+            yield return new TextBlock { Id = Guid.Parse("5f9aeaed-2831-4169-adb0-a0d9d2b53a57"), Type = TextBlockType.Text, Text = $"Your reckonings have prepared your body for physical punishment. Choose bludgeoning, piercing, or slashing damage, based on the nature of your physical reckonings. You gain resistance to the chosen damage type equal to your number of class feats from the Hellknight Armiger archetype and other Hellknight archetypes." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

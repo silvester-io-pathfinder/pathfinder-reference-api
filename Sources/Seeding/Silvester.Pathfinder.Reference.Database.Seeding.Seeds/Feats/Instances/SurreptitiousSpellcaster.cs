@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13859011-166c-40af-98f3-7f117cf34a6d"), Type = TextBlockType.Text, Text = "You've learned that it pays for a Pathfinder to be able to cast spells without being noticed. You gain the (feat: Conceal Spell) wizard class feat, though it's not a wizard feat for you. You also gain a +2 circumstance bonus to Stealth checks to (feat: Conceal a Spell | Conceal Spell) and to Deception checks to conceal verbal components." };
+            yield return new TextBlock { Id = Guid.Parse("13859011-166c-40af-98f3-7f117cf34a6d"), Type = TextBlockType.Text, Text = $"You've learned that it pays for a Pathfinder to be able to cast spells without being noticed. You gain the {ToMarkdownLink<Models.Entities.Feat>("Conceal Spell", Feats.Instances.ConcealSpell.ID)} wizard class feat, though it's not a wizard feat for you. You also gain a +2 circumstance bonus to Stealth checks to {ToMarkdownLink<Models.Entities.Feat>("Conceal a Spell", Feats.Instances.ConcealSpell.ID)} and to Deception checks to conceal verbal components." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

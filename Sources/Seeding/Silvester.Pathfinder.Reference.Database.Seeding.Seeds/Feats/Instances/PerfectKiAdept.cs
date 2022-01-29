@@ -29,12 +29,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7ca865b0-3051-4cd0-8ac3-88e6eff61dd9"), Type = TextBlockType.Text, Text = "You gain the appropriate ki spell for your School of Perfection:" };
-            yield return new TextBlock { Id = Guid.Parse("8cd98bfe-9376-4682-9317-f74e26fca7f3"), Type = TextBlockType.Enumeration, Text = " : (spell: Unblinking flame revelation) for Unblinking Flame" };
-            yield return new TextBlock { Id = Guid.Parse("babcd113-b9e9-43bf-aa01-c171ac5956a0"), Type = TextBlockType.Enumeration, Text = " : (spell: Unbreaking wave advance) for Unbreaking Waves" };
-            yield return new TextBlock { Id = Guid.Parse("3ff4e142-4f3a-4e98-8074-00fafecce4d8"), Type = TextBlockType.Enumeration, Text = " : (spell: Unfolding wind rush) for Unfolding Wind" };
-            yield return new TextBlock { Id = Guid.Parse("3fa0c9cf-ff9a-4f27-af66-72c004e9a3bb"), Type = TextBlockType.Enumeration, Text = " : (spell: Untwisting iron buffer) for Untwisting Iron" };
-            yield return new TextBlock { Id = Guid.Parse("2198fdc2-7d75-468c-850f-92d307ed9a3c"), Type = TextBlockType.Text, Text = "Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("7ca865b0-3051-4cd0-8ac3-88e6eff61dd9"), Type = TextBlockType.Text, Text = $"You gain the appropriate ki spell for your School of Perfection:" };
+            yield return new TextBlock { Id = Guid.Parse("8cd98bfe-9376-4682-9317-f74e26fca7f3"), Type = TextBlockType.Enumeration, Text = $" : {ToMarkdownLink<Models.Entities.Spell>("Unblinking flame revelation", Spells.Instances.UnblinkingFlameRevelation.ID)} for Unblinking Flame" };
+            yield return new TextBlock { Id = Guid.Parse("babcd113-b9e9-43bf-aa01-c171ac5956a0"), Type = TextBlockType.Enumeration, Text = $" : {ToMarkdownLink<Models.Entities.Spell>("Unbreaking wave advance", Spells.Instances.UnbreakingWaveAdvance.ID)} for Unbreaking Waves" };
+            yield return new TextBlock { Id = Guid.Parse("3ff4e142-4f3a-4e98-8074-00fafecce4d8"), Type = TextBlockType.Enumeration, Text = $" : {ToMarkdownLink<Models.Entities.Spell>("Unfolding wind rush", Spells.Instances.UnfoldingWindRush.ID)} for Unfolding Wind" };
+            yield return new TextBlock { Id = Guid.Parse("3fa0c9cf-ff9a-4f27-af66-72c004e9a3bb"), Type = TextBlockType.Enumeration, Text = $" : {ToMarkdownLink<Models.Entities.Spell>("Untwisting iron buffer", Spells.Instances.UntwistingIronBuffer.ID)} for Untwisting Iron" };
+            yield return new TextBlock { Id = Guid.Parse("2198fdc2-7d75-468c-850f-92d307ed9a3c"), Type = TextBlockType.Text, Text = $"Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

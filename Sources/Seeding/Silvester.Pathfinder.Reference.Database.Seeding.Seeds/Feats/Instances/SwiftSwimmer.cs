@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4a2b23c8-3d51-47f2-a921-51d3546aa625"), Type = TextBlockType.Text, Text = "You swim faster than most iruxi. Your swim Speed increases to 25 feet." };
+            yield return new TextBlock { Id = Guid.Parse("4a2b23c8-3d51-47f2-a921-51d3546aa625"), Type = TextBlockType.Text, Text = $"You swim faster than most iruxi. Your swim Speed increases to 25 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

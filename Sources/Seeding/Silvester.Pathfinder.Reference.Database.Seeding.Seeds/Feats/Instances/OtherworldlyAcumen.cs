@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0e7f4f2c-5025-4011-be54-d07c00d915ef"), Type = TextBlockType.Text, Text = "The arcane magic you possess grows in power and complexity. Choose one common 2nd-level spell from the same tradition as an innate spell you previously gained from another elf ancestry feat (from the arcane list if you have (feat: Otherworldly Magic), for example). You can cast that spell as an innate spell once per day, using the same tradition as the list you chose the spell from." };
-            yield return new TextBlock { Id = Guid.Parse("d610591d-6bb7-4c57-9ab2-e47f9ebc0e2d"), Type = TextBlockType.Text, Text = "Your magic is adaptable. By spending 1 day of downtime, you can change the spell you chose to a different common 2nd-level spell from the same tradition." };
+            yield return new TextBlock { Id = Guid.Parse("0e7f4f2c-5025-4011-be54-d07c00d915ef"), Type = TextBlockType.Text, Text = $"The arcane magic you possess grows in power and complexity. Choose one common 2nd-level spell from the same tradition as an innate spell you previously gained from another elf ancestry feat (from the arcane list if you have {ToMarkdownLink<Models.Entities.Feat>("Otherworldly Magic", Feats.Instances.OtherworldlyMagic.ID)}, for example). You can cast that spell as an innate spell once per day, using the same tradition as the list you chose the spell from." };
+            yield return new TextBlock { Id = Guid.Parse("d610591d-6bb7-4c57-9ab2-e47f9ebc0e2d"), Type = TextBlockType.Text, Text = $"Your magic is adaptable. By spending 1 day of downtime, you can change the spell you chose to a different common 2nd-level spell from the same tradition." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

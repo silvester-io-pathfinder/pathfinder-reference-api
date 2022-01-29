@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c283c1e7-d784-42b8-8d15-da6a2bb42a62"), Type = TextBlockType.Text, Text = "You can guide your allies to move quietly through the wilderness. When you (action: Sneak) during exploration in natural terrain, you can designate any number of your allies to gain the benefits as if they were using that activity during that exploration. This requires no action on their part." };
+            yield return new TextBlock { Id = Guid.Parse("c283c1e7-d784-42b8-8d15-da6a2bb42a62"), Type = TextBlockType.Text, Text = $"You can guide your allies to move quietly through the wilderness. When you {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} during exploration in natural terrain, you can designate any number of your allies to gain the benefits as if they were using that activity during that exploration. This requires no action on their part." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

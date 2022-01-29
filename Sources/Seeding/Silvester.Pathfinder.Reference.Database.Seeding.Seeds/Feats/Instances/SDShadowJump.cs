@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4dfdd70d-0de9-40d8-ad0b-130b5e3e1005"), Type = TextBlockType.Text, Text = "You learn the (spell: shadow jump) shadowdancer focus spell." };
+            yield return new TextBlock { Id = Guid.Parse("4dfdd70d-0de9-40d8-ad0b-130b5e3e1005"), Type = TextBlockType.Text, Text = $"You learn the {ToMarkdownLink<Models.Entities.Spell>("shadow jump", Spells.Instances.ShadowJump.ID)} shadowdancer focus spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

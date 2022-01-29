@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8d4755f4-9275-42bb-af73-34b6f679070e"), Type = TextBlockType.Text, Text = "You know the secrets of moving in your favored terrain. You gain a +2 circumstance bonus to skill checks to move within your favored terrain, such as Acrobatics checks to (action: Balance) on ice, Athletics checks to (action: Swim) in rough water, Acrobatics checks to (action: Fly) in windy conditions, and so forth." };
+            yield return new TextBlock { Id = Guid.Parse("8d4755f4-9275-42bb-af73-34b6f679070e"), Type = TextBlockType.Text, Text = $"You know the secrets of moving in your favored terrain. You gain a +2 circumstance bonus to skill checks to move within your favored terrain, such as Acrobatics checks to {ToMarkdownLink<Models.Entities.SkillAction>("Balance", SkillActions.Instances.Balance.ID)} on ice, Athletics checks to {ToMarkdownLink<Models.Entities.SkillAction>("Swim", SkillActions.Instances.Swim.ID)} in rough water, Acrobatics checks to {ToMarkdownLink<Models.Entities.Action>("Fly", Actions.Instances.Fly.ID)} in windy conditions, and so forth." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

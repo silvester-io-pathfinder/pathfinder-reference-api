@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("db4682bb-6b11-4096-bff6-54c34e5b47d7"), Type = TextBlockType.Text, Text = "You quickly assess the threat so you can relay the information to your team. Attempt a (action: Recall Knowledge) check against the triggering creature." };
+            yield return new TextBlock { Id = Guid.Parse("db4682bb-6b11-4096-bff6-54c34e5b47d7"), Type = TextBlockType.Text, Text = $"You quickly assess the threat so you can relay the information to your team. Attempt a {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} check against the triggering creature." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

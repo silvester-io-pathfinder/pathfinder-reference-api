@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d054d207-3795-44be-8279-db94d34abc1a"), Type = TextBlockType.Text, Text = "You twist the prophecy in your favor, which will have consequences later. Reroll the failed check. You must use the result of the second roll." };
-            yield return new TextBlock { Id = Guid.Parse("dd621c9a-bab6-4a07-acf7-ce10b8e15e64"), Type = TextBlockType.Text, Text = "For 24 hours afterward, the GM can force you to reroll a successful saving throw, attack roll, or skill check as fate balances the scale. This is a (trait: misfortune) effect. You can't use prophecy's pawn again until the GM uses this option or 24 hours pass, whichever comes first." };
+            yield return new TextBlock { Id = Guid.Parse("d054d207-3795-44be-8279-db94d34abc1a"), Type = TextBlockType.Text, Text = $"You twist the prophecy in your favor, which will have consequences later. Reroll the failed check. You must use the result of the second roll." };
+            yield return new TextBlock { Id = Guid.Parse("dd621c9a-bab6-4a07-acf7-ce10b8e15e64"), Type = TextBlockType.Text, Text = $"For 24 hours afterward, the GM can force you to reroll a successful saving throw, attack roll, or skill check as fate balances the scale. This is a {ToMarkdownLink<Models.Entities.Trait>("misfortune", Traits.Instances.Misfortune.ID)} effect. You can't use prophecy's pawn again until the GM uses this option or 24 hours pass, whichever comes first." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

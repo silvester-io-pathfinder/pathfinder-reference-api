@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4c6610f8-840b-418d-8014-4bb946b4b4c8"), Type = TextBlockType.Text, Text = "Your knowledge of strange creatures and their bizarre anatomy allows you to anticipate their physical attacks and reduce the damage you take from them. You gain resistance to physical damage from melee attacks made by aberrations and oozes. This resistance is equal to one-third your level." };
+            yield return new TextBlock { Id = Guid.Parse("4c6610f8-840b-418d-8014-4bb946b4b4c8"), Type = TextBlockType.Text, Text = $"Your knowledge of strange creatures and their bizarre anatomy allows you to anticipate their physical attacks and reduce the damage you take from them. You gain resistance to physical damage from melee attacks made by aberrations and oozes. This resistance is equal to one-third your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e99634a0-37d6-4ab4-aeb1-fe1e5ccc1934"), Type = TextBlockType.Text, Text = "After extensive practice with the Swords, you're comfortable enough with your shield to move at a normal pace with it raised. You may use the (action: Defend) exploration activity while traveling at your full travel speed instead of half your travel speed." };
+            yield return new TextBlock { Id = Guid.Parse("e99634a0-37d6-4ab4-aeb1-fe1e5ccc1934"), Type = TextBlockType.Text, Text = $"After extensive practice with the Swords, you're comfortable enough with your shield to move at a normal pace with it raised. You may use the {ToMarkdownLink<Models.Entities.Activity>("Defend", Activities.Instances.Defend.ID)} exploration activity while traveling at your full travel speed instead of half your travel speed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

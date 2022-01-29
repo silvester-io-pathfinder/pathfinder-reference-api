@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("99c8caad-2e7e-48fd-8efd-7fe787f31584"), Type = TextBlockType.Text, Text = "You (action: Stride) up to 10 feet to enter the water, bringing the grabbed creature with you into the water." };
+            yield return new TextBlock { Id = Guid.Parse("99c8caad-2e7e-48fd-8efd-7fe787f31584"), Type = TextBlockType.Text, Text = $"You {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} up to 10 feet to enter the water, bringing the grabbed creature with you into the water." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f255ae59-2eb8-479f-a54f-be7424599e5f"), Type = TextBlockType.Text, Text = "The shallows and tide pools have always called to you and let you pass unhindered. You ignore difficult terrain resulting from shallow water. In addition, if you roll a success on an Acrobatics check to (action: Balance) on a slippery or wet surface, or on an Athletics check to (action: Swim), you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("f255ae59-2eb8-479f-a54f-be7424599e5f"), Type = TextBlockType.Text, Text = $"The shallows and tide pools have always called to you and let you pass unhindered. You ignore difficult terrain resulting from shallow water. In addition, if you roll a success on an Acrobatics check to {ToMarkdownLink<Models.Entities.SkillAction>("Balance", SkillActions.Instances.Balance.ID)} on a slippery or wet surface, or on an Athletics check to {ToMarkdownLink<Models.Entities.SkillAction>("Swim", SkillActions.Instances.Swim.ID)}, you get a critical success instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

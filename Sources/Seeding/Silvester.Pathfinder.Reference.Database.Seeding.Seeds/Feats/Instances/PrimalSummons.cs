@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cd779396-3d2f-47c4-ab99-405c3d588ee1"), Type = TextBlockType.Text, Text = "Whenever you summon an ally, you can empower it with the elemental power of air, earth, fire, or water. You gain the (Spell: primal summons) order spell." };
+            yield return new TextBlock { Id = Guid.Parse("cd779396-3d2f-47c4-ab99-405c3d588ee1"), Type = TextBlockType.Text, Text = $"Whenever you summon an ally, you can empower it with the elemental power of air, earth, fire, or water. You gain the {ToMarkdownLink<Models.Entities.Spell>("primal summons", Spells.Instances.PrimalSummons.ID)} order spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

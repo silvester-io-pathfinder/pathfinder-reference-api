@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3ea2edc3-7c2c-4cbc-9a0a-470a4ff03a3d"), Type = TextBlockType.Text, Text = "Sometimes something intrudes upon your case unexpectedly, such as an ambush sent to bring your investigation to a close. You've learned how to compartmentalize your main lead and pursue a new one for your current predicament. You (feat: Pursue a Lead) against the triggering foe, setting aside but not ending one of your currently active leads, if you have two leads. At the end of the combat encounter, you stop (feat: Pursuing the Lead | Pursue a Lead) against the triggering foe and return to the original lead, if you have one." };
+            yield return new TextBlock { Id = Guid.Parse("3ea2edc3-7c2c-4cbc-9a0a-470a4ff03a3d"), Type = TextBlockType.Text, Text = $"Sometimes something intrudes upon your case unexpectedly, such as an ambush sent to bring your investigation to a close. You've learned how to compartmentalize your main lead and pursue a new one for your current predicament. You {ToMarkdownLink<Models.Entities.Feat>("Pursue a Lead", Feats.Instances.PursueALead.ID)} against the triggering foe, setting aside but not ending one of your currently active leads, if you have two leads. At the end of the combat encounter, you stop {ToMarkdownLink<Models.Entities.Feat>("Pursuing the Lead", Feats.Instances.PursueALead.ID)} against the triggering foe and return to the original lead, if you have one." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

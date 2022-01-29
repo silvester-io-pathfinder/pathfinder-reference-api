@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("da446144-46d0-4c41-b907-75c08e68cec5"), Type = TextBlockType.Text, Text = "You instill great swiftness into your allies. You and all allies within 30 feet become quickened for 1 minute and can use the additional action to (action: Strike), (action: Stride), or (action: Step)." };
+            yield return new TextBlock { Id = Guid.Parse("da446144-46d0-4c41-b907-75c08e68cec5"), Type = TextBlockType.Text, Text = $"You instill great swiftness into your allies. You and all allies within 30 feet become quickened for 1 minute and can use the additional action to {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}, or {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

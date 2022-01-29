@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c624afe1-16da-44ea-be86-1708fae46aa5"), Type = TextBlockType.Text, Text = "You can perform rituals in only a fraction of the usual time. If a ritual has a casting time measured in days, you can cast it in an equal number of hours. If this results in a ritual longer than 8 hours, you split the ritual between multiple days, as normal for a ritual." };
+            yield return new TextBlock { Id = Guid.Parse("c624afe1-16da-44ea-be86-1708fae46aa5"), Type = TextBlockType.Text, Text = $"You can perform rituals in only a fraction of the usual time. If a ritual has a casting time measured in days, you can cast it in an equal number of hours. If this results in a ritual longer than 8 hours, you split the ritual between multiple days, as normal for a ritual." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c9d92aa6-50aa-48e8-9d33-1c7af2382eee"), Type = TextBlockType.Enumeration, Text = "*Melee Only**" };
-            yield return new TextBlock { Id = Guid.Parse("acf1bafd-1771-4f90-981a-14ca17d284f0"), Type = TextBlockType.Text, Text = "Softer materials make your weapon suited to knock out instead of kill, and special protrusions let you catch weapons and disarm your foes. Your innovation gains the (trait: disarm) and (trait: nonlethal) traits. You can choose whether to apply the (trait: nonlethal) trait on each attack with your innovation." };
+            yield return new TextBlock { Id = Guid.Parse("c9d92aa6-50aa-48e8-9d33-1c7af2382eee"), Type = TextBlockType.Enumeration, Text = $"*Melee Only**" };
+            yield return new TextBlock { Id = Guid.Parse("acf1bafd-1771-4f90-981a-14ca17d284f0"), Type = TextBlockType.Text, Text = $"Softer materials make your weapon suited to knock out instead of kill, and special protrusions let you catch weapons and disarm your foes. Your innovation gains the {ToMarkdownLink<Models.Entities.Trait>("disarm", Traits.Instances.Disarm.ID)} and {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)} traits. You can choose whether to apply the {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)} trait on each attack with your innovation." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

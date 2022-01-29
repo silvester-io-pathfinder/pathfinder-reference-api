@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("56a4380d-34c0-4e61-bbcb-5ecfb34b920f"), Type = TextBlockType.Text, Text = "You've trained with a blade and other tengu weapons ever since you hatched. You gain access to khakkaras. Additionally, choose two weapons from the sword group. You can choose from among all common martial swords, plus the katana, temple sword, and wakizashi. For the purpose of determining your proficiency, that weapon is a simple weapon, and if the weapon isn't common, you gain access to it. If you are trained in all martial weapons, you add common advanced swords to the swords you can choose from." };
-            yield return new TextBlock { Id = Guid.Parse("96d59b6c-cccf-41c4-b248-c2b4704d85a7"), Type = TextBlockType.Text, Text = "You also gain access to all uncommon tengu weapons. For the purpose of determining your proficiency, martial tengu weapons are simple weapons, and advanced tengu weapons are martial weapons." };
+            yield return new TextBlock { Id = Guid.Parse("56a4380d-34c0-4e61-bbcb-5ecfb34b920f"), Type = TextBlockType.Text, Text = $"You've trained with a blade and other tengu weapons ever since you hatched. You gain access to khakkaras. Additionally, choose two weapons from the sword group. You can choose from among all common martial swords, plus the katana, temple sword, and wakizashi. For the purpose of determining your proficiency, that weapon is a simple weapon, and if the weapon isn't common, you gain access to it. If you are trained in all martial weapons, you add common advanced swords to the swords you can choose from." };
+            yield return new TextBlock { Id = Guid.Parse("96d59b6c-cccf-41c4-b248-c2b4704d85a7"), Type = TextBlockType.Text, Text = $"You also gain access to all uncommon tengu weapons. For the purpose of determining your proficiency, martial tengu weapons are simple weapons, and advanced tengu weapons are martial weapons." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

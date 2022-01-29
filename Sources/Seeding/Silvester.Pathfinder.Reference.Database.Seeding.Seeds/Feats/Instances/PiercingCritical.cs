@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("318e5e4a-7751-4fc5-b7e3-bfa326e3edd1"), Type = TextBlockType.Text, Text = "Your attacks with your preferred weapons deal especially devastating wounds. When you (action: Strike) with a firearm or crossbow for which you have legendary proficiency, you critically succeed if you roll a 19 on the die, as long as that result is a success." };
+            yield return new TextBlock { Id = Guid.Parse("318e5e4a-7751-4fc5-b7e3-bfa326e3edd1"), Type = TextBlockType.Text, Text = $"Your attacks with your preferred weapons deal especially devastating wounds. When you {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a firearm or crossbow for which you have legendary proficiency, you critically succeed if you roll a 19 on the die, as long as that result is a success." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2c7295d2-61f6-465c-96a1-7f449e019c1c"), Type = TextBlockType.Text, Text = "You are trained in Intimidation (or another skill of your choice, if you were already trained in Intimidation) and gain the (feat: Intimidating Glare) skill feat as a bonus feat." };
+            yield return new TextBlock { Id = Guid.Parse("2c7295d2-61f6-465c-96a1-7f449e019c1c"), Type = TextBlockType.Text, Text = $"You are trained in Intimidation (or another skill of your choice, if you were already trained in Intimidation) and gain the {ToMarkdownLink<Models.Entities.Feat>("Intimidating Glare", Feats.Instances.IntimidatingGlare.ID)} skill feat as a bonus feat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

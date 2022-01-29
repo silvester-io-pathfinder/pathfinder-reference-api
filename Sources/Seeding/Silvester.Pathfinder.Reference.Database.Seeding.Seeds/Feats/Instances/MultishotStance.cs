@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("de4e6f18-8db4-4cee-b130-55f6387019b2"), Type = TextBlockType.Text, Text = "You lock yourself in a stable position so you can fire swiftly and accurately. While you are in this stance, your penalty for (feat: Double Shot) is reduced to -1, or -2 if you add the extra action to make three (action: Strikes | Strike). If you move from your position, this stance ends." };
+            yield return new TextBlock { Id = Guid.Parse("de4e6f18-8db4-4cee-b130-55f6387019b2"), Type = TextBlockType.Text, Text = $"You lock yourself in a stable position so you can fire swiftly and accurately. While you are in this stance, your penalty for {ToMarkdownLink<Models.Entities.Feat>("Double Shot", Feats.Instances.DoubleShot.ID)} is reduced to -1, or -2 if you add the extra action to make three {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}. If you move from your position, this stance ends." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

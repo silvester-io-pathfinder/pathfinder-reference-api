@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("35d451b6-687c-42b9-99ab-fd20677b9f58"), Type = TextBlockType.Text, Text = "You (action: Strike) a target within reach and then (action: Step) to any other open space adjacent to that target. Your target is then flat-footed against your next (action: Strike) this turn." };
+            yield return new TextBlock { Id = Guid.Parse("35d451b6-687c-42b9-99ab-fd20677b9f58"), Type = TextBlockType.Text, Text = $"You {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} a target within reach and then {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} to any other open space adjacent to that target. Your target is then flat-footed against your next {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} this turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

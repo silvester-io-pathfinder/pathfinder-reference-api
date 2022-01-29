@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c20b60d6-3705-4806-bf89-46479ed7ebbb"), Type = TextBlockType.Text, Text = "Your eidolon (action: Strides | Stride) up to double its Speed and can move through the spaces of creatures at least one size smaller, Trampling each creature whose space it enters. It can attempt to Trample the same creature only once in a single Trample. It deals bludgeoning damage equal to the damage of its secondary attack against these creatures, which can attempt a basic Reflex save against your spell DC." };
+            yield return new TextBlock { Id = Guid.Parse("c20b60d6-3705-4806-bf89-46479ed7ebbb"), Type = TextBlockType.Text, Text = $"Your eidolon {ToMarkdownLink<Models.Entities.Action>("Strides", Actions.Instances.Stride.ID)} up to double its Speed and can move through the spaces of creatures at least one size smaller, Trampling each creature whose space it enters. It can attempt to Trample the same creature only once in a single Trample. It deals bludgeoning damage equal to the damage of its secondary attack against these creatures, which can attempt a basic Reflex save against your spell DC." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

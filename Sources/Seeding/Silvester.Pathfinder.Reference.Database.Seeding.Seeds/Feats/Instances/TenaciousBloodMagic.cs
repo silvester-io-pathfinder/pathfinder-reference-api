@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f1177e66-041e-42de-a432-19fe52ea2035"), Type = TextBlockType.Text, Text = "You have learned how to invest magic more deeply by witnessing Aroden's works. The triggering blood magic effect lasts for 1 minute instead of 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("f1177e66-041e-42de-a432-19fe52ea2035"), Type = TextBlockType.Text, Text = $"You have learned how to invest magic more deeply by witnessing Aroden's works. The triggering blood magic effect lasts for 1 minute instead of 1 round." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

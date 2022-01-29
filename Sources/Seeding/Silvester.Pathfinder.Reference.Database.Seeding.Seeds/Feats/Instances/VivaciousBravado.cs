@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("48009c20-1b4b-45a9-a687-044a65f504a0"), Type = TextBlockType.Text, Text = "Your ego swells, granting you a temporary reprieve from your pain. You gain temporary Hit Points equal to your level plus your Charisma modifier that last until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("48009c20-1b4b-45a9-a687-044a65f504a0"), Type = TextBlockType.Text, Text = $"Your ego swells, granting you a temporary reprieve from your pain. You gain temporary Hit Points equal to your level plus your Charisma modifier that last until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

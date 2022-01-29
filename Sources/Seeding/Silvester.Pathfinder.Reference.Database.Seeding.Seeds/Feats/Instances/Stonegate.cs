@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8e9a4d11-b6d7-429c-92f8-caad803b8623"), Type = TextBlockType.Text, Text = "Earthen barriers no longer impede your progress. You gain (spell: passwall) as a 7th-level divine innate spell that you can cast once per day. Unlike the spell, however, this ability can be used only to open passages through barriers of earth or stone." };
+            yield return new TextBlock { Id = Guid.Parse("8e9a4d11-b6d7-429c-92f8-caad803b8623"), Type = TextBlockType.Text, Text = $"Earthen barriers no longer impede your progress. You gain {ToMarkdownLink<Models.Entities.Spell>("passwall", Spells.Instances.Passwall.ID)} as a 7th-level divine innate spell that you can cast once per day. Unlike the spell, however, this ability can be used only to open passages through barriers of earth or stone." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

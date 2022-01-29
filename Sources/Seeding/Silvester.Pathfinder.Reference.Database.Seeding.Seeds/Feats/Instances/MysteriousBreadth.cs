@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c00856db-bae7-4592-ae69-d3f74bae1fcc"), Type = TextBlockType.Text, Text = "Increase the number of spells in your repertoire and the number of spell slots you gain from oracle archetype feats by 1 for each spell level other than your two highest oracle spell slots." };
+            yield return new TextBlock { Id = Guid.Parse("c00856db-bae7-4592-ae69-d3f74bae1fcc"), Type = TextBlockType.Text, Text = $"Increase the number of spells in your repertoire and the number of spell slots you gain from oracle archetype feats by 1 for each spell level other than your two highest oracle spell slots." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

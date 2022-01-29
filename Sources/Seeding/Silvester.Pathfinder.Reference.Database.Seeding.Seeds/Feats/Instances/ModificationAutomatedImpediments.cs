@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ec7717a2-3198-4350-a0fd-4e211be196b5"), Type = TextBlockType.Text, Text = "Your armor uses electromagnetic fields, subharmonic distortions, or other techniques to make it difficult for those close to you to move unless you allow it. While wearing your armor, all spaces adjacent to you are difficult terrain for your enemies." };
+            yield return new TextBlock { Id = Guid.Parse("ec7717a2-3198-4350-a0fd-4e211be196b5"), Type = TextBlockType.Text, Text = $"Your armor uses electromagnetic fields, subharmonic distortions, or other techniques to make it difficult for those close to you to move unless you allow it. While wearing your armor, all spaces adjacent to you are difficult terrain for your enemies." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("73d6ba86-c3fe-4e71-a887-b8eaac029ec8"), Type = TextBlockType.Text, Text = "You've uncovered so many facets of your psyche that you can bring two to the front when your mind is unleashed. If you've met the requirements for two psyche abilities, when you Unleash your psyche, you can enter both simultaneously, gaining both benefits and both drawbacks." };
+            yield return new TextBlock { Id = Guid.Parse("73d6ba86-c3fe-4e71-a887-b8eaac029ec8"), Type = TextBlockType.Text, Text = $"You've uncovered so many facets of your psyche that you can bring two to the front when your mind is unleashed. If you've met the requirements for two psyche abilities, when you Unleash your psyche, you can enter both simultaneously, gaining both benefits and both drawbacks." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

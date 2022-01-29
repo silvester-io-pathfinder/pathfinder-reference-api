@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e8086ab1-b3fd-493d-b890-4673b89c561f"), Type = TextBlockType.Text, Text = "To you, the squeaking of rats and other rodents makes a strange kind of sense. You can ask questions of, receive answers from, and use the Diplomacy skill with rodents, including beavers, mice, porcupines, rats, and squirrels, but not with other mammals, such as dogs or bats. The GM determines which animals count as rodents." };
+            yield return new TextBlock { Id = Guid.Parse("e8086ab1-b3fd-493d-b890-4673b89c561f"), Type = TextBlockType.Text, Text = $"To you, the squeaking of rats and other rodents makes a strange kind of sense. You can ask questions of, receive answers from, and use the Diplomacy skill with rodents, including beavers, mice, porcupines, rats, and squirrels, but not with other mammals, such as dogs or bats. The GM determines which animals count as rodents." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

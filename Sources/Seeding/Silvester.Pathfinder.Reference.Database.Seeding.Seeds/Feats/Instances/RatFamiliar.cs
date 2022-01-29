@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d535b858-632f-401c-b114-6bd2ff095a6a"), Type = TextBlockType.Text, Text = "You have a pet rat that has become magically bonded to you. You gain a familiar which must be a rat. It still gets the benefits of familiar abilities, but its base form remains a rat." };
+            yield return new TextBlock { Id = Guid.Parse("d535b858-632f-401c-b114-6bd2ff095a6a"), Type = TextBlockType.Text, Text = $"You have a pet rat that has become magically bonded to you. You gain a familiar which must be a rat. It still gets the benefits of familiar abilities, but its base form remains a rat." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3678dd27-a789-4b1c-ad10-3be84074ac1d"), Type = TextBlockType.Text, Text = "Your biological circuitry emits light like a (item: torch), casting bright light in a 20-foot radius (and dim light for the next 20 feet). The light shuts off when you take this action again or are knocked unconscious." };
+            yield return new TextBlock { Id = Guid.Parse("3678dd27-a789-4b1c-ad10-3be84074ac1d"), Type = TextBlockType.Text, Text = $"Your biological circuitry emits light like a {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("torch", Items.AdventuringGears.Instances.Torch.ID)}, casting bright light in a 20-foot radius (and dim light for the next 20 feet). The light shuts off when you take this action again or are knocked unconscious." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

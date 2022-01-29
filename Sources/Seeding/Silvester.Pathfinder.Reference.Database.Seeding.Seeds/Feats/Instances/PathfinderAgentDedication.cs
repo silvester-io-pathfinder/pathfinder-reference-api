@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84a04303-e316-4f60-8852-6a039944646b"), Type = TextBlockType.Text, Text = "~ Access: You are from Absalom." };
-            yield return new TextBlock { Id = Guid.Parse("04ca52ee-e149-4b7a-8352-874c2cb7ae89"), Type = TextBlockType.Text, Text = "Your Pathfinder training has broadened your horizons and made you more flexible at various skills, since you never know when you might need an obscure skill to complete your mission. You become trained in one skill of your choice, or expert in a skill of your choice in which you were trained. You also become trained in Pathfinder Lore, or an expert if you were already trained. When using a skill untrained, your proficiency bonus is equal to your level instead of 0. You gain access to (item: wayfinders | wayfinder)." };
+            yield return new TextBlock { Id = Guid.Parse("84a04303-e316-4f60-8852-6a039944646b"), Type = TextBlockType.Text, Text = $"~ Access: You are from Absalom." };
+            yield return new TextBlock { Id = Guid.Parse("04ca52ee-e149-4b7a-8352-874c2cb7ae89"), Type = TextBlockType.Text, Text = $"Your Pathfinder training has broadened your horizons and made you more flexible at various skills, since you never know when you might need an obscure skill to complete your mission. You become trained in one skill of your choice, or expert in a skill of your choice in which you were trained. You also become trained in Pathfinder Lore, or an expert if you were already trained. When using a skill untrained, your proficiency bonus is equal to your level instead of 0. You gain access to {ToMarkdownLink<Models.Items.Instances.WornItem>("wayfinders", Items.WornItems.Instances.Wayfinder.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

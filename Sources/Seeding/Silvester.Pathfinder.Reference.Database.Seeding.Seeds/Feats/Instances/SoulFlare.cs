@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6c7d190f-ebe9-4de6-94ec-c543073a8279"), Type = TextBlockType.Text, Text = "You strive to change the outcome with sheer zeal. You gain a +1 status bonus to your attack roll if making an attack or to your AC if you were hit. This can change the outcome of the roll. If this bonus turns your missed attack into a hit or the hit against you into a miss, attempt a DC 5 flat check. If you fail, your soulforged armament is Dismissed—your weapon if you attacked or your armor or shield if you were defending." };
+            yield return new TextBlock { Id = Guid.Parse("6c7d190f-ebe9-4de6-94ec-c543073a8279"), Type = TextBlockType.Text, Text = $"You strive to change the outcome with sheer zeal. You gain a +1 status bonus to your attack roll if making an attack or to your AC if you were hit. This can change the outcome of the roll. If this bonus turns your missed attack into a hit or the hit against you into a miss, attempt a DC 5 flat check. If you fail, your soulforged armament is Dismissed—your weapon if you attacked or your armor or shield if you were defending." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

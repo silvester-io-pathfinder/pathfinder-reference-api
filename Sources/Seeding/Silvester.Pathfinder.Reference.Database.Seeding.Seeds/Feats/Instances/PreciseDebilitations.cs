@@ -29,9 +29,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc2a09cd-107d-4e44-8121-7a01e3331273"), Type = TextBlockType.Text, Text = "You carefully aim and gracefully deliver your debilitations. Add the following debilitations to the list you can choose from when you use (feat: Debilitating Strike)." };
-            yield return new TextBlock { Id = Guid.Parse("4561528e-4936-45f4-9f9d-fbabcebad673"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target takes an additional 2d6 precision damage from your attacks." };
-            yield return new TextBlock { Id = Guid.Parse("4d29569a-08ed-495a-b8b9-02b1fb850bd5"), Type = TextBlockType.Enumeration, Text = " Debilitation: The target becomes flat-footed." };
+            yield return new TextBlock { Id = Guid.Parse("fc2a09cd-107d-4e44-8121-7a01e3331273"), Type = TextBlockType.Text, Text = $"You carefully aim and gracefully deliver your debilitations. Add the following debilitations to the list you can choose from when you use {ToMarkdownLink<Models.Entities.Feat>("Debilitating Strike", Feats.Instances.DebilitatingStrike.ID)}." };
+            yield return new TextBlock { Id = Guid.Parse("4561528e-4936-45f4-9f9d-fbabcebad673"), Type = TextBlockType.Enumeration, Text = $" Debilitation: The target takes an additional 2d6 precision damage from your attacks." };
+            yield return new TextBlock { Id = Guid.Parse("4d29569a-08ed-495a-b8b9-02b1fb850bd5"), Type = TextBlockType.Enumeration, Text = $" Debilitation: The target becomes flat-footed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5c41aaec-d6de-4cf5-bbe4-19292b80c987"), Type = TextBlockType.Text, Text = "Thrown weapons become especially deadly in your fury. You apply the additional damage from (Action: Rage) to your thrown weapon attacks. If you have the (Feat: Brutal Critical) feat or the devastator class feature, apply their benefits to thrown weapon attacks." };
+            yield return new TextBlock { Id = Guid.Parse("5c41aaec-d6de-4cf5-bbe4-19292b80c987"), Type = TextBlockType.Text, Text = $"Thrown weapons become especially deadly in your fury. You apply the additional damage from {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)} to your thrown weapon attacks. If you have the {ToMarkdownLink<Models.Entities.Feat>("Brutal Critical", Feats.Instances.BrutalCritical.ID)} feat or the devastator class feature, apply their benefits to thrown weapon attacks." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

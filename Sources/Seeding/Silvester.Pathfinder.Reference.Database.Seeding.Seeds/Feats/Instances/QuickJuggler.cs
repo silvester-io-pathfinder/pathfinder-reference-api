@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e1f119e-3062-4665-abb1-8a887d7e8654"), Type = TextBlockType.Text, Text = "When you start to (feat: Juggle) or add another item to those you are (feat: Juggling | Juggle), you add two items instead of one. Increase the maximum number of items you can (feat: Juggle) by one." };
+            yield return new TextBlock { Id = Guid.Parse("1e1f119e-3062-4665-abb1-8a887d7e8654"), Type = TextBlockType.Text, Text = $"When you start to {ToMarkdownLink<Models.Entities.Feat>("Juggle", Feats.Instances.Juggle.ID)} or add another item to those you are {ToMarkdownLink<Models.Entities.Feat>("Juggling", Feats.Instances.Juggle.ID)}, you add two items instead of one. Increase the maximum number of items you can {ToMarkdownLink<Models.Entities.Feat>("Juggle", Feats.Instances.Juggle.ID)} by one." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

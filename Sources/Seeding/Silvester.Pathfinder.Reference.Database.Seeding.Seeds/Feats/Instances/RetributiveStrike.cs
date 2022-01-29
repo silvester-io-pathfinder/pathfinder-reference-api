@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6904f0c-4c6a-4f47-8ed4-27de3a3f401c"), Type = TextBlockType.Text, Text = "You protect your ally and strike your foe. The ally gains resistance to all damage against the triggering damage equal to 2 + your level. If the foe is within reach, make a melee (action: Strike) against it." };
+            yield return new TextBlock { Id = Guid.Parse("a6904f0c-4c6a-4f47-8ed4-27de3a3f401c"), Type = TextBlockType.Text, Text = $"You protect your ally and strike your foe. The ally gains resistance to all damage against the triggering damage equal to 2 + your level. If the foe is within reach, make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against it." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("bf3009a4-20cc-4f8c-9271-a43c9d3688ae"), Type = TextBlockType.Text, Text = "~ Access: Uhlam ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("404f8a49-c710-490f-abbc-ebef4307ac4a"), Type = TextBlockType.Text, Text = "Your family instilled the values of care and patience into you from a young age. You gain a +1 circumstance bonus to checks to perform a (trait: downtime) activity." };
+            yield return new TextBlock { Id = Guid.Parse("bf3009a4-20cc-4f8c-9271-a43c9d3688ae"), Type = TextBlockType.Text, Text = $"~ Access: Uhlam ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("404f8a49-c710-490f-abbc-ebef4307ac4a"), Type = TextBlockType.Text, Text = $"Your family instilled the values of care and patience into you from a young age. You gain a +1 circumstance bonus to checks to perform a {ToMarkdownLink<Models.Entities.Trait>("downtime", Traits.Instances.Downtime.ID)} activity." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

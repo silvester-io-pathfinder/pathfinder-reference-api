@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("13638c14-a41d-4125-b245-8c3dab28e3d3"), Type = TextBlockType.Text, Text = "You have forgotten more about talismans than lesser warriors have ever known. Normally, affixing more than one talisman to an item causes the talismans to be suppressed, but when you (action: Affix a Talisman), you can specially treat one item you're working on, allowing it to have two active talismans at once. This special treatment ends if you use (action: Affix a Talisman) to treat a new item for this ability." };
+            yield return new TextBlock { Id = Guid.Parse("13638c14-a41d-4125-b245-8c3dab28e3d3"), Type = TextBlockType.Text, Text = $"You have forgotten more about talismans than lesser warriors have ever known. Normally, affixing more than one talisman to an item causes the talismans to be suppressed, but when you {ToMarkdownLink<Models.Entities.Action>("Affix a Talisman", Actions.Instances.AffixATalisman.ID)}, you can specially treat one item you're working on, allowing it to have two active talismans at once. This special treatment ends if you use {ToMarkdownLink<Models.Entities.Action>("Affix a Talisman", Actions.Instances.AffixATalisman.ID)} to treat a new item for this ability." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

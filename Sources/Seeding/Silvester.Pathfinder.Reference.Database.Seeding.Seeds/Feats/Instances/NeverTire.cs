@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ecdda6b7-abaf-4c10-b7cb-c10c360300cd"), Type = TextBlockType.Text, Text = "As long as you have an audience, you can continue to perform. Indeed, you must – you have an obligation to your fans! You delay the effects of the fatigued condition for 1 minute or until you are no longer observed by the required creatures, whichever comes first. If the fatigued condition has a duration, the duration begins to elapse only after the delay. You can't further delay or prevent the fatigued condition after this ability ends." };
+            yield return new TextBlock { Id = Guid.Parse("ecdda6b7-abaf-4c10-b7cb-c10c360300cd"), Type = TextBlockType.Text, Text = $"As long as you have an audience, you can continue to perform. Indeed, you must – you have an obligation to your fans! You delay the effects of the fatigued condition for 1 minute or until you are no longer observed by the required creatures, whichever comes first. If the fatigued condition has a duration, the duration begins to elapse only after the delay. You can't further delay or prevent the fatigued condition after this ability ends." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

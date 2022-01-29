@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c1341f79-9429-4402-bc97-039b1e3d6395"), Type = TextBlockType.Text, Text = "When you would gain a benefit from your terrain attunement, you can grant it to one ally within 30 feet instead of yourself. This has no effect if the terrain attunement affects your foes instead of granting you a benefit." };
+            yield return new TextBlock { Id = Guid.Parse("c1341f79-9429-4402-bc97-039b1e3d6395"), Type = TextBlockType.Text, Text = $"When you would gain a benefit from your terrain attunement, you can grant it to one ally within 30 feet instead of yourself. This has no effect if the terrain attunement affects your foes instead of granting you a benefit." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

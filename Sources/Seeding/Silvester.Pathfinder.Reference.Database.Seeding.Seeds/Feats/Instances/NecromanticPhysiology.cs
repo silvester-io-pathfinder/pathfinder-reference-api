@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d3494804-8da7-402e-9a5b-4fd070ad094c"), Type = TextBlockType.Text, Text = "Your unusual physiology has developed in a way that makes it difficult for parasites and other infestations to prey upon you. You gain a +2 circumstance bonus to saves against diseases." };
+            yield return new TextBlock { Id = Guid.Parse("d3494804-8da7-402e-9a5b-4fd070ad094c"), Type = TextBlockType.Text, Text = $"Your unusual physiology has developed in a way that makes it difficult for parasites and other infestations to prey upon you. You gain a +2 circumstance bonus to saves against diseases." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

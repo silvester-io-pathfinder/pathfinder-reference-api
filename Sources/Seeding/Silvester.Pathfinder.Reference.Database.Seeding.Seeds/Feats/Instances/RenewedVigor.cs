@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c8946932-2e42-43d1-8f72-ff3e45a0f4c8"), Type = TextBlockType.Text, Text = "You pause to recover your raging vigor. You gain temporary Hit Points equal to half your level plus your Constitution modifier." };
+            yield return new TextBlock { Id = Guid.Parse("c8946932-2e42-43d1-8f72-ff3e45a0f4c8"), Type = TextBlockType.Text, Text = $"You pause to recover your raging vigor. You gain temporary Hit Points equal to half your level plus your Constitution modifier." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

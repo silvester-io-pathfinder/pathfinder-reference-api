@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1e82df84-302e-4d79-9216-c4a611287966"), Type = TextBlockType.Text, Text = "Instead of specializing in a school of magic, you specialize in one of the four elements: water. Any benefits your arcane school would grant you that are associated with a selected spell school, you instead apply to your selected element." };
-            yield return new TextBlock { Id = Guid.Parse("6dc56508-39d8-4aed-a122-9f2d04caca18"), Type = TextBlockType.Text, Text = "In place of your arcane school spell, you learn the initial water elemental focus spell ((spell: rising surf)). If you later select the (feat: Advanced School Spell) wizard feat, instead of gaining the listed school spell, you gain the advanced water elemental focus spell ((spell: pulverizing cascade))." };
+            yield return new TextBlock { Id = Guid.Parse("1e82df84-302e-4d79-9216-c4a611287966"), Type = TextBlockType.Text, Text = $"Instead of specializing in a school of magic, you specialize in one of the four elements: water. Any benefits your arcane school would grant you that are associated with a selected spell school, you instead apply to your selected element." };
+            yield return new TextBlock { Id = Guid.Parse("6dc56508-39d8-4aed-a122-9f2d04caca18"), Type = TextBlockType.Text, Text = $"In place of your arcane school spell, you learn the initial water elemental focus spell ({ToMarkdownLink<Models.Entities.Spell>("rising surf", Spells.Instances.RisingSurf.ID)}). If you later select the {ToMarkdownLink<Models.Entities.Feat>("Advanced School Spell", Feats.Instances.AdvancedSchoolSpell.ID)} wizard feat, instead of gaining the listed school spell, you gain the advanced water elemental focus spell ({ToMarkdownLink<Models.Entities.Spell>("pulverizing cascade", Spells.Instances.PulverizingCascade.ID)})." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

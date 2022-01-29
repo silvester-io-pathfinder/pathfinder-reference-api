@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("098c7f1a-8064-44e2-b5f5-e6b9f336d0c0"), Type = TextBlockType.Text, Text = "You stimulate your nanites, forcing your body to temporarily increase its efficiency. You gain a +2 status bonus to the triggering skill check. In addition, your circuitry glows, lighting a 10-foot emanation with dim light for 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("098c7f1a-8064-44e2-b5f5-e6b9f336d0c0"), Type = TextBlockType.Text, Text = $"You stimulate your nanites, forcing your body to temporarily increase its efficiency. You gain a +2 status bonus to the triggering skill check. In addition, your circuitry glows, lighting a 10-foot emanation with dim light for 1 round." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

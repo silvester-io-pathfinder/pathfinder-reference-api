@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("91e3bedd-dd4d-4bd0-a1ea-9f20cf9166f5"), Type = TextBlockType.Text, Text = "You lash out, directing a burst of storming fury toward a creature that has harmed you. You cast (Spell: tempest surge) on the triggering opponent and push that creature, moving it 5 feet away from you if it fails its Reflex save, or 10 feet if it critically fails. This movement is forced movement." };
+            yield return new TextBlock { Id = Guid.Parse("91e3bedd-dd4d-4bd0-a1ea-9f20cf9166f5"), Type = TextBlockType.Text, Text = $"You lash out, directing a burst of storming fury toward a creature that has harmed you. You cast {ToMarkdownLink<Models.Entities.Spell>("tempest surge", Spells.Instances.TempestSurge.ID)} on the triggering opponent and push that creature, moving it 5 feet away from you if it fails its Reflex save, or 10 feet if it critically fails. This movement is forced movement." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

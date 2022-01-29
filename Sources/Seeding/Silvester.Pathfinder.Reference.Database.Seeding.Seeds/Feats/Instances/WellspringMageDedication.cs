@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81d92c37-878a-4ebc-854d-4aeb06bc81ca"), Type = TextBlockType.Text, Text = "There's no longer a limit on how many temporary spell slots you can gain per day from wellspring magic." };
+            yield return new TextBlock { Id = Guid.Parse("81d92c37-878a-4ebc-854d-4aeb06bc81ca"), Type = TextBlockType.Text, Text = $"There's no longer a limit on how many temporary spell slots you can gain per day from wellspring magic." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

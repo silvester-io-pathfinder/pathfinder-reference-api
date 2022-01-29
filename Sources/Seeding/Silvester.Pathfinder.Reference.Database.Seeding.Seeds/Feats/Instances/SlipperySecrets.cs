@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2d034f9c-42ff-4aad-bfb1-d94320d27e43"), Type = TextBlockType.Text, Text = "You elude and evade attempts to uncover your true nature or intentions. When a spell or magical effect tries to read your mind, detect whether you are lying, or reveal your alignment, you can attempt a Deception check against the spell or effect's DC. If you succeed, the effect reveals nothing." };
+            yield return new TextBlock { Id = Guid.Parse("2d034f9c-42ff-4aad-bfb1-d94320d27e43"), Type = TextBlockType.Text, Text = $"You elude and evade attempts to uncover your true nature or intentions. When a spell or magical effect tries to read your mind, detect whether you are lying, or reveal your alignment, you can attempt a Deception check against the spell or effect's DC. If you succeed, the effect reveals nothing." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

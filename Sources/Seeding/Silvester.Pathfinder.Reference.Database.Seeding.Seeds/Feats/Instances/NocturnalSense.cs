@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2a1b763e-cc09-437f-816f-5bc45dc9bb2e"), Type = TextBlockType.Text, Text = "Your senses gain even greater clarity. While raging, you gain darkvision if you don't already have it, and the range of your imprecise scent increases to 60 feet." };
+            yield return new TextBlock { Id = Guid.Parse("2a1b763e-cc09-437f-816f-5bc45dc9bb2e"), Type = TextBlockType.Text, Text = $"Your senses gain even greater clarity. While raging, you gain darkvision if you don't already have it, and the range of your imprecise scent increases to 60 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

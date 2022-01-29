@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b550ff32-8764-4b95-8b00-041657f1c6b4"), Type = TextBlockType.Text, Text = "You can pronounce and repeat words with near-perfect accuracy even if you don't understand their meaning, and you can write them down in a phonetic script that allows you or another creature with Phonetic Training to read it later. Even if the words are in a language with sound you can't pronounce, you can faithfully transcribe them. Memorizing long sequences of words remains just as difficult as it is normally." };
+            yield return new TextBlock { Id = Guid.Parse("b550ff32-8764-4b95-8b00-041657f1c6b4"), Type = TextBlockType.Text, Text = $"You can pronounce and repeat words with near-perfect accuracy even if you don't understand their meaning, and you can write them down in a phonetic script that allows you or another creature with Phonetic Training to read it later. Even if the words are in a language with sound you can't pronounce, you can faithfully transcribe them. Memorizing long sequences of words remains just as difficult as it is normally." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

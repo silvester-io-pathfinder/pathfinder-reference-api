@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c6880dee-17fc-4b77-b42c-85f77217e057"), Type = TextBlockType.Text, Text = "You dive into the water with exceptional skill and connection to the waves, urging the water itself to cushion your fall. You intentionally (action: Leap) or otherwise fall into the water, taking no falling damage regardless of the distance." };
+            yield return new TextBlock { Id = Guid.Parse("c6880dee-17fc-4b77-b42c-85f77217e057"), Type = TextBlockType.Text, Text = $"You dive into the water with exceptional skill and connection to the waves, urging the water itself to cushion your fall. You intentionally {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)} or otherwise fall into the water, taking no falling damage regardless of the distance." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

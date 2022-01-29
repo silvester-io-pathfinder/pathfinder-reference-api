@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7f311907-7782-4eb2-9d95-0ad369b0bcbd"), Type = TextBlockType.Text, Text = "When your enemy is hit by your ally, you capitalize upon the distraction. Make a (action: Strike) against the triggering creature." };
+            yield return new TextBlock { Id = Guid.Parse("7f311907-7782-4eb2-9d95-0ad369b0bcbd"), Type = TextBlockType.Text, Text = $"When your enemy is hit by your ally, you capitalize upon the distraction. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against the triggering creature." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

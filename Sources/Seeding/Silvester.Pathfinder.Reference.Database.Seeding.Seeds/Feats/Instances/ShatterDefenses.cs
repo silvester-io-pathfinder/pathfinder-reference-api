@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f19a96b5-2b41-4af8-bb5d-fb9772ada563"), Type = TextBlockType.Text, Text = "Your offense exploits your enemy's fear. Make a melee (Action: Strike) against a frightened creature. If you hit and deal damage, the target becomes flat-footed until its frightened condition ends." };
-            yield return new TextBlock { Id = Guid.Parse("6ee8efa3-b30a-417e-a4e5-57a0841891dd"), Type = TextBlockType.Text, Text = "If the target was already flat-footed to you when you damaged it with this (Action: Strike), it can't reduce its frightened value below 1 until the start of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("f19a96b5-2b41-4af8-bb5d-fb9772ada563"), Type = TextBlockType.Text, Text = $"Your offense exploits your enemy's fear. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against a frightened creature. If you hit and deal damage, the target becomes flat-footed until its frightened condition ends." };
+            yield return new TextBlock { Id = Guid.Parse("6ee8efa3-b30a-417e-a4e5-57a0841891dd"), Type = TextBlockType.Text, Text = $"If the target was already flat-footed to you when you damaged it with this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, it can't reduce its frightened value below 1 until the start of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

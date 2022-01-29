@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b57a237f-ae59-4645-bf50-e40196246ba3"), Type = TextBlockType.Text, Text = "Your direct mental grasp of your power lets you cast more spells with greater freedom. You gain two additional signature spells, each of which must have a minimum level of 3rd or lower." };
+            yield return new TextBlock { Id = Guid.Parse("b57a237f-ae59-4645-bf50-e40196246ba3"), Type = TextBlockType.Text, Text = $"Your direct mental grasp of your power lets you cast more spells with greater freedom. You gain two additional signature spells, each of which must have a minimum level of 3rd or lower." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("08c7c502-038e-4d3b-a206-5bee3ad065f2"), Type = TextBlockType.Text, Text = "You learn the (spell: song of marching) composition cantrip, which enables you and your allies to cross vast distances without strain." };
+            yield return new TextBlock { Id = Guid.Parse("08c7c502-038e-4d3b-a206-5bee3ad065f2"), Type = TextBlockType.Text, Text = $"You learn the {ToMarkdownLink<Models.Entities.Spell>("song of marching", Spells.Instances.SongOfMarching.ID)} composition cantrip, which enables you and your allies to cross vast distances without strain." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

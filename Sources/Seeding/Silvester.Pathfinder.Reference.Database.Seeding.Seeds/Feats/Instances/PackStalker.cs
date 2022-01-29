@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5cc86a71-b3af-4f6a-b569-cadd16b0740b"), Type = TextBlockType.Text, Text = "Ambushes are an honored gnoll tradition. You gain the (feat: Terrain Stalker) feat and can extend its effects to a single ally so long as they remain within 10 ft. of you. If you have master proficiency in Stealth, you can extend the effect to two allies. If you have legendary proficiency in Stealth, you can extend it to four allies." };
+            yield return new TextBlock { Id = Guid.Parse("5cc86a71-b3af-4f6a-b569-cadd16b0740b"), Type = TextBlockType.Text, Text = $"Ambushes are an honored gnoll tradition. You gain the {ToMarkdownLink<Models.Entities.Feat>("Terrain Stalker", Feats.Instances.TerrainStalker.ID)} feat and can extend its effects to a single ally so long as they remain within 10 ft. of you. If you have master proficiency in Stealth, you can extend the effect to two allies. If you have legendary proficiency in Stealth, you can extend it to four allies." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("596ffa7d-a786-494e-a32f-55c684ba4477"), Type = TextBlockType.Text, Text = "You remember the secrets of your rakshasa forebears and know how to apply those memories to get results. You can cast (spell: humanoid form) and (spell: illusory creature) once per day each as 2nd-level divine innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("596ffa7d-a786-494e-a32f-55c684ba4477"), Type = TextBlockType.Text, Text = $"You remember the secrets of your rakshasa forebears and know how to apply those memories to get results. You can cast {ToMarkdownLink<Models.Entities.Spell>("humanoid form", Spells.Instances.HumanoidForm.ID)} and {ToMarkdownLink<Models.Entities.Spell>("illusory creature", Spells.Instances.IllusoryCreature.ID)} once per day each as 2nd-level divine innate spells." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

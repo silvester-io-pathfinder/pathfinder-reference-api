@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("76055b45-c88a-4829-a2d9-774b30e98cad"), Type = TextBlockType.Text, Text = "You can launch a mass of quills at opponents. You spray quills in a 30-foot cone, dealing 5d8 piercing damage. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. On a critical failure, a creature also takes 5 persistent bleed damage. At 11th level and every even level thereafter, the piercing damage increases by 1d8 and the persistent bleed damage increases by 1." };
+            yield return new TextBlock { Id = Guid.Parse("76055b45-c88a-4829-a2d9-774b30e98cad"), Type = TextBlockType.Text, Text = $"You can launch a mass of quills at opponents. You spray quills in a 30-foot cone, dealing 5d8 piercing damage. Each creature in the area must attempt a basic saving throw against the higher of your class DC or spell DC. On a critical failure, a creature also takes 5 persistent bleed damage. At 11th level and every even level thereafter, the piercing damage increases by 1d8 and the persistent bleed damage increases by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

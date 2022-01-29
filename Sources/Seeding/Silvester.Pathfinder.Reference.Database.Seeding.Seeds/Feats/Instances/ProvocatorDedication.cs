@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("624d1803-3376-4390-a081-f373ae367bc8"), Type = TextBlockType.Text, Text = "~ Access: Successfully defeat the eberarks in the Irorium." };
-            yield return new TextBlock { Id = Guid.Parse("e84c3faf-bac9-4275-ac76-1e8321ec5f65"), Type = TextBlockType.Text, Text = "For you, fighting is as much about style as skill. You become trained in simple weapons, martial weapons, and one advanced weapon of your choice. When you critically succeed at an attack roll using your chosen advanced weapon, you also apply the critical specialization of that weapon. You become an expert in Performance and your choice of either Acrobatics or Athletics. If you were an expert in all three of these skills, you instead become an expert in a skill of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("624d1803-3376-4390-a081-f373ae367bc8"), Type = TextBlockType.Text, Text = $"~ Access: Successfully defeat the eberarks in the Irorium." };
+            yield return new TextBlock { Id = Guid.Parse("e84c3faf-bac9-4275-ac76-1e8321ec5f65"), Type = TextBlockType.Text, Text = $"For you, fighting is as much about style as skill. You become trained in simple weapons, martial weapons, and one advanced weapon of your choice. When you critically succeed at an attack roll using your chosen advanced weapon, you also apply the critical specialization of that weapon. You become an expert in Performance and your choice of either Acrobatics or Athletics. If you were an expert in all three of these skills, you instead become an expert in a skill of your choice." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

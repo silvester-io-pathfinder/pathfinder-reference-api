@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("40ffbeb2-5b76-45e7-812b-f6460f5c75c8"), Type = TextBlockType.Text, Text = "Your movements with two weapons are so swift and disorienting that they befuddle your opponent. When using (feat: Twin Feint), if both your (action: Strikes | Strike) deal damage to a targeted creature, the target must succeed at a Will saving throw against your class DC or become stupefied 1 until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("40ffbeb2-5b76-45e7-812b-f6460f5c75c8"), Type = TextBlockType.Text, Text = $"Your movements with two weapons are so swift and disorienting that they befuddle your opponent. When using {ToMarkdownLink<Models.Entities.Feat>("Twin Feint", Feats.Instances.TwinFeint.ID)}, if both your {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} deal damage to a targeted creature, the target must succeed at a Will saving throw against your class DC or become stupefied 1 until the end of your next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

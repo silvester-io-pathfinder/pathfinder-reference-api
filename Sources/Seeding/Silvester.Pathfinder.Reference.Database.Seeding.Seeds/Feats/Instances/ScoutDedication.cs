@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4874294e-9607-4010-9056-e7725fe812d5"), Type = TextBlockType.Text, Text = "You are a highly skilled scout, capable of providing your allies a timely warning of any danger. You gain the (feat: Scout's Warning) ranger feat. When you're using the (action: Scout) exploration activity, you grant your allies a +2 circumstance bonus to their initiative rolls instead of a +1 circumstance bonus." };
+            yield return new TextBlock { Id = Guid.Parse("4874294e-9607-4010-9056-e7725fe812d5"), Type = TextBlockType.Text, Text = $"You are a highly skilled scout, capable of providing your allies a timely warning of any danger. You gain the {ToMarkdownLink<Models.Entities.Feat>("Scout's Warning", Feats.Instances.ScoutsWarning.ID)} ranger feat. When you're using the {ToMarkdownLink<Models.Entities.Activity>("Scout", Activities.Instances.Scout.ID)} exploration activity, you grant your allies a +2 circumstance bonus to their initiative rolls instead of a +1 circumstance bonus." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

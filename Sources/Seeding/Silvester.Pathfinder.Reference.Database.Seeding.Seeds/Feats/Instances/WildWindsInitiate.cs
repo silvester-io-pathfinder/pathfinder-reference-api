@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a208dfb3-5378-4f9c-b8f2-20d44a69b869"), Type = TextBlockType.Text, Text = "You learn a mystical stance that lets you attack from a distance. You gain the (spell: wild winds stance) ki spell. Increase the number of Focus Points in your focus pool by 1. While entering the stance is a ki spell, the wind crash (action: Strikes | Strike) the stance grants are not, so you can use them as often as you like while in the stance." };
+            yield return new TextBlock { Id = Guid.Parse("a208dfb3-5378-4f9c-b8f2-20d44a69b869"), Type = TextBlockType.Text, Text = $"You learn a mystical stance that lets you attack from a distance. You gain the {ToMarkdownLink<Models.Entities.Spell>("wild winds stance", Spells.Instances.WildWindsStance.ID)} ki spell. Increase the number of Focus Points in your focus pool by 1. While entering the stance is a ki spell, the wind crash {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} the stance grants are not, so you can use them as often as you like while in the stance." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e63e02c4-94da-4e8e-8a41-3dc4c34c1978"), Type = TextBlockType.Text, Text = "You announce the triggering ally with a litany of their legendary achievements, spurring them to action. The target is quickened this turn and can spend the extra action to (action: Stride), (action: Strike), (action: Demoralize), (action: Feint), or (action: Perform)." };
+            yield return new TextBlock { Id = Guid.Parse("e63e02c4-94da-4e8e-8a41-3dc4c34c1978"), Type = TextBlockType.Text, Text = $"You announce the triggering ally with a litany of their legendary achievements, spurring them to action. The target is quickened this turn and can spend the extra action to {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}, {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)}, {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)}, or {ToMarkdownLink<Models.Entities.SkillAction>("Perform", SkillActions.Instances.Perform.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

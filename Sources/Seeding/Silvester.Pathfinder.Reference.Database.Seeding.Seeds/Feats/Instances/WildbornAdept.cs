@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e5d8e879-6b7f-47dd-aeef-a384d172cb8a"), Type = TextBlockType.Text, Text = "The whispers of the jungle grant you more diverse access to simple primal magic. You can cast (spell: dancing lights), (spell: disrupt undead), and (spell: tanglefoot) as innate primal spells at will. If you chose one of those spells with (feat: Wildborn Magic), you can select a new spell for (feat: Wildborn Magic)." };
+            yield return new TextBlock { Id = Guid.Parse("e5d8e879-6b7f-47dd-aeef-a384d172cb8a"), Type = TextBlockType.Text, Text = $"The whispers of the jungle grant you more diverse access to simple primal magic. You can cast {ToMarkdownLink<Models.Entities.Spell>("dancing lights", Spells.Instances.DancingLights.ID)}, {ToMarkdownLink<Models.Entities.Spell>("disrupt undead", Spells.Instances.DisruptUndead.ID)}, and {ToMarkdownLink<Models.Entities.Spell>("tanglefoot", Spells.Instances.Tanglefoot.ID)} as innate primal spells at will. If you chose one of those spells with {ToMarkdownLink<Models.Entities.Feat>("Wildborn Magic", Feats.Instances.WildbornMagic.ID)}, you can select a new spell for {ToMarkdownLink<Models.Entities.Feat>("Wildborn Magic", Feats.Instances.WildbornMagic.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d7697237-cd75-452d-81cc-0388bf15125a"), Type = TextBlockType.Text, Text = "You're skilled with flashy weapons. You are trained with the (item: bo staff), (item: dueling cape), (item: spiked chain), (item: sword cane), and (item: whip). Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the weapons listed." };
+            yield return new TextBlock { Id = Guid.Parse("d7697237-cd75-452d-81cc-0388bf15125a"), Type = TextBlockType.Text, Text = $"You're skilled with flashy weapons. You are trained with the {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("bo staff", Items.MeleeWeapons.Instances.BoStaff.ID)}, {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("dueling cape", Items.AdventuringGears.Instances.DuelingCape.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("spiked chain", Items.MeleeWeapons.Instances.SpikedChain.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("sword cane", Items.MeleeWeapons.Instances.SwordCane.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("whip", Items.MeleeWeapons.Instances.Whip.ID)}. Whenever you gain a class feature that grants you expert or greater proficiency in a given weapon or weapons, you also gain that proficiency in the weapons listed." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f40c8535-4dc7-4669-a938-3c2045a05935"), Type = TextBlockType.Text, Text = "You flow like water, avoiding all restraints. End one status penalty to your speed, or end one immobilized or slowed condition affecting you." };
+            yield return new TextBlock { Id = Guid.Parse("f40c8535-4dc7-4669-a938-3c2045a05935"), Type = TextBlockType.Text, Text = $"You flow like water, avoiding all restraints. End one status penalty to your speed, or end one immobilized or slowed condition affecting you." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

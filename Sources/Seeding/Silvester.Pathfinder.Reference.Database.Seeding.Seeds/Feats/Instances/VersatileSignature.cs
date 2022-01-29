@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("168e74f2-208c-469b-8d90-5d2d76ba6f9e"), Type = TextBlockType.Text, Text = "While most bards are known for certain signature performances and spells, you're always tweaking your available repertoire. When you make your daily preparations, you can change one of your signature spells to a different spell of that level from your repertoire." };
+            yield return new TextBlock { Id = Guid.Parse("168e74f2-208c-469b-8d90-5d2d76ba6f9e"), Type = TextBlockType.Text, Text = $"While most bards are known for certain signature performances and spells, you're always tweaking your available repertoire. When you make your daily preparations, you can change one of your signature spells to a different spell of that level from your repertoire." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

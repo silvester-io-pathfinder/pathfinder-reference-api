@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fbb83e34-b996-482c-a4a5-b1fb4cb4507f"), Type = TextBlockType.Text, Text = "You sweep your foes away with your staff. Roll an Athletics check to (action: Shove) or (action: Trip), and compare the result to the appropriate DCs of up to two foes, each of whom must be within your reach and no more than 5 feet apart." };
+            yield return new TextBlock { Id = Guid.Parse("fbb83e34-b996-482c-a4a5-b1fb4cb4507f"), Type = TextBlockType.Text, Text = $"You sweep your foes away with your staff. Roll an Athletics check to {ToMarkdownLink<Models.Entities.SkillAction>("Shove", SkillActions.Instances.Shove.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Trip", SkillActions.Instances.Trip.ID)}, and compare the result to the appropriate DCs of up to two foes, each of whom must be within your reach and no more than 5 feet apart." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

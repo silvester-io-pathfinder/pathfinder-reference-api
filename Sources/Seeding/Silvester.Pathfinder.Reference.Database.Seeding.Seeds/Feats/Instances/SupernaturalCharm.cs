@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7f05f28d-6d74-4c28-be25-677813e84c3c"), Type = TextBlockType.Text, Text = "The elven magic in your blood manifests as a force you can use to become more appealing or alluring. You can cast 1st-level (spell: charm) as an arcane innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("7f05f28d-6d74-4c28-be25-677813e84c3c"), Type = TextBlockType.Text, Text = $"The elven magic in your blood manifests as a force you can use to become more appealing or alluring. You can cast 1st-level {ToMarkdownLink<Models.Entities.Spell>("charm", Spells.Instances.Charm.ID)} as an arcane innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

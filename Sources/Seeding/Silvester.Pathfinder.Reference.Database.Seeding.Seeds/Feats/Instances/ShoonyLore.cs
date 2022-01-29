@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c7a11fa3-b0b0-4732-850d-90c0bd3b9899"), Type = TextBlockType.Text, Text = "Growing up in shoony society, you learned the value of honesty, friendship, and hard work, even during trying times. You gain the trained proficiency rank in Diplomacy and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Shoony Lore." };
+            yield return new TextBlock { Id = Guid.Parse("c7a11fa3-b0b0-4732-850d-90c0bd3b9899"), Type = TextBlockType.Text, Text = $"Growing up in shoony society, you learned the value of honesty, friendship, and hard work, even during trying times. You gain the trained proficiency rank in Diplomacy and Survival. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Shoony Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a6264d81-1329-41fc-8534-be773e6a25db"), Type = TextBlockType.Text, Text = "You've devised several alloys that contain useful properties of various metals, and you replace a number of parts of your weapon or its ammunition with pieces from these alloys. Your weapon innovation is cold iron and silver. This means you deal more damage to a variety of supernatural creatures, such as demons, devils, and fey." };
+            yield return new TextBlock { Id = Guid.Parse("a6264d81-1329-41fc-8534-be773e6a25db"), Type = TextBlockType.Text, Text = $"You've devised several alloys that contain useful properties of various metals, and you replace a number of parts of your weapon or its ammunition with pieces from these alloys. Your weapon innovation is cold iron and silver. This means you deal more damage to a variety of supernatural creatures, such as demons, devils, and fey." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

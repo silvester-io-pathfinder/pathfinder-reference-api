@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e0d63ab-57a8-4b7f-b238-9e3c84f18d19"), Type = TextBlockType.Text, Text = "You were born with a tail, and with practice you've learned how to perform simple (action: Interact) actions with it, such as opening an unlocked door. Your tail can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items." };
+            yield return new TextBlock { Id = Guid.Parse("3e0d63ab-57a8-4b7f-b238-9e3c84f18d19"), Type = TextBlockType.Text, Text = $"You were born with a tail, and with practice you've learned how to perform simple {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} actions with it, such as opening an unlocked door. Your tail can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish, and you can't use it to hold items." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

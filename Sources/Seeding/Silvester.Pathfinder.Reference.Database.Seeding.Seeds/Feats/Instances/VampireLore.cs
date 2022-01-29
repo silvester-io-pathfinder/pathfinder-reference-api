@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("05252a73-1fe9-4580-86be-99de051650eb"), Type = TextBlockType.Text, Text = "You were raised by your vampiric parent, or you've invested substantial time and energy researching the secrets of your undead progenitors. You gain the trained proficiency rank in Religion and Society. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Vampire Lore." };
+            yield return new TextBlock { Id = Guid.Parse("05252a73-1fe9-4580-86be-99de051650eb"), Type = TextBlockType.Text, Text = $"You were raised by your vampiric parent, or you've invested substantial time and energy researching the secrets of your undead progenitors. You gain the trained proficiency rank in Religion and Society. If you would automatically become trained in one of those skills (from your background or class, for example), you instead become trained in a skill of your choice. You also become trained in Vampire Lore." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

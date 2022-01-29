@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dbacf1a3-d0d1-49b9-8a3f-429c9160df61"), Type = TextBlockType.Text, Text = "Your fan can stir up even more powerful winds. You can (action: Activate | Activate an Item) your (item: tengu feather fan) one additional time per day. Add the 3rd-level (spell: wall of wind) spell to the spells contained within your fan." };
+            yield return new TextBlock { Id = Guid.Parse("dbacf1a3-d0d1-49b9-8a3f-429c9160df61"), Type = TextBlockType.Text, Text = $"Your fan can stir up even more powerful winds. You can activate an item your {ToMarkdownLink<Models.Entities.Feat>("tengu feather fan", Feats.Instances.TenguFeatherFan.ID)} one additional time per day. Add the 3rd-level {ToMarkdownLink<Models.Entities.Spell>("wall of wind", Spells.Instances.WallOfWind.ID)} spell to the spells contained within your fan." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

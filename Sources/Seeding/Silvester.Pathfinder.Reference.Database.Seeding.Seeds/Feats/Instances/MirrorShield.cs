@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f468e1e0-91e6-4f1c-b843-2d35ccdacc9f"), Type = TextBlockType.Text, Text = "You reflect the spell back against the triggering opponent. Make a ranged attack against the triggering creature using your highest proficiency with a ranged weapon. If you can cast spells, you can make a spell attack roll instead. If you succeed, your opponent takes the effects of a successful spell attack roll for their own spell (or the effects of a critical success if your attack roll was a critical success)." };
+            yield return new TextBlock { Id = Guid.Parse("f468e1e0-91e6-4f1c-b843-2d35ccdacc9f"), Type = TextBlockType.Text, Text = $"You reflect the spell back against the triggering opponent. Make a ranged attack against the triggering creature using your highest proficiency with a ranged weapon. If you can cast spells, you can make a spell attack roll instead. If you succeed, your opponent takes the effects of a successful spell attack roll for their own spell (or the effects of a critical success if your attack roll was a critical success)." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

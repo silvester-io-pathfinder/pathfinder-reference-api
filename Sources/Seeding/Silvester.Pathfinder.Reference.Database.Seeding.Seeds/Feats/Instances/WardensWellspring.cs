@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c04a33a8-2484-4cb1-a635-e67d473f0b32"), Type = TextBlockType.Text, Text = "You command unparalleled focus when you commune with the world around you. If you have spent at least 3 Focus Points since the last time you (activity: Refocused | Refocus), you recover 3 Focus Points when you (activity: Refocus) instead of 1." };
+            yield return new TextBlock { Id = Guid.Parse("c04a33a8-2484-4cb1-a635-e67d473f0b32"), Type = TextBlockType.Text, Text = $"You command unparalleled focus when you commune with the world around you. If you have spent at least 3 Focus Points since the last time you {ToMarkdownLink<Models.Entities.Activity>("Refocused", Activities.Instances.Refocus.ID)}, you recover 3 Focus Points when you {ToMarkdownLink<Models.Entities.Activity>("Refocus", Activities.Instances.Refocus.ID)} instead of 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

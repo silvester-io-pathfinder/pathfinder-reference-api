@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a4785e91-bce6-4218-9af3-650a8d027390"), Type = TextBlockType.Text, Text = "You pull punches to give a better show. You don't take the usual -2 circumstance penalty when making a nonlethal attack with a weapon or unarmed attack that doesn't have the (trait: nonlethal) trait." };
+            yield return new TextBlock { Id = Guid.Parse("a4785e91-bce6-4218-9af3-650a8d027390"), Type = TextBlockType.Text, Text = $"You pull punches to give a better show. You don't take the usual -2 circumstance penalty when making a nonlethal attack with a weapon or unarmed attack that doesn't have the {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)} trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

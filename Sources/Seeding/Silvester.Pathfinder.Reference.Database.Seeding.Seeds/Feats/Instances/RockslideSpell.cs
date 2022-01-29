@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e963c446-d197-4c98-bea8-a3bd03059570"), Type = TextBlockType.Text, Text = "You enhance your spell with elemental earth, causing chunks of stone to litter the ground. If the next action you use is to (action: Cast a non-cantrip Spell | Cast a Spell) that affects an area, a number of 5-foot squares in the area equal to the spell level become difficult terrain for 1 round. These squares must be on the ground, and the entire area of difficult terrain must be contiguous. The spell gains the (trait: earth) trait." };
+            yield return new TextBlock { Id = Guid.Parse("e963c446-d197-4c98-bea8-a3bd03059570"), Type = TextBlockType.Text, Text = $"You enhance your spell with elemental earth, causing chunks of stone to litter the ground. If the next action you use is to {ToMarkdownLink<Models.Entities.Rule>("Cast a non-cantrip Spell", Rules.Instances.CastASpell.ID)} that affects an area, a number of 5-foot squares in the area equal to the spell level become difficult terrain for 1 round. These squares must be on the ground, and the entire area of difficult terrain must be contiguous. The spell gains the {ToMarkdownLink<Models.Entities.Trait>("earth", Traits.Instances.Earth.ID)} trait." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

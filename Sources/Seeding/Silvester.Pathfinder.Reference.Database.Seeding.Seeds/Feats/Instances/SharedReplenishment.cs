@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b6db7147-ea93-4c1d-b5d0-0829e7110b20"), Type = TextBlockType.Text, Text = "When your deity blesses your warlike acts, you can extend that favor to your allies. You can grant the temporary Hit Points from (feat: Replenishment of War) to an ally within 10 feet instead of gaining them yourself. You can grant these temporary Hit Points to a different ally each time, meaning you might be able to grant them to multiple creatures in a single turn." };
+            yield return new TextBlock { Id = Guid.Parse("b6db7147-ea93-4c1d-b5d0-0829e7110b20"), Type = TextBlockType.Text, Text = $"When your deity blesses your warlike acts, you can extend that favor to your allies. You can grant the temporary Hit Points from {ToMarkdownLink<Models.Entities.Feat>("Replenishment of War", Feats.Instances.ReplenishmentOfWar.ID)} to an ally within 10 feet instead of gaining them yourself. You can grant these temporary Hit Points to a different ally each time, meaning you might be able to grant them to multiple creatures in a single turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

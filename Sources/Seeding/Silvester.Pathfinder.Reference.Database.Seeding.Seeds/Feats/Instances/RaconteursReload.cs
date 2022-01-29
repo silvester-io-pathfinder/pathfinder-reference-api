@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84f67162-284c-41d5-a7de-3afbb57709f4"), Type = TextBlockType.Text, Text = "Your rapid or forceful words draw the enemy's attention away from your hands long enough to chamber another bullet. (action: Interact) to reload and then attempt a Deception check to (action: Create a Diversion) or an Intimidation check to (action: Demoralize)." };
+            yield return new TextBlock { Id = Guid.Parse("84f67162-284c-41d5-a7de-3afbb57709f4"), Type = TextBlockType.Text, Text = $"Your rapid or forceful words draw the enemy's attention away from your hands long enough to chamber another bullet. {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to reload and then attempt a Deception check to {ToMarkdownLink<Models.Entities.SkillAction>("Create a Diversion", SkillActions.Instances.CreateADiversion.ID)} or an Intimidation check to {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

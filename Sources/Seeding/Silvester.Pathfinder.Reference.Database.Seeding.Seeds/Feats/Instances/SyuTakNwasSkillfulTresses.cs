@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fbd327e4-0e38-4edd-a413-a5f8618abb98"), Type = TextBlockType.Text, Text = "You can expertly control your living hair and use it to perform various tasks. You can perform simple (action: Interact) actions with your hair such as opening an unlocked door or picking up objects. Your hair can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish. Your hair can hold items of up to 1 Bulk, but can't Activate or attack with any items it's holding." };
+            yield return new TextBlock { Id = Guid.Parse("fbd327e4-0e38-4edd-a413-a5f8618abb98"), Type = TextBlockType.Text, Text = $"You can expertly control your living hair and use it to perform various tasks. You can perform simple {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} actions with your hair such as opening an unlocked door or picking up objects. Your hair can't perform actions that require fingers or significant manual dexterity, including any action that would require a check to accomplish. Your hair can hold items of up to 1 Bulk, but can't Activate or attack with any items it's holding." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

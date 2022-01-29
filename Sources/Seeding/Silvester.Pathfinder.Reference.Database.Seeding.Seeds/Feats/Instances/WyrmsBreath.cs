@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("113f3301-03be-4509-aba6-e7e943eea4a0"), Type = TextBlockType.Text, Text = "Your eidolon gathers the power of the mightiest wyrms to make its magical breath even more spectacular. If your eidolon's next action is to use (action: Breath Weapon), both the number of damage dice and area of the (action: Breath Weapon) are doubled." };
+            yield return new TextBlock { Id = Guid.Parse("113f3301-03be-4509-aba6-e7e943eea4a0"), Type = TextBlockType.Text, Text = $"Your eidolon gathers the power of the mightiest wyrms to make its magical breath even more spectacular. If your eidolon's next action is to use {ToMarkdownLink<Models.Entities.Feat>("Breath Weapon", Feats.Instances.BreathWeapon.ID)}, both the number of damage dice and area of the {ToMarkdownLink<Models.Entities.Feat>("Breath Weapon", Feats.Instances.BreathWeapon.ID)} are doubled." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

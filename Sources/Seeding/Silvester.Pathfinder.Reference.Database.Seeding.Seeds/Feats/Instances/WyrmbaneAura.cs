@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c798684-1b4c-4121-9995-4ca9e97c1b67"), Type = TextBlockType.Text, Text = "Your aura protects against destructive energies and dragons' breath. You and all allies within 15 feet gain resistance equal to your Charisma modifier to acid, cold, electricity, fire, and poison. If the source of one of these types of damage is a dragon's breath, increase the resistance to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("7c798684-1b4c-4121-9995-4ca9e97c1b67"), Type = TextBlockType.Text, Text = $"Your aura protects against destructive energies and dragons' breath. You and all allies within 15 feet gain resistance equal to your Charisma modifier to acid, cold, electricity, fire, and poison. If the source of one of these types of damage is a dragon's breath, increase the resistance to half your level." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

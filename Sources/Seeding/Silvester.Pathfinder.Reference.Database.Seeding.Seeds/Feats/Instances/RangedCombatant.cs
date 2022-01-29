@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("038d00b4-01f9-4d22-a1cc-1f5dfe0d2ee2"), Type = TextBlockType.Text, Text = "Spines, flame jets, and holy blasts are just some of the ways your eidolon might strike from a distance. It gains a ranged unarmed attack with a range increment of 30 feet that deals 1d4 damage and has the (trait: magical) and (trait: propulsive) traits. When you select this feat, choose a damage type: acid, bludgeoning, cold, electricity, fire, negative, piercing, positive, or slashing. If your eidolon is a celestial, fiend, or monitor with an alignment other than true neutral, you can choose a damage type in its alignment." };
+            yield return new TextBlock { Id = Guid.Parse("038d00b4-01f9-4d22-a1cc-1f5dfe0d2ee2"), Type = TextBlockType.Text, Text = $"Spines, flame jets, and holy blasts are just some of the ways your eidolon might strike from a distance. It gains a ranged unarmed attack with a range increment of 30 feet that deals 1d4 damage and has the {ToMarkdownLink<Models.Entities.Trait>("magical", Traits.Instances.Magical.ID)} and {ToMarkdownLink<Models.Entities.Trait>("propulsive", Traits.Instances.Propulsive.ID)} traits. When you select this feat, choose a damage type: acid, bludgeoning, cold, electricity, fire, negative, piercing, positive, or slashing. If your eidolon is a celestial, fiend, or monitor with an alignment other than true neutral, you can choose a damage type in its alignment." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

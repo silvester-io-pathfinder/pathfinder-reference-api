@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ab6a8cc-6c97-4b47-bee2-200b1874e1ed"), Type = TextBlockType.Text, Text = "You dedicate yourself to the shadows. Your coloring becomes gray and gloomy, your senses adjust to the darkness, and you can sneak through darkness with ease. You gain greater darkvision. You also gain a +2 circumstance bonus to Stealth checks when you are within dim light or darkness." };
+            yield return new TextBlock { Id = Guid.Parse("8ab6a8cc-6c97-4b47-bee2-200b1874e1ed"), Type = TextBlockType.Text, Text = $"You dedicate yourself to the shadows. Your coloring becomes gray and gloomy, your senses adjust to the darkness, and you can sneak through darkness with ease. You gain greater darkvision. You also gain a +2 circumstance bonus to Stealth checks when you are within dim light or darkness." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8f293a9b-a5ca-4f85-b348-ac3420602fad"), Type = TextBlockType.Text, Text = "You've studied ways of overcoming the innate magical resistance that dragons, otherworldly beings, and certain other powerful creatures have. Any creature that has a status bonus to saving throws against magic reduces that bonus by 1 against your spells." };
+            yield return new TextBlock { Id = Guid.Parse("8f293a9b-a5ca-4f85-b348-ac3420602fad"), Type = TextBlockType.Text, Text = $"You've studied ways of overcoming the innate magical resistance that dragons, otherworldly beings, and certain other powerful creatures have. Any creature that has a status bonus to saving throws against magic reduces that bonus by 1 against your spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

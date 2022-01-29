@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2ac7019c-b8eb-4204-9cd7-9310b4c1d453"), Type = TextBlockType.Text, Text = "You wrap yourself in shadow to change your appearance. You can cast (spell: illusory disguise) as a 1st-level occult innate spell once per day. This spell gains the (trait: shadow) trait." };
+            yield return new TextBlock { Id = Guid.Parse("2ac7019c-b8eb-4204-9cd7-9310b4c1d453"), Type = TextBlockType.Text, Text = $"You wrap yourself in shadow to change your appearance. You can cast {ToMarkdownLink<Models.Entities.Spell>("illusory disguise", Spells.Instances.IllusoryDisguise.ID)} as a 1st-level occult innate spell once per day. This spell gains the {ToMarkdownLink<Models.Entities.Trait>("shadow", Traits.Instances.Shadow.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

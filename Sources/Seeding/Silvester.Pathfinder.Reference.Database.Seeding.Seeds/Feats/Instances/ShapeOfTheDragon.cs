@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d761e946-48b6-4b86-9bde-89cb29d6d622"), Type = TextBlockType.Text, Text = "You've discovered how to transform yourself into a dragon. Once per day, you can cast 7th-level (spell: dragon form) as an innate arcane spell, transforming into your chosen type of dragon. The spell automatically heightens to 8th level if you're 16th level and 9th level if you're 18th level." };
-            yield return new TextBlock { Id = Guid.Parse("ecef92c1-dffc-4db6-856d-b9ed619657fa"), Type = TextBlockType.Text, Text = "Any time you score a critical hit with an unarmed (action: Strike) gained from (spell: dragon form), you recharge the spell's breath weapon immediately." };
+            yield return new TextBlock { Id = Guid.Parse("d761e946-48b6-4b86-9bde-89cb29d6d622"), Type = TextBlockType.Text, Text = $"You've discovered how to transform yourself into a dragon. Once per day, you can cast 7th-level {ToMarkdownLink<Models.Entities.Spell>("dragon form", Spells.Instances.DragonForm.ID)} as an innate arcane spell, transforming into your chosen type of dragon. The spell automatically heightens to 8th level if you're 16th level and 9th level if you're 18th level." };
+            yield return new TextBlock { Id = Guid.Parse("ecef92c1-dffc-4db6-856d-b9ed619657fa"), Type = TextBlockType.Text, Text = $"Any time you score a critical hit with an unarmed {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} gained from {ToMarkdownLink<Models.Entities.Spell>("dragon form", Spells.Instances.DragonForm.ID)}, you recharge the spell's breath weapon immediately." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

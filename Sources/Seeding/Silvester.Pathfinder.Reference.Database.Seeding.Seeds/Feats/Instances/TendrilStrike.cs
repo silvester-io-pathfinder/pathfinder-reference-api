@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d0e0bef1-c3d3-42cb-b4de-25be88d43e50"), Type = TextBlockType.Text, Text = "Stretching to extend its body to its limits, your eidolon attacks a foe that would normally be beyond its reach. Your eidolon makes a melee unarmed (action: Strike), increasing its reach by 5 feet for that (action: Strike). If the unarmed attack has the (trait: disarm), (trait: shove), or (trait: trip) trait, the eidolon can use the corresponding action instead of a (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("d0e0bef1-c3d3-42cb-b4de-25be88d43e50"), Type = TextBlockType.Text, Text = $"Stretching to extend its body to its limits, your eidolon attacks a foe that would normally be beyond its reach. Your eidolon makes a melee unarmed {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, increasing its reach by 5 feet for that {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If the unarmed attack has the {ToMarkdownLink<Models.Entities.Trait>("disarm", Traits.Instances.Disarm.ID)}, {ToMarkdownLink<Models.Entities.Trait>("shove", Traits.Instances.Shove.ID)}, or {ToMarkdownLink<Models.Entities.Trait>("trip", Traits.Instances.Trip.ID)} trait, the eidolon can use the corresponding action instead of a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

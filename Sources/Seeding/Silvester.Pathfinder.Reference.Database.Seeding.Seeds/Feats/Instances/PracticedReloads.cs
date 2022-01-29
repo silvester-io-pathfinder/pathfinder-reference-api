@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("472376f4-0203-40cd-8925-f546914a8c96"), Type = TextBlockType.Text, Text = "You've mastered the reloading techniques and methods usually practiced by only the most dedicated firearm professionals. You gain the slinger's reload for the way you selected with Gunslinger's Dedication." };
+            yield return new TextBlock { Id = Guid.Parse("472376f4-0203-40cd-8925-f546914a8c96"), Type = TextBlockType.Text, Text = $"You've mastered the reloading techniques and methods usually practiced by only the most dedicated firearm professionals. You gain the slinger's reload for the way you selected with Gunslinger's Dedication." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

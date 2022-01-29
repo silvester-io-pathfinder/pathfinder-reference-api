@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f104d2dd-38c9-49af-9f55-041ca6b3446b"), Type = TextBlockType.Text, Text = "You can selectively stop your bleeding with ease. Reduce the DC of flat checks to stop persistent bleed damage you have from 15 to 10, and you can use a single action that has the (trait: concentrate) trait to gain an early flat check without physically binding the wounds. You recover naturally from the drained condition twice as quickly as normal." };
+            yield return new TextBlock { Id = Guid.Parse("f104d2dd-38c9-49af-9f55-041ca6b3446b"), Type = TextBlockType.Text, Text = $"You can selectively stop your bleeding with ease. Reduce the DC of flat checks to stop persistent bleed damage you have from 15 to 10, and you can use a single action that has the {ToMarkdownLink<Models.Entities.Trait>("concentrate", Traits.Instances.Concentrate.ID)} trait to gain an early flat check without physically binding the wounds. You recover naturally from the drained condition twice as quickly as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

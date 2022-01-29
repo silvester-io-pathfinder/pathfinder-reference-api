@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("79525620-c8ef-41cb-80a5-906d203a7b3e"), Type = TextBlockType.Text, Text = "You whirl a foe to smash into all nearby creatures before throwing them far away in imitation of the techniques of your rival, Ran-To. You (feat: Thrash). During this (feat: Thrash), your (feat: Collateral Thrash) feat applies to all foes adjacent to you. You can then throw the grabbed creature 10 feet, where they fall prone." };
-            yield return new TextBlock { Id = Guid.Parse("260bef35-4a0a-4996-9f6b-0e9036e80072"), Type = TextBlockType.Text, Text = "If the foe you choose for (feat: Collateral Thrash) is also adjacent to you, they attempt only one save and take the damage only once." };
+            yield return new TextBlock { Id = Guid.Parse("79525620-c8ef-41cb-80a5-906d203a7b3e"), Type = TextBlockType.Text, Text = $"You whirl a foe to smash into all nearby creatures before throwing them far away in imitation of the techniques of your rival, Ran-To. You {ToMarkdownLink<Models.Entities.Feat>("Thrash", Feats.Instances.Thrash.ID)}. During this {ToMarkdownLink<Models.Entities.Feat>("Thrash", Feats.Instances.Thrash.ID)}, your {ToMarkdownLink<Models.Entities.Feat>("Collateral Thrash", Feats.Instances.CollateralThrash.ID)} feat applies to all foes adjacent to you. You can then throw the grabbed creature 10 feet, where they fall prone." };
+            yield return new TextBlock { Id = Guid.Parse("260bef35-4a0a-4996-9f6b-0e9036e80072"), Type = TextBlockType.Text, Text = $"If the foe you choose for {ToMarkdownLink<Models.Entities.Feat>("Collateral Thrash", Feats.Instances.CollateralThrash.ID)} is also adjacent to you, they attempt only one save and take the damage only once." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

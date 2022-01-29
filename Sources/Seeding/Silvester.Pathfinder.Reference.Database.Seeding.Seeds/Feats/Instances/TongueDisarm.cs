@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f7b64707-e563-4e5a-a2b7-a984e4998349"), Type = TextBlockType.Text, Text = "You lash out with your tongue to disarm your foe. You attempt to (action: Disarm) a creature within 10 feet, ignoring the requirement that you must have at least one hand free." };
+            yield return new TextBlock { Id = Guid.Parse("f7b64707-e563-4e5a-a2b7-a984e4998349"), Type = TextBlockType.Text, Text = $"You lash out with your tongue to disarm your foe. You attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Disarm", SkillActions.Instances.Disarm.ID)} a creature within 10 feet, ignoring the requirement that you must have at least one hand free." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

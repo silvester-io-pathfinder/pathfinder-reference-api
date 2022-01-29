@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("39c2b775-ee88-4794-9e09-e6512a8e5096"), Type = TextBlockType.Text, Text = "Your runes provide a warding effect that protects you against a specific school of magic. Choose a school of magic other than (trait: divination). You gain a rune on your body corresponding to that school, and you gain a +2 circumstance bonus to all saving throws against effects of that school." };
+            yield return new TextBlock { Id = Guid.Parse("39c2b775-ee88-4794-9e09-e6512a8e5096"), Type = TextBlockType.Text, Text = $"Your runes provide a warding effect that protects you against a specific school of magic. Choose a school of magic other than {ToMarkdownLink<Models.Entities.Trait>("divination", Traits.Instances.Divination.ID)}. You gain a rune on your body corresponding to that school, and you gain a +2 circumstance bonus to all saving throws against effects of that school." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c127251f-552d-488e-bfca-6e397043021a"), Type = TextBlockType.Text, Text = "You have expanded your supply of near-infinite items. Choose a research field. Add one item from the list of options available to that field from perpetual infusions, or two items if you choose your own field. If you have perpetual potency or perpetual perfection, you gain an additional item (or items if you chose your own field) appropriate to the field you chose, for instance a higher-level version of the bomb you chose or a new poison." };
+            yield return new TextBlock { Id = Guid.Parse("c127251f-552d-488e-bfca-6e397043021a"), Type = TextBlockType.Text, Text = $"You have expanded your supply of near-infinite items. Choose a research field. Add one item from the list of options available to that field from perpetual infusions, or two items if you choose your own field. If you have perpetual potency or perpetual perfection, you gain an additional item (or items if you chose your own field) appropriate to the field you chose, for instance a higher-level version of the bomb you chose or a new poison." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7ebe2f8f-7d59-44fb-84c1-e100538aa71b"), Type = TextBlockType.Text, Text = "Your eidolon can shrink even further. When using (feat: Shrink Down), your eidolon can reduce its size to Tiny." };
+            yield return new TextBlock { Id = Guid.Parse("7ebe2f8f-7d59-44fb-84c1-e100538aa71b"), Type = TextBlockType.Text, Text = $"Your eidolon can shrink even further. When using {ToMarkdownLink<Models.Entities.Feat>("Shrink Down", Feats.Instances.ShrinkDown.ID)}, your eidolon can reduce its size to Tiny." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

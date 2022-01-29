@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("dde58889-a796-4c06-9462-02029f6dcbd7"), Type = TextBlockType.Text, Text = "~ Access: secure Visitor's Pins or an alliance with Mengkare." };
-            yield return new TextBlock { Id = Guid.Parse("094d9ad0-2595-4b66-9653-95c4d378a535"), Type = TextBlockType.Text, Text = "The moving power of your songs can stir the spirits of the dead to rise once more and fight alongside you. You learn the (spell: song of the fallen) composition spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("dde58889-a796-4c06-9462-02029f6dcbd7"), Type = TextBlockType.Text, Text = $"~ Access: secure Visitor's Pins or an alliance with Mengkare." };
+            yield return new TextBlock { Id = Guid.Parse("094d9ad0-2595-4b66-9653-95c4d378a535"), Type = TextBlockType.Text, Text = $"The moving power of your songs can stir the spirits of the dead to rise once more and fight alongside you. You learn the {ToMarkdownLink<Models.Entities.Feat>("song of the fallen", Feats.Instances.SongOfTheFallen.ID)} composition spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

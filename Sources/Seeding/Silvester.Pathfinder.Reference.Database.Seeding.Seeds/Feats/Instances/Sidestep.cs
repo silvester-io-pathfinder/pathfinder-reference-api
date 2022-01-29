@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("537cb709-6871-4eb7-b9ec-6e8876cba72b"), Type = TextBlockType.Text, Text = "You deftly step out of the way of an attack, letting the blow continue to the creature next to you. You redirect the attack to a creature of your choice that is adjacent to you and within the reach of the triggering attack. The attacker rerolls the (action: Strike's | Strike) attack roll against the new target." };
+            yield return new TextBlock { Id = Guid.Parse("537cb709-6871-4eb7-b9ec-6e8876cba72b"), Type = TextBlockType.Text, Text = $"You deftly step out of the way of an attack, letting the blow continue to the creature next to you. You redirect the attack to a creature of your choice that is adjacent to you and within the reach of the triggering attack. The attacker rerolls the {ToMarkdownLink<Models.Entities.Action>("Strike's", Actions.Instances.Strike.ID)} attack roll against the new target." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

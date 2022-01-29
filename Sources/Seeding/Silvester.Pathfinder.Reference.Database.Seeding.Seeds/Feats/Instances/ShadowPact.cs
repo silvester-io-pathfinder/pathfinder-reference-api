@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8d3e2c15-16f5-4b8d-9a8e-74f5c6d9f882"), Type = TextBlockType.Text, Text = "~ Access: Nidalese ethnicity" };
-            yield return new TextBlock { Id = Guid.Parse("f7df7620-8564-41e3-89a4-0b6abbe7e007"), Type = TextBlockType.Text, Text = "Thousands of years ago, your ancestors made a pact with Zon-Kuthon. He has not forgotten, even if you might wish he had. You can take 1 damage to mix blood and shadows to cast 5th-level (spell: creation) as an innate divine spell. You can use this ability as often as you wish, but you can have only one such object in existence at a time. If the object encounters bright light, the spell ends and the object dissolves into shadows." };
+            yield return new TextBlock { Id = Guid.Parse("8d3e2c15-16f5-4b8d-9a8e-74f5c6d9f882"), Type = TextBlockType.Text, Text = $"~ Access: Nidalese ethnicity" };
+            yield return new TextBlock { Id = Guid.Parse("f7df7620-8564-41e3-89a4-0b6abbe7e007"), Type = TextBlockType.Text, Text = $"Thousands of years ago, your ancestors made a pact with Zon-Kuthon. He has not forgotten, even if you might wish he had. You can take 1 damage to mix blood and shadows to cast 5th-level {ToMarkdownLink<Models.Entities.Spell>("creation", Spells.Instances.Creation.ID)} as an innate divine spell. You can use this ability as often as you wish, but you can have only one such object in existence at a time. If the object encounters bright light, the spell ends and the object dissolves into shadows." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

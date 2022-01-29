@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aaacef1e-a242-4791-b5d2-bb9022dd0682"), Type = TextBlockType.Text, Text = "Hinges, clamps, and telescoping parts make your innovation collapsible and adjustable. It gains the (trait: modular | modular B, P, or S) trait for bludgeoning, piercing, and slashing. You can (action: Interact) to collapse the item down to light Bulk or to return it to your normal form. When it's collapsed to light Bulk, it has the (trait: concealable) trait, which grants you a +2 circumstance bonus to Stealth checks and DCs to hide or conceal the weapon." };
+            yield return new TextBlock { Id = Guid.Parse("aaacef1e-a242-4791-b5d2-bb9022dd0682"), Type = TextBlockType.Text, Text = $"Hinges, clamps, and telescoping parts make your innovation collapsible and adjustable. It gains the {ToMarkdownLink<Models.Entities.Trait>("modular", Traits.Instances.Modular.ID)} (B, P, or S) trait for bludgeoning, piercing, and slashing. You can {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to collapse the item down to light Bulk or to return it to your normal form. When it's collapsed to light Bulk, it has the {ToMarkdownLink<Models.Entities.Trait>("concealable", Traits.Instances.Concealable.ID)} trait, which grants you a +2 circumstance bonus to Stealth checks and DCs to hide or conceal the weapon." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

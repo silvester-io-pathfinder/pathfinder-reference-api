@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc64ee69-f311-49de-a06d-fedda0244ae5"), Type = TextBlockType.Text, Text = "Increase the spell slots you gain from druid archetype feats by 1 for each spell level other than your two highest druid spell slots." };
+            yield return new TextBlock { Id = Guid.Parse("fc64ee69-f311-49de-a06d-fedda0244ae5"), Type = TextBlockType.Text, Text = $"Increase the spell slots you gain from druid archetype feats by 1 for each spell level other than your two highest druid spell slots." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

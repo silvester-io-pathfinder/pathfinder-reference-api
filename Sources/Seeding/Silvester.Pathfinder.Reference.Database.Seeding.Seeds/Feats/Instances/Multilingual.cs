@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("912e6237-521c-4730-b37c-98e542cbe1d9"), Type = TextBlockType.Text, Text = "You easily pick up new languages. You learn two new languages, chosen from common languages, uncommon languages, and any others you have access to. You learn an additional language if you are or become a master in Society and again if you are or become legendary." };
+            yield return new TextBlock { Id = Guid.Parse("912e6237-521c-4730-b37c-98e542cbe1d9"), Type = TextBlockType.Text, Text = $"You easily pick up new languages. You learn two new languages, chosen from common languages, uncommon languages, and any others you have access to. You learn an additional language if you are or become a master in Society and again if you are or become legendary." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ae3a38e3-97d0-4c68-a025-d0191d10eff1"), Type = TextBlockType.Text, Text = "You can ask questions of, receive answers from, and use the Diplomacy skill with spiders and other arachnids. The GM determines which creatures count for this ability." };
+            yield return new TextBlock { Id = Guid.Parse("ae3a38e3-97d0-4c68-a025-d0191d10eff1"), Type = TextBlockType.Text, Text = $"You can ask questions of, receive answers from, and use the Diplomacy skill with spiders and other arachnids. The GM determines which creatures count for this ability." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5465b31e-2d5c-40a3-9972-9431a7f7ff72"), Type = TextBlockType.Text, Text = "You concentrate on your mental state, tapping into that raw emotional energy. Take your (feat: Catharsis) reaction, causing the catharsis activation and entering your emotional fervor as normal. The fervor lasts only until the end of your turn. At the end of your emotional fervor, you experience the effects of your emotional fallout, as normal." };
+            yield return new TextBlock { Id = Guid.Parse("5465b31e-2d5c-40a3-9972-9431a7f7ff72"), Type = TextBlockType.Text, Text = $"You concentrate on your mental state, tapping into that raw emotional energy. Take your {ToMarkdownLink<Models.Entities.Feat>("Catharsis", Feats.Instances.Catharsis.ID)} reaction, causing the catharsis activation and entering your emotional fervor as normal. The fervor lasts only until the end of your turn. At the end of your emotional fervor, you experience the effects of your emotional fallout, as normal." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

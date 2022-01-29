@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("20f4fac8-2fe2-416d-8ff2-2458f3a5959e"), Type = TextBlockType.Text, Text = "You make a fierce swipe with both hands. Make a tiger claw (action: Strike). It deals two extra weapon damage dice (three extra dice if you're 14th level or higher), and you can push the target 5 feet away as if you had successfully (action: Shoved | Shove) them. If the attack is a critical success and deals damage, add your Strength modifier to the persistent bleed damage from your tiger claw." };
+            yield return new TextBlock { Id = Guid.Parse("20f4fac8-2fe2-416d-8ff2-2458f3a5959e"), Type = TextBlockType.Text, Text = $"You make a fierce swipe with both hands. Make a tiger claw {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. It deals two extra weapon damage dice (three extra dice if you're 14th level or higher), and you can push the target 5 feet away as if you had successfully {ToMarkdownLink<Models.Entities.SkillAction>("Shoved", SkillActions.Instances.Shove.ID)} them. If the attack is a critical success and deals damage, add your Strength modifier to the persistent bleed damage from your tiger claw." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

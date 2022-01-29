@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4f7330b6-4591-419c-948d-446872d57823"), Type = TextBlockType.Text, Text = "You've trained to protect your allies by diverting the worst attacks to yourself. The enemy doesn't double the damage from the triggering (action: Strike) but instead applies the normal damage to both you and your ally. Both of you take any effects that would happen on a hit that dealt damage, such as poison, but neither of you are subject to any effects that would happen only on a critical success." };
+            yield return new TextBlock { Id = Guid.Parse("4f7330b6-4591-419c-948d-446872d57823"), Type = TextBlockType.Text, Text = $"You've trained to protect your allies by diverting the worst attacks to yourself. The enemy doesn't double the damage from the triggering {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} but instead applies the normal damage to both you and your ally. Both of you take any effects that would happen on a hit that dealt damage, such as poison, but neither of you are subject to any effects that would happen only on a critical success." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

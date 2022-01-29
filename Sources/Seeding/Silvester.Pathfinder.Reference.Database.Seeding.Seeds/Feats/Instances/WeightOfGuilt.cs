@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("996cef5c-e283-49eb-b809-c7fe4ae379f3"), Type = TextBlockType.Text, Text = "Guilt clouds the minds of those who ignore your (feat: Glimpse of Redemption). Instead of making the triggering creature enfeebled 2, you can make it stupefied 2 for the same duration." };
+            yield return new TextBlock { Id = Guid.Parse("996cef5c-e283-49eb-b809-c7fe4ae379f3"), Type = TextBlockType.Text, Text = $"Guilt clouds the minds of those who ignore your {ToMarkdownLink<Models.Entities.Feat>("Glimpse of Redemption", Feats.Instances.GlimpseOfRedemption.ID)}. Instead of making the triggering creature enfeebled 2, you can make it stupefied 2 for the same duration." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

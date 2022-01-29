@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("027fce48-46db-4491-adfc-0ad2101370a3"), Type = TextBlockType.Text, Text = "Your perceptive abilities and ability to process sensory information are so far beyond the pale that you notice minute discrepancies in all sorts of illusions and transmutations. You are constantly under the effects of a 6th-level (spell: true seeing) spell, using your Perception modifier for the counteract check." };
+            yield return new TextBlock { Id = Guid.Parse("027fce48-46db-4491-adfc-0ad2101370a3"), Type = TextBlockType.Text, Text = $"Your perceptive abilities and ability to process sensory information are so far beyond the pale that you notice minute discrepancies in all sorts of illusions and transmutations. You are constantly under the effects of a 6th-level {ToMarkdownLink<Models.Entities.Spell>("true seeing", Spells.Instances.TrueSeeing.ID)} spell, using your Perception modifier for the counteract check." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

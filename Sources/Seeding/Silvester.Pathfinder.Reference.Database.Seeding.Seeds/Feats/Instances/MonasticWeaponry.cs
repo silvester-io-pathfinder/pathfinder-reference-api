@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("624f981a-53de-464f-830f-782d224ce764"), Type = TextBlockType.Text, Text = "You have trained with the traditional weaponry of your monastery or school. You gain access to uncommon weapons that have the (trait: monk | Monk - Weapon) trait and become trained in simple and martial monk weapons. When your proficiency rank for unarmed attacks increases to expert or master, your proficiency rank for these weapons increases to expert or master as well." };
-            yield return new TextBlock { Id = Guid.Parse("66fbfb02-b254-4fb5-96cc-a7191635494d"), Type = TextBlockType.Text, Text = "You can use melee monk weapons with any of your monk feats or monk abilities that normally require unarmed attacks, though not if the feat or ability requires you to use a single specific type of attack, such as (feat: Crane Stance)." };
+            yield return new TextBlock { Id = Guid.Parse("624f981a-53de-464f-830f-782d224ce764"), Type = TextBlockType.Text, Text = $"You have trained with the traditional weaponry of your monastery or school. You gain access to uncommon weapons that have the {ToMarkdownLink<Models.Entities.Trait>("monk", Traits.Instances.Monk.ID)} trait and become trained in simple and martial monk weapons. When your proficiency rank for unarmed attacks increases to expert or master, your proficiency rank for these weapons increases to expert or master as well." };
+            yield return new TextBlock { Id = Guid.Parse("66fbfb02-b254-4fb5-96cc-a7191635494d"), Type = TextBlockType.Text, Text = $"You can use melee monk weapons with any of your monk feats or monk abilities that normally require unarmed attacks, though not if the feat or ability requires you to use a single specific type of attack, such as {ToMarkdownLink<Models.Entities.Feat>("Crane Stance", Feats.Instances.CraneStance.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

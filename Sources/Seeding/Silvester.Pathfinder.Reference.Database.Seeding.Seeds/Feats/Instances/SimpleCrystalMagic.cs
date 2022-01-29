@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5da3c14f-8f2f-4164-88a5-c853f3e6430b"), Type = TextBlockType.Text, Text = "As long as you meditate before a gemstone worth at least 10 gp as part of your daily preparations, you are capable of seeing magic as flowing runes that reveal information about magic objects, and you can scribe a personal rune that represents you. You gain the (spell: read aura) and (spell: sigil) cantrips. You cast these cantrips as arcane innate spells at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
+            yield return new TextBlock { Id = Guid.Parse("5da3c14f-8f2f-4164-88a5-c853f3e6430b"), Type = TextBlockType.Text, Text = $"As long as you meditate before a gemstone worth at least 10 gp as part of your daily preparations, you are capable of seeing magic as flowing runes that reveal information about magic objects, and you can scribe a personal rune that represents you. You gain the {ToMarkdownLink<Models.Entities.Spell>("read aura", Spells.Instances.ReadAura.ID)} and {ToMarkdownLink<Models.Entities.Spell>("sigil", Spells.Instances.Sigil.ID)} cantrips. You cast these cantrips as arcane innate spells at will. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

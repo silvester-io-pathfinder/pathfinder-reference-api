@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fa9f2f05-2afa-472f-a3bc-f5ef0bd77462"), Type = TextBlockType.Text, Text = "You combine your synergy and spells into a fantastic web of magic, allowing you to cast two spells at once. If the next action you use is to (activity: Cast a Spell) from one of your halcyon spell slots, after that spell resolves, you can Cast another Spell as a free action. This spell must be cast from one of your halcyon spell slots and be a spell that would normally take two actions to cast." };
+            yield return new TextBlock { Id = Guid.Parse("fa9f2f05-2afa-472f-a3bc-f5ef0bd77462"), Type = TextBlockType.Text, Text = $"You combine your synergy and spells into a fantastic web of magic, allowing you to cast two spells at once. If the next action you use is to {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)} from one of your halcyon spell slots, after that spell resolves, you can Cast another Spell as a free action. This spell must be cast from one of your halcyon spell slots and be a spell that would normally take two actions to cast." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

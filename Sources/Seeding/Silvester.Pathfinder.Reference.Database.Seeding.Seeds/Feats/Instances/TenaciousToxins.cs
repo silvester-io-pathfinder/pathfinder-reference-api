@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aa6451ab-375f-4c84-83f1-0019b107ab0b"), Type = TextBlockType.Text, Text = "Your victims tend to expire long before your poisons, since the latter have been specifically formulated to last longer. The maximum duration of any poison you create increases by an amount equal to the poison's stage 1 interval, to a maximum of twice the poison's maximum duration." };
+            yield return new TextBlock { Id = Guid.Parse("aa6451ab-375f-4c84-83f1-0019b107ab0b"), Type = TextBlockType.Text, Text = $"Your victims tend to expire long before your poisons, since the latter have been specifically formulated to last longer. The maximum duration of any poison you create increases by an amount equal to the poison's stage 1 interval, to a maximum of twice the poison's maximum duration." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

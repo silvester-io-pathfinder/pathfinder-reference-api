@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("21fad3e8-120e-4147-b047-ea64c86c6770"), Type = TextBlockType.Text, Text = "You won't allow others to restrain you. You can cast (spell: freedom of movement) on yourself as a primal innate spell once per day." };
+            yield return new TextBlock { Id = Guid.Parse("21fad3e8-120e-4147-b047-ea64c86c6770"), Type = TextBlockType.Text, Text = $"You won't allow others to restrain you. You can cast {ToMarkdownLink<Models.Entities.Spell>("freedom of movement", Spells.Instances.FreedomOfMovement.ID)} on yourself as a primal innate spell once per day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

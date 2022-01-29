@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("561350a6-e6db-4a28-a6f2-2c61581839bc"), Type = TextBlockType.Text, Text = "Escaping your nets is no simple task. The Athletics DC to (action: Force Open) or (action: Escape) your nets increases from 16 to 18. After a creature you grabbed with a (item: net) (action: Escapes | Escape) or (action: Forces Open | Force Open) the net, stray strands of the net cling to the creature, causing them to remain flat-footed until the beginning of their next turn." };
+            yield return new TextBlock { Id = Guid.Parse("561350a6-e6db-4a28-a6f2-2c61581839bc"), Type = TextBlockType.Text, Text = $"Escaping your nets is no simple task. The Athletics DC to {ToMarkdownLink<Models.Entities.SkillAction>("Force Open", SkillActions.Instances.ForceOpen.ID)} or {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)} your nets increases from 16 to 18. After a creature you grabbed with a {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("net", Items.AdventuringGears.Instances.Net.ID)} {ToMarkdownLink<Models.Entities.Action>("Escapes", Actions.Instances.Escape.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Forces Open", SkillActions.Instances.ForceOpen.ID)} the net, stray strands of the net cling to the creature, causing them to remain flat-footed until the beginning of their next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

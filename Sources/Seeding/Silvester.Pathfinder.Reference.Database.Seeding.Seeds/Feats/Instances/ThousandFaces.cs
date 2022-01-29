@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea22531b-6b9f-4778-a410-ed9cf7d420f0"), Type = TextBlockType.Text, Text = "Your form is as mutable as the weather, changing to meet your whim. You add the forms listed in (spell: humanoid form) to your wild shape list." };
+            yield return new TextBlock { Id = Guid.Parse("ea22531b-6b9f-4778-a410-ed9cf7d420f0"), Type = TextBlockType.Text, Text = $"Your form is as mutable as the weather, changing to meet your whim. You add the forms listed in {ToMarkdownLink<Models.Entities.Spell>("humanoid form", Spells.Instances.HumanoidForm.ID)} to your wild shape list." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

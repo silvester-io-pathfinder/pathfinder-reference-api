@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f2ccd923-f9fd-4cff-a654-1f0036b8bd9f"), Type = TextBlockType.Text, Text = "You've mastered attaching clockwork propellers to your daily quick-deploy snares that use gears. This allows you to place your snares in the air or underwater, where they remain in place for up to 10 minutes, after which the propeller runs out of power and they fall or sink. Unless you use additional precautions to hide it, a propeller snare's location is usually obvious." };
+            yield return new TextBlock { Id = Guid.Parse("f2ccd923-f9fd-4cff-a654-1f0036b8bd9f"), Type = TextBlockType.Text, Text = $"You've mastered attaching clockwork propellers to your daily quick-deploy snares that use gears. This allows you to place your snares in the air or underwater, where they remain in place for up to 10 minutes, after which the propeller runs out of power and they fall or sink. Unless you use additional precautions to hide it, a propeller snare's location is usually obvious." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("86e0d0d4-3cbc-4ada-9616-b04be73b3430"), Type = TextBlockType.Text, Text = "When you look for foes, you can catch even the slightest cues, such as their minute movements or the shifting of air currents on your skin. Even though you failed at the triggering check, you automatically sense any undetected creatures in the area where you're (action: Seeking | Seek), making them merely hidden to you." };
+            yield return new TextBlock { Id = Guid.Parse("86e0d0d4-3cbc-4ada-9616-b04be73b3430"), Type = TextBlockType.Text, Text = $"When you look for foes, you can catch even the slightest cues, such as their minute movements or the shifting of air currents on your skin. Even though you failed at the triggering check, you automatically sense any undetected creatures in the area where you're {ToMarkdownLink<Models.Entities.Action>("Seeking", Actions.Instances.Seek.ID)}, making them merely hidden to you." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

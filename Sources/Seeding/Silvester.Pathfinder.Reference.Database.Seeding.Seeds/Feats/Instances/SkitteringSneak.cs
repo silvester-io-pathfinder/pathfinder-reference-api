@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c4899216-6cea-4033-a03d-1c6465a64428"), Type = TextBlockType.Text, Text = "You squish, slink, and skitter from cover to cover with great speed and stealth. You can move up to your full Speed when you (action: Sneak)." };
+            yield return new TextBlock { Id = Guid.Parse("c4899216-6cea-4033-a03d-1c6465a64428"), Type = TextBlockType.Text, Text = $"You squish, slink, and skitter from cover to cover with great speed and stealth. You can move up to your full Speed when you {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

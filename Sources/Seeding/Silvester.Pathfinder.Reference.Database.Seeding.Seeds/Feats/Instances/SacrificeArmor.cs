@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b2724f3f-cdcc-427c-884c-408b4d8fc5b5"), Type = TextBlockType.Text, Text = "You twist your body to lessen the impact of an attack. Reduce the damage you take by an amount equal to twice your armor's level. Your armor becomes broken, reducing its Hit Points to its Broken Threshold. If your armor was already damaged, it is destroyed instead." };
+            yield return new TextBlock { Id = Guid.Parse("b2724f3f-cdcc-427c-884c-408b4d8fc5b5"), Type = TextBlockType.Text, Text = $"You twist your body to lessen the impact of an attack. Reduce the damage you take by an amount equal to twice your armor's level. Your armor becomes broken, reducing its Hit Points to its Broken Threshold. If your armor was already damaged, it is destroyed instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

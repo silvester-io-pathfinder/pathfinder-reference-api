@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2f7dcc09-edd4-4450-a642-9f8001e8e4ad"), Type = TextBlockType.Text, Text = "You've become hardened by conflict after everything you've faced, and you possess a certain intractable stubbornness. If the reroll granted to you by your (feat: Grit and Tenacity) reaction is a success, you get a critical success instead; if it's a critical failure, you get a failure instead." };
+            yield return new TextBlock { Id = Guid.Parse("2f7dcc09-edd4-4450-a642-9f8001e8e4ad"), Type = TextBlockType.Text, Text = $"You've become hardened by conflict after everything you've faced, and you possess a certain intractable stubbornness. If the reroll granted to you by your {ToMarkdownLink<Models.Entities.Feat>("Grit and Tenacity", Feats.Instances.GritAndTenacity.ID)} reaction is a success, you get a critical success instead; if it's a critical failure, you get a failure instead." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

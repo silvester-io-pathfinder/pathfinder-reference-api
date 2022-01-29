@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6acf225d-78bf-4337-a457-cf02cb47df61"), Type = TextBlockType.Text, Text = "Your soul is warded against the power of undeath and plague, as well as that of the evil former psychopomps known as sahkils. You gain a +1 circumstance bonus to saving throws against (trait: death) effects, disease, and all effects from undead or sahkils. This bonus increases to +2 against an undead or sahkil's (trait: death) effect or disease." };
+            yield return new TextBlock { Id = Guid.Parse("6acf225d-78bf-4337-a457-cf02cb47df61"), Type = TextBlockType.Text, Text = $"Your soul is warded against the power of undeath and plague, as well as that of the evil former psychopomps known as sahkils. You gain a +1 circumstance bonus to saving throws against {ToMarkdownLink<Models.Entities.Trait>("death", Traits.Instances.Death.ID)} effects, disease, and all effects from undead or sahkils. This bonus increases to +2 against an undead or sahkil's {ToMarkdownLink<Models.Entities.Trait>("death", Traits.Instances.Death.ID)} effect or disease." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

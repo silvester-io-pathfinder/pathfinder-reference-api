@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6e98baf5-1543-4e0c-b83f-d1b92b47575a"), Type = TextBlockType.Text, Text = "You can scuttle farther and faster when maneuvering alongside allies. When you use (action: Goblin Scuttle), you can (action: Stride) up to half your Speed instead of (action: Stepping | Step)." };
+            yield return new TextBlock { Id = Guid.Parse("6e98baf5-1543-4e0c-b83f-d1b92b47575a"), Type = TextBlockType.Text, Text = $"You can scuttle farther and faster when maneuvering alongside allies. When you use {ToMarkdownLink<Models.Entities.Feat>("Goblin Scuttle", Feats.Instances.GoblinScuttle.ID)}, you can {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} up to half your Speed instead of {ToMarkdownLink<Models.Entities.Action>("Stepping", Actions.Instances.Step.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

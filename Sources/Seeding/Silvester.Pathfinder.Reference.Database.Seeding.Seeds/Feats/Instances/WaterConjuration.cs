@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e2164154-3ca7-40e3-8b26-ccb2584de055"), Type = TextBlockType.Text, Text = "You carry the ocean with you wherever you go. You can cast (spell: create water) as a primal innate spell once per day. Each time you cast (spell: create water), you choose if you create fresh water or salt water." };
+            yield return new TextBlock { Id = Guid.Parse("e2164154-3ca7-40e3-8b26-ccb2584de055"), Type = TextBlockType.Text, Text = $"You carry the ocean with you wherever you go. You can cast {ToMarkdownLink<Models.Entities.Spell>("create water", Spells.Instances.CreateWater.ID)} as a primal innate spell once per day. Each time you cast {ToMarkdownLink<Models.Entities.Spell>("create water", Spells.Instances.CreateWater.ID)}, you choose if you create fresh water or salt water." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7ca54dbd-be4a-4f2f-9a15-a292154515c8"), Type = TextBlockType.Text, Text = "When you (action: Leap), you can jump 5 feet up with a vertical (action: Leap), and you increase the distance you can jump horizontally by 5 feet." };
+            yield return new TextBlock { Id = Guid.Parse("7ca54dbd-be4a-4f2f-9a15-a292154515c8"), Type = TextBlockType.Text, Text = $"When you {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)}, you can jump 5 feet up with a vertical {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)}, and you increase the distance you can jump horizontally by 5 feet." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d2774799-9999-44e1-bfd3-5aa47eb2255c"), Type = TextBlockType.Text, Text = "You've woven an incredibly powerful network of interlocking mesh around your armor, which catches piercing attacks and diffuses them. While wearing your armor, you gain resistance to piercing damage equal to half your level." };
+            yield return new TextBlock { Id = Guid.Parse("d2774799-9999-44e1-bfd3-5aa47eb2255c"), Type = TextBlockType.Text, Text = $"You've woven an incredibly powerful network of interlocking mesh around your armor, which catches piercing attacks and diffuses them. While wearing your armor, you gain resistance to piercing damage equal to half your level." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

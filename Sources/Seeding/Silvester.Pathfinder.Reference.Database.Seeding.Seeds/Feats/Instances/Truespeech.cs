@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cda878ba-5804-41cc-bf79-d11e851aed89"), Type = TextBlockType.Text, Text = "It is paramount that you are understood and you understand others; language need not impede your message. You can cast (spell: tongues) as a 5th-level divine innate spell once per day on yourself only. You gain a +1 status bonus to Diplomacy checks for the duration of the spell when speaking to creatures with whom you already shared a language before casting." };
+            yield return new TextBlock { Id = Guid.Parse("cda878ba-5804-41cc-bf79-d11e851aed89"), Type = TextBlockType.Text, Text = $"It is paramount that you are understood and you understand others; language need not impede your message. You can cast {ToMarkdownLink<Models.Entities.Spell>("tongues", Spells.Instances.Tongues.ID)} as a 5th-level divine innate spell once per day on yourself only. You gain a +1 status bonus to Diplomacy checks for the duration of the spell when speaking to creatures with whom you already shared a language before casting." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

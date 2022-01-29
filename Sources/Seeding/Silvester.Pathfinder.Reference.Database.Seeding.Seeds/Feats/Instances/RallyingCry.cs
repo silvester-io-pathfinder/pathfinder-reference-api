@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b627f832-159c-4bfb-a4d2-115d2f930e2d"), Type = TextBlockType.Text, Text = "You call out to your allies and push them to give their all in combat. All allies within 30 feet that can hear you gain a number of temporary Hit Points equal to your level. In addition, these allies become quickened for 1 minute but can only use the extra action to (action: Step), (action: Stride), or (action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("b627f832-159c-4bfb-a4d2-115d2f930e2d"), Type = TextBlockType.Text, Text = $"You call out to your allies and push them to give their all in combat. All allies within 30 feet that can hear you gain a number of temporary Hit Points equal to your level. In addition, these allies become quickened for 1 minute but can only use the extra action to {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)}, {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}, or {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

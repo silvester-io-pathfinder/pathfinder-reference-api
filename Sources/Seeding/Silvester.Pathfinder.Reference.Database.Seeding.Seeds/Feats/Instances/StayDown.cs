@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9f229962-f62c-4a76-b7ed-6cc0fcf48345"), Type = TextBlockType.Text, Text = "You have ways of keeping your foes down. Attempt an Athletics check against the triggering foe's Fortitude DC. On a success, they don't stand up and remain prone. On a critical success, they can't (action: Stand | Stand) until their next turn." };
+            yield return new TextBlock { Id = Guid.Parse("9f229962-f62c-4a76-b7ed-6cc0fcf48345"), Type = TextBlockType.Text, Text = $"You have ways of keeping your foes down. Attempt an Athletics check against the triggering foe's Fortitude DC. On a success, they don't stand up and remain prone. On a critical success, they can't {ToMarkdownLink<Models.Entities.Action>("Stand", Actions.Instances.Stand.ID)} until their next turn." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

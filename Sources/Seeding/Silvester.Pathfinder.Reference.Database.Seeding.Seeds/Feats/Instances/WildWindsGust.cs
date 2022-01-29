@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("39291fbb-bad9-4c9b-a5b0-8e18ce65bd1c"), Type = TextBlockType.Text, Text = "You store up energy and release it in an enormous gust of rushing wind. Make a wind crash (action: Strike) against each creature in your choice of a 30-foot cone or a 60 foot line. These attacks all count toward your multiple attack penalty, but the penalty doesn't increase until after you make all the attacks." };
+            yield return new TextBlock { Id = Guid.Parse("39291fbb-bad9-4c9b-a5b0-8e18ce65bd1c"), Type = TextBlockType.Text, Text = $"You store up energy and release it in an enormous gust of rushing wind. Make a wind crash {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against each creature in your choice of a 30-foot cone or a 60 foot line. These attacks all count toward your multiple attack penalty, but the penalty doesn't increase until after you make all the attacks." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

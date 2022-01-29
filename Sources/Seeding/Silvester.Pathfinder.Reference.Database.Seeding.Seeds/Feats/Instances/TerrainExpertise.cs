@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("92ee936c-b7cc-4df7-be7f-3047f79d99db"), Type = TextBlockType.Text, Text = "Your experience in navigating a certain type of terrain makes you supremely confident while doing so. You gain a +1 circumstance bonus to Survival checks in one of the following types of terrain, chosen when you select this feat: aquatic, arctic, desert, forest, mountain, plains, sky, swamp, or underground." };
+            yield return new TextBlock { Id = Guid.Parse("92ee936c-b7cc-4df7-be7f-3047f79d99db"), Type = TextBlockType.Text, Text = $"Your experience in navigating a certain type of terrain makes you supremely confident while doing so. You gain a +1 circumstance bonus to Survival checks in one of the following types of terrain, chosen when you select this feat: aquatic, arctic, desert, forest, mountain, plains, sky, swamp, or underground." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

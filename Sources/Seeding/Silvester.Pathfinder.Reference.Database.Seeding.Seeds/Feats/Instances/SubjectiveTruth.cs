@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("27f80434-6683-418a-a7a7-543bf7f08c43"), Type = TextBlockType.Text, Text = "Your disparate identities allow you to defeat magic that detects lies. As long as what you say is true from the point of view of your current identity, you can say it even under effects like (spell: zone of truth) that force you to speak the truth." };
+            yield return new TextBlock { Id = Guid.Parse("27f80434-6683-418a-a7a7-543bf7f08c43"), Type = TextBlockType.Text, Text = $"Your disparate identities allow you to defeat magic that detects lies. As long as what you say is true from the point of view of your current identity, you can say it even under effects like {ToMarkdownLink<Models.Entities.Spell>("zone of truth", Spells.Instances.ZoneOfTruth.ID)} that force you to speak the truth." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

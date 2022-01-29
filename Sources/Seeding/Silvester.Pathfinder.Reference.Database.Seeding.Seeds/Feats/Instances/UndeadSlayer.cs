@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("aac20fac-fa32-48d8-8b86-e816e3cb3d93"), Type = TextBlockType.Text, Text = "Your knowledge of your own not-quite-living anatomy, combined with your experience in combat, helps you take down undead foes with ease. Against undead creatures, you gain a circumstance bonus to damage with weapons and unarmed attacks equal to the number of weapon damage dice for the (action: Strike). This bonus increases to double the number of weapon damage dice if your target has the (trait: vampire) trait." };
+            yield return new TextBlock { Id = Guid.Parse("aac20fac-fa32-48d8-8b86-e816e3cb3d93"), Type = TextBlockType.Text, Text = $"Your knowledge of your own not-quite-living anatomy, combined with your experience in combat, helps you take down undead foes with ease. Against undead creatures, you gain a circumstance bonus to damage with weapons and unarmed attacks equal to the number of weapon damage dice for the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. This bonus increases to double the number of weapon damage dice if your target has the {ToMarkdownLink<Models.Entities.Trait>("vampire", Traits.Instances.Vampire.ID)} trait." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

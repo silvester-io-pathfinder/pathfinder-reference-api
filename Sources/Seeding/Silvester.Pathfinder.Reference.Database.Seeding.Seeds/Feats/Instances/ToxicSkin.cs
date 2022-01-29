@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("f7646d1e-85b3-4613-bfd2-500d9e4f3119"), Type = TextBlockType.Text, Text = "You exude a deadly toxin. The triggering creature takes 1d4 poison damage (basic Fortitude save using your class DC or spell DC, whichever is higher). At 3rd level and every 2 levels thereafter, the damage increases by 1d4." };
+            yield return new TextBlock { Id = Guid.Parse("f7646d1e-85b3-4613-bfd2-500d9e4f3119"), Type = TextBlockType.Text, Text = $"You exude a deadly toxin. The triggering creature takes 1d4 poison damage (basic Fortitude save using your class DC or spell DC, whichever is higher). At 3rd level and every 2 levels thereafter, the damage increases by 1d4." };
         }
 
         protected override IEnumerable<Guid> GetTraits()
