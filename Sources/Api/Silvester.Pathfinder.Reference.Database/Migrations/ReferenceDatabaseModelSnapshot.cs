@@ -470,21 +470,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.ToTable("EidolonTrait");
                 });
 
-            modelBuilder.Entity("FeatTrait", b =>
-                {
-                    b.Property<Guid>("FeatsId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("TraitsId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("FeatsId", "TraitsId");
-
-                    b.HasIndex("TraitsId");
-
-                    b.ToTable("FeatTrait");
-                });
-
             modelBuilder.Entity("GunslingersWaySkill", b =>
                 {
                     b.Property<Guid>("GunslingersWaysId")
@@ -2737,6 +2722,9 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.Property<string>("Special")
                         .HasColumnType("text");
 
+                    b.Property<Guid?>("TraitId")
+                        .HasColumnType("uuid");
+
                     b.Property<string>("Trigger")
                         .HasColumnType("text");
 
@@ -2756,6 +2744,8 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         .HasMethod("GIN");
 
                     b.HasIndex("SourcePageId");
+
+                    b.HasIndex("TraitId");
 
                     b.ToTable("Feats");
                 });
@@ -2778,6 +2768,30 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.HasIndex("FeatId");
 
                     b.ToTable("FeatRequirement");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Entities.FeatTraitBinding", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("OwnerId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Specifier")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("TraitId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId");
+
+                    b.HasIndex("TraitId");
+
+                    b.ToTable("FeatTraitBinding");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Entities.Frequency", b =>
@@ -11859,21 +11873,6 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("FeatTrait", b =>
-                {
-                    b.HasOne("Silvester.Pathfinder.Reference.Database.Models.Entities.Feat", null)
-                        .WithMany()
-                        .HasForeignKey("FeatsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Silvester.Pathfinder.Reference.Database.Models.Entities.Trait", null)
-                        .WithMany()
-                        .HasForeignKey("TraitsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("GunslingersWaySkill", b =>
                 {
                     b.HasOne("Silvester.Pathfinder.Reference.Database.Models.Entities.GunslingersWay", null)
@@ -14156,6 +14155,10 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Silvester.Pathfinder.Reference.Database.Models.Entities.Trait", null)
+                        .WithMany("Feats")
+                        .HasForeignKey("TraitId");
+
                     b.OwnsMany("Silvester.Pathfinder.Reference.Database.Utilities.Text.TextBlock", "Details", b1 =>
                         {
                             b1.Property<Guid>("Id")
@@ -14218,6 +14221,25 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                         .IsRequired();
 
                     b.Navigation("Feat");
+                });
+
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Entities.FeatTraitBinding", b =>
+                {
+                    b.HasOne("Silvester.Pathfinder.Reference.Database.Models.Entities.Feat", "Owner")
+                        .WithMany("TraitBindings")
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Silvester.Pathfinder.Reference.Database.Models.Entities.Trait", "Trait")
+                        .WithMany()
+                        .HasForeignKey("TraitId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
+
+                    b.Navigation("Trait");
                 });
 
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Entities.GunslingersWay", b =>
@@ -19865,6 +19887,11 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.Navigation("Variants");
                 });
 
+            modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Entities.Feat", b =>
+                {
+                    b.Navigation("TraitBindings");
+                });
+
             modelBuilder.Entity("Silvester.Pathfinder.Reference.Database.Models.Entities.Hazard", b =>
                 {
                     b.Navigation("Actions");
@@ -20061,6 +20088,8 @@ namespace Silvester.Pathfinder.Reference.Database.Migrations
                     b.Navigation("BeastGuns");
 
                     b.Navigation("CombinationWeapons");
+
+                    b.Navigation("Feats");
 
                     b.Navigation("FundamentalArmorRunes");
 

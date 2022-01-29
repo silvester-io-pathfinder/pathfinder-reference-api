@@ -13,7 +13,7 @@ namespace Silvester.Pathfinder.Reference.Api
 
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
-            Debugger.Launch();
+            //Debugger.Launch();
 
             return Host
                 .CreateDefaultBuilder(args)
