@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fe2f1ee1-264e-4e38-9837-8e0c84ff7700"), Type = TextBlockType.Text, Text = "You can tap into some of the magic that flows through your blood to give you new life. You gain a number of temporary Hit Points equal to half your level (minimum 1) that last until the end of your next turn." };
+            yield return new TextBlock { Id = Guid.Parse("fe2f1ee1-264e-4e38-9837-8e0c84ff7700"), Type = TextBlockType.Text, Text = $"You can tap into some of the magic that flows through your blood to give you new life. You gain a number of temporary Hit Points equal to half your level (minimum 1) that last until the end of your next turn." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

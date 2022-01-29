@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5916e8b8-37a8-433e-8ad8-1bef54582dff"), Type = TextBlockType.Text, Text = "Your mask has grown into a manifestation of your pain, which you can release. The creature you successfully (action: Demoralized | Demoralize) takes 2d6 mental damage, or 4d6 mental damage if you're legendary in Intimidation. The target is then temporarily immune to additional damage from Mask of Pain for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("5916e8b8-37a8-433e-8ad8-1bef54582dff"), Type = TextBlockType.Text, Text = $"Your mask has grown into a manifestation of your pain, which you can release. The creature you successfully {ToMarkdownLink<Models.Entities.SkillAction>("Demoralized", SkillActions.Instances.Demoralize.ID)} takes 2d6 mental damage, or 4d6 mental damage if you're legendary in Intimidation. The target is then temporarily immune to additional damage from Mask of Pain for 24 hours." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

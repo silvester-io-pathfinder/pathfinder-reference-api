@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("76fdac00-2de0-44f1-8d93-54798af6ee60"), Type = TextBlockType.Text, Text = "You specialize in weapons that require two hands. You become trained in all simple and martial melee weapons that require two hands to wield or have the (trait: two-hand) trait. Whenever you gain a class feature that grants you expert or greater proficiency in weapons, you also gain that proficiency rank in these weapons. If you are at least an expert in such a weapon, you gain access to the critical specialization effect with that weapon." };
+            yield return new TextBlock { Id = Guid.Parse("76fdac00-2de0-44f1-8d93-54798af6ee60"), Type = TextBlockType.Text, Text = $"You specialize in weapons that require two hands. You become trained in all simple and martial melee weapons that require two hands to wield or have the {ToMarkdownLink<Models.Entities.Trait>("two-hand", Traits.Instances.TwoHand.ID)} trait. Whenever you gain a class feature that grants you expert or greater proficiency in weapons, you also gain that proficiency rank in these weapons. If you are at least an expert in such a weapon, you gain access to the critical specialization effect with that weapon." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

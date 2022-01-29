@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ea2f65dc-c870-4c04-ab4f-51da1d56d128"), Type = TextBlockType.Text, Text = "You can defend your companion in battle. You gain the (spell: magic hide) warden spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("ea2f65dc-c870-4c04-ab4f-51da1d56d128"), Type = TextBlockType.Text, Text = $"You can defend your companion in battle. You gain the {ToMarkdownLink<Models.Entities.Spell>("magic hide", Spells.Instances.MagicHide.ID)} warden spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

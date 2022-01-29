@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0749e426-2456-455c-b1da-4a61aaf76884"), Type = TextBlockType.Text, Text = "You have a nearly encyclopedic knowledge of all creatures of the world. You can use Nature to (action: Recall Knowledge) to identify any creature. In addition, you gain the benefits of (feat: Monster Hunter) (and (feat: Monster Warden), if you have it) on a success as well as a critical success." };
+            yield return new TextBlock { Id = Guid.Parse("0749e426-2456-455c-b1da-4a61aaf76884"), Type = TextBlockType.Text, Text = $"You have a nearly encyclopedic knowledge of all creatures of the world. You can use Nature to {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} to identify any creature. In addition, you gain the benefits of {ToMarkdownLink<Models.Entities.Feat>("Monster Hunter", Feats.Instances.MonsterHunter.ID)} (and {ToMarkdownLink<Models.Entities.Feat>("Monster Warden", Feats.Instances.MonsterWarden.ID)}, if you have it) on a success as well as a critical success." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

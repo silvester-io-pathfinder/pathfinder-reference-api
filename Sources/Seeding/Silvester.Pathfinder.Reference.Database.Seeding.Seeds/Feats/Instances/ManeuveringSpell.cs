@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cef6c9b2-58b5-4024-a643-84e94b117587"), Type = TextBlockType.Text, Text = "You instantly tap into the magical power of a spell you're casting to quickly pounce around the battlefield. You (action: Step), (action: Leap), or (action: Stand | Stand / Drop Prone). This action can be before or after you (action: Cast the Spell | Cast a Spell)." };
+            yield return new TextBlock { Id = Guid.Parse("cef6c9b2-58b5-4024-a643-84e94b117587"), Type = TextBlockType.Text, Text = $"You instantly tap into the magical power of a spell you're casting to quickly pounce around the battlefield. You {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)}, {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)}, or {ToMarkdownLink<Models.Entities.Action>("Stand", Actions.Instances.Stand.ID)}. This action can be before or after you {ToMarkdownLink<Models.Entities.Rule>("Cast the Spell", Rules.Instances.CastASpell.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

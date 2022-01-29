@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("16cd3527-203d-49ff-b8f9-8987ff92a2a1"), Type = TextBlockType.Text, Text = "During daily preparations, you can designate one of your spell slots to become two summoning slots of the same spell level, from which you can cast only summoning or (trait: incarnate) spells." };
-            yield return new TextBlock { Id = Guid.Parse("5341ac3c-03a3-404b-a83f-7165bde5563e"), Type = TextBlockType.Text, Text = "__You can manually add and change the color of spell slots under Manage Spells on the sheet.__" };
+            yield return new TextBlock { Id = Guid.Parse("16cd3527-203d-49ff-b8f9-8987ff92a2a1"), Type = TextBlockType.Text, Text = $"During daily preparations, you can designate one of your spell slots to become two summoning slots of the same spell level, from which you can cast only summoning or {ToMarkdownLink<Models.Entities.Trait>("incarnate", Traits.Instances.Incarnate.ID)} spells." };
+            yield return new TextBlock { Id = Guid.Parse("5341ac3c-03a3-404b-a83f-7165bde5563e"), Type = TextBlockType.Text, Text = $"__You can manually add and change the color of spell slots under Manage Spells on the sheet.__" };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("41295b6c-e915-4990-9b46-05174a01f46a"), Type = TextBlockType.Text, Text = "What you don't know about artillery isn't worth knowing and your mastery allows you to perform an impossible number of actions as part of a siege weapon's crew. You're permanently quickened. You can only use the extra action to Aim or Launch a siege weapon." };
+            yield return new TextBlock { Id = Guid.Parse("41295b6c-e915-4990-9b46-05174a01f46a"), Type = TextBlockType.Text, Text = $"What you don't know about artillery isn't worth knowing and your mastery allows you to perform an impossible number of actions as part of a siege weapon's crew. You're permanently quickened. You can only use the extra action to Aim or Launch a siege weapon." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

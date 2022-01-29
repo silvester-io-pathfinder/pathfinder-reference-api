@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5135b98f-9f9c-435c-9506-3fd86b90e04a"), Type = TextBlockType.Text, Text = "Your proficiency ranks for your eldritch archer spell attack rolls and spell DCs increase to master, and you gain a 7th-level spell slot. You can select a third spell from your repertoire as a signature spell. At 20th level, you gain an 8th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("5135b98f-9f9c-435c-9506-3fd86b90e04a"), Type = TextBlockType.Text, Text = $"Your proficiency ranks for your eldritch archer spell attack rolls and spell DCs increase to master, and you gain a 7th-level spell slot. You can select a third spell from your repertoire as a signature spell. At 20th level, you gain an 8th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

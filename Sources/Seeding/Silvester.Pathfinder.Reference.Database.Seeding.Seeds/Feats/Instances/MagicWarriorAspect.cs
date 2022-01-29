@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("a7b4d831-65bc-4cc9-8586-02bec7603187"), Type = TextBlockType.Text, Text = "You can alter your form to gain an aspect of the animal your mask represents. You gain the (spell: magic warrior aspect) focus spell. Increase the number of Focus Points in your focus pool by 1." };
+            yield return new TextBlock { Id = Guid.Parse("a7b4d831-65bc-4cc9-8586-02bec7603187"), Type = TextBlockType.Text, Text = $"You can alter your form to gain an aspect of the animal your mask represents. You gain the {ToMarkdownLink<Models.Entities.Feat>("magic warrior aspect", Feats.Instances.MagicWarriorAspect.ID)} focus spell. Increase the number of Focus Points in your focus pool by 1." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

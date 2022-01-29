@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3467da1f-1da8-4eee-902b-b07611767496"), Type = TextBlockType.Text, Text = "Whether your heart is pure or corrupt, you can call forth a malediction upon your foes. You can cast (spell: bane) once per day as a 1st-level divine innate spell." };
+            yield return new TextBlock { Id = Guid.Parse("3467da1f-1da8-4eee-902b-b07611767496"), Type = TextBlockType.Text, Text = $"Whether your heart is pure or corrupt, you can call forth a malediction upon your foes. You can cast {ToMarkdownLink<Models.Entities.Spell>("bane", Spells.Instances.Bane.ID)} once per day as a 1st-level divine innate spell." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

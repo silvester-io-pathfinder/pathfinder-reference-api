@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3d008786-a9ec-4ef2-b64b-28cd08cf0d62"), Type = TextBlockType.Text, Text = "Your animal companion grows up, becoming a mature animal companion. Increase its proficiency rank in Performance to expert instead of one of the three skill increases for mature. It gains the (feat: Mesmerizing Performance) advanced maneuver, rather than the normal advanced maneuver for its type." };
+            yield return new TextBlock { Id = Guid.Parse("3d008786-a9ec-4ef2-b64b-28cd08cf0d62"), Type = TextBlockType.Text, Text = $"Your animal companion grows up, becoming a mature animal companion. Increase its proficiency rank in Performance to expert instead of one of the three skill increases for mature. It gains the {ToMarkdownLink<Models.Entities.Feat>("Mesmerizing Performance", Feats.Instances.MesmerizingPerformance.ID)} advanced maneuver, rather than the normal advanced maneuver for its type." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

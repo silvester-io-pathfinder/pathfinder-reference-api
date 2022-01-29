@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("24e0d4e7-3eae-42da-a24f-20717ce89097"), Type = TextBlockType.Text, Text = "You move quickly, snatching a shiny item that catches your eye. (action: Stride) twice, and you can (action: Interact) to grab an unattended object at any point during your movement." };
+            yield return new TextBlock { Id = Guid.Parse("24e0d4e7-3eae-42da-a24f-20717ce89097"), Type = TextBlockType.Text, Text = $"You move quickly, snatching a shiny item that catches your eye. {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} twice, and you can {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to grab an unattended object at any point during your movement." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

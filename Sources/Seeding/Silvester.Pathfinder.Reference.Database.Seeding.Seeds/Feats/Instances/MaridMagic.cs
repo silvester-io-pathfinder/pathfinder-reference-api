@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3855ba57-5dc7-4376-8034-3bea58612728"), Type = TextBlockType.Text, Text = "You channel the magic of marids. You can cast (spell: hydraulic push) and (spell: obscuring mist) each once per day as 2nd-level arcane innate spells." };
+            yield return new TextBlock { Id = Guid.Parse("3855ba57-5dc7-4376-8034-3bea58612728"), Type = TextBlockType.Text, Text = $"You channel the magic of marids. You can cast {ToMarkdownLink<Models.Entities.Spell>("hydraulic push", Spells.Instances.HydraulicPush.ID)} and {ToMarkdownLink<Models.Entities.Spell>("obscuring mist", Spells.Instances.ObscuringMist.ID)} each once per day as 2nd-level arcane innate spells." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

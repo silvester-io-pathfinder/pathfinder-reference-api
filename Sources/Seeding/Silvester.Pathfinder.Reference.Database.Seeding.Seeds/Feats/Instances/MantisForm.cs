@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("70800df8-e59d-4c0b-8b88-a01fd0acbc6b"), Type = TextBlockType.Text, Text = "You gain the (spell: mantis form) focus spell. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can (action: Refocus) by praying to Achaekek or researching your assigned kill." };
+            yield return new TextBlock { Id = Guid.Parse("70800df8-e59d-4c0b-8b88-a01fd0acbc6b"), Type = TextBlockType.Text, Text = $"You gain the {ToMarkdownLink<Models.Entities.Feat>("mantis form", Feats.Instances.MantisForm.ID)} focus spell. If you don't already have one, you gain a focus pool of 1 Focus Point, which you can {ToMarkdownLink<Models.Entities.Activity>("Refocus", Activities.Instances.Refocus.ID)} by praying to Achaekek or researching your assigned kill." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

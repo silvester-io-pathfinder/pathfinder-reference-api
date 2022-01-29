@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3c042652-cfa4-44db-8533-80e555862e69"), Type = TextBlockType.Text, Text = "You immediately wield or wear the soulforged armament bound to you. The soulforged armament remains manifested until you (action: Dismiss) this effect. Once per day when you use this ability, you can manifest the armament's essence form. You gain the armament's essence power until it's (action: Dismissed|Dismiss). After 1 minute, the essence form armament is automatically (action: Dismissed|Dismiss)." };
+            yield return new TextBlock { Id = Guid.Parse("3c042652-cfa4-44db-8533-80e555862e69"), Type = TextBlockType.Text, Text = $"You immediately wield or wear the soulforged armament bound to you. The soulforged armament remains manifested until you {ToMarkdownLink<Models.Entities.Action>("Dismiss", Actions.Instances.Dismiss.ID)} this effect. Once per day when you use this ability, you can manifest the armament's essence form. You gain the armament's essence power until it's {ToMarkdownLink<Models.Entities.Action>("Dismissed", Actions.Instances.Dismiss.ID)}. After 1 minute, the essence form armament is automatically {ToMarkdownLink<Models.Entities.Action>("Dismissed", Actions.Instances.Dismiss.ID)}." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ce88e06f-8631-47a9-a48c-eb1ba767a535"), Type = TextBlockType.Text, Text = "Your muse has taught you how to handle a wider variety of weapons than most bards, empowering you to effortlessly blend your performance into combat even with the most inelegant tools. You become trained with all martial weapons. If you gain the bard weapon expertise class feature, your proficiency rank with martial weapons increases to expert." };
+            yield return new TextBlock { Id = Guid.Parse("ce88e06f-8631-47a9-a48c-eb1ba767a535"), Type = TextBlockType.Text, Text = $"Your muse has taught you how to handle a wider variety of weapons than most bards, empowering you to effortlessly blend your performance into combat even with the most inelegant tools. You become trained with all martial weapons. If you gain the bard weapon expertise class feature, your proficiency rank with martial weapons increases to expert." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

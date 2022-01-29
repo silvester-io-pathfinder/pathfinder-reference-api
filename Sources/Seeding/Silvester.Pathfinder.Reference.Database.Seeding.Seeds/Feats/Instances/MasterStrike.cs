@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e33d147f-b663-4da4-9600-65703801959c"), Type = TextBlockType.Text, Text = "The target attempts a Fortitude save against your class DC. It then becomes temporarily immune to your Master Strike for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("e33d147f-b663-4da4-9600-65703801959c"), Type = TextBlockType.Text, Text = $"The target attempts a Fortitude save against your class DC. It then becomes temporarily immune to your Master Strike for 1 day." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9afd83a9-85a2-439f-a3b4-f5ab4618ea73"), Type = TextBlockType.Text, Text = "Your incredible perception and trusty enhanced visual gear allow you to see things others miss. Your proficiency rank in Perception increases to master." };
+            yield return new TextBlock { Id = Guid.Parse("9afd83a9-85a2-439f-a3b4-f5ab4618ea73"), Type = TextBlockType.Text, Text = $"Your incredible perception and trusty enhanced visual gear allow you to see things others miss. Your proficiency rank in Perception increases to master." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

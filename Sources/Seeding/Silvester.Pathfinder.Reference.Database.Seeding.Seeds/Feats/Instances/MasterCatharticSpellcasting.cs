@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d2d82f8c-29c9-47a8-b913-c1e82650f7fd"), Type = TextBlockType.Text, Text = "Your proficiency ranks for your cathartic mage spell attack rolls and spell DCs increase to master, you gain a 7th-level spell slot and you can select a third spell from your repertoire as a signature spell. At 20th level, you gain an 8th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("d2d82f8c-29c9-47a8-b913-c1e82650f7fd"), Type = TextBlockType.Text, Text = $"Your proficiency ranks for your cathartic mage spell attack rolls and spell DCs increase to master, you gain a 7th-level spell slot and you can select a third spell from your repertoire as a signature spell. At 20th level, you gain an 8th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

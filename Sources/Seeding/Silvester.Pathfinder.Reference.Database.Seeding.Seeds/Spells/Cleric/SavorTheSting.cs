@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 {
-    public class SavorTheString : Template
+    public class SavorTheSting : Template
     {
         public static readonly Guid ID = Guid.Parse("2ae88ff7-9177-406b-99ec-05fdd4263943");
 
@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             return new Spell
             {
                 Id = ID,
-                Name = "Savor the String",
+                Name = "Savor the Sting",
                 Level = 1,
                 Range = "Touch.",
                 Targets = "1 creature.",

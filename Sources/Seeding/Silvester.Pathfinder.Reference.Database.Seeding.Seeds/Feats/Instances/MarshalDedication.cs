@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0fc2471d-3c80-4796-bb36-174265d6ab54"), Type = TextBlockType.Text, Text = "You've combined your social skills and combat training to become a talented combat leader. Choose Diplomacy or Intimidation. You become trained in that skill or become an expert if you were already trained in it." };
-            yield return new TextBlock { Id = Guid.Parse("aa2177d6-7bfa-438c-bddc-e63bdb83b0b2"), Type = TextBlockType.Text, Text = "In addition, you're surrounded by a marshal's aura in a 10-foot emanation. Your aura has the (trait: emotion), (trait: mental), and (trait: visual) traits and grants you and allies within the aura a +1 status bonus to saving throws against (trait: fear) effects." };
+            yield return new TextBlock { Id = Guid.Parse("0fc2471d-3c80-4796-bb36-174265d6ab54"), Type = TextBlockType.Text, Text = $"You've combined your social skills and combat training to become a talented combat leader. Choose Diplomacy or Intimidation. You become trained in that skill or become an expert if you were already trained in it." };
+            yield return new TextBlock { Id = Guid.Parse("aa2177d6-7bfa-438c-bddc-e63bdb83b0b2"), Type = TextBlockType.Text, Text = $"In addition, you're surrounded by a marshal's aura in a 10-foot emanation. Your aura has the {ToMarkdownLink<Models.Entities.Trait>("emotion", Traits.Instances.Emotion.ID)}, {ToMarkdownLink<Models.Entities.Trait>("mental", Traits.Instances.Mental.ID)}, and {ToMarkdownLink<Models.Entities.Trait>("visual", Traits.Instances.Visual.ID)} traits and grants you and allies within the aura a +1 status bonus to saving throws against {ToMarkdownLink<Models.Entities.Trait>("fear", Traits.Instances.Fear.ID)} effects." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

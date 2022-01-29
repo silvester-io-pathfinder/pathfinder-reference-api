@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fccda384-eb81-4a34-9121-ee2270bde8b7"), Type = TextBlockType.Text, Text = "You harness the magical energy flowing through your eyeless mask to effortlessly protect you from (trait: visual) effects. You (action: Avert your Gaze | Avert Gaze)." };
+            yield return new TextBlock { Id = Guid.Parse("fccda384-eb81-4a34-9121-ee2270bde8b7"), Type = TextBlockType.Text, Text = $"You harness the magical energy flowing through your eyeless mask to effortlessly protect you from {ToMarkdownLink<Models.Entities.Trait>("visual", Traits.Instances.Visual.ID)} effects. You {ToMarkdownLink<Models.Entities.Action>("Avert your Gaze", Actions.Instances.AvertGaze.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

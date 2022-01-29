@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("3c6c2c0c-8c7c-42f2-81dc-cabab80fce19"), Type = TextBlockType.Text, Text = "Your warmask projects a white-hot fury that attempts to vaporize the offending magic. You reroll the triggering check with a +2 circumstance bonus, but you must use the new result, even if it's worse than your first roll." };
+            yield return new TextBlock { Id = Guid.Parse("3c6c2c0c-8c7c-42f2-81dc-cabab80fce19"), Type = TextBlockType.Text, Text = $"Your warmask projects a white-hot fury that attempts to vaporize the offending magic. You reroll the triggering check with a +2 circumstance bonus, but you must use the new result, even if it's worse than your first roll." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

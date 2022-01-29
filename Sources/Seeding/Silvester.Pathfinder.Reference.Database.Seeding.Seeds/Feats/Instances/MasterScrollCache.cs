@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("85a79b4f-d8de-4a97-a051-3a6eecada7dd"), Type = TextBlockType.Text, Text = "Your scroll collection is incredible, brimming with eldritch power, and you can prepare far more of them than an ordinary scroll trickster. In addition to your daily scrolls from the (feat: Basic | Basic Scroll Cache) and (feat: Expert Scroll Caches | Expert Scroll Cache), add a single scroll with a 6th-level spell. At 20th level, add a scroll with a 7th-level spell." };
+            yield return new TextBlock { Id = Guid.Parse("85a79b4f-d8de-4a97-a051-3a6eecada7dd"), Type = TextBlockType.Text, Text = $"Your scroll collection is incredible, brimming with eldritch power, and you can prepare far more of them than an ordinary scroll trickster. In addition to your daily scrolls from the {ToMarkdownLink<Models.Entities.Feat>("Basic", Feats.Instances.BasicScrollCache.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Expert Scroll Caches", Feats.Instances.ExpertScrollCache.ID)}, add a single scroll with a 6th-level spell. At 20th level, add a scroll with a 7th-level spell." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("576c35ed-59f5-47ac-b5f2-817cd3bf79f1"), Type = TextBlockType.Text, Text = "You quickly snatch up whatever's nearby and then attack with it as an improvised weapon. You (action: Interact) to pick up a nearby object you could use as an improvised weapon. It must be located at around your chest level, such as a mug on a table, rather than an object on the floor. You then either (action: Strike) or make an (feat: Improvised Pummel) with the improvised weapon." };
+            yield return new TextBlock { Id = Guid.Parse("576c35ed-59f5-47ac-b5f2-817cd3bf79f1"), Type = TextBlockType.Text, Text = $"You quickly snatch up whatever's nearby and then attack with it as an improvised weapon. You {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to pick up a nearby object you could use as an improvised weapon. It must be located at around your chest level, such as a mug on a table, rather than an object on the floor. You then either {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} or make an {ToMarkdownLink<Models.Entities.Feat>("Improvised Pummel", Feats.Instances.ImprovisedPummel.ID)} with the improvised weapon." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

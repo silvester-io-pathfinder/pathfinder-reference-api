@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c2ec9d2-d809-4033-85b2-29de53bd8e97"), Type = TextBlockType.Text, Text = "You are a conduit for truly deific power. You gain an additional 10th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("7c2ec9d2-d809-4033-85b2-29de53bd8e97"), Type = TextBlockType.Text, Text = $"You are a conduit for truly deific power. You gain an additional 10th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d48ea06b-be45-4796-93ea-510343786d63"), Type = TextBlockType.Text, Text = "The blessing of your deity heightens your healing ability, making your mundane healing work as if by magic. When you succeed at a Medicine check to (action: Treat Wounds), your action gains the divine trait and you heal the maximum amount for the 2d8 (or 4d8 on a critical success). If you have an ability that adds additional dice to your (action: Treat Wounds), you still roll those normally." };
+            yield return new TextBlock { Id = Guid.Parse("d48ea06b-be45-4796-93ea-510343786d63"), Type = TextBlockType.Text, Text = $"The blessing of your deity heightens your healing ability, making your mundane healing work as if by magic. When you succeed at a Medicine check to {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}, your action gains the divine trait and you heal the maximum amount for the 2d8 (or 4d8 on a critical success). If you have an ability that adds additional dice to your {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}, you still roll those normally." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

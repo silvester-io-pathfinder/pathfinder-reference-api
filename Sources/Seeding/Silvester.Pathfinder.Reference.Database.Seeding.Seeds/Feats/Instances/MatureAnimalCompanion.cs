@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("da2f503f-69b1-41f9-ad06-6a291afaf04c"), Type = TextBlockType.Text, Text = "Your animal companion grows up, becoming a mature animal companion, which grants it additional capabilities. See the (Feat: animal companion) rules on page 214 for more information. Your animal companion is better trained than most. During an encounter, even if you don't use the (Action: Command an Animal) action, your animal companion can still use 1 action on your turn that round to (Action: Stride) or (Action: Strike)." };
+            yield return new TextBlock { Id = Guid.Parse("da2f503f-69b1-41f9-ad06-6a291afaf04c"), Type = TextBlockType.Text, Text = $"Your animal companion grows up, becoming a mature animal companion, which grants it additional capabilities. See the {ToMarkdownLink<Models.Entities.Feat>("animal companion", Feats.Instances.AnimalCompanion.ID)} rules on page 214 for more information. Your animal companion is better trained than most. During an encounter, even if you don't use the {ToMarkdownLink<Models.Entities.SkillAction>("Command an Animal", SkillActions.Instances.CommandAnAnimal.ID)} action, your animal companion can still use 1 action on your turn that round to {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} or {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)

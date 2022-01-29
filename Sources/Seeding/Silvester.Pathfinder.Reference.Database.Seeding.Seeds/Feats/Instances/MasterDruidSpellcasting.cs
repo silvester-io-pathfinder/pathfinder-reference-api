@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ef963d6-b7c9-4efb-9bac-352ebe206baa"), Type = TextBlockType.Text, Text = "Your proficiency ranks for primal spell attack rolls and spell DCs increase to master, and you gain a 7th-level spell slot. At 20th level, you gain an 8th-level spell slot." };
+            yield return new TextBlock { Id = Guid.Parse("8ef963d6-b7c9-4efb-9bac-352ebe206baa"), Type = TextBlockType.Text, Text = $"Your proficiency ranks for primal spell attack rolls and spell DCs increase to master, and you gain a 7th-level spell slot. At 20th level, you gain an 8th-level spell slot." };
         }
 
         protected override void GetPrerequisites(BooleanPrerequisiteBuilder builder)
