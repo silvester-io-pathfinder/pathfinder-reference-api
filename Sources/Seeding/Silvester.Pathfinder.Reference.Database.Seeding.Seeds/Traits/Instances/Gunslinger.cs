@@ -6,31 +6,31 @@ using System.Collections.Generic;
 
 namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 {
-    public class Fighter : Template
+    public class Gunslinger : Template
     {
-        public static readonly Guid ID = Guid.Parse("b78639ca-0745-40de-8940-6eadefd13753");
+        public static readonly Guid ID = Guid.Parse("8cdafad3-9934-4e74-a9bb-b4de2a433e46");
 
         protected override Trait GetTrait()
         {
             return new Trait
             {
                 Id = ID,
-                Name = "Fighter",
+                Name = "Gunslinger",
             };
         }
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("62d0e693-87ca-4274-81c4-3143448c1f36"), Type = TextBlockType.Text, Text = "This indicates abilities from the fighter class." };
+            yield return new TextBlock { Id = Guid.Parse("42c6d675-ade2-460b-9649-b5745f431f5f"), Type = TextBlockType.Text, Text = "This indicates abilities from the gunslinger class." };
         }
 
         protected override SourcePage GetSourcePage()
         {
             return new SourcePage
             {
-                Id = Guid.Parse("60d6ce61-0b45-4223-a7c5-36064acc5e88"),
-                SourceId = CoreRulebook.ID,
-                Page = 638
+                Id = Guid.Parse("4c5a142a-a5a9-463b-841b-04da083fdd3b"),
+                SourceId = Sources.Instances.GunsAndGears.ID,
+                Page = 233
             };
         }
     }
