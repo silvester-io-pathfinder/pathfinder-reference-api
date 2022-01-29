@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("ba5b0e26-0007-411d-a8c9-d4febcb23169"), Type = TextBlockType.Text, Text = $"Fierceness in battle runs through your blood, and you refuse to fall from your injuries. You avoid being knocked out and remain at 1 Hit Point, and your wounded condition increases by 1." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

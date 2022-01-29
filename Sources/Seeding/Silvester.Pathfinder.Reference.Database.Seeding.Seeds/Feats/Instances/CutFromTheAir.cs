@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("5f0e80fd-4f5a-4c65-bc78-0c0dd49c1324"), Type = TextBlockType.Text, Text = $"You can knock aside ranged attacks. You gain a +4 circumstance bonus to AC against the triggering attack. If the attack misses, you knocked or cut it out of the air." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

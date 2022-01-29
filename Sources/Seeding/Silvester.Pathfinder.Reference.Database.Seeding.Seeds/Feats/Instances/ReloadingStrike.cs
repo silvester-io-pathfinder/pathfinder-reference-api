@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("919ce4dd-7afc-4759-bae0-bd2d82b7ddf7"), Type = TextBlockType.Text, Text = $"You make a melee attack and then reload your gun in one fluid movement. {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} an opponent within reach with your one-handed melee weapon (or, if your other hand is empty, with an unarmed attack), and then {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to reload. You don't need a free hand to reload in this way." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

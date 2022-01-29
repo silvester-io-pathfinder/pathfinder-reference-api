@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2331c7fb-3a70-4927-9abb-04bf6b06a27a"), Type = TextBlockType.Text, Text = $"A lifetime wielding firearms and explosive ordinance amid the chaos of battle has granted you great skill with volatile weapons. You become trained in simple and martial bombs and firearms." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("5f6d41fb-e835-4b7f-8700-4477a3df9450"), Type = TextBlockType.Enumeration, Text = $" Hoof: 1d6 bludgeoning ({ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)}, {ToMarkdownLink<Models.Entities.Trait>("unarmed", Traits.Instances.Unarmed.ID)})" };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("061dc4be-596b-4718-bedb-d6db09eee35c"), Type = TextBlockType.Text, Text = $"You spend 10 minutes in contemplation to uncannily predict how events will play out. Choose a particular goal or activity you plan to engage in within 1 week, or an event you expect might happen within 1 week. You analyze whether it's likely to come to pass, learning whether it's highly likely, somewhat likely, somewhat unlikely, or highly unlikely. You also gain a piece of advice suggesting a course of action you or your allies could take that might make the chosen event more or less likely, whichever you prefer. The GM determines the likeliness of the event and the piece of advice you learn." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

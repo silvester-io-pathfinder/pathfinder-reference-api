@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("595150cd-50b1-4e31-85c1-8196b045d8d7"), Type = TextBlockType.Text, Text = $"While using Twin Eidolon, you use your eidolon's statistics other than your mental ability modifiers, including its evolutions. You can't cast spells (except spells your eidolon could cast), Activate or otherwise benefit from magic items that normally benefit you and not your eidolon, or use other actions it can't perform. Any of its spells you cast with limited uses count against your eidolon's uses. You can {ToMarkdownLink<Models.Entities.Feat>("Manifest your Eidolon", Feats.Instances.ManifestEidolon.ID)} again to end this effect." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

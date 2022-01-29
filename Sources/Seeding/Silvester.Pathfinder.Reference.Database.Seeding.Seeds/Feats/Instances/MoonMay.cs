@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("cf2ae57c-daa0-4908-ba0c-9c93c725af74"), Type = TextBlockType.Text, Text = $"Your mother was a moon hag, a handmaiden of Groetus, and you have a single scarlet eye and a sliver of her supernal foresight. You can cast {ToMarkdownLink<Models.Entities.Spell>("guidance", Spells.Instances.Guidance.ID)} as an occult innate cantrip. A cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

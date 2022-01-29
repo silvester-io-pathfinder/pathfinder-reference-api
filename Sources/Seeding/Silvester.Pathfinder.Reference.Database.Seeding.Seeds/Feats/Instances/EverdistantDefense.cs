@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("64cb4bb5-1ec8-48cb-87e8-45d7a3f1ce33"), Type = TextBlockType.Text, Text = $"The spatial barrier of Syndara's Island has taught you that distance can foil enemies better than any armor. You warp space, causing each square within your aura that the attack or creature would move through to count as triple the distance. If this reaction is used on a ranged attack, the attack takes range increment penalties based on the adjusted range and fails if this would cause it to exceed its maximum range." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

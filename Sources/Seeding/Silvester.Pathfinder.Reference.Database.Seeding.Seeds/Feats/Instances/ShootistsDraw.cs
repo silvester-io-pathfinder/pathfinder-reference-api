@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2bb35e14-1cb2-4b06-8a6f-40c4c88fd207"), Type = TextBlockType.Text, Text = $"You {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw a {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("hand crossbow", Items.RangedWeapons.Instances.HandCrossbow.ID)} and {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with it, or you {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with a loaded {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("hand crossbow", Items.RangedWeapons.Instances.HandCrossbow.ID)} you're already holding and then {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to stow it." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("90a57c7d-a3c8-4da8-9ce8-874e8b382be1"), Type = TextBlockType.Text, Text = $"Energy blasts are a special ranged unarmed attack. You can only make energy blast {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} while you're in your cannon form. Your energy blasts deal 3d8 fire damage and 3d6 force damage, which increases to 4d8 fire damage and 3d6 force damage at level 20. You gain the item bonus to attack rolls with your energy blasts from the highest potency rune on any {ToMarkdownLink<Models.Items.Instances.WornItem>("handwraps of mighty blows", Items.WornItems.Instances.HandwrapsOfMightyBlows.ID)} you are wearing or any weapon you are wielding, but striking and property runes have no effect on your energy blasts. Energy blasts have a range increment of 120 feet. On a critical hit with an energy blast, the target takes 10 persistent fire damage. Your energy blast doesn't add critical specialization effects. If it matters for an effect dependent on weapon damage dice, an energy blast's number of weapon damage dice is three, or four at level 20." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

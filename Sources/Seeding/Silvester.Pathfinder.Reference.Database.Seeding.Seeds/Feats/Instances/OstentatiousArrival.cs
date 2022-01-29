@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("29b40ff0-c9e2-417a-9e17-737bbe153937"), Type = TextBlockType.Text, Text = $"All creatures in a 10-foot emanation around the creature you summoned or manifested take 1d4 fire damage per spell level for a summoning spell, or 1d4 damage per 2 levels for {ToMarkdownLink<Models.Entities.Feat>("Manifesting your Eidolon", Feats.Instances.ManifestEidolon.ID)}. If the creature you summoned or manifested has the {ToMarkdownLink<Models.Entities.Trait>("acid", Traits.Instances.Acid.ID)}, {ToMarkdownLink<Models.Entities.Trait>("cold", Traits.Instances.Cold.ID)}, {ToMarkdownLink<Models.Entities.Trait>("electricity", Traits.Instances.Electricity.ID)}, {ToMarkdownLink<Models.Entities.Trait>("fire", Traits.Instances.Fire.ID)}, {ToMarkdownLink<Models.Entities.Trait>("sonic", Traits.Instances.Sonic.ID)}, or {ToMarkdownLink<Models.Entities.Trait>("water", Traits.Instances.Water.ID)} trait, the damage is that type instead (or cold damage for the {ToMarkdownLink<Models.Entities.Trait>("water", Traits.Instances.Water.ID)} trait). If the creature has more than one of these traits, you choose which damage type to deal." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

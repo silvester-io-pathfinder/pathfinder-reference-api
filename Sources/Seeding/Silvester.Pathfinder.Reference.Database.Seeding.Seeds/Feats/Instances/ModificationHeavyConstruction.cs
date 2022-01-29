@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("c7728f2f-3e61-4e13-8e7d-17bf90227c65"), Type = TextBlockType.Text, Text = $"You've expanded your innovation into a heavy bulwark, and your groundbreaking design ensures you don't take any of the drawbacks for such heavy defenses. Your innovation becomes heavy armor, and your proficiency in your innovation armor (but no other heavy armor) advances to be equal to your proficiency in medium armor. If your Strength score is at least 16, you remove the Speed penalty entirely instead of reducing it to –5 feet. The armor's adjusted statistics are: __AC Bonus__ +5; __Dex Cap__ +1; __Check Penalty__ –2; __Speed Penalty__ –10 feet; __Strength__ 16; __Bulk__ 3; __Group__ composite; __Armor Traits__ {ToMarkdownLink<Models.Entities.Trait>("bulwark", Traits.Instances.Bulwark.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

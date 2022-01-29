@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("a47256e4-a3f3-498b-a3a4-376e6e392fc0"), Type = TextBlockType.Text, Text = $"The fire inside you asserts itself as beaming, radiant light. Your body is naturally luminescent, glowing with the effects of a primal {ToMarkdownLink<Models.Entities.Spell>("light", Spells.Instances.Light.ID)} cantrip. A cantrip is heightened to a spell level equal to half your level rounded up. The light is involuntary and constant; if counteracted, it returns in 1d4 rounds. You suffer a -2 circumstance penalty on Stealth checks to {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Sneak", SkillActions.Instances.Sneak.ID)} and gain a +1 circumstance bonus on saves against {ToMarkdownLink<Models.Entities.Trait>("light", Traits.Instances.Light.ID)} effects and effects that inflict the blinded or dazzled conditions." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

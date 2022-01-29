@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("58d8e29d-9513-4998-9282-99829f882ee5"), Type = TextBlockType.Text, Text = $"If you and up to four other creatures are in contact with a body of water deep enough for you to fully submerge, you can spend 10 minutes adapting the creatures to that specific body of water. This allows them to breathe normally while within that body of water and protects them from deep ocean pressure. These effects last until the creatures are no longer in contact with that body of water or until you use this ability again, whichever comes first for each creature." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

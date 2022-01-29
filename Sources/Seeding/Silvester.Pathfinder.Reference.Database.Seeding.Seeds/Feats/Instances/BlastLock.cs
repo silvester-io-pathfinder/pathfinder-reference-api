@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("1eaf788e-62cf-4783-bc67-5948437863ee"), Type = TextBlockType.Text, Text = $"Sometimes taking the shortest distance between two points involves removing an obstacle or two. You shoot your firearm at a lock within 10 feet. Make an attack roll against the DC required to {ToMarkdownLink<Models.Entities.SkillAction>("Pick the Lock", SkillActions.Instances.PickALock.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }
 
         protected override RollableEffect? GetRollableEffect()

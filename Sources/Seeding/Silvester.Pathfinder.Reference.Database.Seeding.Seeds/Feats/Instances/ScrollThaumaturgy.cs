@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("a1675f04-b2a1-4624-874b-55b0d563bc6d"), Type = TextBlockType.Text, Text = $"Your multidisciplinary study of magic means you know how to activate the magic in scrolls with ease. You can Activate scrolls of any magical tradition, using your thaumaturge class DC for the scroll's DC, rather than a particular spell DC. If a spell is on the spell list for multiple traditions, you choose which tradition to use at the time you Activate the scroll." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

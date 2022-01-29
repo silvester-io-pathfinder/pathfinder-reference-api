@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("c910689e-bbe1-44d4-a65a-00836041bd08"), Type = TextBlockType.Text, Text = $"You've studied your celestial heritage with the intent of better defending yourself, and you've found that your techniques are equally powerful against celestials, fiends, and other divine entities. You gain a +1 circumstance bonus to all saving throws against {ToMarkdownLink<Models.Entities.Trait>("divine", Traits.Instances.Divine.ID)} effects." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

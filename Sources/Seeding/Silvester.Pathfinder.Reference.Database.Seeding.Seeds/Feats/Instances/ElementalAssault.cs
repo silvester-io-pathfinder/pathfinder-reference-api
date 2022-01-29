@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("55c364f1-d1f5-488a-ae07-8d92384ce79d"), Type = TextBlockType.Text, Text = $"You shroud your arms and held weapons in elemental magic. Choose one element. Until the end of your next turn, your {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} deal an additional 1d6 damage of the indicated type and have the trait corresponding to the element: electricity for {ToMarkdownLink<Models.Entities.Trait>("air", Traits.Instances.Air.ID)}, bludgeoning for {ToMarkdownLink<Models.Entities.Trait>("earth", Traits.Instances.Earth.ID)}, fire for {ToMarkdownLink<Models.Entities.Trait>("fire", Traits.Instances.Fire.ID)}, or cold for {ToMarkdownLink<Models.Entities.Trait>("water", Traits.Instances.Water.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

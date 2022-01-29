@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("715da03c-96f7-4f95-a6c7-4d70f45d62ae"), Type = TextBlockType.Text, Text = $"Your eidolon summons images of its sin into the mind of a target creature within 30 feet, tormenting and confusing the target. The target must attempt a Will save against your spell DC with the following effects. The effects last until the end of your next turn, but your eidolon can use a single action, which has the {ToMarkdownLink<Models.Entities.Trait>("concentrate", Traits.Instances.Concentrate.ID)} trait, to extend the effects until the end of your next turn (like {ToMarkdownLink<Models.Entities.Action>("Sustaining a Spell", Actions.Instances.SustainASpell.ID)}), to a maximum duration of 1 minute. If the target is evil, it takes a –2 circumstance penalty to its save. Regardless of whether it succeeds, the target becomes temporarily immune for 1 day." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }
 
         protected override RollableEffect? GetRollableEffect()

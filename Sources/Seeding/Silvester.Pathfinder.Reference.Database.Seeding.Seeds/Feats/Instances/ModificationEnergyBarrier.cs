@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("9fd6b03b-e2d1-42bd-a16b-464a6024eed7"), Type = TextBlockType.Text, Text = $"Your armor's defenses ablate any kind of energy coming your way. While wearing your armor, you gain resistance to all energy damage (acid, cold, electricity, fire, force, negative, positive, and sonic damage) equal to 2 + half your level. You must have the {ToMarkdownLink<Models.Entities.Feat>("harmonic oscillator", Feats.Instances.ModificationHarmonicOscillator.ID)}, {ToMarkdownLink<Models.Entities.Feat>("metallic reactance", Feats.Instances.ModificationMetallicReactance.ID)}, or {ToMarkdownLink<Models.Entities.Feat>("phlogistonic regulator", Feats.Instances.ModificationPhlogistonicRegulator.ID)} modification to select this modification." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

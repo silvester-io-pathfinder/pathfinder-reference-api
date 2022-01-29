@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("6281dc2e-f637-4a90-8a59-7e14faa8bb9a"), Type = TextBlockType.Text, Text = $"Finishing a foe maintains your swagger. You gain panache if your {ToMarkdownLink<Models.Entities.Trait>("finisher", Traits.Instances.Finisher.ID)} brings the target to 0 HP (or brings the highest-level target to 0 HP, if your {ToMarkdownLink<Models.Entities.Trait>("finisher", Traits.Instances.Finisher.ID)} attacks multiple targets)." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

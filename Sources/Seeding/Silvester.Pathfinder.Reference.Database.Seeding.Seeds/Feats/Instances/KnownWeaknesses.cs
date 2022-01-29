@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f18a92a7-f049-41ce-969e-43e06c11c83a"), Type = TextBlockType.Text, Text = $"Whenever you {ToMarkdownLink<Models.Entities.Feat>("Devise a Stratagem", Feats.Instances.DeviseAStratagem.ID)}, you can also attempt a check to {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} as part of that action. If you critically succeed at the {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} check, you notice a weakness and gain a +1 circumstance bonus to your attack roll from {ToMarkdownLink<Models.Entities.Feat>("Devise a Stratagem", Feats.Instances.DeviseAStratagem.ID)}. If you immediately convey this information to your allies as part of the check, each ally gains a +1 circumstance bonus to their next attack roll against the subject, as long as their attack is made before the beginning of your next turn." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

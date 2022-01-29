@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("1d92a278-4924-47b1-9c79-f531c557a48f"), Type = TextBlockType.Text, Text = $"During your adventures, you've honed your ability to adapt to the culture of the predominant ancestry around you. You gain the {ToMarkdownLink<Models.Entities.Feat>("Adopted Ancestry", Feats.Instances.AdoptedAncestry.ID)} general feat, and you also gain one 1st-level ancestry feat from the ancestry you chose for the {ToMarkdownLink<Models.Entities.Feat>("Adopted Ancestry", Feats.Instances.AdoptedAncestry.ID)} feat." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("6a34150c-9a15-4863-b3a7-c3a09fdbbd5c"), Type = TextBlockType.Text, Text = $"Born of a storm hag, you have one crystal-blue or rain-gray eye. You share your mother's power over wind and storm. You can cast {ToMarkdownLink<Models.Entities.Spell>("electric arc", Spells.Instances.ElectricArc.ID)} as an occult innate cantrip. As normal, a cantrip is heightened to a spell level equal to half your level rounded up." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

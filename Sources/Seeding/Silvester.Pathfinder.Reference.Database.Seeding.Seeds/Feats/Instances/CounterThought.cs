@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("9001610f-b018-4ef8-8b90-3f67bdadf0ab"), Type = TextBlockType.Text, Text = $"When a foe {ToMarkdownLink<Models.Entities.Rule>("Casts a Spell", Rules.Instances.CastASpell.ID)} that has the {ToMarkdownLink<Models.Entities.Trait>("mental", Traits.Instances.Mental.ID)} trait and you can see its manifestations, you can use your own mental magic to disrupt it. You expend one of your spell slots to counter the triggering creature's casting of a spell with the {ToMarkdownLink<Models.Entities.Trait>("mental", Traits.Instances.Mental.ID)} trait. You lose your spell slot as if you had cast the triggering spell; this spell slot must be one for which you could cast a spell with the {ToMarkdownLink<Models.Entities.Trait>("mental", Traits.Instances.Mental.ID)} trait. You then attempt to counteract the triggering spell." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

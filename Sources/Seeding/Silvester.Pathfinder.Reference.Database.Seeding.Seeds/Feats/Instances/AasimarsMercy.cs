@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("d6f1595d-9b49-4117-9a89-9382c211c661"), Type = TextBlockType.Text, Text = $"Your celestial powers allow you to remove lesser afflictions with ease. Each day, you can cast two 4th-level divine innate spells. You can choose from the following spells each time you cast: {ToMarkdownLink<Models.Entities.Spell>("remove curse", Spells.Instances.RemoveCurse.ID)}, {ToMarkdownLink<Models.Entities.Spell>("remove disease", Spells.Instances.RemoveDisease.ID)}, and {ToMarkdownLink<Models.Entities.Spell>("neutralize poison", Spells.Instances.NeutralizePoison.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("6db168ab-62a7-4233-913c-120c27cfc3ae"), Type = TextBlockType.Text, Text = $"Desperate to finish the fight, you pour all your rage into one final blow. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If it hits, you gain a circumstance bonus to damage equal to the number of rounds remaining in your {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)} (maximum 10). After this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, your {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)} immediately ends, and you are fatigued until you rest for at least 10 minutes." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

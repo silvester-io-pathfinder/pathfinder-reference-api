@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("d3bc6a71-510c-4cbf-88fa-1af5f306ce8a"), Type = TextBlockType.Text, Text = $"You are an expert at moving through extremely tight spaces. You gain the {ToMarkdownLink<Models.Entities.Feat>("Quick Squeeze", Feats.Instances.QuickSqueeze.ID)} skill feat, even if you're not trained in Acrobatics. When you roll a success on an Acrobatics check to {ToMarkdownLink<Models.Entities.SkillAction>("Squeeze", SkillActions.Instances.Squeeze.ID)}, you get a critical success instead." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

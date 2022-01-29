@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("e8b425fa-26d8-4002-a538-d22460655ba1"), Type = TextBlockType.Text, Text = $"Your supernatural connection sometimes causes you to phase from reality when under threat, disappearing for split seconds before reappearing - often surprising you as much as your enemies. Roll a DC 16 flat check. On a success, you gain resistance to all damage equal to your level against the triggering effect, you gain a +2 circumstance bonus to saving throws against that effect until the start of your turn, and you gain the dazzled condition for 1 round." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

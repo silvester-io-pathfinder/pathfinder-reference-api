@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("d3c22feb-fa3a-4309-8618-bc9cdbc42d76"), Type = TextBlockType.Text, Text = $"You tap into the Godmind's collective cognitive well, rapidly parsing near-infinite variables to read your surroundings. For 1 minute, you gain precise motion sense out to 60 feet, you can see invisible creatures and objects, and you gain the effects of a 9th-level {ToMarkdownLink<Models.Entities.Spell>("true seeing", Spells.Instances.TrueSeeing.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

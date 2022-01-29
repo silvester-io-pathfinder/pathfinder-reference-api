@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("c5c38b33-b6b7-43b0-9276-ea98f7e51890"), Type = TextBlockType.Text, Text = $"By loading special ammunition in a particular way, you can make your siege weapons do all manner of tricks that other siege engineers can barely even imagine. If you personally contribute an additional Load action to the siege weapon's loading, above the minimum, you can change a burst into a line twice as long as the size of the burst, or vice versa (so a 10-foot burst turns into a 20-foot line, or a 20-foot line turns into a 10-foot burst)." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

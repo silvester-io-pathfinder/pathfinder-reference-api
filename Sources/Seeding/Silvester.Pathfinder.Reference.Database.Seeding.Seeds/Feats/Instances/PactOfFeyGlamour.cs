@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("8ea8d6ed-674e-4d72-aa62-b3a9bb42b1d1"), Type = TextBlockType.Text, Text = $"In exchange, you promise to accept any fey's request for hospitality, granting them food, drink, and lodging for up to 3 days and 3 nights. You also promise not to harm any creature to whom you've offered hospitality or who has shown hospitality to you, whether or not that creature is fey, unless that creature does harm first. Refusing hospitality to a fey or violating hospitality causes you to lose the benefits of this feat until you atone for your transgressions, instantly reverting your appearance to the one you had before the pact." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

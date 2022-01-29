@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("90823d1b-c40d-4ebb-9380-9775e98fdc55"), Type = TextBlockType.Text, Text = $"You have a particular affinity for leafy plants. Your patron grants you a leshy familiar. If you already had a familiar, this leshy replaces your previous familiar, as if your previous familiar had been slain. In addition, you gain the ability to see through leaves, vines, and other foliage. You don't take circumstance penalties to ranged spell attacks or Perception checks caused by foliage, and your targeted attacks don't require a flat check to succeed against a target concealed only by such vegetation." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

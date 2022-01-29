@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("1bbb7c1d-c1b8-474b-8b8f-0c27fb32f85f"), Type = TextBlockType.Text, Text = $"You seek to emulate vanth reapers' fighting styles. You are trained with {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("bo staves", Items.MeleeWeapons.Instances.BoStaff.ID)}, {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("longbows", Items.RangedWeapons.Instances.Longbow.ID)}, {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("composite longbows", Items.RangedWeapons.Instances.CompositeLongbow.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("scythes", Items.MeleeWeapons.Instances.Scythe.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("staves", Items.MeleeWeapons.Instances.Staff.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

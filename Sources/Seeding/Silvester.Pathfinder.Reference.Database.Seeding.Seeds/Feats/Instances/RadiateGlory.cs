@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("9843385e-e003-41c5-a45a-f3b196c693b3"), Type = TextBlockType.Text, Text = $"Your inherent glory radiates into the world with all the divine power of the celestial planes for 1 minute. Any creature that can see you while you Radiate Glory must attempt a Will saving throw against your class DC or spell DC, whichever is higher. The creature then becomes temporarily immune to this effect for 24 hours." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }
 
         protected override RollableEffect? GetRollableEffect()

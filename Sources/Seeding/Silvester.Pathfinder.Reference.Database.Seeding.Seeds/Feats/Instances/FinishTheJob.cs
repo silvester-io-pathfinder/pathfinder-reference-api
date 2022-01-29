@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("37e08091-6978-43ba-9fdb-82ae869e0e00"), Type = TextBlockType.Text, Text = $"Your last attack failed, but it set you up for another. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with your other hand, using a one-handed melee weapon or unarmed attack. This {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} uses the same multiple attack penalty as the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} that failed on the last action. Afterward, increase your multiple attack penalty normally." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("b6b26898-e60b-4f61-aa94-0ee940762a54"), Type = TextBlockType.Text, Text = $"By adding a special catalyst, you transform a healing elixir into a topical projectile. You grant the elixir the {ToMarkdownLink<Models.Entities.Trait>("bomb", Traits.Instances.Bomb.ID)} trait. If you throw a minor {ToMarkdownLink<Models.Items.Instances.AlchemicalElixir>("elixir of life", Items.AlchemicalElixirs.Instances.ElixirOfLife.ID)} bomb at a willing target, you hit even on a failure, though not on a critical failure. If your {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with this elixir bomb hits a living target, the target regains Hit Points as if it had consumed the elixir. On a critical success, the target also gains the elixir's item bonus to saving throws against diseases and poisons for 1 minute." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

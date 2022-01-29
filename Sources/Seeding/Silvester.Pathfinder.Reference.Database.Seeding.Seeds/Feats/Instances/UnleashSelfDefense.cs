@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -34,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("5d8b040d-cb44-4c0f-a587-0c1fda23f5de"), Type = TextBlockType.Text, Text = $"~ Drawback: The pacifist influence on your mind makes it difficult for your spells to strike a killing blow. You take a penalty to spell damage rolls equal to the level of the spell, and you take a –1 penalty to spell attack rolls and DC of any spell that deals damage or otherwise affects the target's health or Hit Points (including those that apply the drained condition, disease or poison the target, or kill the target)." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

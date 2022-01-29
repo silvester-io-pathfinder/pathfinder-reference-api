@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("eefb0e35-2249-4641-8331-2b6408685056"), Type = TextBlockType.Text, Text = $"Long ago, qlippoth marked someone in your lineage, most likely through their ancient runestones that dot Golarion's surface. Yours is an old lineage, primordial and twisted, and you have a sense for similarly twisted things. You're trained in Occultism. If you're already trained in Occultism (from your background or class, for example), you instead become trained in a skill of your choice. You also gain the {ToMarkdownLink<Models.Entities.Feat>("Oddity Identification", Feats.Instances.OddityIdentification.ID)} skill feat." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

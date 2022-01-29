@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("5ba0cfc6-7559-452c-ba18-6cd7ad997670"), Type = TextBlockType.Text, Text = $"You can ask questions of, receive answers from, and use the Diplomacy skill with plants or fungi that match your leshy heritage. Generally, fungus leshies can speak to mushrooms and fungi; gourd leshies can speak to gourds, melons, and similar fruiting plants; leaf leshies can speak with deciduous trees; and vine leshies can speak with vines and climbing plants. The GM determines which plants or fungi count for this ability." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

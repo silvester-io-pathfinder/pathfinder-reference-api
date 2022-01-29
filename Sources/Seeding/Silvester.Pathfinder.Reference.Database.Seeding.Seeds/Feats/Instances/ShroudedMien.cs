@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("20fff126-e44f-460f-914a-738eb6a534d2"), Type = TextBlockType.Text, Text = $"You're used to dealing with dangerous situations and sinister creatures. You become trained in Deception (or another skill of your choice, if you're already trained in Deception), and you gain the {ToMarkdownLink<Models.Entities.Feat>("Lengthy Diversion", Feats.Instances.LengthyDiversion.ID)} skill feat as a bonus feat." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

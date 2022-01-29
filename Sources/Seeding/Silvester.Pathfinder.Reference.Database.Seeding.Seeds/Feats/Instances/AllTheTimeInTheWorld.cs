@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("4fb36604-3c7c-4262-a3ba-4d17fedd156c"), Type = TextBlockType.Text, Text = $"Your firsthand experience of the subjective nature of time and space has given you new observational insights. Your mind processes information so quickly that time appears to stop for all creatures but you. You can take up to 9 actions in 3 sets of up to 3 actions each. During this time, you can use purely mental and observational abilities such as {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)}, {ToMarkdownLink<Models.Entities.Action>("Seek", Actions.Instances.Seek.ID)}, and {ToMarkdownLink<Models.Entities.Feat>("Devise a Stratagem", Feats.Instances.DeviseAStratagem.ID)}, and you can use an action to move a mental projection of yourself to a location within a 60- foot radius to observe objects more closely and from different angles, though you can't affect your surroundings in any way (for instance, you could move your mental projection more closely to a distant door to read a minute inscription on its handle, but you could not open it to observe the other side). When the duration elapses, time resumes its normal flow." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

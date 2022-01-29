@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2642c925-e3b0-4dc4-8a0e-8f6c7c1eed6b"), Type = TextBlockType.Text, Text = $"You study a creature's form and behavior to hypothesize likely means of overcoming its strengths. Once before the end of your next turn, you can use the skill modifier from the triggering check in place of your saving throw modifier against one of the creature's abilities, in place of your Perception modifier to {ToMarkdownLink<Models.Entities.Action>("Seek", Actions.Instances.Seek.ID)} the creature, in place of your Deception modifier to {ToMarkdownLink<Models.Entities.SkillAction>("Feint", SkillActions.Instances.Feint.ID)} against the creature, or in place of your Intimidation modifier to {ToMarkdownLink<Models.Entities.SkillAction>("Demoralize", SkillActions.Instances.Demoralize.ID)} the creature. Alternatively, against one of the creature's attacks, you can use your DC for the skill used in the triggering check in place of your AC." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

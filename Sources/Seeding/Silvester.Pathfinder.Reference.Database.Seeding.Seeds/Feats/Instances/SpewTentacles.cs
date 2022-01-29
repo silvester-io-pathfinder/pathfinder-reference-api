@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("66b04832-ca01-403f-b380-2397bae63931"), Type = TextBlockType.Text, Text = $"You can open your mouth to an immense size and spew forth an impossibly large field of tentacles. You can cast {ToMarkdownLink<Models.Entities.Spell>("black tentacles", Spells.Instances.BlackTentacles.ID)} once per day as an innate occult spell, though when you do so, you spew them from your mouth out to the appropriate range, where they take root and begin {ToMarkdownLink<Models.Entities.SkillAction>("Grappling", SkillActions.Instances.Grapple.ID)} creatures as usual. The tentacles recognize you as a part of them and don't attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Grapple", SkillActions.Instances.Grapple.ID)} you, even if you are in the area." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

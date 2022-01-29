@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -34,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("a280f264-e4fd-4863-85cf-052b0c60498f"), Type = TextBlockType.Text, Text = $"~ Enhancement: Your attunement allows you to teleport in a series of quick jumps rather than in one big leap. You can expend your hourly use of {ToMarkdownLink<Models.Entities.Spell>("dimension door", Spells.Instances.DimensionDoor.ID)} as a free action when you begin your turn. If you do, your {ToMarkdownLink<Models.Entities.Action>("Strides", Actions.Instances.Stride.ID)} are augmented until the end of your turn, allowing you to instantly teleport to any point you could reach with your Speed instead of traversing normally to the location. While augmented, your {ToMarkdownLink<Models.Entities.Action>("Strides", Actions.Instances.Stride.ID)} gain the {ToMarkdownLink<Models.Entities.Trait>("conjuration", Traits.Instances.Conjuration.ID)} and {ToMarkdownLink<Models.Entities.Trait>("teleportation", Traits.Instances.Teleportation.ID)} traits. Your augmented {ToMarkdownLink<Models.Entities.Action>("Strides", Actions.Instances.Stride.ID)} don't trigger reactions that can be triggered by {ToMarkdownLink<Models.Entities.Trait>("move", Traits.Instances.Move.ID)} actions or upon leaving or entering a square, unless those reactions trigger on teleportation." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

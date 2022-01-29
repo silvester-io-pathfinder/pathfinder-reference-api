@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("0a79c70a-0aef-47ca-a3f3-515e287b0aad"), Type = TextBlockType.Text, Text = $"Your affinity with process and order makes you a natural artisan. You gain the trained proficiency rank in Crafting (or another skill of your choice, if you're already trained in Crafting). You gain the {ToMarkdownLink<Models.Entities.Feat>("Specialty Crafting", Feats.Instances.SpecialtyCrafting.ID)} skill feat in a specialty of your choice." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("5cda9b11-7e87-4462-8930-d531bf05afa4"), Type = TextBlockType.Text, Text = $"You somehow manage to have just the thing for the situation. You gain the {ToMarkdownLink<Models.Entities.Feat>("Prescient Planner", Feats.Instances.PrescientPlanner.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Prescient Consumable", Feats.Instances.PrescientConsumable.ID)} feats. When using {ToMarkdownLink<Models.Entities.Feat>("Prescient Planner", Feats.Instances.PrescientPlanner.ID)}, you can draw the item from your backpack (or a similar container) as a 2-action activity, instead of taking 1 minute to do so." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

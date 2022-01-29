@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("06dab214-1949-47d8-a04f-4a0abec9b9e9"), Type = TextBlockType.Text, Text = $"You wield primal magic. You can cast {ToMarkdownLink<Models.Entities.Spell>("barkskin", Spells.Instances.Barkskin.ID)} and {ToMarkdownLink<Models.Entities.Spell>("entangle", Spells.Instances.Entangle.ID)} as 2nd-level primal innate spells once per day each." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

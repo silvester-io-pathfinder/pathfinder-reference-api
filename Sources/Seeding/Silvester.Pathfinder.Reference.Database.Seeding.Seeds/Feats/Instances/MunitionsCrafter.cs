@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("5dc026d3-d7ef-4635-a4b3-2baf22d582b2"), Type = TextBlockType.Text, Text = $"You gain infused reagents (a pool of reagents usable to make alchemical items) and advanced alchemy (allowing you to make alchemical items during your daily preparations without the normal cost or time expenditure). You gain batches of infused reagents per day equal to your level, which you can use to create only bombs or alchemical ammunition. Your advanced alchemy level for creating these is 1 and doesn't increase on its own. If you use a batch of infused reagents to create basic level-0 ammunition such as black powder cartridges or black powder doses, you produce 10 rounds of ammunition." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

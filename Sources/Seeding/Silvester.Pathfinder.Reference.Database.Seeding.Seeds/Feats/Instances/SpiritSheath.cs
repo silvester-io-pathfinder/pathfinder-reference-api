@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("1fac1554-973e-459b-b6b6-2a83a4061acc"), Type = TextBlockType.Text, Text = $"During a {ToMarkdownLink<Models.Entities.Feat>("Spellstrike", Feats.Instances.Spellstrike.ID)}, you can {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw the weapon before you {ToMarkdownLink<Models.Entities.Rule>("Cast the Spell", Rules.Instances.CastASpell.ID)}. You can draw or return a weapon in a spirit sheath as an {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} action, as can anyone else holding or wearing the clothing that contains the sheath. A {ToMarkdownLink<Models.Entities.Spell>("dispel magic", Spells.Instances.DispelMagic.ID)} spell or similar effect can be used against the spirit sheath to expel the weapon. The counteract check is made against your spell DC and uses the sheath's counteract level of 1. The weapon is also expelled if you become unconscious." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

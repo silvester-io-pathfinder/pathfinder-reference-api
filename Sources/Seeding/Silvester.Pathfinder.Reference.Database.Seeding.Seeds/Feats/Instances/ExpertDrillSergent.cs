@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("a985845a-0dda-4fa8-8038-7b4e0673ed5c"), Type = TextBlockType.Text, Text = $"You know how to get the most out of your allies. While exploring, when you are leading and allies are {ToMarkdownLink<Models.Entities.Activity>("Following the Expert", Activities.Instances.FollowTheExpert.ID)}, you grant a +3 circumstance bonus instead of +2 if you're an expert in the applicable skill, and a +4 circumstance bonus if you're a master." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("6bfd8396-9ddf-4828-94a2-a41652ec0c8c"), Type = TextBlockType.Text, Text = $"Your patron grants you the power to summon other creatures to aid you. Choose one summon spell (such as {ToMarkdownLink<Models.Entities.Spell>("summon animal", Spells.Instances.SummonAnimal.ID)}, {ToMarkdownLink<Models.Entities.Spell>("summon construct", Spells.Instances.SummonConstruct.ID)}, and so forth) that appears on the spell list of your spellcasting tradition. You can spend 10 minutes in communion with your familiar to replace one spell you've prepared in one of your witch spell slots with the spell you chose, heightened to the same level. The spell you replaced must be of at least the summon spell's minimum spell level." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

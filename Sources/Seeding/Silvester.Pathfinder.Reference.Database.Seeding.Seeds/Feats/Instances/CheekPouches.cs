@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("d8211d88-c892-4ef8-b1e9-0f66502ab5b1"), Type = TextBlockType.Text, Text = $"Your cheeks are stretchy, and you can store up to four items of light Bulk or less in these cheek pouches. None of these items can have a dimension longer than 1 foot. As long as you have at least one item in your cheek pouches, your speech is noticeably difficult to understand. Placing an item in your cheek pouch or retrieving one is an {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} action. You can empty your mouth with a single action, causing everything you had stored in your cheek pouches to fall to the ground in your square." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

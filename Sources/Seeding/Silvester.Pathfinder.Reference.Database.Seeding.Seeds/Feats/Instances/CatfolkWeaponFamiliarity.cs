@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("7b0e9a38-a551-4458-a8c6-ffa7ccd5dfbf"), Type = TextBlockType.Text, Text = $"You favor weapons that you can use with quick, darting slashes like a cat's claws. You are trained with the hatchet, kama, kukri, scimitar, and sickle. In addition, you gain access to kama, kukris, and all uncommon catfolk weapons. For you, martial catfolk weapons are simple weapons and advanced catfolk weapons are martial weapons." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

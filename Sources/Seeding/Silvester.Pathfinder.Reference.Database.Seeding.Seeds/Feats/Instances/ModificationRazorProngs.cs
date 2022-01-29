@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("6977979b-3251-4529-9ff1-9c674368727b"), Type = TextBlockType.Text, Text = $"You can knock down and slash your foes with sharp, curved blades added to your weapon. Your innovation gains the {ToMarkdownLink<Models.Entities.Trait>("trip", Traits.Instances.Trip.ID)} and {ToMarkdownLink<Models.Entities.Trait>("versatile S", Traits.Instances.Versatile.ID)} traits." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

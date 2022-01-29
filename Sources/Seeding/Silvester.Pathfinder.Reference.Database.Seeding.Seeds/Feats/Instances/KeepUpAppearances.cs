@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("4f97b4f9-6599-47cf-9ba0-e0a7c8079b01"), Type = TextBlockType.Text, Text = $"Taldan pride means you never show weakness. Roll a Deception check and compare the result to any observing creatures' Perception DCs. On a success, that creature believes you were unaffected by the {ToMarkdownLink<Models.Entities.Trait>("emotion", Traits.Instances.Emotion.ID)} effect. A creature tricked in this manner can't benefit from the {ToMarkdownLink<Models.Entities.Trait>("emotion", Traits.Instances.Emotion.ID)} effect and can't use abilities that require you to be under this {ToMarkdownLink<Models.Entities.Trait>("emotion", Traits.Instances.Emotion.ID)} effect; for example, if you successfully use this ability to trick a will-o'-wisp (Pathfinder Bestiary 333) into believing you aren't under a fear effect, it can't use its Feed on Fear ability on you." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

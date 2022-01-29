@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("e95acf7a-640f-48e1-b9cb-a5539967016e"), Type = TextBlockType.Text, Text = $"Your lineage shows the signs of velstrac tampering, including some curious quirk bequeathed by those shadowy surgeons of flesh and souls. Your flesh heals cleanly and quickly—all the better for you to serve as a subject for their ghastly art. You gain the {ToMarkdownLink<Models.Entities.Feat>("Fast Recovery", Feats.Instances.FastRecovery.ID)} feat, even if you don't meet the prerequisites." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

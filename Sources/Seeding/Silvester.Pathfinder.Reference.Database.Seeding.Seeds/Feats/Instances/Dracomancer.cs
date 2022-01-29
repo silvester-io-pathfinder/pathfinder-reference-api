@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("4bd3eda3-13e7-4e1c-bde4-980bad769608"), Type = TextBlockType.Text, Text = $"Your inborn arcane power manifests as your exemplar's most time-honored spells. Choose one 1st-level spell and one 2nd-level spell from those listed for a dragon spellcaster of your draconic exemplar's type (such as {ToMarkdownLink<Models.Entities.Spell>("alarm", Spells.Instances.Alarm.ID)}, {ToMarkdownLink<Models.Entities.Spell>("blur", Spells.Instances.Blur.ID)}, {ToMarkdownLink<Models.Entities.Spell>("invisibility", Spells.Instances.Invisibility.ID)}, and {ToMarkdownLink<Models.Entities.Spell>("true strike", Spells.Instances.TrueStrike.ID)} for a black dragon exemplar). You can cast each of these spells once per day as arcane innate spells. You gain the trained proficiency rank in arcane spell attack rolls and spell DCs, and your key spellcasting ability is Charisma." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

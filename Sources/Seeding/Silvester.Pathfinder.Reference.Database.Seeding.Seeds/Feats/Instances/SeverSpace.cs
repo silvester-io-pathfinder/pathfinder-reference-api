@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("3a36bfac-db0c-4acc-8453-e63dabd1631c"), Type = TextBlockType.Text, Text = $"After the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, regardless of whether it succeeded, the world rushes to fill the space you destroyed, bringing you and the target adjacent to each other. You can choose to teleport to the closest space adjacent to the target or to attempt to teleport the target adjacent to you. If you choose the target, they can negate the teleportation if they succeed at a Fortitude save against your class DC." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

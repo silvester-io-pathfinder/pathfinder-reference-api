@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("37e16b0e-851d-4055-a423-f94204f3aa18"), Type = TextBlockType.Text, Text = $"Your power has unbound you from the earth below, letting you float harmlessly over traps and unstable terrain. You're affected by a constant {ToMarkdownLink<Models.Entities.Spell>("air walk", Spells.Instances.AirWalk.ID)}, except the highest you can walk is 5 feet above the ground. While your psyche is unleashed, you're also affected by a {ToMarkdownLink<Models.Entities.Spell>("fly", Spells.Instances.Fly.ID)} spell." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

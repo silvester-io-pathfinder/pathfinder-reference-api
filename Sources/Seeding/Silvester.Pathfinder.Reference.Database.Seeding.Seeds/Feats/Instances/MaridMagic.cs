@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("3855ba57-5dc7-4376-8034-3bea58612728"), Type = TextBlockType.Text, Text = $"You channel the magic of marids. You can cast {ToMarkdownLink<Models.Entities.Spell>("hydraulic push", Spells.Instances.HydraulicPush.ID)} and {ToMarkdownLink<Models.Entities.Spell>("obscuring mist", Spells.Instances.ObscuringMist.ID)} each once per day as 2nd-level arcane innate spells." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

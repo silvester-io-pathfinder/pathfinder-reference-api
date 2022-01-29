@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("777c4447-5477-41a1-9fce-af58b7eb626a"), Type = TextBlockType.Text, Text = $"You're knowledgeable in trades that are important to your people's survival and commercial interests. Pick two of the following Lore skills: Engineering Lore, Explosive Lore, or Firearm Lore. At 2nd level, you gain expert proficiency in these Lore skills; at 7th level, you gain master proficiency in these Lore skills; and at 15th level, you gain legendary proficiency in them." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

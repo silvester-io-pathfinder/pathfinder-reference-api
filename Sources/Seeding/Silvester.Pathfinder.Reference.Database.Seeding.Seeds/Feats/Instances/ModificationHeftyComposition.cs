@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("17b161c2-c41e-40de-8ef8-c2e5d1e03475"), Type = TextBlockType.Text, Text = $"Blunt surfaces and sturdy construction make your weapon hefty and mace-like. Your innovation gains the {ToMarkdownLink<Models.Entities.Trait>("shove", Traits.Instances.Shove.ID)} and {ToMarkdownLink<Models.Entities.Trait>("versatile B", Traits.Instances.Versatile.ID)} traits." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

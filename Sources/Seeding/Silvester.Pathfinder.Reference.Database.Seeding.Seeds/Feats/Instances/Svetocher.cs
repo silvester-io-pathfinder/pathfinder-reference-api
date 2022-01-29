@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("82ea3ce3-c691-4c68-ac88-195f66e1a794"), Type = TextBlockType.Text, Text = $"You were born to one of the moroi, the most common vampires, and you share their supernatural fortitude and power of persuasion. When you have the drained condition, calculate the penalty to your Fortitude saves and your Hit Point reduction as though the condition value were 1 lower. You are trained Diplomacy. If you would automatically be trained in it, you instead become trained in a skill of your choice." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

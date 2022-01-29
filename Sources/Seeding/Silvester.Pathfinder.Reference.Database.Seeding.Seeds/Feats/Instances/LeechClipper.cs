@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("89a99564-6b60-4ee9-b4c3-8fbdfebaffe2"), Type = TextBlockType.Text, Text = $"You are trained to capture deserters, or “leeches.” If you critically hit a foe with a weapon from the flail weapon group, you can wrap the weapon around the target's legs and then drop it, causing the foe to take a -10-foot circumstance penalty to their Speeds until they or their allies disentangle the weapon, which takes a total of 2 {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} actions." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

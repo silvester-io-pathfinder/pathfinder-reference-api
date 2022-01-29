@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("a52db42e-e772-41e6-9412-03fecd4f3e37"), Type = TextBlockType.Text, Text = $"You descend from the rare psychic vampires known as vetalaranas. Your forebear gained sustenance from the mental and emotional energy of living creatures, which manifests in you as powerful resistance to such effects. You gain a +1 circumstance bonus to Will saves against effects with the {ToMarkdownLink<Models.Entities.Trait>("emotion", Traits.Instances.Emotion.ID)} trait, and when you roll a success on a saving throw against such an effect, you get a critical success instead." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

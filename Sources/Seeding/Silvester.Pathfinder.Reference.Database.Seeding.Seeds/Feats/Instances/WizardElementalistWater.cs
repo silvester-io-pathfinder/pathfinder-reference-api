@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("6dc56508-39d8-4aed-a122-9f2d04caca18"), Type = TextBlockType.Text, Text = $"In place of your arcane school spell, you learn the initial water elemental focus spell ({ToMarkdownLink<Models.Entities.Spell>("rising surf", Spells.Instances.RisingSurf.ID)}). If you later select the {ToMarkdownLink<Models.Entities.Feat>("Advanced School Spell", Feats.Instances.AdvancedSchoolSpell.ID)} wizard feat, instead of gaining the listed school spell, you gain the advanced water elemental focus spell ({ToMarkdownLink<Models.Entities.Spell>("pulverizing cascade", Spells.Instances.PulverizingCascade.ID)})." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

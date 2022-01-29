@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("129e747b-bab4-46ba-8bc1-7b29feb3a33c"), Type = TextBlockType.Text, Text = $"Spells available to all covens are {ToMarkdownLink<Models.Entities.Spell>("augury", Spells.Instances.Augury.ID)}, {ToMarkdownLink<Models.Entities.Spell>("charm", Spells.Instances.Charm.ID)}, {ToMarkdownLink<Models.Entities.Spell>("clairaudience", Spells.Instances.Clairaudience.ID)}, {ToMarkdownLink<Models.Entities.Spell>("clairvoyance", Spells.Instances.Clairvoyance.ID)}, {ToMarkdownLink<Models.Entities.Spell>("dream message", Spells.Instances.DreamMessage.ID)}, and {ToMarkdownLink<Models.Entities.Spell>("illusory disguise", Spells.Instances.IllusoryDisguise.ID)}. The eligible spells granted by the most prominent types of hag are: **Sea Hag** {ToMarkdownLink<Models.Entities.Spell>("acid arrow", Spells.Instances.AcidArrow.ID)}, {ToMarkdownLink<Models.Entities.Spell>("water walk", Spells.Instances.WaterWalk.ID)}; **Green Hag** {ToMarkdownLink<Models.Entities.Spell>("entangle", Spells.Instances.Entangle.ID)}, {ToMarkdownLink<Models.Entities.Spell>("outcast's curse", Spells.Instances.OutcastsCurse.ID)}, {ToMarkdownLink<Models.Entities.Spell>("wall of thorns", Spells.Instances.WallOfThorns.ID)}; **Annis Hag** {ToMarkdownLink<Models.Entities.Spell>("earthbind", Spells.Instances.Earthbind.ID)}; **Night Hag** {ToMarkdownLink<Models.Entities.Spell>("nightmare", Spells.Instances.Nightmare.ID)}" };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

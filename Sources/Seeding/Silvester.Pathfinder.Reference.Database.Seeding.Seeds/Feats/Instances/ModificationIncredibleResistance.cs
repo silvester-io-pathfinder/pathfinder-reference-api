@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("3f50ef36-8862-4cc8-865f-044ac92fb8e0"), Type = TextBlockType.Text, Text = $"You've improved upon your breakthrough modification's ability to resist damage. Choose one of the following breakthrough modifications your innovation has: {ToMarkdownLink<Models.Entities.Feat>("dense plating", Feats.Instances.ModificationDensePlating.ID)}, {ToMarkdownLink<Models.Entities.Feat>("layered mesh", Feats.Instances.ModificationLayeredMesh.ID)}, or {ToMarkdownLink<Models.Entities.Feat>("tensile absorption", Feats.Instances.ModificationTensileAbsorption.ID)}. Increase the resistance you gain from that modification to be equal to your level, instead of half your level." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

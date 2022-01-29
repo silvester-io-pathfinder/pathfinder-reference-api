@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("18d1c98c-7936-4fad-9b83-46da3adeadf0"), Type = TextBlockType.Text, Text = $"You have come to know conrasu weapons as you know yourself. Whenever you critically hit using a {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("composite shortbow", Items.RangedWeapons.Instances.CompositeShortbow.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("glaive", Items.MeleeWeapons.Instances.Glaive.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("longspear", Items.MeleeWeapons.Instances.Longspear.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("longsword", Items.MeleeWeapons.Instances.Longsword.ID)}, {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("shortbow", Items.RangedWeapons.Instances.Shortbow.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("spear", Items.MeleeWeapons.Instances.Spear.ID)}, or a conrasu weapon, you apply the weapon's critical specialization effect." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

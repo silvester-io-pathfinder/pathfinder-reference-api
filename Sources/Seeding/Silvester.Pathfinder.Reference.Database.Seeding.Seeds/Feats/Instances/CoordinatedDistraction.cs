@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("1c331d67-8ad0-486f-931e-b72118bc27a9"), Type = TextBlockType.Text, Text = $"With a sharp whistle or wave of your hands, you distract an opponent from the fact that one of your allies is about to attack them. Choose a target and an ally, both of whom must be within 30 feet. The target is flat-footed against the first {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} the ally makes on their next turn; if your ally doesn't {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} that target, the effect is lost. Depending on how you describe your distraction, this action gains either the {ToMarkdownLink<Models.Entities.Trait>("auditory", Traits.Instances.Auditory.ID)} or {ToMarkdownLink<Models.Entities.Trait>("visual", Traits.Instances.Visual.ID)} trait." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

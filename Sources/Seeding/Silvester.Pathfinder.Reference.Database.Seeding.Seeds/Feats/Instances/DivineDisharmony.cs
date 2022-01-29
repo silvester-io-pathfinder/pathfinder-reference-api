@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("da0dedfc-697c-4e38-ba1f-b7153222e42f"), Type = TextBlockType.Text, Text = $"You pull out multiple opposing divine objects—such as the religious symbols of two deities that are hated enemies—and combine them in a display that is not only galling, but also causes discordant clashes of divine energy that are especially distracting to the faithful. Roll your choice of a Deception or Intimidation check against the Will DC of a creature you can see within 60 feet, with the following results. If the creature is particularly devoted to a deity, such as a cleric, celestial, monitor, fiend, or other creature with divine spells, you gain a +2 circumstance bonus to your skill check. The GM might determine that a creature that despises all deities, such as an alghollthu, is unaffected." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }
 
         protected override RollableEffect? GetRollableEffect()

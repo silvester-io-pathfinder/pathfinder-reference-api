@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("0cd804b6-6ad5-448d-a38c-9a7df578f484"), Type = TextBlockType.Text, Text = $"You create a blanket of fog in a 5-foot burst centered on one corner of your space. All creatures within that area are concealed, and all others are concealed to them. This concealment applies to the triggering effect, and the fog lasts for 1 minute or until dispersed by a strong wind. After resolving the triggering effect, you {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)}. If an effect prevents you from {ToMarkdownLink<Models.Entities.Action>("Stepping", Actions.Instances.Step.ID)}, you attempt to {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)} the effect and {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} if you succeed." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("c50761ba-dbf4-4e46-b6e5-7d92fcfaefb5"), Type = TextBlockType.Text, Text = $"You summon divine energy to shield yourself, offering protection against other traditions but leaving you exposed to other {ToMarkdownLink<Models.Entities.Trait>("divine", Traits.Instances.Divine.ID)} effects. Until the beginning of your next turn, you gain a +1 circumstance bonus to saving throws against non-divine magical effects, but you also take a -1 circumstance penalty to saves against {ToMarkdownLink<Models.Entities.Trait>("divine", Traits.Instances.Divine.ID)} effects." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

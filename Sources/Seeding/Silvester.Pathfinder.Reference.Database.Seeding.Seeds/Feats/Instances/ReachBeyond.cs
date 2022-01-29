@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("3ce9679d-a75c-4d52-a03c-7e9a2ddc4cb3"), Type = TextBlockType.Text, Text = $"You've learned to move your spiritual energy past yourself to attack spirits where others can't. You can make melee {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} against incorporeal creatures that are inside solid objects as long as the object is within your reach. An incorporeal creature inside of a solid object is hidden, requiring you to succeed at a DC 11 flat check when you target it. You can spend an action, which has the {ToMarkdownLink<Models.Entities.Trait>("concentrate", Traits.Instances.Concentrate.ID)} trait, to focus on a creature inside of a solid object. If you do, the next melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} you make this turn requires you to succeed at only a DC 6 flat check to affect the creature." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

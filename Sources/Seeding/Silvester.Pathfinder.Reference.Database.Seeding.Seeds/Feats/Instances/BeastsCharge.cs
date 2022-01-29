@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("5a7b9cd4-6fe7-4204-820a-1fc35f0e3a7e"), Type = TextBlockType.Text, Text = $"Your eidolon rushes forward, using its momentum to increase the power of its attack. Your eidolon {ToMarkdownLink<Models.Entities.Action>("Strides", Actions.Instances.Stride.ID)} twice and then {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}. If the eidolon moved at least 20 feet away from its starting position and moved entirely in a straight line, it gains a +1 circumstance bonus to this attack roll." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

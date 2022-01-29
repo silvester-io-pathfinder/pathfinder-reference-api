@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("da23c6de-e04c-4895-ba05-fd14080a3632"), Type = TextBlockType.Text, Text = $"You can rig your bombs to inanimate objects in order to cause destruction to the surrounding area. As an activity that takes 1 minute, you attach between one and four bombs to an inanimate object within your reach, such as a chest, door, wall, or column. This creates a hazard in one square occupied by or adjacent to the inanimate object, and the hazard's Stealth DC to detect it and Thievery DC to disable it are equal to your class DC. The hazard has the following reaction, which you can also trigger as a single action so long as you are within 30 feet of the hazard. The hazard retains its potency until it's triggered, until the inanimate object moves from its space, or until you make your next daily preparations, whichever comes first. You gain the {ToMarkdownLink<Models.Entities.Feat>("Fire in the Hole", Feats.Instances.FireInTheHole.ID)} reaction." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

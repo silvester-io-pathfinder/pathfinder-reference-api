@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("80dc15b7-02b8-4302-bbac-6dbd6bce1412"), Type = TextBlockType.Text, Text = $"Your eidolon adapts to life on land and underwater. It gains the {ToMarkdownLink<Models.Entities.Trait>("amphibious", Traits.Instances.Amphibious.ID)} trait, allowing it to breathe in water and air and to avoid the normal –2 penalty for making bludgeoning and slashing unarmed Strikes underwater. It gains a swim Speed equal to its land Speed or 25 feet, whichever is less; or if it is normally aquatic, it gains a land Speed equal to its swim Speed or 25 feet, whichever is less." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

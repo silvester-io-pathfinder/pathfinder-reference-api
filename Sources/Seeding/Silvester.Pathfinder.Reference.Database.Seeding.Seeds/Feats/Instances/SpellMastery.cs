@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("0455bc61-b879-4c99-87d4-8ea10c37c29b"), Type = TextBlockType.Text, Text = $"You have mastered a handful of spells to such a degree that you can cast them even if you haven't prepared them. Select any four spells of 9th level or lower that you have access to. Each spell you select must be of a different level. These spells are automatically prepared when you make your daily preparations and have their own spell slots. You can select a different array of spells by spending 1 week of downtime retraining your mastered spells." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

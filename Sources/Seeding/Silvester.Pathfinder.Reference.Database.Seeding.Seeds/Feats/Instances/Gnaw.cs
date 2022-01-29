@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("b987b9b1-aae9-46cf-813f-ea66df68a220"), Type = TextBlockType.Text, Text = $"The {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}'s target takes 1d6 persistent bleed damage and takes a –10-foot status penalty to its Speed until it removes the bleed damage. If the hyena is a specialized animal companion, the persistent bleed damage increases to 2d6." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

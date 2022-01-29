@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("9507b9a6-b8d7-4367-a89d-fc41e3832234"), Type = TextBlockType.Text, Text = $"You can take advantage of shapechanging magic to close wounds and patch injuries. If your next action is to cast a non-cantrip {ToMarkdownLink<Models.Entities.Trait>("polymorph", Traits.Instances.Polymorph.ID)} spell that targets only one creature, your polymorph spell also restores 1d6 Hit Points per spell level to that creature. This is a {ToMarkdownLink<Models.Entities.Trait>("healing", Traits.Instances.Healing.ID)} effect." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

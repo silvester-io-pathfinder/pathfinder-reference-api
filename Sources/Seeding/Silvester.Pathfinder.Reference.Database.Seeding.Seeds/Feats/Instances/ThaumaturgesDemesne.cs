@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("47ceb879-eb4c-4360-a183-18be71bf303b"), Type = TextBlockType.Text, Text = $"Once you've chosen your demesne, it becomes automatically protected with an arcane {ToMarkdownLink<Models.Entities.Spell>("private sanctum", Spells.Instances.PrivateSanctum.ID)} spell with an unlimited duration, heightened to half your level rounded up and using your thaumaturge class DC in place of a spell DC, if necessary. Additionally, the demesne is attended by three unseen custodians, as called by a successful unseen custodian ritual (Advanced Player's Guide 245), and one object in the area gains an elemental sentinel, as a successful elemental sentinel ritual (Secrets of Magic 150)." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

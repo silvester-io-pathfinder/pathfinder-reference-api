@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("75d6d588-63d9-438e-b720-29b5d2a25d91"), Type = TextBlockType.Text, Text = $"The cat {ToMarkdownLink<Models.Entities.Action>("Strides", Actions.Instances.Stride.ID)} and then {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}. If it was undetected at the start of its Cat Pounce, it remains undetected until after the attack." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

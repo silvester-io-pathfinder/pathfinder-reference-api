@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2fc0ecd2-3575-4bed-ad3e-800a78a84068"), Type = TextBlockType.Text, Text = $"However, when you die, your soul is consigned to Hell. You can't be returned to life except by powerful magic such as {ToMarkdownLink<Models.Entities.Spell>("miracle", Spells.Instances.Miracle.ID)}, and even then, the devils responsible for the contract can track your every move for 1 year. The devils gain the effects of a {ToMarkdownLink<Models.Entities.Spell>("discern location", Spells.Instances.DiscernLocation.ID)} spell. They can also use 10th-level {ToMarkdownLink<Models.Entities.Spell>("scrying", Spells.Instances.Scrying.ID)} on you at will, and you automatically critically fail your saving throw." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("baed3e45-4e9e-4346-882a-270a83879fd5"), Type = TextBlockType.Text, Text = $"You can instead use {ToMarkdownLink<Models.Entities.Feat>("Change Shape", Feats.Instances.ChangeShapeBeastkin.ID)} to return to your humanoid or hybrid shape at any time during the duration of Critter Shape. If your inherent animal is normally larger than Tiny, you transform into a smaller, younger version of the animal, such as a Tiny bear cub. If your inherent animal has a fly Speed, you can turn into that animal (unlike normal for 1st-level {ToMarkdownLink<Models.Entities.Spell>("pest form", Spells.Instances.PestForm.ID)}), but you still don't gain a fly Speed." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

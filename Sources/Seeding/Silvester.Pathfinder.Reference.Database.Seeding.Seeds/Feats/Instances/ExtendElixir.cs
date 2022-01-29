@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("041b1f4f-b412-4b4f-9b19-0651a4219f68"), Type = TextBlockType.Text, Text = $"Integrating your own personal energy into the elixirs you create causes them to affect you for longer. When you consume one of your alchemical items that has the {ToMarkdownLink<Models.Entities.Trait>("elixir", Traits.Instances.Elixir.ID)} and {ToMarkdownLink<Models.Entities.Trait>("infused", Traits.Instances.Infused.ID)} traits and a duration of 1 minute or longer, that elixir's duration is doubled." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("aef9e19f-9874-4729-981b-d9895c032c87"), Type = TextBlockType.Text, Text = $"You embody the link to your patron so completely that you can cast your hexes in rapid succession. You are no longer limited to casting only a single hex each turn. In addition, when you cast {ToMarkdownLink<Models.Entities.Spell>("cackle", Spells.Instances.Cackle.ID)} to sustain a hex, you gain the effects of {ToMarkdownLink<Models.Entities.Action>("Sustain a Spell", Actions.Instances.SustainASpell.ID)} for all your active hexes that have a duration of sustained." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

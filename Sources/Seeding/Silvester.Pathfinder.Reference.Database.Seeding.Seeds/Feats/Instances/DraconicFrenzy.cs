@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f2738661-ac58-440c-a945-c7e79b6f80d5"), Type = TextBlockType.Text, Text = $"Your eidolon makes one {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with their primary unarmed attack and two {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} with their secondary unarmed attack (in any order). If any of these attacks critically hits an enemy, your eidolon instantly recovers the use of their {ToMarkdownLink<Models.Entities.Feat>("Breath Weapon", Feats.Instances.BreathWeapon.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

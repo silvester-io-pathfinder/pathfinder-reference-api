@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("fae0fbb6-3461-4727-91af-a6d99279e270"), Type = TextBlockType.Text, Text = $"If you have the {ToMarkdownLink<Models.Entities.Feat>("Crystalline Dust", Feats.Instances.CrystallineDust.ID)} feat, you can use Preemptive Reconfiguration without expending a usage of the reaction for the purpose of the feat's Frequency limit. Instead, the usage counts toward your number of {ToMarkdownLink<Models.Entities.Feat>("Crystalline Dust", Feats.Instances.CrystallineDust.ID)} uses per day, as if you had used that feat instead." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("3f5f0fb9-e457-4560-965d-5c5d59e8cff8"), Type = TextBlockType.Text, Text = $"You're used to the clamor of steel, the crack of a firearm, and the thunderous blast of explosions. You gain resistance 3 to sonic. If you roll a success on a saving throw against an {ToMarkdownLink<Models.Entities.Trait>("auditory", Traits.Instances.Auditory.ID)} effect that causes the deafened condition, you get a critical success instead." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

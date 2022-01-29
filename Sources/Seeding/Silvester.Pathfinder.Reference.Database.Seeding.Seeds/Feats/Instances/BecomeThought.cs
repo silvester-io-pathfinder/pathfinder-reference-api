@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f0edd693-1692-4b55-9d51-0f526704d54f"), Type = TextBlockType.Text, Text = $"You shed some of your material form, becoming a being of pure thought. You gain resistance 10 to physical damage but weakness 5 to mental damage and weakness 10 to any effect that deals damage specifically by targeting the spirit, such as {ToMarkdownLink<Models.Entities.Spell>("spirit blast", Spells.Instances.SpiritBlast.ID)}. Once per century, when you die, you automatically return to life as long as one living sentient creature on your plane remembers you; the memories allow you to reconstruct yourself from their thoughts." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

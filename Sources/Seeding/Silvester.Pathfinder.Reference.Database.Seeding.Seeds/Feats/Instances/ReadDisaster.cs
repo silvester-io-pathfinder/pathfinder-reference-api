@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("749aa4ff-fd1e-4a55-a498-75122143e3fe"), Type = TextBlockType.Text, Text = $"You spend 10 minutes and open yourself to the divine mysteries of the world, peering into the most sinister portents of the future. You gain the effects of {ToMarkdownLink<Models.Entities.Spell>("augury", Spells.Instances.Augury.ID)}, except you learn only about the dangers ahead; any results of “weal” are instead “nothing,” and results of “weal and woe” are instead “woe.” If you are legendary in Religion, you take only 1 minute to Read Disaster." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

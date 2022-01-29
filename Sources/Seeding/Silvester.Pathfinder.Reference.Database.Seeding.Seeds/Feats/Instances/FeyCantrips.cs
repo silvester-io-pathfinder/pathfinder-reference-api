@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("467c2a82-6726-4bfb-b031-90c80e4a88a7"), Type = TextBlockType.Text, Text = $"You've learned the cantrips sprites have used since time immemorial. You gain {ToMarkdownLink<Models.Entities.Spell>("dancing lights", Spells.Instances.DancingLights.ID)} and {ToMarkdownLink<Models.Entities.Spell>("ghost sound", Spells.Instances.GhostSound.ID)} as primal innate cantrips. If you have the grig heritage, you also gain {ToMarkdownLink<Models.Entities.Spell>("detect magic", Spells.Instances.DetectMagic.ID)}, and if you have the draxie heritage, you gain {ToMarkdownLink<Models.Entities.Spell>("prestidigitation", Spells.Instances.Prestidigitation.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

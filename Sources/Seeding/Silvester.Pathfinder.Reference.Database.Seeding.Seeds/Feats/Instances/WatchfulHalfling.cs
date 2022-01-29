@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("a90c8f78-4f15-4351-b15a-2e304965b128"), Type = TextBlockType.Text, Text = $"In addition to using it for skill checks, you can use the {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)} basic action to grant a bonus to another creature's saving throw or other check to overcome enchantment or possession. As usual for {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)}, you need to prepare by using an action on your turn to encourage the creature to fight against the effect." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("77f64ffc-5664-45b3-90f1-e0b8262ce669"), Type = TextBlockType.Text, Text = $"You launch yourself at a foe. Make a {ToMarkdownLink<Models.Entities.Action>("Leap", Actions.Instances.Leap.ID)} or attempt a {ToMarkdownLink<Models.Entities.SkillAction>("High Jump", SkillActions.Instances.HighJump.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Long Jump", SkillActions.Instances.LongJump.ID)}. At the end of the jump, if you're adjacent to a foe, you can immediately {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} that foe with an unarmed attack, even if the foe is in mid-air. You fall to the ground after the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}. If the distance you fall is no more than the height of your jump, you land upright and take no damage." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

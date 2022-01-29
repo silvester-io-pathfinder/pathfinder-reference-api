@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("d5efd5c9-050e-48b7-a8a1-945f2de10918"), Type = TextBlockType.Text, Text = $"You're particularly good at solving mazes and navigating twists and turns. You gain the trained proficiency rank in Survival. If you would automatically become trained in Survival (from your background or class, for example), you become trained in another skill of your choice. When you {ToMarkdownLink<Models.Entities.SkillAction>("Sense Direction", SkillActions.Instances.SenseDirection.ID)} or attempt a roll against a {ToMarkdownLink<Models.Entities.Spell>("maze", Spells.Instances.Maze.ID)} spell, you get a result one degree of success better than you rolled. You don't take a penalty to {ToMarkdownLink<Models.Entities.SkillAction>("Sense Direction", SkillActions.Instances.SenseDirection.ID)} when you lack a {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("compass", Items.AdventuringGears.Instances.Compass.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

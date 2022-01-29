@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("57507b14-3293-424f-99bf-f86750287743"), Type = TextBlockType.Text, Text = $"Small roots sprout from your feet, steadying you as you move. You gain the {ToMarkdownLink<Models.Entities.Feat>("Steady Balance", Feats.Instances.SteadyBalance.ID)} skill feat, even if you aren't trained in Acrobatics, and you can use the {ToMarkdownLink<Models.Entities.Feat>("Anchor", Feats.Instances.Anchor.ID)} action." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

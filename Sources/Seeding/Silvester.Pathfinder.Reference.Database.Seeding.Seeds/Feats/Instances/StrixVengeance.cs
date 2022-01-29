@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("9829f482-792f-4270-81f9-d3dcd2e65ed6"), Type = TextBlockType.Text, Text = $"You dedicate yourself to destroying those who harm your kin. Until the end of your next turn, you deal an additional 1d6 damage on {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} against the triggering enemy. The bonus increases to 2d6 if you use a {ToMarkdownLink<Models.Items.Instances.FundamentalWeaponRune>("striking", Items.FundamentalWeaponRunes.Instances.Striking.ID)} weapon or unarmed attack and 3d6 if you use a {ToMarkdownLink<Models.Items.Instances.FundamentalWeaponRune>("major striking", Items.FundamentalWeaponRunes.Instances.Striking.ID)} weapon or unarmed attack." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

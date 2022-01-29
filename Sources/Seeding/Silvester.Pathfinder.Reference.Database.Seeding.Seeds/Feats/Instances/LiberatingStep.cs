@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("54f7657e-c4e8-4ce3-afbf-2f5eec3a9cc2"), Type = TextBlockType.Text, Text = $"You free an ally from restraint. If the trigger was an ally taking damage, the ally gains resistance to all damage against the triggering damage equal to 2 + your level. The ally can attempt to break free of effects grabbing, restraining, immobilizing, or paralyzing them. They either attempt a new save against one such effect that allows a save, or attempt to {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)} from one effect as a free action. If they can move, the ally can {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} as a free action, even if they didn't need to escape." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

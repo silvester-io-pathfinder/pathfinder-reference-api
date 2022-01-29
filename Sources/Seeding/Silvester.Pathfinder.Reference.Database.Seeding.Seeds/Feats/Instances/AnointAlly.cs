@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("26b02a23-2fb5-429b-836e-efb49ac6ae97"), Type = TextBlockType.Text, Text = $"You forge a mystical connection with an ally using your body as a focus, allowing them to benefit from your magic. You place a blood rune on an adjacent ally that lasts for 1 minute. When you would gain a blood magic effect, you can forgo it, granting it to your ally instead. You can anoint only one ally at a time; if you place another rune, your previous designation ends." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

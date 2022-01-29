@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2f59dd15-f673-47e8-9f8c-b49ac804ba95"), Type = TextBlockType.Text, Text = $"You use your implement to gather physical magic and channel it into your weapon, empowering it to shoot an impossible volley of missiles or soar across the battlefield and carve through your foes. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with your weapon against each foe within 30 feet of you. Don't increase your multiple attack penalty until after making all the attacks. If your weapon is a melee weapon and any of the attacks are outside your reach, you {ToMarkdownLink<Models.Entities.Action>("Release", Actions.Instances.Release.ID)} the weapon before the {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}, and it returns to your grasp after all of them. If your hands are full when the weapon returns, it falls to the ground in your space. As normal, if your weapon requires one or more actions to reload between {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}, you can't use it to make multiple attacks with Implement's Assault." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

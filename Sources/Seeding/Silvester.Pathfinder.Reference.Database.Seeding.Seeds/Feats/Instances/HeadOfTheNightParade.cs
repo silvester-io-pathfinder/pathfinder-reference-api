@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("ea97a0bc-3edb-4af4-adcd-0c0c19704d30"), Type = TextBlockType.Text, Text = $"You remember the revelry of the Night Parade and call them to your aid in a riotous display. You {ToMarkdownLink<Models.Entities.SkillAction>("Perform", SkillActions.Instances.Perform.ID)} and cast 8th-level {ToMarkdownLink<Models.Entities.Spell>("mad monkeys", Spells.Instances.MadMonkeys.ID)} three times, except that the spell calls various apparitions such as dancing tsukumogami or drinking oni rather than monkeys. Each casting can produce a different kind of mischief. You can Sustain all three Spells each round using a single {ToMarkdownLink<Models.Entities.SkillAction>("Perform", SkillActions.Instances.Perform.ID)} action." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("113f3301-03be-4509-aba6-e7e943eea4a0"), Type = TextBlockType.Text, Text = $"Your eidolon gathers the power of the mightiest wyrms to make its magical breath even more spectacular. If your eidolon's next action is to use {ToMarkdownLink<Models.Entities.Feat>("Breath Weapon", Feats.Instances.BreathWeapon.ID)}, both the number of damage dice and area of the {ToMarkdownLink<Models.Entities.Feat>("Breath Weapon", Feats.Instances.BreathWeapon.ID)} are doubled." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

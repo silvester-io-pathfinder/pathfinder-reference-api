@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("372e837e-7254-4072-9808-0f6d26b5e784"), Type = TextBlockType.Text, Text = $"You use bulky firearms or crossbows to shield your body from your foes' attacks. Any two-handed firearms and two-handed crossbows you wield gain the {ToMarkdownLink<Models.Entities.Trait>("parry", Traits.Instances.Parry.ID)} trait. If an appropriate weapon already has the {ToMarkdownLink<Models.Entities.Trait>("parry", Traits.Instances.Parry.ID)} trait, increase the circumstance bonus to AC it grants when used to parry from +1 to +2." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("265d003c-f2a4-433c-85b4-4fc1bcf8ab5e"), Type = TextBlockType.Text, Text = $"You channel salt and brine from your blood into the creature's wounds. The creature must attempt a Fortitude save using your class DC or spell DC, whichever is higher. On a failure, the creature takes 1d6 persistent acid damage and is sickened 1 by the pain. On a critical failure, it instead takes 2d6 persistent acid damage and is sickened 2." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

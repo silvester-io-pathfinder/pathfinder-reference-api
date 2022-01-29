@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("b74180a3-846d-4d38-a3ed-b55014574783"), Type = TextBlockType.Text, Text = $"Your lethal unarmed attacks leave bloody gouges or cause severe internal bleeding. When you critically hit with a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} using an unarmed attack that isn't {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)}, the target takes 1d4 persistent bleed damage. This can be because you're taking the penalty to use a fist for a lethal attack or because you have an unarmed attack without the {ToMarkdownLink<Models.Entities.Trait>("nonlethal", Traits.Instances.Nonlethal.ID)} trait due to {ToMarkdownLink<Models.Entities.Feat>("Iron Fists", Feats.Instances.IronFists.ID)}, {ToMarkdownLink<Models.Entities.Feat>("Tusks", Feats.Instances.Tusks.ID)}, or a similar ability." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

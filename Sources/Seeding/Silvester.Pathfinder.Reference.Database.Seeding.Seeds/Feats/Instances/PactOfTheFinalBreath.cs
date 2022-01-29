@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("3b0f65f7-753f-42e6-a738-c339fab6723d"), Type = TextBlockType.Text, Text = $"In exchange, you swear to treat the dead you come across with respect, performing last rites and final dispositions to ensure their spirits rest in peace and are less likely to rise as undead. Furthermore, you swear to destroy undead you come across, so long as it's within your power to do so without inordinate risk to yourself. Violating your part of the pact causes its protections to immediately end. If at that point you had already lived beyond your natural life span, the psychopomps typically give you a few moments to make any last farewells, and then you simply breathe your final breath and pass on." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("441c9891-b9de-4e04-9e36-c3dd69c599df"), Type = TextBlockType.Text, Text = $"Your shadow assaults your foes. You can cast {ToMarkdownLink<Models.Entities.Spell>("shadow blast", Spells.Instances.ShadowBlast.ID)} as a 5th-level occult innate spell once per day. At 17th level, your {ToMarkdownLink<Models.Entities.Spell>("shadow blast", Spells.Instances.ShadowBlast.ID)} is heightened to 6th level." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

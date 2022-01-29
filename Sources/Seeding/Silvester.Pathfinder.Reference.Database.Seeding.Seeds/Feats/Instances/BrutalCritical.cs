@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("4df40242-a025-412e-a3af-9749d42869c4"), Type = TextBlockType.Text, Text = $"Your critical hits are particularly devastating. On a critical hit with a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, add one extra damage die. This is in addition to any extra dice you gain if the weapon is {ToMarkdownLink<Models.Entities.Trait>("deadly", Traits.Instances.Deadly.ID)} or {ToMarkdownLink<Models.Entities.Trait>("fatal", Traits.Instances.Fatal.ID)}. The target also takes persistent bleed damage equal to two damage dice." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("6bb74659-cefa-4819-a6f5-157364b5faa3"), Type = TextBlockType.Text, Text = $"As you use your magic to manipulate air or water, you divert some of its currents to form a barrier around you. If your next action is to {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)} with the {ToMarkdownLink<Models.Entities.Trait>("air", Traits.Instances.Air.ID)} or {ToMarkdownLink<Models.Entities.Trait>("water", Traits.Instances.Water.ID)} trait, until the start of your next turn, you gain a +1 circumstance bonus to AC or a +2 circumstance bonus against ranged attacks. This effect has the {ToMarkdownLink<Models.Entities.Trait>("air", Traits.Instances.Air.ID)} or {ToMarkdownLink<Models.Entities.Trait>("water", Traits.Instances.Water.ID)} trait, or both, depending on the traits of the spell you cast. You also gain a +1 circumstance bonus to all saves against effects with the {ToMarkdownLink<Models.Entities.Trait>("air", Traits.Instances.Air.ID)} trait, {ToMarkdownLink<Models.Entities.Trait>("water", Traits.Instances.Water.ID)} trait, or both until the start of your next turn, depending on the spell's traits." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

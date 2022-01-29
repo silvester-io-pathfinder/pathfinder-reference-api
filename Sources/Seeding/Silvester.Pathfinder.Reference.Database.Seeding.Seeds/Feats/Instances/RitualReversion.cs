@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f8076ac5-04e1-4a04-92fe-2fa14383709a"), Type = TextBlockType.Text, Text = $"You take the form of an ordinary specimen of the type of plant or fungus that most closely resembles you, reverting to your body's appearance just before your spirit joined with it. This otherwise has the effects of {ToMarkdownLink<Models.Entities.Spell>("tree shape", Spells.Instances.TreeShape.ID)}, except that your size remains Small." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

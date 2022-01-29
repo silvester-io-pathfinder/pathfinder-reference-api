@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f1349e00-31a5-4bd7-92e0-ed2973282017"), Type = TextBlockType.Text, Text = $"Your people used powerful magic to travel between distant worlds, and the remnants of that magic make such transportation easier for you. When you are the target of a {ToMarkdownLink<Models.Entities.Trait>("teleportation", Traits.Instances.Teleportation.ID)} spell that transports more than one person, it can affect an additional person beyond the normal limit, chosen by the caster. Additionally, when you're the target of a {ToMarkdownLink<Models.Entities.Spell>("teleport", Spells.Instances.Teleport.ID)} spell, you and the other targets arrive no farther than 1 mile off target, regardless of distance traveled." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

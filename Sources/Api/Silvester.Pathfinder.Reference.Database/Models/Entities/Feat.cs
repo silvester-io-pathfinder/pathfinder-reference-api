@@ -43,16 +43,21 @@ namespace Silvester.Pathfinder.Reference.Database.Models.Entities
         public Guid? PrerequisiteId { get; set; }
         public BooleanPrerequisite? Prerequisite { get; set; }
 
-        public ICollection<Trait> Traits { get; set; } = new List<Trait>();
+        public ICollection<FeatTraitBinding> TraitBindings { get; set; } = new List<FeatTraitBinding>();
 
         public NpgsqlTsVector SearchVector { get; set; } = default!;
     }
 
+    public class FeatTraitBinding : TraitBinding<Feat>
+    {
+
+    }
+
     public class FeatConfigurator : EntityConfigurator<Feat>
-	{
-		public FeatConfigurator()
-		{
-			ConfigureEntitySearch<Feat>(e => new {e.Name});
-		}
-	}
+    {
+        public FeatConfigurator()
+        {
+            ConfigureEntitySearch<Feat>(e => new { e.Name });
+        }
+    }
 }

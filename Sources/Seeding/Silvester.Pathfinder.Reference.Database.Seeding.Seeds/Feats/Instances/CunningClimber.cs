@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("802ac689-1b9b-4bf8-ac82-8a2cc90a0c20"), Type = TextBlockType.Text, Text = $"Whether you are climbing a ship's rigging, a jungle tree, or a clock tower, you have an uncanny knack for finding footholds and handholds where larger creatures can't. You gain a climb Speed of 10 feet. You can take the Legendary Climber feat even if you don't have the {ToMarkdownLink<Models.Entities.Feat>("Quick Climb", Feats.Instances.QuickClimb.ID)} feat, provided you meet its other prerequisites." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

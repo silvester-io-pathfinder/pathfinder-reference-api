@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("d99a2a49-3852-464b-8c56-92d23bdb3e2b"), Type = TextBlockType.Text, Text = $"You use your performances to supplement an ally's spellcasting, providing magical energy for their spells. Attempt a Performance check, using a very high DC for the ally's level, and either spend a focus Point (if the triggering spell is a focus spell) or expend a spell slot at least 1 level higher than the triggering spell. If you succeed at the Performance check, your ally's spell doesn't cost the focus Point or spell slot." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

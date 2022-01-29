@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("1570626d-8d21-4fdd-abe6-00810d4e473e"), Type = TextBlockType.Text, Text = $"You snap your free hand over to grip your weapon just long enough to add momentum and deliver a more powerful blow to your opponent. Make a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with the required weapon. You quickly switch your grip during the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} in order to make the attack with two hands. If the weapon doesn't normally have the {ToMarkdownLink<Models.Entities.Trait>("two-hand", Traits.Instances.TwoHand.ID)} trait, increase its weapon damage die by one step for this attack. If the weapon has the {ToMarkdownLink<Models.Entities.Trait>("two-hand", Traits.Instances.TwoHand.ID)} trait, you gain the benefit of that trait and a circumstance bonus to damage equal to the weapon's number of damage dice. When the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} is complete, you resume gripping the weapon with only one hand. This action doesn't end any stance or fighter feat effect that requires you to have one hand free." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

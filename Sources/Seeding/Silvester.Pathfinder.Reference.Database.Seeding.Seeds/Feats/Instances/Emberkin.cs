@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("258de82a-5fa9-4bd5-8153-90fec9c37c9b"), Type = TextBlockType.Text, Text = $"A peri's roaring spirit burns in your soul. Peris engage in constant struggle to right the wrongs of their fallen forebears, and that struggle has been passed on to you. You have a direct impulse to right wrongs and better the world. You gain a +1 circumstance bonus to saving throws against {ToMarkdownLink<Models.Entities.Trait>("fire", Traits.Instances.Fire.ID)} effects, and your perception is unaffected by non-magical flames, fog and smoke." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

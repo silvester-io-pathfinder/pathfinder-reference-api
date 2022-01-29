@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("c21253ec-28e6-4a62-9230-2c63200b0862"), Type = TextBlockType.Text, Text = $"You awaken a spirit of creation within the hazard. You learn the hazard's effects. Once in the next 10 minutes, when you observe a creature take an action that would trigger one of the hazard's reactions or free actions if you hadn't {ToMarkdownLink<Models.Entities.SkillAction>("Disabled", SkillActions.Instances.DisableADevice.ID)} it, you can use a reaction to rearm the hazard, causing the observed creature to trigger it immediately." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

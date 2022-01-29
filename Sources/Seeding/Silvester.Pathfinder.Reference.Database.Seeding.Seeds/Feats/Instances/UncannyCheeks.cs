@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("783d3ecb-f268-4621-9e02-a9a4960a7a8c"), Type = TextBlockType.Text, Text = $"You squirrel away useful objects and seem to retrieve them at just the right time. You gain the {ToMarkdownLink<Models.Entities.Feat>("Prescient Consumable", Feats.Instances.PrescientConsumable.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Prescient Planner", Feats.Instances.PrescientPlanner.ID)} feats, except that you always withdraw the objects from your cheek pouches. This means the object you retrieve must fit in your cheek pouches; this is generally an item of negligible Bulk unless you also have the {ToMarkdownLink<Models.Entities.Feat>("Cheek Pouches", Feats.Instances.CheekPouches.ID)} feat." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

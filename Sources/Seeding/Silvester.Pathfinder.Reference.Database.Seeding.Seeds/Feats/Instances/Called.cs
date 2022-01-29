@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("5fd712c9-05b8-4c6f-a3af-1c8114219ac3"), Type = TextBlockType.Text, Text = $"You have heard the Call, and in constantly resisting that persistent demand, you've developed a mental bulwark against effects that would target your mind. You gain a +1 circumstance bonus to Will saving throws against {ToMarkdownLink<Models.Entities.Trait>("mental", Traits.Instances.Mental.ID)} effects. If you roll a success on your saving throw against a {ToMarkdownLink<Models.Entities.Trait>("mental", Traits.Instances.Mental.ID)} effect that would make you controlled, you get a critical success instead." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

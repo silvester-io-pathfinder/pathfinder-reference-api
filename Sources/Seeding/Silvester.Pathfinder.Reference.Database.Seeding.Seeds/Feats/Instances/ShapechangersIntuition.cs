@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("6a363302-c52b-439b-a331-423e09b518dd"), Type = TextBlockType.Text, Text = $"A lifetime of experience helps you see through disguises. When you come within 10 feet of a creature that is transformed into another form or is {ToMarkdownLink<Models.Entities.SkillAction>("Impersonating", SkillActions.Instances.Impersonate.ID)} a specific creature, the GM rolls a secret Perception check for you to realize that the creature is transformed, even if you didn't spend an action to {ToMarkdownLink<Models.Entities.Action>("Seek", Actions.Instances.Seek.ID)} against that creature." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

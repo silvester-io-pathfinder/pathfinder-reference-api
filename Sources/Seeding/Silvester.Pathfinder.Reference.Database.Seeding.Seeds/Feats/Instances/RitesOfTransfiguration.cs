@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("c96fbdee-5e6b-4c4b-a311-907602ad8a82"), Type = TextBlockType.Text, Text = $"You can adapt your patron's power to transform other creatures into forms more befitting their behavior or your whims. Your familiar learns {ToMarkdownLink<Models.Entities.Spell>("baleful polymorph", Spells.Instances.BalefulPolymorph.ID)}, even if {ToMarkdownLink<Models.Entities.Spell>("baleful polymorph", Spells.Instances.BalefulPolymorph.ID)} isn't on your tradition's spell list. By spending 10 minutes in communion with your familiar, you can replace one spell of 6th level or higher you've prepared in one of your witch spell slots with a {ToMarkdownLink<Models.Entities.Spell>("baleful polymorph", Spells.Instances.BalefulPolymorph.ID)} spell of the same level." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

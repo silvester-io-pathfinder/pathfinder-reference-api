@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -34,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("ca48b8c5-b441-4a56-b4b3-0a790595f9ba"), Type = TextBlockType.Text, Text = $"~ Amp: The enemy you reduced to 0 Hit Points dies (a {ToMarkdownLink<Models.Entities.Trait>("death", Traits.Instances.Death.ID)} effect), and its head explodes. If the cantrip reduced more than one foe to 0 Hit Points, choose one head to detonate. The detonation generates a shockwave in a 15-foot emanation around that enemy. Each creature in the emanation takes 1d4 damage per level of the amped spell, with a basic save against your spell DC. You choose a physical or mental shockwave, and the explosion deals force damage with a basic Fortitude save (for a physical shockwave) or mental damage with a basic Will save (for a mental shockwave)." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

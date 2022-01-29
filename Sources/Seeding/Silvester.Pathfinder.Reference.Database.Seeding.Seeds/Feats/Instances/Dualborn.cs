@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("95a281a8-083c-4c49-a20f-cd268aa515ba"), Type = TextBlockType.Text, Text = $"Your suli heritage can be traced back to two geniekin ancestors of opposing elements, or to an elemental ancestor that embodied two combined elements. Choose two of the following elements: {ToMarkdownLink<Models.Entities.Trait>("air", Traits.Instances.Air.ID)}, {ToMarkdownLink<Models.Entities.Trait>("earth", Traits.Instances.Earth.ID)}, {ToMarkdownLink<Models.Entities.Trait>("fire", Traits.Instances.Fire.ID)}, and {ToMarkdownLink<Models.Entities.Trait>("water", Traits.Instances.Water.ID)}. Once made, this choice can't be changed. You gain resistance equal to half your level (minimum 1) to all damaging effects with the traits of either of your chosen elements." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("aab214db-2ad8-4681-86fd-8858708c63cf"), Type = TextBlockType.Text, Text = $"You capture transformative fragments of magic and slam them into the ground, creating a shock wave that alters your surroundings. If your next action is to Cast a non-cantrip {ToMarkdownLink<Models.Entities.Trait>("transmutation", Traits.Instances.Transmutation.ID)} Spell, either each space adjacent to you becomes difficult terrain, or each space adjacent to you is no longer difficult terrain. This doesn't have any effect on greater difficult terrain and doesn't remove the damaging effects of hazardous terrain." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

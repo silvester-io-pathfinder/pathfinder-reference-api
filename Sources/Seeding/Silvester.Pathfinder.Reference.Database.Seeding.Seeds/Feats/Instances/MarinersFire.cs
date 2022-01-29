@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("60d85086-9a46-45dc-aefe-e8df01fc2ad7"), Type = TextBlockType.Text, Text = $"You conjure uncanny orbs of spiritual flame that float above or below the water's surface. You can cast the {ToMarkdownLink<Models.Entities.Spell>("produce flame", Spells.Instances.ProduceFlame.ID)} cantrip as a primal innate spell at will, heightened to a spell level equal to half your level rounded up. You can cast this cantrip underwater." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("a9acfb2b-66fd-4c50-9a79-347b89b53e0e"), Type = TextBlockType.Text, Text = $"One of your parents has a human life span and another an elven life span, with your own somewhere between. As a result, you have an unusual perspective on time, which you've learned to manifest to aid yourself in moments of stress. You gain {ToMarkdownLink<Models.Entities.Spell>("haste", Spells.Instances.Haste.ID)} as a 3rd-level arcane innate spell, though you can target only yourself. You can {ToMarkdownLink<Models.Entities.Rule>("Cast this Spell", Rules.Instances.CastASpell.ID)} once per day." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

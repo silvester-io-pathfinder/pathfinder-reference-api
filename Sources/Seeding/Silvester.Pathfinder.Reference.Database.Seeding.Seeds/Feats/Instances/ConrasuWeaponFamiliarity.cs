@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("a120ec3d-1799-42c5-8659-98656f9a1555"), Type = TextBlockType.Text, Text = $"You have taken it upon yourself to learn the ways of combat to aid with your tasks, perhaps in a role as a corrector. You are trained with the {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("composite shortbow", Items.RangedWeapons.Instances.CompositeShortbow.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("glaive", Items.MeleeWeapons.Instances.Glaive.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("longspear", Items.MeleeWeapons.Instances.Longspear.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("longsword", Items.MeleeWeapons.Instances.Longsword.ID)}, {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("shortbow", Items.RangedWeapons.Instances.Shortbow.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("spear", Items.MeleeWeapons.Instances.Spear.ID)}. You also gain access to all uncommon conrasu weapons. For the purpose of determining your proficiency, martial conrasu weapons are simple weapons and advanced conrasu weapons are martial weapons." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

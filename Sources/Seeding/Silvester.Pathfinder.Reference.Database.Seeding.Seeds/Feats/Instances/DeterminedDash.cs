@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("c66d755c-9eb9-42e6-83f9-5732155a83c4"), Type = TextBlockType.Text, Text = $"Nothing can keep you from your enemy. {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} twice. During this movement you ignore difficult terrain, greater difficult terrain, and any effects that would impose a penalty to Speed. You can attempt an Athletics check instead of an Acrobatics check to {ToMarkdownLink<Models.Entities.SkillAction>("Balance", SkillActions.Instances.Balance.ID)} when moving across narrow surfaces or uneven ground, using the same DC. This doesn't prevent you from being harmed by hazardous terrain. You can increase the number of actions this activity takes to 3 to {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)} three times instead." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

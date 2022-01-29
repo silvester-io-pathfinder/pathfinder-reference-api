@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -34,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("1c0c906a-4e5b-436c-9688-bbe09b0cbc2c"), Type = TextBlockType.Text, Text = $"If you aren't using the {ToMarkdownLink<Models.Entities.Action>("Seek", Actions.Instances.Seek.ID)} action or searching, the GM automatically rolls a secret check for you to notice haunts or undead within 30 feet anyway. This check doesn't gain the usual +2 circumstance bonus, and instead takes a –2 circumstance penalty." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

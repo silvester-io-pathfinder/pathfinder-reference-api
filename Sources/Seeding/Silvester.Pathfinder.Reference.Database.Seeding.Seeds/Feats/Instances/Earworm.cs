@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("97aa5c88-1c96-4d8f-80b9-18d07c545886"), Type = TextBlockType.Text, Text = $"Once you've created the earworm, you can attempt a Performance check as a free action to activate it. This check uses a very hard DC of a level equal to that of the highestlevel target of the earworm present at the time of activation. On a success, you cast the cantrip on all allies who learned the earworm and can perceive your performance; on a failure, the earworm is corrupted and lost. Because it is based on the earlier repetitions, you can't use further free actions like lingering performance or {ToMarkdownLink<Models.Entities.Spell>("inspire heroics", Spells.Instances.InspireHeroics.ID)} to modify the activated earworm. Allies forget the earworm after it is activated, if you spend 10 minutes to implant another earworm, or during your next daily preparations, whichever comes first." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

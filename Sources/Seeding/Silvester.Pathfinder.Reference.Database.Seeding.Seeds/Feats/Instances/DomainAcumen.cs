@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("8b997e5a-ea60-484f-bef4-52a1abaf36a1"), Type = TextBlockType.Text, Text = $"Every oracle's mystery touches on a divine domain of the deities that fuel it; you can access that power. Choose one of the domains associated with your mystery for which you don't already have an initial domain spell. You gain an initial domain spell from that domain, which you cast as a revelation spell. It gains the {ToMarkdownLink<Models.Entities.Trait>("cursebound", Traits.Instances.Cursebound.ID)} trait. Increase the number of Focus Points in your focus pool by 1." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

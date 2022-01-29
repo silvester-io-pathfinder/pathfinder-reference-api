@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("0022754c-b0db-4c05-a4d9-e35414981e3c"), Type = TextBlockType.Text, Text = $"You are familiar with weapons that excel underwater. You are trained with {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("crossbows", Items.RangedWeapons.Instances.Crossbow.ID)}, {ToMarkdownLink<Models.Items.Instances.RangedWeapon>("hand crossbows", Items.RangedWeapons.Instances.HandCrossbow.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("longspears", Items.MeleeWeapons.Instances.Longspear.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("spears", Items.MeleeWeapons.Instances.Spear.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("tridents", Items.MeleeWeapons.Instances.Trident.ID)}. In addition, you gain access to all uncommon azarketi weapons. For the purpose of determining your proficiency, martial azarketi weapons are simple weapons and advanced azarketi weapons are martial weapons." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

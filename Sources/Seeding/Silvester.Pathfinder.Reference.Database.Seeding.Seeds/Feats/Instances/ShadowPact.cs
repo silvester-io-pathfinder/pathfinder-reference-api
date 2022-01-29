@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f7df7620-8564-41e3-89a4-0b6abbe7e007"), Type = TextBlockType.Text, Text = $"Thousands of years ago, your ancestors made a pact with Zon-Kuthon. He has not forgotten, even if you might wish he had. You can take 1 damage to mix blood and shadows to cast 5th-level {ToMarkdownLink<Models.Entities.Spell>("creation", Spells.Instances.Creation.ID)} as an innate divine spell. You can use this ability as often as you wish, but you can have only one such object in existence at a time. If the object encounters bright light, the spell ends and the object dissolves into shadows." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("da68ac82-1cc8-4bfe-b06f-83443fe0d775"), Type = TextBlockType.Text, Text = $"You've been approached with suspicion and distrust throughout your life and return these sentiments back to the strangers you encounter. As a result, you are difficult to deceive. You gain a +1 circumstance bonus to your Perception DC against {ToMarkdownLink<Models.Entities.SkillAction>("Lies", SkillActions.Instances.Lie.ID)} and {ToMarkdownLink<Models.Entities.SkillAction>("Impersonations", SkillActions.Instances.Impersonate.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("ba6da6ea-e937-4985-856f-ceaa1df83754"), Type = TextBlockType.Text, Text = $"You gain {ToMarkdownLink<Models.Entities.Spell>("misdirection", Spells.Instances.Misdirection.ID)} and {ToMarkdownLink<Models.Entities.Spell>("silence", Spells.Instances.Silence.ID)} as 2nd-level arcane innate spells. You can cast each spell once per day and can target only yourself." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

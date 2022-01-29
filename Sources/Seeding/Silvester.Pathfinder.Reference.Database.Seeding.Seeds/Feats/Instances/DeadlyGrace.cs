@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("580f35ad-b234-451b-9e38-6dc073500e78"), Type = TextBlockType.Text, Text = $"Your graceful attacks are especially powerful. When you score a critical hit with an {ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)} or {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)} melee weapon that has the {ToMarkdownLink<Models.Entities.Trait>("deadly", Traits.Instances.Deadly.ID)} trait, you double the number of dice from that trait. When you wield an {ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)} or {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)} melee weapon that doesn't have the {ToMarkdownLink<Models.Entities.Trait>("deadly", Traits.Instances.Deadly.ID)} trait, it gains the {ToMarkdownLink<Models.Entities.Trait>("deadly", Traits.Instances.Deadly.ID)} d8 trait instead." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

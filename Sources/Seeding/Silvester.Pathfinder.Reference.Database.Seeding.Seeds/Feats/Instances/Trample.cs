@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("c20b60d6-3705-4806-bf89-46479ed7ebbb"), Type = TextBlockType.Text, Text = $"Your eidolon {ToMarkdownLink<Models.Entities.Action>("Strides", Actions.Instances.Stride.ID)} up to double its Speed and can move through the spaces of creatures at least one size smaller, Trampling each creature whose space it enters. It can attempt to Trample the same creature only once in a single Trample. It deals bludgeoning damage equal to the damage of its secondary attack against these creatures, which can attempt a basic Reflex save against your spell DC." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

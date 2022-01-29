@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("711e2b2c-ebe8-48f8-b3f1-ec4a792f317c"), Type = TextBlockType.Text, Text = $"You have near-supernatural poise that lets you move swiftly across the most unsteady surfaces. You gain the {ToMarkdownLink<Models.Entities.Feat>("Steady Balance", Feats.Instances.SteadyBalance.ID)} skill feat. You can {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} into difficult terrain caused by uneven ground, such as a rocky field or hilly incline." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

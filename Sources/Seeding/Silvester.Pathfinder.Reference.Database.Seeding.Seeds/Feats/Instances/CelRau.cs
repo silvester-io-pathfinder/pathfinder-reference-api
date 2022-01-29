@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2882f158-57bf-447d-9e91-d1e7f8e0e2c6"), Type = TextBlockType.Text, Text = $"You are a cel rau, child of a strigoi, one of the first vampires to walk Golarion. Your heritage ties you to the Shadow Plane and grants you strange resilience to light and darkness alike. You gain a +1 circumstance bonus to saving throws against effects with the {ToMarkdownLink<Models.Entities.Trait>("darkness", Traits.Instances.Darkness.ID)}, {ToMarkdownLink<Models.Entities.Trait>("light", Traits.Instances.Light.ID)}, or {ToMarkdownLink<Models.Entities.Trait>("shadow", Traits.Instances.Shadow.ID)} traits, and whenever you become dazzled or blinded for at least 2 rounds, you can reduce the duration by 1 round." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

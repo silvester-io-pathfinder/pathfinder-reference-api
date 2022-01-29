@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("e225bd0a-bb09-4246-83c1-31bc0a4aead5"), Type = TextBlockType.Text, Text = $"Traditionally, fiends are exceptionally good at persuading people to do things, even when their targets know it's a bad idea. You're also rather good at it, compelling the weak and weak-willed to your bidding. You can cast {ToMarkdownLink<Models.Entities.Spell>("charm", Spells.Instances.Charm.ID)} once per day as a 1st-level divine innate spell." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

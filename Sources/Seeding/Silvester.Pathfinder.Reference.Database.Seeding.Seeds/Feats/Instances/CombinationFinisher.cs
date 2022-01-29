@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f98cf2cf-9e19-43cb-8d54-f7286efe6a40"), Type = TextBlockType.Text, Text = $"You combine a series of attacks with a powerful finishing blow. Your {ToMarkdownLink<Models.Entities.Trait>("finishers'", Traits.Instances.Finisher.ID)} {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} have a lower multiple attack penalty: -4 (or -3 with an {ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)} weapon) if it's the second attack on your turn, or -8 (or -6 with an {ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)} weapon) if it's the third or subsequent attack on your turn, instead of -5 and -10, respectively." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

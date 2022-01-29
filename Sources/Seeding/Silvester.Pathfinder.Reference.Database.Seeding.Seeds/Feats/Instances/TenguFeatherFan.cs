@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -34,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("20cc881d-4430-40ea-84a3-5d209e41228a"), Type = TextBlockType.Text, Text = $"~ Activate: {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)}; **Frequency** once per day; **Effect** You cast one of the spells contained in your tengu feather fan. Activating the fan takes the spell's normal number of actions. You can also Activate the fan to cast a cantrip you've gained from a heritage or ancestry feat; this activation doesn't count against the fan's uses per day." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

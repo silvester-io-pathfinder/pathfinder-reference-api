@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("db57b336-515b-4330-b017-a2a9d3b71373"), Type = TextBlockType.Text, Text = $"Ephemeral connections between people, places, and concepts are invisible to most, but seeing them is your stock and trade. You spend 10 minutes considering two different leads you're pursuing. You then attempt a check to investigate how connected the two are. Unless the GM determines otherwise, this is a Crafting check if they're both items or a Society check for other combinations of leads. If any subjects are creatures, this check usually uses the highest DC among their Deception and Will DCs. If no subjects are creatures, but at least one is an item, the DC is usually a hard DC for the level of the highest-level item. If neither case applies, the DC is usually a hard expert or hard master DC (22 or 32). Once you try to Connect the Dots between two particular leads, you can never try to Connect the Dots between those same leads again unless the GM allows it after you've learned a substantial amount of new information." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }
 
         protected override RollableEffect? GetRollableEffect()

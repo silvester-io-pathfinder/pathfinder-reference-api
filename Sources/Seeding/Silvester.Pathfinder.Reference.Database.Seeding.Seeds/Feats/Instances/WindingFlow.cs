@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("72e2e033-3564-4675-805c-91a6f62a500f"), Type = TextBlockType.Text, Text = $"Any journey consists of more than simply reaching your destination. You use two of the following actions in any order: {ToMarkdownLink<Models.Entities.Action>("Stand", Actions.Instances.Stand.ID)}, {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)}, and {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}. You can't use the same action twice." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

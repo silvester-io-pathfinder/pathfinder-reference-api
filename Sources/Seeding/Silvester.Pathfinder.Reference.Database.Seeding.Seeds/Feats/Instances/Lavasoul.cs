@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2c1c0cf0-6840-4f96-a095-8fbf3c78c4eb"), Type = TextBlockType.Text, Text = $"Your elemental lineage manifests as magma and molten rock, and you can focus the magma into your hand to attack your foes. You gain a magma spike unarmed attack, which requires a free hand to use. This is an {ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)}, {ToMarkdownLink<Models.Entities.Trait>("finesse", Traits.Instances.Finesse.ID)}, unarmed attack in the brawling weapon group that deals 1d4 piercing damage, as well as 1 additional fire damage. Instead of the normal critical specialization effect, the target takes 1d6 persistent fire damage; you gain a bonus on this persistent damage equal to your item bonus to attack rolls on unarmed attacks." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

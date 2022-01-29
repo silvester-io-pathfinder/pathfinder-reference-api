@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f22a2079-73ac-4d59-84d0-c428195ec8e2"), Type = TextBlockType.Text, Text = $"Since you can't act, you can't {ToMarkdownLink<Models.Entities.Rule>("Cast Spells", Rules.Instances.CastASpell.ID)}, activate or benefit from magic items that normally benefit you and not your eidolon, perform actions that have the {ToMarkdownLink<Models.Entities.Trait>("tandem", Traits.Instances.Tandem.ID)} trait, or use other abilities that require you, and not the eidolon, to act. Your can't be separately targeted while you are melded into it. When you reach 0 HP, your eidolon unmanifests, leaving your body behind, unconscious and dying." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

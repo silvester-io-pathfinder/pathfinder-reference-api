@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2c729da6-f117-4b4f-913b-b91868adf060"), Type = TextBlockType.Text, Text = $"You were born to a jiang-shi, one of the so-called hopping vampires found most often in Tian-Xia. Your parent had a supernatural obsession with counting small objects, which manifests in you as a preternatural gift for linguistics and mathematics. You are trained in Society and gain the {ToMarkdownLink<Models.Entities.Feat>("Eye for Numbers", Feats.Instances.EyeForNumbers.ID)} skill feat. If you would automatically become trained in Society (from your background or class, for example), you instead become trained in a skill of your choice." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

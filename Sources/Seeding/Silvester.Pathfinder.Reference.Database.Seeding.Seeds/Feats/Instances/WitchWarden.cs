@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("4f98e087-4f11-4cb3-af35-4d311379c893"), Type = TextBlockType.Text, Text = $"You and your family have fought long and hard against witches, particularly the winter witches of Irrisen, and you've learned to be wary of their curses and the otherworldly powers their patrons grant. You gain a +1 circumstance bonus to saving throws against curses, and to saving throws against spells cast by a witch or hag. If you roll a success on a saving throw against a curse or a spell cast by a witch or hag, you get a critical success instead." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

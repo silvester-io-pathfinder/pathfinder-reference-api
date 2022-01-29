@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -34,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("1b2bcf26-44d6-417d-a104-aaa642bf74f1"), Type = TextBlockType.Text, Text = $"~ Amp: Half of any damage dealt by the amped psi cantrip is instead fire damage, and the spell also deals an additional 1 fire damage per spell level. The spell gains the {ToMarkdownLink<Models.Entities.Trait>("fire", Traits.Instances.Fire.ID)} trait. If the spell deals more than one type of damage, change half the damage of each type to fire." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

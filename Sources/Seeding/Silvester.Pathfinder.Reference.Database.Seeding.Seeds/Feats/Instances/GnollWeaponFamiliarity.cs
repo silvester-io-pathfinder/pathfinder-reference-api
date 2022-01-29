@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("adb4ff80-e65a-44e7-be24-2ca1e93fd6fe"), Type = TextBlockType.Text, Text = $"You were taught to be a hunter and a raider. You are trained with {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("flails", Items.MeleeWeapons.Instances.Flail.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("khopeshes", Items.MeleeWeapons.Instances.Khopesh.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("mambeles", Items.MeleeWeapons.Instances.Mambele.ID)}, {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("spears", Items.MeleeWeapons.Instances.Spear.ID)}, and {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("war flails", Items.MeleeWeapons.Instances.WarFlail.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("d6aa43f7-e7f2-4e12-b502-71d0bff3cc1b"), Type = TextBlockType.Text, Text = $"You can make nonlethal {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)} with a {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("butterfly sword", Items.MeleeWeapons.Instances.ButterflySword.ID)} without taking a penalty." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

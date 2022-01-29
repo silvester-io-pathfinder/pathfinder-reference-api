@@ -8,6 +8,7 @@ using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Utilities.Text;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
             Feat feat = GetFeat();
 
             builder.AddRollableEffect(feat, GetRollableEffect());
-            builder.AddTraits(feat, GetTraits());
+            builder.AddTraitBindings<FeatTraitBinding, Feat>(feat, GetTraits);
             builder.AddTextBlocks(feat, GetDetailBlocks(), e => e.Details);
             builder.AddEffect(feat, GetCharacterEffects, e => e.EffectId);
             builder.AddPrerequisite(feat, (builder) => GetPrerequisites(feat, builder));
@@ -32,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats
         }
 
         protected abstract Feat GetFeat();
-        protected abstract IEnumerable<Guid> GetTraits();
+        protected abstract void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder);
         protected abstract IEnumerable<TextBlock> GetDetailBlocks();
         protected abstract SourcePage GetSourcePage();
 

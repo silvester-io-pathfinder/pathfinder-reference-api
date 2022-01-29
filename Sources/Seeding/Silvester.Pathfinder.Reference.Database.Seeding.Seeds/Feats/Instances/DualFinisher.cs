@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("b4cbcbb8-7d5c-4ae6-929e-35408153f40c"), Type = TextBlockType.Text, Text = $"You split your attacks. Make two melee {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}, one with each required weapon, each against a different foe. If the second {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} is made with a non-{ToMarkdownLink<Models.Entities.Trait>("agile", Traits.Instances.Agile.ID)} weapon, it takes a -2 penalty. Increase your multiple attack penalty only after attempting both {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

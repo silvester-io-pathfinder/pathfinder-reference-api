@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("6160e1c8-922d-4ef0-9d8f-5a30c92c05d9"), Type = TextBlockType.Text, Text = $"While you are more susceptible to cold iron than most of the Wingless, you also have an incredible resilience and a deeper connection to the healing energies of the First World. Increase your maximum Hit Points by an amount equal to your level. If you rest for 10 minutes, brilliant light from the First World seeps into your form from your wings (or the spot where your wings would be), causing you to regain a number of Hit Points equal to your level; this is cumulative with any Hit Points you regain from {ToMarkdownLink<Models.Entities.SkillAction>("Treat Wounds", SkillActions.Instances.TreatWounds.ID)}. However, you gain weakness 5 to cold iron." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

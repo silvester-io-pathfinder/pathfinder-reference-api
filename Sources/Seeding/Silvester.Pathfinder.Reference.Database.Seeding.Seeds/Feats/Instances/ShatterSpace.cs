@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -34,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("d654cdb4-2321-4f5a-b51d-e379d29ad9ec"), Type = TextBlockType.Text, Text = $"~ Amp: You or one target of the spell are surrounded in a spiral of torn space. This is an aura in a 5-foot emanation. A creature that starts its turn in the aura takes 1d6 slashing damage for every 2 levels of the amped psi cantrip, with a basic Reflex save against your spell DC. The aura lasts until the beginning of your next turn. You can choose whether the aura affects the creature emitting it." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

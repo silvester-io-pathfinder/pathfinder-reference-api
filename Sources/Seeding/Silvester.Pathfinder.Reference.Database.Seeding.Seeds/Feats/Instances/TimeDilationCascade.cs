@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("68ea1d07-b5ad-4d3f-bbe0-5e601ab225c8"), Type = TextBlockType.Text, Text = $"You borrow a bit of time from the future to act now. Make six {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}. Your multiple attack penalty applies normally to these {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}. If you successfully hit a creature with multiple {ToMarkdownLink<Models.Entities.Action>("Strikes", Actions.Instances.Strike.ID)}, combine those {ToMarkdownLink<Models.Entities.Action>("Strikes'", Actions.Instances.Strike.ID)} damage for the purpose of resistances and weaknesses. On your next turn, you regain 1 action instead of 3. This is before any alteration in your actions due to the quickened, slowed, and stunned conditions." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

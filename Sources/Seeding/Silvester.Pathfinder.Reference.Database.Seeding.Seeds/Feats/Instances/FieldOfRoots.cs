@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("9b193de9-40b1-49da-84aa-4283b3185f9f"), Type = TextBlockType.Text, Text = $"Your eidolon extends its roots underground to entangle and possibly damage all foes nearby. All enemies within your eidolon's reach take damage of the same type and amount as your eidolon's most damaging {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)}, depending on their Reflex saves. Any ongoing effects of the save last until the enemy either {ToMarkdownLink<Models.Entities.Action>("Escapes", Actions.Instances.Escape.ID)} or leaves your eidolon's reach. After using Field of Roots, your eidolon is immobilized until it takes a single action, which has the {ToMarkdownLink<Models.Entities.Trait>("manipulate", Traits.Instances.Manipulate.ID)} trait, to detach from the ground; this also ends any remaining effects on enemies from Field of Roots." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }
 
         protected override RollableEffect? GetRollableEffect()

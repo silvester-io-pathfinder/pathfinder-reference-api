@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("b361e92b-5ae6-4c0a-adb6-342739178fb6"), Type = TextBlockType.Text, Text = $"Once per day, you can spend 10 minutes studying your surroundings in search of omens related to a particular course of action to cast {ToMarkdownLink<Models.Entities.Spell>("augury", Spells.Instances.Augury.ID)} as an innate divine spell. Unless the result of the {ToMarkdownLink<Models.Entities.Spell>("augury", Spells.Instances.Augury.ID)} was “nothing,” you gain the {ToMarkdownLink<Models.Entities.Feat>("Call Upon the Brightness", Feats.Instances.CallUponTheBrightness.ID)} reaction for the next 30 minutes." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("66e2d9bc-e155-4b21-9f70-45abe4b69923"), Type = TextBlockType.Text, Text = $"Unlike most of your kind, who dismiss goblins as embarrassments or expendable annoyances, you have studied the methodology behind their irresponsible and incomprehensible actions. You gain the {ToMarkdownLink<Models.Entities.Feat>("Adopted Ancestry", Feats.Instances.AdoptedAncestry.ID)} general feat and must select goblin as the feat's chosen ancestry. You also gain one 1st-level goblin ancestry feat." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

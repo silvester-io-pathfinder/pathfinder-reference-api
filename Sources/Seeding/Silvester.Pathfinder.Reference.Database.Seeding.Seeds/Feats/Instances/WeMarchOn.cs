@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f4d288dc-e84d-4708-8506-94f2ed7989db"), Type = TextBlockType.Text, Text = $"You make sure that your allies push themselves while traveling. You gain the {ToMarkdownLink<Models.Entities.Feat>("Caravan Leader", Feats.Instances.CaravanLeader.ID)} and {ToMarkdownLink<Models.Entities.Feat>("Pick Up the Pace", Feats.Instances.PickUpThePace.ID)} general feats, even if you don't meet the prerequisites." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

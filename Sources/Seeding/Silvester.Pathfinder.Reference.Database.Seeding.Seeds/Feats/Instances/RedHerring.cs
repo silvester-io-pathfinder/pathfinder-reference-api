@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("bef99abe-5e00-4dea-891b-db6d3a95c243"), Type = TextBlockType.Text, Text = $"You have a keen sense for avoiding spurious lines of inquiry. When you {ToMarkdownLink<Models.Entities.Feat>("Pursue a Lead", Feats.Instances.PursueALead.ID)}, the GM tells you if the lead you chose is inconsequential. For example, if you found a splatter of gray mud on the wall, thought it was suspicious, and {ToMarkdownLink<Models.Entities.Feat>("Pursued it as a Lead", Feats.Instances.PursueALead.ID)}, the GM would tell you if there was no greater mystery related to it. When the GM tells you a lead is inconsequential, you can decline to {ToMarkdownLink<Models.Entities.Feat>("Pursue the Lead", Feats.Instances.PursueALead.ID)}, keeping any leads you were already pursuing. You still can't use {ToMarkdownLink<Models.Entities.Feat>("Pursue a Lead", Feats.Instances.PursueALead.ID)} again for 10 minutes, as normal." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

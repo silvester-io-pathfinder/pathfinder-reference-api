@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f4a8c077-12bd-45a2-9d33-8a79706d283c"), Type = TextBlockType.Text, Text = $"Humans are renowned for their ability to persist through the most grueling of trials. When you would become fatigued, attempt a DC 17 flat check. On a success, you aren't fatigued. If the fatigued condition has an underlying cause that you don't address, such as lack of rest, you must attempt the check again at an interval determined by the GM until you fail the flat check or address the underlying cause." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

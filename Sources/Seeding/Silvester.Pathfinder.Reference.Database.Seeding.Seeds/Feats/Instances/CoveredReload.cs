@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("bc242fc6-03cc-4e10-ba45-6ee4ad50ff6f"), Type = TextBlockType.Text, Text = $"You duck into a safe position or minimize your profile while reloading to make your next attack. Either {ToMarkdownLink<Models.Entities.Action>("Take Cover", Actions.Instances.TakeCover.ID)} or attempt to {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)}, then {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to reload. As normal, you must meet the requirements to {ToMarkdownLink<Models.Entities.Action>("Take Cover", Actions.Instances.TakeCover.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)}; you must be prone, benefiting from cover, or near a feature that allows you to {ToMarkdownLink<Models.Entities.Action>("Take Cover", Actions.Instances.TakeCover.ID)}, and you need to be benefiting from cover or concealed to a creature to {ToMarkdownLink<Models.Entities.SkillAction>("Hide", SkillActions.Instances.Hide.ID)} from that creature." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("43c361ae-401b-4c64-bc01-6a8517ea179c"), Type = TextBlockType.Text, Text = $"You spend 1 minute surveying a small location (such as a single room) to get an impression of events that occurred there in the last day. This involves moving about the area and studying footprints, the placement of objects, spilled drinks or blood, and so forth. You get an indistinct mental impression of significant events that happened there. This gives you clues and details of the past, including the overall events and their time frame, but it's not a perfect record. This also isn't enough to identify who was involved in these events if you weren't already aware the person was there. As determined by the GM, you also pick out various seemingly small details that could serve as important clues, like a memorable weapon someone used for a murder or the type of cloak someone wore when passing through." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

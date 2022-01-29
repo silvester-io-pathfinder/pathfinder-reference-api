@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("5ca6f904-17b8-4d3f-b9b8-95e50e72bdd2"), Type = TextBlockType.Text, Text = $"You embellish your spellcasting with entrancing flourishes and grand pronouncements, making it harder to identify or counter. If the next action you use is to {ToMarkdownLink<Models.Entities.Rule>("Cast a Spell", Rules.Instances.CastASpell.ID)}, creatures with the ability to {ToMarkdownLink<Models.Entities.Rule>("Cast that Spell", Rules.Instances.CastASpell.ID)} don't automatically know what the spell is. In addition, creatures that witness your spellcasting take a -2 circumstance penalty to checks to identify the spell with {ToMarkdownLink<Models.Entities.SkillAction>("Recall Knowledge", SkillActions.Instances.RecallKnowledge.ID)} and checks to counteract the spell during its casting (such as with {ToMarkdownLink<Models.Entities.Feat>("Counterspell", Feats.Instances.Counterspell.ID)})." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

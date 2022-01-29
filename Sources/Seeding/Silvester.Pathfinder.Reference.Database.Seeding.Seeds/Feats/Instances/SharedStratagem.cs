@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("fb212312-ae2b-4d36-828f-6e5e14674df2"), Type = TextBlockType.Text, Text = $"The plans you make include your allies as well as yourself. When you hit a creature with an attack on which you substituted your attack roll due to {ToMarkdownLink<Models.Entities.Feat>("Devising a Stratagem", Feats.Instances.DeviseAStratagem.ID)}, designate one ally. The creature you hit is flat-footed to that ally on the next attack the designated ally makes against that creature before the start of your next turn." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

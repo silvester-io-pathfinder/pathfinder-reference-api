@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("e9ebff7f-b10a-4ed7-a639-76f2cf75230e"), Type = TextBlockType.Text, Text = $"Your weapon can shoot projectiles that split into simple ropes or nets around your foes' legs to trip your targets, and you can climb using the grappling hooks built into the weapon. Your weapon innovation gains the {ToMarkdownLink<Models.Entities.Trait>("climbing", Traits.Instances.Climbing.ID)} and {ToMarkdownLink<Models.Entities.Trait>("ranged trip", Traits.Instances.RangedTrip.ID)} traits." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

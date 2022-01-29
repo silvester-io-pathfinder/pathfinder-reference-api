@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("7fccdfcc-4f8b-4772-b8b1-4cbccf0ede14"), Type = TextBlockType.Text, Text = $"To you, crocodilians, giant lizards, and dinosaurs are loyal steeds, not monsters. You gain the {ToMarkdownLink<Models.Entities.Feat>("Ride", Feats.Instances.Ride.ID)} feat, even if you don't meet the prerequisites. You gain a +1 circumstance bonus to Nature checks to {ToMarkdownLink<Models.Entities.SkillAction>("Command an Animal", SkillActions.Instances.CommandAnAnimal.ID)} as long as the animal is a reptile, dinosaur, or even a non-sapient dragon." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

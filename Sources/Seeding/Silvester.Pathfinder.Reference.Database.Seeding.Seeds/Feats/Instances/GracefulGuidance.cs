@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("91ab668f-ccdb-46d8-b39f-ef3ebaed90d1"), Type = TextBlockType.Text, Text = $"You can demonstrate how to quickly twist out of the way of dangerous effects. You can use the {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)} reaction to grant a bonus to an ally's Reflex save. As usual for {ToMarkdownLink<Models.Entities.Action>("Aid", Actions.Instances.Aid.ID)}, you need to prepare by using an action on your turn to encourage the ally." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

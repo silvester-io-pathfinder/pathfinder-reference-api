@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("425cda7b-7b0d-4ace-b8a3-1a739969bb6b"), Type = TextBlockType.Text, Text = $"You can't rely on your Unstable Redundancies again until you spend 10 minutes setting them back up. If you spend 10 minutes retuning your innovation so you can use {ToMarkdownLink<Models.Entities.Trait>("unstable", Traits.Instances.Unstable.ID)} actions again, you can set up your Unstable Redundancies during the same time." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

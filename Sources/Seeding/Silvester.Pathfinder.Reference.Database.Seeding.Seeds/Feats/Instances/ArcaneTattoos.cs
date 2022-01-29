@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("226bce74-f310-4f7b-8ab2-863119784e7a"), Type = TextBlockType.Text, Text = $"You have tattoos on your body corresponding to one of the ancient Thassilonian schools of magic. Choose one of the following schools of magic: abjuration ({ToMarkdownLink<Models.Entities.Spell>("shield", Spells.Instances.Shield.ID)}), conjuration ({ToMarkdownLink<Models.Entities.Spell>("tanglefoot", Spells.Instances.Tanglefoot.ID)}), enchantment ({ToMarkdownLink<Models.Entities.Spell>("daze", Spells.Instances.Daze.ID)}), evocation ({ToMarkdownLink<Models.Entities.Spell>("electric arc", Spells.Instances.ElectricArc.ID)}), illusion ({ToMarkdownLink<Models.Entities.Spell>("ghost sound", Spells.Instances.GhostSound.ID)}), necromancy ({ToMarkdownLink<Models.Entities.Spell>("chill touch", Spells.Instances.ChillTouch.ID)}), or transmutation ({ToMarkdownLink<Models.Entities.Spell>("sigil", Spells.Instances.Sigil.ID)}). You can cast the associated cantrip (listed in parentheses) as an innate arcane spell at will." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

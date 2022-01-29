@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("f34a12ad-a02f-4149-9219-dc48594b4ec2"), Type = TextBlockType.Text, Text = $"You've adopted the calming presence of catrinas, the festive dead; you might have even danced with a catrina yourself! So long as you are visibly carrying fresh flowers or colorful ribbons somewhere on your person, you can cast {ToMarkdownLink<Models.Entities.Spell>("calm emotions", Spells.Instances.CalmEmotions.ID)} twice per day as a 2nd-level divine innate spell." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

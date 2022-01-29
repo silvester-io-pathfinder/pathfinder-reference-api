@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("1a2022c5-5c1a-4a7b-8e0d-6f7b7c2581a4"), Type = TextBlockType.Text, Text = $"You can deliver hexes through your nails. When you successfully cast a non-cantrip hex that requires 2 actions or more to cast and that doesn't require a spell attack roll, if your target is within your reach, as part of the spellcasting activity you can make a nails {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} against the foe before applying any effects of the hex. If this {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} misses, the hex has no effect." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

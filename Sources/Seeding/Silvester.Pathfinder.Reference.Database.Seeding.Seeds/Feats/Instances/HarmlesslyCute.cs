@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("42514c79-e831-46b7-9a6b-0270396ded6c"), Type = TextBlockType.Text, Text = $"Your size and demeanor make it easy for you to convince others that you mean no harm. You gain the {ToMarkdownLink<Models.Entities.Feat>("Shameless Request", Feats.Instances.ShamelessRequest.ID)} skill feat as a bonus feat. Additionally, you gain a +1 circumstance bonus to initiative checks when you roll Deception for initiative." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

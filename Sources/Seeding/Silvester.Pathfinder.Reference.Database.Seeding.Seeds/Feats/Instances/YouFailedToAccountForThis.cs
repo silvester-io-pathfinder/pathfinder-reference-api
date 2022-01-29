@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("45d2be42-cb5a-42e7-a435-d62a5d112ec4"), Type = TextBlockType.Text, Text = $"Since you're using your Crafting DC instead of your AC, any penalties to your AC don't apply, but this doesn't remove any conditions or other effects that are causing you such penalties. For instance, if you were flat-footed and used an invention to defend against a sneak attack, you'd still take the extra precision damage if you were hit, even though the –2 penalty to AC from being flat-footed wouldn't apply to your Crafting DC." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

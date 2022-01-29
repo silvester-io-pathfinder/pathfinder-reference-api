@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("9cb7098b-15dd-4d58-977f-e39e0177b606"), Type = TextBlockType.Text, Text = $"You've added long, snagging spikes to your weapon, which you can use to impede your foes' movement. Your innovation gains the {ToMarkdownLink<Models.Entities.Trait>("hampering", Traits.Instances.Hampering.ID)} and {ToMarkdownLink<Models.Entities.Trait>("versatile P", Traits.Instances.Versatile.ID)} traits." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -34,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("ad126e80-4de8-40fc-a582-e6b63f0d0f42"), Type = TextBlockType.Enumeration, Text = $" Explosive Barrel: Your attack strikes a barrel of expensive rum, a vial of volatile alchemical fluids, a demonic pustule erupting from the earth, or some other explosive object. The object explodes in a 20-foot burst, and creatures in the area take 6d6 damage with a basic Reflex save against your class DC. The damage type is chosen by the GM, based on the exploding object. Increase the damage by 1d6 for every 2 levels you have above 10th." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

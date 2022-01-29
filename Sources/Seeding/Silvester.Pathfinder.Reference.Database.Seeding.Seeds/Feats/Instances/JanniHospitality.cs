@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("251841f0-f717-421e-a288-06141f0f8b38"), Type = TextBlockType.Text, Text = $"You can use magic to show others desert hospitality. You can cast 2nd-level {ToMarkdownLink<Models.Entities.Spell>("create food", Spells.Instances.CreateFood.ID)} once per day and {ToMarkdownLink<Models.Entities.Spell>("create water", Spells.Instances.CreateWater.ID)} twice per day as arcane innate spells." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

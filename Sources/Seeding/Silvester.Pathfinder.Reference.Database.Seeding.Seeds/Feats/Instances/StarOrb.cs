@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("e152f03a-ffec-4d74-9a21-4fa91cfbfc4c"), Type = TextBlockType.Text, Text = $"Your magic has crystallized into a spherical stone. You gain a familiar, except it's a star orb: a Tiny stone of light Bulk. The familiar has no Speeds and must select a Speed familiar ability before it can move, animating in a way appropriate to the chosen Speed and using the statistics of a normal familiar for that day; when it‘s an immobile stone, it can't select any familiar or master abilities that require it to move. It always has the innate surge master ability (Advanced Player's Guide 147)." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("fb9ead8f-1210-4dc1-85db-c513ec4a259f"), Type = TextBlockType.Text, Text = $"You sense magical dangers. When using the {ToMarkdownLink<Models.Entities.Activity>("Detect Magic", Activities.Instances.DetectMagic.ID)} exploration activity, you can roll initiative twice and use the better result so long as at least one opponent has a {ToMarkdownLink<Models.Entities.Trait>("magical", Traits.Instances.Magical.ID)} effect or magic item and is in range of your {ToMarkdownLink<Models.Entities.Spell>("detect magic", Spells.Instances.DetectMagic.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

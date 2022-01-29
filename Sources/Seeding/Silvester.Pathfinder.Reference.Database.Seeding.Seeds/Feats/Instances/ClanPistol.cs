@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("fa7ad2b0-5855-41e3-ba56-54867818c758"), Type = TextBlockType.Text, Text = $"Raised in the ancient halls of Dongun Hold or the surrounding region, you display your lineage with a clan pistol, rather than a clan dagger. You get one {ToMarkdownLink<Models.Entities.Feat>("clan pistol", Feats.Instances.ClanPistol.ID)} of your clan for free, as it was given to you at birth. This replaces your {ToMarkdownLink<Models.Items.Instances.MeleeWeapon>("clan dagger", Items.MeleeWeapons.Instances.ClanDagger.ID)}. Selling this pistol is a terrible taboo and earns you the disdain of other dwarves. You are trained with the {ToMarkdownLink<Models.Entities.Feat>("clan pistol", Feats.Instances.ClanPistol.ID)}. In addition, when your {ToMarkdownLink<Models.Entities.Feat>("clan pistol", Feats.Instances.ClanPistol.ID)} is visible, you gain a +1 circumstance bonus on checks to {ToMarkdownLink<Models.Entities.SkillAction>("Gather Information", SkillActions.Instances.GatherInformation.ID)} or {ToMarkdownLink<Models.Entities.SkillAction>("Make an Impression", SkillActions.Instances.MakeAnImpression.ID)} when interacting with citizens of Alkenstar, Dongun Hold, or their allies." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

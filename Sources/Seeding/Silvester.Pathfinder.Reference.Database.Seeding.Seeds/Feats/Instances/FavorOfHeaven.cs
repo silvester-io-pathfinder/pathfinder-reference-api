@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("b9492531-4787-4a63-8fe6-2c6068cb5eb3"), Type = TextBlockType.Text, Text = $"You're one of Hei Feng's chosen people and have the authority of the Celestial Court on your side. Once per day, you can cast a 6th-level {ToMarkdownLink<Models.Entities.Spell>("spirit blast", Spells.Instances.SpiritBlast.ID)} as a divine innate spell. In addition, you gain resistance 5 to both good and evil damage." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

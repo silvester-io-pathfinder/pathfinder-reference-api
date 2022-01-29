@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2c16c083-35c6-4869-9990-0c433276720b"), Type = TextBlockType.Text, Text = $"Your plans account for your foes' resistances, enabling you to strike a telling blow. When you hit with a {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} on which you substituted your attack roll due to {ToMarkdownLink<Models.Entities.Feat>("Devising a Stratagem", Feats.Instances.DeviseAStratagem.ID)}, you ignore an amount of resistance equal to your Intelligence modifier for each resistance that applies against your attack." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

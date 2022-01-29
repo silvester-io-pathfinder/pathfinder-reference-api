@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("de418508-0a8c-41c7-b70e-55ec203e0205"), Type = TextBlockType.Text, Text = $"You descend from an angel – a winged messenger from Nirvana or one of the other celestial realms – which gives you a knack for cultures and languages. You gain the trained proficiency rank in Society. If you would automatically become trained in Society (from your background or class, for example), you instead become trained in a skill of your choice. You know the {ToMarkdownLink<Models.Entities.Language>("Celestial", Languages.Instances.Celestial.ID)} language, and you gain the {ToMarkdownLink<Models.Entities.Feat>("Multilingual", Feats.Instances.Multilingual.ID)} skill feat." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

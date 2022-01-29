@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("82ca32ba-d531-4232-aa4c-f09ebdae5486"), Type = TextBlockType.Text, Text = $"You are momentarily thrown off by the divine insight, however, and you must roll twice for your initiative roll and use the worse result. This is a {ToMarkdownLink<Models.Entities.Trait>("misfortune", Traits.Instances.Misfortune.ID)} effect. The two effects are tied together; if you would avoid the misfortune effect for any reason, or if any of your allies would negate their fortune effect, your Oracular Warning does nothing. Depending on whether you use gestures or call out, this action gains either the {ToMarkdownLink<Models.Entities.Trait>("visual", Traits.Instances.Visual.ID)} or {ToMarkdownLink<Models.Entities.Trait>("auditory", Traits.Instances.Auditory.ID)} trait, respectively." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

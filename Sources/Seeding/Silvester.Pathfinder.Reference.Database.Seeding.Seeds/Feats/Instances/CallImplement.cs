@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("2bc2d07d-502b-41a2-a90e-ad748162e15d"), Type = TextBlockType.Text, Text = $"You can tug on the connections between yourself and your implement, causing it to find its way back to you. You look down at your hand and find your implement has mysteriously appeared in it, as long as it was within 1 mile and on the same plane of existence. If your implement is attended by another creature, that creature can prevent the implement from teleporting away if it succeeds at a Will save against your class DC. If the creature succeeds, you can't attempt to Call that Implement again; you have to track the creature down to get the implement back." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

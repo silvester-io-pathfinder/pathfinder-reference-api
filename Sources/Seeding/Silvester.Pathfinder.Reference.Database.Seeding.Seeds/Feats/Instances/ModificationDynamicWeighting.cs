@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("8e00f757-3c24-4b5c-a35c-23c8a8c795bf"), Type = TextBlockType.Text, Text = $"Your weapon's modified weight distribution can increase power in exchange for taking more hands to wield. Your innovation gains the {ToMarkdownLink<Models.Entities.Trait>("two-hand", Traits.Instances.TwoHand.ID)} trait, with a damage die one size higher than the weapon's normal weapon damage die size (for instance, a longsword would gain the {ToMarkdownLink<Models.Entities.Trait>("two-hand", Traits.Instances.TwoHand.ID)} d10 trait). Your innovation also gains the {ToMarkdownLink<Models.Entities.Trait>("versatile B", Traits.Instances.Versatile.ID)} trait." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("5c41aaec-d6de-4cf5-bbe4-19292b80c987"), Type = TextBlockType.Text, Text = $"Thrown weapons become especially deadly in your fury. You apply the additional damage from {ToMarkdownLink<Models.Entities.Feat>("Rage", Feats.Instances.Rage.ID)} to your thrown weapon attacks. If you have the {ToMarkdownLink<Models.Entities.Feat>("Brutal Critical", Feats.Instances.BrutalCritical.ID)} feat or the devastator class feature, apply their benefits to thrown weapon attacks." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

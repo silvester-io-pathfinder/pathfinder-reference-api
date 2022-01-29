@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("e791a98e-a862-4b83-ad48-7e7140cf0804"), Type = TextBlockType.Text, Text = $"Your battle tactics are aided by your assessment of your foes' capabilities, allowing you to instantly adjust your movements to maximum advantage. You {ToMarkdownLink<Models.Entities.Action>("Step", Actions.Instances.Step.ID)} or {ToMarkdownLink<Models.Entities.Action>("Stride", Actions.Instances.Stride.ID)}; this movement doesn't trigger reactions from the triggering creature." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

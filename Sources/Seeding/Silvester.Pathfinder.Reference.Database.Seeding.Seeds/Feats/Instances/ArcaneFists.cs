@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("bb6c347a-a801-4b7b-a024-761bbb3729ef"), Type = TextBlockType.Text, Text = $"Your physical training encompasses unarmed combat forms. The damage die for your fist changes to 1d6 instead of 1d4. You don't take the normal –2 circumstance penalty when making a lethal attack with your fist or any other unarmed attacks. Your unarmed attacks gain the {ToMarkdownLink<Models.Entities.Trait>("arcane", Traits.Instances.Arcane.ID)} trait, making them magical. At 5th level, you also gain the critical specialization effects of unarmed attacks in the brawling group and weapons in the brawling group." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("c7bb9934-1cba-44b8-be35-ffaa681b815c"), Type = TextBlockType.Text, Text = $"You fling a bomb into the air and then shoot it with your gun before it falls, raining destruction down over a wide area. If necessary, you {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} to draw the bomb and regrip your weapon. You throw your bomb to the corner of a square within your firearm's first range increment and shoot it with your firearm. All creatures in a 15-foot burst of the bomb take the bomb's normal damage with a basic Reflex save against your class DC. They don't take any splash or persistent damage the bomb would deal normally." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

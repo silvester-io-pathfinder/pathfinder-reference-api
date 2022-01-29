@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("8fc87916-5926-4d1f-8356-7d0b7347d31a"), Type = TextBlockType.Text, Text = $"You can cast {ToMarkdownLink<Models.Entities.Spell>("purify food and drink", Spells.Instances.PurifyFoodAndDrink.ID)} as a primal innate spell, but only on liquids. You can cast this spell once every 10 minutes. You can also use your innate {ToMarkdownLink<Models.Entities.Spell>("purify food and drink", Spells.Instances.PurifyFoodAndDrink.ID)} on a touched creature instead of a liquid to purify their blood, giving that creature a +2 status bonus for 1 minute on their ongoing saves against poisons already present in their body when you cast the spell." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

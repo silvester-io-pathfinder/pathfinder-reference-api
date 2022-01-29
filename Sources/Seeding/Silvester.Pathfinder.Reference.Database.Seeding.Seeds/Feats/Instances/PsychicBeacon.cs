@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -34,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("693c8ea0-d0dc-4541-a4d4-0b6b58fae5e2"), Type = TextBlockType.Text, Text = $"~ Amp: Choose one creature that's hit by the spell (if the spell has a spell attack roll) or that fails its save against the spell (if the spell requires a save). A magical beacon leaves telltale clues that make it easier to notice the creature for 1 minute. If the target was invisible, it's instead merely concealed for 1 minute. If it was concealed, it's no longer concealed for 1 minute, as the beacon clears up the concealment and makes it perfectly easy to see, even in areas of poor visibility." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

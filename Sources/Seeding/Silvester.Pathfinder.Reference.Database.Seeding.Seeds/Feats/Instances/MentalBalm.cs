@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -34,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("16e24612-0c68-4da6-be1a-e96baaec3a3f"), Type = TextBlockType.Text, Text = $"~ Amp: You or one ally within 30 feet gain a +1 bonus to Will saves against {ToMarkdownLink<Models.Entities.Trait>("emotion", Traits.Instances.Emotion.ID)} effects for 1 round. You can also have the amped psi cantrip attempt to counteract one effect on yourself or the chosen ally imposing the frightened condition, or an effect imposing the stupefied condition that has a duration of 1 hour or less. On a success, you end the frightened and stupefied conditions, but you don't end any other parts of the effect, if any." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("4065172f-55f7-409c-ab59-94989d652766"), Type = TextBlockType.Text, Text = $"You open vestigial eyes, unfurl tympanic flaps of skin, or otherwise enhance your senses. Until the start of your next turn, you gain the following benefits: you can't be flanked; when you {ToMarkdownLink<Models.Entities.Action>("Seek", Actions.Instances.Seek.ID)} for creatures, you can scan a 60-foot cone or a 30-foot burst instead of the normal area; and when you {ToMarkdownLink<Models.Entities.Action>("Seek", Actions.Instances.Seek.ID)} for hidden objects, you can search a 15-foot square instead of the normal area." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

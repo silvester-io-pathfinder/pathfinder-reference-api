@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -35,9 +37,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("7eaf48d1-50d8-47cb-9532-5982941ad3ac"), Type = TextBlockType.Text, Text = $"~ Enhancement: Your body has more space for integration. You can now either integrate two one-handed weapons, a one-handed weapon and a shield, or a single two-handed weapon which is split across both arms. You can use a single {ToMarkdownLink<Models.Entities.Action>("Interact", Actions.Instances.Interact.ID)} action to draw or store both integrated armaments. When you draw a single weapon, you can choose to hold it with either one hand or both hands." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("3070cb79-9efa-465f-ab76-521ade496a8b"), Type = TextBlockType.Text, Text = $"You've powered up your construct's weaponry. Choose one of your construct's unarmed attacks to gain your choice of one initial weapon modification, chosen from the list on G&amp;G pg. 18 or from other initial weapon modifications to which you have access. The unarmed attack must meet any requirements for the chosen traits (such as being a melee attack for {ToMarkdownLink<Models.Entities.Feat>("entangling form", Feats.Instances.ModificationEntanglingForm.ID)}), and since it's an unarmed attack, it can never meet certain requirements, such as being a simple weapon for {ToMarkdownLink<Models.Entities.Feat>("complex simplicity", Feats.Instances.ModificationComplexSimplicity.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("3205b4bc-d639-4d50-b648-629cc4b5baec"), Type = TextBlockType.Text, Text = $"Using your ancestors' bones, you manifest their spirits around you in a fossilized form, terrifying your foes. You can cast {ToMarkdownLink<Models.Entities.Spell>("mask of terror", Spells.Instances.MaskOfTerror.ID)} on yourself as a primal innate spell once per day. When you do, you appear as a skeletal lizardfolk ancestor, twisted in a way that inspires the deepest fears of those who observe you." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

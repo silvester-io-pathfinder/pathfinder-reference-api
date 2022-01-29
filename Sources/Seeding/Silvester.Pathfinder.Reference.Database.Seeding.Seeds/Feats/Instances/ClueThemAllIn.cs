@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("aaba6306-4ae9-4104-9a58-4694fe58275e"), Type = TextBlockType.Text, Text = $"You can clue in all your allies at once. When you use the {ToMarkdownLink<Models.Entities.Feat>("Clue In", Feats.Instances.ClueIn.ID)} reaction, any of your allies who are attempting the same check to investigate a lead receive the circumstance bonus from {ToMarkdownLink<Models.Entities.Feat>("Clue In", Feats.Instances.ClueIn.ID)}. If you use this ability during an encounter, they must attempt their check within 1 round of when you {ToMarkdownLink<Models.Entities.Feat>("Clued them In", Feats.Instances.ClueIn.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

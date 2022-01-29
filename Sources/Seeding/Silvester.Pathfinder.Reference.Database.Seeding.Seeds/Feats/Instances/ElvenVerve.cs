@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("7d84e09b-699a-40c0-8d5a-27c9d7a17118"), Type = TextBlockType.Text, Text = $"While all elves are immune to the paralyzing touch of ghouls, you can shake off flesh-numbing magic of all kinds. You gain a +1 circumstance bonus to saves against effects that would impose the immobilized, paralyzed, or slowed conditions. When you would be immobilized, paralyzed, or slowed for at least 2 rounds, reduce that duration by 1 round." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("89737afd-0367-4754-ae98-4393e548ee82"), Type = TextBlockType.Text, Text = $"The new movement is as fast as your standard Speed; for example, if you have a 30-foot Speed, you can gain a 30-foot climb Speed. If your inherent animal doesn't typically have a specific type of Speed, you can't gain it with this feat. If your inherent animal doesn't typically have a climb, fly, or swim Speed, your Speed increases by 10 feet instead." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

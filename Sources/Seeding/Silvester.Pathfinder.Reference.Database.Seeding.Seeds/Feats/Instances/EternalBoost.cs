@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("99278433-153a-4c04-800b-89b5ef0f5271"), Type = TextBlockType.Text, Text = $"Your link with your eidolon is so intense that you continuously reinforce its abilities. You are permanently quickened; you can use your extra action only to cast {ToMarkdownLink<Models.Entities.Spell>("boost eidolon", Spells.Instances.BoostEidolon.ID)} or {ToMarkdownLink<Models.Entities.Feat>("reinforce eidolon", Feats.Instances.ReinforceEidolon.ID)}. While in exploration mode, you can declare that you are also continually casting {ToMarkdownLink<Models.Entities.Spell>("boost eidolon", Spells.Instances.BoostEidolon.ID)} or {ToMarkdownLink<Models.Entities.Feat>("reinforce eidolon", Feats.Instances.ReinforceEidolon.ID)} even while using a different exploration activity. If you do, even before your first turn in a combat encounter, that cantrip is active as if you had cast it on your previous turn." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

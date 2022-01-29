@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -33,9 +35,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("b25d4cc4-3e4e-4150-89d4-dd6570c12c5b"), Type = TextBlockType.Text, Text = $"After years of using black powder weaponry in dimly lit spaces, you've become accustomed to dazzling flashes of light and sudden shifts in illumination. You gain a +1 circumstance bonus to saving throws against {ToMarkdownLink<Models.Entities.Trait>("visual", Traits.Instances.Visual.ID)} effects. If you roll a success on a saving throw against a {ToMarkdownLink<Models.Entities.Trait>("visual", Traits.Instances.Visual.ID)} effect, you get a critical success instead." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("e698660e-1f19-4b91-85e0-4e7bc34a8e8a"), Type = TextBlockType.Text, Text = $"Years of packing for travel have taught you how to cram vast quantities into small spaces. You can fit an additional 50% of the listed Bulk capacity into mundane storage containers or vehicles. For example, you can fit 6 Bulk in a {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("backpack", Items.AdventuringGears.Instances.Backpack.ID)}, or 12 Bulk in a {ToMarkdownLink<Models.Items.Instances.AdventuringGear>("chest", Items.AdventuringGears.Instances.Chest.ID)}. This doesn't alter the items' Bulk, nor does it change how much you can store in a {ToMarkdownLink<Models.Entities.Trait>("magical", Traits.Instances.Magical.ID)} or {ToMarkdownLink<Models.Entities.Trait>("extradimensional", Traits.Instances.Extradimensional.ID)} storage space, such as a {ToMarkdownLink<Models.Items.Instances.HeldItem>("bag of holding", Items.HeldItems.Instances.BagOfHolding.ID)}." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

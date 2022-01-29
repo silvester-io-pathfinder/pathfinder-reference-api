@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("449200ce-d55f-46a0-9057-823049179403"), Type = TextBlockType.Text, Text = $"You hang onto a foe to harry them into submission. If your target moves while you're hanging onto it, you can choose to move with the target. The target is released if you choose not to move with it, at the start of your next turn, or if the target {ToMarkdownLink<Models.Entities.Action>("Escapes", Actions.Instances.Escape.ID)}. Attempts to {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)} from a Cling follow the rules for {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)}, but use your Acrobatics DC and end the Cling instead of the conditions normally ended by the {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)} action." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()

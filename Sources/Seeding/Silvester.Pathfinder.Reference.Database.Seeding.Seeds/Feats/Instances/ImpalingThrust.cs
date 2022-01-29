@@ -1,3 +1,5 @@
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.TextBlocks;
+using Silvester.Pathfinder.Reference.Database.Seeding.Builders.Traits;
 using Silvester.Pathfinder.Reference.Database.Models.Entities;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Builders;
 using Silvester.Pathfinder.Reference.Database.Models.Prerequisites.Instances;
@@ -32,9 +34,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
             yield return new TextBlock { Id = Guid.Parse("bf152589-b973-49a8-98c7-50c02be409f0"), Type = TextBlockType.Text, Text = $"You impale your enemy and hold them in place with your weapon. Make a melee {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} with the required weapon. If the {ToMarkdownLink<Models.Entities.Action>("Strike", Actions.Instances.Strike.ID)} hits and deals damage, your target is grabbed until they successfully {ToMarkdownLink<Models.Entities.Action>("Escape", Actions.Instances.Escape.ID)}, you attack with the required weapon, or you {ToMarkdownLink<Models.Entities.Action>("Release", Actions.Instances.Release.ID)} the required weapon, whichever comes first. When the target is no longer grabbed, they take persistent bleed damage equal to the number of weapon damage dice." };
         }
 
-        protected override IEnumerable<Guid> GetTraits()
+        protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            yield break;   
+
         }            
 
         protected override SourcePage GetSourcePage()
