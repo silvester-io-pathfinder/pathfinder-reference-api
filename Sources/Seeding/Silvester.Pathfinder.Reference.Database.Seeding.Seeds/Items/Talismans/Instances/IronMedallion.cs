@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Envision")
-                            .Trigger("You attempt a Will save against a fear effect but haven�t rolled yet.")
+                            .Trigger("You attempt a Will save against a fear effect but haven't rolled yet.")
                             .Requirements("You have master proficiency in Will saves or have the bravery class feature.");
                     })
                     .Build()

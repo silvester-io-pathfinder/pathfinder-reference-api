@@ -52,7 +52,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.ArmorPrope
                             .Details(effect =>
                             {
                                 effect.Text(Guid.Parse("896fc940-5f1e-4343-836c-90343ed7bde1"), "With a thought, the wearer activates a disguise. While the sinister knight armor's disguise is active, any identifying insignia or aesthetic of the armor is replaced by generic malevolent aesthetics such as spikes or demonic faces. While in the disguise, the wearer is always considered to be taking precautions against lifesense, and even a creature that successfully notices the wearer with its lifesense mistakes the wearer for an undead unless it critically succeeds at its Perception check or the wearer critically fails a Deception or Stealth check. Finally, while in the disguise, the rune attempts to counteract any effects that would reveal your alignment; on a successful counteract check, rather than negate the effect, the rune causes the effect to perceive your alignment as evil (maintaining any lawful or chaotic component of your alignment).");
-                                effect.Text(Guid.Parse("d306994d-43d0-4650-8f30-ecac23739f34"), "The wearer can Dismiss the disguise, and if the wearer�s armor is removed, the disguise deactivates automatically.");
+                                effect.Text(Guid.Parse("d306994d-43d0-4650-8f30-ecac23739f34"), "The wearer can Dismiss the disguise, and if the wearer's armor is removed, the disguise deactivates automatically.");
                             });
                     })
                     .Build()

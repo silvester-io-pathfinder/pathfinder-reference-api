@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("de21edb4-080e-473c-84f4-914cd964bd04"), Type = TextBlockType.Text, Text = "You create dozens of semi-real copies of yourself that swarm across the battlefield and fight your enemies. You are virtually indistinguishable from your clones, allowing you to Hide and Sneak among them. An enemy that�s in the area when the spell is cast or that ends its turn in the area takes 3d10 mental damage and 3d10 bludgeoning damage, and is possibly inflicted with a condition, depending on the result of its Will save. When you Cast the Spell, you choose a condition your shadows impose on a failed save: clumsy 2, enfeebled 2, flat-footed, or slowed 1." };
+            yield return new TextBlock { Id = Guid.Parse("de21edb4-080e-473c-84f4-914cd964bd04"), Type = TextBlockType.Text, Text = "You create dozens of semi-real copies of yourself that swarm across the battlefield and fight your enemies. You are virtually indistinguishable from your clones, allowing you to Hide and Sneak among them. An enemy that's in the area when the spell is cast or that ends its turn in the area takes 3d10 mental damage and 3d10 bludgeoning damage, and is possibly inflicted with a condition, depending on the result of its Will save. When you Cast the Spell, you choose a condition your shadows impose on a failed save: clumsy 2, enfeebled 2, flat-footed, or slowed 1." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

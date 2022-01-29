@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.FamiliarAbilitie
             {
                 Id = ID, 
                 Name = "Fast Movement", 
-                Description = "Increase one of the familiar�s Speeds from 25 feet to 40 feet."
+                Description = "Increase one of the familiar's Speeds from 25 feet to 40 feet."
             };
         }
 

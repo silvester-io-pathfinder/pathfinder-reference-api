@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("fb04d229-92d3-44c1-97b6-caa75513fb1d"), Type = TextBlockType.Text, Text = "You coax the magic power in your blood to manifest, accessing magic others don�t expect you to have." };
+            yield return new TextBlock { Id = Guid.Parse("fb04d229-92d3-44c1-97b6-caa75513fb1d"), Type = TextBlockType.Text, Text = "You coax the magic power in your blood to manifest, accessing magic others don't expect you to have." };
         }
 
         protected override IEnumerable<TextBlock> GetMulticlassDetails()

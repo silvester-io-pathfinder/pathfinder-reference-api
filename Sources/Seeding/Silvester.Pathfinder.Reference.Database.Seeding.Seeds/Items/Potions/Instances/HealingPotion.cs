@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Potions.In
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("0c0c9bd2-3498-4e7d-b993-cca6ec7d6f17"), "A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker�s wounds heal rapidly.");
+            builder.Text(Guid.Parse("0c0c9bd2-3498-4e7d-b993-cca6ec7d6f17"), "A healing potion is a vial of a ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly.");
         }
 
         protected override IEnumerable<PotionVariant> GetPotionVariants()

@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a391df8-24ab-46a0-a1a2-53d38ad30b16"), Type = TextBlockType.Text, Text = "You create an illusory duplicate of your ally�s ranged attack to confuse your opponents. You launch an illusory double of your ally�s projectile or spell at the same target, leaving the enemy unsure which attack to avoid. The target takes 3d8 mental damage, depending on its Will save. Regardless of the result of its save, it�s temporarily immune to shadow projectile spells for 1 hour." };
+            yield return new TextBlock { Id = Guid.Parse("6a391df8-24ab-46a0-a1a2-53d38ad30b16"), Type = TextBlockType.Text, Text = "You create an illusory duplicate of your ally's ranged attack to confuse your opponents. You launch an illusory double of your ally's projectile or spell at the same target, leaving the enemy unsure which attack to avoid. The target takes 3d8 mental damage, depending on its Will save. Regardless of the result of its save, it's temporarily immune to shadow projectile spells for 1 hour." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

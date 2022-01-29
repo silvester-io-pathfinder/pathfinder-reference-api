@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.MagicAmmun
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("7a842a5e-dd8b-4ae4-b4c0-c349169c8a65"), "Ghost ammunition is cool to the touch. This ammunition has the benefits of the ghost touch property rune and can fly through any obstacle except those that can block incorporeal creatures or effects. Though the ammunition penetrates barriers and ignores all cover, the target still benefits from the flat check from being concealed or hidden. You still can�t target an undetected creature without guessing.");
+            builder.Text(Guid.Parse("7a842a5e-dd8b-4ae4-b4c0-c349169c8a65"), "Ghost ammunition is cool to the touch. This ammunition has the benefits of the ghost touch property rune and can fly through any obstacle except those that can block incorporeal creatures or effects. Though the ammunition penetrates barriers and ignores all cover, the target still benefits from the flat check from being concealed or hidden. You still can't target an undetected creature without guessing.");
             builder.Text(Guid.Parse("5c4234c4-a44c-48c1-bf1a-cfc041b97d9c"), "After it is launched, the ammunition vanishes into mist. However, in the dead of the night 1d4 days later, it reappears in the last quiver or other container it was taken from.");
         }
 

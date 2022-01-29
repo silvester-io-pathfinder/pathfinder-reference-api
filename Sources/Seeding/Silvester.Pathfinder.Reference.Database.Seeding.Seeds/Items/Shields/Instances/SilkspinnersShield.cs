@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Shields.In
                             .Frequency("Once per day.")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("b7c0ae6b-0680-44e3-a456-cdde4d9f51d8"), "You animate the silkspinner's shield. Eight spider legs sprout from the shield's rim, granting you a climb Speed of 25 feet until the end of your next turn. Additionally, the spinnerets animate and produce silk for 1 minute. Successful shield bash Strikes made with the silkspinner's shield during this time entangle the target in silk. The target takes a �10-foot circumstance penalty to its Speeds for 1 round. If your Strike was a critical hit, the target becomes immobilized for 1 round instead. Regardless, the target can attempt to Escape (DC 30) to end the effect early.");
+                                effect.Text(Guid.Parse("b7c0ae6b-0680-44e3-a456-cdde4d9f51d8"), "You animate the silkspinner's shield. Eight spider legs sprout from the shield's rim, granting you a climb Speed of 25 feet until the end of your next turn. Additionally, the spinnerets animate and produce silk for 1 minute. Successful shield bash Strikes made with the silkspinner's shield during this time entangle the target in silk. The target takes a -10-foot circumstance penalty to its Speeds for 1 round. If your Strike was a critical hit, the target becomes immobilized for 1 round instead. Regardless, the target can attempt to Escape (DC 30) to end the effect early.");
                             });
                     })
                     .Build()

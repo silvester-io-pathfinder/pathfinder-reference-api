@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Shields.In
                             .Frequency("Once per day.")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("e6438eed-169d-4a9f-8385-97f7f11130d0"), "The shield magically releases itself and floats off your arm into the air next to you, granting you its bonus automatically, as if you had Raised the Shield. Because you�re not wielding the shield, you can�t use reactions such as Shield Block with the shield, but you gain its benefits even when using both of your hands. After 1 minute, the shield drops to the ground, ending its floating effect. While the shield is adjacent to you, you can Interact to grasp it, ending its floating effect early.");
+                                effect.Text(Guid.Parse("e6438eed-169d-4a9f-8385-97f7f11130d0"), "The shield magically releases itself and floats off your arm into the air next to you, granting you its bonus automatically, as if you had Raised the Shield. Because you're not wielding the shield, you can't use reactions such as Shield Block with the shield, but you gain its benefits even when using both of your hands. After 1 minute, the shield drops to the ground, ending its floating effect. While the shield is adjacent to you, you can Interact to grasp it, ending its floating effect early.");
                             });
                     })
                     .Build()
@@ -92,7 +92,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Shields.In
                             .Frequency("Once per day.")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("856899ef-b760-4e8d-a513-e44afc431506"), "The shield magically releases itself and floats off your arm into the air next to you, granting you its bonus automatically, as if you had Raised the Shield. Because you�re not wielding the shield, you can�t use reactions such as Shield Block with the shield, but you gain its benefits even when using both of your hands. After 1 minute, the shield drops to the ground, ending its floating effect. While the shield is adjacent to you, you can Interact to grasp it, ending its floating effect early.");
+                                effect.Text(Guid.Parse("856899ef-b760-4e8d-a513-e44afc431506"), "The shield magically releases itself and floats off your arm into the air next to you, granting you its bonus automatically, as if you had Raised the Shield. Because you're not wielding the shield, you can't use reactions such as Shield Block with the shield, but you gain its benefits even when using both of your hands. After 1 minute, the shield drops to the ground, ending its floating effect. While the shield is adjacent to you, you can Interact to grasp it, ending its floating effect early.");
                             });
                     })
                     .Build()

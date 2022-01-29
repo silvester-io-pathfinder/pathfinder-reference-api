@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Envision")
-                            .Trigger("You make an attack with the affixed weapon, but you haven�t rolled yet.");
+                            .Trigger("You make an attack with the affixed weapon, but you haven't rolled yet.");
                     })
                     .Build()
             };

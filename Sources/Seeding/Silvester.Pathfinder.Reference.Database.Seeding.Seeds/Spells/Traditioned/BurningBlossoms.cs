@@ -30,8 +30,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("46eb7c7f-ebb3-4655-bdd7-6e1481b076e2"), Type = TextBlockType.Text, Text = "An intangible hollow tree sprouts from the ground and grows to towering height, radiating a fiery passion and fascinating viewers. The base of the tree takes up a single square and grows 100 feet upwards, while its branches extend outwards 30 feet, forming the spell�s cylindrical area. The tree then blossoms, growing delicate white flowers that burn with white-hot fire. As the tree�s branches gently rustle in the wind, flower petals drift to the ground in a shower of flame. Any creature that ends its turn under the tree�s branches takes 6d6 fire damage from the burning petals." };
-            yield return new TextBlock { Id = Guid.Parse("67409599-de21-4aa3-8731-18ccddc3adfa"), Type = TextBlockType.Text, Text = "Any enemy that can see the tree, even if the enemy is outside the spell�s area, must attempt a Will save. This is an emotion, mental, and visual effect. Creatures fascinated with the tree must use at least one of their actions on each of their turns to move toward the tree." };
+            yield return new TextBlock { Id = Guid.Parse("46eb7c7f-ebb3-4655-bdd7-6e1481b076e2"), Type = TextBlockType.Text, Text = "An intangible hollow tree sprouts from the ground and grows to towering height, radiating a fiery passion and fascinating viewers. The base of the tree takes up a single square and grows 100 feet upwards, while its branches extend outwards 30 feet, forming the spell's cylindrical area. The tree then blossoms, growing delicate white flowers that burn with white-hot fire. As the tree's branches gently rustle in the wind, flower petals drift to the ground in a shower of flame. Any creature that ends its turn under the tree's branches takes 6d6 fire damage from the burning petals." };
+            yield return new TextBlock { Id = Guid.Parse("67409599-de21-4aa3-8731-18ccddc3adfa"), Type = TextBlockType.Text, Text = "Any enemy that can see the tree, even if the enemy is outside the spell's area, must attempt a Will save. This is an emotion, mental, and visual effect. Creatures fascinated with the tree must use at least one of their actions on each of their turns to move toward the tree." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -55,7 +55,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 CriticalSuccess = "The creature is unaffected and is temporarily immune for 24 hours.",
                 Success = "The creature is unaffected, but it must attempt a new save at the end of its turn if it can still see the tree.",
                 Failure = "The creature is fascinated with the tree until the end of its next turn.If it can still see the tree then, it must attempt a save again.",
-                CriticalFailure = "The creature is fascinated with the tree until the spell ends.The tree�s fire damage doesn�t end the fascination; other hostile actions end it, as normal.If the fascination ends, the creature must attempt a new save at the end of its turn if it can still see the tree."
+                CriticalFailure = "The creature is fascinated with the tree until the spell ends.The tree's fire damage doesn't end the fascination; other hostile actions end it, as normal.If the fascination ends, the creature must attempt a new save at the end of its turn if it can still see the tree."
             };
         }
 

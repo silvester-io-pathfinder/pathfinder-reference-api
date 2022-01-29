@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("19c1fe69-c21d-4b4c-b8ee-288376a89393"), "his ornate collar of intertwined leather strips of contrasting colors is paired with a bracelet of a similar construction. When you wear and invest the bracelet and your companion wears and invests the collar, you gain a stronger connection to each other. You and your companion can always sense each others� emotional states and basic physical wants and needs.");
+            builder.Text(Guid.Parse("19c1fe69-c21d-4b4c-b8ee-288376a89393"), "his ornate collar of intertwined leather strips of contrasting colors is paired with a bracelet of a similar construction. When you wear and invest the bracelet and your companion wears and invests the collar, you gain a stronger connection to each other. You and your companion can always sense each others' emotional states and basic physical wants and needs.");
         }
 
         protected override void GetTraits(ITraitBindingBuilder<BaseItemTraitBinding, BaseItem> builder)
@@ -59,7 +59,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Kind("Envision")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("5f2a4b6f-8e8c-4c87-a064-3981d593f997"), "You perceive through your animal companion�s senses instead of your own. You can Sustain the Activation. You are unaware of your own surroundings for as long as you are using your animal companion�s senses. In addition to the obvious use when you are separated from your companion, this ability might allow you to notice sounds, scents, and other stimuli that your companion�s senses register but yours alone don�t.");
+                                builder.Text(Guid.Parse("5f2a4b6f-8e8c-4c87-a064-3981d593f997"), "You perceive through your animal companion's senses instead of your own. You can Sustain the Activation. You are unaware of your own surroundings for as long as you are using your animal companion's senses. In addition to the obvious use when you are separated from your companion, this ability might allow you to notice sounds, scents, and other stimuli that your companion's senses register but yours alone don't.");
                             });
                     })
                     .Build()

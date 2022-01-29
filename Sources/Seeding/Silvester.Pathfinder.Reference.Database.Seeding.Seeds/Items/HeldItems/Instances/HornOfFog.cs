@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("948bb151-a04e-4d08-b854-7bc1f413fc6c"), "This large ram�s horn perpetually glistens with tiny droplets of water, much like condensation.");
+            builder.Text(Guid.Parse("948bb151-a04e-4d08-b854-7bc1f413fc6c"), "This large ram's horn perpetually glistens with tiny droplets of water, much like condensation.");
         }
        
         protected override IEnumerable<HeldItemVariant> GetHeldItemVariants()

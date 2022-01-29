@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("614c4f60-fb40-4df9-baad-9398924da20a"), Type = TextBlockType.Text, Text = "Through a combination of magic and training, you�ve learned how to wield wizard weapons more effectively. You gain expert proficiency in the club, crossbow, dagger, heavy crossbow, staff, and unarmed attacks." };
+            yield return new TextBlock { Id = Guid.Parse("614c4f60-fb40-4df9-baad-9398924da20a"), Type = TextBlockType.Text, Text = "Through a combination of magic and training, you've learned how to wield wizard weapons more effectively. You gain expert proficiency in the club, crossbow, dagger, heavy crossbow, staff, and unarmed attacks." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

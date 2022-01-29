@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.RangedWeap
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("eb95e037-5786-4ba3-adbe-e9355f29d3ea"), "Made for settling disputes when diplomacy fails, dueling pistols are finely crafted and made to fit easily into a holster or pocket. Noble and wealthy merchants in both Alkenstar and Dongun Hold often own matching pairs of dueling pistols in case they�re called upon to address a challenge�though this practice has become increasingly rare in the modern age.");;
+            builder.Text(Guid.Parse("eb95e037-5786-4ba3-adbe-e9355f29d3ea"), "Made for settling disputes when diplomacy fails, dueling pistols are finely crafted and made to fit easily into a holster or pocket. Noble and wealthy merchants in both Alkenstar and Dongun Hold often own matching pairs of dueling pistols in case they're called upon to address a challenge - though this practice has become increasingly rare in the modern age.");;
         }
 
         protected override IEnumerable<RangedWeaponVariant> GetRangedWeaponVariants()

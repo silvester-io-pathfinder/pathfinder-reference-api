@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("33637782-f821-4f1f-9de3-b94956f1e4d3"), Type = TextBlockType.Text, Text = "A tightly packed crowd of humanoids appropriate to the area appear, facing you and agreeing loudly with anything you say. A creature that touches a member of the crowd or makes a Seek action to examine the crowd can attempt to disbelieve your illusion. The crowd is difficult terrain for anyone who hasn�t disbelieved the illusion." };
+            yield return new TextBlock { Id = Guid.Parse("33637782-f821-4f1f-9de3-b94956f1e4d3"), Type = TextBlockType.Text, Text = "A tightly packed crowd of humanoids appropriate to the area appear, facing you and agreeing loudly with anything you say. A creature that touches a member of the crowd or makes a Seek action to examine the crowd can attempt to disbelieve your illusion. The crowd is difficult terrain for anyone who hasn't disbelieved the illusion." };
             yield return new TextBlock { Id = Guid.Parse("b3748db6-1b71-4945-9731-7c29daea0dd1"), Type = TextBlockType.Text, Text = "When you spend 1 or more actions to cast a composition spell (Core Rulebook 386) or to perform an activity that includes a Performance check, you can also Sustain this Spell as part of that action." };
         }
 
@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "+1",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("9b2b2370-16a8-428c-a68e-768ca5727663"), Type = TextBlockType.Text, Text = "The crowd occupies an additional 10-foot square in range. The additional square doesn�t need to be adjacent to any other square created by the spell. It can overlap, but there�s no additional effect in the overlapped squares." }
+                    new TextBlock {Id = Guid.Parse("9b2b2370-16a8-428c-a68e-768ca5727663"), Type = TextBlockType.Text, Text = "The crowd occupies an additional 10-foot square in range. The additional square doesn't need to be adjacent to any other square created by the spell. It can overlap, but there's no additional effect in the overlapped squares." }
                 }
             };
         }

@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Frequency("Once per day.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("32b35036-d05c-4764-9f9d-be02e934ca00"), "When you are considering a course of action, you get a gut feeling about whether it�s a good idea. You gain the effects of an augury spell, except that you receive the result from your own instincts rather than an external source.");
+                                builder.Text(Guid.Parse("32b35036-d05c-4764-9f9d-be02e934ca00"), "When you are considering a course of action, you get a gut feeling about whether it's a good idea. You gain the effects of an augury spell, except that you receive the result from your own instincts rather than an external source.");
                             });
                     })
                     .Add(Guid.Parse("f6a2cb93-5515-4e79-ac97-04753814c9d9"), ActionTypes.Instances.Reaction.ID, name: "Activate", action =>

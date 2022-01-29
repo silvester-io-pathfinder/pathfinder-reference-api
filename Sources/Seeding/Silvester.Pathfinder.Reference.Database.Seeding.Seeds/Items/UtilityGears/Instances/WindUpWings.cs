@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Adventurin
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("a0e81b77-ead5-49c4-9bde-a5d879c124db"), "These delicate clockwork wings enable thrown weapons to soar through the air at high speeds, performing turns and other aerial maneuvers midflight. Wind-up wings also have different types of special effects depending on the type. Wind-up wings must be attached to a thrown weapon and wound to function. A thrown weapon with an attached set of wind-up wings can�t have anything else attached to it, or the wings cease to function.");
+            builder.Text(Guid.Parse("a0e81b77-ead5-49c4-9bde-a5d879c124db"), "These delicate clockwork wings enable thrown weapons to soar through the air at high speeds, performing turns and other aerial maneuvers midflight. Wind-up wings also have different types of special effects depending on the type. Wind-up wings must be attached to a thrown weapon and wound to function. A thrown weapon with an attached set of wind-up wings can't have anything else attached to it, or the wings cease to function.");
             builder.Text(Guid.Parse("16513bd0-c381-4329-868f-a1e24d108417"), "Attaching or detaching a pair of wind-up wings to a thrown weapon requires a repair kit, and the process takes 10 minutes. Winding an attached pair of wind-up wings takes three Interact actions. There are a variety of wind-up wings, with different effects.");
         }
 
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Adventurin
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Rare.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("11420304-f34d-430a-a236-a1628ae8a2c4"), "When you make a thrown Strike with the weapon to which a pair of flutterback wind-up wings are attached, and the wings are wound, the wings fly the weapon back to your hand after the Strike is complete. If your hands are full when the weapon returns, the wings hover in place three feet above the ground. At the end of your turn, the wings are wound down; they don�t function again until wound. If you aren�t holding the weapon when the flutterback wind-up wings become wound down, the weapon falls to the ground.")
+                    .Text(Guid.Parse("11420304-f34d-430a-a236-a1628ae8a2c4"), "When you make a thrown Strike with the weapon to which a pair of flutterback wind-up wings are attached, and the wings are wound, the wings fly the weapon back to your hand after the Strike is complete. If your hands are full when the weapon returns, the wings hover in place three feet above the ground. At the end of your turn, the wings are wound down; they don't function again until wound. If you aren't holding the weapon when the flutterback wind-up wings become wound down, the weapon falls to the ground.")
                     .Build()
             };
 
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Adventurin
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Rare.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("51b541b2-1f46-4b0a-ba23-b30b348cc9a6"), "When you make a thrown Strike with the weapon to which a pair of homing wind-up wings are attached, and the wings are wound, the wings seek out your target, flying through cover and avoiding obstacles. You ignore the target�s concealed condition and reduce the target�s cover by one step (lesser cover to no cover, standard cover to lesser cover, or greater cover to standard cover). After the Strike is complete, the wings are wound down; they don�t function again until wound.")
+                    .Text(Guid.Parse("51b541b2-1f46-4b0a-ba23-b30b348cc9a6"), "When you make a thrown Strike with the weapon to which a pair of homing wind-up wings are attached, and the wings are wound, the wings seek out your target, flying through cover and avoiding obstacles. You ignore the target's concealed condition and reduce the target's cover by one step (lesser cover to no cover, standard cover to lesser cover, or greater cover to standard cover). After the Strike is complete, the wings are wound down; they don't function again until wound.")
                     .Build()
             };
         }

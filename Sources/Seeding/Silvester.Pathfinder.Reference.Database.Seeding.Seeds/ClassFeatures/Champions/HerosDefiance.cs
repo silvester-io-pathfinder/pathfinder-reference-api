@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ch
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("b4a611ee-4078-4c44-a78e-763bdf667b8e"), Type = TextBlockType.Text, Text = "You can defy fate and continue fighting as long as you have divine energy. You gain the hero�s defiance devotion spell." };
+            yield return new TextBlock { Id = Guid.Parse("b4a611ee-4078-4c44-a78e-763bdf667b8e"), Type = TextBlockType.Text, Text = "You can defy fate and continue fighting as long as you have divine energy. You gain the hero's defiance devotion spell." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

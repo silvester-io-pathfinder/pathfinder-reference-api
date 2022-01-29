@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4fe18419-d1c0-4513-acbe-2027b220da2a"), Type = TextBlockType.Text, Text = "Your faith is strong enough to briefly summon a direct representative of your deity, such as the deity�s herald. The herald occupies the space of a Huge creature and has a Speed of 60 feet. The effects of this spell depend on your deity�s alignment." };
+            yield return new TextBlock { Id = Guid.Parse("4fe18419-d1c0-4513-acbe-2027b220da2a"), Type = TextBlockType.Text, Text = "Your faith is strong enough to briefly summon a direct representative of your deity, such as the deity's herald. The herald occupies the space of a Huge creature and has a Speed of 60 feet. The effects of this spell depend on your deity's alignment." };
         }
 
         protected override IEnumerable<InlineAction> GetInlineActions()

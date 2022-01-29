@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Mo
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("1fa4676c-f668-4ba2-a2ca-1f8492cd7c74"), Type = TextBlockType.Text, Text = "You�ve practiced martial arts and have now surpassed your former skill. Your proficiency ranks for unarmed attacks and simple weapons increase to expert." };
+            yield return new TextBlock { Id = Guid.Parse("1fa4676c-f668-4ba2-a2ca-1f8492cd7c74"), Type = TextBlockType.Text, Text = "you've practiced martial arts and have now surpassed your former skill. Your proficiency ranks for unarmed attacks and simple weapons increase to expert." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

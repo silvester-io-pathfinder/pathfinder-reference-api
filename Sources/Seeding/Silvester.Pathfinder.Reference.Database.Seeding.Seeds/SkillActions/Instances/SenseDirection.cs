@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("7194d69b-48bc-4326-adcf-f485adba3a63"), Type = TextBlockType.Text, Text = "Using the stars, the position of the sun, traits of the geography or flora, or the behavior of fauna, you can stay oriented in the wild. Typically, you attempt a Survival check only once per day, but some environments or changes might necessitate rolling more often. The GM determines the DC and how long this activity takes (usually just a minute or so). More unusual locales or those you�re unfamiliar with might require you to have a minimum proficiency rank to Sense Direction. Without a compass, you take a �2 item penalty to checks to Sense Direction." };
+            yield return new TextBlock { Id = Guid.Parse("7194d69b-48bc-4326-adcf-f485adba3a63"), Type = TextBlockType.Text, Text = "Using the stars, the position of the sun, traits of the geography or flora, or the behavior of fauna, you can stay oriented in the wild. Typically, you attempt a Survival check only once per day, but some environments or changes might necessitate rolling more often. The GM determines the DC and how long this activity takes (usually just a minute or so). More unusual locales or those you're unfamiliar with might require you to have a minimum proficiency rank to Sense Direction. Without a compass, you take a -2 item penalty to checks to Sense Direction." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()

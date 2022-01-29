@@ -31,8 +31,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("e3c6a8fc-6c5a-4851-b602-4a9d618b23b4"), "This strand of ordinary-looking prayer beads glows with a soft light and becomes warm to the touch the first time you cast a divine spell while holding it. When you do, the prayer beads become attuned to your deity, changing their form and iconography to prominently incorporate your deity�s religious symbol and iconography. The beads don�t transform or function for an evil spellcaster.");
-            builder.Text(Guid.Parse("75fa0365-2350-4775-99de-622484b08dee"), "Whenever you cast a divine spell from your own spell slots while holding the prayer beads, you recover 1 Hit Point; this is a positive healing effect. If the spell you cast was a healing spell, you can grant this additional healing to one of the spell�s targets instead of yourself.");
+            builder.Text(Guid.Parse("e3c6a8fc-6c5a-4851-b602-4a9d618b23b4"), "This strand of ordinary-looking prayer beads glows with a soft light and becomes warm to the touch the first time you cast a divine spell while holding it. When you do, the prayer beads become attuned to your deity, changing their form and iconography to prominently incorporate your deity's religious symbol and iconography. The beads don't transform or function for an evil spellcaster.");
+            builder.Text(Guid.Parse("75fa0365-2350-4775-99de-622484b08dee"), "Whenever you cast a divine spell from your own spell slots while holding the prayer beads, you recover 1 Hit Point; this is a positive healing effect. If the spell you cast was a healing spell, you can grant this additional healing to one of the spell's targets instead of yourself.");
         }
        
         protected override IEnumerable<HeldItemVariant> GetHeldItemVariants()
@@ -84,7 +84,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("7268dffd-b963-4525-afa1-52ae47d371fb"), "You recover 1d4 Hit Points instead of 1 Hit Point when casting divine spells from your spell slots. Change the beads� list of spells to the 4th-level versions of bless, divine wrath (matching one component of your deity�s alignment), heal, neutralize poison, and remove disease. You can cast each of these once per day.")
+                    .Text(Guid.Parse("7268dffd-b963-4525-afa1-52ae47d371fb"), "You recover 1d4 Hit Points instead of 1 Hit Point when casting divine spells from your spell slots. Change the beads' list of spells to the 4th-level versions of bless, divine wrath (matching one component of your deity's alignment), heal, neutralize poison, and remove disease. You can cast each of these once per day.")
                     .Build(),
                 InlineActions = new InlineActionCollectionBuilder()
                     .Add(Guid.Parse("fbebb7c1-b400-4dea-8782-73f5e9a22131"), ActionTypes.Instances.NoAction.ID, "Activate", action =>

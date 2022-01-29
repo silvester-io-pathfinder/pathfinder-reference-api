@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Mo
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a6c0059-8921-4914-9021-02f713725c9f"), Type = TextBlockType.Text, Text = "You move like the wind. You gain a +10-foot status bonus to your Speed whenever you�re not wearing armor. The bonus increases by 5 feet for every 4 levels you have beyond 3rd." };
+            yield return new TextBlock { Id = Guid.Parse("5a6c0059-8921-4914-9021-02f713725c9f"), Type = TextBlockType.Text, Text = "You move like the wind. You gain a +10-foot status bonus to your Speed whenever you're not wearing armor. The bonus increases by 5 feet for every 4 levels you have beyond 3rd." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

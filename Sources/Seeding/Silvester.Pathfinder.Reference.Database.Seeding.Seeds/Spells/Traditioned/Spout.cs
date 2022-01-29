@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("5ea83041-a490-4f3e-82e7-778d4c9927cb"), Type = TextBlockType.Text, Text = "Water blasts upward, coming out of the ground, rising from a pool, or even manifesting from thin air. Any creatures in the area take bludgeoning damage equal to 1d4 plus your spellcasting ability modifier, with a basic Reflex saving throw." };
-            yield return new TextBlock { Id = Guid.Parse("bf75c301-a6b7-4407-8e9a-2e126f5e59ef"), Type = TextBlockType.Text, Text = "You can change this spell�s area to a 5-foot burst, provided you center the burst in a body of water. This body of water can be as small as a pond or creek, but not as small as a puddle or bathtub." };
+            yield return new TextBlock { Id = Guid.Parse("bf75c301-a6b7-4407-8e9a-2e126f5e59ef"), Type = TextBlockType.Text, Text = "You can change this spell's area to a 5-foot burst, provided you center the burst in a body of water. This body of water can be as small as a pond or creek, but not as small as a puddle or bathtub." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

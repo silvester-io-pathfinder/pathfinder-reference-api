@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.RangedWeap
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("434276f7-6162-4e80-8346-187baeabfca9"), "This flintlock breech-loader has two side-by-side barrels. Though less accurate than a standard musket, a double-barreled musket offers versatility in firing options. Many of Alkenstar�s famous shield marshals save their earnings to buy a double-barreled musket as their first personal firearm.");;
+            builder.Text(Guid.Parse("434276f7-6162-4e80-8346-187baeabfca9"), "This flintlock breech-loader has two side-by-side barrels. Though less accurate than a standard musket, a double-barreled musket offers versatility in firing options. Many of Alkenstar's famous shield marshals save their earnings to buy a double-barreled musket as their first personal firearm.");;
         }
 
         protected override IEnumerable<RangedWeaponVariant> GetRangedWeaponVariants()

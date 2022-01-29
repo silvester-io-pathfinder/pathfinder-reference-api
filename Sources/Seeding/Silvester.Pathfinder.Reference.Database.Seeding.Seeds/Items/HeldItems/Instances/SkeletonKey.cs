@@ -52,10 +52,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                         action
                             .Kind("Interact")
                             .Frequency("Once per day.")
-                            .Trigger("You attempt to Pick a Lock but haven�t rolled yet.")
+                            .Trigger("You attempt to Pick a Lock but haven't rolled yet.")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("43e3986e-9bac-43af-8e62-af3d6ac4a471"), "The key casts knock on the lock you�re trying to pick.");
+                                details.Text(Guid.Parse("43e3986e-9bac-43af-8e62-af3d6ac4a471"), "The key casts knock on the lock you're trying to pick.");
                             });
                     })
                     .Build()
@@ -80,10 +80,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                         action
                             .Kind("Interact")
                             .Frequency("Once per hour.")
-                            .Trigger("You attempt to Pick a Lock but haven�t rolled yet.")
+                            .Trigger("You attempt to Pick a Lock but haven't rolled yet.")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("8ff7a45b-cff8-42ee-94c3-a43f504c5581"), "The key casts knock on the lock you�re trying to pick.");
+                                details.Text(Guid.Parse("8ff7a45b-cff8-42ee-94c3-a43f504c5581"), "The key casts knock on the lock you're trying to pick.");
                             });
                     })
                     .Build()

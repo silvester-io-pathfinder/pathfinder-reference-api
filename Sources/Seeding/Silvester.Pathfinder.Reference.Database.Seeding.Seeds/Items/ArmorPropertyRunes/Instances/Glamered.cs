@@ -50,7 +50,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.ArmorPrope
                             .Kind("Envision")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("706d1138-cd1b-440b-a4fe-c0fc756b254f"), "You change the shape and appearance of this armor to appear as ordinary or fine clothes of your imagining. The armor�s statistics do not change. Only a creature that is benefiting from true seeing or a similar effect can attempt to disbelieve this illusion, with a DC of 25.");
+                                effect.Text(Guid.Parse("706d1138-cd1b-440b-a4fe-c0fc756b254f"), "You change the shape and appearance of this armor to appear as ordinary or fine clothes of your imagining. The armor's statistics do not change. Only a creature that is benefiting from true seeing or a similar effect can attempt to disbelieve this illusion, with a DC of 25.");
                             });
                     })
                     .Build()

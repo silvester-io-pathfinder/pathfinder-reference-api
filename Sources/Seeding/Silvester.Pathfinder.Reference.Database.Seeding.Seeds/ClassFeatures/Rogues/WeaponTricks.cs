@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ro
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("400ab7f4-fafb-480c-998c-47d9fbe1d2c5"), Type = TextBlockType.Text, Text = "You have become thoroughly familiar with the tools of your trade. You gain expert proficiency in simple weapons and unarmed attacks, as well as the rapier, sap, shortbow, and shortsword. When you critically succeed at an attack roll against a flat-footed creature while using an agile or finesse simple weapon or any of the listed weapons, you apply the critical specialization effect for the weapon you�re wielding." };
+            yield return new TextBlock { Id = Guid.Parse("400ab7f4-fafb-480c-998c-47d9fbe1d2c5"), Type = TextBlockType.Text, Text = "You have become thoroughly familiar with the tools of your trade. You gain expert proficiency in simple weapons and unarmed attacks, as well as the rapier, sap, shortbow, and shortsword. When you critically succeed at an attack roll against a flat-footed creature while using an agile or finesse simple weapon or any of the listed weapons, you apply the critical specialization effect for the weapon you're wielding." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

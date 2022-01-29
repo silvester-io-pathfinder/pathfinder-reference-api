@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("16bdf4e2-b89e-4a16-a872-85d7ef62632c"), "This tiny box holds a fragment of religious scripture sacred to a particular deity. The box is worn by affixing it to a leather cord and tying it around your head just above your brow. You don�t gain any benefit from the phylactery if you don�t worship the affiliated deity. The phylactery grants you religious wisdom, which manifests as a +2 item bonus to Religion checks. Just before you perform an action that would be anathema to the phylactery�s deity, the phylactery warns you of the potential transgression in time for you to change your mind.");
+            builder.Text(Guid.Parse("16bdf4e2-b89e-4a16-a872-85d7ef62632c"), "This tiny box holds a fragment of religious scripture sacred to a particular deity. The box is worn by affixing it to a leather cord and tying it around your head just above your brow. You don't gain any benefit from the phylactery if you don't worship the affiliated deity. The phylactery grants you religious wisdom, which manifests as a +2 item bonus to Religion checks. Just before you perform an action that would be anathema to the phylactery's deity, the phylactery warns you of the potential transgression in time for you to change your mind.");
         }
 
         protected override void GetTraits(ITraitBindingBuilder<BaseItemTraitBinding, BaseItem> builder)

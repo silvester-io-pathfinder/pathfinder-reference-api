@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("de790f1e-9916-426b-9a7f-150f3b9218cb"), "This belt is crafted from rubbery troll hide that�s green and orange in color. You gain 15 temporary Hit Points the first time you invest the belt in a day. When you invest the belt, you either increase your Constitution score by 2 or increase it to 18, whichever would give you a higher score.");
+            builder.Text(Guid.Parse("de790f1e-9916-426b-9a7f-150f3b9218cb"), "This belt is crafted from rubbery troll hide that's green and orange in color. You gain 15 temporary Hit Points the first time you invest the belt in a day. When you invest the belt, you either increase your Constitution score by 2 or increase it to 18, whichever would give you a higher score.");
         }
 
         protected override void GetTraits(ITraitBindingBuilder<BaseItemTraitBinding, BaseItem> builder)

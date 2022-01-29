@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Shields.In
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("e3a4bd2c-90d0-49ea-aa97-105f33c95c30"), "This steel shield contains a smoldering core of magma that never cools. Whenever the reforging shield�s current Hit Points are below its Break Threshold, the shield recovers 5 Hit Points at the start of its wielder�s turn each round until it is no longer broken. Each time a character Repairs the shield, the shield recovers double the number of Hit Points. The shield has Hardness 15, HP 120, and BT 60.");
+            builder.Text(Guid.Parse("e3a4bd2c-90d0-49ea-aa97-105f33c95c30"), "This steel shield contains a smoldering core of magma that never cools. Whenever the reforging shield's current Hit Points are below its Break Threshold, the shield recovers 5 Hit Points at the start of its wielder's turn each round until it is no longer broken. Each time a character Repairs the shield, the shield recovers double the number of Hit Points. The shield has Hardness 15, HP 120, and BT 60.");
         }
 
         protected override void GetTraits(ITraitBindingBuilder<BaseItemTraitBinding, BaseItem> builder)

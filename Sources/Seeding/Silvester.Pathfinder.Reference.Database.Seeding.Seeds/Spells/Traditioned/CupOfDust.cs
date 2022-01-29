@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("a65ded50-1884-4a76-9e7f-5a42c12ebc63"),
                 CriticalSuccess = "The creature is unaffected and is temporarily immune for 1 hour.",
                 Success = "The creature is fatigued for 1 round.",
-                Failure = "The creature is immediately afflicted by thirst as if it hadn�t had a drink in days. It becomes fatigued and takes 1d4 damage each hour that can�t be healed until it quenches its thirst. No amount of drinking can quench the creature�s thirst during the spell�s duration.",
+                Failure = "The creature is immediately afflicted by thirst as if it hadn't had a drink in days. It becomes fatigued and takes 1d4 damage each hour that can't be healed until it quenches its thirst. No amount of drinking can quench the creature's thirst during the spell's duration.",
                 CriticalFailure = "As failure but the creature takes 2d4 damage each hour, twice as much as usual for thirst."
             };
         }

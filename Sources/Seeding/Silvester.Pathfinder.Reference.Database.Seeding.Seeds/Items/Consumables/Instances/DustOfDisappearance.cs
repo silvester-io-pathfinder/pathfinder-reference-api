@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Consumable
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("f33d61fa-1d2a-45a5-8a88-1f1cfa426c92"), "This powder shimmers like a thousand tiny motes of light. Activating the dust by sprinkling it on yourself or a creature within reach casts a 4th-level invisibility spell with a duration of 1 minute on that creature. This invisibility can�t be negated or seen through by any spell of 3rd level or lower or any item of 5th level or lower.");
+            builder.Text(Guid.Parse("f33d61fa-1d2a-45a5-8a88-1f1cfa426c92"), "This powder shimmers like a thousand tiny motes of light. Activating the dust by sprinkling it on yourself or a creature within reach casts a 4th-level invisibility spell with a duration of 1 minute on that creature. This invisibility can't be negated or seen through by any spell of 3rd level or lower or any item of 5th level or lower.");
         }
 
         protected override IEnumerable<ConsumableVariant> GetConsumableVariants()

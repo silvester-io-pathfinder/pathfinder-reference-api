@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("20f1fff6-58d0-4baa-ac9b-d8bd91c5ae31"), "This metal grasshopper studded with emeralds is usually clasped to the legs of a suit of armor. When you activate it, if you succeed at the Athletics check, you Leap up to 50 feet vertically and up to 10 feet horizontally. If you critically succeed, you can Leap up to 75 feet vertically and 20 feet horizontally. If you don�t end your jump on solid ground, you flutter in the air until the end of your turn, then fall harmlessly at a rate of 60 feet per round until you reach the ground.");
+            builder.Text(Guid.Parse("20f1fff6-58d0-4baa-ac9b-d8bd91c5ae31"), "This metal grasshopper studded with emeralds is usually clasped to the legs of a suit of armor. When you activate it, if you succeed at the Athletics check, you Leap up to 50 feet vertically and up to 10 feet horizontally. If you critically succeed, you can Leap up to 75 feet vertically and 20 feet horizontally. If you don't end your jump on solid ground, you flutter in the air until the end of your turn, then fall harmlessly at a rate of 60 feet per round until you reach the ground.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Envision")
-                            .Trigger("You attempt a High Jump but haven�t rolled yet.")
+                            .Trigger("You attempt a High Jump but haven't rolled yet.")
                             .Requirements("You are an expert in Athletics.");
                     })
                     .Build()

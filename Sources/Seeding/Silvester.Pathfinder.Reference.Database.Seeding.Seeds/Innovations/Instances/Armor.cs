@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Innovations.Inst
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("822b4a9b-cb1d-41cd-8cc8-0a634c790666"), Type = TextBlockType.Text, Text = "Your innovation is a cutting-edge suit of medium armor with a variety of attached gizmos and devices. Choose one of the sets of statistics on Table 2�2: Innovation Armor Statistics for your innovation armor (or choose another set of innovation armor statistics to which you have access)." };
+            yield return new TextBlock { Id = Guid.Parse("822b4a9b-cb1d-41cd-8cc8-0a634c790666"), Type = TextBlockType.Text, Text = "Your innovation is a cutting-edge suit of medium armor with a variety of attached gizmos and devices. Choose one of the sets of statistics on Table 2-2: Innovation Armor Statistics for your innovation armor (or choose another set of innovation armor statistics to which you have access)." };
             yield return new TextBlock { Id = Guid.Parse("591cbf1b-4b61-4694-86a0-7863abf8b1ad"), Type = TextBlockType.Text, Text = "Your innovation armor can have fundamental and property runes added to it in the same way as ordinary armor. Because of the unique features of your innovation, everyone except you is untrained in it, even if they would normally be trained (or better) in medium armor." };
             yield return new TextBlock { Id = Guid.Parse("4e64d4bf-263d-4995-92f1-0b66c5bba776"), Type = TextBlockType.Text, Text = "Choose one initial armor modification to apply to your innovation, either from the following or from other initial armor modifications to which you have access." };
         }

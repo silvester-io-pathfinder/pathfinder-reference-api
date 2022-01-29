@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("94014eaa-5bf6-49ec-9f66-be9ea13bfafd"), Type = TextBlockType.Text, Text = "Hobgoblins were engineered long ago from the unreliable and fecund goblins, to be used as an army against the elves. Although the elves ultimately freed the hobgoblins from their bondage, some hobgoblins retain ancestral resistance to magic, which they refer to as �elf magic.� You gain the Resist Elf Magic reaction." };
+            yield return new TextBlock { Id = Guid.Parse("94014eaa-5bf6-49ec-9f66-be9ea13bfafd"), Type = TextBlockType.Text, Text = "Hobgoblins were engineered long ago from the unreliable and fecund goblins, to be used as an army against the elves. Although the elves ultimately freed the hobgoblins from their bondage, some hobgoblins retain ancestral resistance to magic, which they refer to as 'elf magic'. You gain the Resist Elf Magic reaction." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

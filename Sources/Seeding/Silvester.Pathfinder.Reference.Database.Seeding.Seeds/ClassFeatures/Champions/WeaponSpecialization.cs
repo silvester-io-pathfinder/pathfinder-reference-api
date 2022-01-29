@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ch
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("136dab02-1d9b-4391-b250-61765e6c740b"), Type = TextBlockType.Text, Text = "You�ve learned how to inflict greater injuries with the weapons you know best. You deal 2 additional damage with weapons and unarmed attacks in which you are an expert. This damage increases to 3 if you�re a master, and to 4 if you�re legendary." };
+            yield return new TextBlock { Id = Guid.Parse("136dab02-1d9b-4391-b250-61765e6c740b"), Type = TextBlockType.Text, Text = "you've learned how to inflict greater injuries with the weapons you know best. You deal 2 additional damage with weapons and unarmed attacks in which you are an expert. This damage increases to 3 if you're a master, and to 4 if you're legendary." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("08dd3018-710f-469a-a181-dc3705de5648"), Type = TextBlockType.Text, Text = "You create an electric latch rune hazard on the target, creating a special crystalline lock on the object. You can also substitute your spell DC for any of the hazard�s listed DCs. You can have only one such hazard active at a time, and if you cast this spell while a previous electric latch rune is active, the older hazard discharges harmlessly." };
+            yield return new TextBlock { Id = Guid.Parse("08dd3018-710f-469a-a181-dc3705de5648"), Type = TextBlockType.Text, Text = "You create an electric latch rune hazard on the target, creating a special crystalline lock on the object. You can also substitute your spell DC for any of the hazard's listed DCs. You can have only one such hazard active at a time, and if you cast this spell while a previous electric latch rune is active, the older hazard discharges harmlessly." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "+2",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("80a9fa64-c73c-44ba-af86-b1b8db244fc0"), Type = TextBlockType.Text, Text = "The hazard�s damage increases by 1d12." }
+                    new TextBlock {Id = Guid.Parse("80a9fa64-c73c-44ba-af86-b1b8db244fc0"), Type = TextBlockType.Text, Text = "The hazard's damage increases by 1d12." }
                 }
             };
         }

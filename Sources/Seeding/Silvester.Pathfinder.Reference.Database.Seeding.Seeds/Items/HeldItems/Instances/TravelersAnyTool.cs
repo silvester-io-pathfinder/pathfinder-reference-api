@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("d7dcfddd-6c44-45f7-90b9-dd0713530590"), "Before it�s activated, this item appears to be an ash rod capped with steel on either end.");
+            builder.Text(Guid.Parse("d7dcfddd-6c44-45f7-90b9-dd0713530590"), "Before it's activated, this item appears to be an ash rod capped with steel on either end.");
         }
        
         protected override IEnumerable<HeldItemVariant> GetHeldItemVariants()

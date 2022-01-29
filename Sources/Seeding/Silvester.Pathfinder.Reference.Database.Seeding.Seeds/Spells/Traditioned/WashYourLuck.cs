@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("7c1bf9d8-060a-4a49-b0aa-320d22d49586"), Type = TextBlockType.Text, Text = "Some practitioners argue this spell literally washes your fortunes of all influences, malign or benign, while others claim it simply cleanses your mind of obsessions about luck and destiny. You adjust your garments, change the posture of your chair, fidget with a religious symbol, or make some other innocuous and personally significant action to wash away bad luck." };
-            yield return new TextBlock { Id = Guid.Parse("1510ae50-74dc-4f00-b06b-b99881efa81e"), Type = TextBlockType.Text, Text = "Once during the spell�s duration, before rolling a check, you can cancel out a misfortune effect on that roll, as normal when a fortune and misfortune effect apply to the same roll. After canceling out the misfortune effect, the spell ends, and you are then temporarily immune to wash your luck for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("1510ae50-74dc-4f00-b06b-b99881efa81e"), Type = TextBlockType.Text, Text = "Once during the spell's duration, before rolling a check, you can cancel out a misfortune effect on that roll, as normal when a fortune and misfortune effect apply to the same roll. After canceling out the misfortune effect, the spell ends, and you are then temporarily immune to wash your luck for 10 minutes." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ra
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("6b055076-4a3d-4634-b340-2c3b7f94a91c"), Type = TextBlockType.Text, Text = "You�ve dedicated yourself to learning the intricacies of your weapons. Your proficiency ranks for simple and martial weapons and unarmed attacks increases to expert. You gain access to the critical specialization effects of all simple and martial weapons and unarmed attacks when attacking your hunted prey." };
+            yield return new TextBlock { Id = Guid.Parse("6b055076-4a3d-4634-b340-2c3b7f94a91c"), Type = TextBlockType.Text, Text = "you've dedicated yourself to learning the intricacies of your weapons. Your proficiency ranks for simple and martial weapons and unarmed attacks increases to expert. You gain access to the critical specialization effects of all simple and martial weapons and unarmed attacks when attacking your hunted prey." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

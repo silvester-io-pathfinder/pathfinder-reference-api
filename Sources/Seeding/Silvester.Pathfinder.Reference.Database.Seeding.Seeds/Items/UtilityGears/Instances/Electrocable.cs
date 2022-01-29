@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Adventurin
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("a1391d0b-2767-4d67-aa04-89f9e46a47c1"), "This footlong length of conductive cable is capped on both ends by grounded handles containing Stasian coils. These coils can be turned on or off as a single action. While on, the coils electrify the cable, dealing 1d6 electricity and 1d6 fire damage in a thin precise line to anything the cable touches, though the cable is too unwieldy to use as a weapon. Electrocables are typically used to �cut� a thin straight line through metal. They ignore 10 points of a metal object�s hardness.");
+            builder.Text(Guid.Parse("a1391d0b-2767-4d67-aa04-89f9e46a47c1"), "This footlong length of conductive cable is capped on both ends by grounded handles containing Stasian coils. These coils can be turned on or off as a single action. While on, the coils electrify the cable, dealing 1d6 electricity and 1d6 fire damage in a thin precise line to anything the cable touches, though the cable is too unwieldy to use as a weapon. Electrocables are typically used to 'cut' a thin straight line through metal. They ignore 10 points of a metal object's hardness.");
         }
 
         protected override void GetTraits(ITraitBindingBuilder<BaseItemTraitBinding, BaseItem> builder)

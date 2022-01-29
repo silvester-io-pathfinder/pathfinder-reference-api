@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("adb1d725-ca4b-4bd0-8ac3-932eb6a237a7"), "This broom has a tenuous connection to gravity, and it tends to drift even while stowed. You can ride on the broom using one hand to guide it, and the broom can carry up to one passenger in addition to you. The broom moves at a fly Speed of 20 feet. The broom can carry only so much, taking a �10-foot penalty to its Speed if laden with more than 20 Bulk, and crashing to the ground if it carries more than 30 Bulk.");
+            builder.Text(Guid.Parse("adb1d725-ca4b-4bd0-8ac3-932eb6a237a7"), "This broom has a tenuous connection to gravity, and it tends to drift even while stowed. You can ride on the broom using one hand to guide it, and the broom can carry up to one passenger in addition to you. The broom moves at a fly Speed of 20 feet. The broom can carry only so much, taking a -10-foot penalty to its Speed if laden with more than 20 Bulk, and crashing to the ground if it carries more than 30 Bulk.");
         }
 
        
@@ -54,8 +54,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                             .Kind("Command, Interact")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("957c53bb-8e56-4b54-9ebf-9d4f384ad1e1"), "You name a destination on the same plane, and the broom speeds toward it at a fly Speed of 40 feet. You must either clutch the broom with two hands in order to ride it, or you need to release the broom to send it off with no rider. If you don�t have a good idea of the location, layout, and general direction of the destination, or if your named destination is on another plane, the broom wanders aimlessly, circling back to its starting location after 30 minutes.");
-                                details.Text(Guid.Parse("db926070-da58-4e87-9395-5ac7e256af99"), "If the broom carries a rider, this activation lasts until 4 hours pass (typically 16 miles of travel), the broom reaches its destination, or you Dismiss the activation. If the broom doesn�t have a rider, the activation lasts until the broom reaches its destination. When the activation ends, the broom floats to the ground and can�t be activated again for 1 hour.");
+                                details.Text(Guid.Parse("957c53bb-8e56-4b54-9ebf-9d4f384ad1e1"), "You name a destination on the same plane, and the broom speeds toward it at a fly Speed of 40 feet. You must either clutch the broom with two hands in order to ride it, or you need to release the broom to send it off with no rider. If you don't have a good idea of the location, layout, and general direction of the destination, or if your named destination is on another plane, the broom wanders aimlessly, circling back to its starting location after 30 minutes.");
+                                details.Text(Guid.Parse("db926070-da58-4e87-9395-5ac7e256af99"), "If the broom carries a rider, this activation lasts until 4 hours pass (typically 16 miles of travel), the broom reaches its destination, or you Dismiss the activation. If the broom doesn't have a rider, the activation lasts until the broom reaches its destination. When the activation ends, the broom floats to the ground and can't be activated again for 1 hour.");
                             });
                     })
                     .Build()

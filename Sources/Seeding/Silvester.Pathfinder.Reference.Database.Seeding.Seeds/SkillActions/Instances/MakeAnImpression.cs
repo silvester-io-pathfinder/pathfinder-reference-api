@@ -44,9 +44,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             return new RollableEffect
             {
                 Id = Guid.Parse("9b6c6414-1dee-4bb6-bb13-c0eab9fca631"),
-                CriticalSuccess = "The target�s attitude toward you improves by two steps.",
-                Success = "The target�s attitude toward you improves by one step.",
-                CriticalFailure = "The target�s attitude toward you decreases by one step."
+                CriticalSuccess = "The target's attitude toward you improves by two steps.",
+                Success = "The target's attitude toward you improves by one step.",
+                CriticalFailure = "The target's attitude toward you decreases by one step."
             };
         }
 

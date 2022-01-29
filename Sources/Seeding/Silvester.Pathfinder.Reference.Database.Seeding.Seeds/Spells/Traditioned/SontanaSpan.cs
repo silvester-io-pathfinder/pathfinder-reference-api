@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a17dd32-0a04-4fab-9df8-42840f7a04ad"), Type = TextBlockType.Text, Text = "By playing a brief tune on an instrument or in song, you cause the notes of the melody to physically manifest into a shimmering, translucent path. This path doesn�t need to be over solid ground and can tilt up or down diagonally up to 45 degrees, but it must be a straight, 5-foot-wide line. It can support as many creatures as can physically fit on the bridge." };
+            yield return new TextBlock { Id = Guid.Parse("5a17dd32-0a04-4fab-9df8-42840f7a04ad"), Type = TextBlockType.Text, Text = "By playing a brief tune on an instrument or in song, you cause the notes of the melody to physically manifest into a shimmering, translucent path. This path doesn't need to be over solid ground and can tilt up or down diagonally up to 45 degrees, but it must be a straight, 5-foot-wide line. It can support as many creatures as can physically fit on the bridge." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

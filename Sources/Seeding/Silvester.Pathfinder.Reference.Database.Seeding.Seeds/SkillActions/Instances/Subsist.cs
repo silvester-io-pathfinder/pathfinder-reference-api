@@ -22,8 +22,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("2af292ba-0a51-462e-9043-617e7ecf5861"), Type = TextBlockType.Text, Text = "If you need to provide food and shelter, you can use the Subsist downtime activity. This typically uses Society if you�re in a settlement or Survival if you�re in the wild." };
-            yield return new TextBlock { Id = Guid.Parse("efa89d10-9daa-46aa-90e2-dace93eb78ef"), Type = TextBlockType.Text, Text = "You try to provide food and shelter for yourself, and possibly others as well, with a standard of living described on page 294. The GM determines the DC based on the nature of the place where you�re trying to Subsist. You might need a minimum proficiency rank to Subsist in particularly strange environments. Unlike most downtime activities, you can Subsist after 8 hours or less of exploration, but if you do, you take a �5 penalty." };
+            yield return new TextBlock { Id = Guid.Parse("2af292ba-0a51-462e-9043-617e7ecf5861"), Type = TextBlockType.Text, Text = "If you need to provide food and shelter, you can use the Subsist downtime activity. This typically uses Society if you're in a settlement or Survival if you're in the wild." };
+            yield return new TextBlock { Id = Guid.Parse("efa89d10-9daa-46aa-90e2-dace93eb78ef"), Type = TextBlockType.Text, Text = "You try to provide food and shelter for yourself, and possibly others as well, with a standard of living described on page 294. The GM determines the DC based on the nature of the place where you're trying to Subsist. You might need a minimum proficiency rank to Subsist in particularly strange environments. Unlike most downtime activities, you can Subsist after 8 hours or less of exploration, but if you do, you take a -5 penalty." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -49,8 +49,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 Id = Guid.Parse("31440f52-b312-4677-8159-c5eb033c88b2"),
                 CriticalSuccess = "You either provide a subsistence living for yourself and one additional creature, or you improve your own food and shelter, granting yourself a comfortable living.",
                 Success = "You find enough food and shelter with basic protection from the elements to provide you a subsistence living.",
-                Failure = "You�re exposed to the elements and don�t get enough food, becoming fatigued until you attain sufficient food and shelter.",
-                CriticalFailure = "You attract trouble, eat something you shouldn�t, or otherwise worsen your situation. You take a �2 circumstance penalty to checks to Subsist for 1 week. You don�t find any food at all; if you don�t have any stored up, you�re in danger of starving or dying of thirst if you continue failing."
+                Failure = "you're exposed to the elements and don't get enough food, becoming fatigued until you attain sufficient food and shelter.",
+                CriticalFailure = "You attract trouble, eat something you shouldn't, or otherwise worsen your situation. You take a -2 circumstance penalty to checks to Subsist for 1 week. You don't find any food at all; if you don't have any stored up, you're in danger of starving or dying of thirst if you continue failing."
             };
         }
 

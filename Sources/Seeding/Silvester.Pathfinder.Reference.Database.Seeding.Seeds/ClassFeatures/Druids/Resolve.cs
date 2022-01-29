@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Dr
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("589b9f4a-3c3b-4064-b549-bdab96b572ee"), Type = TextBlockType.Text, Text = "You�ve steeled your mind with incredible resolve. Your proficiency rank for Will saves increases to master. When you roll a success at a Will save, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("589b9f4a-3c3b-4064-b549-bdab96b572ee"), Type = TextBlockType.Text, Text = "you've steeled your mind with incredible resolve. Your proficiency rank for Will saves increases to master. When you roll a success at a Will save, you get a critical success instead." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

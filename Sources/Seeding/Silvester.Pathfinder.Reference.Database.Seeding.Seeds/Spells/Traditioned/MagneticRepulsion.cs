@@ -26,8 +26,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5c1319bf-022a-454d-856e-6660cee5a906"), Type = TextBlockType.Text, Text = "You adjust your magnetic polarity, causing metal objects to jump and shudder away from you. Attacks made with metal objects against you take a �1 status penalty, and the squares adjacent to you are difficult terrain for creatures wearing metal armor. For creatures made entirely of metal, the penalty to their attack rolls is �2 and the squares adjacent to you are greater difficult terrain." };
-            yield return new TextBlock { Id = Guid.Parse("5c42d3ee-9e22-4025-ab26-b42b4acfc67b"), Type = TextBlockType.Text, Text = "While this spell is active, you require an additional Interact action before using a metal object (including to Strike with a metal weapon), and if you�re wearing metal armor, you�re slowed 1." };
+            yield return new TextBlock { Id = Guid.Parse("5c1319bf-022a-454d-856e-6660cee5a906"), Type = TextBlockType.Text, Text = "You adjust your magnetic polarity, causing metal objects to jump and shudder away from you. Attacks made with metal objects against you take a -1 status penalty, and the squares adjacent to you are difficult terrain for creatures wearing metal armor. For creatures made entirely of metal, the penalty to their attack rolls is -2 and the squares adjacent to you are greater difficult terrain." };
+            yield return new TextBlock { Id = Guid.Parse("5c42d3ee-9e22-4025-ab26-b42b4acfc67b"), Type = TextBlockType.Text, Text = "While this spell is active, you require an additional Interact action before using a metal object (including to Strike with a metal weapon), and if you're wearing metal armor, you're slowed 1." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

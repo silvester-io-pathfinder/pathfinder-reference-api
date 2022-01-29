@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("2e6e6dc9-170f-4421-b867-fb3691349096"), "This set of healer�s tools contains a seemingly endless supply of bandages, herbs, and healing items of impeccable quality, granting you a +2 item bonus to Medicine checks.");
+            builder.Text(Guid.Parse("2e6e6dc9-170f-4421-b867-fb3691349096"), "This set of healer's tools contains a seemingly endless supply of bandages, herbs, and healing items of impeccable quality, granting you a +2 item bonus to Medicine checks.");
         }
        
         protected override IEnumerable<HeldItemVariant> GetHeldItemVariants()
@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                             .Kind("Treat Poison")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("b0f67559-417b-41bf-9d85-68c2d2f7e516"), "You can activate the tools when you use them to Treat Poison in order to produce the effects of neutralize poison. Once these medicines have been used to treat a patient�s poison, they can�t be used again to treat the same affliction for that patient.");
+                                details.Text(Guid.Parse("b0f67559-417b-41bf-9d85-68c2d2f7e516"), "You can activate the tools when you use them to Treat Poison in order to produce the effects of neutralize poison. Once these medicines have been used to treat a patient's poison, they can't be used again to treat the same affliction for that patient.");
                             });
                     })
 
@@ -63,7 +63,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                             .Kind("Treat Disease (8 hours)")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("b15abf78-1e22-43a5-b20e-7038081aca13"), "You can activate the tools when you use them to treat Disease in order to produce the effects of remove disease. Once these medicines have been used to treat a patient�s disease, they can�t be used again to treat the same affliction for that patient.");
+                                details.Text(Guid.Parse("b15abf78-1e22-43a5-b20e-7038081aca13"), "You can activate the tools when you use them to treat Disease in order to produce the effects of remove disease. Once these medicines have been used to treat a patient's disease, they can't be used again to treat the same affliction for that patient.");
                             });
                     })
                     .Build()
@@ -86,7 +86,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                             .Kind("Treat Poison")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("f9322b37-9264-4e8c-9d3b-5df0d6b73662"), "You can activate the tools when you use them to Treat Poison (at 6th level) in order to produce the effects of neutralize poison. Once these medicines have been used to treat a patient�s poison, they can�t be used again to treat the same affliction for that patient.");
+                                details.Text(Guid.Parse("f9322b37-9264-4e8c-9d3b-5df0d6b73662"), "You can activate the tools when you use them to Treat Poison (at 6th level) in order to produce the effects of neutralize poison. Once these medicines have been used to treat a patient's poison, they can't be used again to treat the same affliction for that patient.");
                             });
                     })
 
@@ -96,7 +96,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                             .Kind("Treat Disease (8 hours)")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("ced7ccd2-b6d5-4f3d-bb66-bc271ec5c6c4"), "You can activate the tools when you use them to treat Disease (at 6th level) in order to produce the effects of remove disease. Once these medicines have been used to treat a patient�s disease, they can�t be used again to treat the same affliction for that patient.");
+                                details.Text(Guid.Parse("ced7ccd2-b6d5-4f3d-bb66-bc271ec5c6c4"), "You can activate the tools when you use them to treat Disease (at 6th level) in order to produce the effects of remove disease. Once these medicines have been used to treat a patient's disease, they can't be used again to treat the same affliction for that patient.");
                             });
                     })
                     .Build()

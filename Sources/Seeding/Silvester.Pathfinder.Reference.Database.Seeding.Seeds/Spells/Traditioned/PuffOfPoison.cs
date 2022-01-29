@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("fcef7752-6273-4158-9f2f-30e69114311d"), Type = TextBlockType.Text, Text = "You exhale a shimmering cloud of toxic breath at an enemy�s face. The target takes poison damage equal to your spellcasting modifier and 2 persistent poison damage, depending on its Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("fcef7752-6273-4158-9f2f-30e69114311d"), Type = TextBlockType.Text, Text = "You exhale a shimmering cloud of toxic breath at an enemy's face. The target takes poison damage equal to your spellcasting modifier and 2 persistent poison damage, depending on its Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

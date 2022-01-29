@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Instincts.Instan
             {
                 Id = ID, 
                 Name = "Giant Instinct",
-                Description = "Your rage gives you the raw power and size of a giant. This doesn't necessarily mean you revere giants�you might scoff at them or even aspire to slay them! You could instead seem like a giant to other people due to your exceptional strength or larger-than-life emotions and ego.",
+                Description = "Your rage gives you the raw power and size of a giant. This doesn't necessarily mean you revere giants'you might scoff at them or even aspire to slay them! You could instead seem like a giant to other people due to your exceptional strength or larger-than-life emotions and ego.",
                 Anathema = "Failing to face a personal challenge of strength is anathema.",
                 SpecializationAbility = "Increase the damage from Rage when using a larger weapon from 6 to 10; if you have greater weapon specialization, increase it from 10 to 18.",
             };

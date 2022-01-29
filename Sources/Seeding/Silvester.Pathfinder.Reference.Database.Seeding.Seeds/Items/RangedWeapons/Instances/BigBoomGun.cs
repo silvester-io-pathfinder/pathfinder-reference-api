@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.RangedWeap
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("596d3865-845f-4c11-93bd-e1366739bd9a"), "Developed by a goblin weaponsmith who missed the �hand' part of 'hand cannon', this comically-oversized gun has a heavily reinforced barrel and is loaded with a worrisome quantity of gunpowder. This hand cannon is a martial weapon, instead of a simple weapon. It has the fatal d12 trait and a range of 20 feet. It also has the following modified critical failure condition:");;
+            builder.Text(Guid.Parse("596d3865-845f-4c11-93bd-e1366739bd9a"), "Developed by a goblin weaponsmith who missed the 'hand' part of 'hand cannon', this comically-oversized gun has a heavily reinforced barrel and is loaded with a worrisome quantity of gunpowder. This hand cannon is a martial weapon, instead of a simple weapon. It has the fatal d12 trait and a range of 20 feet. It also has the following modified critical failure condition:");;
             builder.Enumeration(Guid.Parse("c3f5a1a5-f1ba-4747-84f6-b7a41f52973a"), "Critical Failure The attack misses, the weapon misfires, and you take 1d12 fire damage as it explodes in your face.");
         }
 

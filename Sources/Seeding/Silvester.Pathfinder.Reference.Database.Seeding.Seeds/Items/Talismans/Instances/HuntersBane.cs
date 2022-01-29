@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("bf47834d-4b15-403e-8644-f0e5998b3864"), "This talisman is a ring of dried, interwoven leaves. When you activate the hunter�s bane, you sense the exact location of the attacker, making it hidden from you instead of undetected. If the attacker is behind lead, the hunter�s bane fails and is wasted.");
+            builder.Text(Guid.Parse("bf47834d-4b15-403e-8644-f0e5998b3864"), "This talisman is a ring of dried, interwoven leaves. When you activate the hunter's bane, you sense the exact location of the attacker, making it hidden from you instead of undetected. If the attacker is behind lead, the hunter's bane fails and is wasted.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()

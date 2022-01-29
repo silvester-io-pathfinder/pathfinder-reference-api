@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("62bffc44-a6cc-46a6-8371-868c11a05e6e"), "Light spring water fizzes and bubbles within this small glass globe, spilling onto the affixed armor when activated. Until the end of your turn, the armor lets you move across water and other liquids as if they were solid ground. If you Stride or Step over a weight-sensitive pressure plate, you don�t cause the plate to depress, which prevents you from triggering any device or hazard attached to the pressure plate. When the ampoule�s effect ends, you sink, fall, break through flimsy ground, or land on pressure plates as normal for your current location.");
+            builder.Text(Guid.Parse("62bffc44-a6cc-46a6-8371-868c11a05e6e"), "Light spring water fizzes and bubbles within this small glass globe, spilling onto the affixed armor when activated. Until the end of your turn, the armor lets you move across water and other liquids as if they were solid ground. If you Stride or Step over a weight-sensitive pressure plate, you don't cause the plate to depress, which prevents you from triggering any device or hazard attached to the pressure plate. When the ampoule's effect ends, you sink, fall, break through flimsy ground, or land on pressure plates as normal for your current location.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()
@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Interact")
-                            .Requirements("You�re an expert in Acrobatics.");
+                            .Requirements("you're an expert in Acrobatics.");
                     })
                     .Build()
             };

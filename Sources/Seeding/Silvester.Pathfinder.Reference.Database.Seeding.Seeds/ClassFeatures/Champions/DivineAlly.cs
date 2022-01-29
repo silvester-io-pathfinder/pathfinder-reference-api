@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ch
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("e49e4856-edb2-4712-ba07-cabb85ef3b5c"), Type = TextBlockType.Text, Text = "Your devotion attracts a spirit of your deity�s alignment. Once you choose an ally, your choice can�t be changed." };
+            yield return new TextBlock { Id = Guid.Parse("e49e4856-edb2-4712-ba07-cabb85ef3b5c"), Type = TextBlockType.Text, Text = "Your devotion attracts a spirit of your deity's alignment. Once you choose an ally, your choice can't be changed." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

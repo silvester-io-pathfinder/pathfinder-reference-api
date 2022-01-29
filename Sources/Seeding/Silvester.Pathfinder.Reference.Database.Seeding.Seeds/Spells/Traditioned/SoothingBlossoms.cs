@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("4daee942-2b3b-4d3f-9a43-11496ad1d2ca"), Type = TextBlockType.Text, Text = "Blossoms grow from the ground in a small area, soothing away afflictions and persistent pains and harm. When any creature in that area rolls a successful save against a poison or disease effect, it gets a critical success instead. The blossoms grant assisted recovery to everyone in the area to end their persistent damage, both when the spell is cast and at the start of each of your turns." };
-            yield return new TextBlock { Id = Guid.Parse("692d8ae0-3f06-4218-b31e-4cd8e1b5757e"), Type = TextBlockType.Text, Text = "Once the duration ends, the flowers lose their magical effect, but a few of them might survive in the area as long as they can naturally. This spell doesn�t give a benefit on a save against an affliction unless the stage lasts 10 minutes or less." };
+            yield return new TextBlock { Id = Guid.Parse("692d8ae0-3f06-4218-b31e-4cd8e1b5757e"), Type = TextBlockType.Text, Text = "Once the duration ends, the flowers lose their magical effect, but a few of them might survive in the area as long as they can naturally. This spell doesn't give a benefit on a save against an affliction unless the stage lasts 10 minutes or less." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

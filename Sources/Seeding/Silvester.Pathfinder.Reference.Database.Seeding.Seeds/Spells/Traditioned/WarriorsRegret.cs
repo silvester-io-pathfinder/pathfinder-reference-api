@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ac436ccd-0fdc-4a28-be19-5e6236992a20"), Type = TextBlockType.Text, Text = "Regret eats away at the target�s mind, punishing it for its violence until it ceases its hostility. The target must attempt a Will save." };
+            yield return new TextBlock { Id = Guid.Parse("ac436ccd-0fdc-4a28-be19-5e6236992a20"), Type = TextBlockType.Text, Text = "Regret eats away at the target's mind, punishing it for its violence until it ceases its hostility. The target must attempt a Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

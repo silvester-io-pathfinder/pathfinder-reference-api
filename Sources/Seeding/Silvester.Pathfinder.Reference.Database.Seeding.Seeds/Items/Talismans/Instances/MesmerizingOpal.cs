@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Envision")
-                            .Trigger("You attempt a Deception check to Feint, but you haven�t rolled yet.");
+                            .Trigger("You attempt a Deception check to Feint, but you haven't rolled yet.");
                     })
                     .Build()
             };

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a2ab8b8-743a-4abc-aa19-5588a12144c2"), Type = TextBlockType.Text, Text = "You temporarily morph your limb into a clawed appendage. Make a melee spell attack roll against your target�s AC. If you hit, you deal your choice of slashing or piercing damage equal to 1d6 plus your spellcasting ability modifier. On a critical success, you deal double damage plus 1d4 persistent bleed damage." };
+            yield return new TextBlock { Id = Guid.Parse("6a2ab8b8-743a-4abc-aa19-5588a12144c2"), Type = TextBlockType.Text, Text = "You temporarily morph your limb into a clawed appendage. Make a melee spell attack roll against your target's AC. If you hit, you deal your choice of slashing or piercing damage equal to 1d6 plus your spellcasting ability modifier. On a critical success, you deal double damage plus 1d4 persistent bleed damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

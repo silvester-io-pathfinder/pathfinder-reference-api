@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.RangedWeap
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("3ae44e46-e414-4133-9a71-a56d431826af"), "This dubious weapon gets its name from the fact that it�s typically crafted with multiple false barrels so that it�s more difficult for enemies to predict the weapon�s angle of fire from the four working barrels. Most of the time, this gun functions as a +1 striking pepperbox with capacity 4 instead of capacity 3, albeit one with a complicated loading mechanism involving rotating the barrels. In a pinch though, all four of the real barrels can be fired simultaneously.");;
+            builder.Text(Guid.Parse("3ae44e46-e414-4133-9a71-a56d431826af"), "This dubious weapon gets its name from the fact that it's typically crafted with multiple false barrels so that it's more difficult for enemies to predict the weapon's angle of fire from the four working barrels. Most of the time, this gun functions as a +1 striking pepperbox with capacity 4 instead of capacity 3, albeit one with a complicated loading mechanism involving rotating the barrels. In a pinch though, all four of the real barrels can be fired simultaneously.");;
         }
 
         protected override IEnumerable<RangedWeaponVariant> GetRangedWeaponVariants()
@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.RangedWeap
                            .Kind("Interact")
                            .Details(effect =>
                            {
-                               effect.Text(Guid.Parse("9c20d795-6319-420e-a89b-24f6c437791f"), "Make up to four Strikes with the liar�s gun. Each of the four Strikes must be against a different target within a 20-foot cone. You apply and increasing your multiple attack penalty for the four Strikes only after resolving all attacks. If the weapon misfires on any of these attacks, wait to apply the misfire until you resolve all of the attacks.");
+                               effect.Text(Guid.Parse("9c20d795-6319-420e-a89b-24f6c437791f"), "Make up to four Strikes with the liar's gun. Each of the four Strikes must be against a different target within a 20-foot cone. You apply and increasing your multiple attack penalty for the four Strikes only after resolving all attacks. If the weapon misfires on any of these attacks, wait to apply the misfire until you resolve all of the attacks.");
                            });
                     })
                     .Build()

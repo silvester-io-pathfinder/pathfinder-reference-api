@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Envision")
-                            .Trigger("You take damage from a physical attack while you don�t have the affixed shield raised.");
+                            .Trigger("You take damage from a physical attack while you don't have the affixed shield raised.");
                     })
                     .Build()
             };

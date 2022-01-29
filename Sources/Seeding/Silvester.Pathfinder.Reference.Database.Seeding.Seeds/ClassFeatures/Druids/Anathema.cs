@@ -32,7 +32,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Cl
             yield return new TextBlock { Id = Guid.Parse("0977e246-158a-4efa-ad37-c99b36dfcaa2"), Type = TextBlockType.Enumeration, Text = "Using metal armor or shields." };
             yield return new TextBlock { Id = Guid.Parse("c0155149-0768-413c-b325-bde56dc0d9e7"), Type = TextBlockType.Enumeration, Text = "Despoiling natural places." };
             yield return new TextBlock { Id = Guid.Parse("24f4120a-e4c1-42e6-b46f-8348bb5b53a4"), Type = TextBlockType.Enumeration, Text = "Teaching the Druidic language to non-druids." };
-            yield return new TextBlock { Id = Guid.Parse("3f9e19e1-2af9-4e56-9f10-e7a33ab5e0f0"), Type = TextBlockType.Text, Text = "Each druidic order also has additional anathema acts, detailed in the order�s entry." };
+            yield return new TextBlock { Id = Guid.Parse("3f9e19e1-2af9-4e56-9f10-e7a33ab5e0f0"), Type = TextBlockType.Text, Text = "Each druidic order also has additional anathema acts, detailed in the order's entry." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

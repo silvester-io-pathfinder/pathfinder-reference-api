@@ -25,8 +25,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("95d8bcf9-6c40-44d4-a9c5-03a15d384cae"), "This small iron band has a shifting weight that helps equalize the affixed weapon�s balance.When you activate it, you use Certain Strike, as the fighter feat(page 150).You must meet the normal requirements, including those of the press trait.");
-            builder.Text(Guid.Parse("055de856-f0b5-4be0-a9dd-3efe0156bff8"), "If you have the Certain Strike feat, the failure effect increases to deal the weapon�s normal damage.");
+            builder.Text(Guid.Parse("95d8bcf9-6c40-44d4-a9c5-03a15d384cae"), "This small iron band has a shifting weight that helps equalize the affixed weapon's balance.When you activate it, you use Certain Strike, as the fighter feat(page 150).You must meet the normal requirements, including those of the press trait.");
+            builder.Text(Guid.Parse("055de856-f0b5-4be0-a9dd-3efe0156bff8"), "If you have the Certain Strike feat, the failure effect increases to deal the weapon's normal damage.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()

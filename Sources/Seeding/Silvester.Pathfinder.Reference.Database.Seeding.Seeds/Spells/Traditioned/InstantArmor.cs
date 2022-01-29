@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7a1ec60e-a06d-4e14-a08d-da6ea1a6251e"), Type = TextBlockType.Text, Text = "Upon casting this spell, the armor you�re wearing is whisked away into an extradimensional space that�s linked to you. If the armor is magical and invested by you, it remains invested while in this space, though you don�t gain its benefits. You then gain the Armor Up! action; once you use the action, the spell ends. If the action hasn�t been used by the time the spell�s duration ends, the extradimensional space collapses, ejecting the armor�s pieces on the ground under you." };
+            yield return new TextBlock { Id = Guid.Parse("7a1ec60e-a06d-4e14-a08d-da6ea1a6251e"), Type = TextBlockType.Text, Text = "Upon casting this spell, the armor you're wearing is whisked away into an extradimensional space that's linked to you. If the armor is magical and invested by you, it remains invested while in this space, though you don't gain its benefits. You then gain the Armor Up! action; once you use the action, the spell ends. If the action hasn't been used by the time the spell's duration ends, the extradimensional space collapses, ejecting the armor's pieces on the ground under you." };
         }
 
         protected override IEnumerable<InlineAction> GetInlineActions()

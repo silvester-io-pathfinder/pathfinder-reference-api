@@ -25,8 +25,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.MagicAmmun
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("42ae187c-387d-4a5d-b688-3574cb21fc35"), "The shaft of this arrow is covered in fine green scales, and its iron head comes to a pair of points almost like fangs. After an activated viper arrow hits a target, the arrow transforms into a viper (Pathfinder Bestiary 302). The target is affected by the viper�s poison, as if it had been bitten. The viper then lands in an open space adjacent to the target.");
-            builder.Text(Guid.Parse("e6b44aea-8877-40b6-8d3d-8183af11f99c"), "The viper has the summoned trait and acts at the end of your turn, even though you didn�t use the Sustain a Spell action. It is under the GM�s control, but it generally attacks the creature the arrow struck. The viper vanishes after 1 minute or when slain.");
+            builder.Text(Guid.Parse("42ae187c-387d-4a5d-b688-3574cb21fc35"), "The shaft of this arrow is covered in fine green scales, and its iron head comes to a pair of points almost like fangs. After an activated viper arrow hits a target, the arrow transforms into a viper (Pathfinder Bestiary 302). The target is affected by the viper's poison, as if it had been bitten. The viper then lands in an open space adjacent to the target.");
+            builder.Text(Guid.Parse("e6b44aea-8877-40b6-8d3d-8183af11f99c"), "The viper has the summoned trait and acts at the end of your turn, even though you didn't use the Sustain a Spell action. It is under the GM's control, but it generally attacks the creature the arrow struck. The viper vanishes after 1 minute or when slain.");
         }
 
         protected override IEnumerable<MagicAmmunitionVariant> GetMagicAmmunitionVariants()

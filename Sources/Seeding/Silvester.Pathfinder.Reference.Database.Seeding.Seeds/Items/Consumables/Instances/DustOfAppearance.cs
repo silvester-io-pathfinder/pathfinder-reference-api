@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("d4c9d092-d8a7-4c66-81ac-f7ac3c59e44b"), "Stored in a small reed, this powder looks like a fine metallic dust. When you fling it in the air, it coats all creatures in a 10-foot burst centered on a point within 5 feet of you. For 1 minute, the coated creatures can�t be concealed or invisible, nor can they benefit from mirror image or similar abilities that create illusory duplicates. Any illusions in the area of 3rd level or lower are revealed as such, although this does not end their effect.");
+            builder.Text(Guid.Parse("d4c9d092-d8a7-4c66-81ac-f7ac3c59e44b"), "Stored in a small reed, this powder looks like a fine metallic dust. When you fling it in the air, it coats all creatures in a 10-foot burst centered on a point within 5 feet of you. For 1 minute, the coated creatures can't be concealed or invisible, nor can they benefit from mirror image or similar abilities that create illusory duplicates. Any illusions in the area of 3rd level or lower are revealed as such, although this does not end their effect.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()

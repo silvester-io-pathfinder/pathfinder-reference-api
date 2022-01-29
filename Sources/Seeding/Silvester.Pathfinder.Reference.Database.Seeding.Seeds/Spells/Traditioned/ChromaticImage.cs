@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("4e6fcee7-8537-466d-be20-6aa196ed18a1"), Type = TextBlockType.Enumeration, Text = "1. Red - 5 fire damage and 5 mental damage." };
             yield return new TextBlock { Id = Guid.Parse("7ff94084-13e6-42b0-90c4-5341624d72b7"), Type = TextBlockType.Enumeration, Text = "2. Orange - 5 acid damage and 5 mental damage." };
             yield return new TextBlock { Id = Guid.Parse("10483d32-f0eb-4e62-9590-9b86ad59883e"), Type = TextBlockType.Enumeration, Text = "3. Yellow - 5 electricity damage and 5 mental damage." };
-            yield return new TextBlock { Id = Guid.Parse("57e3a906-c346-4929-8d02-6969e2c19199"), Type = TextBlockType.Enumeration, Text = "4. Green - 5 poison damage and 5 mental damage, plus it�s frightened 1." };
+            yield return new TextBlock { Id = Guid.Parse("57e3a906-c346-4929-8d02-6969e2c19199"), Type = TextBlockType.Enumeration, Text = "4. Green - 5 poison damage and 5 mental damage, plus it's frightened 1." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

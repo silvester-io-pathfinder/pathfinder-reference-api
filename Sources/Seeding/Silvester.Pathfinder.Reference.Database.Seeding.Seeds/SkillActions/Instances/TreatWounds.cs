@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = ID,
                 Name = "Treat Wounds",
-                Requirements = "You�re wearing or holding healer�s tools (page 290).",
+                Requirements = "you're wearing or holding healer's tools (page 290).",
                 ActionTypeId = ActionTypes.Instances.NoAction.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID
             };
@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
         protected override IEnumerable<TextBlock> GetDetails()
         {
             yield return new TextBlock { Id = Guid.Parse("09a6162f-29c2-4f23-acdf-82f18b30ed17"), Type = TextBlockType.Text, Text = "You spend 10 minutes treating one injured living creature (targeting yourself, if you so choose). The target is then temporarily immune to Treat Wounds actions for 1 hour, but this interval overlaps with the time you spent treating (so a patient can be treated once per hour, not once per 70 minutes)." };
-            yield return new TextBlock { Id = Guid.Parse("ce90fdef-5658-43cd-b5d5-305f5a3d4d79"), Type = TextBlockType.Text, Text = "The Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you�re an expert in Medicine, you can instead attempt a DC 20 check to increase the Hit Points regained by 10; if you�re a master of Medicine, you can instead attempt a DC 30 check to increase the Hit Points regained by 30; and if you�re legendary, you can instead attempt a DC 40 check to increase the Hit Points regained by 50. The damage dealt on a critical failure remains the same." };
+            yield return new TextBlock { Id = Guid.Parse("ce90fdef-5658-43cd-b5d5-305f5a3d4d79"), Type = TextBlockType.Text, Text = "The Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you're an expert in Medicine, you can instead attempt a DC 20 check to increase the Hit Points regained by 10; if you're a master of Medicine, you can instead attempt a DC 30 check to increase the Hit Points regained by 30; and if you're legendary, you can instead attempt a DC 40 check to increase the Hit Points regained by 50. The damage dealt on a critical failure remains the same." };
             yield return new TextBlock { Id = Guid.Parse("c22163f0-bb6b-4242-8540-80736493cb92"), Type = TextBlockType.Text, Text = "If you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds." };
             yield return new TextBlock { Id = Guid.Parse("69a85794-8340-4729-a378-6ae0275b8efc"), Type = TextBlockType.Text, Text = "The result of your Medicine check determines how many Hit Points the target regains." };
         }

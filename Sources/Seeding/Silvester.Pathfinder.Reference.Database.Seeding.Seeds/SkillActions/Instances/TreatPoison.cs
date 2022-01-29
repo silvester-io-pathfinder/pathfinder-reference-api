@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = ID,
                 Name = "Treat Poison",
-                Requirements = "You�re wearing or holding healer�s tools (page 290).",
+                Requirements = "you're wearing or holding healer's tools (page 290).",
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID
             };
@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("bfda12f5-1b68-49a2-aac5-2d66337938ba"), Type = TextBlockType.Text, Text = "You treat a patient to prevent the spread of poison. Attempt a Medicine check against the poison�s DC. After you attempt to Treat a Poison for a creature, you can�t try again until after the next time that creature attempts a save against the poison." };
+            yield return new TextBlock { Id = Guid.Parse("bfda12f5-1b68-49a2-aac5-2d66337938ba"), Type = TextBlockType.Text, Text = "You treat a patient to prevent the spread of poison. Attempt a Medicine check against the poison's DC. After you attempt to Treat a Poison for a creature, you can't try again until after the next time that creature attempts a save against the poison." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -43,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 Id = Guid.Parse("d9b2338d-412f-431c-a4fd-ef355c66d054"),
                 CriticalSuccess = "You grant the creature a +4 circumstance bonus to its next saving throw against the poison.",
                 Success = "You grant the creature a +2 circumstance bonus to its next saving throw against the poison.",
-                CriticalFailure = "Your efforts cause the creature to take a �2 circumstance penalty to its next save against the poison."
+                CriticalFailure = "Your efforts cause the creature to take a -2 circumstance penalty to its next save against the poison."
             };
         }
 

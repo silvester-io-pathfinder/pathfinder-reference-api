@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("4a14ea7d-dbe5-441b-85ff-5478a9768796"),
                 CriticalSuccess = "The creature is unaffected",
-                Success = "The target takes a �2 status penalty to Athletics and Acrobatics checks.",
+                Success = "The target takes a -2 status penalty to Athletics and Acrobatics checks.",
                 Failure = " As success, and each time the target Strides, it uses the first 5 feet of movement of the Stride to move 5 feet in a random direction (this is forced movement). This has no effect on a creature with only 5 feet of movement.",
                 CriticalFailure = "As failure, except you control the direction of the target's first 5 feet of movement of the Stride."
             };

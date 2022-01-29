@@ -17,7 +17,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.MasterAbilities.
             {
                 Id = ID, 
                 Name = "Cantrip Connection", 
-                Description = "You can prepare an additional cantrip, or if you have a repertoire, instead designate a cantrip to add to your repertoire every time you select this ability; you can retrain it but can�t otherwise change it. You must be able to prepare cantrips or add them to your repertoire to select this."
+                Description = "You can prepare an additional cantrip, or if you have a repertoire, instead designate a cantrip to add to your repertoire every time you select this ability; you can retrain it but can't otherwise change it. You must be able to prepare cantrips or add them to your repertoire to select this."
             };
         }
 

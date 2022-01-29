@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ro
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("dfe69b7b-bcea-42c7-ad41-0087d446b489"), Type = TextBlockType.Text, Text = "As someone who takes advantage of others� defenses, you are careful not to leave such openings yourself. You aren�t flat-footed to hidden, undetected, or flanking creatures of your level or lower, or creatures of your level or lower using surprise attack. However, they can still help their allies flank." };
+            yield return new TextBlock { Id = Guid.Parse("dfe69b7b-bcea-42c7-ad41-0087d446b489"), Type = TextBlockType.Text, Text = "As someone who takes advantage of others' defenses, you are careful not to leave such openings yourself. You aren't flat-footed to hidden, undetected, or flanking creatures of your level or lower, or creatures of your level or lower using surprise attack. However, they can still help their allies flank." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

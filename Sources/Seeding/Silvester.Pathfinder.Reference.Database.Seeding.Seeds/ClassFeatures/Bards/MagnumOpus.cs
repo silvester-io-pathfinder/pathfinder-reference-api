@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("05afe27b-a283-45f5-8aa2-e8e443181580"), Type = TextBlockType.Text, Text = "You have tuned your spellcasting to the highest caliber. Add two common 10th-level occult spells to your repertoire. You gain a single 10th-level spell slot you can use to cast one of those two spells using bard spellcasting. You don�t gain more 10th-level spells as you level up, unlike other spell slots, and you can�t use 10th-level slots with abilities that give you more spell slots or that let you cast spells without expending spell slots." };
+            yield return new TextBlock { Id = Guid.Parse("05afe27b-a283-45f5-8aa2-e8e443181580"), Type = TextBlockType.Text, Text = "You have tuned your spellcasting to the highest caliber. Add two common 10th-level occult spells to your repertoire. You gain a single 10th-level spell slot you can use to cast one of those two spells using bard spellcasting. You don't gain more 10th-level spells as you level up, unlike other spell slots, and you can't use 10th-level slots with abilities that give you more spell slots or that let you cast spells without expending spell slots." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

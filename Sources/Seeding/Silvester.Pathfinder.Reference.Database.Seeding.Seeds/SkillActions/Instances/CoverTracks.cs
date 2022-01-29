@@ -22,8 +22,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("7b58fb8f-e23a-463b-b2fd-df87dbc3e1b5"), Type = TextBlockType.Text, Text = "You cover your tracks, moving up to half your travel Speed, using the rules on page 479. You don�t need to attempt a Survival check to cover your tracks, but anyone tracking you must succeed at a Survival check against your Survival DC if it is higher than the normal DC to Track." };
-            yield return new TextBlock { Id = Guid.Parse("5fb26197-81cb-4c04-b3b1-1c34818c3ac9"), Type = TextBlockType.Text, Text = "In some cases, you might Cover Tracks in an encounter. In this case, Cover Tracks is a single action and doesn�t have the exploration trait." };
+            yield return new TextBlock { Id = Guid.Parse("7b58fb8f-e23a-463b-b2fd-df87dbc3e1b5"), Type = TextBlockType.Text, Text = "You cover your tracks, moving up to half your travel Speed, using the rules on page 479. You don't need to attempt a Survival check to cover your tracks, but anyone tracking you must succeed at a Survival check against your Survival DC if it is higher than the normal DC to Track." };
+            yield return new TextBlock { Id = Guid.Parse("5fb26197-81cb-4c04-b3b1-1c34818c3ac9"), Type = TextBlockType.Text, Text = "In some cases, you might Cover Tracks in an encounter. In this case, Cover Tracks is a single action and doesn't have the exploration trait." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()

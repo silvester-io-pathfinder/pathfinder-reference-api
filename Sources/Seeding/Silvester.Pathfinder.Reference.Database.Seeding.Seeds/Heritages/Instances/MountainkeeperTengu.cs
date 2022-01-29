@@ -25,13 +25,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("7c220c7a-bb74-4671-8c70-a036477cb4f5"), Type = TextBlockType.Text, Text = "You come from a line of tengu ascetics, leaving you with a link to the spirits of the world and the Great Beyond. You can cast the disrupt undead cantrip as a primal innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up. Each time you cast a spell from a tengu heritage or ancestry feat, you can decide whether it�s a divine or primal spell." };
+            yield return new TextBlock { Id = Guid.Parse("7c220c7a-bb74-4671-8c70-a036477cb4f5"), Type = TextBlockType.Text, Text = "You come from a line of tengu ascetics, leaving you with a link to the spirits of the world and the Great Beyond. You can cast the disrupt undead cantrip as a primal innate spell at will. A cantrip is heightened to a spell level equal to half your level rounded up. Each time you cast a spell from a tengu heritage or ancestry feat, you can decide whether it's a divine or primal spell." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)
         {
             builder.GainSpecificInnateSpell(Guid.Parse("88329060-cae1-4d34-973f-6c23524064aa"), Spells.Instances.DisruptUndead.ID, MagicTraditions.Instances.Primal.ID);
-            builder.Manual(Guid.Parse("f8f749e2-a385-48f0-9aca-48d35a37636f"), "Each time you cast a spell from a tengu heritage or ancestry feat, you can decide whether it�s a divine or primal spell.");
+            builder.Manual(Guid.Parse("f8f749e2-a385-48f0-9aca-48d35a37636f"), "Each time you cast a spell from a tengu heritage or ancestry feat, you can decide whether it's a divine or primal spell.");
         }
 
         protected override SourcePage GetSourcePage()

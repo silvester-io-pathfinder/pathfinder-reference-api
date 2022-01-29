@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = ID,
                 Name = "Shove",
-                Requirements = "You have at least one hand free. The target can�t be more than one size larger than you.",
+                Requirements = "You have at least one hand free. The target can't be more than one size larger than you.",
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Untrained.ID
             };
@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("866acb2d-343d-427f-aee5-4359e2066e52"), Type = TextBlockType.Text, Text = "You push a creature away from you. Attempt an Athletics check against your target�s Fortitude DC." };
+            yield return new TextBlock { Id = Guid.Parse("866acb2d-343d-427f-aee5-4359e2066e52"), Type = TextBlockType.Text, Text = "You push a creature away from you. Attempt an Athletics check against your target's Fortitude DC." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()

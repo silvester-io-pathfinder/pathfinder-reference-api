@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("f555e3b2-b41d-47e1-8df2-16685cacdd72"), Type = TextBlockType.Text, Text = "One of your forebears hailed from a celestial realm, or your ancestors� devotion led to their lineage being blessed." };
+            yield return new TextBlock { Id = Guid.Parse("f555e3b2-b41d-47e1-8df2-16685cacdd72"), Type = TextBlockType.Text, Text = "One of your forebears hailed from a celestial realm, or your ancestors' devotion led to their lineage being blessed." };
         }
         
         protected override void GetEffects(BooleanEffectBuilder builder)

@@ -68,8 +68,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Shields.In
                             {
                                 effect
                                     .Success("The target is unaffected.")
-                                    .Failure("You wound the target�s mouth. It takes 1d6 persistent bleed damage and takes a �2 status penalty to attack and damage rolls with jaws, fangs, or similar Strikes for 24 hours.")
-                                    .CriticalFailure("You break the target�s jaw. As failure, and the creature can't make Strikes using its mouth for 1 minute. At the end of its turn, it can attempt a Fortitude save to regain the ability to make Strikes using its mouth.");
+                                    .Failure("You wound the target's mouth. It takes 1d6 persistent bleed damage and takes a -2 status penalty to attack and damage rolls with jaws, fangs, or similar Strikes for 24 hours.")
+                                    .CriticalFailure("You break the target's jaw. As failure, and the creature can't make Strikes using its mouth for 1 minute. At the end of its turn, it can attempt a Fortitude save to regain the ability to make Strikes using its mouth.");
                             });
                     })
                     .Build()

@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 Id = Guid.Parse("5d9dde1e-bfca-46c3-ad73-0823c5925356"),
                 CriticalSuccess = "You squeeze through the tight space in 1 minute per 10 feet of squeezing.",
                 Success = "You squeeze through in 1 minute per 5 feet.",
-                CriticalFailure = "You become stuck in the tight space. While you�re stuck, you can spend 1 minute attempting another Acrobatics check at the same DC. Any result on that check other than a critical failure causes you to become unstuck."
+                CriticalFailure = "You become stuck in the tight space. While you're stuck, you can spend 1 minute attempting another Acrobatics check at the same DC. Any result on that check other than a critical failure causes you to become unstuck."
             };
         }
 

@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("8b2423dc-3d8d-4d48-93ad-a355f3221e7e"), "This black strand of leather is tied to look like a peace knot when the weapon is worn, but it doesn�t hamper drawing the weapon. When you activate the knot, the creature you damaged takes 1d6 persistent bleed damage.");
+            builder.Text(Guid.Parse("8b2423dc-3d8d-4d48-93ad-a355f3221e7e"), "This black strand of leather is tied to look like a peace knot when the weapon is worn, but it doesn't hamper drawing the weapon. When you activate the knot, the creature you damaged takes 1d6 persistent bleed damage.");
             builder.Text(Guid.Parse("eb5eadef-fad5-41f0-9ab8-dea59f9b4f77"), "If you have the Twist the Knife feat, the talisman instead deals persistent bleed damage equal to your sneak attack damage.");
         }
 

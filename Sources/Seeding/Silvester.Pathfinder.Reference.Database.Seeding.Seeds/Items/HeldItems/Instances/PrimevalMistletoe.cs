@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("12fb4511-bf8d-4a3d-9a1b-3305b5f25997"), "This sprig of berry-festooned holly and mistletoe doesn�t wilt or rot. It can be used as a primal focus, and it also grants the creature holding it a +1 item bonus to Nature checks.");
+            builder.Text(Guid.Parse("12fb4511-bf8d-4a3d-9a1b-3305b5f25997"), "This sprig of berry-festooned holly and mistletoe doesn't wilt or rot. It can be used as a primal focus, and it also grants the creature holding it a +1 item bonus to Nature checks.");
         }
        
         protected override IEnumerable<HeldItemVariant> GetHeldItemVariants()
@@ -111,7 +111,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                             .Frequency("Once per day.")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("a4885100-4554-4021-a6df-83d95f24d1e2"), "You plant the greater primeval mistletoe into an area of natural earth or stone. Once planted, the plant immediately sprouts into an area of holly bushes that don�t impede movement and that pulse with positive energy, replicating the effects of a field of life spell. This lasts for up to 1 minute, as long as you continue to Sustain the Activation. When this magic ends, the holly bushes revert back into the original greater primeval mistletoe.");
+                                details.Text(Guid.Parse("a4885100-4554-4021-a6df-83d95f24d1e2"), "You plant the greater primeval mistletoe into an area of natural earth or stone. Once planted, the plant immediately sprouts into an area of holly bushes that don't impede movement and that pulse with positive energy, replicating the effects of a field of life spell. This lasts for up to 1 minute, as long as you continue to Sustain the Activation. When this magic ends, the holly bushes revert back into the original greater primeval mistletoe.");
                             });
                     })
                     .Build()

@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("79968a76-f4e9-491c-bad4-88ae8b7ea302"), Type = TextBlockType.Text, Text = "You were exposed to powerful necromantic energies that should have killed you�but you survived. Your skin is cold, clammy, and gray. You gain resistance to negative damage equal to half your level (minimum 1). You also gain a +1 circumstance bonus to saving throws against necromancy effects." };
+            yield return new TextBlock { Id = Guid.Parse("79968a76-f4e9-491c-bad4-88ae8b7ea302"), Type = TextBlockType.Text, Text = "You were exposed to powerful necromantic energies that should have killed you - but you survived. Your skin is cold, clammy, and gray. You gain resistance to negative damage equal to half your level (minimum 1). You also gain a +1 circumstance bonus to saving throws against necromancy effects." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

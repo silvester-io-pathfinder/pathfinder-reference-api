@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("4fa4e631-8a6d-48b9-8827-ad8cc600b31a"), "This wolf canine is bound in a strip of leather and tied to a buckle or strap of a suit of armor. When you activate the fang, you deal bludgeoning damage equal to your Strength modifier to the target of your Trip. If your Trip would already deal physical damage that doesn�t include an ability modifier, add your Strength modifier to that damage.");
+            builder.Text(Guid.Parse("4fa4e631-8a6d-48b9-8827-ad8cc600b31a"), "This wolf canine is bound in a strip of leather and tied to a buckle or strap of a suit of armor. When you activate the fang, you deal bludgeoning damage equal to your Strength modifier to the target of your Trip. If your Trip would already deal physical damage that doesn't include an ability modifier, add your Strength modifier to that damage.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()

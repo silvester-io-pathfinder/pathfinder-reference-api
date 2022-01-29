@@ -25,8 +25,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("6d4dea7d-79cb-4bab-9ed6-7323847ede12"), Type = TextBlockType.Text, Text = "Your ancestors lived in dark spaces underground, granting you dark fur and a vaguely unnatural mien that unnerves sapient creatures and frightens animals. You gain the trained proficiency rank in Intimidation and can use Intimidation to Coerce animals. When you Demoralize an animal, you don�t take a penalty for not sharing a language with it. If you would automatically become trained in Intimidation (from your background or class, for example), you become trained in another skill of your choice." };
-            yield return new TextBlock { Id = Guid.Parse("c73e2e20-f12f-471e-b6a8-7cae412f5889"), Type = TextBlockType.Text, Text = "Animals� attitudes toward you begin one degree worse than normal, usually starting at unfriendly instead of indifferent for domesticated animals, and hostile instead of unfriendly for wild animals." };
+            yield return new TextBlock { Id = Guid.Parse("6d4dea7d-79cb-4bab-9ed6-7323847ede12"), Type = TextBlockType.Text, Text = "Your ancestors lived in dark spaces underground, granting you dark fur and a vaguely unnatural mien that unnerves sapient creatures and frightens animals. You gain the trained proficiency rank in Intimidation and can use Intimidation to Coerce animals. When you Demoralize an animal, you don't take a penalty for not sharing a language with it. If you would automatically become trained in Intimidation (from your background or class, for example), you become trained in another skill of your choice." };
+            yield return new TextBlock { Id = Guid.Parse("c73e2e20-f12f-471e-b6a8-7cae412f5889"), Type = TextBlockType.Text, Text = "Animals' attitudes toward you begin one degree worse than normal, usually starting at unfriendly instead of indifferent for domesticated animals, and hostile instead of unfriendly for wild animals." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)
@@ -41,8 +41,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
                     });
             });
             builder.Manual(Guid.Parse("791abfa5-006d-4b51-ba03-da3dd1fe79e9"), "You can use Intimidation to Coerce animals.");
-            builder.Manual(Guid.Parse("bbe161c0-6e0e-45f5-be75-40d823ff35b8"), "When you Demoralize an animal, you don�t take a penalty for not sharing a language with it.");
-            builder.Manual(Guid.Parse("d19114c4-2e95-4c6a-be94-c5054ba3f449"), "Animals� attitudes toward you begin one degree worse than normal, usually starting at unfriendly instead of indifferent for domesticated animals, and hostile instead of unfriendly for wild animals.");
+            builder.Manual(Guid.Parse("bbe161c0-6e0e-45f5-be75-40d823ff35b8"), "When you Demoralize an animal, you don't take a penalty for not sharing a language with it.");
+            builder.Manual(Guid.Parse("d19114c4-2e95-4c6a-be94-c5054ba3f449"), "Animals' attitudes toward you begin one degree worse than normal, usually starting at unfriendly instead of indifferent for domesticated animals, and hostile instead of unfriendly for wild animals.");
         }
 
         protected override SourcePage GetSourcePage()

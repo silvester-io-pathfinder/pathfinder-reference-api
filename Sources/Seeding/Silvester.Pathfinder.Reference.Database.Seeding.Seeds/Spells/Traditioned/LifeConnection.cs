@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("e5de6b0b-8fa2-443e-854c-a9a8b053493a"), Type = TextBlockType.Text, Text = "When you cast this spell, you place a failsafe deep within the life force of the target. You can sense when the target takes damage, provided you�re within 1 mile of one another. A creature can be part of no more than one life connection simultaneously. When the spell is complete, you gain the Defend Life reaction; once you use the reaction, the spell ends." };
+            yield return new TextBlock { Id = Guid.Parse("e5de6b0b-8fa2-443e-854c-a9a8b053493a"), Type = TextBlockType.Text, Text = "When you cast this spell, you place a failsafe deep within the life force of the target. You can sense when the target takes damage, provided you're within 1 mile of one another. A creature can be part of no more than one life connection simultaneously. When the spell is complete, you gain the Defend Life reaction; once you use the reaction, the spell ends." };
         }
 
         protected override IEnumerable<InlineAction> GetInlineActions()
@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 },
                 Effect = new[]
                 {
-                    new TextBlock { Id = Guid.Parse("f6792e86-4047-48b5-8522-8f1bf492c75b"), Type = TextBlockType.Text, Text = "After calculating the amount of damage the target would take (applying weaknesses, resistances, and the like), you lose an equal number of Hit Points, and the target doesn�t take any of the damage. You can�t reduce the amount of Hit Points you lose in this way. The target still takes any effects that would come with the damage, however, such as the venom on a viper�s fangs Strike." }
+                    new TextBlock { Id = Guid.Parse("f6792e86-4047-48b5-8522-8f1bf492c75b"), Type = TextBlockType.Text, Text = "After calculating the amount of damage the target would take (applying weaknesses, resistances, and the like), you lose an equal number of Hit Points, and the target doesn't take any of the damage. You can't reduce the amount of Hit Points you lose in this way. The target still takes any effects that would come with the damage, however, such as the venom on a viper's fangs Strike." }
                 }
             };
         }

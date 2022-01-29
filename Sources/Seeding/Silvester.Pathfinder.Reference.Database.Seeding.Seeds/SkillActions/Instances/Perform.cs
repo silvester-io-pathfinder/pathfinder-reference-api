@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("051b3cb9-020f-4941-b28e-ce1acd0342d9"), Type = TextBlockType.Text, Text = "When making a brief performance�one song, a quick dance, or a few jokes�you use the Perform action. This action is most useful when you want to prove your capability or impress someone quickly. Performing rarely has an impact on its own, but it might influence the DCs of subsequent Diplomacy checks against the observers�or even change their attitudes� if the GM sees fit." };
+            yield return new TextBlock { Id = Guid.Parse("051b3cb9-020f-4941-b28e-ce1acd0342d9"), Type = TextBlockType.Text, Text = "When making a brief performance - one song, a quick dance, or a few jokes - you use the Perform action. This action is most useful when you want to prove your capability or impress someone quickly. Performing rarely has an impact on its own, but it might influence the DCs of subsequent Diplomacy checks against the observers'or even change their attitudes' if the GM sees fit." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             return new RollableEffect
             {
                 Id = Guid.Parse("eb1add09-c20e-42c0-9b8a-228037c3556b"),
-                CriticalSuccess = "Your performance impresses the observers, and they�re likely to share stories of your ability.",
+                CriticalSuccess = "Your performance impresses the observers, and they're likely to share stories of your ability.",
                 Success = "You prove yourself, and observers appreciate the quality of your performance.",
                 Failure = "Your performance falls flat.",
                 CriticalFailure = "You demonstrate only incompetence."

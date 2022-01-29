@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.BeastGuns.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("200698c5-18fa-4c65-8f4d-f3e1622e39ef"), "A drake rifle is a firearm made from the saliva glands of a drake. The firearm launches small bursts of empowered spittle instead of typical rounds of ammunition. A drake rifle is a +1 weapon. It�s a distinct type of martial firearm that deals 1d10 damage with a range increment of 150 feet and reload 1. It deals acid, cold, electricity, fire, or poison damage, depending on the drake from which it was made. On a critical hit, the spittle clings to the target and they take persistent damage of the same type as the weapon equal to 1d4 + the number of weapon damage dice. A drake rifle does not add critical specialization effects.");
+            builder.Text(Guid.Parse("200698c5-18fa-4c65-8f4d-f3e1622e39ef"), "A drake rifle is a firearm made from the saliva glands of a drake. The firearm launches small bursts of empowered spittle instead of typical rounds of ammunition. A drake rifle is a +1 weapon. It's a distinct type of martial firearm that deals 1d10 damage with a range increment of 150 feet and reload 1. It deals acid, cold, electricity, fire, or poison damage, depending on the drake from which it was made. On a critical hit, the spittle clings to the target and they take persistent damage of the same type as the weapon equal to 1d4 + the number of weapon damage dice. A drake rifle does not add critical specialization effects.");
         }
 
         protected override IEnumerable<BeastGunVariant> GetBeastGunVariants()

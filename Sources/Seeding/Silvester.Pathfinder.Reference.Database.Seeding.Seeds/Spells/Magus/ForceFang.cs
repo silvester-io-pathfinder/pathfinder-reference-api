@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("00326119-316c-48a8-b0bd-16974a436990"), Type = TextBlockType.Text, Text = "You briefly turn your attack into pure force to bypass your opponent�s defenses. Choose a target within your reach, or within the reach of a melee weapon you�re wielding. If you can use Spellstrike with a ranged weapon (with the starlit span hybrid study, for example), you can target a creature in the first range increment of your ranged weapon. For an instant, you transform your weapon or unarmed attack into a spike of pure force, replacing all its normal statistics and abilities. The force fang automatically deals 1d4+1 force damage to the target." };
+            yield return new TextBlock { Id = Guid.Parse("00326119-316c-48a8-b0bd-16974a436990"), Type = TextBlockType.Text, Text = "You briefly turn your attack into pure force to bypass your opponent's defenses. Choose a target within your reach, or within the reach of a melee weapon you're wielding. If you can use Spellstrike with a ranged weapon (with the starlit span hybrid study, for example), you can target a creature in the first range increment of your ranged weapon. For an instant, you transform your weapon or unarmed attack into a spike of pure force, replacing all its normal statistics and abilities. The force fang automatically deals 1d4+1 force damage to the target." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

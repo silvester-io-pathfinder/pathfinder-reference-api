@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.MagicAmmun
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("c3faef7b-2784-4453-8220-3dc461173544"), "The shaft of this bolt is scorched and blackened, and handling it coats your fingers with a fine black powder. When an activated disintegration bolt hits a target, it is subject to a disintegrate spell requiring a DC 34 Fortitude save. As with the spell, a critical hit on the attack roll causes the target�s saving throw outcome to be one degree worse.");
+            builder.Text(Guid.Parse("c3faef7b-2784-4453-8220-3dc461173544"), "The shaft of this bolt is scorched and blackened, and handling it coats your fingers with a fine black powder. When an activated disintegration bolt hits a target, it is subject to a disintegrate spell requiring a DC 34 Fortitude save. As with the spell, a critical hit on the attack roll causes the target's saving throw outcome to be one degree worse.");
         }
 
         protected override IEnumerable<MagicAmmunitionVariant> GetMagicAmmunitionVariants()

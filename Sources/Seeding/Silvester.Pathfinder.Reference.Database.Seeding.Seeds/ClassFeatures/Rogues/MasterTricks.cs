@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ro
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("48356706-7d64-48fb-b664-3b7f94082919"), Type = TextBlockType.Text, Text = "You�ve mastered a rogue�s fighting moves. Your proficiency ranks increase to master for all simple weapons and unarmed attacks plus the rapier, sap, shortbow, and shortsword." };
+            yield return new TextBlock { Id = Guid.Parse("48356706-7d64-48fb-b664-3b7f94082919"), Type = TextBlockType.Text, Text = "you've mastered a rogue's fighting moves. Your proficiency ranks increase to master for all simple weapons and unarmed attacks plus the rapier, sap, shortbow, and shortsword." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Consumable
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("d048f952-b7e2-4cd8-ac21-b5db528a05fe"), "Each feather token appears to be a simple feather from some exotic bird. The feather�s shaft, dipped in gold, bears a single arcane rune. Activating a feather token causes it to transform into another object, which then can be used as normal for that object. Each feather can be activated only once, with most of them permanently becoming the item in their description."); ;
+            builder.Text(Guid.Parse("d048f952-b7e2-4cd8-ac21-b5db528a05fe"), "Each feather token appears to be a simple feather from some exotic bird. The feather's shaft, dipped in gold, bears a single arcane rune. Activating a feather token causes it to transform into another object, which then can be used as normal for that object. Each feather can be activated only once, with most of them permanently becoming the item in their description."); ;
         }
 
         protected override IEnumerable<ConsumableVariant> GetConsumableVariants()
@@ -93,7 +93,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Consumable
                             .Kind("Interact")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("5c363136-f62d-483b-9f8a-2c3d45b289ad"), "When you use this token, a small wooden chest appears and immediately opens. This chest can hold up to 10 Bulk worth of items. Once the chest is closed, it transforms again�this time into a key�taking all of the stored items with it. You can activate this key by spending an Interact action to turn it in an imaginary lock, which causes it to transform back into a chest with all of the items still inside. Once it has turned into a chest a second time, it forever remains a wooden chest.");
+                                effect.Text(Guid.Parse("5c363136-f62d-483b-9f8a-2c3d45b289ad"), "When you use this token, a small wooden chest appears and immediately opens. This chest can hold up to 10 Bulk worth of items. Once the chest is closed, it transforms again - this time into a key - taking all of the stored items with it. You can activate this key by spending an Interact action to turn it in an imaginary lock, which causes it to transform back into a chest with all of the items still inside. Once it has turned into a chest a second time, it forever remains a wooden chest.");
                             });
                     })
                     .Build()
@@ -139,8 +139,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Consumable
                             .Kind("Interact")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("2f026ebf-0283-4ff8-82e8-78b72d4594a7"), "When this feather is activated, it immediately transforms into a living holly bush, filling a single square. This bush can provide standard cover. In addition, the bush has 2d4 bright-red berries. While holly berries are usually poisonous, these berries are infused with beneficial magic. You can pick and eat a berry as an Interact action to recover 1 Hit Point. Once plucked from the bush, a berry becomes non-magical after a few seconds, so it doesn�t heal you if you don�t eat it within the span of your Interact action.");
-                                effect.Text(Guid.Parse("6d8e61dc-c84b-4a93-bbef-831cfbc89b9e"), "If activated on soil, the plant continues to grow and thrive (although it doesn�t produce any more healing berries). If activated elsewhere, it withers and dies within 1d4 days.");
+                                effect.Text(Guid.Parse("2f026ebf-0283-4ff8-82e8-78b72d4594a7"), "When this feather is activated, it immediately transforms into a living holly bush, filling a single square. This bush can provide standard cover. In addition, the bush has 2d4 bright-red berries. While holly berries are usually poisonous, these berries are infused with beneficial magic. You can pick and eat a berry as an Interact action to recover 1 Hit Point. Once plucked from the bush, a berry becomes non-magical after a few seconds, so it doesn't heal you if you don't eat it within the span of your Interact action.");
+                                effect.Text(Guid.Parse("6d8e61dc-c84b-4a93-bbef-831cfbc89b9e"), "If activated on soil, the plant continues to grow and thrive (although it doesn't produce any more healing berries). If activated elsewhere, it withers and dies within 1d4 days.");
                             });
                     })
                     .Build()
@@ -232,7 +232,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Consumable
                             .Kind("Interact")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("b81ee03f-f1c6-4469-96af-cad0f2875bff"), "This feather transforms into a +1 striking dancing whip when activated. The whip immediately jumps from your grasp and proceeds to attack your enemies until 1 minute has passed or it fails its flat check for dancing, at which point it vanishes. If the whip�s target isn�t prone, the whip uses its actions to attempt to Trip that creature instead of making a Strike. The whip�s total attack modifier for Striking or Tripping is +18 instead of the normal bonus for a dancing weapon.");
+                                effect.Text(Guid.Parse("b81ee03f-f1c6-4469-96af-cad0f2875bff"), "This feather transforms into a +1 striking dancing whip when activated. The whip immediately jumps from your grasp and proceeds to attack your enemies until 1 minute has passed or it fails its flat check for dancing, at which point it vanishes. If the whip's target isn't prone, the whip uses its actions to attempt to Trip that creature instead of making a Strike. The whip's total attack modifier for Striking or Tripping is +18 instead of the normal bonus for a dancing weapon.");
                             });
                     })
                     .Build()

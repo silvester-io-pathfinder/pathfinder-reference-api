@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("3a974c79-8a30-47e6-8ca6-0d3f4bd356fb"), Type = TextBlockType.Text, Text = "Ragged apparitions of the dead rise to stalk the living. They deal 2d4 mental damage and 2d4 negative damage to each living creature in the area, with a basic Will save. Additionally, creatures that critically fail the save are frightened 2 and are fleeing for 1 round." };
-            yield return new TextBlock { Id = Guid.Parse("4693cc46-5806-4947-9a11-df287a1c9b49"), Type = TextBlockType.Text, Text = "On subsequent rounds, the first time you Sustain the Spell each round, you can move the area up to 30 feet within the range of the spell. Living creatures in the new area must attempt saves with the same effects as above, except that critically failing doesn�t make them flee." };
+            yield return new TextBlock { Id = Guid.Parse("4693cc46-5806-4947-9a11-df287a1c9b49"), Type = TextBlockType.Text, Text = "On subsequent rounds, the first time you Sustain the Spell each round, you can move the area up to 30 feet within the range of the spell. Living creatures in the new area must attempt saves with the same effects as above, except that critically failing doesn't make them flee." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

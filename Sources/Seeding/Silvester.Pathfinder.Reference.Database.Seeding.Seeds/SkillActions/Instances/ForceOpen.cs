@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("ee410efe-5aea-486a-8b49-e7bece3e17bb"), Type = TextBlockType.Text, Text = "Using your body, a lever, or some other tool, you attempt to forcefully open a door, window, container or heavy gate. With a high enough result, you can even smash through walls. Without a crowbar, prying something open takes a �2 item penalty to the Athletics check to Force Open." };
+            yield return new TextBlock { Id = Guid.Parse("ee410efe-5aea-486a-8b49-e7bece3e17bb"), Type = TextBlockType.Text, Text = "Using your body, a lever, or some other tool, you attempt to forcefully open a door, window, container or heavy gate. With a high enough result, you can even smash through walls. Without a crowbar, prying something open takes a -2 item penalty to the Athletics check to Force Open." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -46,9 +46,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = Guid.Parse("2fe9973c-1e92-490d-a053-ed0e47d3d920"),
                 CriticalSuccess = "You open the door, window, container, or gate and can avoid damaging it in the process.",
-                Success = "You break the door, window, container, or gate open, and it gains the broken condition. If it�s especially sturdy, the GM might have it take damage but not be broken.",
+                Success = "You break the door, window, container, or gate open, and it gains the broken condition. If it's especially sturdy, the GM might have it take damage but not be broken.",
                 Failure = "",
-                CriticalFailure = "Your attempt jams the door, window, container, or gate shut, imposing a �2 circumstance penalty on future attempts to Force it Open."
+                CriticalFailure = "Your attempt jams the door, window, container, or gate shut, imposing a -2 circumstance penalty on future attempts to Force it Open."
             };
         }
 

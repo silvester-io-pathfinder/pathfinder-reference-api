@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Fi
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("762d2490-ba36-4ae6-8ab1-957dfee46d12"), Type = TextBlockType.Text, Text = "Your extensive experience gives you even greater ability to adapt to each day�s challenges. When you use combat flexibility, you can gain two fighter feats instead of one. While the first feat must still be 8th level or lower, the second feat can be up to 14th level, and you can use the first feat to meet the prerequisites of the second feat. You must meet all of the feats� prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("762d2490-ba36-4ae6-8ab1-957dfee46d12"), Type = TextBlockType.Text, Text = "Your extensive experience gives you even greater ability to adapt to each day's challenges. When you use combat flexibility, you can gain two fighter feats instead of one. While the first feat must still be 8th level or lower, the second feat can be up to 14th level, and you can use the first feat to meet the prerequisites of the second feat. You must meet all of the feat's prerequisites." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

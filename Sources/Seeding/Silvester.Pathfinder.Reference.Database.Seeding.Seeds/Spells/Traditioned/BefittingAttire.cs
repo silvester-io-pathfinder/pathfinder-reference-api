@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d381046a-9457-4158-b80f-b35b69d0a3b0"), Type = TextBlockType.Text, Text = "You cloak the targets in an illusion, shaping their clothing and worn items into ones suitable for a particular occasion. You visualize the occasion, and the spell creates illusory attire customized to each target. For instance, if you visualized a noble ball, armor would appear to be fine clothing. This doesn�t change identifying details of the targets� appearances other than their clothes." };
+            yield return new TextBlock { Id = Guid.Parse("d381046a-9457-4158-b80f-b35b69d0a3b0"), Type = TextBlockType.Text, Text = "You cloak the targets in an illusion, shaping their clothing and worn items into ones suitable for a particular occasion. You visualize the occasion, and the spell creates illusory attire customized to each target. For instance, if you visualized a noble ball, armor would appear to be fine clothing. This doesn't change identifying details of the targets' appearances other than their clothes." };
             yield return new TextBlock { Id = Guid.Parse("1bde25a4-3e11-4c10-b79f-e51ad66de146"), Type = TextBlockType.Text, Text = "Any creature that touches the attire, uses the Seek action to examine it, or otherwise interacts with it can attempt to disbelieve your illusion." };
         }
 

@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Frequency("Once per day.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("79bddc86-aced-4c3f-af50-a692de68c33a"), "You command the apparatus to magically jury-rig an item you hold or that�s within 5 feet of you. The item is repaired, as a 3rd-level mending spell. This lasts for 10 minutes, after which the item returns to its previous state of disrepair unless you�ve Repaired it before then.");
+                                builder.Text(Guid.Parse("79bddc86-aced-4c3f-af50-a692de68c33a"), "You command the apparatus to magically jury-rig an item you hold or that's within 5 feet of you. The item is repaired, as a 3rd-level mending spell. This lasts for 10 minutes, after which the item returns to its previous state of disrepair unless you've Repaired it before then.");
                             });
                     })
                     .Build()

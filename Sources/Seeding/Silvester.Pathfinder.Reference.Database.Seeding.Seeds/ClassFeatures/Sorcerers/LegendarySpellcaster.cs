@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.So
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("2046b8d1-61a5-423a-a975-f5551517a328"), Type = TextBlockType.Text, Text = "You demonstrate prodigious talent for spellcasting. Your proficiency ranks for spell attack rolls and spell DCs for spells of your bloodline�s tradition increase to legendary." };
+            yield return new TextBlock { Id = Guid.Parse("2046b8d1-61a5-423a-a975-f5551517a328"), Type = TextBlockType.Text, Text = "You demonstrate prodigious talent for spellcasting. Your proficiency ranks for spell attack rolls and spell DCs for spells of your bloodline's tradition increase to legendary." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

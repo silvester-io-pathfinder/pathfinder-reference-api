@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
                 Id = ID, 
                 Name = "Paladin",
                 DivineSmite = MarkdownText.FromMarkdown(ID, $"You surround evil targets in a punishing halo. If you hit with your [Retributive Strike](feats/{Feats.Instances.RetributiveStrike.ID}), the target takes persistent good damage equal to your [Charisma](stats/{Stats.Instances.Charisma.ID}) modifier."),
-                Exalt = "When you use Retributive Strike, each ally within 15 feet of you with the target in their melee reach can spend a reaction to Strike the target with a �5 penalty.",
+                Exalt = "When you use Retributive Strike, each ally within 15 feet of you with the target in their melee reach can spend a reaction to Strike the target with a -5 penalty.",
                 ClassId = Classes.Instances.Champion.ID,
                 AlignmentId = Alignments.Instances.LawfulGood.ID
             };
@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("7a621b88-fec8-41eb-89f4-d258b52cf0a2"), Type = TextBlockType.Text, Text = "You�re honorable, forthright, and committed to pushing back the forces of cruelty. You gain the Retributive Strike champion�s reaction and the lay on hands devotion spell. After the tenets of good, add these tenets:" };
+            yield return new TextBlock { Id = Guid.Parse("7a621b88-fec8-41eb-89f4-d258b52cf0a2"), Type = TextBlockType.Text, Text = "you're honorable, forthright, and committed to pushing back the forces of cruelty. You gain the Retributive Strike champion's reaction and the lay on hands devotion spell. After the tenets of good, add these tenets:" };
             yield return new TextBlock { Id = Guid.Parse("618bc755-a01f-409e-a827-dfb6e7880f53"), Type = TextBlockType.Enumeration, Text = "You must act with honor, never taking advantage of others, lying, or cheating." };
             yield return new TextBlock { Id = Guid.Parse("b4845a80-621f-4a71-8c33-76f727908fe1"), Type = TextBlockType.Enumeration, Text = "You must respect the lawful authority of legitimate leadership wherever you go, and follow its laws." };
         }

@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("f236303d-5dd0-4c4b-864a-44d2fc4c7d82"), Type = TextBlockType.Text, Text = "From the wise owl perched on the wizard�s shoulder to the crafty gremlin that serves the witch for their own reasons, the ghastly homunculus in the alchemist�s lab to the clever monkey that picks the lock of the thief�s cell, familiars have always served. Whether through rigorous training or a preternatural connection, yours serves better than most." };
+            yield return new TextBlock { Id = Guid.Parse("f236303d-5dd0-4c4b-864a-44d2fc4c7d82"), Type = TextBlockType.Text, Text = "From the wise owl perched on the wizard's shoulder to the crafty gremlin that serves the witch for their own reasons, the ghastly homunculus in the alchemist's lab to the clever monkey that picks the lock of the thief's cell, familiars have always served. Whether through rigorous training or a preternatural connection, yours serves better than most." };
         }
 
         protected override SourcePage GetSourcePage()

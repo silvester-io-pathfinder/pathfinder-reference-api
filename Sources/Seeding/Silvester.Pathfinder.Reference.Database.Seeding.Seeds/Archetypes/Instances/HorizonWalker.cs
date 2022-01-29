@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("1b63e810-221f-4ff1-9f14-a4de0e83b55b"), Type = TextBlockType.Text, Text = "Many long for the open road, but you prefer the trackless wild. You can find safe passage through the most inhospitable terrain in the world�icecaps, deserts, and similar environs are where you�re comfortable. Your talents open untrod paths for you and help guide others through the wilderness." };
+            yield return new TextBlock { Id = Guid.Parse("1b63e810-221f-4ff1-9f14-a4de0e83b55b"), Type = TextBlockType.Text, Text = "Many long for the open road, but you prefer the trackless wild. You can find safe passage through the most inhospitable terrain in the world - icecaps, deserts, and similar environs are where you're comfortable. Your talents open untrod paths for you and help guide others through the wilderness." };
         }
 
         protected override SourcePage GetSourcePage()

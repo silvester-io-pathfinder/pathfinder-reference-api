@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("35557c4c-2744-452e-acc1-39a0c65eb507"), Type = TextBlockType.Text, Text = "You shroud the target in a powerful predatory aura and amplify its vocalizations. It gains a +1 status bonus to Intimidation checks. Once during this spell�s duration, it can take the Thundering Roar action." };
+            yield return new TextBlock { Id = Guid.Parse("35557c4c-2744-452e-acc1-39a0c65eb507"), Type = TextBlockType.Text, Text = "You shroud the target in a powerful predatory aura and amplify its vocalizations. It gains a +1 status bonus to Intimidation checks. Once during this spell's duration, it can take the Thundering Roar action." };
         }
 
         protected override IEnumerable<InlineAction> GetInlineActions()

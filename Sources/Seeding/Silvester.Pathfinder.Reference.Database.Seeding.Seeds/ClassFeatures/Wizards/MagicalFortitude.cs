@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("25cd391d-bd4f-446f-be22-49107cda9f34"), Type = TextBlockType.Text, Text = "Magical power has improved your body�s resiliency. Your proficiency rank for Fortitude saves increases to expert." };
+            yield return new TextBlock { Id = Guid.Parse("25cd391d-bd4f-446f-be22-49107cda9f34"), Type = TextBlockType.Text, Text = "Magical power has improved your body's resiliency. Your proficiency rank for Fortitude saves increases to expert." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

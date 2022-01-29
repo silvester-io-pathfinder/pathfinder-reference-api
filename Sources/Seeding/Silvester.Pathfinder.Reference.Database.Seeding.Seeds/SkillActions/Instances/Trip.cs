@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = ID,
                 Name = "Trip",
-                Requirements = "You have at least one hand free. Your target can�t be more than one size larger than you.",
+                Requirements = "You have at least one hand free. Your target can't be more than one size larger than you.",
                 ActionTypeId = ActionTypes.Instances.NoAction.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Untrained.ID
             };
@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("0af29030-e86b-45e9-83b0-9d12883609dd"), Type = TextBlockType.Text, Text = "You try to knock a creature to the ground. Attempt an Athletics check against the target�s Reflex DC." };
+            yield return new TextBlock { Id = Guid.Parse("0af29030-e86b-45e9-83b0-9d12883609dd"), Type = TextBlockType.Text, Text = "You try to knock a creature to the ground. Attempt an Athletics check against the target's Reflex DC." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()

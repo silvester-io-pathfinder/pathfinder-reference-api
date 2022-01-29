@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.RangedWeap
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("a1cd003f-382c-40e8-9096-688823dd2391"), "The most commonly available of firearms in Alkenstar, the flintlock musket includes an external firing mechanism and an efficient and relatively compact frame. Though lacking the range and firing power of the arquebus preferred by Alkenstar and Dongun Hold�s military members, the flintlock musket is popular among civilians for its ease of use.");;
+            builder.Text(Guid.Parse("a1cd003f-382c-40e8-9096-688823dd2391"), "The most commonly available of firearms in Alkenstar, the flintlock musket includes an external firing mechanism and an efficient and relatively compact frame. Though lacking the range and firing power of the arquebus preferred by Alkenstar and Dongun Hold's military members, the flintlock musket is popular among civilians for its ease of use.");;
         }
 
         protected override IEnumerable<RangedWeaponVariant> GetRangedWeaponVariants()

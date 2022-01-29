@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             {
                 Id = ID, 
                 Name = "Genie",
-                BloodMagic = "Your spellcasting warps reality and distracts your foes. Either you gain a +1 status bonus to Deception checks for 1 round, or a target takes a �1 status penalty to Perception for 1 round.",
+                BloodMagic = "Your spellcasting warps reality and distracts your foes. Either you gain a +1 status bonus to Deception checks for 1 round, or a target takes a -1 status penalty to Perception for 1 round.",
                 RarityId = Rarities.Instances.Common.ID,
                 InitialBloodlineSpellId = Spells.Instances.GeniesVeil.ID,
                 AdvancedBloodlineSpellId = Spells.Instances.HeartsDesire.ID,

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6de419b9-f378-45e2-b574-d81d01fd4258"), Type = TextBlockType.Text, Text = "You evoke a storm of acid rain that pelts the area for the spell�s duration. A creature that begins its turn in the area takes 3d8 acid damage (basic Reflex save)." };
+            yield return new TextBlock { Id = Guid.Parse("6de419b9-f378-45e2-b574-d81d01fd4258"), Type = TextBlockType.Text, Text = "You evoke a storm of acid rain that pelts the area for the spell's duration. A creature that begins its turn in the area takes 3d8 acid damage (basic Reflex save)." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

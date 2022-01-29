@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             {
                 Id = ID, 
                 Name = "Nymph",
-                BloodMagic = "Nymph grace accentuates your movements and distracts your foes, either granting you a +1 status bonus to Diplomacy checks for 1 round or imposing a �1 status penalty on one target's Will saves for 1 round.",
+                BloodMagic = "Nymph grace accentuates your movements and distracts your foes, either granting you a +1 status bonus to Diplomacy checks for 1 round or imposing a -1 status penalty on one target's Will saves for 1 round.",
                 RarityId = Rarities.Instances.Common.ID,
                 InitialBloodlineSpellId = Spells.Instances.NymphsToken.ID,
                 AdvancedBloodlineSpellId = Spells.Instances.BlindingBeauty.ID,

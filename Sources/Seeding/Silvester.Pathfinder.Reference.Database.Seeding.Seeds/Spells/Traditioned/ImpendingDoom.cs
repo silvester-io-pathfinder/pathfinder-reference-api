@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("81383709-5b83-4fbe-83d5-1f09f77605fa"), Type = TextBlockType.Text, Text = "You sift through myriad potential futures, seize upon one potential moment in which the target meets a particularly gruesome and fatal end, and then show it a vision of itsimpending demise. The intense mental vision grows more and more terrifying to the target as the doom grows closer, and it takes 3 rounds to reach its conclusion. The target must attempt a Will saving throw to determine the effects. At the end of the spell�s duration, if the target was affected, the target witnesses its death and takes 6d6 mental damage." };
+            yield return new TextBlock { Id = Guid.Parse("81383709-5b83-4fbe-83d5-1f09f77605fa"), Type = TextBlockType.Text, Text = "You sift through myriad potential futures, seize upon one potential moment in which the target meets a particularly gruesome and fatal end, and then show it a vision of itsimpending demise. The intense mental vision grows more and more terrifying to the target as the doom grows closer, and it takes 3 rounds to reach its conclusion. The target must attempt a Will saving throw to determine the effects. At the end of the spell's duration, if the target was affected, the target witnesses its death and takes 6d6 mental damage." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

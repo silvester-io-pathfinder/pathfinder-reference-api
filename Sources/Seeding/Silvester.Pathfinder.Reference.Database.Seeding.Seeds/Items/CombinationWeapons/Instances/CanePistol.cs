@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Combinatio
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("25800703-48e5-4848-abb7-fe05132543b0"), "This fashionable cane�s handle hides a dueling pistol fired through the thin, painted cap at the bottom of the cane."); ;
+            builder.Text(Guid.Parse("25800703-48e5-4848-abb7-fe05132543b0"), "This fashionable cane's handle hides a dueling pistol fired through the thin, painted cap at the bottom of the cane."); ;
         }
 
         protected override IEnumerable<CombinationWeaponVariant> GetCombinationWeaponVariants()

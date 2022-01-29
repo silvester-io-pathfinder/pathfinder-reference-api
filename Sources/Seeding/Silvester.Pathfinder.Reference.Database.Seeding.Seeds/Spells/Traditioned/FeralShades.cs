@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("17ae1033-9348-4e27-98f9-f85106eb5f45"), Type = TextBlockType.Text, Text = "A wave of gray mist formed of negative energy spills out from your outstretched hand, briefly taking the shape of a pack of predatory animals that set viciously on your foes. You deal 2d4 slashing damage and 2d4 negative damage to creatures in the area. The shades set upon the vulnerable with greater ferocity: prone creatures or those taking persistent bleed damage take a �2 status penalty to the save." };
+            yield return new TextBlock { Id = Guid.Parse("17ae1033-9348-4e27-98f9-f85106eb5f45"), Type = TextBlockType.Text, Text = "A wave of gray mist formed of negative energy spills out from your outstretched hand, briefly taking the shape of a pack of predatory animals that set viciously on your foes. You deal 2d4 slashing damage and 2d4 negative damage to creatures in the area. The shades set upon the vulnerable with greater ferocity: prone creatures or those taking persistent bleed damage take a -2 status penalty to the save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

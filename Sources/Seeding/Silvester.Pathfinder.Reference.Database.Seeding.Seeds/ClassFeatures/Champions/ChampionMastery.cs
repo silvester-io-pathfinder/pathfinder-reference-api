@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ch
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("38c41156-ae68-4f6c-8bcd-24e128d7052d"), Type = TextBlockType.Text, Text = "You�ve mastered your arsenal of champion techniques and divine spells. Your proficiency ranks for your champion class DC and for divine spell attack rolls and spell DCs increase to master." };
+            yield return new TextBlock { Id = Guid.Parse("38c41156-ae68-4f6c-8bcd-24e128d7052d"), Type = TextBlockType.Text, Text = "you've mastered your arsenal of champion techniques and divine spells. Your proficiency ranks for your champion class DC and for divine spell attack rolls and spell DCs increase to master." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

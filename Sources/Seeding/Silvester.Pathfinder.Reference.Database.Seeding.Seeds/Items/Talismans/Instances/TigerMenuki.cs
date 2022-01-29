@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("f1e230c8-0e1a-4ea9-b90e-b9e5ae213bad"), "This tiger formed of pewter snarls viciously from your weapon�s grip. When you activate the tiger, the affixed weapon gains the sweep trait for the triggering attack and all other attacks for 1 minute.");
+            builder.Text(Guid.Parse("f1e230c8-0e1a-4ea9-b90e-b9e5ae213bad"), "This tiger formed of pewter snarls viciously from your weapon's grip. When you activate the tiger, the affixed weapon gains the sweep trait for the triggering attack and all other attacks for 1 minute.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()

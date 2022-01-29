@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Interact")
-                            .Trigger("You attempt an Intimidation check to Coerce or Demoralize, but you haven�t rolled yet.")
+                            .Trigger("You attempt an Intimidation check to Coerce or Demoralize, but you haven't rolled yet.")
                             .Requirements("You are an expert in Intimidation.");
                     })
                     .Build()

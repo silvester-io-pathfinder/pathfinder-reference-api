@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ab3a1740-054e-4f64-8269-f5e9a88b33d6"), Type = TextBlockType.Text, Text = "You propel yourself through the fabric of space to deal a blow carrying the momentum of your teleportation. You teleport to an empty space adjacent to a creature you can see within range, then make a Strike against the creature with a weapon you�re wielding. The Strike deals damage, plus an extra 2d8 force damage, depending on the result of your Strike." };
+            yield return new TextBlock { Id = Guid.Parse("ab3a1740-054e-4f64-8269-f5e9a88b33d6"), Type = TextBlockType.Text, Text = "You propel yourself through the fabric of space to deal a blow carrying the momentum of your teleportation. You teleport to an empty space adjacent to a creature you can see within range, then make a Strike against the creature with a weapon you're wielding. The Strike deals damage, plus an extra 2d8 force damage, depending on the result of your Strike." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "+2",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("142d9504-2896-4d78-9fc9-43c5ed000ff4"), Type = TextBlockType.Text, Text = "The spell�s range increases by 60 feet, and any force damage the spell deals is increased by 1d8." }
+                    new TextBlock {Id = Guid.Parse("142d9504-2896-4d78-9fc9-43c5ed000ff4"), Type = TextBlockType.Text, Text = "The spell's range increases by 60 feet, and any force damage the spell deals is increased by 1d8." }
                 }
             };
         }

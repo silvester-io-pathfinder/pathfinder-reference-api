@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("26810895-b378-4a3b-a2ba-cdf3a0a90046"), Type = TextBlockType.Text, Text = "You call on the constellations of the night sky to guide a creature to the location where you Cast the Spell. Each time the target views the stars, it receives a mental nudge toward your chosen location, though it isn�t compelled to follow. The target can recognize you as the source. If the creature goes to another planet or plane, the spell�s effects are suppressed, but they resume if the creature returns." };
+            yield return new TextBlock { Id = Guid.Parse("26810895-b378-4a3b-a2ba-cdf3a0a90046"), Type = TextBlockType.Text, Text = "You call on the constellations of the night sky to guide a creature to the location where you Cast the Spell. Each time the target views the stars, it receives a mental nudge toward your chosen location, though it isn't compelled to follow. The target can recognize you as the source. If the creature goes to another planet or plane, the spell's effects are suppressed, but they resume if the creature returns." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

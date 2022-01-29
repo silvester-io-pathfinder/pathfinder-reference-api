@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         protected override void GetDetails(ITextBlockBuilder builder)
         {
             builder.Text(Guid.Parse("f659aa92-8672-4867-94c8-544ee9976d79"), "When you activate this resin-strengthened viper skull, you make an Attack of Opportunity against the triggering creature.");
-            builder.Text(Guid.Parse("ada587a0-9264-44ef-9be7-05f970b3b8b6"), "If you have Attack of Opportunity, you can activate the viper�s fang as a free action.");
+            builder.Text(Guid.Parse("ada587a0-9264-44ef-9be7-05f970b3b8b6"), "If you have Attack of Opportunity, you can activate the viper's fang as a free action.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()
@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Envision")
-                            .Trigger("A creature within your reach uses a manipulate or move action, makes a ranged attack, or leaves a square during a move action it�s using.")
+                            .Trigger("A creature within your reach uses a manipulate or move action, makes a ranged attack, or leaves a square during a move action it's using.")
                             .Requirements("You are a master with the affixed weapon.");
                     })
                     .Build()

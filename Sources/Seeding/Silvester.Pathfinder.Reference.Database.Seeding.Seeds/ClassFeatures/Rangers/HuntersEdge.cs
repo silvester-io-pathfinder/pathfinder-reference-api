@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ra
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("7ce6682d-a7e3-45b0-aa6f-2ecbfbb2cb3d"), Type = TextBlockType.Text, Text = "You have trained for countless hours to become a more skilled hunter and tracker, gaining an additional benefit when you Hunt Prey depending on the focus of your training. Choose a hunter�s edge." };
+            yield return new TextBlock { Id = Guid.Parse("7ce6682d-a7e3-45b0-aa6f-2ecbfbb2cb3d"), Type = TextBlockType.Text, Text = "You have trained for countless hours to become a more skilled hunter and tracker, gaining an additional benefit when you Hunt Prey depending on the focus of your training. Choose a hunter's edge." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

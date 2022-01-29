@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Envision")
-                            .Requirements("You�re an expert in Athletics.");
+                            .Requirements("you're an expert in Athletics.");
                     })
                     .Build()
             };

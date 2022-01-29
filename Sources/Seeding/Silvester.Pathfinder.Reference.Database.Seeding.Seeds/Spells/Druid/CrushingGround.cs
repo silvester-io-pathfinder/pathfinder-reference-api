@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("782a5ffb-3e18-4f5a-9305-a9c26af38ca1"),
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target takes half damage.",
-                Failure = "The target takes full damage, is flat-footed, and takes a �10-foot circumstance penalty to Speed.",
+                Failure = "The target takes full damage, is flat-footed, and takes a -10-foot circumstance penalty to Speed.",
                 CriticalFailure = "The target takes double damage and is flat-footed and immobilized. It can attempt to Escape against your spell DC. If it doesn't Escape, the target takes an additional 2d6 bludgeoning damage when the spell ends."
             };
         }

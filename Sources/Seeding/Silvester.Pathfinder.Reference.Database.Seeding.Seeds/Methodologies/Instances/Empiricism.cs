@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Methodologies.In
         protected override IEnumerable<TextBlock> GetDetails()
         {
             yield return new TextBlock { Id = Guid.Parse("cc929382-fe15-44cc-bda3-5a0c3cf7c308"), Type = TextBlockType.Text, Text = "Everything comes down to data. Calculating statistics, running numbers, and using inductive reasoning allows you to determine the most likely outcome of any scenario, and anything out of place draws your keen attention." };
-            yield return new TextBlock { Id = Guid.Parse("4074b043-1bb0-49ac-9297-fffa79ca51e4"), Type = TextBlockType.Text, Text = "You are trained in one Intelligence-based skill of your choice. You gain the That�s Odd investigator feat (page 60), and you gain the Expeditious Inspection free action." };
+            yield return new TextBlock { Id = Guid.Parse("4074b043-1bb0-49ac-9297-fffa79ca51e4"), Type = TextBlockType.Text, Text = "You are trained in one Intelligence-based skill of your choice. You gain the That's Odd investigator feat (page 60), and you gain the Expeditious Inspection free action." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

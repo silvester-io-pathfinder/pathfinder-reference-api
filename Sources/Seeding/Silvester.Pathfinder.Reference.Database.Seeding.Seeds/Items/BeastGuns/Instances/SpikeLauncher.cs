@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.BeastGuns.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("f986b0a5-92fd-4651-918d-0a93fd9d767f"), "Built from the spiked tail of a manticore, a spike launcher is designed to launch large, spear-like projectiles. A spike launcher is a +1 striking weapon. It�s a distinct type of martial firearm that deals 1d8 piercing damage. It has the backstabber, fatal aim d12, and kickback traits with a range increment of 120 feet and reload 2. It uses the critical specialization of the bow weapon group, rather than the firearm critical specialization.");
+            builder.Text(Guid.Parse("f986b0a5-92fd-4651-918d-0a93fd9d767f"), "Built from the spiked tail of a manticore, a spike launcher is designed to launch large, spear-like projectiles. A spike launcher is a +1 striking weapon. It's a distinct type of martial firearm that deals 1d8 piercing damage. It has the backstabber, fatal aim d12, and kickback traits with a range increment of 120 feet and reload 2. It uses the critical specialization of the bow weapon group, rather than the firearm critical specialization.");
         }
 
         protected override IEnumerable<BeastGunVariant> GetBeastGunVariants()
@@ -67,7 +67,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.BeastGuns.
                             })
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("50d4eae1-c71a-4a79-b42f-071a2edbb0c9"), "The spike launcher fires a volley of smaller spikes in a 10-foot burst centered anywhere within its range. Make a Strike with the spike launcher against each creature in the area. On a success, the spike causes the creature to take a �5-foot status penalty to their Speed. On a critical success, the creature becomes immobilized instead. In either case, the creature, or an adjacent creature, can use an Interact action to remove the spike and end the penalty or immobilized condition.");
+                                effect.Text(Guid.Parse("50d4eae1-c71a-4a79-b42f-071a2edbb0c9"), "The spike launcher fires a volley of smaller spikes in a 10-foot burst centered anywhere within its range. Make a Strike with the spike launcher against each creature in the area. On a success, the spike causes the creature to take a -5-foot status penalty to their Speed. On a critical success, the creature becomes immobilized instead. In either case, the creature, or an adjacent creature, can use an Interact action to remove the spike and end the penalty or immobilized condition.");
                             });
                     })
                     .Build()

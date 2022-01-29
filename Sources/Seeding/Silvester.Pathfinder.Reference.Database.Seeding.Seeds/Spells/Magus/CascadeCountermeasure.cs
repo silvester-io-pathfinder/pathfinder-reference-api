@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("daab0647-75bf-4267-8e0d-c5d4abacda47"), Type = TextBlockType.Text, Text = "You quickly adjust your Arcane Cascade to offer magical protection. You gain resistance 5 against damage from spells. As normal, using Arcane Cascade again means you�ve ended the stance, and the spell ends." };
+            yield return new TextBlock { Id = Guid.Parse("daab0647-75bf-4267-8e0d-c5d4abacda47"), Type = TextBlockType.Text, Text = "You quickly adjust your Arcane Cascade to offer magical protection. You gain resistance 5 against damage from spells. As normal, using Arcane Cascade again means you've ended the stance, and the spell ends." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

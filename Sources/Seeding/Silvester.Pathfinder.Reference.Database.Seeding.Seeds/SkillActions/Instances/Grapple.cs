@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = ID,
                 Name = "Grapple",
-                Requirements = "You have at least one free hand or have your target grappled or restrained. Your target isn�t more than one size larger than you.",
+                Requirements = "You have at least one free hand or have your target grappled or restrained. Your target isn't more than one size larger than you.",
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Untrained.ID
             };
@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("8791ac0c-e1a9-4887-ada4-8ff989edf2af"), Type = TextBlockType.Text, Text = "You attempt to grab a creature or object with your free hand. Attempt an Athletics check against the target�s Fortitude DC. You can Grapple a target you already have grabbed or restrained without having a hand free." };
+            yield return new TextBlock { Id = Guid.Parse("8791ac0c-e1a9-4887-ada4-8ff989edf2af"), Type = TextBlockType.Text, Text = "You attempt to grab a creature or object with your free hand. Attempt an Athletics check against the target's Fortitude DC. You can Grapple a target you already have grabbed or restrained without having a hand free." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()

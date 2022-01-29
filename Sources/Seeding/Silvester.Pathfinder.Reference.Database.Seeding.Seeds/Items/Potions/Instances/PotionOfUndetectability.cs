@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Potions.In
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("e7d02d30-484d-4723-a85e-90d8f2e31269"), "Drinking this dull-black liquid makes you undetectable to divinations. This grants the same effects as mind blank, but without the bonus against mental effects. You also gain the effects of a 4th-level invisibility spell, which protects against see invisibility spells of 8th level and lower and has a DC of 36 against true seeing. The potion�s effects last for 10 minutes.");
+            builder.Text(Guid.Parse("e7d02d30-484d-4723-a85e-90d8f2e31269"), "Drinking this dull-black liquid makes you undetectable to divinations. This grants the same effects as mind blank, but without the bonus against mental effects. You also gain the effects of a 4th-level invisibility spell, which protects against see invisibility spells of 8th level and lower and has a DC of 36 against true seeing. The potion's effects last for 10 minutes.");
         }
 
         protected override IEnumerable<PotionVariant> GetPotionVariants()

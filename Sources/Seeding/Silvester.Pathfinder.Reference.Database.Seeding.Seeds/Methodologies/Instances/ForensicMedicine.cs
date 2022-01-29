@@ -24,8 +24,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Methodologies.In
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("1b98c01e-a615-4885-bb20-3c18a637c4e9"), Type = TextBlockType.Text, Text = "You�ve learned that in most cases, especially murders, criminals tend to leave more evidence of the crime on the body than they�d like to believe. Information from bruising, bone fractures, blood spatters, and even the life cycle of carrion insects can provide valuable clues that help reconstruct the scene." };
-            yield return new TextBlock { Id = Guid.Parse("5b8729b8-6bae-43a8-820c-bd052875d906"), Type = TextBlockType.Text, Text = "You�re trained in Medicine and gain the Forensic Acumen (page 206) and Battle Medicine (Core Rulebook 258) skill feats. When you use Battle Medicine, on a success the target recovers additional Hit Points equal to your level, and the target becomes temporarily immune for only 1 hour, not 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("1b98c01e-a615-4885-bb20-3c18a637c4e9"), Type = TextBlockType.Text, Text = "you've learned that in most cases, especially murders, criminals tend to leave more evidence of the crime on the body than they'd like to believe. Information from bruising, bone fractures, blood spatters, and even the life cycle of carrion insects can provide valuable clues that help reconstruct the scene." };
+            yield return new TextBlock { Id = Guid.Parse("5b8729b8-6bae-43a8-820c-bd052875d906"), Type = TextBlockType.Text, Text = "you're trained in Medicine and gain the Forensic Acumen (page 206) and Battle Medicine (Core Rulebook 258) skill feats. When you use Battle Medicine, on a success the target recovers additional Hit Points equal to your level, and the target becomes temporarily immune for only 1 hour, not 1 day." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

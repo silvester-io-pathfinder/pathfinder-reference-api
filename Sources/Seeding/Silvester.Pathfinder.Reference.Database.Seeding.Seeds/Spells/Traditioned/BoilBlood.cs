@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("eef1845e-5672-41ee-87c9-ffa968eaf110"), Type = TextBlockType.Text, Text = "You heat a foe�s blood and boil it within its veins. The target takes 10d10 fire damage, with a Fortitude save. A nonliving creature with blood in its body (such as a vampire) can be affected, but a creature with no blood is immune." };
+            yield return new TextBlock { Id = Guid.Parse("eef1845e-5672-41ee-87c9-ffa968eaf110"), Type = TextBlockType.Text, Text = "You heat a foe's blood and boil it within its veins. The target takes 10d10 fire damage, with a Fortitude save. A nonliving creature with blood in its body (such as a vampire) can be affected, but a creature with no blood is immune." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -53,9 +53,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                             .Kind("Command, Interact")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("ef07d906-4123-470c-b6a7-54d54f960522"), "Choose a creature within 60 feet and roll d% on the table below to determine the rod�s effect. If an entry lists only a spell name, the rod casts that spell at its lowest level. You make any decisions for a spell cast by the rod unless otherwise indicated, except that it must target the creature you chose, or the creature you chose must be the center of the spell�s area, if it has an area but no targets. If the spell�s range is less than 60 feet, increase the range to 60 feet.");
-                                details.Text(Guid.Parse("2eac0609-b90a-470f-ac0c-bc7c8493f299"), "Any spell DC required is DC 27, and any spell attack roll required is +17. If the rod casts a spell on you, you don�t get a saving throw or other defense against it.");
-                                details.Text(Guid.Parse("d09438fd-3a2b-4147-8132-de62a45e860b"), "The rod can�t be activated again for 1d4 hours.");
+                                details.Text(Guid.Parse("ef07d906-4123-470c-b6a7-54d54f960522"), "Choose a creature within 60 feet and roll d% on the table below to determine the rod's effect. If an entry lists only a spell name, the rod casts that spell at its lowest level. You make any decisions for a spell cast by the rod unless otherwise indicated, except that it must target the creature you chose, or the creature you chose must be the center of the spell's area, if it has an area but no targets. If the spell's range is less than 60 feet, increase the range to 60 feet.");
+                                details.Text(Guid.Parse("2eac0609-b90a-470f-ac0c-bc7c8493f299"), "Any spell DC required is DC 27, and any spell attack roll required is +17. If the rod casts a spell on you, you don't get a saving throw or other defense against it.");
+                                details.Text(Guid.Parse("d09438fd-3a2b-4147-8132-de62a45e860b"), "The rod can't be activated again for 1d4 hours.");
                             });
                     })
                     .Build()
@@ -102,7 +102,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                 {
                     row
                         .AddCell("bee2ced2-8ff8-4fc8-a03c-396e20d48d86", "14-15")
-                        .AddCell("c81be798-8812-4707-8dab-46258f56b789", "All the target�s weapons animate with the effects of the dancing rune.");
+                        .AddCell("c81be798-8812-4707-8dab-46258f56b789", "All the target's weapons animate with the effects of the dancing rune.");
                 })
                 .AddRow("b3b9377a-f711-4aac-bff6-52807ced199c", row =>
                 {
@@ -114,7 +114,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                 {
                     row
                         .AddCell("7ecf1b17-6f52-4273-80b0-554300949133", "26-29")
-                        .AddCell("fa8753cd-45c6-4eee-a6bf-ad6e66cf5b3c", "Grass grows in a 60-foot cone in front of the rod, or existing grass grows at 10 � normal rate.");
+                        .AddCell("fa8753cd-45c6-4eee-a6bf-ad6e66cf5b3c", "Grass grows in a 60-foot cone in front of the rod, or existing grass grows at 10 x normal rate.");
                 })
                 .AddRow("eaaf2940-f148-4ecf-9c36-ff4dc9393e28", row =>
                 {
@@ -192,7 +192,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                 {
                     row
                         .AddCell("85106f3b-b49e-4747-9794-59bf028cc68d", "60-61")
-                        .AddCell("0c1ec979-e373-487f-97d9-7dfed663231a", "1d4 � 10 gems, each worth 1 sp, shoot from the rod, dealing 1 piercing damage to each creature in a 15-foot cone.");
+                        .AddCell("0c1ec979-e373-487f-97d9-7dfed663231a", "1d4 - 10 gems, each worth 1 sp, shoot from the rod, dealing 1 piercing damage to each creature in a 15-foot cone.");
                 })
                 .AddRow("cb3fb306-c417-495d-92f1-35b40f825f03", row =>
                 {

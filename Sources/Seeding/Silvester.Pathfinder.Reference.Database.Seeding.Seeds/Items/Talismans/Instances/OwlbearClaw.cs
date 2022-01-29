@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("102e50ef-8061-457a-9f8b-27508285d4d6"), "This claw set in an iron clasp and chain isn�t always the claw of an owlbear. When you activate the claw, the triggering attack gains the weapon�s critical specialization effect.");
+            builder.Text(Guid.Parse("102e50ef-8061-457a-9f8b-27508285d4d6"), "This claw set in an iron clasp and chain isn't always the claw of an owlbear. When you activate the claw, the triggering attack gains the weapon's critical specialization effect.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()

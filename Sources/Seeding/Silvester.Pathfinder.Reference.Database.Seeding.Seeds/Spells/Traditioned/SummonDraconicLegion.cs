@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Effect = new[]
                 {
                     new TextBlock { Id = Guid.Parse("4fc65f46-f697-4024-a926-f1ee8758f11b"), Type = TextBlockType.Heading, Text = "Energy Annihilation" },
-                    new TextBlock { Id = Guid.Parse("cafe6b61-80ef-4f26-98a0-6df7adf1c7fb"), Type = TextBlockType.Text, Text = "The draconic legion breathes out two blasts of energy: a 120-foot line and a 60-foot cone that can�t overlap. Each creature in either of the areas takes 10d8 damage (basic Reflex save). The dragons choose the damage type of each breath weapon, depending on the category of dragons summoned. Chromatic dragons can choose cold, fire, or poison for the cone and acid or electricity for the line; metallic dragons can choose cold or fire for the cone and acid, electricity, or fire for the line." },
+                    new TextBlock { Id = Guid.Parse("cafe6b61-80ef-4f26-98a0-6df7adf1c7fb"), Type = TextBlockType.Text, Text = "The draconic legion breathes out two blasts of energy: a 120-foot line and a 60-foot cone that can't overlap. Each creature in either of the areas takes 10d8 damage (basic Reflex save). The dragons choose the damage type of each breath weapon, depending on the category of dragons summoned. Chromatic dragons can choose cold, fire, or poison for the cone and acid or electricity for the line; metallic dragons can choose cold or fire for the cone and acid, electricity, or fire for the line." },
                 }
             };
 

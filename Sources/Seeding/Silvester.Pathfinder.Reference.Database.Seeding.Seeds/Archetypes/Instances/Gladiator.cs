@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("f58aab82-e7db-41f2-9be7-0ecf85ad7a61"), Type = TextBlockType.Text, Text = "The roar of the crowd and thrill of competitive combat drive you to become the best�and the fame isn�t bad either." };
+            yield return new TextBlock { Id = Guid.Parse("f58aab82-e7db-41f2-9be7-0ecf85ad7a61"), Type = TextBlockType.Text, Text = "The roar of the crowd and thrill of competitive combat drive you to become the best - and the fame isn't bad either." };
             yield return new TextBlock { Id = Guid.Parse("b2cabba8-c633-4ffc-b285-9c13cfe29cfa"), Type = TextBlockType.Text, Text = "If there are sapient creatures observing a combat encounter, and these onlookers are neither engaged in the combat themselves nor allied or affiliated with either side, the combatants have spectators. The GM is the final arbiter." };
         }
 

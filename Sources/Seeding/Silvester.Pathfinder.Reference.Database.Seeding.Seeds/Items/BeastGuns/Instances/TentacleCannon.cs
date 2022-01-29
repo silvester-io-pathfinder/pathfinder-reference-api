@@ -71,7 +71,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.BeastGuns.
                             })
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("db7ddbb1-ac30-45d1-aedd-a2862f5a10be"), "You cause one of the tentacles forming the weapon's five barrels to stretch out and attempt to pull and grab a creature within 15 feet. The tentacle attempts to Grapple with a +13 bonus. It can attempt to Grapple any creature, regardless of size. On a success, the tentacle pulls the creature up to 10 feet directly towards you, until it�s in a square adjacent to you.");
+                                effect.Text(Guid.Parse("db7ddbb1-ac30-45d1-aedd-a2862f5a10be"), "You cause one of the tentacles forming the weapon's five barrels to stretch out and attempt to pull and grab a creature within 15 feet. The tentacle attempts to Grapple with a +13 bonus. It can attempt to Grapple any creature, regardless of size. On a success, the tentacle pulls the creature up to 10 feet directly towards you, until it's in a square adjacent to you.");
                             });
                     })
                     .Add(Guid.Parse("280c8273-6dc0-4c27-aca2-13005cc6e12b"), ActionTypes.Instances.OneAction.ID, "Activate", action =>
@@ -81,7 +81,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.BeastGuns.
                             .Requirements("The Tentacle Cannon has a creature grabbed.")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("706eba5a-3256-499b-9f70-cd6e17d11660"), "You continue to keep the tentacle cannon�s hold on one creature it has grabbed. Attempt another check to Grapple the creature with a +13 bonus.");
+                                effect.Text(Guid.Parse("706eba5a-3256-499b-9f70-cd6e17d11660"), "You continue to keep the tentacle cannon's hold on one creature it has grabbed. Attempt another check to Grapple the creature with a +13 bonus.");
                             });
                     })
                     .Add(Guid.Parse("9b3d2746-f3ee-46f6-990a-1674d979773e"), ActionTypes.Instances.TwoActions.ID, "Activate", action =>
@@ -127,7 +127,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.BeastGuns.
                             })
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("ae7bbbc8-83d4-465d-a31b-b447b1018a2d"), "You cause one of the tentacles forming the weapon's five barrels to stretch out and attempt to pull and grab a creature within 15 feet. The tentacle attempts to Grapple with a +20 bonus. It can attempt to Grapple any creature, regardless of size. On a success, the tentacle pulls the creature up to 10 feet directly towards you, until it�s in a square adjacent to you.");
+                                effect.Text(Guid.Parse("ae7bbbc8-83d4-465d-a31b-b447b1018a2d"), "You cause one of the tentacles forming the weapon's five barrels to stretch out and attempt to pull and grab a creature within 15 feet. The tentacle attempts to Grapple with a +20 bonus. It can attempt to Grapple any creature, regardless of size. On a success, the tentacle pulls the creature up to 10 feet directly towards you, until it's in a square adjacent to you.");
                             });
                     })
                     .Add(Guid.Parse("25f587cc-dc72-4cd0-bb7f-132a5f0ff1d4"), ActionTypes.Instances.OneAction.ID, "Activate", action =>
@@ -137,7 +137,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.BeastGuns.
                             .Requirements("The Tentacle Cannon has a creature grabbed.")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("dc41c44b-a05d-43e2-b6d6-5c3221a37359"), "You continue to keep the tentacle cannon�s hold on one creature it has grabbed. Attempt another check to Grapple the creature with a + 20 bonus.");
+                                effect.Text(Guid.Parse("dc41c44b-a05d-43e2-b6d6-5c3221a37359"), "You continue to keep the tentacle cannon's hold on one creature it has grabbed. Attempt another check to Grapple the creature with a + 20 bonus.");
                             });
                     })
                     .Add(Guid.Parse("cc34978e-6045-4a6c-af9a-5371361f6a75"), ActionTypes.Instances.TwoActions.ID, "Activate", action =>
@@ -183,7 +183,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.BeastGuns.
                             })
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("18e227c7-7c9c-4551-aadb-6c2c5b75589a"), "You cause one of the tentacles forming the weapon's five barrels to stretch out and attempt to pull and grab a creature within 15 feet. The tentacle attempts to Grapple with a +27 bonus. It can attempt to Grapple any creature, regardless of size. On a success, the tentacle pulls the creature up to 10 feet directly towards you, until it�s in a square adjacent to you.");
+                                effect.Text(Guid.Parse("18e227c7-7c9c-4551-aadb-6c2c5b75589a"), "You cause one of the tentacles forming the weapon's five barrels to stretch out and attempt to pull and grab a creature within 15 feet. The tentacle attempts to Grapple with a +27 bonus. It can attempt to Grapple any creature, regardless of size. On a success, the tentacle pulls the creature up to 10 feet directly towards you, until it's in a square adjacent to you.");
                             });
                     })
                     .Add(Guid.Parse("6659adb5-1589-4510-9575-08a61015f60f"), ActionTypes.Instances.OneAction.ID, "Activate", action =>
@@ -193,7 +193,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.BeastGuns.
                             .Requirements("The Tentacle Cannon has a creature grabbed.")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("edc21ea8-7b1d-4eb8-995e-4139cd4168cf"), "You continue to keep the tentacle cannon�s hold on one creature it has grabbed. Attempt another check to Grapple the creature with a +27 bonus.");
+                                effect.Text(Guid.Parse("edc21ea8-7b1d-4eb8-995e-4139cd4168cf"), "You continue to keep the tentacle cannon's hold on one creature it has grabbed. Attempt another check to Grapple the creature with a +27 bonus.");
                             });
                     })
                     .Add(Guid.Parse("78ce8a80-75db-4ff8-a384-c6c90b47f7f6"), ActionTypes.Instances.TwoActions.ID, "Activate", action =>

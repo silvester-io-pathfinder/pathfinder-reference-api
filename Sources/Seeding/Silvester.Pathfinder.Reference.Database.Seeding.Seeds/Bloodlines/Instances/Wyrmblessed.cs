@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("417db202-3c9b-47ae-bc6b-23b09a688e3e"), Type = TextBlockType.Text, Text = "Draconic might carries in your voice. Either you gain a +1 status bonus to Intimidation checks for 1 round, or a target takes a �1 status penalty to Will saves for 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("417db202-3c9b-47ae-bc6b-23b09a688e3e"), Type = TextBlockType.Text, Text = "Draconic might carries in your voice. Either you gain a +1 status bonus to Intimidation checks for 1 round, or a target takes a -1 status penalty to Will saves for 1 round." };
         }
 
         protected override IEnumerable<TextBlock> GetTypeChoiceDetails()

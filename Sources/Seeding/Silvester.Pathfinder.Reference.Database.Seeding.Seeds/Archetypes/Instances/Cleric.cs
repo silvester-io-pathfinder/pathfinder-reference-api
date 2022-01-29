@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetMulticlassDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("c6aff760-3312-43ce-96fe-d36087175fa8"), Type = TextBlockType.Text, Text = "The cleric archetype is a great way to create a character of another class who�s a devotee of a particular deity. The many domains available to clerics of different deities present a variety of options for focus spells." };
+            yield return new TextBlock { Id = Guid.Parse("c6aff760-3312-43ce-96fe-d36087175fa8"), Type = TextBlockType.Text, Text = "The cleric archetype is a great way to create a character of another class who's a devotee of a particular deity. The many domains available to clerics of different deities present a variety of options for focus spells." };
             yield return new TextBlock { Id = Guid.Parse("47b69aba-8901-4fba-9dea-07516a3b6f68"), Type = TextBlockType.Enumeration, Text = "Alchemist clerics work well with the chirurgeon field, healing various ailments with either alchemy or spells." };
             yield return new TextBlock { Id = Guid.Parse("5d52ffbe-99df-49cf-96a9-da0bbaabbe01"), Type = TextBlockType.Enumeration, Text = "Martial clerics are typically looking for a potent domain spell or some healing to use in a pinch." };
             yield return new TextBlock { Id = Guid.Parse("20a629ad-0860-4e72-9f3e-91cc56506a8e"), Type = TextBlockType.Enumeration, Text = "Divine sorcerer clerics double down as the ultimate divine spellcasters." };

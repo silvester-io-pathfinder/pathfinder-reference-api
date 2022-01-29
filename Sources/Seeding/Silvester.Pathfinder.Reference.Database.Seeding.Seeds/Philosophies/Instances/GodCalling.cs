@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Philosophies.Ins
             {
                 Id = ID, 
                 Name = "God Calling",
-                Edicts = "The gods of Sarkoris have very few shared edicts, but several are often prominently shared amongst them: protect your clan and your people, educate the clan�s children�s in the traditions and histories of the clan�s god, and carefully record the name and image of each new god when they first appear so that they are not forgotten and can continue to watch over the people.",
+                Edicts = "The gods of Sarkoris have very few shared edicts, but several are often prominently shared amongst them: protect your clan and your people, educate the clan's children's in the traditions and histories of the clan's god, and carefully record the name and image of each new god when they first appear so that they are not forgotten and can continue to watch over the people.",
                 Anathema = "There is only one anathema universally enforced by the gods of Sarkoris: make no deals or bargains with demons, as the advent of the Worldwound led to the destruction of many clans and the loss of many gods, some of whom may never be seen again.",
                 AreasOfConcern = "Each god has their own particular inclinations and interests, typically informed by the predominant attitudes and beliefs of their clan."
             };

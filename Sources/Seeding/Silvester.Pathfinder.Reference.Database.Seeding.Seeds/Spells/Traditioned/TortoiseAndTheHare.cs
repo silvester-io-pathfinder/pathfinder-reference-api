@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("7df5ad43-b5ba-4f93-8d84-92a362bb5a0d"), Type = TextBlockType.Text, Text = "You prove that slow and steady doesn�t always win the race by turning a foe into a proverbial tortoise and yourself or an ally into a hare, siphoning some of the foe�s speed and granting it to the other target. The effects depend on the foe�s Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("7df5ad43-b5ba-4f93-8d84-92a362bb5a0d"), Type = TextBlockType.Text, Text = "You prove that slow and steady doesn't always win the race by turning a foe into a proverbial tortoise and yourself or an ally into a hare, siphoning some of the foe's speed and granting it to the other target. The effects depend on the foe's Fortitude save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()

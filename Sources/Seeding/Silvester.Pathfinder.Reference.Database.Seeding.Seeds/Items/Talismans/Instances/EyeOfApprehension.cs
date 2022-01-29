@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("903a1682-b6cf-4fce-aca1-571815a50bdf"), "This round piece of cymophane�s silky inclusion makes it look like a cat�s eye. While affixed, it makes you jittery.");
+            builder.Text(Guid.Parse("903a1682-b6cf-4fce-aca1-571815a50bdf"), "This round piece of cymophane's silky inclusion makes it look like a cat's eye. While affixed, it makes you jittery.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()
@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Envision")
-                            .Trigger("You are about to roll Perception for initiative but haven�t rolled yet.")
+                            .Trigger("You are about to roll Perception for initiative but haven't rolled yet.")
                             .Requirements("You are a master in Perception.")
                             .Details(effect => 
                             {

@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Consumable
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("c22af94e-7087-49b8-90e5-4d805e846a54"), "This vial contains water blessed by a good deity. You activate a vial of holy water by throwing it as a Strike. It�s a simple thrown weapon with a range increment of 20 feet. Unlike an alchemical bomb, it doesn�t add the manipulate trait to the attack made with it.");
+            builder.Text(Guid.Parse("c22af94e-7087-49b8-90e5-4d805e846a54"), "This vial contains water blessed by a good deity. You activate a vial of holy water by throwing it as a Strike. It's a simple thrown weapon with a range increment of 20 feet. Unlike an alchemical bomb, it doesn't add the manipulate trait to the attack made with it.");
             builder.Text(Guid.Parse("37824dbc-aae6-4176-937a-7f4a839d807f"), "Holy water deals 1d6 good damage and 1 good splash damage. It damages only fiends, undead, and creatures that have a weakness to good damage.");
         }
 

@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("7dddd268-7839-41aa-b1a2-4dcf80ac33fd"), Type = TextBlockType.Text, Text = "You have a longer torso and broader shoulders than most hobgoblins, making your legs seem short by comparison. This gives you a strong, muscular core and lowers your center of gravity�features that assist you in riding and climbing�and you've trained at riding in a saddle from an extremely early age. You gain the Ride feat. Additionally, you are not flat-footed while you Climb." };
+            yield return new TextBlock { Id = Guid.Parse("7dddd268-7839-41aa-b1a2-4dcf80ac33fd"), Type = TextBlockType.Text, Text = "You have a longer torso and broader shoulders than most hobgoblins, making your legs seem short by comparison. This gives you a strong, muscular core and lowers your center of gravity - features that assist you in riding and climbing - and you've trained at riding in a saddle from an extremely early age. You gain the Ride feat. Additionally, you are not flat-footed while you Climb." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

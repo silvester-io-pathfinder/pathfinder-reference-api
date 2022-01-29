@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("c74b64c9-14b4-466a-8657-5fc3512f75d1"), "This item looks like an ordinary glass flask full of water. The stopper can�t be removed unless you speak one of the item�s three command words, each of which causes water to pour forth in a different way. Pulling the stopper straight out creates fresh water, and rotating it as you pull creates salt water. Any effect of the decanter lasts until the decanter is plugged (with its own stopper, a finger, or the like).");
+            builder.Text(Guid.Parse("c74b64c9-14b4-466a-8657-5fc3512f75d1"), "This item looks like an ordinary glass flask full of water. The stopper can't be removed unless you speak one of the item's three command words, each of which causes water to pour forth in a different way. Pulling the stopper straight out creates fresh water, and rotating it as you pull creates salt water. Any effect of the decanter lasts until the decanter is plugged (with its own stopper, a finger, or the like).");
         }
        
         protected override IEnumerable<HeldItemVariant> GetHeldItemVariants()

@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Doctrines.Instan
             {
                 Id = ID,
                 Name = "Cloistered Cleric",
-                Description = "You are a cleric of the cloth, focusing on divine magic and your connection to your deity�s domains."
+                Description = "You are a cleric of the cloth, focusing on divine magic and your connection to your deity's domains."
             };
         }
 

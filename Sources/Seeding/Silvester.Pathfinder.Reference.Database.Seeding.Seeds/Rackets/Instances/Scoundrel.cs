@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rackets.Instance
         {
             yield return new TextBlock { Id = Guid.Parse("d39064fe-b44c-4c4a-b095-e32336c98317"), Type = TextBlockType.Text, Text = "You use fast-talking, flattery, and a silver tongue to avoid danger and escape tricky situations. You might be a grifter or con artist, traveling from place to place with a new story or scheme. Your racket is also ideal for certain reputable professions, like barrister, diplomat, or politician." };
             yield return new TextBlock { Id = Guid.Parse("84591aca-ce78-4550-a4f6-62d28a93812f"), Type = TextBlockType.Text, Text = "When you successfully Feint, the target is flat-footed against melee attacks you attempt against it until the end of your next turn. On a critical success, the target is flat-footed against all melee attacks until the end of your next turn, not just yours." };
-            yield return new TextBlock { Id = Guid.Parse("9bdaf08d-626c-4417-b620-d4a90ebc8c58"), Type = TextBlockType.Text, Text = "You�re trained in Deception and Diplomacy. You can choose Charisma as your key ability score." };
+            yield return new TextBlock { Id = Guid.Parse("9bdaf08d-626c-4417-b620-d4a90ebc8c58"), Type = TextBlockType.Text, Text = "you're trained in Deception and Diplomacy. You can choose Charisma as your key ability score." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

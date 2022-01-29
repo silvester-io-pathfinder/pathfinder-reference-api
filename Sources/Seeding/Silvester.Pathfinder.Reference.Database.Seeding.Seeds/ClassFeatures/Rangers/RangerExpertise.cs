@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ra
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("01d514a7-1629-4fbb-ba98-1df23a57f1d1"), Type = TextBlockType.Text, Text = "You�ve practiced your techniques to make them harder to resist. Your proficiency rank for your ranger class DC increases to expert." };
+            yield return new TextBlock { Id = Guid.Parse("01d514a7-1629-4fbb-ba98-1df23a57f1d1"), Type = TextBlockType.Text, Text = "you've practiced your techniques to make them harder to resist. Your proficiency rank for your ranger class DC increases to expert." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

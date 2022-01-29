@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6a31476c-0645-4b6e-960a-06dd2b403dea"), Type = TextBlockType.Text, Text = "You invigorate the touched creature�s mind and urge it to press on. You grant the touched creature 5 temporary Hit Points." };
+            yield return new TextBlock { Id = Guid.Parse("6a31476c-0645-4b6e-960a-06dd2b403dea"), Type = TextBlockType.Text, Text = "You invigorate the touched creature's mind and urge it to press on. You grant the touched creature 5 temporary Hit Points." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

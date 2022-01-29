@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
         protected override IEnumerable<TextBlock> GetDetails()
         {
             yield return new TextBlock { Id = Guid.Parse("ebeed0ec-e4d1-44a9-a736-0abd82f9c6bb"), Type = TextBlockType.Text, Text = "Many arcane spellcasters delve deeply into a single school of magic in an attempt to master its secrets. If you want to be a specialist wizard, choose a school in which to specialize. You gain additional spells and spell slots for spells of your school." };
-            yield return new TextBlock { Id = Guid.Parse("7e7c5ea7-2a50-405d-9068-196ce38e5e6e"), Type = TextBlockType.Text, Text = "If you don�t choose a school, you�re a universalist, a wizard who believes that the path to true knowledge of magic requires a multidisciplinary understanding of all eight schools working together. Though a universalist lacks the focus of a specialist wizard, they have greater fiexibility." };
+            yield return new TextBlock { Id = Guid.Parse("7e7c5ea7-2a50-405d-9068-196ce38e5e6e"), Type = TextBlockType.Text, Text = "If you don't choose a school, you're a universalist, a wizard who believes that the path to true knowledge of magic requires a multidisciplinary understanding of all eight schools working together. Though a universalist lacks the focus of a specialist wizard, they have greater fiexibility." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)
@@ -56,7 +56,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
                 or.AddAnd(Guid.Parse("4a4ee2c6-512d-4111-a256-7b2c2cce252a"), and =>
                 {
                     and.Name("Divination");
-                    and.Addendum("As a diviner, you master remote viewing and prescience, learning information that can transform investigations, research, and battle strategies. You understand that knowledge is power. You add one 1st-level divination spell (such as true strike) to your spellbook. You learn the diviner�s sight school spell.");
+                    and.Addendum("As a diviner, you master remote viewing and prescience, learning information that can transform investigations, research, and battle strategies. You understand that knowledge is power. You add one 1st-level divination spell (such as true strike) to your spellbook. You learn the diviner's sight school spell.");
                     and.GainSpecificMagicSchool(Guid.Parse("c98408e9-93fe-4d41-a88b-5a566bec80b8"), MagicSchools.Instances.Divination.ID);
                     and.GainSpecificMagicSchoolSpell(Guid.Parse("b6dd3c5c-9302-4a45-9361-3e535affd00d"), MagicSchools.Instances.Divination.ID, level: 1);
                     and.GainSpecificSpell(Guid.Parse("d1f78868-03e9-42b9-b4cd-55569914ee3b"), Spells.Instances.DivinersSight.ID);
@@ -65,7 +65,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
                 or.AddAnd(Guid.Parse("4904a059-780a-461d-a372-589d5d627bfc"), and =>
                 {
                     and.Name("Enchantment");
-                    and.Addendum("As an enchanter, you use magic to manipulate others� minds. You might use your abilities to subtly influence others or seize control over them. You understand that the mind surpasses matter. You add one 1st-level enchantment spell (such as charm) to your spellbook. You learn the charming words school spell.");
+                    and.Addendum("As an enchanter, you use magic to manipulate others' minds. You might use your abilities to subtly influence others or seize control over them. You understand that the mind surpasses matter. You add one 1st-level enchantment spell (such as charm) to your spellbook. You learn the charming words school spell.");
                     and.GainSpecificMagicSchool(Guid.Parse("6caf0f5c-98a7-4f44-ab2c-33e069e72505"), MagicSchools.Instances.Enchantment.ID);
                     and.GainSpecificMagicSchoolSpell(Guid.Parse("0ccde980-5b2a-49b5-826f-cfe6eb0a9ad2"), MagicSchools.Instances.Enchantment.ID, level: 1);
                     and.GainSpecificSpell(Guid.Parse("b99cc287-773a-48aa-98e4-0d7b8cb9b344"), Spells.Instances.CharmingWords.ID);
@@ -110,7 +110,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Wi
                 or.AddAnd(Guid.Parse("2896bb31-6b87-4926-a8f6-941988ce0199"), and =>
                 {
                     and.Name("Universalist");
-                    and.Addendum("Instead of specializing narrowly in an arcane school, you can become a universalist wizard�by studying all the schools equally, you devote yourself to understanding the full breadth of the arcane arts. For each level of wizard spell slots you have, you can use Drain Bonded item once per day to recall a spell of that level (instead of using it only once per day in total). You gain an extra wizard class feat, and you add one 1st-level spell of your choice to your spellbook.");
+                    and.Addendum("Instead of specializing narrowly in an arcane school, you can become a universalist wizard - by studying all the schools equally, you devote yourself to understanding the full breadth of the arcane arts. For each level of wizard spell slots you have, you can use Drain Bonded item once per day to recall a spell of that level (instead of using it only once per day in total). You gain an extra wizard class feat, and you add one 1st-level spell of your choice to your spellbook.");
                     and.GainAnyClassFeat(Guid.Parse("1038a2c2-f383-44f6-87f6-d80075315673"), Classes.Instances.Wizard.ID, level: 1);
                     and.GainSpecificLevelSpell(Guid.Parse("60e88c66-0365-43ba-9345-52e16a7b6761"), level: 1);
                     //TODO: Modification of DrainBondedItem feat.

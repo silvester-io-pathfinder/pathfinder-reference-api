@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.In
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("bbe0fe56-d71e-4b28-9731-34899d303ea6"), Type = TextBlockType.Text, Text = "You are an unparalleled genius and have discovered a technique that will revolutionize your chosen field�or at least for the time being, your innovation! Choose a revolutionary modification to apply to your innovation. You can also choose an initial or breakthrough modification of the same type instead, if you prefer." };
+            yield return new TextBlock { Id = Guid.Parse("bbe0fe56-d71e-4b28-9731-34899d303ea6"), Type = TextBlockType.Text, Text = "You are an unparalleled genius and have discovered a technique that will revolutionize your chosen field - or at least for the time being, your innovation! Choose a revolutionary modification to apply to your innovation. You can also choose an initial or breakthrough modification of the same type instead, if you prefer." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

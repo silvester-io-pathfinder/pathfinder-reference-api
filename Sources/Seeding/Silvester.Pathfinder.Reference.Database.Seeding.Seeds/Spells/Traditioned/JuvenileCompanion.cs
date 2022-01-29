@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("81cd19cb-53e3-4d08-a444-d4e34dd5ec8b"), Type = TextBlockType.Text, Text = "You transform your companion into its juvenile form, such as a cub, foal, kitten, puppy, or piglet, making the target appear harmless. It becomes Tiny (if it was larger), and its reach is reduced to 0 feet. All of its Speeds are halved (to a minimum Speed of 5 feet), and it gains weakness 5 to physical damage. In all other ways, its abilities and statistics are unchanged." };
-            yield return new TextBlock { Id = Guid.Parse("ce004153-6001-4493-969f-246144328f71"), Type = TextBlockType.Text, Text = "If your companion uses a hostile action, juvenile companion ends. This spell has no effect on a companion that doesn�t have a juvenile form." };
+            yield return new TextBlock { Id = Guid.Parse("ce004153-6001-4493-969f-246144328f71"), Type = TextBlockType.Text, Text = "If your companion uses a hostile action, juvenile companion ends. This spell has no effect on a companion that doesn't have a juvenile form." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

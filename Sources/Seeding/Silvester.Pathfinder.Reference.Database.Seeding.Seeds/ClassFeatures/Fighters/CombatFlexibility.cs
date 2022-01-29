@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Fi
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("f7187c0f-aaf5-43d0-9391-e37e5e4692e7"), Type = TextBlockType.Text, Text = "Through your experience in battle, you can prepare your tactics to suit different situations. When you make your daily preparations, you gain one fighter feat of 8th level or lower that you don�t already have. You can use that feat until your next daily preparations. You must meet all of the feat�s other prerequisites." };
+            yield return new TextBlock { Id = Guid.Parse("f7187c0f-aaf5-43d0-9391-e37e5e4692e7"), Type = TextBlockType.Text, Text = "Through your experience in battle, you can prepare your tactics to suit different situations. When you make your daily preparations, you gain one fighter feat of 8th level or lower that you don't already have. You can use that feat until your next daily preparations. You must meet all of the feat's other prerequisites." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

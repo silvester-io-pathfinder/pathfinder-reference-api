@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8fccf8f0-7603-492d-a8c2-b580ce87ea71"), Type = TextBlockType.Text, Text = "You send powerful sound waves through an opponent�s body, vibrating its bones and internal organs painfully. The creature takes 8d6 sonic damage and must attempt a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("8fccf8f0-7603-492d-a8c2-b580ce87ea71"), Type = TextBlockType.Text, Text = "You send powerful sound waves through an opponent's body, vibrating its bones and internal organs painfully. The creature takes 8d6 sonic damage and must attempt a Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

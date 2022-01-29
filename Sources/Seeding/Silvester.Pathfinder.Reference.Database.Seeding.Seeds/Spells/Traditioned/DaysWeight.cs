@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 CriticalSuccess = "The target is unaffected.",
                 Success = "The target is fatigued and enfeebled 1 for 1 round.",
                 Failure = "The target is fatigued and enfeebled 1 for the duration.",
-                CriticalFailure = "The target is fatigued and enfeebled 2 for the duration. The fatigued condition doesn�t end when the spell�s duration does (but can still be removed with a night�s rest or by similar means)."
+                CriticalFailure = "The target is fatigued and enfeebled 2 for the duration. The fatigued condition doesn't end when the spell's duration does (but can still be removed with a night's rest or by similar means)."
             };
         }
 

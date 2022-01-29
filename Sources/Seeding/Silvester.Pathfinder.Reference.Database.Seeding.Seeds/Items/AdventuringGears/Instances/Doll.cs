@@ -51,7 +51,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Adventurin
                 BulkId = Bulks.Instances.LightBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,
                 Addendum = new TextBlockBuilder()
-                   .Text(Guid.Parse("a32dbedf-854d-48e2-8ba1-c246f362d981"), "These dolls contain a hidden compartment or pouch capable of holding a single object of up to light Bulk�typically a bell, rattle, or dried flowers.")
+                   .Text(Guid.Parse("a32dbedf-854d-48e2-8ba1-c246f362d981"), "These dolls contain a hidden compartment or pouch capable of holding a single object of up to light Bulk - typically a bell, rattle, or dried flowers.")
                   .Build()
             };
 

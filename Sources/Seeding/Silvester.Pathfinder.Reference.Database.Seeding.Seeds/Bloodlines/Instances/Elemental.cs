@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             {
                 Id = ID, 
                 Name = "Elemental",
-                BloodMagic = "Elemental energy surrounds you or a target. Either you gain a +1 status bonus to Intimidation checks for 1 round, or a target takes 1 damage per spell level. The damage is bludgeoning or fire, according to your elemental type (see below). If the spell already deals that type of damage, combine it with the spell�s initial damage before determining weaknesses and resistances.",
+                BloodMagic = "Elemental energy surrounds you or a target. Either you gain a +1 status bonus to Intimidation checks for 1 round, or a target takes 1 damage per spell level. The damage is bludgeoning or fire, according to your elemental type (see below). If the spell already deals that type of damage, combine it with the spell's initial damage before determining weaknesses and resistances.",
                 RarityId = Rarities.Instances.Common.ID,
                 InitialBloodlineSpellId = Spells.Instances.ElementalToss.ID,
                 AdvancedBloodlineSpellId = Spells.Instances.ElementalMotion.ID,

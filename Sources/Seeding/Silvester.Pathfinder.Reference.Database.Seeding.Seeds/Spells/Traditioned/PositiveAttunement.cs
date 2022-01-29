@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cc71abb5-1b1e-4176-9a4e-bb0f3eb92a7c"), Type = TextBlockType.Text, Text = "You attune a creature to the Positive Energy Plane, connecting its life force without fully transporting it. The creature�s appearance becomes more brightly colored. If the creature is living, it heals 1d8 Hit Points immediately and at the end of each of your turns. Effects that increase healing only increase the initial healing." };
+            yield return new TextBlock { Id = Guid.Parse("cc71abb5-1b1e-4176-9a4e-bb0f3eb92a7c"), Type = TextBlockType.Text, Text = "You attune a creature to the Positive Energy Plane, connecting its life force without fully transporting it. The creature's appearance becomes more brightly colored. If the creature is living, it heals 1d8 Hit Points immediately and at the end of each of your turns. Effects that increase healing only increase the initial healing." };
             yield return new TextBlock { Id = Guid.Parse("40ab56c3-ceed-4135-a8e5-fe3946f1f5e1"), Type = TextBlockType.Text, Text = "If the creature is undead or has negative healing, it instead takes 1d8 positive damage, depending on the result of its Will save." };
         }
 

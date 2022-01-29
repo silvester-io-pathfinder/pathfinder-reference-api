@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("4c90b1af-191e-4b26-aa50-24783b97d81d"), "An everburning torch is one of the most common applications of permanent magic. This torch sheds light constantly, requiring no oxygen and generating no heat. The flame can be covered or hidden, but can�t be smothered or quenched.");
+            builder.Text(Guid.Parse("4c90b1af-191e-4b26-aa50-24783b97d81d"), "An everburning torch is one of the most common applications of permanent magic. This torch sheds light constantly, requiring no oxygen and generating no heat. The flame can be covered or hidden, but can't be smothered or quenched.");
         }
        
         protected override IEnumerable<HeldItemVariant> GetHeldItemVariants()

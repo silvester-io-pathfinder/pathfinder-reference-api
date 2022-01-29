@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             return new Spell
             {
                 Id = ID,
-                Name = "Re�nforce Eidolon",
+                Name = "Rïnforce Eidolon",
                 Level = 1,
                 Range = "100 feet.",
                 Targets = "Your eidolon.",
@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d5558a24-eb63-4637-ace0-6dff79b64780"), Type = TextBlockType.Text, Text = "You focus deeply on the link between you and your eidolon and reinforce your eidolon�s defenses. Your eidolon gains a +1 status bonus to AC and saving throws, plus resistance to all damage equal to half the spell�s level. Your eidolon can benefit from either boost eidolon or reinforce eidolon, but not both; if you cast one of these spells during the other�s duration, the newer spell replaces the older one." };
+            yield return new TextBlock { Id = Guid.Parse("d5558a24-eb63-4637-ace0-6dff79b64780"), Type = TextBlockType.Text, Text = "You focus deeply on the link between you and your eidolon and reinforce your eidolon's defenses. Your eidolon gains a +1 status bonus to AC and saving throws, plus resistance to all damage equal to half the spell's level. Your eidolon can benefit from either boost eidolon or reinforce eidolon, but not both; if you cast one of these spells during the other's duration, the newer spell replaces the older one." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

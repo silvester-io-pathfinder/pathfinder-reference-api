@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                             .Kind("Interact")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("ef0d792c-e6fd-41f8-aaeb-ffd4adb3d1e2"), "You push the button to anchor the rod in place. It doesn�t move, defying gravity if need be. If the button is pushed again, the rod deactivates, ending the anchoring magic. While anchored, the rod can be moved only if 8,000 pounds of pressure are applied to it or if a creature uses Athletics to Force Open the rod with a DC of 40 (though most intelligent creatures can just push the button to release the rod).");
+                                details.Text(Guid.Parse("ef0d792c-e6fd-41f8-aaeb-ffd4adb3d1e2"), "You push the button to anchor the rod in place. It doesn't move, defying gravity if need be. If the button is pushed again, the rod deactivates, ending the anchoring magic. While anchored, the rod can be moved only if 8,000 pounds of pressure are applied to it or if a creature uses Athletics to Force Open the rod with a DC of 40 (though most intelligent creatures can just push the button to release the rod).");
                             });
                     })
                     .Build()

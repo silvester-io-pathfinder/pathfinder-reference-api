@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("4f074ce0-0d5f-499c-a77d-a98c19a8b82d"), Type = TextBlockType.Text, Text = "You instantly transport yourself from one shadow to another. Teleport yourself and any items you�re wearing and holding from your current space to a clear space you can see that�s in dim light or darkness and within range. You can transport your familiar with this spell, but if shadow jump would bring any other creature with you�even if you�re carrying the creature in an extradimensional container�the spell is disrupted." };
+            yield return new TextBlock { Id = Guid.Parse("4f074ce0-0d5f-499c-a77d-a98c19a8b82d"), Type = TextBlockType.Text, Text = "You instantly transport yourself from one shadow to another. Teleport yourself and any items you're wearing and holding from your current space to a clear space you can see that's in dim light or darkness and within range. You can transport your familiar with this spell, but if shadow jump would bring any other creature with you - even if you're carrying the creature in an extradimensional container - the spell is disrupted." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("076e7985-9e95-488c-9150-aaae01bb4d49"), Type = TextBlockType.Text, Text = "You awakened when a bit of another person's life force and a fragment of their soul�possibly, but not always, at the moment of their death�found its way into your constructed body. You don't remember anything more than vague flashes of your �before life,� but that life essence still protects you. You gain resistance to negative damage equal to half your level (minimum 1)." };
+            yield return new TextBlock { Id = Guid.Parse("076e7985-9e95-488c-9150-aaae01bb4d49"), Type = TextBlockType.Text, Text = "You awakened when a bit of another person's life force and a fragment of their soul - possibly, but not always, at the moment of their death - found its way into your constructed body. You don't remember anything more than vague flashes of your 'before life', but that life essence still protects you. You gain resistance to negative damage equal to half your level (minimum 1)." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

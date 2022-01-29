@@ -53,9 +53,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("97849982-6753-4753-83a6-53884dd705e4"),
                 CriticalSuccess = "The creature is unaffected.",
-                Success = "The target becomes mildly distracted by your display and applauds while it isn�t fully occupied. It can�t use reactions.",
-                Failure = "The target applauds you so vigorously that it can�t use reactions and is slowed 1. The applause is so involved that it has the manipulate trait. This triggers reactions based on the manipulate trait at the start of the target�s turn.",
-                CriticalFailure = "As failure, plus the target is so distracted by its vigorous applauding of you that it�s fascinated with you."
+                Success = "The target becomes mildly distracted by your display and applauds while it isn't fully occupied. It can't use reactions.",
+                Failure = "The target applauds you so vigorously that it can't use reactions and is slowed 1. The applause is so involved that it has the manipulate trait. This triggers reactions based on the manipulate trait at the start of the target's turn.",
+                CriticalFailure = "As failure, plus the target is so distracted by its vigorous applauding of you that it's fascinated with you."
             };
         }
 

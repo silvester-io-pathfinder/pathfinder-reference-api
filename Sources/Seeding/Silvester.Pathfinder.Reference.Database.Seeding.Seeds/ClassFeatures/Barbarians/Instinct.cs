@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("e05f3865-6935-40b6-a0ca-9b04325f5f3a"), Type = TextBlockType.Text, Text = "Your rage wells up from a dominant instinct�one you learned from a tradition or that comes naturally to you. Your instinct gives you an ability, requires you to avoid certain behaviors, grants you increased damage and resistances at higher levels, and allows you to select feats tied to your instinct." };
+            yield return new TextBlock { Id = Guid.Parse("e05f3865-6935-40b6-a0ca-9b04325f5f3a"), Type = TextBlockType.Text, Text = "Your rage wells up from a dominant instinct - one you learned from a tradition or that comes naturally to you. Your instinct gives you an ability, requires you to avoid certain behaviors, grants you increased damage and resistances at higher levels, and allows you to select feats tied to your instinct." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

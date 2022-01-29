@@ -28,8 +28,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ra
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("f37819cd-a1e9-40d4-9267-b55953ddc143"), Type = TextBlockType.Text, Text = "You have honed your abilities as a hunter to incredible levels. Your proficiency rank for your ranger class DC increases to master. When using a ranged weapon that you have master proficiency in, you can ignore the penalty if attacking your hunted prey within the weapon�s second and third range increments." };
-            yield return new TextBlock { Id = Guid.Parse("77805f5c-b442-4486-854b-8a2938142337"), Type = TextBlockType.Text, Text = "If you have master proficiency in Perception, you gain a +4 circumstance bonus to Perception checks when you Seek your prey, and if you have master proficiency in Survival, you gain a +4 circumstance bonus to Survival checks when you Track your prey. You also gain an additional benefit depending on your hunter�s edge." };
+            yield return new TextBlock { Id = Guid.Parse("f37819cd-a1e9-40d4-9267-b55953ddc143"), Type = TextBlockType.Text, Text = "You have honed your abilities as a hunter to incredible levels. Your proficiency rank for your ranger class DC increases to master. When using a ranged weapon that you have master proficiency in, you can ignore the penalty if attacking your hunted prey within the weapon's second and third range increments." };
+            yield return new TextBlock { Id = Guid.Parse("77805f5c-b442-4486-854b-8a2938142337"), Type = TextBlockType.Text, Text = "If you have master proficiency in Perception, you gain a +4 circumstance bonus to Perception checks when you Seek your prey, and if you have master proficiency in Survival, you gain a +4 circumstance bonus to Survival checks when you Track your prey. You also gain an additional benefit depending on your hunter's edge." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

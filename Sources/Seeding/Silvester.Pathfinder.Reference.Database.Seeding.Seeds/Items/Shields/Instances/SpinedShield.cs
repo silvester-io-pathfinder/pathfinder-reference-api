@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Shields.In
                             .Kind("Interact")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("14ceca6e-99c3-40a7-bd03-84632dac2da8"), "You shoot one of the shield�s spines at a target. A fired spine uses the spikes� statistics, but it is a martial ranged weapon with a range increment of 120 feet.");
+                                effect.Text(Guid.Parse("14ceca6e-99c3-40a7-bd03-84632dac2da8"), "You shoot one of the shield's spines at a target. A fired spine uses the spikes' statistics, but it is a martial ranged weapon with a range increment of 120 feet.");
                             });
                     })
                     .Build()

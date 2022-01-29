@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Combinatio
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("0cb2880b-803c-4c63-8e67-d9908c147c56"), "Rumored to be the result of a gnomish dare to make a variant of a hooked hammer that�s even more intricate and complex, this weapon adds a musket to the mix of an already overcomplicated device."); ;
+            builder.Text(Guid.Parse("0cb2880b-803c-4c63-8e67-d9908c147c56"), "Rumored to be the result of a gnomish dare to make a variant of a hooked hammer that's even more intricate and complex, this weapon adds a musket to the mix of an already overcomplicated device."); ;
         }
 
         protected override IEnumerable<CombinationWeaponVariant> GetCombinationWeaponVariants()

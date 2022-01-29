@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Alchemical
                             .Kind("Interact")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("45551136-20b6-43ab-9d43-fd0cdbd77f9f"), "You can apply the stone�s quicksilver to an infused true elixir of life using an Interact action. This turns the elixir into an infused elixir of rejuvenation instantaneously. This doesn�t require any crafting time or additional materials.");
+                                details.Text(Guid.Parse("45551136-20b6-43ab-9d43-fd0cdbd77f9f"), "You can apply the stone's quicksilver to an infused true elixir of life using an Interact action. This turns the elixir into an infused elixir of rejuvenation instantaneously. This doesn't require any crafting time or additional materials.");
                             });
                     })
                     .Add(Guid.Parse("5191a978-b3ba-473c-8ae8-4bdcc3ac8d49"), ActionTypes.Instances.NoAction.ID, "Activate", action =>

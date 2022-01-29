@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("7612e054-7c5b-4915-b477-cb76db132e18"), Type = TextBlockType.Text, Text = "You Stride up to your Speed. During this movement, you can try to move through the space of one enemy. Attempt an Acrobatics check against the enemy�s Reflex DC as soon as you try to enter its space. You can Tumble Through using Climb, Fly, Swim, or another action instead of Stride in the appropriate environment." };
+            yield return new TextBlock { Id = Guid.Parse("7612e054-7c5b-4915-b477-cb76db132e18"), Type = TextBlockType.Text, Text = "You Stride up to your Speed. During this movement, you can try to move through the space of one enemy. Attempt an Acrobatics check against the enemy's Reflex DC as soon as you try to enter its space. You can Tumble Through using Climb, Fly, Swim, or another action instead of Stride in the appropriate environment." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             return new RollableEffect
             {
                 Id = Guid.Parse("89f7b0e5-79c3-4f78-889d-a5c64f289e9d"),
-                Success = "You move through the enemy�s space, treating the squares in its space as difficult terrain (every 5 feet costs 10 feet of movement). If you don�t have enough Speed to move all the way through its space, you get the same effect as a failure.",
+                Success = "You move through the enemy's space, treating the squares in its space as difficult terrain (every 5 feet costs 10 feet of movement). If you don't have enough Speed to move all the way through its space, you get the same effect as a failure.",
                 Failure = "Your movement ends, and you trigger reactions as if you had moved out of the square you started in.",
             };
         }

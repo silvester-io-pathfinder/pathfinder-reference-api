@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ma
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("b8bc80a8-9806-418a-a797-223c4958b8f5"), Type = TextBlockType.Text, Text = "You�ve learned to defend yourself better against attacks. Your proficiency ranks for light armor, medium armor, and unarmored defense increase to expert." };
+            yield return new TextBlock { Id = Guid.Parse("b8bc80a8-9806-418a-a797-223c4958b8f5"), Type = TextBlockType.Text, Text = "you've learned to defend yourself better against attacks. Your proficiency ranks for light armor, medium armor, and unarmored defense increase to expert." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

@@ -104,7 +104,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Eidolons.Instanc
                 Level = 1,
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("5f08a2f4-5dfe-4469-b866-1b8b5bb18cd1"), Type = TextBlockType.Text, Text = "Your eidolon's attacks are hallowed by the celestial realms. Your eidolon's unarmed Strikes deal an extra 1 good damage; as usual, this extra damage harms only evil creatures or those with a weakness to good damage. Additionally, your eidolon can make nonlethal attacks with its unarmed attacks without taking the usual �2 circumstance penalty."},
+                    new TextBlock {Id = Guid.Parse("5f08a2f4-5dfe-4469-b866-1b8b5bb18cd1"), Type = TextBlockType.Text, Text = "Your eidolon's attacks are hallowed by the celestial realms. Your eidolon's unarmed Strikes deal an extra 1 good damage; as usual, this extra damage harms only evil creatures or those with a weakness to good damage. Additionally, your eidolon can make nonlethal attacks with its unarmed attacks without taking the usual -2 circumstance penalty."},
                 },
                 Effect = BooleanEffectBuilder.CreateAnd(Guid.Parse("66408d97-89e2-4280-b68b-df4f2722f918"), and =>
                 {
@@ -120,7 +120,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Eidolons.Instanc
                 Level = 7,
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("45a80d53-99b7-4d42-a07e-44aecadbcf73"), Type = TextBlockType.Text, Text = "Your eidolon emanates a powerful aura�resembling that of an astral deva�that protects creatures as they travel. The aura has the abjuration, aura, and divine traits. Your eidolon and its allies within a 20-foot emanation are protected from severe heat and cold, and your eidolon is never flat-footed to creatures inside the aura that are of a lower level than the eidolon."},
+                    new TextBlock {Id = Guid.Parse("45a80d53-99b7-4d42-a07e-44aecadbcf73"), Type = TextBlockType.Text, Text = "Your eidolon emanates a powerful aura - resembling that of an astral deva - that protects creatures as they travel. The aura has the abjuration, aura, and divine traits. Your eidolon and its allies within a 20-foot emanation are protected from severe heat and cold, and your eidolon is never flat-footed to creatures inside the aura that are of a lower level than the eidolon."},
                     new TextBlock {Id = Guid.Parse("f5a84292-c095-46d4-85a0-f0a8b97fa6ea"), Type = TextBlockType.Text, Text = "When you gain the transcendence class feature, this evolves to the full benefits of an astral deva; your eidolon and allies in the aura are protected from environmental damage from any plane, including severe and extreme heat and cold as well as more unusual dangers."},
                 },
                 Effect = BooleanEffectBuilder.CreateAnd(Guid.Parse("a44b43fc-6757-4b31-9def-0c801432eaf3"), and =>

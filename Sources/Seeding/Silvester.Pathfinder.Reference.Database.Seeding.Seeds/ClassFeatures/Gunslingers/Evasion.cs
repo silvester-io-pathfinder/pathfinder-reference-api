@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Gu
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("c4beca4d-36da-454d-afd6-096f24693e1e"), Type = TextBlockType.Text, Text = "You�ve learned to move quickly to avoid explosions, a dragon�s breath, and worse. Your proficiency rank for Reflex saves increases to master. When you roll a success on a Reflex save, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("c4beca4d-36da-454d-afd6-096f24693e1e"), Type = TextBlockType.Text, Text = "you've learned to move quickly to avoid explosions, a dragon's breath, and worse. Your proficiency rank for Reflex saves increases to master. When you roll a success on a Reflex save, you get a critical success instead." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

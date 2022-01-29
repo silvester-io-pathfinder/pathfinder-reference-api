@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("81afa49c-acf3-4b57-961b-2ab059942acf"), Type = TextBlockType.Text, Text = "You have entered a druidic circle and learned a few of the order�s secrets, granting you primal power." };
+            yield return new TextBlock { Id = Guid.Parse("81afa49c-acf3-4b57-961b-2ab059942acf"), Type = TextBlockType.Text, Text = "You have entered a druidic circle and learned a few of the order's secrets, granting you primal power." };
         }
 
         protected override IEnumerable<TextBlock> GetMulticlassDetails()

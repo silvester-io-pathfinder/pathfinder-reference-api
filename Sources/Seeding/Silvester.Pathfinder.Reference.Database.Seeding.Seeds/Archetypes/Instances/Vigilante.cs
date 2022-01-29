@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("6d37f2a2-6281-4768-8039-d078ea93a224"), Type = TextBlockType.Text, Text = "As a vigilante, you have two faces: a public persona, and a secret identity that lets you hide your extralegal actions from polite society. Your secret identity lets you adventure and carry out clandestine missions while keeping the civilians you care about safe. Whatever your purpose� fighting crime, inciting rebellion, sowing chaos�your vigilante identity makes you both hard to pin down and a mysterious, intriguing subject of gossip." };
+            yield return new TextBlock { Id = Guid.Parse("6d37f2a2-6281-4768-8039-d078ea93a224"), Type = TextBlockType.Text, Text = "As a vigilante, you have two faces: a public persona, and a secret identity that lets you hide your extralegal actions from polite society. Your secret identity lets you adventure and carry out clandestine missions while keeping the civilians you care about safe. Whatever your purpose -  fighting crime, inciting rebellion, sowing chaos - your vigilante identity makes you both hard to pin down and a mysterious, intriguing subject of gossip." };
         }
 
         protected override SourcePage GetSourcePage()

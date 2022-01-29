@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("8e9a1e97-8165-4996-8585-38a4f561df0f"), "This piece of bronzite is shaped like an oval with points at both ends. It has a carved flame at its center and is traditionally worn over the heart. You can activate only one flame navette per day. When you activate the navette, you gain the benefit of the fighter�s Determination class feat, with a counteract modifier of +22. If you have the Determination feat, you can use your own modifier if it�s better.");
+            builder.Text(Guid.Parse("8e9a1e97-8165-4996-8585-38a4f561df0f"), "This piece of bronzite is shaped like an oval with points at both ends. It has a carved flame at its center and is traditionally worn over the heart. You can activate only one flame navette per day. When you activate the navette, you gain the benefit of the fighter's Determination class feat, with a counteract modifier of +22. If you have the Determination feat, you can use your own modifier if it's better.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()
@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Envision")
-                            .Requirements("You�re an expert in Will saves.");
+                            .Requirements("you're an expert in Will saves.");
                     })
                     .Build()
             };

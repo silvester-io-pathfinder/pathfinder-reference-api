@@ -55,7 +55,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("09d5836e-1c41-45db-8f34-f65287a999a7"),
                 CriticalSuccess = "The creature is unaffected.",
                 Success = "The creature takes half damage.",
-                Failure = "The creature takes full damage and rises 10 feet into the air. If it doesn�t have a fly Speed, the creature gains one equal to its Speed until it either reaches the ground or ceases to be in the whirlwind�s area, potentially falling when the spell ends or when it leaves the area.",
+                Failure = "The creature takes full damage and rises 10 feet into the air. If it doesn't have a fly Speed, the creature gains one equal to its Speed until it either reaches the ground or ceases to be in the whirlwind's area, potentially falling when the spell ends or when it leaves the area.",
                 CriticalFailure = "As failure, except the creature takes double damage and rises 20 feet into the air."
             };
         }

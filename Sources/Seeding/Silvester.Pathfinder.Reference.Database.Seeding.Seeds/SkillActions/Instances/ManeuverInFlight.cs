@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = Guid.Parse("210ce007-764c-48fe-9984-365c73ed6277"),
                 Success = "You succeed at the maneuver.",
-                Failure = "Your maneuver fails. The GM chooses if you simply can�t move or if some other detrimental effect happens. The outcome should be appropriate for the maneuver you attempted(for instance, being blown off course if you were trying to fly against a strong wind).",
+                Failure = "Your maneuver fails. The GM chooses if you simply can't move or if some other detrimental effect happens. The outcome should be appropriate for the maneuver you attempted(for instance, being blown off course if you were trying to fly against a strong wind).",
                 CriticalFailure = "As failure, but the consequence is more dire."
             };
         }

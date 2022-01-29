@@ -53,8 +53,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("acc05e91-373d-44f9-87ed-c39d9b091d45"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target takes a �5-foot circumstance penalty to its Speed as long as it is within 30 feet of you.",
-                Failure = "The target takes a �10-foot circumstance penalty to its Speed and cannot move more than 30 feet away from you until it Escapes or the spell ends.",
+                Success = "The target takes a -5-foot circumstance penalty to its Speed as long as it is within 30 feet of you.",
+                Failure = "The target takes a -10-foot circumstance penalty to its Speed and cannot move more than 30 feet away from you until it Escapes or the spell ends.",
                 CriticalFailure = "The target is immobilized until it Escapes or the spell ends."
             };
         }

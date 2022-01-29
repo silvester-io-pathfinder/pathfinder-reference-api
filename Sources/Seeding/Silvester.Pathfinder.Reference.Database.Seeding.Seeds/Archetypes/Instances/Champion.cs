@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetMulticlassDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("2b8bd264-bd5b-4598-b25c-fec2eccad68b"), Type = TextBlockType.Text, Text = "The champion archetype greatly improves defenses, particularly armor. It�s a great way for a character to gain armor proficiency or a powerful defensive reaction." };
+            yield return new TextBlock { Id = Guid.Parse("2b8bd264-bd5b-4598-b25c-fec2eccad68b"), Type = TextBlockType.Text, Text = "The champion archetype greatly improves defenses, particularly armor. It's a great way for a character to gain armor proficiency or a powerful defensive reaction." };
         }
 
         protected override SourcePage GetSourcePage()

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("358d0d1e-fbfe-45bc-b516-84ddff0abda6"), Type = TextBlockType.Text, Text = "You completely surround a Large or smaller creature in immobile illusory walls, trapping it inside a false prison it can�t escape. No other creatures see or feel these walls, and the target can�t see anything outside of the illusory walls. The target can attempt a Will save when the spell is cast, each time it attempts to interact with or escape the walls, and each time something from outside the walls affects the target. On a success, it disbelieves the illusion and the spell ends." };
+            yield return new TextBlock { Id = Guid.Parse("358d0d1e-fbfe-45bc-b516-84ddff0abda6"), Type = TextBlockType.Text, Text = "You completely surround a Large or smaller creature in immobile illusory walls, trapping it inside a false prison it can't escape. No other creatures see or feel these walls, and the target can't see anything outside of the illusory walls. The target can attempt a Will save when the spell is cast, each time it attempts to interact with or escape the walls, and each time something from outside the walls affects the target. On a success, it disbelieves the illusion and the spell ends." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             {
                 Id = ID, 
                 Name = "Demonic",
-                BloodMagic = "The corruption of sin weakens a target�s defenses or makes you more imposing. Either a target takes a �1 status penalty to AC for 1 round, or you gain a +1 status bonus to Intimidation checks for 1 round.",
+                BloodMagic = "The corruption of sin weakens a target's defenses or makes you more imposing. Either a target takes a -1 status penalty to AC for 1 round, or you gain a +1 status bonus to Intimidation checks for 1 round.",
                 RarityId = Rarities.Instances.Common.ID,
                 InitialBloodlineSpellId = Spells.Instances.GluttonsJaw.ID,
                 AdvancedBloodlineSpellId = Spells.Instances.SwampOfSloth.ID,

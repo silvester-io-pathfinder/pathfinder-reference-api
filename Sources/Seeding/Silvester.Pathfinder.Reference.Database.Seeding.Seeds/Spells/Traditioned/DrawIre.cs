@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9d7dee38-76fe-41fe-b415-792c7da0fa8e"), Type = TextBlockType.Text, Text = "You cause mental distress to a creature, goading it to strike back at you. You deal 1d10 mental damage to the creature and cause it to take a �1 status penalty to attack rolls against creatures other than you. The creature must attempt a Will saving throw." };
+            yield return new TextBlock { Id = Guid.Parse("9d7dee38-76fe-41fe-b415-792c7da0fa8e"), Type = TextBlockType.Text, Text = "You cause mental distress to a creature, goading it to strike back at you. You deal 1d10 mental damage to the creature and cause it to take a -1 status penalty to attack rolls against creatures other than you. The creature must attempt a Will saving throw." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -52,9 +52,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("39c5098a-f802-4244-b7ad-00d76f3c22f3"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target takes half damage and the penalty. The spell ends at the end of the target�s next turn.",
+                Success = "The target takes half damage and the penalty. The spell ends at the end of the target's next turn.",
                 Failure = "The target takes full damage and the penalty.",
-                CriticalFailure = "The target takes double damage, and the status penalty is �2."
+                CriticalFailure = "The target takes double damage, and the status penalty is -2."
             };
         }
 

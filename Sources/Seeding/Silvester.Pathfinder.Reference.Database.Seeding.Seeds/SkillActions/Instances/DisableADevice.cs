@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = ID,
                 Name = "Disable a Device",
-                Requirements = "Some devices require you to use thieves� tools (page 291) when disabling them.",
+                Requirements = "Some devices require you to use thieves' tools (page 291) when disabling them.",
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID
             };
@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("cc473d69-5c1f-4c66-8722-c078f8457789"), Type = TextBlockType.Text, Text = "This action allows you to disarm a trap or another complex device. Often, a device requires numerous successes before becoming disabled, depending on its construction and complexity. Thieves� tools are helpful and sometimes even required to Disable a Device, as determined by the GM, and sometimes a device requires a higher proficiency rank in Thievery to disable it." };
+            yield return new TextBlock { Id = Guid.Parse("cc473d69-5c1f-4c66-8722-c078f8457789"), Type = TextBlockType.Text, Text = "This action allows you to disarm a trap or another complex device. Often, a device requires numerous successes before becoming disabled, depending on its construction and complexity. Thieves' tools are helpful and sometimes even required to Disable a Device, as determined by the GM, and sometimes a device requires a higher proficiency rank in Thievery to disable it." };
             yield return new TextBlock { Id = Guid.Parse("08aa82f2-b850-4dd9-8c5c-e0e40c90441c"), Type = TextBlockType.Text, Text = "Your Thievery check result determines how much progress you make." };
         }
 

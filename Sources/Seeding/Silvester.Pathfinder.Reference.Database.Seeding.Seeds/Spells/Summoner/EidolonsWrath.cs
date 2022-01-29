@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("0255404e-9d3e-44c9-9022-c86665e40660"), Type = TextBlockType.Text, Text = "Your eidolon releases a powerful energy attack that deals 5d6 damage of the type you chose when you took the Eidolon�s Wrath feat, with a basic Reflex save." };
+            yield return new TextBlock { Id = Guid.Parse("0255404e-9d3e-44c9-9022-c86665e40660"), Type = TextBlockType.Text, Text = "Your eidolon releases a powerful energy attack that deals 5d6 damage of the type you chose when you took the Eidolon's Wrath feat, with a basic Reflex save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

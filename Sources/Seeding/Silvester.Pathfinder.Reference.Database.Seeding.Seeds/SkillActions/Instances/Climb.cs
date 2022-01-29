@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("22779bea-db4e-4e6e-b7d4-c82b449783f1"), Type = TextBlockType.Text, Text = "You move up, down, or across an incline. Unless it�s particularly easy, you must attempt an Athletics check. The GM determines the DC based on the nature of the incline and environmental circumstances. You�re flat-footed unless you have a climb Speed." };
+            yield return new TextBlock { Id = Guid.Parse("22779bea-db4e-4e6e-b7d4-c82b449783f1"), Type = TextBlockType.Text, Text = "You move up, down, or across an incline. Unless it's particularly easy, you must attempt an Athletics check. The GM determines the DC based on the nature of the incline and environmental circumstances. you're flat-footed unless you have a climb Speed." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()

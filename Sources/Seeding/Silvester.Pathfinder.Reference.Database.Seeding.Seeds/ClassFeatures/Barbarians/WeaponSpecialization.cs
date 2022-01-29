@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("a082d654-d0b7-4a46-8010-aa1481805d6b"), Type = TextBlockType.Text, Text = "Your rage helps you hit harder. You deal an additional 2 damage with weapons and unarmed attacks in which you have expert proficiency. This damage increases to 3 if you�re a master, and 4 if you�re legendary. You gain your instinct�s specialization ability." };
+            yield return new TextBlock { Id = Guid.Parse("a082d654-d0b7-4a46-8010-aa1481805d6b"), Type = TextBlockType.Text, Text = "Your rage helps you hit harder. You deal an additional 2 damage with weapons and unarmed attacks in which you have expert proficiency. This damage increases to 3 if you're a master, and 4 if you're legendary. You gain your instinct's specialization ability." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

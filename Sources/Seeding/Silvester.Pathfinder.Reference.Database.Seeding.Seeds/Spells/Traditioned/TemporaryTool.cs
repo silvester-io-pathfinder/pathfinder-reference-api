@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("d77e2d62-440d-432f-81a3-63f1b3782253"), Type = TextBlockType.Text, Text = "You conjure a temporary simple tool, such as a shovel or rope into your hands. It lasts until it is used for a single activity or for 1 minute, whichever comes first, after which it disappears. The tool is obviously temporarily conjured, and thus can�t be sold or passed off as a genuine item." };
+            yield return new TextBlock { Id = Guid.Parse("d77e2d62-440d-432f-81a3-63f1b3782253"), Type = TextBlockType.Text, Text = "You conjure a temporary simple tool, such as a shovel or rope into your hands. It lasts until it is used for a single activity or for 1 minute, whichever comes first, after which it disappears. The tool is obviously temporarily conjured, and thus can't be sold or passed off as a genuine item." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

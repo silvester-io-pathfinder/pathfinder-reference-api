@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("b17f263c-5b6b-4f5b-9e28-c747d372303d"), Type = TextBlockType.Text, Text = "You�re an expert in espionage and reconnaissance, able to skulk silently through the wilderness to gather intelligence, sneak through enemy lines to report to your comrades, or suddenly and decisively strike your foes. Your skills ease the difficulty of travel for you and your companions and keep you all on guard when you�re approaching danger." };
+            yield return new TextBlock { Id = Guid.Parse("b17f263c-5b6b-4f5b-9e28-c747d372303d"), Type = TextBlockType.Text, Text = "you're an expert in espionage and reconnaissance, able to skulk silently through the wilderness to gather intelligence, sneak through enemy lines to report to your comrades, or suddenly and decisively strike your foes. Your skills ease the difficulty of travel for you and your companions and keep you all on guard when you're approaching danger." };
         }
 
         protected override SourcePage GetSourcePage()

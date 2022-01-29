@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Frequency("Once per day.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("99bedce5-2935-4cdb-b51e-2fbd40a34830"), "Attempt a DC 20 check to Recall Knowledge about people of a human ethnicity, a non-human ancestry, or some other type of creature. (The GM determines what your options are.) If you succeed, the badge�s bonus increases to +2 for Diplomacy checks with creatures of that group for the rest of the day.");
+                                builder.Text(Guid.Parse("99bedce5-2935-4cdb-b51e-2fbd40a34830"), "Attempt a DC 20 check to Recall Knowledge about people of a human ethnicity, a non-human ancestry, or some other type of creature. (The GM determines what your options are.) If you succeed, the badge's bonus increases to +2 for Diplomacy checks with creatures of that group for the rest of the day.");
                             });
                     })
                     .Build()

@@ -22,8 +22,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("63883c26-a9e1-4fb8-b8ea-56f86d6df0bd"), Type = TextBlockType.Text, Text = "You propel yourself through water. In most calm water, you succeed at the action without needing to attempt a check. If you must breathe air and you�re submerged in water, you must hold your breath each round. If you fail to hold your breath, you begin to drown (as described on page 478). If the water you are swimming in is turbulent or otherwise dangerous, you might have to attempt an Athletics check to Swim." };
-            yield return new TextBlock { Id = Guid.Parse("1d298d75-50af-4408-8ee5-356914211dab"), Type = TextBlockType.Text, Text = "If you end your turn in water and haven�t succeeded at a Swim action that turn, you sink 10 feet or get moved by the current, as determined by the GM. However, if your last action on your turn was to enter the water, you don�t sink or move with the current that turn." };
+            yield return new TextBlock { Id = Guid.Parse("63883c26-a9e1-4fb8-b8ea-56f86d6df0bd"), Type = TextBlockType.Text, Text = "You propel yourself through water. In most calm water, you succeed at the action without needing to attempt a check. If you must breathe air and you're submerged in water, you must hold your breath each round. If you fail to hold your breath, you begin to drown (as described on page 478). If the water you are swimming in is turbulent or otherwise dangerous, you might have to attempt an Athletics check to Swim." };
+            yield return new TextBlock { Id = Guid.Parse("1d298d75-50af-4408-8ee5-356914211dab"), Type = TextBlockType.Text, Text = "If you end your turn in water and haven't succeeded at a Swim action that turn, you sink 10 feet or get moved by the current, as determined by the GM. However, if your last action on your turn was to enter the water, you don't sink or move with the current that turn." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -48,7 +48,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 Id = Guid.Parse("5cf534b3-efdb-4ae2-b9bd-261d35daae54"),
                 CriticalSuccess = "You move through the water 10 feet, plus 5 feet per 20 feet of your land Speed(a total of 15 feet for most PCs).",
                 Success = "You move through the water 5 feet, plus 5 feet per 20 feet of your land Speed (a total of 10 feet for most PCs).",
-                CriticalFailure = "You make no progress, and if you�re holding your breath, you lose 1 round of air."
+                CriticalFailure = "You make no progress, and if you're holding your breath, you lose 1 round of air."
             };
         }
 

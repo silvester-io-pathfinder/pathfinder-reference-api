@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Alchemical
         protected override void GetDetails(ITextBlockBuilder builder)
         {
             builder.Text(Guid.Parse("e43f8c9b-94e5-48d8-9ff4-7a03653f8bcb"), "When you use a dose of addiction suppressant, it suppresses the effects of that addiction for 1 day, as if you had taken an actual dose of the drug, but without any of the drug's effects, and it doesn't increase the addiction DC. You also gain an item bonus against the ongoing save against the drug's addiction depending on the type of addiction suppressant.");
-            builder.Text(Guid.Parse("a8a11978-7dbd-4aa4-b861-d64bf8421bb8"), "For every drug, a specific suppressant must be crafted� no generalized addiction suppressant yet exists. In order to create an addiction suppressant, you must begin with a dose of the drug to be suppressed, then use alchemical reagents to generate an elixir that can be used to fight that drug's addiction. An addiction suppressant must be a higher level than the drug it is meant to suppress in order to work.");
+            builder.Text(Guid.Parse("a8a11978-7dbd-4aa4-b861-d64bf8421bb8"), "For every drug, a specific suppressant must be crafted - no generalized addiction suppressant yet exists. In order to create an addiction suppressant, you must begin with a dose of the drug to be suppressed, then use alchemical reagents to generate an elixir that can be used to fight that drug's addiction. An addiction suppressant must be a higher level than the drug it is meant to suppress in order to work.");
         }
 
         protected override IEnumerable<AlchemicalElixirVariant> GetAlchemicalElixirVariants()

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("1077adcf-f544-4536-af97-612416a7d351"), "When you pull up the hood of this nondescript gray cloak (an Interact action), you become drab and uninteresting, gaining a +1 item bonus to Stealth checks and to Deception checks to Impersonate a forgettable background character, such as a servant, but also taking a �1 item penalty to Diplomacy and Intimidation checks.");
+            builder.Text(Guid.Parse("1077adcf-f544-4536-af97-612416a7d351"), "When you pull up the hood of this nondescript gray cloak (an Interact action), you become drab and uninteresting, gaining a +1 item bonus to Stealth checks and to Deception checks to Impersonate a forgettable background character, such as a servant, but also taking a -1 item penalty to Diplomacy and Intimidation checks.");
         }
 
         protected override void GetTraits(ITraitBindingBuilder<BaseItemTraitBinding, BaseItem> builder)
@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Frequency("Once per day.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("77a45e29-8ee3-4758-beed-562c54e44dda"), "You pull the cloak�s hood up and gain the benefits of nondetection for 1 hour or until you pull the hood back down, whichever comes first.");
+                                builder.Text(Guid.Parse("77a45e29-8ee3-4758-beed-562c54e44dda"), "You pull the cloak's hood up and gain the benefits of nondetection for 1 hour or until you pull the hood back down, whichever comes first.");
                             });
                     })
                     .Build()

@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WeaponProp
                             .Kind("Interact")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("a74e7402-b33c-4b2e-bb87-8611dbf62feb"), "The weapon takes the shape of another melee weapon that requires the same number of hands to wield. The weapon�s runes and any precious material it�s made of apply to the weapon�s new shape. Any property runes that can�t apply to the new form are suppressed until the item takes a shape to which they can apply.");
+                                effect.Text(Guid.Parse("a74e7402-b33c-4b2e-bb87-8611dbf62feb"), "The weapon takes the shape of another melee weapon that requires the same number of hands to wield. The weapon's runes and any precious material it's made of apply to the weapon's new shape. Any property runes that can't apply to the new form are suppressed until the item takes a shape to which they can apply.");
                             });
                     })
                     .Build()

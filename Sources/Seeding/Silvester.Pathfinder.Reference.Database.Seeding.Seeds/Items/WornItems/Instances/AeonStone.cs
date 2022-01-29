@@ -56,7 +56,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("1bda9557-5263-4f60-a9a7-246517d9c916"), "You don't need to eat or drink while this aeon stone is invested by you. This aeon stone doesn't function until it has been worn continuously for a week and invested each day therein. If it�s invested by someone else, this interval starts over.")
+                    .Text(Guid.Parse("1bda9557-5263-4f60-a9a7-246517d9c916"), "You don't need to eat or drink while this aeon stone is invested by you. This aeon stone doesn't function until it has been worn continuously for a week and invested each day therein. If it's invested by someone else, this interval starts over.")
                     .Text(Guid.Parse("cb1d7334-8295-4f2b-a2eb-7c4e251a771a"), "The resonant power allows you to cast air bubble as a primal innate spell once per day.")
                     .Build()
             };
@@ -116,7 +116,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("b09e8b5e-eec9-41b6-98d5-aaea52df30b5"), "An orange prism aeon stone must be activated to provide a benefit. The resonant power grants you a +2 item bonus to Arcana, Nature, Occultism, or Religion checks�whichever corresponds to the tradition of the last spell you enhanced with this aeon stone.")
+                    .Text(Guid.Parse("b09e8b5e-eec9-41b6-98d5-aaea52df30b5"), "An orange prism aeon stone must be activated to provide a benefit. The resonant power grants you a +2 item bonus to Arcana, Nature, Occultism, or Religion checks - whichever corresponds to the tradition of the last spell you enhanced with this aeon stone.")
                     .Build(),
                 InlineActions = new InlineActionCollectionBuilder()
                     .Add(Guid.Parse("e835b6f3-2efb-42e8-b41e-e9215036b229"), ActionTypes.Instances.OneAction.ID, name: "Activate", action =>
@@ -125,7 +125,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Kind("Envision")
                             .Details(effects =>
                             {
-                                effects.Text(Guid.Parse("b5373956-dda0-405a-a4da-1dfa1122aa9f"), "If your next action is to Cast a Spell, that spell�s level is 1 higher (maximum 10th level) for the purposes of counteracting and being counteracted.");
+                                effects.Text(Guid.Parse("b5373956-dda0-405a-a4da-1dfa1122aa9f"), "If your next action is to Cast a Spell, that spell's level is 1 higher (maximum 10th level) for the purposes of counteracting and being counteracted.");
                             });
                     })
                     .Build()
@@ -152,7 +152,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Frequency("Once per day.")
                             .Details(effects =>
                             {
-                                effects.Text(Guid.Parse("8225fae5-3ea7-4952-bfd1-4d49aa6331cb"), "The stone casts a 6th-level dispel magic spell in an attempt to counteract the triggering spell, with a counteract modifier of +22. This can be used only on spells that specifically target you�not area spells that don�t have targets. If it succeeds, it counteracts the spell for all targets if other creatures were targeted in addition to you. Each time you activate this aeon stone, attempt a DC 5 flat check. On a failure, the stone permanently turns into a dull gray aeon stone.");
+                                effects.Text(Guid.Parse("8225fae5-3ea7-4952-bfd1-4d49aa6331cb"), "The stone casts a 6th-level dispel magic spell in an attempt to counteract the triggering spell, with a counteract modifier of +22. This can be used only on spells that specifically target you - not area spells that don't have targets. If it succeeds, it counteracts the spell for all targets if other creatures were targeted in addition to you. Each time you activate this aeon stone, attempt a DC 5 flat check. On a failure, the stone permanently turns into a dull gray aeon stone.");
                             });
                     })
                     .Build()
@@ -168,7 +168,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("77260d47-48a9-4f7d-9146-1e38cff5359b"), "When you invest this stone, you gain 15 temporary Hit Points. If the stone�s effects are suppressed, you lose any of the temporary Hit Points remaining until it returns. The temporary Hit Points refresh during your daily preparations; they do not refresh if you re-invest the stone, or invest another pink rhomboid aeon stone, before then. The resonant power allows you to cast the stabilize cantrip as a divine innate spell.")
+                    .Text(Guid.Parse("77260d47-48a9-4f7d-9146-1e38cff5359b"), "When you invest this stone, you gain 15 temporary Hit Points. If the stone's effects are suppressed, you lose any of the temporary Hit Points remaining until it returns. The temporary Hit Points refresh during your daily preparations; they do not refresh if you re-invest the stone, or invest another pink rhomboid aeon stone, before then. The resonant power allows you to cast the stabilize cantrip as a divine innate spell.")
                     .Build(),
             };
 

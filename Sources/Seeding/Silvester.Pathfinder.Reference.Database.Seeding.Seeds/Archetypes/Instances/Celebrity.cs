@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("bcb24d09-df02-4006-8a5b-ccc7e672b917"), Type = TextBlockType.Text, Text = "You�re a special personality... and you know it. You�re not merely comfortable in the spotlight, you crave it. While the traditional celebrity is a musician or another type of performer, you could be known for any occupation." };
+            yield return new TextBlock { Id = Guid.Parse("bcb24d09-df02-4006-8a5b-ccc7e672b917"), Type = TextBlockType.Text, Text = "you're a special personality... and you know it. you're not merely comfortable in the spotlight, you crave it. While the traditional celebrity is a musician or another type of performer, you could be known for any occupation." };
         }
 
         protected override SourcePage GetSourcePage()

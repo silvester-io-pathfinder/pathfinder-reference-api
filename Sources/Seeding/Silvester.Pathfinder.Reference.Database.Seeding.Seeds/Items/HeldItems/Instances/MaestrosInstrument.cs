@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("044808da-06aa-4c78-a558-3b85cf52278a"), "A maestro�s instrument can be crafted in the form of any variety of handheld musical instrument. A maestro�s instrument grants you a +1 item bonus to Performance checks while playing music with the instrument.");
+            builder.Text(Guid.Parse("044808da-06aa-4c78-a558-3b85cf52278a"), "A maestro's instrument can be crafted in the form of any variety of handheld musical instrument. A maestro's instrument grants you a +1 item bonus to Performance checks while playing music with the instrument.");
         }
        
         protected override IEnumerable<HeldItemVariant> GetHeldItemVariants()

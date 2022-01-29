@@ -26,13 +26,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("c43f75c6-3129-489e-97a8-b8706a7742f8"), Type = TextBlockType.Text, Text = "If you�re a spellcaster, you can use the skill corresponding to your magical tradition to learn a new spell of that tradition. Table 4�3: Learning a Spell lists the Price of the materials needed to Learn a Spell of each level." };
-            yield return new TextBlock { Id = Guid.Parse("86a50867-6989-4383-abee-afddeb918dde"), Type = TextBlockType.Text, Text = "You can gain access to a new spell of your tradition from someone who knows that spell or from magical writing like a spellbook or scroll. If you can cast spells of multiple traditions, you can Learn a Spell of any of those traditions, but you must use the corresponding skill to do so. For example, if you were a cleric with the bard multiclass archetype, you couldn�t use Religion to add an occult spell to your bardic spell repertoire." };
+            yield return new TextBlock { Id = Guid.Parse("c43f75c6-3129-489e-97a8-b8706a7742f8"), Type = TextBlockType.Text, Text = "If you're a spellcaster, you can use the skill corresponding to your magical tradition to learn a new spell of that tradition. Table 4-3: Learning a Spell lists the Price of the materials needed to Learn a Spell of each level." };
+            yield return new TextBlock { Id = Guid.Parse("86a50867-6989-4383-abee-afddeb918dde"), Type = TextBlockType.Text, Text = "You can gain access to a new spell of your tradition from someone who knows that spell or from magical writing like a spellbook or scroll. If you can cast spells of multiple traditions, you can Learn a Spell of any of those traditions, but you must use the corresponding skill to do so. For example, if you were a cleric with the bard multiclass archetype, you couldn't use Religion to add an occult spell to your bardic spell repertoire." };
             yield return new TextBlock { Id = Guid.Parse("578f6281-0b80-4d08-8b3e-1085341f049f"), Type = TextBlockType.Text, Text = "To learn the spell, you must do the following:" };
             yield return new TextBlock { Id = Guid.Parse("b9ad18da-6bfb-40a6-bb4f-46a7822325f7"), Type = TextBlockType.Enumeration, Text = "Spend 1 hour per level of the spell, during which you must remain in conversation with a person who knows the spell or have the magical writing in your possession." };
-            yield return new TextBlock { Id = Guid.Parse("aeac59f5-5ea3-4cce-a645-da56de1e326b"), Type = TextBlockType.Enumeration, Text = "Have materials with the Price indicated in Table 4�3." };
-            yield return new TextBlock { Id = Guid.Parse("9b104f9b-5a64-4877-b747-28d8d6f7825b"), Type = TextBlockType.Enumeration, Text = "Attempt a skill check for the skill corresponding to your tradition (DC determined by the GM, often close to the DC on Table 4�3). Uncommon or rare spells have higher DCs; full guidelines for the GM appear on page 503." };
-            yield return new TextBlock { Id = Guid.Parse("5f67c793-a4e9-464c-97a9-1c38d10d6fc6"), Type = TextBlockType.Text, Text = "If you have a spellbook, Learning a Spell lets you add the spell to your spellbook; if you prepare spells from a list, it�s added to your list; if you have a spell repertoire, you can select it when you add or swap spells." };
+            yield return new TextBlock { Id = Guid.Parse("aeac59f5-5ea3-4cce-a645-da56de1e326b"), Type = TextBlockType.Enumeration, Text = "Have materials with the Price indicated in Table 4-3." };
+            yield return new TextBlock { Id = Guid.Parse("9b104f9b-5a64-4877-b747-28d8d6f7825b"), Type = TextBlockType.Enumeration, Text = "Attempt a skill check for the skill corresponding to your tradition (DC determined by the GM, often close to the DC on Table 4-3). Uncommon or rare spells have higher DCs; full guidelines for the GM appear on page 503." };
+            yield return new TextBlock { Id = Guid.Parse("5f67c793-a4e9-464c-97a9-1c38d10d6fc6"), Type = TextBlockType.Text, Text = "If you have a spellbook, Learning a Spell lets you add the spell to your spellbook; if you prepare spells from a list, it's added to your list; if you have a spell repertoire, you can select it when you add or swap spells." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -56,7 +56,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 Id = Guid.Parse("39184188-8ee1-4bc6-89ba-7ed2852c474d"),
                 CriticalSuccess = "You expend half the materials and learn the spell.",
                 Success = "You expend the materials and learn the spell.",
-                Failure = "You fail to learn the spell but can try again after you gain a level. The materials aren�t expended.",
+                Failure = "You fail to learn the spell but can try again after you gain a level. The materials aren't expended.",
                 CriticalFailure = "As failure, plus you expend half the materials."
             };
         }

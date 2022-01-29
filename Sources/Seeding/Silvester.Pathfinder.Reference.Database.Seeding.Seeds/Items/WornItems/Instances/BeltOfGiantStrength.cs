@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Trigger("You are targeted by a thrown rock attack, or a rock would fall on you.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("f40df1be-d59f-4030-9971-ef34da4dce0c"), "Attempt an Athletics check to grab the triggering rock. Use the Athletics DC of the creature throwing the rock, the DC of the hazard or other effect, or DC 35 if no other DC is applicable. You must have a free hand to catch the rock, but you can Release anything you�re holding in a hand as part of this reaction.");
+                                builder.Text(Guid.Parse("f40df1be-d59f-4030-9971-ef34da4dce0c"), "Attempt an Athletics check to grab the triggering rock. Use the Athletics DC of the creature throwing the rock, the DC of the hazard or other effect, or DC 35 if no other DC is applicable. You must have a free hand to catch the rock, but you can Release anything you're holding in a hand as part of this reaction.");
                             })
                             .RollableEffect(Guid.Parse("d8b59efd-9f30-4cd4-b5d6-807d28c1a939"), effect =>
                             {

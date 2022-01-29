@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ch
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("a67a301c-ea0c-4523-b530-2aa516f4ec4c"), Type = TextBlockType.Text, Text = "You zealously bear your deity�s favored weapon. If it�s uncommon, you gain access to it. If it�s an unarmed attack with a d4 damage die or a simple weapon, increase the damage die by one step (d4 to d6, d6 to d8, d8 to d10, d10 to d12)." };
+            yield return new TextBlock { Id = Guid.Parse("a67a301c-ea0c-4523-b530-2aa516f4ec4c"), Type = TextBlockType.Text, Text = "You zealously bear your deity's favored weapon. If it's uncommon, you gain access to it. If it's an unarmed attack with a d4 damage die or a simple weapon, increase the damage die by one step (d4 to d6, d6 to d8, d8 to d10, d10 to d12)." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

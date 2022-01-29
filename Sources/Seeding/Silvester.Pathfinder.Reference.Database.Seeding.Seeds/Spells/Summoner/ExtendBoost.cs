@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("60174b0c-09c1-4104-8526-42dc06669ba6"),
                 CriticalSuccess = "The spell lasts 4 rounds.",
                 Success = "The spell lasts 3 rounds.",
-                Failure = "The spell lasts 1 round, but you don�t spend the Focus Point for casting this spell.",
+                Failure = "The spell lasts 1 round, but you don't spend the Focus Point for casting this spell.",
             };
         }
 

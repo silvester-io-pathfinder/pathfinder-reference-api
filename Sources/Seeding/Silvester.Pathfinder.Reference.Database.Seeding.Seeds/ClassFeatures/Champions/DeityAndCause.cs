@@ -27,8 +27,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ch
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("5230fe6c-0d16-4673-887f-6035f10191c0"), Type = TextBlockType.Text, Text = "Champions are divine servants of a deity. Choose a deity to follow; your alignment must be one allowed for followers of your deity. Actions fundamentally opposed to your deity�s ideals or alignment are anathema to your faith. A few examples of acts that would be considered anathema appear in each deity�s entry. You and your GM determine whether other acts are anathema." };
-            yield return new TextBlock { Id = Guid.Parse("3e331b5a-88af-4685-84ee-cc7237a31584"), Type = TextBlockType.Text, Text = "You have one of the following causes. Your cause must match your alignment exactly. Your cause determines your champion�s reaction, grants you a devotion spell, and defines part of your champion�s code." };
+            yield return new TextBlock { Id = Guid.Parse("5230fe6c-0d16-4673-887f-6035f10191c0"), Type = TextBlockType.Text, Text = "Champions are divine servants of a deity. Choose a deity to follow; your alignment must be one allowed for followers of your deity. Actions fundamentally opposed to your deity's ideals or alignment are anathema to your faith. A few examples of acts that would be considered anathema appear in each deity's entry. You and your GM determine whether other acts are anathema." };
+            yield return new TextBlock { Id = Guid.Parse("3e331b5a-88af-4685-84ee-cc7237a31584"), Type = TextBlockType.Text, Text = "You have one of the following causes. Your cause must match your alignment exactly. Your cause determines your champion's reaction, grants you a devotion spell, and defines part of your champion's code." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

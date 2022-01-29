@@ -59,7 +59,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             yield return new SkillActionExample { Id = Guid.Parse("30ad8468-cbd0-425f-b9aa-2abd3629ce0f"), ProficiencyId = Proficiencies.Instances.Trained.ID, Description = "Wooden beam." };
             yield return new SkillActionExample { Id = Guid.Parse("bc0226a0-09d5-4f60-9531-4d42d10f488c"), ProficiencyId = Proficiencies.Instances.Expert.ID, Description = "Deep, loose gravel." };
             yield return new SkillActionExample { Id = Guid.Parse("bf231bb0-7d81-4ce4-a343-c937cd620061"), ProficiencyId = Proficiencies.Instances.Master.ID, Description = "Tightrope, smooth sheet of ice." };
-            yield return new SkillActionExample { Id = Guid.Parse("80964419-c69f-4491-adf6-c4364fa547d4"), ProficiencyId = Proficiencies.Instances.Legendary.ID, Description = "Razor�s edge, chunks of floor falling in midair." };
+            yield return new SkillActionExample { Id = Guid.Parse("80964419-c69f-4491-adf6-c4364fa547d4"), ProficiencyId = Proficiencies.Instances.Legendary.ID, Description = "Razor's edge, chunks of floor falling in midair." };
         }
 
         protected override SourcePage GetSourcePage()

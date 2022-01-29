@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("6af5db65-6844-4ee3-aa1a-589e8e9cbd1c"), Type = TextBlockType.Text, Text = "Walking over to an item to pick it up is so much effort. Whether it�s your spellbook, a reagent, or a glass of wine, it�s simply more efficient to call it to your hand. You teleport the target into your open hand. If you don�t have a hand free, it falls to the ground at your feet." };
+            yield return new TextBlock { Id = Guid.Parse("6af5db65-6844-4ee3-aa1a-589e8e9cbd1c"), Type = TextBlockType.Text, Text = "Walking over to an item to pick it up is so much effort. Whether it's your spellbook, a reagent, or a glass of wine, it's simply more efficient to call it to your hand. You teleport the target into your open hand. If you don't have a hand free, it falls to the ground at your feet." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

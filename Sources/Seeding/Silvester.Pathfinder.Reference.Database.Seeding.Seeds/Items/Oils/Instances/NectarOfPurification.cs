@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Oils.Insta
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("cd7a6246-e471-4f66-a1c2-8f95a4220cda"), "A shimmering liquid, nectar of purification is often stored in bottles similar to those used for vinegar. This oil casts a 1st-level purify food and drink spell over any food or drink onto which it�s poured. The nectar evaporates as it takes effect, leaving the taste and texture of the food or drink unaltered.");
+            builder.Text(Guid.Parse("cd7a6246-e471-4f66-a1c2-8f95a4220cda"), "A shimmering liquid, nectar of purification is often stored in bottles similar to those used for vinegar. This oil casts a 1st-level purify food and drink spell over any food or drink onto which it's poured. The nectar evaporates as it takes effect, leaving the taste and texture of the food or drink unaltered.");
         }
 
         protected override IEnumerable<OilVariant> GetOilVariants()

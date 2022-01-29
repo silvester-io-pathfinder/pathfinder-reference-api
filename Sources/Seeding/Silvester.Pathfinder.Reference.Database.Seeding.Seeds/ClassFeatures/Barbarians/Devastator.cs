@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("ad19c0d3-a101-4850-9e8c-1603526ab0b0"), Type = TextBlockType.Text, Text = "Your Strikes are so devastating that you hardly care about resistance, and your barbarian abilities are unparalleled. Your proficiency rank for your barbarian class DC increases to master. Your melee Strikes ignore 10 points of a creature�s resistance to their physical damage." };
+            yield return new TextBlock { Id = Guid.Parse("ad19c0d3-a101-4850-9e8c-1603526ab0b0"), Type = TextBlockType.Text, Text = "Your Strikes are so devastating that you hardly care about resistance, and your barbarian abilities are unparalleled. Your proficiency rank for your barbarian class DC increases to master. Your melee Strikes ignore 10 points of a creature's resistance to their physical damage." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

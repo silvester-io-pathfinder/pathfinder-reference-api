@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("b1875381-2c10-44af-b000-0e69f2de75ea"), Type = TextBlockType.Text, Text = "You call forth a divine cataclysm from your deity, destroying living and undead creatures in the area alike. Creatures in the area take 10d6 negative damage and 10d6 alignment damage (good, evil, lawful, or chaotic), chosen from among the alignments your deity has. If your deity is true neutral, increase the negative damage by 4d6 instead of dealing alignment damage. A creature harmed by positive damage, such as one with negative healing, takes positive damage instead of negative damage from this spell." };
-            yield return new TextBlock { Id = Guid.Parse("44a2f780-465c-4e7c-985e-05c2f14be2dd"), Type = TextBlockType.Text, Text = "You can�t cast this spell if you don�t have a deity. This spell gains the trait corresponding to the alignment damage dealt." };
+            yield return new TextBlock { Id = Guid.Parse("44a2f780-465c-4e7c-985e-05c2f14be2dd"), Type = TextBlockType.Text, Text = "You can't cast this spell if you don't have a deity. This spell gains the trait corresponding to the alignment damage dealt." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

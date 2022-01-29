@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("e6b3f950-1b44-4a21-8039-31dfc257e65f"), Type = TextBlockType.Text, Text = "You Stride, then make a vertical Leap and attempt a DC 30 Athletics check to increase the height of your jump. If you didn�t Stride at least 10 feet, you automatically fail your check. This DC might be increased or decreased due to the situation, as determined by the GM." };
+            yield return new TextBlock { Id = Guid.Parse("e6b3f950-1b44-4a21-8039-31dfc257e65f"), Type = TextBlockType.Text, Text = "You Stride, then make a vertical Leap and attempt a DC 30 Athletics check to increase the height of your jump. If you didn't Stride at least 10 feet, you automatically fail your check. This DC might be increased or decreased due to the situation, as determined by the GM." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 CriticalSuccess = "Increase the maximum vertical distance to 8 feet, or increase the maximum vertical distance to 5 feet and maximum horizontal distance to 10 feet.",
                 Success = "Increase the maximum vertical distance to 5 feet.",
                 Failure = "You Leap normally.",
-                CriticalFailure = "You don�t Leap at all, and instead you fall prone in your space."
+                CriticalFailure = "You don't Leap at all, and instead you fall prone in your space."
             };
         }
 

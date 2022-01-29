@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("4d7aff81-05d8-4a32-a96f-ccd5e6565d28"), Type = TextBlockType.Text, Text = "Your ancestors have long dealt with the horrific�in the Shadow Plane or elsewhere�and you bear their mental fortitude. When you roll a success on a saving throw against an emotion effect, you get a critical success instead." };
+            yield return new TextBlock { Id = Guid.Parse("4d7aff81-05d8-4a32-a96f-ccd5e6565d28"), Type = TextBlockType.Text, Text = "Your ancestors have long dealt with the horrific - in the Shadow Plane or elsewhere - and you bear their mental fortitude. When you roll a success on a saving throw against an emotion effect, you get a critical success instead." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

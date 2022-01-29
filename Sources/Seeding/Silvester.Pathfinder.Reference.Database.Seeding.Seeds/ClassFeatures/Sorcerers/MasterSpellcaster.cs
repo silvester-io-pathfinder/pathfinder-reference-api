@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.So
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("1ea1540a-63c5-4c11-9e28-58ad9d756bcc"), Type = TextBlockType.Text, Text = "You have achieved mastery over the magic in your blood. Your proficiency ranks for spell attack rolls and spell DCs for spells of your bloodline�s tradition increase to master." };
+            yield return new TextBlock { Id = Guid.Parse("1ea1540a-63c5-4c11-9e28-58ad9d756bcc"), Type = TextBlockType.Text, Text = "You have achieved mastery over the magic in your blood. Your proficiency ranks for spell attack rolls and spell DCs for spells of your bloodline's tradition increase to master." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

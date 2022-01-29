@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("ff5013ff-7222-47bd-8f96-5b7a2b6109ee"), Type = TextBlockType.Text, Text = "You�ve mastered the occult. Your proficiency ranks for occult spell attack rolls and spell DCs increase to master." };
+            yield return new TextBlock { Id = Guid.Parse("ff5013ff-7222-47bd-8f96-5b7a2b6109ee"), Type = TextBlockType.Text, Text = "you've mastered the occult. Your proficiency ranks for occult spell attack rolls and spell DCs increase to master." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

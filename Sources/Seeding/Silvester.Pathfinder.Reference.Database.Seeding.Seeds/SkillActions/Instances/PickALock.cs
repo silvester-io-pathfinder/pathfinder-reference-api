@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = ID,
                 Name = "Pick a Lock",
-                Requirements = "You�re holding or wearing thieves� tools (page 291).",
+                Requirements = "you're holding or wearing thieves' tools (page 291).",
                 ActionTypeId = ActionTypes.Instances.TwoActions.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID
             };
@@ -43,7 +43,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 Id = Guid.Parse("0d015328-1503-4342-98b8-dc8b5537f44c"),
                 CriticalSuccess = "You unlock the lock, or you achieve two successes toward opening a complex lock. You leave no trace of your tampering.",
                 Success = "You open the lock, or you achieve one success toward opening a complex lock.",
-                CriticalFailure = "You break your tools. Fixing them requires using Crafting to Repair them or else swapping in replacement picks (costing 3 sp, or 3 gp for infiltrator thieves� tools)."
+                CriticalFailure = "You break your tools. Fixing them requires using Crafting to Repair them or else swapping in replacement picks (costing 3 sp, or 3 gp for infiltrator thieves' tools)."
             };
         }
 

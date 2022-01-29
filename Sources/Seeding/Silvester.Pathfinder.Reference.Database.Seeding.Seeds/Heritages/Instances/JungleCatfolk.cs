@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("927ecb6f-74c9-4c21-9acb-618d28ac3465"), Type = TextBlockType.Text, Text = "You�re descended from jungle stalkers and can move swiftly through scrub and underbrush. You ignore difficult terrain from undergrowth, and greater difficult terrain from undergrowth is only difficult terrain for you." };
+            yield return new TextBlock { Id = Guid.Parse("927ecb6f-74c9-4c21-9acb-618d28ac3465"), Type = TextBlockType.Text, Text = "you're descended from jungle stalkers and can move swiftly through scrub and underbrush. You ignore difficult terrain from undergrowth, and greater difficult terrain from undergrowth is only difficult terrain for you." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

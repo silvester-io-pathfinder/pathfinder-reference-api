@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1408d047-670d-4db0-ae79-09f12f6b5b62"), Type = TextBlockType.Text, Text = "You anchor your location in time so that you can swiftly retrace your steps later with complex chronomancy. The space you�re in when you cast the spell becomes your temporal anchor space. While you�re within 500 feet of your temporal anchor space, you can spend a single action that has the concentrate trait to instantaneously return to that space (you don�t need to have line of effect to the space). The spell then ends. You bring any items that are in your possession with you when you take the action to return." };
+            yield return new TextBlock { Id = Guid.Parse("1408d047-670d-4db0-ae79-09f12f6b5b62"), Type = TextBlockType.Text, Text = "You anchor your location in time so that you can swiftly retrace your steps later with complex chronomancy. The space you're in when you cast the spell becomes your temporal anchor space. While you're within 500 feet of your temporal anchor space, you can spend a single action that has the concentrate trait to instantaneously return to that space (you don't need to have line of effect to the space). The spell then ends. You bring any items that are in your possession with you when you take the action to return." };
             yield return new TextBlock { Id = Guid.Parse("ce30f2c2-c8c8-463e-9fe6-22cd66b89d04"), Type = TextBlockType.Text, Text = "If the anchor space is occupied when you attempt to return to it or if this spell would bring another creature with you, the spell fails to transport you, then ends." };
         }
 
@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "7th",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("9b13556f-9084-4a03-8072-1752481603e7"), Type = TextBlockType.Text, Text = "You can return if you�re within 1,000 feet of your anchor space." }
+                    new TextBlock {Id = Guid.Parse("9b13556f-9084-4a03-8072-1752481603e7"), Type = TextBlockType.Text, Text = "You can return if you're within 1,000 feet of your anchor space." }
                 }
             };
 
@@ -49,7 +49,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "9th",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("ae169388-d00d-4a22-8a1c-7945cf59c862"), Type = TextBlockType.Text, Text = "You can return if you�re within 1 mile of your anchor space." }
+                    new TextBlock {Id = Guid.Parse("ae169388-d00d-4a22-8a1c-7945cf59c862"), Type = TextBlockType.Text, Text = "You can return if you're within 1 mile of your anchor space." }
                 }
             };
         }

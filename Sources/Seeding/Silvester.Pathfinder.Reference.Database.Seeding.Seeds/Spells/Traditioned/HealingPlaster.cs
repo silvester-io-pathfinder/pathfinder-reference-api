@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8a33b652-8ba8-4094-bc71-d7e247e84376"), Type = TextBlockType.Text, Text = "You purify some dirt or mud into a pliable, claylike plaster that can aid in clotting and healing. This restorative substance can be used in lieu of healer�s tools for Medicine checks to Administer First Aid or Treat Wounds. If the plaster isn�t used within the spell�s duration, or if you Cast the Spell again before using the plaster, it reverts to being normal non-magical earth." };
+            yield return new TextBlock { Id = Guid.Parse("8a33b652-8ba8-4094-bc71-d7e247e84376"), Type = TextBlockType.Text, Text = "You purify some dirt or mud into a pliable, claylike plaster that can aid in clotting and healing. This restorative substance can be used in lieu of healer's tools for Medicine checks to Administer First Aid or Treat Wounds. If the plaster isn't used within the spell's duration, or if you Cast the Spell again before using the plaster, it reverts to being normal non-magical earth." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

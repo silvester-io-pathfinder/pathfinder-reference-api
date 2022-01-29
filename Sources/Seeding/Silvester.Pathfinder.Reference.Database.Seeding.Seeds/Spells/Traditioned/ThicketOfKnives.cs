@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c312cb33-ff2e-41e1-810a-974030beced9"), Type = TextBlockType.Text, Text = "You create numerous phantom copies of your weapon arm, hiding your true movements and rendering your attacks unpredictable. You gain a +2 status bonus to Deception checks. If you�re untrained in Deception, you can use the Feint action anyway, and add your level as your proficiency bonus despite being untrained." };
+            yield return new TextBlock { Id = Guid.Parse("c312cb33-ff2e-41e1-810a-974030beced9"), Type = TextBlockType.Text, Text = "You create numerous phantom copies of your weapon arm, hiding your true movements and rendering your attacks unpredictable. You gain a +2 status bonus to Deception checks. If you're untrained in Deception, you can use the Feint action anyway, and add your level as your proficiency bonus despite being untrained." };
         }
 
         public override IEnumerable<Guid> GetSpellComponents()

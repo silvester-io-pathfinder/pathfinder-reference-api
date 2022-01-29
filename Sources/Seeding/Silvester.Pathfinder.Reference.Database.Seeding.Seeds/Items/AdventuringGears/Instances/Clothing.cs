@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Adventurin
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("f80d61d1-ceb6-426b-89ee-8daed0b8e91b"), "Ordinary clothing is functional with basic tailoring, such as peasant garb, monk�s robes, or work clothes.")
+                    .Text(Guid.Parse("f80d61d1-ceb6-426b-89ee-8daed0b8e91b"), "Ordinary clothing is functional with basic tailoring, such as peasant garb, monk's robes, or work clothes.")
                     .Build()
             };
 

@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("5f79b841-f53c-40d2-86f8-f1c05db077c9"), "This pendant is forged from grainy steel and depicts a snorting bull�s face. The pendant must be attached to the chest area or on a shoulder guard. When you activate the pendant, you gain a +2 status bonus to the Athletics check to Shove, and if you roll a critical failure on the check, you get a failure instead.");
+            builder.Text(Guid.Parse("5f79b841-f53c-40d2-86f8-f1c05db077c9"), "This pendant is forged from grainy steel and depicts a snorting bull's face. The pendant must be attached to the chest area or on a shoulder guard. When you activate the pendant, you gain a +2 status bonus to the Athletics check to Shove, and if you roll a critical failure on the check, you get a failure instead.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()

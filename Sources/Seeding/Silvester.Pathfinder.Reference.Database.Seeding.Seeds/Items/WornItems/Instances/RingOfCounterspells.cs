@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("710d885d-bd26-4a13-b8f7-7969d2c3492f"), "This ornate silver ring bears two competing geometric designs of brightly colored and wildly clashing inlaid gemstones. A spellcaster can cast a single spell into this ring as long as no spell is currently stored within, expending the normal time, costs, and so forth to Cast the Spell. The spell�s effect doesn�t occur; the spell�s power is instead stored within the ring.");
+            builder.Text(Guid.Parse("710d885d-bd26-4a13-b8f7-7969d2c3492f"), "This ornate silver ring bears two competing geometric designs of brightly colored and wildly clashing inlaid gemstones. A spellcaster can cast a single spell into this ring as long as no spell is currently stored within, expending the normal time, costs, and so forth to Cast the Spell. The spell's effect doesn't occur; the spell's power is instead stored within the ring.");
             builder.Text(Guid.Parse("cef88c34-fb04-4914-a080-0cb6ad6f9df5"), "When you invest a ring of counterspells, you immediately know the name and level of the spell stored inside, if any. A ring of counterspells found as treasure has a 50% chance of having a spell stored in it. The GM determines that spell.");
         }
 
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Details(builder =>
                             {
                                 builder.Text(Guid.Parse("27787c7c-4c3f-4881-949c-787a2d469670"), "You can attempt to counteract the triggering spell, using the level of the spell stored in the ring and a counteract modifier of +19.");
-                                builder.Text(Guid.Parse("2365912e-29eb-4733-9967-2510747cd158"), "Once you do, the stored spell�s energy is spent, and the ring is empty.");
+                                builder.Text(Guid.Parse("2365912e-29eb-4733-9967-2510747cd158"), "Once you do, the stored spell's energy is spent, and the ring is empty.");
                             });
                     })
                     .Add(Guid.Parse("04851757-eea3-431f-acba-068b3817ddb6"), ActionTypes.Instances.OneAction.ID, name: "Activate", action =>

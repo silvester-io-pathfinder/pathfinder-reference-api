@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.BeastGuns.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("5149d36a-f7d3-4b47-8526-97312b383836"), "A growth gun is a +1 striking hand cannon made from the regenerative flesh of a hydra, troll, or other similar creature. It has an attached flesh sac that slowly replenishes one shot each round and can be loaded like a normal round of ammunition. It fires regenerating gobbets of flesh, bone, or teeth, determined by the damage type selected for its modular trait. A growth gun can be fired underwater, though it�s still limited by the selected damage type as normal.");
+            builder.Text(Guid.Parse("5149d36a-f7d3-4b47-8526-97312b383836"), "A growth gun is a +1 striking hand cannon made from the regenerative flesh of a hydra, troll, or other similar creature. It has an attached flesh sac that slowly replenishes one shot each round and can be loaded like a normal round of ammunition. It fires regenerating gobbets of flesh, bone, or teeth, determined by the damage type selected for its modular trait. A growth gun can be fired underwater, though it's still limited by the selected damage type as normal.");
         }
 
         protected override IEnumerable<BeastGunVariant> GetBeastGunVariants()

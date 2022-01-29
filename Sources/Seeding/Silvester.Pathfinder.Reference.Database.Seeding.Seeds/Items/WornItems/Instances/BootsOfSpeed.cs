@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("fd45dc37-7650-4026-bbdf-66959f0f2712"), "These sleek red boots make your legs feel like they�re bursting with energy. You gain a +5-foot item bonus to your land Speed and to any climb or swim Speeds you have.");
+            builder.Text(Guid.Parse("fd45dc37-7650-4026-bbdf-66959f0f2712"), "These sleek red boots make your legs feel like they're bursting with energy. You gain a +5-foot item bonus to your land Speed and to any climb or swim Speeds you have.");
         }
 
         protected override void GetTraits(ITraitBindingBuilder<BaseItemTraitBinding, BaseItem> builder)

@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         protected override void GetDetails(ITextBlockBuilder builder)
         {
             builder.Text(Guid.Parse("f0c7bb79-a646-4fdc-a8e7-f2c978c2d8c2"), "This talisman is the magically treated corpse of a tiny bat bound in papyrus. When you activate the bat, the affixed weapon detects vibrations around you and guides your perception. You gain the benefits of the fighter Blind-Fight class feat (page 149) for 1 minute.");
-            builder.Text(Guid.Parse("f1a61c52-6f7e-47c8-b035-dfc4023442fe"), "If you have the Blind-Fight feat, you gain imprecise echolocation with a range of 30 feet for 1 minute. This makes creatures that would be undetected by you because you can�t see them hidden instead.");
+            builder.Text(Guid.Parse("f1a61c52-6f7e-47c8-b035-dfc4023442fe"), "If you have the Blind-Fight feat, you gain imprecise echolocation with a range of 30 feet for 1 minute. This makes creatures that would be undetected by you because you can't see them hidden instead.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()

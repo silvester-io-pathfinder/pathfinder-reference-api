@@ -24,7 +24,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Combinatio
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("d13f566f-18a4-40db-9e62-71ff8784c615"), "At first glance this weapon looks like nothing more than an iron-bound club. But the top of the weapon features a latch that opens to reveal three rotating pistol muzzles concealed in the mace�s head that can be fired and rotated using triggers built into the weapon�s haft."); ;
+            builder.Text(Guid.Parse("d13f566f-18a4-40db-9e62-71ff8784c615"), "At first glance this weapon looks like nothing more than an iron-bound club. But the top of the weapon features a latch that opens to reveal three rotating pistol muzzles concealed in the mace's head that can be fired and rotated using triggers built into the weapon's haft."); ;
         }
 
         protected override IEnumerable<CombinationWeaponVariant> GetCombinationWeaponVariants()

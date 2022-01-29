@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9c0c69c5-64ca-4a2f-8dec-8a8e6946e6bc"), Type = TextBlockType.Text, Text = "You place a bit of knowledge deep in a creature�s subconscious or make a willing creature forget some information until a specific trigger occurs. The target gets a Will saving throw to resist the effect. A willing creature can choose to fail its save." };
+            yield return new TextBlock { Id = Guid.Parse("9c0c69c5-64ca-4a2f-8dec-8a8e6946e6bc"), Type = TextBlockType.Text, Text = "You place a bit of knowledge deep in a creature's subconscious or make a willing creature forget some information until a specific trigger occurs. The target gets a Will saving throw to resist the effect. A willing creature can choose to fail its save." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("6e135257-bdb1-40a5-989c-05c8a7dff181"),
                 CriticalSuccess = "The target is unaffected and realizes you tried to alter its memory.",
                 Success = "The target is unaffected but thinks your spell was something harmless instead of sudden recollection, unless it identifies the spell.",
-                Failure = "You choose a piece of information the target didn�t already know and create a trigger, such as seeing an object, hearing a key phrase, or witnessing an event. As soon as the target experiences the trigger, it receives the information and the spell ends. If the target was willing, you can instead choose a piece of information the target already knew and suppress its memory of that information until it experiences the trigger, after which it recovers the information and the spell ends.",
+                Failure = "You choose a piece of information the target didn't already know and create a trigger, such as seeing an object, hearing a key phrase, or witnessing an event. As soon as the target experiences the trigger, it receives the information and the spell ends. If the target was willing, you can instead choose a piece of information the target already knew and suppress its memory of that information until it experiences the trigger, after which it recovers the information and the spell ends.",
             };
         }
 

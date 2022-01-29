@@ -59,7 +59,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Frequency("Once per hour.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("d6cbb71d-e05b-4cc0-8983-563233225e75"), "Tiny, hairlike tendrils extend from the slippers� soles, allowing you to walk on vertical surfaces or even to move upside down along ceilings. For 1 minute, you gain a 20-foot climb Speed and you don�t need to use your hands to Climb. However, the slippers require decent traction for you to walk on a wall, so they provide no benefit when you�re moving across greased, icy, or oiled surfaces.");
+                                builder.Text(Guid.Parse("d6cbb71d-e05b-4cc0-8983-563233225e75"), "Tiny, hairlike tendrils extend from the slippers' soles, allowing you to walk on vertical surfaces or even to move upside down along ceilings. For 1 minute, you gain a 20-foot climb Speed and you don't need to use your hands to Climb. However, the slippers require decent traction for you to walk on a wall, so they provide no benefit when you're moving across greased, icy, or oiled surfaces.");
                             });
                     })
                     .Build()

@@ -49,8 +49,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new RollableEffect
             {
                 Id = Guid.Parse("3c131fb0-57a4-458b-96b4-a439b33e0b09"),
-                CriticalSuccess = "The target takes double damage and a �10-foot status penalty to its Speeds for 1 round.",
-                Success = "The target takes full damage and a �5-foot status penalty to its Speeds for 1 round.",
+                CriticalSuccess = "The target takes double damage and a -10-foot status penalty to its Speeds for 1 round.",
+                Success = "The target takes full damage and a -5-foot status penalty to its Speeds for 1 round.",
                 Failure = "No effect.",
             };
         }

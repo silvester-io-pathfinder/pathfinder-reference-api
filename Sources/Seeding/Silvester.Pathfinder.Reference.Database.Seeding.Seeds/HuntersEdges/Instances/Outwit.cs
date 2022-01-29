@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.HuntersEdges.Ins
             {
                 Id = ID, 
                 Name = "Outwit",
-                Description = "You are talented at outwitting and evading your prey. You gain a +2 circumstance bonus to Deception checks, Intimidation checks, Stealth checks, and any checks to Recall Knowledge about the prey, and a +1 circumstance bonus to AC against your prey�s attacks."
+                Description = "You are talented at outwitting and evading your prey. You gain a +2 circumstance bonus to Deception checks, Intimidation checks, Stealth checks, and any checks to Recall Knowledge about the prey, and a +1 circumstance bonus to AC against your prey's attacks."
             };
         }
 

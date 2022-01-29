@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("278e79c4-5491-4690-b3a3-48533bbb9ced"), Type = TextBlockType.Text, Text = "You bombard a target with distracting auditory illusions, surrounding them with a tumultuous cacophony of overlapping speech, whispers, screams, and muttering. The target is flat-footed, takes a �2 status penalty to purely auditory Perception checks, and must succeed at a DC 5 flat check to use auditory abilities or verbal spell components. Similarly, a creature who attempts to affect the target with an auditory effect must succeed at a DC 5 flat check or the attempt fails. The duration depends on the target�s Will save." };
+            yield return new TextBlock { Id = Guid.Parse("278e79c4-5491-4690-b3a3-48533bbb9ced"), Type = TextBlockType.Text, Text = "You bombard a target with distracting auditory illusions, surrounding them with a tumultuous cacophony of overlapping speech, whispers, screams, and muttering. The target is flat-footed, takes a -2 status penalty to purely auditory Perception checks, and must succeed at a DC 5 flat check to use auditory abilities or verbal spell components. Similarly, a creature who attempts to affect the target with an auditory effect must succeed at a DC 5 flat check or the attempt fails. The duration depends on the target's Will save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

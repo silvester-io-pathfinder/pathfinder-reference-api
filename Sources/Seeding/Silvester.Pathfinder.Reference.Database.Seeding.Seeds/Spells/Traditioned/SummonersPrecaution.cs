@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 },
                 Effect = new[]
                 {
-                    new TextBlock { Id = Guid.Parse("04ef38d2-5144-4c7b-ae0b-f12ec488d8a6"), Type = TextBlockType.Text, Text = "You quickly shut the buffer in your link with your eidolon, causing your bonded ally to wink out of existence before you can be laid low. Your eidolon unmanifests, and you can�t Manifest your Eidolon for 1 minute. In exchange, you don�t take the triggering damage, though your eidolon still suffers any other adverse effects that accompanied the damage." }
+                    new TextBlock { Id = Guid.Parse("04ef38d2-5144-4c7b-ae0b-f12ec488d8a6"), Type = TextBlockType.Text, Text = "You quickly shut the buffer in your link with your eidolon, causing your bonded ally to wink out of existence before you can be laid low. Your eidolon unmanifests, and you can't Manifest your Eidolon for 1 minute. In exchange, you don't take the triggering damage, though your eidolon still suffers any other adverse effects that accompanied the damage." }
                 }
             };
         }

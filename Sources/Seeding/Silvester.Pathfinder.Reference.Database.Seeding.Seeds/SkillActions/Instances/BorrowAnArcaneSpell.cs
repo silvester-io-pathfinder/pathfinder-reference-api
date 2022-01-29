@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("3e83be2c-e571-4178-963a-0d3a0904b86f"), Type = TextBlockType.Text, Text = "If you�re an arcane spellcaster who prepares from a spellbook, you can attempt to prepare a spell from someone else�s spellbook. The GM sets the DC for the check based on the spell�s level and rarity; it�s typically a bit easier than Learning the Spell." };
+            yield return new TextBlock { Id = Guid.Parse("3e83be2c-e571-4178-963a-0d3a0904b86f"), Type = TextBlockType.Text, Text = "If you're an arcane spellcaster who prepares from a spellbook, you can attempt to prepare a spell from someone else's spellbook. The GM sets the DC for the check based on the spell's level and rarity; it's typically a bit easier than Learning the Spell." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = Guid.Parse("2af49cc7-db64-49c3-9679-91bbe2878865"),
                 Success = "You prepare the borrowed spell as part of your normal spell preparation.",
-                Failure = "You fail to prepare the spell, but the spell slot remains available for you to prepare a different spell. You can�t try to prepare this spell until the next time you prepare spells.",
+                Failure = "You fail to prepare the spell, but the spell slot remains available for you to prepare a different spell. You can't try to prepare this spell until the next time you prepare spells.",
             };
         }
 

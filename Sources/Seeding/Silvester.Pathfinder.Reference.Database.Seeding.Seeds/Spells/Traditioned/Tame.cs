@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("b9cdbc53-c19c-4431-a56f-76b81b6f3adf"), Type = TextBlockType.Text, Text = "As you make comforting sounds and gestures, you approach the target in a friendly manner combining caution and confidence. You improve the target�s attitude to you by one step (unfriendly to neutral, neutral to friendly, friendly to helpful) for the duration of the spell unless it succeeds at a Will save. Afterward, the target is temporarily immune for 1 day." };
+            yield return new TextBlock { Id = Guid.Parse("b9cdbc53-c19c-4431-a56f-76b81b6f3adf"), Type = TextBlockType.Text, Text = "As you make comforting sounds and gestures, you approach the target in a friendly manner combining caution and confidence. You improve the target's attitude to you by one step (unfriendly to neutral, neutral to friendly, friendly to helpful) for the duration of the spell unless it succeeds at a Will save. Afterward, the target is temporarily immune for 1 day." };
             yield return new TextBlock { Id = Guid.Parse("10202f37-a351-4dac-bbbc-9372891267b8"), Type = TextBlockType.Text, Text = "This spell works on only domesticated animals; for example, you could use it on guard dogs or stray dogs, but not feral dogs or wolves. If the socialization of the animal is in question, the decision is up to the GM." };
         }
 

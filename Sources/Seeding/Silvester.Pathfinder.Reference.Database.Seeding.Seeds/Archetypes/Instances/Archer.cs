@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("3bb5b4a4-6817-47ff-90f9-aa7f95228aca"), Type = TextBlockType.Text, Text = "Bows of all types are powerful weapons. Generals and hunters alike recognize the power in dealing death from long distances, and from behind cover. Those dedicated to the bow�from mysterious cloaked strangers to heartless snipers�are often viewed with a mixture of respect and fear. Like any weapon adept, the archer�s skill is forged through experience and constant practice. A true archer becomes one with the bow and is able to accomplish with that weapon things that most would consider impossible, or at least nearly magical." };
+            yield return new TextBlock { Id = Guid.Parse("3bb5b4a4-6817-47ff-90f9-aa7f95228aca"), Type = TextBlockType.Text, Text = "Bows of all types are powerful weapons. Generals and hunters alike recognize the power in dealing death from long distances, and from behind cover. Those dedicated to the bow - from mysterious cloaked strangers to heartless snipers - are often viewed with a mixture of respect and fear. Like any weapon adept, the archer's skill is forged through experience and constant practice. A true archer becomes one with the bow and is able to accomplish with that weapon things that most would consider impossible, or at least nearly magical." };
         }
 
         protected override SourcePage GetSourcePage()

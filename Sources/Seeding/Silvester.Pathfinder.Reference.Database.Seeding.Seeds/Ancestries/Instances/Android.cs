@@ -97,7 +97,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Ancestries.Insta
             yield return new TextBlock { Id = Guid.Parse("d7a28af9-57b1-43d4-80d7-67af9581089a"), Type = TextBlockType.Text, Text = "Your synthetic body resists ailments better than those of purely biological organisms. You gain a +1 circumstance bonus to saving throws against diseases, poisons, and radiation." };
 
             yield return new TextBlock { Id = Guid.Parse("7fb30a88-a990-4b16-81a7-8f4845075e19"), Type = TextBlockType.Heading, Text = "Emotionally Unaware" };
-            yield return new TextBlock { Id = Guid.Parse("467a9315-7a6a-4281-ba64-48d98f37bfa7"), Type = TextBlockType.Text, Text = "You find it difficult to understand and express complex emotions. You take a �1 circumstance penalty to Diplomacy and Performance checks, and on Perception checks to Sense Motive." };
+            yield return new TextBlock { Id = Guid.Parse("467a9315-7a6a-4281-ba64-48d98f37bfa7"), Type = TextBlockType.Text, Text = "You find it difficult to understand and express complex emotions. You take a -1 circumstance penalty to Diplomacy and Performance checks, and on Perception checks to Sense Motive." };
         }
 
         protected override IEnumerable<Guid> GetTraits()

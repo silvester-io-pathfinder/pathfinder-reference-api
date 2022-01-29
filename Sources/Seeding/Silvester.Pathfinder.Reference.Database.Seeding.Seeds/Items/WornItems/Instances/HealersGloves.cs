@@ -59,7 +59,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Frequency("Once per day.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("4e4a6ca3-1d76-4294-90a1-7ae4d0bdf2eb"), "You can soothe the wounds of a willing, living, adjacent creature, restoring 2d6+7 Hit Points to that creature. This is a positive healing effect. You can�t harm undead with this healing.");
+                                builder.Text(Guid.Parse("4e4a6ca3-1d76-4294-90a1-7ae4d0bdf2eb"), "You can soothe the wounds of a willing, living, adjacent creature, restoring 2d6+7 Hit Points to that creature. This is a positive healing effect. You can't harm undead with this healing.");
                             });
                     })
                     .Build()

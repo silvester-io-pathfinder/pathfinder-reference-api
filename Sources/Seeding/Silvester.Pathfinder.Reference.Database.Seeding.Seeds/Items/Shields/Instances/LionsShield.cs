@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Shields.In
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("44f496a8-87d8-4007-87b6-a2f33079f966"), "This steel shield (Hardness 6, HP 36, BT 18) is forged into the shape of a roaring lion�s head. The lion�s head functions as +1 striking shield boss that can�t be removed from the shield.");
+            builder.Text(Guid.Parse("44f496a8-87d8-4007-87b6-a2f33079f966"), "This steel shield (Hardness 6, HP 36, BT 18) is forged into the shape of a roaring lion's head. The lion's head functions as +1 striking shield boss that can't be removed from the shield.");
         }
 
         protected override void GetTraits(ITraitBindingBuilder<BaseItemTraitBinding, BaseItem> builder)
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Shields.In
                             .Frequency("Once per day.")
                             .Details(effect =>
                             {
-                                effect.Text(Guid.Parse("b7de9e83-bced-41ca-8b7c-39fd8e794f69"), "You animate the lion�s head. You Raise the Shield and make a melee Strike with it as part of the same action. The shield�s biting maw is a martial melee weapon that deals 2d6 piercing damage and has the deadly 1d6 trait; it can�t be enhanced by runes. The shield remains animated for 1 minute, during which time you can Strike with it each time you Raise the Shield, as well as with a Strike action.");
+                                effect.Text(Guid.Parse("b7de9e83-bced-41ca-8b7c-39fd8e794f69"), "You animate the lion's head. You Raise the Shield and make a melee Strike with it as part of the same action. The shield's biting maw is a martial melee weapon that deals 2d6 piercing damage and has the deadly 1d6 trait; it can't be enhanced by runes. The shield remains animated for 1 minute, during which time you can Strike with it each time you Raise the Shield, as well as with a Strike action.");
                             });
                     })
                     .Build()

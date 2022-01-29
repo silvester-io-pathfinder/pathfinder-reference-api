@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = Guid.Parse("04edeab3-254b-4faa-90a4-bc4ff28a4d3a"),
                 Success = "The creature does not notice you Palming the Object.",
-                Failure = "The creature notices you Palming the Object, and the GM determines the creature�s response.",
+                Failure = "The creature notices you Palming the Object, and the GM determines the creature's response.",
             };
         }
 

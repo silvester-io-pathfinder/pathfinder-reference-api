@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Oils.Insta
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("dfd18daf-d9f6-4764-a0fa-20a3849f9e57"), "When you apply this thick, viscous oil to a non-magical weapon or suit of armor, that item immediately becomes magically potent. If the item is a weapon, it temporarily becomes a +1 striking weapon, or, if it�s armor, it temporarily becomes +1 resilient armor. This lasts for 1 minute.");
+            builder.Text(Guid.Parse("dfd18daf-d9f6-4764-a0fa-20a3849f9e57"), "When you apply this thick, viscous oil to a non-magical weapon or suit of armor, that item immediately becomes magically potent. If the item is a weapon, it temporarily becomes a +1 striking weapon, or, if it's armor, it temporarily becomes +1 resilient armor. This lasts for 1 minute.");
         }
 
         protected override IEnumerable<OilVariant> GetOilVariants()

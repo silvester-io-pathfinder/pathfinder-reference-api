@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Fi
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("10ee0d2c-885a-43af-bf6f-df93fc8791aa"), Type = TextBlockType.Text, Text = "You�ve practiced your techniques to make them harder to resist. Your proficiency rank for your fighter class DC increases to expert." };
+            yield return new TextBlock { Id = Guid.Parse("10ee0d2c-885a-43af-bf6f-df93fc8791aa"), Type = TextBlockType.Text, Text = "you've practiced your techniques to make them harder to resist. Your proficiency rank for your fighter class DC increases to expert." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ra
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("d7404524-e598-4dd8-a921-04c54ec72bce"), Type = TextBlockType.Text, Text = "You size up your prey with only a glance. You can use Hunt Prey as a free action if it�s your first action of your turn." };
+            yield return new TextBlock { Id = Guid.Parse("d7404524-e598-4dd8-a921-04c54ec72bce"), Type = TextBlockType.Text, Text = "You size up your prey with only a glance. You can use Hunt Prey as a free action if it's your first action of your turn." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

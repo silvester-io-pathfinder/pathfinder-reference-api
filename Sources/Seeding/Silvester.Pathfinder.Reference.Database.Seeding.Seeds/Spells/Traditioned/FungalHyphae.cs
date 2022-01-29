@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "4th",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("70945cb5-09cd-46ed-931c-2eb90520f1ae"), Type = TextBlockType.Text, Text = "You can control plants in the area to a small degree, allowing you to make Strikes with tree branches, exposed roots, or similarly solid plants. To do so, you use a Strike action, but you can Strike any creature you can detect with your tremorsense. These are melee spell attacks that deal 2d8 bludgeoning damage plus your spellcasting ability modifier. Unusual plants, such as thorny vines, might deal a different type of damage at the GM�s discretion. You can�t make any other attacks through these plants, or take any other actions through them, other than these Strikes." }
+                    new TextBlock {Id = Guid.Parse("70945cb5-09cd-46ed-931c-2eb90520f1ae"), Type = TextBlockType.Text, Text = "You can control plants in the area to a small degree, allowing you to make Strikes with tree branches, exposed roots, or similarly solid plants. To do so, you use a Strike action, but you can Strike any creature you can detect with your tremorsense. These are melee spell attacks that deal 2d8 bludgeoning damage plus your spellcasting ability modifier. Unusual plants, such as thorny vines, might deal a different type of damage at the GM's discretion. You can't make any other attacks through these plants, or take any other actions through them, other than these Strikes." }
                 }
             };
 

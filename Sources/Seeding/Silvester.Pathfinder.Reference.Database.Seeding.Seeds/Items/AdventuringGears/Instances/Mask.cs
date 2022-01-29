@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Adventurin
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("81ac081c-1b16-4573-b6e2-6773edcf295a"), "This ordinary mask is made out of cheap material, such as paper-m�ch� or simple cloth. This can be specially fitted over another mask.")
+                    .Text(Guid.Parse("81ac081c-1b16-4573-b6e2-6773edcf295a"), "This ordinary mask is made out of cheap material, such as paper-mâché or simple cloth. This can be specially fitted over another mask.")
                     .Build()
             };
 

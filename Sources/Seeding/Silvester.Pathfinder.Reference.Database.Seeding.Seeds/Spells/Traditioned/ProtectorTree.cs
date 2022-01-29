@@ -27,8 +27,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("9273fc15-e6e4-4656-913c-1ac9b0891e97"), Type = TextBlockType.Text, Text = "A Medium tree suddenly grows in an unoccupied square within range. The tree has AC 10 and 10 Hit Points. Whenever an ally adjacent to the tree is hit by a Strike, the tree interposes its branches and takes the damage first. Any additional damage beyond what it takes to reduce the tree to 0 Hit Points is dealt to the original target. The tree isn�t large enough to impede movement through its square." };
-            yield return new TextBlock { Id = Guid.Parse("b366db4c-6512-44f5-bda9-4126bbd9db17"), Type = TextBlockType.Text, Text = "If the tree is in soil and survives to the end of the spell�s duration, it remains as an ordinary, non-magical tree, and continues to grow and thrive. The GM might determine that the tree disappears immediately in certain inhospitable situations." };
+            yield return new TextBlock { Id = Guid.Parse("9273fc15-e6e4-4656-913c-1ac9b0891e97"), Type = TextBlockType.Text, Text = "A Medium tree suddenly grows in an unoccupied square within range. The tree has AC 10 and 10 Hit Points. Whenever an ally adjacent to the tree is hit by a Strike, the tree interposes its branches and takes the damage first. Any additional damage beyond what it takes to reduce the tree to 0 Hit Points is dealt to the original target. The tree isn't large enough to impede movement through its square." };
+            yield return new TextBlock { Id = Guid.Parse("b366db4c-6512-44f5-bda9-4126bbd9db17"), Type = TextBlockType.Text, Text = "If the tree is in soil and survives to the end of the spell's duration, it remains as an ordinary, non-magical tree, and continues to grow and thrive. The GM might determine that the tree disappears immediately in certain inhospitable situations." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

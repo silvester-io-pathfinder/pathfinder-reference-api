@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                             .Kind("Interact")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("e5550513-0f2b-4bc6-a99a-e2a07d51299c"), "You aim the chime at a container, door, or lock you want to open and strike the chime. The chime sends out magical vibrations that attempt a Thievery check against the lock�s DC, with a Thievery bonus of +13. This targets only one lock or binding at a time, so you might need to activate the chime multiple times to open a target with several forms of protection.");
+                                details.Text(Guid.Parse("e5550513-0f2b-4bc6-a99a-e2a07d51299c"), "You aim the chime at a container, door, or lock you want to open and strike the chime. The chime sends out magical vibrations that attempt a Thievery check against the lock's DC, with a Thievery bonus of +13. This targets only one lock or binding at a time, so you might need to activate the chime multiple times to open a target with several forms of protection.");
                             });
                     })
                     .Build()

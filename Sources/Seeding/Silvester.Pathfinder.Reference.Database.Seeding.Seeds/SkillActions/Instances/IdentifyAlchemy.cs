@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = ID,
                 Name = "Identify Alchemy",
-                Requirements = "You are holding or wearing alchemist�s tools (page 287).",
+                Requirements = "You are holding or wearing alchemist's tools (page 287).",
                 ActionTypeId = ActionTypes.Instances.NoAction.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID
             };
@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("387f9bd5-037d-4b7d-bd93-4a619132129d"), Type = TextBlockType.Text, Text = "You can identify the nature of an alchemical item with 10 minutes of testing using alchemist�s tools. If your attempt is interrupted in any way, you must start over." };
+            yield return new TextBlock { Id = Guid.Parse("387f9bd5-037d-4b7d-bd93-4a619132129d"), Type = TextBlockType.Text, Text = "You can identify the nature of an alchemical item with 10 minutes of testing using alchemist's tools. If your attempt is interrupted in any way, you must start over." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -45,7 +45,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 Id = Guid.Parse("312d7e2f-0fdd-4a53-9b00-0523bdbc9d79"),
                 Success = "You identify the item and the means of activating it.",
                 Failure = "You fail to identify the item but can try again.",
-                CriticalFailure = "You misidentify the item as another item of the GM�s choice."
+                CriticalFailure = "You misidentify the item as another item of the GM's choice."
             };
         }
 

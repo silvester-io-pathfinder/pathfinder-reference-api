@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             {
                 Id = ID, 
                 Name = "Undead",
-                BloodMagic = "Necromantic energy flows through you or one target. Either you gain temporary Hit Points equal to the spell�s level for 1 round, or a target takes 1 negative damage per spell level (if the spell already deals initial negative damage, combine this with the spell�s initial damage before determining weaknesses and resistances).",
+                BloodMagic = "Necromantic energy flows through you or one target. Either you gain temporary Hit Points equal to the spell's level for 1 round, or a target takes 1 negative damage per spell level (if the spell already deals initial negative damage, combine this with the spell's initial damage before determining weaknesses and resistances).",
                 RarityId = Rarities.Instances.Common.ID,
                 InitialBloodlineSpellId = Spells.Instances.UndeathsBlessing.ID,
                 AdvancedBloodlineSpellId = Spells.Instances.DrainLife.ID,

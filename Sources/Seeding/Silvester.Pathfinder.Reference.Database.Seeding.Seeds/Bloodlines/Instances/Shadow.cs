@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             {
                 Id = ID, 
                 Name = "Shadow",
-                BloodMagic = "Shadows grow deeper around you or one target, either granting a +1 status bonus to Stealth or imposing a �1 status penalty to Perception for 1 round.",
+                BloodMagic = "Shadows grow deeper around you or one target, either granting a +1 status bonus to Stealth or imposing a -1 status penalty to Perception for 1 round.",
                 RarityId = Rarities.Instances.Common.ID,
                 InitialBloodlineSpellId = Spells.Instances.DimTheLight.ID,
                 AdvancedBloodlineSpellId = Spells.Instances.StealShadow.ID,

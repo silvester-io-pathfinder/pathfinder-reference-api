@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "+2",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("7595a9dd-094c-4eda-9844-8b85dc78f545"), Type = TextBlockType.Text, Text = "The area that an illusory object can fit in increases by 10 feet. The damage of the illusory creature�s Strike increases by 1d8." }
+                    new TextBlock {Id = Guid.Parse("7595a9dd-094c-4eda-9844-8b85dc78f545"), Type = TextBlockType.Text, Text = "The area that an illusory object can fit in increases by 10 feet. The damage of the illusory creature's Strike increases by 1d8." }
                 }
             };
         }

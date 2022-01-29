@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Rackets.Instance
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("ae59e2c4-ceaf-4420-88fc-2c1e70562b91"), Type = TextBlockType.Text, Text = "Nothing beats the thrill of taking something that belongs to someone else, especially if you can do so completely unnoticed. You might be a pickpocket working the streets, a cat burglar sneaking through windows and escaping via rooftops, or a safecracker breaking into carefully guarded vaults. You might even work as a consultant, testing clients� defenses by trying to steal something precious." };
+            yield return new TextBlock { Id = Guid.Parse("ae59e2c4-ceaf-4420-88fc-2c1e70562b91"), Type = TextBlockType.Text, Text = "Nothing beats the thrill of taking something that belongs to someone else, especially if you can do so completely unnoticed. You might be a pickpocket working the streets, a cat burglar sneaking through windows and escaping via rooftops, or a safecracker breaking into carefully guarded vaults. You might even work as a consultant, testing clients' defenses by trying to steal something precious." };
             yield return new TextBlock { Id = Guid.Parse("713526ce-6318-4f00-abef-7881b9bcdf2e"), Type = TextBlockType.Text, Text = "When a fight breaks out, you prefer swift, lightweight weapons, and you strike where it hurts. When you attack with a finesse melee weapon, you can add your Dexterity modifier to damage rolls instead of your Strength modifier." };
             yield return new TextBlock { Id = Guid.Parse("2211405f-56c0-44ed-998f-7e4efd68eb98"), Type = TextBlockType.Text, Text = "You are trained in Thievery." };
         }

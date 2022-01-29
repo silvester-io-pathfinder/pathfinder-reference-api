@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("8ab46c61-4f62-4689-bc7c-dcaabd040218"), Type = TextBlockType.Text, Text = "You alter the target�s memories of the triggering event as they form. You choose another creature (which can be you) with the capacity to make the triggering attack or skill check, and you alter the target�s memories to recall the creature you chose as responsible for the triggering attack or skill check. The target must attempt a Will save and is then temporarily immune for 24 hours." };
+            yield return new TextBlock { Id = Guid.Parse("8ab46c61-4f62-4689-bc7c-dcaabd040218"), Type = TextBlockType.Text, Text = "You alter the target's memories of the triggering event as they form. You choose another creature (which can be you) with the capacity to make the triggering attack or skill check, and you alter the target's memories to recall the creature you chose as responsible for the triggering attack or skill check. The target must attempt a Will save and is then temporarily immune for 24 hours." };
         }
 
         public override IEnumerable<RollableEffect> GetRollableEffects()
@@ -39,8 +39,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("c4c8b873-0c7a-45fb-9189-7b26c9460bff"),
                 CriticalSuccess = "The target knows you attempted to alter its memories.",
-                Success = "The target doesn�t realize you attempted to alter its memories, though it knows you cast a spell.",
-                Failure = "You successfully alter the target�s memory. It isn�t forced to react to the new memories in a particular way, and it�s likely to question them if they contradict other information it knows or are implausible for the situation.",
+                Success = "The target doesn't realize you attempted to alter its memories, though it knows you cast a spell.",
+                Failure = "You successfully alter the target's memory. It isn't forced to react to the new memories in a particular way, and it's likely to question them if they contradict other information it knows or are implausible for the situation.",
             };
         }
 

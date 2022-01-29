@@ -22,8 +22,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("731f2949-8697-46a0-912d-7e30393491a9"), Type = TextBlockType.Text, Text = "You Stride, then make a horizontal Leap and attempt an Athletics check to increase the length of your jump. The DC of the Athletics check is equal to the total distance in feet you�re attempting to move during your Leap (so you�d need to succeed at a DC 20 check to Leap 20 feet). You can�t Leap farther than your Speed." };
-            yield return new TextBlock { Id = Guid.Parse("0e76aaea-53bc-4176-a8c8-715c6cca34f1"), Type = TextBlockType.Text, Text = "If you didn�t Stride at least 10 feet, or if you attempt to jump in a different direction than your Stride, you automatically fail your check. This DC might be increased or decreased due to the situation, as determined by the GM." };
+            yield return new TextBlock { Id = Guid.Parse("731f2949-8697-46a0-912d-7e30393491a9"), Type = TextBlockType.Text, Text = "You Stride, then make a horizontal Leap and attempt an Athletics check to increase the length of your jump. The DC of the Athletics check is equal to the total distance in feet you're attempting to move during your Leap (so you'd need to succeed at a DC 20 check to Leap 20 feet). You can't Leap farther than your Speed." };
+            yield return new TextBlock { Id = Guid.Parse("0e76aaea-53bc-4176-a8c8-715c6cca34f1"), Type = TextBlockType.Text, Text = "If you didn't Stride at least 10 feet, or if you attempt to jump in a different direction than your Stride, you automatically fail your check. This DC might be increased or decreased due to the situation, as determined by the GM." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()

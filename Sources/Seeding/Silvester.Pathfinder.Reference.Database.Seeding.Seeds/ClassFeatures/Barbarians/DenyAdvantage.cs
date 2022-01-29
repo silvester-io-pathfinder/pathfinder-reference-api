@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("55a05be6-018d-4f6a-aec2-771a483f1d16"), Type = TextBlockType.Text, Text = "Your foes struggle to pass your defenses. You aren�t flat-footed to hidden, undetected, or flanking creatures of your level or lower, or creatures of your level or lower using surprise attack. However, they can still help their allies flank." };
+            yield return new TextBlock { Id = Guid.Parse("55a05be6-018d-4f6a-aec2-771a483f1d16"), Type = TextBlockType.Text, Text = "Your foes struggle to pass your defenses. You aren't flat-footed to hidden, undetected, or flanking creatures of your level or lower, or creatures of your level or lower using surprise attack. However, they can still help their allies flank." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

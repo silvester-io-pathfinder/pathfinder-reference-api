@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.So
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("3f796f14-022c-47d4-b757-309f8ee27ada"), Type = TextBlockType.Text, Text = "Your inherent magic responds easily and powerfully to your command. Your proficiency ranks for spell attack rolls and spell DCs for spells of your bloodline�s tradition increase to expert." };
+            yield return new TextBlock { Id = Guid.Parse("3f796f14-022c-47d4-b757-309f8ee27ada"), Type = TextBlockType.Text, Text = "Your inherent magic responds easily and powerfully to your command. Your proficiency ranks for spell attack rolls and spell DCs for spells of your bloodline's tradition increase to expert." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

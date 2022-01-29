@@ -33,7 +33,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.HybridStudies.In
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("fbe8d5f6-b4dc-4401-a70a-d6e40e9ebbfb"), Type = TextBlockType.Text, Text = "The staff is perhaps one of the simplest of weapons, but this simplicity belies its elegance and versatility. To you, a staff is casting implement and martial weapon alike�the foundation of a fighting style." };
+            yield return new TextBlock { Id = Guid.Parse("fbe8d5f6-b4dc-4401-a70a-d6e40e9ebbfb"), Type = TextBlockType.Text, Text = "The staff is perhaps one of the simplest of weapons, but this simplicity belies its elegance and versatility. To you, a staff is casting implement and martial weapon alike - the foundation of a fighting style." };
             yield return new TextBlock { Id = Guid.Parse("4f6f59f6-9202-4beb-8129-944c89d910b4"), Type = TextBlockType.Text, Text = "While you wield a staff in one hand, the staff adjusts in shape and weight, gaining the agile trait and increasing its damage die size to 1d6. While you wield a staff in both hands, it lengthens, twists, and reshapes, gaining the parry, reach, and trip traits. While you're in Arcane Cascade stance, you can Interact or Release to change your grip on the weapon as a free action when you Strike with your staff, including Strikes made in a Spellstrike. This happens before you roll your attack roll. You can also Interact to change your grip on the staff as a free action triggered at the end of your turn. " };
         }
 

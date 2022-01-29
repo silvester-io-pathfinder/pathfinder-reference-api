@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ba
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("cba2cc9c-e76d-46f9-a741-a2f7705a6c29"), Type = TextBlockType.Text, Text = "The weapons you�ve mastered become truly fearsome in your hands. Your damage from weapon specialization increases to 4 with weapons and unarmed attacks in which you�re an expert, 6 if you�re a master, and 8 if you�re legendary. You gain a greater benefit from your instinct�s specialization ability." };
+            yield return new TextBlock { Id = Guid.Parse("cba2cc9c-e76d-46f9-a741-a2f7705a6c29"), Type = TextBlockType.Text, Text = "The weapons you've mastered become truly fearsome in your hands. Your damage from weapon specialization increases to 4 with weapons and unarmed attacks in which you're an expert, 6 if you're a master, and 8 if you're legendary. You gain a greater benefit from your instinct's specialization ability." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

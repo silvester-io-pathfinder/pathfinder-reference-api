@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Frequency("Once per day.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("f22678d0-6db2-4c5e-bef2-d0b1c75d3819"), "You trace a finger along the wind motifs on the barding, granting your companion wearing the barding a fly Speed of 30 feet for 10 minutes. Even if the companion doesn�t have the mount special ability, it can still Fly while being ridden.");
+                                builder.Text(Guid.Parse("f22678d0-6db2-4c5e-bef2-d0b1c75d3819"), "You trace a finger along the wind motifs on the barding, granting your companion wearing the barding a fly Speed of 30 feet for 10 minutes. Even if the companion doesn't have the mount special ability, it can still Fly while being ridden.");
                             });
                     })
                     .Build()

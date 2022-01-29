@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("ce94a3ba-24ff-4b76-ae62-29f45ed90a68"), Type = TextBlockType.Text, Text = "You summon a tumultuous cloud of ash and smoke. The cloud is difficult terrain for flying creatures, and creatures in the cloud can�t detect anything using their sense of smell. Creatures that start their turn within the cloud take 2d4 fire damage as their lungs fill with the hot, acrid smoke, with a Fortitude save." };
+            yield return new TextBlock { Id = Guid.Parse("ce94a3ba-24ff-4b76-ae62-29f45ed90a68"), Type = TextBlockType.Text, Text = "You summon a tumultuous cloud of ash and smoke. The cloud is difficult terrain for flying creatures, and creatures in the cloud can't detect anything using their sense of smell. Creatures that start their turn within the cloud take 2d4 fire damage as their lungs fill with the hot, acrid smoke, with a Fortitude save." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

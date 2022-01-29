@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("2b1470c6-e810-4092-bafd-485b64c3cb8d"), Type = TextBlockType.Text, Text = "You ward the target item against those who would steal it. When a creature attempts to take the target into its possession, it takes 8d8 mental damage and is doomed, depending on the result of its Will save. The spell then ends. You can choose up to 10 creatures when you cast this spell; if you do, those creatures can take the target item without triggering the ward. You can only have one bandit�s doom active at a time. If you cast the spell again, the newer casting supersedes the older." };
+            yield return new TextBlock { Id = Guid.Parse("2b1470c6-e810-4092-bafd-485b64c3cb8d"), Type = TextBlockType.Text, Text = "You ward the target item against those who would steal it. When a creature attempts to take the target into its possession, it takes 8d8 mental damage and is doomed, depending on the result of its Will save. The spell then ends. You can choose up to 10 creatures when you cast this spell; if you do, those creatures can take the target item without triggering the ward. You can only have one bandit's doom active at a time. If you cast the spell again, the newer casting supersedes the older." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

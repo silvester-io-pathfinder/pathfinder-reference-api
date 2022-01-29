@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Traits.Instances
 
         protected override IEnumerable<TextBlock> GetDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("891b1e6c-b141-453c-90d9-8d38c96df05a"), Type = TextBlockType.Text, Text = "A kickback weapon is extra powerful and difficult to use. A kickback weapon deals 1 additional damage with all attacks. Firing a kickback weapon gives a �2 circumstance penalty to the attack roll, but characters with 14 or more Strength ignore the penalty. Attaching a kickback weapon to stabilizers can lower or negate this penalty (page 182 of Guns & Gears)." };
+            yield return new TextBlock { Id = Guid.Parse("891b1e6c-b141-453c-90d9-8d38c96df05a"), Type = TextBlockType.Text, Text = "A kickback weapon is extra powerful and difficult to use. A kickback weapon deals 1 additional damage with all attacks. Firing a kickback weapon gives a -2 circumstance penalty to the attack roll, but characters with 14 or more Strength ignore the penalty. Attaching a kickback weapon to stabilizers can lower or negate this penalty (page 182 of Guns & Gears)." };
         }
 
         protected override SourcePage GetSourcePage()

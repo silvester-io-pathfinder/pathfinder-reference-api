@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Sw
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("fc2540a9-3c92-467b-86d2-5e4ad8095ae9"), Type = TextBlockType.Text, Text = "Through your adventuring, you�ve developed keen awareness and attention to detail. Your proficiency rank for Perception increases to master." };
+            yield return new TextBlock { Id = Guid.Parse("fc2540a9-3c92-467b-86d2-5e4ad8095ae9"), Type = TextBlockType.Text, Text = "Through your adventuring, you've developed keen awareness and attention to detail. Your proficiency rank for Perception increases to master." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

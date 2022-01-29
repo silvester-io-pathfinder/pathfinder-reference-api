@@ -39,9 +39,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("a8a60d81-2211-4f20-9c06-e693ca4f39a2"),
                 CriticalSuccess = "The target is unaffected.",
-                Success = "The target takes 5d6 mental damage, is frightened 1, and can�t benefit from circumstance or status bonuses for 1 round.",
-                Failure = "The target takes 10d6 mental damage, is frightened 3, and can�t benefit from circumstance or status bonuses for 1 week.",
-                CriticalFailure = "The target takes 20d6 mental damage and is frightened 4. It can�t benefit from circumstance or status bonuses until the curse is broken. While the curse remains, the target�s allies are also unable to benefit from circumstance or status bonuses while within 15 feet of it."
+                Success = "The target takes 5d6 mental damage, is frightened 1, and can't benefit from circumstance or status bonuses for 1 round.",
+                Failure = "The target takes 10d6 mental damage, is frightened 3, and can't benefit from circumstance or status bonuses for 1 week.",
+                CriticalFailure = "The target takes 20d6 mental damage and is frightened 4. It can't benefit from circumstance or status bonuses until the curse is broken. While the curse remains, the target's allies are also unable to benefit from circumstance or status bonuses while within 15 feet of it."
             };
         }
 

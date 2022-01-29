@@ -28,8 +28,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ro
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("84f360a1-f996-4af9-89b8-35cbfd3cfbb1"), Type = TextBlockType.Text, Text = "You gain more skill increases than members of other classes. At 2nd level and every level thereafter, you gain a skill increase. You can use this increase to either become trained in one skill you�re untrained in, or to become an expert in one skill in which you�re already trained." };
-            yield return new TextBlock { Id = Guid.Parse("66670794-a3cb-4734-95f4-5baba682bf30"), Type = TextBlockType.Text, Text = "At 7th level, you can use skill increases to become a master in a skill in which you�re already an expert, and at 15th level, you can use them to become legendary in a skill in which you�re already a master." };
+            yield return new TextBlock { Id = Guid.Parse("84f360a1-f996-4af9-89b8-35cbfd3cfbb1"), Type = TextBlockType.Text, Text = "You gain more skill increases than members of other classes. At 2nd level and every level thereafter, you gain a skill increase. You can use this increase to either become trained in one skill you're untrained in, or to become an expert in one skill in which you're already trained." };
+            yield return new TextBlock { Id = Guid.Parse("66670794-a3cb-4734-95f4-5baba682bf30"), Type = TextBlockType.Text, Text = "At 7th level, you can use skill increases to become a master in a skill in which you're already an expert, and at 15th level, you can use them to become legendary in a skill in which you're already a master." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

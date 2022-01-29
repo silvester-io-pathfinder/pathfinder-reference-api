@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("cda33a95-4e99-4980-ae35-d68ba03b7ded"), Type = TextBlockType.Text, Text = "You conjure a jagged lance of stone and then launch it at a foe. Make a spell attack roll against the target. On a hit, you deal 6d6 piercing damage and the lance impales the creature, giving it a �10-foot circumstance penalty to its Speeds unless it Escapes. On a critical hit, if the creature is on the ground, the lance also embeds into the ground and immobilizes the creature until it Escapes. A creature that Escapes after being impaled takes 3 persistent bleed damage. When the spell ends, the lance crumbles into dirt, freeing the target if it hasn�t Escaped." };
+            yield return new TextBlock { Id = Guid.Parse("cda33a95-4e99-4980-ae35-d68ba03b7ded"), Type = TextBlockType.Text, Text = "You conjure a jagged lance of stone and then launch it at a foe. Make a spell attack roll against the target. On a hit, you deal 6d6 piercing damage and the lance impales the creature, giving it a -10-foot circumstance penalty to its Speeds unless it Escapes. On a critical hit, if the creature is on the ground, the lance also embeds into the ground and immobilizes the creature until it Escapes. A creature that Escapes after being impaled takes 3 persistent bleed damage. When the spell ends, the lance crumbles into dirt, freeing the target if it hasn't Escaped." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

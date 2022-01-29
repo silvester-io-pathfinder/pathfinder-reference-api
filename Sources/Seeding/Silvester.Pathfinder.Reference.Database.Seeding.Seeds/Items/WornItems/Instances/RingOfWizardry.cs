@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
         protected override void GetDetails(ITextBlockBuilder builder)
         {
             builder.Text(Guid.Parse("e1a250f7-6c70-4d1a-bf6a-98918b4e6e78"), "This ring is made from the purest platinum and is covered in esoteric arcane symbols. It does nothing unless you have a spellcasting class feature with the arcane tradition. While wearing the ring of wizardry, you gain a +1 item bonus to Arcana checks and have two additional 1st-level arcane spell slots each day. You prepare spells in these slots or cast from them spontaneously, just as you normally cast your spells.");
-            builder.Text(Guid.Parse("6d325286-f3e2-479c-829a-0c12a2badc70"), "If you take off the ring for any reason, you lose the additional spell slots. You can�t gain spell slots from more than one ring of wizardry per day, nor can a single ring of wizardry grant spell slots more than once per day.");
+            builder.Text(Guid.Parse("6d325286-f3e2-479c-829a-0c12a2badc70"), "If you take off the ring for any reason, you lose the additional spell slots. You can't gain spell slots from more than one ring of wizardry per day, nor can a single ring of wizardry grant spell slots more than once per day.");
             builder.Text(Guid.Parse("938f82c1-0984-4e19-89d1-451f1646d7de"), "If you can cast arcane spells in a variety of different ways (such as if you are a draconic bloodline sorcerer with the wizard multiclass archetype), you can divide the spell slots as you wish among your various sources of arcane spells.");
         }
 

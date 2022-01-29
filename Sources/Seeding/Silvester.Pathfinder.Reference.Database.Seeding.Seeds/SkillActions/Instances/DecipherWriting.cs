@@ -66,7 +66,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 Id = Guid.Parse("d5dfe899-b152-43dd-9a2a-b6824796fe79"),
                 CriticalSuccess = "You understand the true meaning of the text.",
                 Success = "You understand the true meaning of the text. If it was a coded document, you know the general meaning but might not have a word-for-word translation.",
-                Failure = "You can�t understand the text and take a �2 circumstance penalty to further checks to decipher it.",
+                Failure = "You can't understand the text and take a -2 circumstance penalty to further checks to decipher it.",
                 CriticalFailure = "You believe you understand the text on that page, but you have in fact misconstrued its message."
             };
         }

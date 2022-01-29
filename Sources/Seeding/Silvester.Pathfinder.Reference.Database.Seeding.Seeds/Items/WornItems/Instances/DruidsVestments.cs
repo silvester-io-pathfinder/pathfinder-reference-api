@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Frequency("Once per day.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("0bd62e1a-d706-408b-84f0-cae4216be6ae"), "You gain 1 Focus Point, which you can spend only to cast an order spell. If you don�t spend this Focus Point by the end of this turn, it is lost.");
+                                builder.Text(Guid.Parse("0bd62e1a-d706-408b-84f0-cae4216be6ae"), "You gain 1 Focus Point, which you can spend only to cast an order spell. If you don't spend this Focus Point by the end of this turn, it is lost.");
                             });
                     })
                     .Build()

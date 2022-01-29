@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetMulticlassDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("adc7f933-8c9e-46a6-9fe9-c744f38394f2"), Type = TextBlockType.Text, Text = "The bard archetype grants powerful effects that tend to use actions; it�s a great choice if you have actions to spare." };
+            yield return new TextBlock { Id = Guid.Parse("adc7f933-8c9e-46a6-9fe9-c744f38394f2"), Type = TextBlockType.Text, Text = "The bard archetype grants powerful effects that tend to use actions; it's a great choice if you have actions to spare." };
         }
 
         protected override SourcePage GetSourcePage()

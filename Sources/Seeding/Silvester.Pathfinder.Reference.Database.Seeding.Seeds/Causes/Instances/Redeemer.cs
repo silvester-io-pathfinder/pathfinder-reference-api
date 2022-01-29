@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Causes.Instances
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("de68291f-17a8-4836-ad41-f6e1088b0359"), Type = TextBlockType.Text, Text = "You�re full of kindness and forgiveness. You gain the Glimpse of Redemption champion�s reaction and the lay on hands devotion spell. After the tenets of good, add these:" };
+            yield return new TextBlock { Id = Guid.Parse("de68291f-17a8-4836-ad41-f6e1088b0359"), Type = TextBlockType.Text, Text = "you're full of kindness and forgiveness. You gain the Glimpse of Redemption champion's reaction and the lay on hands devotion spell. After the tenets of good, add these:" };
             yield return new TextBlock { Id = Guid.Parse("d4bb2041-b9f9-44b2-89d8-f17b32b613b3"), Type = TextBlockType.Enumeration, Text = "You must first try to redeem those who commit evil acts, rather than killing them or meting out punishment. If they then continue on a wicked path, you might need to take more extreme measures." };
             yield return new TextBlock { Id = Guid.Parse("1548fd85-b08b-47a3-bc5e-2117b687dfbd"), Type = TextBlockType.Enumeration, Text = "You must show compassion for others, regardless of their authority or station." };
         }

@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.MeleeWeapo
 				BulkId = Bulks.Instances.LightBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,
 				Addendum = new TextBlockBuilder()
-					.Text(Guid.Parse("4c8ce708-18c8-4b45-bbba-94f25e38f6ee"), "This blade or spike can be attached to a crossbow or firearm but, unlike other attached weapons, can be wielded in one hand as its own weapon. When used as a separate weapon, it can�t benefit from any runes or abilities that function only for attached weapons.")
+					.Text(Guid.Parse("4c8ce708-18c8-4b45-bbba-94f25e38f6ee"), "This blade or spike can be attached to a crossbow or firearm but, unlike other attached weapons, can be wielded in one hand as its own weapon. When used as a separate weapon, it can't benefit from any runes or abilities that function only for attached weapons.")
 					.Build()
 			};
 		}

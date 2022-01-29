@@ -47,7 +47,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                 BulkId = Bulks.Instances.LightBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("f4f4bd35-6196-4855-8dde-ecd1b3a678b0"), "This statuette depicts a pair of gold lions, and when activated, it becomes a pair of adult lions (Pathfinder Bestiary 52). The lions can be called on only once per day, and they remain in lion form for no more than 1 hour. If either of the lions is slain, that lion cannot be summoned again until 1 week has passed, but this doesn�t prevent you from summoning the other.")
+                    .Text(Guid.Parse("f4f4bd35-6196-4855-8dde-ecd1b3a678b0"), "This statuette depicts a pair of gold lions, and when activated, it becomes a pair of adult lions (Pathfinder Bestiary 52). The lions can be called on only once per day, and they remain in lion form for no more than 1 hour. If either of the lions is slain, that lion cannot be summoned again until 1 week has passed, but this doesn't prevent you from summoning the other.")
                     .Build(),
                 InlineActions = new InlineActionCollectionBuilder()
                     .Add(Guid.Parse("24566d1b-4b82-42ed-b850-58f58f106263"), ActionTypes.Instances.TwoActions.ID, "Activate", action =>
@@ -131,7 +131,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                 BulkId = Bulks.Instances.LightBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("beacf925-7640-4558-86ba-9fb1a669af2f"), "This sinister-looking black statuette resembles a horse rearing up on its hind legs. When activated, this figurine becomes a nightmare (Pathfinder Bestiary 244). It can be called upon once per week for up to 24 hours, though it won�t use plane shift or its other abilities on behalf of its rider. Although evil, it allows itself to be ridden by creatures of any alignment, although if a good creature mounts it, the rider must attempt a DC 3 flat check. On a failure, the nightmare uses plane shift to take the rider to a random location in the Abyss, where it promptly returns to statue form, stranding its rider in that nightmarish place.")
+                    .Text(Guid.Parse("beacf925-7640-4558-86ba-9fb1a669af2f"), "This sinister-looking black statuette resembles a horse rearing up on its hind legs. When activated, this figurine becomes a nightmare (Pathfinder Bestiary 244). It can be called upon once per week for up to 24 hours, though it won't use plane shift or its other abilities on behalf of its rider. Although evil, it allows itself to be ridden by creatures of any alignment, although if a good creature mounts it, the rider must attempt a DC 3 flat check. On a failure, the nightmare uses plane shift to take the rider to a random location in the Abyss, where it promptly returns to statue form, stranding its rider in that nightmarish place.")
                     .Build(),
                 InlineActions = new InlineActionCollectionBuilder()
                     .Add(Guid.Parse("5bcd1989-9d5b-4f8f-8df5-f39135980d09"), ActionTypes.Instances.TwoActions.ID, "Activate", action =>

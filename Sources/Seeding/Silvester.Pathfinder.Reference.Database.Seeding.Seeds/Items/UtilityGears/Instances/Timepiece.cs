@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Adventurin
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("de45bc0b-1f2f-4d7d-b79f-8db52d8946eb"), "Clockwork timepieces come in a variety of sizes and aesthetic styles, but they�re all designed to display the accurate time of day down to the second.");
+            builder.Text(Guid.Parse("de45bc0b-1f2f-4d7d-b79f-8db52d8946eb"), "Clockwork timepieces come in a variety of sizes and aesthetic styles, but they're all designed to display the accurate time of day down to the second.");
             builder.Text(Guid.Parse("d168d36b-6ea5-407d-b071-c6ed3ae0f8d4"), "Clockwork timepieces have a 24-hour activation cycle, after which they must wound in a process that takes 1 minute to complete.");
         }
 
@@ -46,7 +46,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Adventurin
                 BulkId = Bulks.Instances.ThreeBulk.ID,
                 RarityId = Rarities.Instances.Uncommon.ID,
                 Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("6c7b911f-4d63-4739-b6ee-7fe07c2bf068"), "Desktop clocks have been designed to be small enough to only take up a quarter of a typical writing desk�s surface area, but they�re still too bulky and heavy to be lugged around casually.")
+                    .Text(Guid.Parse("6c7b911f-4d63-4739-b6ee-7fe07c2bf068"), "Desktop clocks have been designed to be small enough to only take up a quarter of a typical writing desk's surface area, but they're still too bulky and heavy to be lugged around casually.")
                     .Build()
             };
 

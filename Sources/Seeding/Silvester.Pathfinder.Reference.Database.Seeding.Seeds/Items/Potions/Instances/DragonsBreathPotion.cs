@@ -27,8 +27,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Potions.In
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("e9011cec-91b2-4d77-9c5f-510f3c7c1dc5"), "This viscous liquid contains blood from a certain type of dragon. For 1 hour after you imbibe the concoction, you can unleash a breath weapon used by that type of dragon. The potency of the breath depends on the potion�s type, based on the age of the dragon whose blood was used to make the potion. This potion has the trait matching the damage type of the breath weapon.");
-            builder.Text(Guid.Parse("3991a6c4-0b08-498c-974e-9cc195070b73"), "Exhaling dragon breath uses a single action. The damage type and the area of the dragon breath depend on the type of dragon blood in the potion, as shown in the table below. After you use the breath weapon, you can�t do so again for 1d4 rounds.");
+            builder.Text(Guid.Parse("e9011cec-91b2-4d77-9c5f-510f3c7c1dc5"), "This viscous liquid contains blood from a certain type of dragon. For 1 hour after you imbibe the concoction, you can unleash a breath weapon used by that type of dragon. The potency of the breath depends on the potion's type, based on the age of the dragon whose blood was used to make the potion. This potion has the trait matching the damage type of the breath weapon.");
+            builder.Text(Guid.Parse("3991a6c4-0b08-498c-974e-9cc195070b73"), "Exhaling dragon breath uses a single action. The damage type and the area of the dragon breath depend on the type of dragon blood in the potion, as shown in the table below. After you use the breath weapon, you can't do so again for 1d4 rounds.");
         }
 
         protected override IEnumerable<PotionVariant> GetPotionVariants()

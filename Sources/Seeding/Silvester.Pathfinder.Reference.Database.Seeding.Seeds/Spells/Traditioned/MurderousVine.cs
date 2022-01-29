@@ -29,8 +29,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("1c44c20b-6417-4e93-90e1-529e71b29662"), Type = TextBlockType.Text, Text = "You summon a slithering, thorny vine that attempts to constrict and crush a foe against a wall or other surface. Make a spell attack roll against the target�s Fortitude DC. On a success, the creature is grabbed and takes 3d6 bludgeoning damage and 2d8 piercing damage. At the end of that creature�s turn, if it�s still grabbed by the vine, it takes 2d6 bludgeoning damage." };
-            yield return new TextBlock { Id = Guid.Parse("ad40ba8a-3511-4d35-b2d2-bdcb55ff3bfa"), Type = TextBlockType.Text, Text = "The vine�s Escape DC is equal to your spell DC. A creature can attack the vine in an attempt to break its grip. The vine�s AC is equal to your spell DC, and the vine is destroyed if it takes 20 or more damage. Destroying or escaping from the vines ends the spell." };
+            yield return new TextBlock { Id = Guid.Parse("1c44c20b-6417-4e93-90e1-529e71b29662"), Type = TextBlockType.Text, Text = "You summon a slithering, thorny vine that attempts to constrict and crush a foe against a wall or other surface. Make a spell attack roll against the target's Fortitude DC. On a success, the creature is grabbed and takes 3d6 bludgeoning damage and 2d8 piercing damage. At the end of that creature's turn, if it's still grabbed by the vine, it takes 2d6 bludgeoning damage." };
+            yield return new TextBlock { Id = Guid.Parse("ad40ba8a-3511-4d35-b2d2-bdcb55ff3bfa"), Type = TextBlockType.Text, Text = "The vine's Escape DC is equal to your spell DC. A creature can attack the vine in an attempt to break its grip. The vine's AC is equal to your spell DC, and the vine is destroyed if it takes 20 or more damage. Destroying or escaping from the vines ends the spell." };
             yield return new TextBlock { Id = Guid.Parse("21c1717a-bc2b-4a55-9a1c-33d31f0ed2cb"), Type = TextBlockType.Text, Text = "You can Dismiss the spell." };
         }
 

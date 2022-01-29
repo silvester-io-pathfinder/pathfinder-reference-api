@@ -28,8 +28,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("c8929e17-0e4d-4049-8e4c-719b8835b5d4"), Type = TextBlockType.Text, Text = "You envenom your companion or eidolon�s attacks, which drip with highly toxic venom for the spell�s duration. The first time each round the target hits a creature with an unarmed Strike that deals piercing or slashing damage, that Strike deals an additional 1d8 poison damage. A creature that is damaged by this poison must attempt a Fortitude save. On a failure, it�s also clumsy 1 for 1 round." };
-            yield return new TextBlock { Id = Guid.Parse("14918198-74d8-49da-b37f-dea8814d391f"), Type = TextBlockType.Text, Text = "This spell can�t target familiars." };
+            yield return new TextBlock { Id = Guid.Parse("c8929e17-0e4d-4049-8e4c-719b8835b5d4"), Type = TextBlockType.Text, Text = "You envenom your companion or eidolon's attacks, which drip with highly toxic venom for the spell's duration. The first time each round the target hits a creature with an unarmed Strike that deals piercing or slashing damage, that Strike deals an additional 1d8 poison damage. A creature that is damaged by this poison must attempt a Fortitude save. On a failure, it's also clumsy 1 for 1 round." };
+            yield return new TextBlock { Id = Guid.Parse("14918198-74d8-49da-b37f-dea8814d391f"), Type = TextBlockType.Text, Text = "This spell can't target familiars." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = ID,
                 Name = "Treat Disease",
-                Requirements = "You�re wearing or holding healer�s tools (page 290).",
+                Requirements = "you're wearing or holding healer's tools (page 290).",
                 ActionTypeId = ActionTypes.Instances.NoAction.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID
             };
@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("503846d7-e5ba-4c19-9f33-8dd3d0b6de79"), Type = TextBlockType.Text, Text = "You spend at least 8 hours caring for a diseased creature. Attempt a Medicine check against the disease�s DC. After you attempt to Treat a Disease for a creature, you can�t try again until after that creature�s next save against the disease." };
+            yield return new TextBlock { Id = Guid.Parse("503846d7-e5ba-4c19-9f33-8dd3d0b6de79"), Type = TextBlockType.Text, Text = "You spend at least 8 hours caring for a diseased creature. Attempt a Medicine check against the disease's DC. After you attempt to Treat a Disease for a creature, you can't try again until after that creature's next save against the disease." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
                 Id = Guid.Parse("eb7aef2c-acbe-46ce-9175-e71985f61053"),
                 CriticalSuccess = "You grant the creature a +4 circumstance bonus to its next saving throw against the disease.",
                 Success = "You grant the creature a +2 circumstance bonus to its next saving throw against the disease.",
-                CriticalFailure = "Your efforts cause the creature to take a �2 circumstance penalty to its next save against the disease."
+                CriticalFailure = "Your efforts cause the creature to take a -2 circumstance penalty to its next save against the disease."
             };
         }
 

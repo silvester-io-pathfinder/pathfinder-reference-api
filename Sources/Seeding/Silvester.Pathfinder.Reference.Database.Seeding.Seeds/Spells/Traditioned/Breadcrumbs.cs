@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("39692ef1-ae99-455e-8002-1c34689c30b9"), Type = TextBlockType.Text, Text = "You protect your target from going astray in hostile territory by tracking where it�s already been, helping it deduce where it still needs to go. The target leaves a glittering trail behind it that lasts for the spell�s duration. This trail doesn�t denote the direction or the order of its path�it merely indicates where the target has moved during the spell�s duration." };
+            yield return new TextBlock { Id = Guid.Parse("39692ef1-ae99-455e-8002-1c34689c30b9"), Type = TextBlockType.Text, Text = "You protect your target from going astray in hostile territory by tracking where it's already been, helping it deduce where it still needs to go. The target leaves a glittering trail behind it that lasts for the spell's duration. This trail doesn't denote the direction or the order of its path - it merely indicates where the target has moved during the spell's duration." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

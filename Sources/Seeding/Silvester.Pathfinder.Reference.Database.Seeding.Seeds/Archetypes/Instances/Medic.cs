@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("2656608f-ea5f-4105-8be2-9c206cf30a3e"), Type = TextBlockType.Text, Text = "You�ve studied countless techniques for providing medical aid, making you a peerless doctor and healer." };
+            yield return new TextBlock { Id = Guid.Parse("2656608f-ea5f-4105-8be2-9c206cf30a3e"), Type = TextBlockType.Text, Text = "you've studied countless techniques for providing medical aid, making you a peerless doctor and healer." };
         }
 
         protected override SourcePage GetSourcePage()

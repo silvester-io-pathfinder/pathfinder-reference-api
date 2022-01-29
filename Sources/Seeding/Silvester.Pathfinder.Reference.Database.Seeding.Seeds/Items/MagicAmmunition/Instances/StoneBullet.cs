@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.MagicAmmun
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("904bc27b-b7b0-4302-adef-4623eef9b4cb"), "This sling bullet looks like a petrified serpent�s eye. A creature hit by an activated stone bullet is subject to the effects of a 6th-level flesh to stone spell (DC 34).");
+            builder.Text(Guid.Parse("904bc27b-b7b0-4302-adef-4623eef9b4cb"), "This sling bullet looks like a petrified serpent's eye. A creature hit by an activated stone bullet is subject to the effects of a 6th-level flesh to stone spell (DC 34).");
         }
 
         protected override IEnumerable<MagicAmmunitionVariant> GetMagicAmmunitionVariants()

@@ -53,7 +53,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("39ba1be3-813a-4ea1-b32d-0ace3631e9e9"),
                 CriticalSuccess = "The creature is unaffected and is temporarily immune for 1 hour.",
                 Success = "The creature is fatigued for 1 round.",
-                Failure = " The creature is immediately afflicted by hunger as if it hadn�t eaten food in days. It becomes fatigued and takes 1d4 damage each day that can�t be healed until it sates its hunger. No amount of eating can sate the creature�s hunger during the spell�s duration. After the spell�s duration, the creature takes damage from starvation.",
+                Failure = " The creature is immediately afflicted by hunger as if it hadn't eaten food in days. It becomes fatigued and takes 1d4 damage each day that can't be healed until it sates its hunger. No amount of eating can sate the creature's hunger during the spell's duration. After the spell's duration, the creature takes damage from starvation.",
                 CriticalFailure = "As failure but the creature takes 2d4 damage each day, twice as much as usual for hunger."
             };
         }

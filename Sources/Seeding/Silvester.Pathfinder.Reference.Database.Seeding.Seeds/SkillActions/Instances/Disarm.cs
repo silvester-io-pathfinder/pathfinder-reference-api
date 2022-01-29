@@ -15,7 +15,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             {
                 Id = ID,
                 Name = "Disarm",
-                Requirements = "You have at least one hand free. The target can�t be more than one size larger than you.",
+                Requirements = "You have at least one hand free. The target can't be more than one size larger than you.",
                 ActionTypeId = ActionTypes.Instances.OneAction.ID,
                 RequiredProficiencyId = Proficiencies.Instances.Trained.ID
             };
@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("e92bfc31-7789-48f6-8faf-e73265c89a76"), Type = TextBlockType.Text, Text = "You try to knock something out of a creature�s grasp. Attempt an Athletics check against the target�s Reflex DC." };
+            yield return new TextBlock { Id = Guid.Parse("e92bfc31-7789-48f6-8faf-e73265c89a76"), Type = TextBlockType.Text, Text = "You try to knock something out of a creature's grasp. Attempt an Athletics check against the target's Reflex DC." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -41,8 +41,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             return new RollableEffect
             {
                 Id = Guid.Parse("c8bae780-3fe6-4c61-8c7d-33fbb948ccb7"),
-                CriticalSuccess = "You knock the item out of the target�s grasp. It falls to the ground in the target�s space.",
-                Success = "You weaken your target�s grasp on the item. Until the start of that creature�s turn, attempts to Disarm the target of that item gain a +2 circumstance bonus, and the target takes a �2 circumstance penalty to attacks with the item or other checks requiring a firm grasp on the item.",
+                CriticalSuccess = "You knock the item out of the target's grasp. It falls to the ground in the target's space.",
+                Success = "You weaken your target's grasp on the item. Until the start of that creature's turn, attempts to Disarm the target of that item gain a +2 circumstance bonus, and the target takes a -2 circumstance penalty to attacks with the item or other checks requiring a firm grasp on the item.",
                 CriticalFailure = "You lose your balance and become flat-footed until the start of your next turn."
             };
         }

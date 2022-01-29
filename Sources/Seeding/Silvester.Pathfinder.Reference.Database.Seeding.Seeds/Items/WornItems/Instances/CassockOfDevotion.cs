@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("e71434a2-6ac6-4e9f-ad7f-f6efc0a86f8e"), "Each cassock of devotion depicts scenes related to the domains of a certain deity. It serves as a religious symbol of that deity, and it doesn�t need to be wielded to provide that benefit. You gain a +2 item bonus to Religion checks and a +1 item bonus to the divine skill of the deity to whom the cassock is dedicated (as listed on pages 437�440).");
+            builder.Text(Guid.Parse("e71434a2-6ac6-4e9f-ad7f-f6efc0a86f8e"), "Each cassock of devotion depicts scenes related to the domains of a certain deity. It serves as a religious symbol of that deity, and it doesn't need to be wielded to provide that benefit. You gain a +2 item bonus to Religion checks and a +1 item bonus to the divine skill of the deity to whom the cassock is dedicated (as listed on pages 437-440).");
         }
 
         protected override void GetTraits(ITraitBindingBuilder<BaseItemTraitBinding, BaseItem> builder)
@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Frequency("Once per day.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("dd706203-bdd1-45ae-b2c2-a443cf58b732"), "Gain 1 Focus Point, which you can spend only to cast a cleric domain spell for a domain belonging to the deity the cassock is dedicated to. If you don�t spend this point by the end of this turn, it is lost.");
+                                builder.Text(Guid.Parse("dd706203-bdd1-45ae-b2c2-a443cf58b732"), "Gain 1 Focus Point, which you can spend only to cast a cleric domain spell for a domain belonging to the deity the cassock is dedicated to. If you don't spend this point by the end of this turn, it is lost.");
                             });
                     })
                     .Build()

@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Ro
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("a47aa06e-3e69-4ff0-89a1-17b1a59cb295"), Type = TextBlockType.Text, Text = "You spring into combat faster than foes can react. On the first round of combat, if you roll Deception or Stealth for initiative, creatures that haven�t acted are flat-footed to you." };
+            yield return new TextBlock { Id = Guid.Parse("a47aa06e-3e69-4ff0-89a1-17b1a59cb295"), Type = TextBlockType.Text, Text = "You spring into combat faster than foes can react. On the first round of combat, if you roll Deception or Stealth for initiative, creatures that haven't acted are flat-footed to you." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

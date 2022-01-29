@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WeaponProp
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("6b4a120b-ff71-4b5f-9ba1-6addb0c7d3c1"), "A serrating weapon�s bladed edge separates into jagged, swirling shards that spin along the blade.");
+            builder.Text(Guid.Parse("6b4a120b-ff71-4b5f-9ba1-6addb0c7d3c1"), "A serrating weapon's bladed edge separates into jagged, swirling shards that spin along the blade.");
         }
 
         protected override IEnumerable<WeaponPropertyRuneVariant> GetWeaponPropertyRuneVariants()

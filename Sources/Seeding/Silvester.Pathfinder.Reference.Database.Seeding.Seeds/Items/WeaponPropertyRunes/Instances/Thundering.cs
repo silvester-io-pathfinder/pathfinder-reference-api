@@ -57,7 +57,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WeaponProp
                 BulkId = Bulks.Instances.NegligibleBulk.ID,
                 RarityId = Rarities.Instances.Common.ID,
 				Addendum = new TextBlockBuilder()
-                    .Text(Guid.Parse("43a36fa8-f7a4-4c49-8cf7-0bd08378d2f9"), "The peal of thunder deals an extra 1d6 sonic damage on a successful Strike. On a critical hit, the target has to succeed at a DC 34 Fortitude save or be deafened for 1 minute (or 1 hour on a critical failure). Sonic damage dealt by this weapon ignores the target�s sonic resistance.")
+                    .Text(Guid.Parse("43a36fa8-f7a4-4c49-8cf7-0bd08378d2f9"), "The peal of thunder deals an extra 1d6 sonic damage on a successful Strike. On a critical hit, the target has to succeed at a DC 34 Fortitude save or be deafened for 1 minute (or 1 hour on a critical failure). Sonic damage dealt by this weapon ignores the target's sonic resistance.")
                     .Build()
             };
         }

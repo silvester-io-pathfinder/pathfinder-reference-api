@@ -61,7 +61,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Requirements("No item is stored in the gloves.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("0578ad48-fc46-49a8-9d44-6a3936e7e079"), "One item you�re holding with a Bulk of 1 or less vanishes into the gloves� extradimensional space.");
+                                builder.Text(Guid.Parse("0578ad48-fc46-49a8-9d44-6a3936e7e079"), "One item you're holding with a Bulk of 1 or less vanishes into the gloves' extradimensional space.");
                             });
                     })
                     .Add(Guid.Parse("83afe242-4856-4493-bf98-2a942a17cab1"), ActionTypes.Instances.FreeAction.ID, name: "Activate", action =>
@@ -72,7 +72,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                             .Requirements("An item is stored in the gloves, and you have a free hand.")
                             .Details(builder =>
                             {
-                                builder.Text(Guid.Parse("4e349f6c-87cb-43aa-b697-90898d8750f5"), "The item stored in the gloves appears in your hand. The gloves can�t be activated again for 1 minute.");
+                                builder.Text(Guid.Parse("4e349f6c-87cb-43aa-b697-90898d8750f5"), "The item stored in the gloves appears in your hand. The gloves can't be activated again for 1 minute.");
                             });
                     })
                     .Build()

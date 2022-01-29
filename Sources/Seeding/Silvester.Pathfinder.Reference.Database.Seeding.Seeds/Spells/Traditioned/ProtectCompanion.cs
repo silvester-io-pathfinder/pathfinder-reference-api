@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("84a632f9-0b45-44e2-bffa-c823e1133d55"), Type = TextBlockType.Text, Text = "You extend your aura, as a magical shield that protects your eidolon or minion. The target gains a +1 circumstance bonus to AC until the start of your next turn. You gain the following reaction; after using the reaction, the spell ends and you can�t cast protect companion again for 10 minutes." };
+            yield return new TextBlock { Id = Guid.Parse("84a632f9-0b45-44e2-bffa-c823e1133d55"), Type = TextBlockType.Text, Text = "You extend your aura, as a magical shield that protects your eidolon or minion. The target gains a +1 circumstance bonus to AC until the start of your next turn. You gain the following reaction; after using the reaction, the spell ends and you can't cast protect companion again for 10 minutes." };
         }
 
         protected override IEnumerable<InlineAction> GetInlineActions()
@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Trigger = "The spell's target would take damage.",
                 Effect = new[]
                 {
-                    new TextBlock { Id = Guid.Parse("f93560ec-bc83-4969-90d1-62058dd26c5f"), Type = TextBlockType.Text, Text = "Reduce the triggering damage by 10, but you lose 5 Hit Points. Even if this reduces the damage to 0, the target still takes any effects that would come with the damage, such as the poison on a viper�s fangs Strike." }
+                    new TextBlock { Id = Guid.Parse("f93560ec-bc83-4969-90d1-62058dd26c5f"), Type = TextBlockType.Text, Text = "Reduce the triggering damage by 10, but you lose 5 Hit Points. Even if this reduces the damage to 0, the target still takes any effects that would come with the damage, such as the poison on a viper's fangs Strike." }
                 }
             };
         }
@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "+2",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("3ff40ea9-2c90-4388-a677-b043acce6abe"), Type = TextBlockType.Text, Text = "The reaction reduces the damage by another 10, and you lose 5 more Hit Points. If you want to lose fewer Hit Points, you can choose to lower the damage reduction and HP lost to what any lower-level version of the spell could do without lowering the spell�s actual level." }
+                    new TextBlock {Id = Guid.Parse("3ff40ea9-2c90-4388-a677-b043acce6abe"), Type = TextBlockType.Text, Text = "The reaction reduces the damage by another 10, and you lose 5 more Hit Points. If you want to lose fewer Hit Points, you can choose to lower the damage reduction and HP lost to what any lower-level version of the spell could do without lowering the spell's actual level." }
                 }
             };
         }

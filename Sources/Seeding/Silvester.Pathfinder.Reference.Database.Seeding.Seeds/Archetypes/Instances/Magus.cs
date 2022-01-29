@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("40c7b4ba-da01-41bb-981b-a4d5caec4f94"), Type = TextBlockType.Text, Text = "You�ve mixed physical combat with spellcasting." };
+            yield return new TextBlock { Id = Guid.Parse("40c7b4ba-da01-41bb-981b-a4d5caec4f94"), Type = TextBlockType.Text, Text = "you've mixed physical combat with spellcasting." };
         }
 
         protected override SourcePage GetSourcePage()

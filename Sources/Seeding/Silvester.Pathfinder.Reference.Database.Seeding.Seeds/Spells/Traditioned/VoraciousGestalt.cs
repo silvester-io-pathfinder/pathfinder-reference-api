@@ -31,7 +31,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("2a580fda-99a9-4ebc-bd0d-13551e378f5c"), Type = TextBlockType.Text, Text = "You create a powerful spirit entity that grows and builds strength by consuming the spirits of foes you both slay. When you Cast the Spell, the gestalt deals 14d6 negative damage to all living creatures of your choice in the area, with a basic Fortitude save. Creatures you choose that end their turns in the area take 6d6 damage, with a basic Fortitude save." };
-            yield return new TextBlock { Id = Guid.Parse("6b3fb908-cc48-4311-b395-9c263dbabef8"), Type = TextBlockType.Text, Text = "At the end of each of your turns, if you killed a living creature during that turn or if the gestalt�s damage killed a creature since the end of your prior turn, you add the slain creature�s soul to the gestalt. The emanation�s radius increases by 20 feet and the damage dealt by the aura increases by 1d6. (Note that this increase only happens once, even if you killed multiple living creatures that turn.) As normal for determining threat level, the GM determines if a creature is of significant enough threat to empower the gestalt; in general, a creature several levels below you rarely poses a significant threat." };
+            yield return new TextBlock { Id = Guid.Parse("6b3fb908-cc48-4311-b395-9c263dbabef8"), Type = TextBlockType.Text, Text = "At the end of each of your turns, if you killed a living creature during that turn or if the gestalt's damage killed a creature since the end of your prior turn, you add the slain creature's soul to the gestalt. The emanation's radius increases by 20 feet and the damage dealt by the aura increases by 1d6. (Note that this increase only happens once, even if you killed multiple living creatures that turn.) As normal for determining threat level, the GM determines if a creature is of significant enough threat to empower the gestalt; in general, a creature several levels below you rarely poses a significant threat." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Level = "10th",
                 Details = new TextBlock[]
                 {
-                    new TextBlock {Id = Guid.Parse("ae5b0bc3-6056-413e-b24e-a080ba6354bf"), Type = TextBlockType.Text, Text = "The initial damage increases to 16d6 and the aura�s damage starts at 7d6." }
+                    new TextBlock {Id = Guid.Parse("ae5b0bc3-6056-413e-b24e-a080ba6354bf"), Type = TextBlockType.Text, Text = "The initial damage increases to 16d6 and the aura's damage starts at 7d6." }
                 }
             };
         }

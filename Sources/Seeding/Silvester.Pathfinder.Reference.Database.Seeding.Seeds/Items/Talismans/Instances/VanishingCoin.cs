@@ -44,7 +44,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
                     {
                         action
                             .Kind("Envision")
-                            .Trigger("You attempt a Stealth check for initiative, but you haven�t rolled yet.")
+                            .Trigger("You attempt a Stealth check for initiative, but you haven't rolled yet.")
                             .Requirements("You are a master in Stealth.");
                     })
                     .Build()

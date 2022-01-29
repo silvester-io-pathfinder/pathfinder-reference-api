@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.ClassFeatures.Mo
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("70bc2ed9-3f7c-4c17-aa7f-4329feb9c8b8"), Type = TextBlockType.Text, Text = "You�ve learned to find perfection in every success. Choose a different saving throw than the one you chose for your path to perfection. Your proficiency rank for the chosen saving throw increases to master. If you roll a success with the chosen saving throw, you instead critically succeed." };
+            yield return new TextBlock { Id = Guid.Parse("70bc2ed9-3f7c-4c17-aa7f-4329feb9c8b8"), Type = TextBlockType.Text, Text = "you've learned to find perfection in every success. Choose a different saving throw than the one you chose for your path to perfection. Your proficiency rank for the chosen saving throw increases to master. If you roll a success with the chosen saving throw, you instead critically succeed." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

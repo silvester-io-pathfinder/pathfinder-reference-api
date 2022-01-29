@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Heritages.Instan
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("3d4cc3fd-5f7b-44f8-ad2b-21a623c9f9da"), Type = TextBlockType.Text, Text = "Your scales are especially colorful, possessing some of the same resistance a dragon possesses. You gain resistance equal to half your level (minimum 1) to the damage type associated with your draconic exemplar. Double this resistance against dragons� Breath Weapons." };
+            yield return new TextBlock { Id = Guid.Parse("3d4cc3fd-5f7b-44f8-ad2b-21a623c9f9da"), Type = TextBlockType.Text, Text = "Your scales are especially colorful, possessing some of the same resistance a dragon possesses. You gain resistance equal to half your level (minimum 1) to the damage type associated with your draconic exemplar. Double this resistance against dragons' Breath Weapons." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

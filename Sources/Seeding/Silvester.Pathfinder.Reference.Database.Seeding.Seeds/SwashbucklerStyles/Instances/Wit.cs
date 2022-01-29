@@ -20,7 +20,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SwashbucklerStyl
                 Id = ID, 
                 Name = "Wit",
                 Description = "You are friendly, clever, and full of humor, always knowing just what to say in any situation. Your witticisms leave foes unprepared for the skill and speed of your attacks. You are trained in Diplomacy and gain the Bon Mot skill feat. You gain panache during an encounter whenever you succeed at a Bon Mot against a foe.",
-                ExemplaryFinisher = "The foe takes a �2 circumstance penalty to attack rolls against you until the start of your next turn."
+                ExemplaryFinisher = "The foe takes a -2 circumstance penalty to attack rolls against you until the start of your next turn."
             };
         }
 

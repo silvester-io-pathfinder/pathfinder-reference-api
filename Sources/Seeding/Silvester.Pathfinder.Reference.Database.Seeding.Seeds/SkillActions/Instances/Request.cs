@@ -22,7 +22,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("dfe01dbb-2b9a-42f1-b334-a1a07c99f867"), Type = TextBlockType.Text, Text = "You can make a request of a creature that�s friendly or helpful to you. You must couch the request in terms that the target would accept given their current attitude toward you. The GM sets the DC based on the difficulty of the request. Some requests are unsavory or impossible, and even a helpful NPC would never agree to them." };
+            yield return new TextBlock { Id = Guid.Parse("dfe01dbb-2b9a-42f1-b334-a1a07c99f867"), Type = TextBlockType.Text, Text = "You can make a request of a creature that's friendly or helpful to you. You must couch the request in terms that the target would accept given their current attitude toward you. The GM sets the DC based on the difficulty of the request. Some requests are unsavory or impossible, and even a helpful NPC would never agree to them." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()

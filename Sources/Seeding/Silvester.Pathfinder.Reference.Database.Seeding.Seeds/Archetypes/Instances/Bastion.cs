@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("e7ecab26-b703-4147-b467-3d92ff7e748f"), Type = TextBlockType.Text, Text = "Some say that a good offense is the best defense, but you find such boasting smacks of overconfidence. In your experience, the best defense is a good, solid shield between you and your enemies. You�ve focused your training on how best to use a shield to protect yourself and those around you." };
+            yield return new TextBlock { Id = Guid.Parse("e7ecab26-b703-4147-b467-3d92ff7e748f"), Type = TextBlockType.Text, Text = "Some say that a good offense is the best defense, but you find such boasting smacks of overconfidence. In your experience, the best defense is a good, solid shield between you and your enemies. you've focused your training on how best to use a shield to protect yourself and those around you." };
         }
 
         protected override SourcePage GetSourcePage()

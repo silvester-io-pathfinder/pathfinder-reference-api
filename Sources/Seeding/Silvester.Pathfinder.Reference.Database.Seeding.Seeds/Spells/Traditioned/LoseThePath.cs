@@ -40,7 +40,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Id = Guid.Parse("73178a7f-9a8e-4af4-82bf-4d71dd1ee658"),
                 Success = "The creature is unaffected.",
                 Failure = "The creature treats all squares as difficult terrain for its Stride.",
-                CriticalFailure = "As failure, except that you determine where the target moves during the Stride, though you can�t move it into hazardous terrain or to a place it can�t stand."
+                CriticalFailure = "As failure, except that you determine where the target moves during the Stride, though you can't move it into hazardous terrain or to a place it can't stand."
             };
         }
 

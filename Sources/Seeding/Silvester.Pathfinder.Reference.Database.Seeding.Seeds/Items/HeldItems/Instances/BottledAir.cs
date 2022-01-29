@@ -54,7 +54,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.HeldItems.
                             .Kind("Interact")
                             .Details(details =>
                             {
-                                details.Text(Guid.Parse("ada52702-4b21-4f95-a428-bd422f030dac"), "You draw a breath of air from the bottle. This allows you to breathe even in an airless or toxic environment. Air doesn�t escape the mouth of the bottle, so leaving the open bottle in an airless environment doesn�t change the environment.");
+                                details.Text(Guid.Parse("ada52702-4b21-4f95-a428-bd422f030dac"), "You draw a breath of air from the bottle. This allows you to breathe even in an airless or toxic environment. Air doesn't escape the mouth of the bottle, so leaving the open bottle in an airless environment doesn't change the environment.");
                             });
                     })
                     .Build()

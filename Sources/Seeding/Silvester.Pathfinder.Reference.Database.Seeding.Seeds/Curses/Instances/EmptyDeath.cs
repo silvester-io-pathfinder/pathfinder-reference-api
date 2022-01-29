@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Curses.Instances
                 Name = "Empty Death",
                 DifficultyCheck = 27,
                 SavingThrowStatId = Will.ID,
-                Effect = "If you activate The Whispering Reeds and are not a worshipper of Nhimbaloth, you become stupefied 2 for 24 hours as your thoughts fill with paranoia that something is watching you from the other side of death. If you die while affected by the Empty Death, you immediately become a chaotic evil ghost. Every 7 days that pass after you become a ghost, you must succeed at a DC 2 flat check� failure indicates that you are consumed by Nhimbaloth. A creature whose ghost is consumed in this way does not travel to the River of Souls and is utterly annihilated; this creature can only be restored to life via a 10th-level spell effect or ritual like wish."
+                Effect = "If you activate The Whispering Reeds and are not a worshipper of Nhimbaloth, you become stupefied 2 for 24 hours as your thoughts fill with paranoia that something is watching you from the other side of death. If you die while affected by the Empty Death, you immediately become a chaotic evil ghost. Every 7 days that pass after you become a ghost, you must succeed at a DC 2 flat check - failure indicates that you are consumed by Nhimbaloth. A creature whose ghost is consumed in this way does not travel to the River of Souls and is utterly annihilated; this creature can only be restored to life via a 10th-level spell effect or ritual like wish."
             };
         }
 

@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("16d89550-3d44-4751-9f7c-44a55dd83559"), "This cloak is deep green with a voluminous hood, embroidered with gold trim and symbols significant in elven culture. The cloak allows you to cast the ghost sound cantrip as an arcane innate spell. When you adjust the cloak�s clasp (an Interact action), the cloak transforms to match the environment around you and muffles your sounds, granting you a +1 item bonus to Stealth checks.");
+            builder.Text(Guid.Parse("16d89550-3d44-4751-9f7c-44a55dd83559"), "This cloak is deep green with a voluminous hood, embroidered with gold trim and symbols significant in elven culture. The cloak allows you to cast the ghost sound cantrip as an arcane innate spell. When you adjust the cloak's clasp (an Interact action), the cloak transforms to match the environment around you and muffles your sounds, granting you a +1 item bonus to Stealth checks.");
         }
 
         protected override void GetTraits(ITraitBindingBuilder<BaseItemTraitBinding, BaseItem> builder)
@@ -62,7 +62,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WornItems.
                              .Frequency("Once per day.")
                              .Details(builder =>
                              {
-                                 builder.Text(Guid.Parse("b3bd209f-fed7-416c-8697-37b27d36ae30"), "You draw the hood up and gain the effects of invisibility, with the spell�s normal duration or until you pull the hood back down, whichever comes first. If you�re also wearing boots of elvenkind, you can activate this ability twice per day.");
+                                 builder.Text(Guid.Parse("b3bd209f-fed7-416c-8697-37b27d36ae30"), "You draw the hood up and gain the effects of invisibility, with the spell's normal duration or until you pull the hood back down, whichever comes first. If you're also wearing boots of elvenkind, you can activate this ability twice per day.");
                              });
                      })
                     .Build()

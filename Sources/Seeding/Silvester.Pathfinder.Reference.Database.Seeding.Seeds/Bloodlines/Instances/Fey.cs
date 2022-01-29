@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             {
                 Id = ID, 
                 Name = "Fey",
-                BloodMagic = "Colorful fey glamours dance around you or one target, causing them to be concealed for 1 round. Such obvious concealment can�t be used to Hide.",
+                BloodMagic = "Colorful fey glamours dance around you or one target, causing them to be concealed for 1 round. Such obvious concealment can't be used to Hide.",
                 RarityId = Rarities.Instances.Common.ID,
                 InitialBloodlineSpellId = Spells.Instances.FaerieDust.ID,
                 AdvancedBloodlineSpellId = Spells.Instances.FeyDisappearance.ID,
@@ -30,7 +30,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("11d7a9df-313e-418d-a521-0721ac512575"), Type = TextBlockType.Text, Text = "Fey whimsy or a tryst in a moonlit grove put the bewitching magic of the First World into your family�s bloodline." };
+            yield return new TextBlock { Id = Guid.Parse("11d7a9df-313e-418d-a521-0721ac512575"), Type = TextBlockType.Text, Text = "Fey whimsy or a tryst in a moonlit grove put the bewitching magic of the First World into your family's bloodline." };
         }
 
         protected override void GetEffects(BooleanEffectBuilder builder)

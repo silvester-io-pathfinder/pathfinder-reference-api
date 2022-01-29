@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("42b6cc3e-0b5b-43f0-8306-829ad3bb41ea"), Type = TextBlockType.Text, Text = "The classic idea of magic is that of a hoary wizard, poring over a crumbling book of spells. But magic is so much more than that�it is thought, will, and action, and with the right talismans, you can make even the cut of a sword a deeply magical act. This all hinges on the small magical talismans you affix to your gear. You know how to make and use the perfect talismans for any job." };
+            yield return new TextBlock { Id = Guid.Parse("42b6cc3e-0b5b-43f0-8306-829ad3bb41ea"), Type = TextBlockType.Text, Text = "The classic idea of magic is that of a hoary wizard, poring over a crumbling book of spells. But magic is so much more than that - it is thought, will, and action, and with the right talismans, you can make even the cut of a sword a deeply magical act. This all hinges on the small magical talismans you affix to your gear. You know how to make and use the perfect talismans for any job." };
         }
 
         protected override SourcePage GetSourcePage()

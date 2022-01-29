@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("8c83766a-4787-4ecb-82b9-3b27d6d52198"), Type = TextBlockType.Text, Text = "Whether for coin, glory, or justice, you know how to track, defeat, and capture dangerous individuals. You�re accustomed to perusing wanted posters, searching up on leads, and pursuing villains to hell and back." };
+            yield return new TextBlock { Id = Guid.Parse("8c83766a-4787-4ecb-82b9-3b27d6d52198"), Type = TextBlockType.Text, Text = "Whether for coin, glory, or justice, you know how to track, defeat, and capture dangerous individuals. you're accustomed to perusing wanted posters, searching up on leads, and pursuing villains to hell and back." };
         }
 
         protected override SourcePage GetSourcePage()

@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
             yield return new TextBlock { Id = Guid.Parse("fe04df6b-1aa1-4bc8-a639-199962c193df"), Type = TextBlockType.Text, Text = "You wrap the target in armor made of sheets of colored light. The armor sheds bright light for 20 feet (and dim light for the next 20 feet). Whenever a creature attacks the target and is adjacent to it, the attacker must attempt a Will save at the end of its action. On a failure, it becomes dazzled until the end of its next turn. Regardless of the result of the save, the attacker is temporarily immune until the end of its next turn. The dazzling effect has the light and visual traits." };
-            yield return new TextBlock { Id = Guid.Parse("d7715b53-e1e1-4fce-866d-23c7a117f1ec"), Type = TextBlockType.Text, Text = "When you cast the spell, roll 1d8 twice on the table below to see the armor�s colors (rerolling any duplicates). Each color grants resistance 5 to the indicated damage type. If you spend three actions to Cast the Spell, roll three times instead." };
+            yield return new TextBlock { Id = Guid.Parse("d7715b53-e1e1-4fce-866d-23c7a117f1ec"), Type = TextBlockType.Text, Text = "When you cast the spell, roll 1d8 twice on the table below to see the armor's colors (rerolling any duplicates). Each color grants resistance 5 to the indicated damage type. If you spend three actions to Cast the Spell, roll three times instead." };
             yield return new TextBlock { Id = Guid.Parse("ff01b136-7f18-4688-b362-5a1e349123e5"), Type = TextBlockType.Enumeration, Text = "1. Red - Fire" };
             yield return new TextBlock { Id = Guid.Parse("abeecde2-8bba-4523-bdcb-6e5f1b840ef0"), Type = TextBlockType.Enumeration, Text = "2. Orange - Acid" };
             yield return new TextBlock { Id = Guid.Parse("bd114d95-de4c-4b97-bbe3-8df0a9c9430f"), Type = TextBlockType.Enumeration, Text = "3. Yellow - Electricity" };
@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             yield return new TextBlock { Id = Guid.Parse("76051d1f-f389-41ec-96d8-a44ef4a50664"), Type = TextBlockType.Enumeration, Text = "5. Blue - Sonic" };
             yield return new TextBlock { Id = Guid.Parse("c01391a0-456b-415d-9092-ab8d479d8efc"), Type = TextBlockType.Enumeration, Text = "6. Indigo - Mental" };
             yield return new TextBlock { Id = Guid.Parse("f8a1f19c-3bb3-4060-9f1a-851aebcddac8"), Type = TextBlockType.Enumeration, Text = "7. Violet - Force" };
-            yield return new TextBlock { Id = Guid.Parse("2cca635f-58c4-44da-81bb-4c4149ae8f97"), Type = TextBlockType.Enumeration, Text = "8. Matching Color - The armor becomes the color matching the type of damage the target took most recently in the past minute. If it didn�t take any of those seven types of damage or the armor is already that color, roll again, rerolling any results of 8." };
+            yield return new TextBlock { Id = Guid.Parse("2cca635f-58c4-44da-81bb-4c4149ae8f97"), Type = TextBlockType.Enumeration, Text = "8. Matching Color - The armor becomes the color matching the type of damage the target took most recently in the past minute. If it didn't take any of those seven types of damage or the armor is already that color, roll again, rerolling any results of 8." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

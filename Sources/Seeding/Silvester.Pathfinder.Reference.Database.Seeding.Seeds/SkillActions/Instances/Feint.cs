@@ -23,7 +23,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("0b7e9637-eabc-4d19-9e08-1bc81eed323c"), Type = TextBlockType.Text, Text = "With a misleading flourish, you leave an opponent unprepared for your real attack. Attempt a Deception check against your target�s Perception DC." };
+            yield return new TextBlock { Id = Guid.Parse("0b7e9637-eabc-4d19-9e08-1bc81eed323c"), Type = TextBlockType.Text, Text = "With a misleading flourish, you leave an opponent unprepared for your real attack. Attempt a Deception check against your target's Perception DC." };
         }
 
         protected override IEnumerable<Guid> GetApplicableSkills()
@@ -41,7 +41,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.SkillActions.Ins
             return new RollableEffect
             {
                 Id = Guid.Parse("1cf74d47-1673-41cc-920c-20b1e7923fdd"),
-                CriticalSuccess = "You throw your enemy�s defenses against you entirely off. The target is flat-footed against melee attacks that you attempt against it until the end of your next turn.",
+                CriticalSuccess = "You throw your enemy's defenses against you entirely off. The target is flat-footed against melee attacks that you attempt against it until the end of your next turn.",
                 Success = "Your foe is fooled, but only momentarily. The target is flat-footed against the next melee attack that you attempt against it before the end of your current turn.",
                 CriticalFailure = "Your feint backfires. You are flat-footed against melee attacks the target attempts against you until the end of your next turn."
             };

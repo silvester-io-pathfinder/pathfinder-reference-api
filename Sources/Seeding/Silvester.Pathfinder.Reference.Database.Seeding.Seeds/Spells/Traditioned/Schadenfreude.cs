@@ -18,7 +18,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
                 Name = "Schadenfreude",
                 Level = 1,
                 Range = "30 feet.",
-                Trigger = "You critically fail a saving throw against a foe�s effect.",
+                Trigger = "You critically fail a saving throw against a foe's effect.",
                 Targets = "The triggering foe.",
                 IsSavingThrowBasic = false,
                 SavingThrowStatId = SavingThrowStats.Instances.Will.ID,
@@ -39,7 +39,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
             {
                 Id = Guid.Parse("d54d6dd2-5e62-43ea-bb56-171974074446"),
                 CriticalSuccess = "The creature is unaffected.",
-                Success = "The creature is distracted by its amusement and takes a �1 status penalty on Perception checks and Will saves for 1 round.",
+                Success = "The creature is distracted by its amusement and takes a -1 status penalty on Perception checks and Will saves for 1 round.",
                 Failure = "The creature is overcome by its amusement and is stupefied 1 for 1 round.",
                 CriticalFailure = "The creature is lost in its amusement and is stupefied 2 for 1 round and stunned 1."
             };

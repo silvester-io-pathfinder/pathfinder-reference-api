@@ -29,7 +29,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Shields.In
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("4bac273c-0bbf-43e2-8032-c44e547944ec"), "The religious symbol of Torag, the forge god�an ornate hammer of dwarven construction�adorns the face of this reinforced steel shield (Hardness 10, HP 24, BT 12). The shield is a religious symbol of Torag.");
+            builder.Text(Guid.Parse("4bac273c-0bbf-43e2-8032-c44e547944ec"), "The religious symbol of Torag, the forge god - an ornate hammer of dwarven construction - adorns the face of this reinforced steel shield (Hardness 10, HP 24, BT 12). The shield is a religious symbol of Torag.");
             builder.Text(Guid.Parse("015a1b34-3c94-4641-a2cd-d6a72711daca"), "You and any adjacent allies have fire resistance 5 while you have the shield raised. When used for a Shield Block, the forge warden rings out like the hammer strike of a blacksmith, and the symbol glows as if lit by the fires of a furnace.");
         }
 
@@ -60,7 +60,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Shields.In
                     {
                         action
                             .Kind("Command")
-                            .Trigger("You use the forge warden to Shield Block an adjacent creature�s attack and the shield takes damage.")
+                            .Trigger("You use the forge warden to Shield Block an adjacent creature's attack and the shield takes damage.")
                             .Traits(traits =>
                             {
                                 traits.Add(Guid.Parse("82d57c71-0b5f-4de9-9532-be790568e6fb"), Traits.Instances.Fire.ID);

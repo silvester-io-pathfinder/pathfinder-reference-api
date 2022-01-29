@@ -25,7 +25,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Talismans.
         
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("16804889-bb5c-4f67-872e-a43eca17aad8"), "This grisly molar hangs from a cord threaded through a tiny hole just above its dried, exposed root. When you activate this talisman, the creature you�re attacking becomes flat-footed until the end of the current turn.");
+            builder.Text(Guid.Parse("16804889-bb5c-4f67-872e-a43eca17aad8"), "This grisly molar hangs from a cord threaded through a tiny hole just above its dried, exposed root. When you activate this talisman, the creature you're attacking becomes flat-footed until the end of the current turn.");
         }
 
         protected override IEnumerable<TalismanVariant> GetTalismanVariants()

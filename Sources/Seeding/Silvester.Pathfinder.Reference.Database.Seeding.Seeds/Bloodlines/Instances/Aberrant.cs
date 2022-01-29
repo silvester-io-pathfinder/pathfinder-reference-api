@@ -19,7 +19,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Bloodlines.Insta
             {
                 Id = ID, 
                 Name = "Aberrant",
-                BloodMagic = "Aberrant whispers shield one target�s mind or your own, granting a +2 status bonus to Will saving throws for 1 round.",
+                BloodMagic = "Aberrant whispers shield one target's mind or your own, granting a +2 status bonus to Will saving throws for 1 round.",
                 RarityId = Rarities.Instances.Common.ID,
                 InitialBloodlineSpellId = Spells.Instances.TentacularLimbs.ID,
                 AdvancedBloodlineSpellId = Spells.Instances.AberrantWhispers.ID,

@@ -26,7 +26,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.WeaponProp
 
         protected override void GetDetails(ITextBlockBuilder builder)
         {
-            builder.Text(Guid.Parse("9a828c15-cce7-4c25-868d-621189001604"), "A demolishing weapon is made to destory constructs. Damage inflicted on a construct with a demolishing weapon continues to spread throughout the creature�cracks form, linkages fail, surfaces erode�and otherwise dismantle its body. When you damage a construct using a demolishing weapon, you deal an extra 1d6 persistent force damage. On a critical hit, you deal an extra 1d12 persistent force damage instead.");
+            builder.Text(Guid.Parse("9a828c15-cce7-4c25-868d-621189001604"), "A demolishing weapon is made to destory constructs. Damage inflicted on a construct with a demolishing weapon continues to spread throughout the creature - cracks form, linkages fail, surfaces erode - and otherwise dismantle its body. When you damage a construct using a demolishing weapon, you deal an extra 1d6 persistent force damage. On a critical hit, you deal an extra 1d12 persistent force damage instead.");
         }
 
         protected override IEnumerable<WeaponPropertyRuneVariant> GetWeaponPropertyRuneVariants()

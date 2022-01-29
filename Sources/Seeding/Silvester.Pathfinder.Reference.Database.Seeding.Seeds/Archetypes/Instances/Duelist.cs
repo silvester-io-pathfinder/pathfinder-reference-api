@@ -21,7 +21,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Archetypes.Insta
 
         protected override IEnumerable<TextBlock> GetDetails()
         {
-            yield return new TextBlock { Id = Guid.Parse("c76a845c-5d5b-4f36-bd96-25b1252316b3"), Type = TextBlockType.Text, Text = "Across the world, students in martial academies practice with their blades to master one-on-one combat. The libraries of such schools hold deep troves of information detailing hundreds of combat techniques, battle stances, and honorable rules of engagement. Those who gain admission to such schools might train in formalized duels�and that�s certainly the more genteel route to take. However, others assert that there�s no better place to try out dueling techniques than in the life-and-death struggles common to an adventurer�s life." };
+            yield return new TextBlock { Id = Guid.Parse("c76a845c-5d5b-4f36-bd96-25b1252316b3"), Type = TextBlockType.Text, Text = "Across the world, students in martial academies practice with their blades to master one-on-one combat. The libraries of such schools hold deep troves of information detailing hundreds of combat techniques, battle stances, and honorable rules of engagement. Those who gain admission to such schools might train in formalized duels - and that's certainly the more genteel route to take. However, others assert that there's no better place to try out dueling techniques than in the life-and-death struggles common to an adventurer's life." };
         }
 
         protected override SourcePage GetSourcePage()

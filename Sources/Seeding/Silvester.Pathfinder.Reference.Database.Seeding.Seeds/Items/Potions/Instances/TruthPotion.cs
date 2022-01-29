@@ -47,13 +47,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Items.Potions.In
                             .Kind("Interact")
                             .Details(effect => 
                             {
-                                effect.Text(Guid.Parse("b75eb145-1aad-42d0-a412-c993f8af6719"), "You can�t intentionally lie and may be compelled to tell the truth for 10 minutes after drinking. Upon drinking the potion, attempt a DC 19 Will save. You can voluntarily fail or critically fail.");
+                                effect.Text(Guid.Parse("b75eb145-1aad-42d0-a412-c993f8af6719"), "You can't intentionally lie and may be compelled to tell the truth for 10 minutes after drinking. Upon drinking the potion, attempt a DC 19 Will save. You can voluntarily fail or critically fail.");
                             })
                             .RollableEffect(Guid.Parse("fd30b319-1f70-47ad-bfca-0710d746a6df"), effect => 
                             {
                                 effect.Success("The potion does not affect you.");
                                 effect.Failure("When you speak, you must tell the truth.");
-                                effect.CriticalFailure("As failure, and when someone asks you a question, you must attempt another DC 19 Will saving throw. If you fail this saving throw, you must answer the question truthfully if you are able to do so; if you succeed, you are temporarily immune to further attempts to ask the same question within the potion�s duration.");
+                                effect.CriticalFailure("As failure, and when someone asks you a question, you must attempt another DC 19 Will saving throw. If you fail this saving throw, you must answer the question truthfully if you are able to do so; if you succeed, you are temporarily immune to further attempts to ask the same question within the potion's duration.");
                             });
                     })
                     .Build()

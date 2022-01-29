@@ -27,7 +27,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("5a295589-4829-499f-af31-78a4060bb392"), Type = TextBlockType.Text, Text = "You conjure a chaotic celestial, monitor, or fiend to fight on your behalf. You summon a common chaotic creature that has the celestial, monitor, or fiend trait and whose level is 5 or lower. You can�t summon a creature unless its alignment is one of your deity�s preferred alignments (or, if you don�t have a deity, is within one step of your alignment). At the GM�s discretion, some deities might restrict specific types of creatures, even if their alignments match. Heightening the spell increases the maximum level of creature you can summon." };
+            yield return new TextBlock { Id = Guid.Parse("5a295589-4829-499f-af31-78a4060bb392"), Type = TextBlockType.Text, Text = "You conjure a chaotic celestial, monitor, or fiend to fight on your behalf. You summon a common chaotic creature that has the celestial, monitor, or fiend trait and whose level is 5 or lower. You can't summon a creature unless its alignment is one of your deity's preferred alignments (or, if you don't have a deity, is within one step of your alignment). At the GM's discretion, some deities might restrict specific types of creatures, even if their alignments match. Heightening the spell increases the maximum level of creature you can summon." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()

@@ -28,7 +28,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Spells.Instances
 
         public override IEnumerable<TextBlock> GetSpellDetailBlocks()
         {
-            yield return new TextBlock { Id = Guid.Parse("49e2d19c-a94a-4aa2-9781-d5924dbae06a"), Type = TextBlockType.Text, Text = "You echo a jarring hymn that only creatures in the area can hear. The hymn deals sonic damage equal to your spellcasting ability modifier, with a basic Fortitude save. If a target critically fails the save, it�s also deafened for 1 minute." };
+            yield return new TextBlock { Id = Guid.Parse("49e2d19c-a94a-4aa2-9781-d5924dbae06a"), Type = TextBlockType.Text, Text = "You echo a jarring hymn that only creatures in the area can hear. The hymn deals sonic damage equal to your spellcasting ability modifier, with a basic Fortitude save. If a target critically fails the save, it's also deafened for 1 minute." };
         }
 
         public override IEnumerable<SpellHeightening> GetHeightenings()
