@@ -37,12 +37,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Divine.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Evocation.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Morph.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Tiefling.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Transmutation.ID);
+            builder.Add(Guid.Parse("9cc4f0bb-2100-4863-9c69-5ef48f6ab60b"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("74acb7dd-6f6f-45bb-8aee-951f16795104"), Traits.Instances.Divine.ID);
+            builder.Add(Guid.Parse("0c676b9f-a79c-440b-ab0a-ed87afffdd42"), Traits.Instances.Evocation.ID);
+            builder.Add(Guid.Parse("31891b0f-307c-48da-8559-c946f38b687d"), Traits.Instances.Morph.ID);
+            builder.Add(Guid.Parse("57a962fd-8ab2-4dd8-9773-aa9c90d70499"), Traits.Instances.Tiefling.ID);
+            builder.Add(Guid.Parse("92f63bef-70c4-4045-a18a-ef17bd79bbb5"), Traits.Instances.Transmutation.ID);
 
         }            
 

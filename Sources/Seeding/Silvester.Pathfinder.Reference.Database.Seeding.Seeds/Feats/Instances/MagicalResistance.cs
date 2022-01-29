@@ -38,7 +38,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Automaton.ID);
+            builder.Add(Guid.Parse("2173a286-980e-491b-9d31-26578f83f053"), Traits.Instances.Automaton.ID);
 
         }            
 

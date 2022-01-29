@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Goblin.ID);
+            builder.Add(Guid.Parse("4e8e6bbd-c413-44ef-8168-c9a70dacc057"), Traits.Instances.Goblin.ID);
 
         }            
 

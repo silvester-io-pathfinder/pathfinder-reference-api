@@ -42,12 +42,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Death.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Emotion.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Fear.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.General.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Incapacitation.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Skill.ID);
+            builder.Add(Guid.Parse("5236d675-70b8-44b4-a893-d35a58759a88"), Traits.Instances.Death.ID);
+            builder.Add(Guid.Parse("554d0fb6-97f9-428f-bd88-6afc9a0d1d16"), Traits.Instances.Emotion.ID);
+            builder.Add(Guid.Parse("17b9644f-f94e-431e-8898-5eb50481782e"), Traits.Instances.Fear.ID);
+            builder.Add(Guid.Parse("40d6f17f-7001-4a01-9b9e-3227796c25cb"), Traits.Instances.General.ID);
+            builder.Add(Guid.Parse("d559c8b3-5622-4e16-9290-d8c764846c01"), Traits.Instances.Incapacitation.ID);
+            builder.Add(Guid.Parse("5dc01b24-9684-4d50-91ae-90c62597ec02"), Traits.Instances.Skill.ID);
 
         }
 

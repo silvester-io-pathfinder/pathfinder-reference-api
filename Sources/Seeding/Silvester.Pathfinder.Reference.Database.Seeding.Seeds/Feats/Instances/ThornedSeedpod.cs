@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Leshy.ID);
+            builder.Add(Guid.Parse("1ecb1cb7-ef3b-4ea8-8f11-a97b579f028e"), Traits.Instances.Leshy.ID);
 
         }            
 

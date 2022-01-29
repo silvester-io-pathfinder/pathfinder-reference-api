@@ -36,11 +36,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Abjuration.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Azarketi.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Primal.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Water.ID);
+            builder.Add(Guid.Parse("2e96b2be-1006-410f-91af-8ec70e91930c"), Traits.Instances.Abjuration.ID);
+            builder.Add(Guid.Parse("ec471601-81b9-40cb-ade4-7f81d3a29890"), Traits.Instances.Azarketi.ID);
+            builder.Add(Guid.Parse("ab0d6823-8d3d-49db-8a13-2a9cff6b461d"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("500b21ff-73cf-4f8e-a75f-b9520d0748d1"), Traits.Instances.Primal.ID);
+            builder.Add(Guid.Parse("17be78b0-fc7e-434c-9d5a-a57eac7978fe"), Traits.Instances.Water.ID);
 
         }            
 

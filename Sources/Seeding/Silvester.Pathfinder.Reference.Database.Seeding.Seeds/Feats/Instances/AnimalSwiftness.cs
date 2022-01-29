@@ -37,7 +37,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Beastkin.ID);
+            builder.Add(Guid.Parse("c27e6db1-af26-47bf-869d-97ac3929370c"), Traits.Instances.Beastkin.ID);
 
         }            
 

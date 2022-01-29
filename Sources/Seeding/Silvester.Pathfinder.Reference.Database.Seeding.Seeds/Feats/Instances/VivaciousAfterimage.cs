@@ -42,10 +42,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Illusion.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Occult.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Swashbuckler.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Visual.ID);
+            builder.Add(Guid.Parse("1e5eb282-a9ab-45fc-aeec-1051c22f7684"), Traits.Instances.Illusion.ID);
+            builder.Add(Guid.Parse("1cab7506-d793-4ca0-bda3-96bb1741becc"), Traits.Instances.Occult.ID);
+            builder.Add(Guid.Parse("472fbf39-9d5a-4d26-82d2-1fe991d275c4"), Traits.Instances.Swashbuckler.ID);
+            builder.Add(Guid.Parse("e789acc3-aafd-4c1a-9293-25339b0a47aa"), Traits.Instances.Visual.ID);
 
         }            
 

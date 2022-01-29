@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Inventor.ID);
+            builder.Add(Guid.Parse("baf93260-ada9-4591-86b5-500b154eb47e"), Traits.Instances.Inventor.ID);
 
         }            
 

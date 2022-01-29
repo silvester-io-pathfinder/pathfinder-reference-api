@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Anadi.ID);
+            builder.Add(Guid.Parse("b41f9b79-fb2c-4348-927f-da482a393c12"), Traits.Instances.Anadi.ID);
 
         }            
 

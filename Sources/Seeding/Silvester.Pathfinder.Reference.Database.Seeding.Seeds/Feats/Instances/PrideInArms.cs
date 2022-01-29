@@ -36,8 +36,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Auditory.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Hobgoblin.ID);
+            builder.Add(Guid.Parse("33e65bb8-5590-4c7a-9188-9d58cba323b9"), Traits.Instances.Auditory.ID);
+            builder.Add(Guid.Parse("4190754a-edb4-48cf-95da-c8076ee06aed"), Traits.Instances.Hobgoblin.ID);
 
         }            
 

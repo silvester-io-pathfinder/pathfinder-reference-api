@@ -37,10 +37,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Leshy.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Polymorph.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Primal.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Transmutation.ID);
+            builder.Add(Guid.Parse("09dc7ebb-c960-419d-afdf-43689390da75"), Traits.Instances.Leshy.ID);
+            builder.Add(Guid.Parse("496c977b-baaa-46fe-af70-3c9252f17850"), Traits.Instances.Polymorph.ID);
+            builder.Add(Guid.Parse("b0f3b683-83e6-468f-9375-9cb2e718d549"), Traits.Instances.Primal.ID);
+            builder.Add(Guid.Parse("c7273e59-9b67-4455-8434-5c417f9c662f"), Traits.Instances.Transmutation.ID);
 
         }            
 

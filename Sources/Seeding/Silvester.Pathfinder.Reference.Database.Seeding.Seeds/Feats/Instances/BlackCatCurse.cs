@@ -36,10 +36,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Catfolk.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Divination.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Misfortune.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Occult.ID);
+            builder.Add(Guid.Parse("0d422a8d-66b8-43e8-bb8b-f03c29ae65aa"), Traits.Instances.Catfolk.ID);
+            builder.Add(Guid.Parse("13bdaf2d-6252-4e1e-a137-cd480ef8a6af"), Traits.Instances.Divination.ID);
+            builder.Add(Guid.Parse("16ab0968-c2bc-4eb9-b5de-8c94b7c25b63"), Traits.Instances.Misfortune.ID);
+            builder.Add(Guid.Parse("544b46ba-a384-4335-8d98-af540006292a"), Traits.Instances.Occult.ID);
 
         }            
 

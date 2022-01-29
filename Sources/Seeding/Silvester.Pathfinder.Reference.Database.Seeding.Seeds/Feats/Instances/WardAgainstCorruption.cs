@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Duskwalker.ID);
+            builder.Add(Guid.Parse("87203b8a-7ba5-418b-8dfc-ae68bed28c0e"), Traits.Instances.Duskwalker.ID);
 
         }            
 

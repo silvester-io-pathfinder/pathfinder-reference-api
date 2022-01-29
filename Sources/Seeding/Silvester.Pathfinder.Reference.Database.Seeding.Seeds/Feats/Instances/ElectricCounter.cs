@@ -36,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Electricity.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Evocation.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Monk.ID);
+            builder.Add(Guid.Parse("5178366b-5016-478f-8fd1-c58ff3320441"), Traits.Instances.Electricity.ID);
+            builder.Add(Guid.Parse("68aaac87-ba40-4c66-9572-1df33e9f34de"), Traits.Instances.Evocation.ID);
+            builder.Add(Guid.Parse("63fdf72e-80ab-4d0b-bb1f-6ddaa6f3e4a6"), Traits.Instances.Monk.ID);
 
         }            
 

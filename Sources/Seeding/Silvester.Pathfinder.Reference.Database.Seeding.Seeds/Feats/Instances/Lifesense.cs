@@ -36,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Divination.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Divine.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Duskwalker.ID);
+            builder.Add(Guid.Parse("a68d8e86-772b-4eb3-95ef-02fd69d24ed7"), Traits.Instances.Divination.ID);
+            builder.Add(Guid.Parse("a1150813-f019-45ac-a20c-2311b2f568a6"), Traits.Instances.Divine.ID);
+            builder.Add(Guid.Parse("8e4e255a-bb2d-4600-a1cf-33817f8814ee"), Traits.Instances.Duskwalker.ID);
 
         }            
 

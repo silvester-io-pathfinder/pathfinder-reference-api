@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Halfling.ID);
+            builder.Add(Guid.Parse("9046241a-06bb-4670-b965-3b54bf1d8128"), Traits.Instances.Halfling.ID);
 
         }            
 

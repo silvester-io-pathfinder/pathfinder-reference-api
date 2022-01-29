@@ -42,11 +42,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Emotion.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Fear.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Mental.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Rogue.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Swashbuckler.ID);
+            builder.Add(Guid.Parse("90cc3c77-17fe-4648-b624-15c1b0ca5540"), Traits.Instances.Emotion.ID);
+            builder.Add(Guid.Parse("a3949654-7a99-4142-bf9e-8172f1076bc7"), Traits.Instances.Fear.ID);
+            builder.Add(Guid.Parse("a432d714-1b26-45e5-9c5f-b16281555954"), Traits.Instances.Mental.ID);
+            builder.Add(Guid.Parse("24edaa1a-3be3-40ec-8869-1671ca6640af"), Traits.Instances.Rogue.ID);
+            builder.Add(Guid.Parse("fb8681be-a4d2-491a-b3d2-539256177f56"), Traits.Instances.Swashbuckler.ID);
 
         }            
 

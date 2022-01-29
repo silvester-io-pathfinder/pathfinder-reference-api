@@ -42,13 +42,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Aasimar.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Divine.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Exploration.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Fire.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Manipulate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Teleportation.ID);
+            builder.Add(Guid.Parse("e2479779-2be7-4e39-9c64-3b5d18ad502e"), Traits.Instances.Aasimar.ID);
+            builder.Add(Guid.Parse("7c66886e-f8aa-49cc-ac30-587421a8e7e2"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("ce2c6f8b-db39-43e5-9680-e58739b30a65"), Traits.Instances.Divine.ID);
+            builder.Add(Guid.Parse("19ff208a-4221-431b-91d5-7a4184cf2d76"), Traits.Instances.Exploration.ID);
+            builder.Add(Guid.Parse("017f6686-e3d6-4aaf-b4cd-b9b3a368215f"), Traits.Instances.Fire.ID);
+            builder.Add(Guid.Parse("1f56841e-1b96-4e33-86b9-01c273ba00af"), Traits.Instances.Manipulate.ID);
+            builder.Add(Guid.Parse("a10aa929-0c18-4bbd-b4a7-ba89e5c4788e"), Traits.Instances.Teleportation.ID);
 
         }            
 

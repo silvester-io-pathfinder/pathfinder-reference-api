@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Aphorite.ID);
+            builder.Add(Guid.Parse("42bc71bb-7678-4ac3-98d2-531717859102"), Traits.Instances.Aphorite.ID);
 
         }            
 

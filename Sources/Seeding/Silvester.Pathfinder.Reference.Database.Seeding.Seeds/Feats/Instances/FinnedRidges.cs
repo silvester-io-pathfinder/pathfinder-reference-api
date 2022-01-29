@@ -36,7 +36,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Fleshwarp.ID);
+            builder.Add(Guid.Parse("998efa93-ba3f-49ec-9b77-3473331dcabf"), Traits.Instances.Fleshwarp.ID);
 
         }            
 

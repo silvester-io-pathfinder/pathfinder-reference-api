@@ -44,11 +44,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Arcane.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Healing.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Magus.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Necromancy.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Positive.ID);
+            builder.Add(Guid.Parse("df80c789-6ff2-4995-a57f-40ac82e035b0"), Traits.Instances.Arcane.ID);
+            builder.Add(Guid.Parse("85155870-5eb4-4b4c-8956-db15b518f6a8"), Traits.Instances.Healing.ID);
+            builder.Add(Guid.Parse("169cac99-d480-41df-801e-70d8e29aa524"), Traits.Instances.Magus.ID);
+            builder.Add(Guid.Parse("874fc3ec-f64c-42cf-8fcb-b309e1866670"), Traits.Instances.Necromancy.ID);
+            builder.Add(Guid.Parse("123a1352-e674-46dc-867f-90d37d2e0fdd"), Traits.Instances.Positive.ID);
 
         }            
 

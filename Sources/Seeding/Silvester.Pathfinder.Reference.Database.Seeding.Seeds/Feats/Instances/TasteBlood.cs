@@ -44,9 +44,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Dhampir.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Necromancy.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Negative.ID);
+            builder.Add(Guid.Parse("91e58b5e-4438-48da-a734-87332029a6ee"), Traits.Instances.Dhampir.ID);
+            builder.Add(Guid.Parse("81912c54-7a1d-49dd-85d4-0bd6b76c7a43"), Traits.Instances.Necromancy.ID);
+            builder.Add(Guid.Parse("2a07fb23-f6bb-4e9d-86bc-2b8152546314"), Traits.Instances.Negative.ID);
 
         }            
 

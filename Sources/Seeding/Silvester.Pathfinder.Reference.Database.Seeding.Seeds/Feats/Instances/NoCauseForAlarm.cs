@@ -42,13 +42,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Auditory.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Emotion.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.General.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Linguistic.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Mental.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Skill.ID);
+            builder.Add(Guid.Parse("e3faf395-f59c-4536-8371-7cc65aeeb59a"), Traits.Instances.Auditory.ID);
+            builder.Add(Guid.Parse("3b40aca8-4afc-4865-be8c-e966ebe0df50"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("38f818b2-d93f-42d2-9487-0c285fa65d2f"), Traits.Instances.Emotion.ID);
+            builder.Add(Guid.Parse("4a5250a3-2e09-4105-b81f-7fb2e9697dbb"), Traits.Instances.General.ID);
+            builder.Add(Guid.Parse("4f2849bb-e010-4397-ae01-3eac3273bf27"), Traits.Instances.Linguistic.ID);
+            builder.Add(Guid.Parse("e00194b2-9170-4616-a249-cf9d72409763"), Traits.Instances.Mental.ID);
+            builder.Add(Guid.Parse("04f39780-6cdf-4613-ae08-9964e8889a3d"), Traits.Instances.Skill.ID);
 
         }
 

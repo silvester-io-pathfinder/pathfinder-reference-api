@@ -36,13 +36,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Druid.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Manipulate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Metamagic.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Oracle.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Sorcerer.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Witch.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Wizard.ID);
+            builder.Add(Guid.Parse("05de3eb2-55f2-4755-a6ba-0e7ea331487b"), Traits.Instances.Druid.ID);
+            builder.Add(Guid.Parse("87d1fb3a-c99c-4d16-88c4-ca3aa0e422c1"), Traits.Instances.Manipulate.ID);
+            builder.Add(Guid.Parse("c4cc19a0-a906-4bf6-9f09-52efb16ac2e3"), Traits.Instances.Metamagic.ID);
+            builder.Add(Guid.Parse("750888ce-eec3-439a-a7d9-883a4d343252"), Traits.Instances.Oracle.ID);
+            builder.Add(Guid.Parse("9b72b6d7-a9a6-4dd9-942d-005383d560f2"), Traits.Instances.Sorcerer.ID);
+            builder.Add(Guid.Parse("05f95871-40d3-4262-ae51-4c87344648ec"), Traits.Instances.Witch.ID);
+            builder.Add(Guid.Parse("71aebb80-3c3a-45f4-8535-ac102090cd19"), Traits.Instances.Wizard.ID);
 
         }            
 

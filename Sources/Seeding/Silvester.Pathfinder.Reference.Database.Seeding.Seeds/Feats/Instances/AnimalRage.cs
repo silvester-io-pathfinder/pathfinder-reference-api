@@ -42,13 +42,13 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Barbarian.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Instinct.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Polymorph.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Primal.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Rage.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Transmutation.ID);
+            builder.Add(Guid.Parse("77c2b6b0-0a2c-426a-bdaa-d2296412ab77"), Traits.Instances.Barbarian.ID);
+            builder.Add(Guid.Parse("34f722df-dcc1-4736-8a28-8d5a2331fa81"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("79ebb024-b850-41c1-a158-ebfc4a813626"), Traits.Instances.Instinct.ID);
+            builder.Add(Guid.Parse("181618c1-0eef-45ce-b2c2-bef3448ce2d2"), Traits.Instances.Polymorph.ID);
+            builder.Add(Guid.Parse("78c0e1c5-77ca-4cab-977c-63482c357229"), Traits.Instances.Primal.ID);
+            builder.Add(Guid.Parse("fa342cc2-9cb7-42d5-829f-4815fe174634"), Traits.Instances.Rage.ID);
+            builder.Add(Guid.Parse("ad250ddb-d9f9-4f98-bca5-462eab63b80f"), Traits.Instances.Transmutation.ID);
 
         }            
 

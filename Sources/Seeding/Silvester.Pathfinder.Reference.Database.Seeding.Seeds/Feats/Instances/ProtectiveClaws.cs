@@ -42,7 +42,7 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Goloma.ID);
+            builder.Add(Guid.Parse("17523fd9-3a68-4b64-8fba-ab53963a7e4b"), Traits.Instances.Goloma.ID);
 
         }            
 

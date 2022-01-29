@@ -36,11 +36,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Auditory.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Ganzi.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Healing.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Necromancy.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Primal.ID);
+            builder.Add(Guid.Parse("b124de8f-80fe-499b-9f39-55b1eb30b466"), Traits.Instances.Auditory.ID);
+            builder.Add(Guid.Parse("b5121153-7777-480a-bdc7-3a93772457db"), Traits.Instances.Ganzi.ID);
+            builder.Add(Guid.Parse("f9f222f3-39cd-4562-919b-3ad9e0d603df"), Traits.Instances.Healing.ID);
+            builder.Add(Guid.Parse("86cd986c-7b8f-4ba1-989e-b400be0588c1"), Traits.Instances.Necromancy.ID);
+            builder.Add(Guid.Parse("b76ef1ee-dbd6-4574-a92d-153f00206569"), Traits.Instances.Primal.ID);
 
         }            
 

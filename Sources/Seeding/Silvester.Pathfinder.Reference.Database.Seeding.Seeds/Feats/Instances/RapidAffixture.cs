@@ -42,8 +42,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.General.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Skill.ID);
+            builder.Add(Guid.Parse("43ddbd68-54f7-45fc-ab74-b7646508c4dd"), Traits.Instances.General.ID);
+            builder.Add(Guid.Parse("e1f2d5cb-40a5-4c41-aab4-63c73ca22107"), Traits.Instances.Skill.ID);
 
         }            
 

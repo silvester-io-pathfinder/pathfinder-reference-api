@@ -37,10 +37,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Gnome.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Move.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Necromancy.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Teleportation.ID);
+            builder.Add(Guid.Parse("8e8dd759-0abb-41c0-87ad-9c8ee6afb931"), Traits.Instances.Gnome.ID);
+            builder.Add(Guid.Parse("2dde0eb0-9a63-45e2-8848-06d6030f579f"), Traits.Instances.Move.ID);
+            builder.Add(Guid.Parse("ed8a5df9-80ec-48bb-8e4b-75313bc097bf"), Traits.Instances.Necromancy.ID);
+            builder.Add(Guid.Parse("02f78362-94af-4560-96ff-7f2f9eee4dd6"), Traits.Instances.Teleportation.ID);
 
         }            
 

@@ -43,8 +43,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Rogue.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Swashbuckler.ID);
+            builder.Add(Guid.Parse("88af0e23-817d-4cd5-b7b6-262c4396e723"), Traits.Instances.Rogue.ID);
+            builder.Add(Guid.Parse("26a4a4d1-1281-4247-8d55-40c33aaa28f2"), Traits.Instances.Swashbuckler.ID);
 
         }            
 

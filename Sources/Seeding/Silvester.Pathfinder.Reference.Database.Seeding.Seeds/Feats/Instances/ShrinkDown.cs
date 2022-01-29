@@ -36,11 +36,11 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Eidolon.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Evolution.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Summoner.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Transmutation.ID);
+            builder.Add(Guid.Parse("dcf1927c-048c-459d-a331-8c211246e1ae"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("13c21c9d-36ab-4b33-b45d-3de8eb977491"), Traits.Instances.Eidolon.ID);
+            builder.Add(Guid.Parse("60deea70-aa52-4926-a188-3e31a3a14375"), Traits.Instances.Evolution.ID);
+            builder.Add(Guid.Parse("90b4aa19-c379-4ed5-84af-aaa2a7095506"), Traits.Instances.Summoner.ID);
+            builder.Add(Guid.Parse("f8764ab5-96e1-447b-b2ea-b17fba47d87a"), Traits.Instances.Transmutation.ID);
 
         }            
 

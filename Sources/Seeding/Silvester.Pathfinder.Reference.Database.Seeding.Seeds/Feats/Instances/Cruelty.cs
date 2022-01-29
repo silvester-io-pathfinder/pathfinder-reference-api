@@ -42,9 +42,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Champion.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Metamagic.ID);
+            builder.Add(Guid.Parse("b43dcfc9-2c09-4f5b-945d-64dfee279644"), Traits.Instances.Champion.ID);
+            builder.Add(Guid.Parse("967215d0-664e-4876-aceb-7c1d1dc35287"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("125f3de1-6425-4edd-9163-69fb4e05882b"), Traits.Instances.Metamagic.ID);
 
         }            
 

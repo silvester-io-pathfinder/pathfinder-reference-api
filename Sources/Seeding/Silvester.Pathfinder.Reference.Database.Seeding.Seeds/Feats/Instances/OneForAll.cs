@@ -42,12 +42,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Auditory.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Emotion.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Linguistic.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Mental.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Swashbuckler.ID);
+            builder.Add(Guid.Parse("2669ec9e-b8ed-4631-aa48-35fe790397da"), Traits.Instances.Auditory.ID);
+            builder.Add(Guid.Parse("8cac7e90-efb3-4a8d-b40f-a1e4f945baaf"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("2bfd08ca-98b9-43a4-8d4c-e1b4a94b3090"), Traits.Instances.Emotion.ID);
+            builder.Add(Guid.Parse("122a3da8-591d-4212-8858-c31231688b0a"), Traits.Instances.Linguistic.ID);
+            builder.Add(Guid.Parse("d8e256f9-b2ce-4c0a-9113-a25fddbc5184"), Traits.Instances.Mental.ID);
+            builder.Add(Guid.Parse("42797883-1d40-4be4-94bc-59e09be00d1b"), Traits.Instances.Swashbuckler.ID);
 
         }            
 

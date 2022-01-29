@@ -36,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Metamagic.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Witch.ID);
+            builder.Add(Guid.Parse("6760e8a1-1912-4324-800e-49c00b0b2270"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("f2d37932-6a71-402c-a9e0-abbbf72446cf"), Traits.Instances.Metamagic.ID);
+            builder.Add(Guid.Parse("c9429505-21ec-4f14-9054-66cd082b14ec"), Traits.Instances.Witch.ID);
 
         }            
 

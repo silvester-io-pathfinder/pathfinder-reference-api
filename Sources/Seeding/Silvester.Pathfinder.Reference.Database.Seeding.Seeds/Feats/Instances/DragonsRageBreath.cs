@@ -42,12 +42,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Arcane.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Barbarian.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Evocation.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Instinct.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Rage.ID);
+            builder.Add(Guid.Parse("3a375048-1a39-45bd-819b-a66d92aecb63"), Traits.Instances.Arcane.ID);
+            builder.Add(Guid.Parse("493b3200-4689-439d-8ab4-390365eb45f1"), Traits.Instances.Barbarian.ID);
+            builder.Add(Guid.Parse("45dfbd16-4c54-4afb-94b1-8950118606c4"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("05be862c-d2ce-4d95-a67f-06d4ef1b9dd5"), Traits.Instances.Evocation.ID);
+            builder.Add(Guid.Parse("ba950cdf-609d-4c59-b808-a42b620c36df"), Traits.Instances.Instinct.ID);
+            builder.Add(Guid.Parse("df30b470-907e-4875-8805-655efe170d60"), Traits.Instances.Rage.ID);
 
         }            
 

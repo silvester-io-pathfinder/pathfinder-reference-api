@@ -36,10 +36,10 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Healing.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Hobgoblin.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Necromancy.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Positive.ID);
+            builder.Add(Guid.Parse("9291bfc7-fabe-4347-b6ef-40a69c32a543"), Traits.Instances.Healing.ID);
+            builder.Add(Guid.Parse("1dcf3a0d-93a8-4c9a-bcb5-41d59e29c9a6"), Traits.Instances.Hobgoblin.ID);
+            builder.Add(Guid.Parse("3a16dbc4-7f99-465b-8c04-28669c3cdd8a"), Traits.Instances.Necromancy.ID);
+            builder.Add(Guid.Parse("0d539cf9-a202-4977-bc22-1215f00cd54a"), Traits.Instances.Positive.ID);
 
         }            
 

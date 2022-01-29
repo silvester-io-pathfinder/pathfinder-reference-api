@@ -42,8 +42,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Archetype.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Teleportation.ID);
+            builder.Add(Guid.Parse("69907c76-0ec2-4a75-93b4-e286630e8551"), Traits.Instances.Archetype.ID);
+            builder.Add(Guid.Parse("5c01ec0f-9ebd-498a-a333-c3d6905b0b4b"), Traits.Instances.Teleportation.ID);
 
         }            
 

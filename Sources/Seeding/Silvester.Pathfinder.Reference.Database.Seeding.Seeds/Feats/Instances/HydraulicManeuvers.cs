@@ -36,12 +36,12 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Azarketi.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Concentrate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Manipulate.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Primal.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Transmutation.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Water.ID);
+            builder.Add(Guid.Parse("7eaf39fe-3de1-4ef9-9209-8ee25594b0f6"), Traits.Instances.Azarketi.ID);
+            builder.Add(Guid.Parse("cf3d0814-eee4-4ff1-ba73-faeb6fb259aa"), Traits.Instances.Concentrate.ID);
+            builder.Add(Guid.Parse("91c76770-579c-455b-9b44-118b63f7bc71"), Traits.Instances.Manipulate.ID);
+            builder.Add(Guid.Parse("b1c766a2-4b95-4ea0-b6c1-be5469e80cf2"), Traits.Instances.Primal.ID);
+            builder.Add(Guid.Parse("50603060-a154-46b5-a1ca-2cf9a0a59da1"), Traits.Instances.Transmutation.ID);
+            builder.Add(Guid.Parse("0b0df3db-1134-4059-a464-eccce57e2e39"), Traits.Instances.Water.ID);
 
         }            
 

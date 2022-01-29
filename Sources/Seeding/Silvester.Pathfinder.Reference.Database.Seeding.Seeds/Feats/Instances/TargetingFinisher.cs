@@ -39,8 +39,8 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Finisher.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Swashbuckler.ID);
+            builder.Add(Guid.Parse("22bd1736-c874-4432-a9cd-2351ed1fcca2"), Traits.Instances.Finisher.ID);
+            builder.Add(Guid.Parse("2b382d06-42a4-4a32-b9c3-0a1acad70bf3"), Traits.Instances.Swashbuckler.ID);
 
         }            
 

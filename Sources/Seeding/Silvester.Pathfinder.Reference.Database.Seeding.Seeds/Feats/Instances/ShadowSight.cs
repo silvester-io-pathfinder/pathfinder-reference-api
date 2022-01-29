@@ -36,9 +36,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Fetchling.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Occult.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Transmutation.ID);
+            builder.Add(Guid.Parse("af05593e-ce72-430f-bdf7-cc9555242ef3"), Traits.Instances.Fetchling.ID);
+            builder.Add(Guid.Parse("e19c7dec-5b51-4831-a96c-53678fbba59e"), Traits.Instances.Occult.ID);
+            builder.Add(Guid.Parse("399159d1-0752-4837-9c9b-14c1c54dd594"), Traits.Instances.Transmutation.ID);
 
         }            
 

@@ -43,9 +43,9 @@ namespace Silvester.Pathfinder.Reference.Database.Seeding.Seeds.Feats.Instances
 
         protected override void GetTraits(ITraitBindingBuilder<FeatTraitBinding, Feat> builder)
         {
-            builder.Add(Guid.Parse(""), Traits.Instances.Arcane.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Magus.ID);
-            builder.Add(Guid.Parse(""), Traits.Instances.Transmutation.ID);
+            builder.Add(Guid.Parse("31ae63ec-caa8-42d9-b7d7-996770f058e8"), Traits.Instances.Arcane.ID);
+            builder.Add(Guid.Parse("dcfbe4df-6f7a-4e0f-a49c-10085d6b10fc"), Traits.Instances.Magus.ID);
+            builder.Add(Guid.Parse("8efc9229-0d43-4f22-bd22-6ee7aeebdf5c"), Traits.Instances.Transmutation.ID);
 
         }            
 
